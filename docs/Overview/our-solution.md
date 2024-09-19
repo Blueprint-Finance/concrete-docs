@@ -5,7 +5,7 @@ sidebar_label: "Our Solution"
 sidebar_position: 1
 ---
 
-Our system offers three distinct levels of protection for users with varying needs: **Concrete Borrow**, **Concrete Lite**, and **Concrete Protect**.
+Our solution offers three distinct levels of protection for users with varying needs: **Concrete Borrow**, **Concrete Lite**, and **Concrete Protect**.
 
 ## 1. Concrete Borrow (Base Level)
 At the base level, **Concrete Borrow** provides users with access to the best lending rates across multiple money markets like **Aave**, **Radiant**, **Silo**, and **Compound**. Users can borrow funds by supplying collateral, and the protocol optimizes their loan by choosing the most favorable rate. This is the most straightforward way to access liquidity, without additional protection from liquidation. However, users are still subject to the standard liquidation penalties (e.g., 5-15%) from the money market.
