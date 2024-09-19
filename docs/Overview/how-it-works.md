@@ -5,7 +5,9 @@ sidebar_label: "How It Works"
 sidebar_position: 2
 ---
 
-Concrete is a decentralized protocol that aims to improve the borrowing and liquidation process in decentralized finance (DeFi), offering **automation** and **protection** against market volatility. It addresses inefficiencies in traditional DeFi lending mechanisms and helps users avoid costly liquidations. Below is a step-by-step breakdown of how Concrete works, incorporating the provided diagram and example.
+Concrete is a decentralized protocol that aims to improve the borrowing and liquidation process in decentralized finance (DeFi), offering **automation** and **protection** against market volatility. It addresses inefficiencies in traditional DeFi lending mechanisms and helps users avoid costly liquidations.
+
+Below is a step-by-step breakdown of how Concrete works.
 
 ## **Typical Borrowing and Liquidation Process**
 
@@ -77,10 +79,10 @@ Let’s walk through a simplified example:
 
 - **Protection Activation**: If the user had purchased Concrete's protection, it would have been activated in tranches, giving them additional time before final liquidation occurs.
 
-
 ## Revenue Streams
 
 Concrete generates revenue through multiple streams, including:
+
 - **Loan Protection Fees**: Fees charged for protecting loans from collateral depreciation.
 - **Foreclosure Fees**: Fees when Concrete Lite forecloses a loan before liquidation.
 - **Liquidity Provision**: Concrete earns a share of the yield from liquidity provider strategies.
