@@ -5,26 +5,32 @@ sidebar_label: "Our Solution"
 sidebar_position: 1
 ---
 
-Our solution offers three distinct levels of protection for users with varying needs: **Concrete Borrow**, **Concrete Lite**, and **Concrete Protect**.
+Our solution offers three distinct levels of protection for users with varying needs:
+
+* **Concrete Borrow**
+* **Concrete Lite**
+* **Concrete Protect**
 
 ## 1. Concrete Borrow (Base Level)
-At the base level, **Concrete Borrow** provides users with access to the best lending rates across multiple money markets like **Aave**, **Radiant**, **Silo**, and **Compound**. Users can borrow funds by supplying collateral, and the protocol optimizes their loan by choosing the most favorable rate. This is the most straightforward way to access liquidity, without additional protection from liquidation. However, users are still subject to the standard liquidation penalties (e.g., 5-15%) from the money market.
 
-- **Best Rate Optimization**: Concrete scans multiple DeFi lending markets to ensure borrowers get the best rate available on their selected chain.
-- **Accessible Lending Markets**: Initially focusing on **Aave**, Concrete aims to expand to other protocols such as **Radiant** and **Compound** for future versions.
+At the core, **Concrete Borrow** gives users access to optimal lending rates across leading DeFi money markets, such as **Aave**, **Radiant**, **Silo**, and **Compound**. By supplying collateral, users can borrow funds with Concrete's algorithm automatically selecting the most favorable rate across multiple platforms. While this method offers straightforward access to liquidity, it leaves borrowers exposed to the standard liquidation penalties (typically 5-15%) set by the underlying money market.
+
+- **Rate Optimization**: Concrete ensures borrowers get the most competitive rate available by scanning multiple DeFi lending markets.
+- **Lending Market Access**: While initially focusing on **Aave**, future updates plan to integrate other major protocols, including **Radiant** and **Compound**.
 
 ## 2. Concrete Lite (Default Protection)
-For users who want an extra layer of protection, **Concrete Lite** is applied by default for supported assets (although users can opt out). **Concrete Lite** helps foreclose loans before full liquidation, reducing the penalties borrowers would otherwise face. This service charges a smaller foreclosure fee (3.5%) compared to the typical fees charged by lending markets (5-15%). By acting before liquidation triggers, Concrete Lite helps users retain more of their collateral.
 
-- **Automatic Foreclosure**: Concrete Lite automatically forecloses a loan before liquidation occurs, saving users from higher penalties imposed by the lending market.
-- **Lower Fees**: Instead of paying up to 15% in liquidation fees, users are only charged a 3.5% fee by Concrete Lite, offering significant savings.
+For users who want an extra layer of protection, **Concrete Lite** is applied by default for supported assets (with the option to opt out if desired). This feature proactively manages positions, closing loans before full liquidation is triggered, significantly reducing penalties. It charges a smaller foreclosure fee (3.5%) compared to the typical fees charged by lending markets (5-15%).
+
+By acting before liquidation triggers, Concrete Lite helps users retain more of their collateral.
 
 ## 3. Concrete Protect (Enhanced Protection)
-Concrete Protect adds a further layer of security by offering **credit lines** that protect users from liquidation even when their collateral depreciates. This service is on top of Concrete Lite, enhancing the loan's LTV (Loan-to-Value) ratio by injecting credit into the position when necessary. Users can purchase protection in **tranches**, with each tranche providing additional liquidation buffers. If all tranches are used up, Concrete ensures that any remaining assets are returned to the user in good standing, preventing them from being wiped out.
 
-- **Protection in Tranches**: Concrete Protect allows users to buy protection in multiple tranches, deploying extra capital to cover any further depreciation.
-- **Credit Lines to Improve LTV**: By using Concrete Protect, users get access to credit lines that boost their LTV, minimizing the risk of liquidation.
-- **Final Liquidation Protection**: Even if the collateral drops through all protection levels, Concrete ensures a more favorable exit than typical liquidation, returning remaining assets to the user.
+Concrete Protect enhances security by offering **credit lines** that improve the loan's LTV (Loan-to-Value) ratio, protecting users from liquidation when collateral value falls. This layer of protection is added on top of Concrete Lite and deploys capital in **tranches**, each providing an extra buffer against liquidation. If all protection tranches are exhausted, Concrete ensures a more favorable exit by returning any remaining assets, minimizing the impact of liquidation.
+
+- **Tranche-Based Protection**: Users can buy multiple tranches of protection, with each tranche activating additional capital to prevent liquidation.
+- **Boosted LTV**: Concrete Protect enhances LTV by injecting credit, reducing the likelihood of liquidation.
+- **Exit Protection**: Even if all protections are used, Concrete ensures remaining assets are returned in better standing than typical liquidation.
 
 ## Examples
 
