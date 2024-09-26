@@ -79,6 +79,16 @@ Let’s walk through a simplified example:
 
 - **Protection Activation**: If the user had purchased Concrete's protection, it would have been activated in tranches, giving them additional time before final liquidation occurs.
 
+## Money Market Margin
+
+The **Money Market Margin** is an essential feature that ties together the core aspects of Concrete’s platform:
+
+   - It provides users with **flexible borrowing options** against high-yield vault deposits.
+   - It ensures **automatic debt servicing** through yield generation, simplifying the borrowing experience.
+   - It maximizes the user's ability to generate returns while still maintaining access to liquidity.
+
+By combining high APYs with automated borrowing strategies, Concrete offers users a unique opportunity to optimize their DeFi experience.
+
 ## Revenue Streams
 
 Concrete generates revenue through multiple streams, including:

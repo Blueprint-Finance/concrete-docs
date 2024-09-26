@@ -5,11 +5,11 @@ sidebar_label: "Our Solution"
 sidebar_position: 1
 ---
 
-Our solution offers three distinct levels of protection for users with varying needs:
+Concrete provides a **liquidation protection tool**, helping users avoid being liquidated at the worst possible moment. Traditional DeFi loans are liquidated once the **loan-to-value (LTV)** ratio crosses a threshold set by the lender, which can result in users losing a significant portion of their assets.
 
-* **Concrete Borrow**
-* **Concrete Lite**
-* **Concrete Protect**
+In Concrete, users can opt into different levels of protection:
+- **Concrete Light**: This base-level protection reduces the penalties associated with liquidation, ensuring users lose less value if liquidated. By default, users are enrolled in Concrete Light, which applies a **2% fee**.
+- **Concrete Protect**: The premium level of protection, Concrete Protect, prevents liquidation entirely by injecting credit into the user’s loan once their LTV approaches the liquidation threshold. This pulls the loan’s LTV back to safer levels, preventing the loan from entering a liquidation event.
 
 ## 1. Concrete Borrow (Base Level)
 
@@ -18,11 +18,17 @@ At the core, **Concrete Borrow** gives users access to optimal lending rates acr
 - **Rate Optimization**: Concrete ensures borrowers get the most competitive rate available by scanning multiple DeFi lending markets.
 - **Lending Market Access**: While initially focusing on **Aave**, future updates plan to integrate other major protocols, including **Radiant** and **Compound**.
 
+**Example**:  
+A borrower deposits 100 ETH into Concrete and borrows USDC using the best rate available on Aave (or another integrated platform). Without Concrete Lite, if the value of ETH drops significantly, the position would face liquidation, and the user might lose a large portion of their collateral due to high liquidation penalties (10-15%).
+
 ## 2. Concrete Lite (Default Protection)
 
 For users who want an extra layer of protection, **Concrete Lite** is applied by default for supported assets (with the option to opt out if desired). This feature proactively manages positions, closing loans before full liquidation is triggered, significantly reducing penalties. It charges a smaller foreclosure fee (3.5%) compared to the typical fees charged by lending markets (5-15%).
 
 By acting before liquidation triggers, Concrete Lite helps users retain more of their collateral.
+
+**Example**:
+With Concrete Lite enabled (default for supported assets), the system forecloses the position before liquidation occurs, saving the user from the full liquidation penalty. Instead of losing up to 15% of their collateral, the borrower only pays a 3.5% fee.
 
 ## 3. Concrete Protect (Enhanced Protection)
 
@@ -32,15 +38,17 @@ Concrete Protect enhances security by offering **credit lines** that improve the
 - **Boosted LTV**: Concrete Protect enhances LTV by injecting credit, reducing the likelihood of liquidation.
 - **Exit Protection**: Even if all protections are used, Concrete ensures remaining assets are returned in better standing than typical liquidation.
 
-## Examples
+**Example**:  
+For users who want maximum protection, Concrete Protect can be added. When the value of ETH drops, Concrete injects additional capital into the loan, improving the LTV and avoiding liquidation altogether. Protection is purchased in tranches, and if the borrower uses up all the available credit, Concrete closes the position favorably, returning the remaining collateral to the user.
 
-Let’s illustrate how **Concrete Borrow**, **Concrete Lite**, and **Concrete Protect** work together to safeguard users:
 
-- **Example 1**:  
-   *A borrower deposits 100 ETH into Concrete and borrows USDC using the best rate available on Aave (or another integrated platform). Without Concrete Lite, if the value of ETH drops significantly, the position would face liquidation, and the user might lose a large portion of their collateral due to high liquidation penalties (10-15%).*
+## Yield and Borrowing Strategies
 
-- **Example 2 (Concrete Lite)**:  
-   *With Concrete Lite enabled (default for supported assets), the system forecloses the position before liquidation occurs, saving the user from the full liquidation penalty. Instead of losing up to 15% of their collateral, the borrower only pays a 3.5% fee.*
+Users can deposit assets directly into **ERC-4626 standard vaults**, which execute sophisticated and automated yield strategies. This allows users to skip the arduous process of researching various protocols or connecting to multiple wallets. Instead, they can deposit assets (such as Ethereum or stablecoins) into Concrete’s vaults, and the platform optimizes returns across various decentralized money markets.
 
-- **Example 3 (Concrete Protect)**:  
-   *For users who want maximum protection, Concrete Protect can be added. When the value of ETH drops, Concrete injects additional capital into the loan, improving the LTV and avoiding liquidation altogether. Protection is purchased in tranches, and if the borrower uses up all the available credit, Concrete closes the position favorably, returning the remaining collateral to the user.*
+Once deposited, users receive **Concrete tokens** (e.g., Concrete ETH) that represent their holdings in the vault. These tokens can then be used as collateral within the Concrete ecosystem to borrow against, providing seamless integration between earning and borrowing. This functionality eliminates the need to repeatedly withdraw, move assets, and deposit into other money markets, significantly reducing the complexity for users.
+
+
+## Multi-Market Integration and Liquidity
+
+Concrete integrates with multiple lending platforms, allowing users to tap into the best yields and borrowing rates across different protocols. Users can deposit their assets once and Concrete takes care of rebalancing between different money markets as conditions change.
