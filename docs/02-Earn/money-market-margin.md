@@ -5,9 +5,7 @@ sidebar_label: "Money Market Margin"
 sidebar_position: 0
 ---
 
-In addition to Concrete’s vault strategies and liquidation protection features, the **Money Market Margin** project offers another significant innovation in the Concrete's ecosystem.
-
-This mechanism allows users to engage in both **earning** and **borrowing** activities simultaneously, leveraging their deposited assets for enhanced liquidity without losing access to high APYs.
+The **Money Market Margin** feature allows users to engage in both **earning** and **borrowing** activities simultaneously, leveraging their deposited assets for enhanced liquidity without losing access to high APYs.
 
 ## Capital "Seesaw" Mechanism: Balancing Yield and Debt
 
