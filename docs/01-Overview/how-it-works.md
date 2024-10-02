@@ -7,9 +7,11 @@ sidebar_position: 2
 
 Concrete is a decentralized protocol that aims to improve the borrowing and liquidation process in decentralized finance (DeFi), offering **automation** and **protection** against market volatility. It addresses inefficiencies in traditional DeFi lending mechanisms and helps users avoid costly liquidations.
 
-Below is a step-by-step breakdown of how Concrete works.
+:::note
+Concrete currently operates within individual blockchain environments, meaning it interacts only with money markets available on a specific chain. If a platform like Aave is not present on a particular chain, Concrete is limited to working with the available markets within that chain. This design reflects a system where each chain functions independently, with its own set of integrated money markets, preventing cross-chain asset routing or interaction between separate chains at this stage of development.
+:::
 
-## **Typical Borrowing and Liquidation Process**
+## Typical Borrowing and Liquidation Process
 
 In most DeFi lending platforms, such as **Aave**, users follow these basic steps:
 
@@ -35,7 +37,7 @@ This traditional process is depicted with Aave liquidating the collateral and th
 
 ## How Concrete Improves the Process (Early Liquidation Protection)
 
-Concrete optimizes this process by integrating **liquidation protection** and **pre-emptive monitoring**, offering users better control over their assets. Here's how Concrete's system works:
+Concrete optimizes this process by integrating **liquidation protection** and **pre-emptive monitoring**, offering users better control over their assets.
 
 ### 1. Deposit Collateral via Concrete
    - Instead of interacting directly with Aave, the user deposits ETH into Concrete.
@@ -89,7 +91,19 @@ The **Money Market Margin** is an essential feature that ties together the core 
 
 By combining high APYs with automated borrowing strategies, Concrete offers users a unique opportunity to optimize their DeFi experience.
 
-## Revenue Streams
+## Probability Engine
+
+The **Probability Engine** is used to forecast the likelihood of a user needing liquidation protection.  The Probability Engine calculates how quickly a loan might hit the liquidation threshold based on the velocity (speed at which the price changes) of the underlying asset. This allows Concrete to provide users with timely liquidation protection, mitigating the risks associated with sharp market declines.
+
+This engine analyzes factors such as:
+   - **Loan-to-Value (LTV) Ratio**: The closer a loan gets to the liquidation threshold (e.g., 70% or 80%), the higher the probability of liquidation.
+   - **Volatility of the Underlying Asset**: If the market is volatile, the speed at which a loan reaches liquidation can vary greatly. Even loans with relatively lower LTV ratios can face a high probability of liquidation due to rapid price drops in assets like Ethereum (ETH).
+
+## Market Volatility and Profitability
+
+The **Concrete's financial model** thrives under various market conditions, particularly during periods of high volatility. When market volatility increases, yields often decrease, and liquidation events spike, leading to many users losing assets. However, Concrete is designed to **make money in both scenarios**—whether the market is trending up or liquidations are occurring. This is a major value proposition for the platform, as it positions itself as a **safe, controlled** environment for users to achieve the **best risk-adjusted returns** across different market strategies and conditions.
+
+### Revenue Streams
 
 Concrete generates revenue through multiple streams, including:
 
@@ -97,4 +111,4 @@ Concrete generates revenue through multiple streams, including:
 - **Foreclosure Fees**: Fees when Concrete Lite forecloses a loan before liquidation.
 - **Liquidity Provision**: Concrete earns a share of the yield from liquidity provider strategies.
 - **Swap Fees**: Fees generated when liquidity providers swap their cToken positions.
-- **Balance Sheet Strategy**: Using the **Probability Engine**, Concrete optimizes its treasury’s asset holdings and seizes arbitrage opportunities.
+- **Balance Sheet Strategy**: Using the Probability Engine, Concrete optimizes its treasury’s asset holdings and seizes arbitrage opportunities.
