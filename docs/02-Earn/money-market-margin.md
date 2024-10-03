@@ -7,7 +7,7 @@ sidebar_position: 0
 
 The **Money Market Margin** feature allows users to engage in both **earning** and **borrowing** activities simultaneously, leveraging their deposited assets for enhanced liquidity without losing access to high APYs.
 
-## Capital "Seesaw" Mechanism: Balancing Yield and Debt
+## Balancing Yield and Debt
 
 The feature **capital seesaw** allows users to participate in both sides of the market and to leverage their deposited assets without fully locking them up or sacrificing their ability to borrow against them:
 1. **Earning Side:** Users deposit assets into Concrete’s vaults, which are then used to generate yields through various strategies, often reaching competitive rates such as 20% APY.

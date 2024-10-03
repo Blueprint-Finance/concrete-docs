@@ -2,7 +2,7 @@
 title: "How It Works"
 description: "How It Works"
 sidebar_label: "How It Works"
-sidebar_position: 2
+sidebar_position: 3
 ---
 
 Concrete is a decentralized protocol that aims to improve the borrowing and liquidation process in decentralized finance (DeFi), offering **automation** and **protection** against market volatility. It addresses inefficiencies in traditional DeFi lending mechanisms and helps users avoid costly liquidations.
@@ -27,7 +27,7 @@ In most DeFi lending platforms, such as **Aave**, users follow these basic steps
    - If the collateral's value drops (e.g., ETH falls in price), the user’s position becomes undercollateralized.
    - Once the collateral reaches a threshold, liquidation is triggered.
 
-###. 4. Liquidation on Aave
+### 4. Liquidation on Aave
    - The protocol sells the collateral at auction to recover the borrowed funds.
    - The borrower receives only a small portion of their remaining collateral after liquidation (e.g., 5 USD left after liquidation).
 

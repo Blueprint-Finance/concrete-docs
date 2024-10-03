@@ -2,7 +2,7 @@
 title: "Prerequisites"
 description: "Prerequisites"
 sidebar_label: "Prerequisites"
-sidebar_position: 3
+sidebar_position: 4
 ---
 
 Before diving into the Concrete Protocol, ensure the following items are set up and ready to use:
