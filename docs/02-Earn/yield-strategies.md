@@ -47,4 +47,4 @@ Concrete envisions a **Honeypot model**, managing large liquidity pools at a hig
 
 These **master funds** operate for different assets (BTC, ETH, USDT, etc.) and can handle substantial liquidity, up to $200 million. As the platform scales, these funds will evolve into **strategies within strategies**, ensuring efficient liquidity management.
 
-Eventually, Concrete will allow the community to build their own **ERC-4626 vaults**, incorporating personalized strategies into the platform’s broader liquidity management system. This approach fosters community-driven innovation while enhancing platform-wide efficiency and yield generation.
+Eventually, Concrete will allow the community to build their own **ERC-4626 vaults**, incorporating personalized strategies into the platform’s broader liquidity management system.

@@ -70,5 +70,3 @@ The **Portfolio** dashboard allows you to track and manage your activity within 
 3. **Rewards**: Displays all the rewards you've earned through participating in Concrete's earning and borrowing mechanisms. These rewards typically include **CT Tokens**, which can be claimed directly from the dashboard.
 
 ![](/img/portfolio-1.png)
-
-By following these steps, you'll be able to safely lock your assets and benefit from the optimized yield strategies offered by Concrete Protocol.

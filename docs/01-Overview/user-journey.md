@@ -49,12 +49,12 @@ Community-built money markets will offer higher yield opportunities but might in
 
 The system has evolved into a **decentralized competition market**, where users can create vaults with their own strategies, and Concrete can select the best ones to integrate into the platform.
 
-## How Concrete Makes Money:
+## How Concrete Makes Money
 
 ### Yield Fees
 For each yield-generating strategy that Concrete executes on your behalf, a small percentage of the profits (typically around 2%) is paid to the protocol as a **service fee**. This incentivizes Concrete to consistently find the most efficient yield-generating opportunities for its users.
 
-### Borrowing Fees**
+### Borrowing Fees
 When you borrow against your assets, Concrete charges an **interest rate** (e.g., 7%) on the loan. This interest helps fuel the protocol’s revenue while ensuring that your assets remain productive in generating yield.
 
 ### Liquidation Protection Fees
