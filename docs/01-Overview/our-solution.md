@@ -41,14 +41,21 @@ Concrete Protect enhances security by offering **credit lines** that improve the
 **Example**:  
 For users who want maximum protection, Concrete Protect can be added. When the value of ETH drops, Concrete injects additional capital into the loan, improving the LTV and avoiding liquidation altogether. Protection is purchased in tranches, and if the borrower uses up all the available credit, Concrete closes the position favorably, returning the remaining collateral to the user.
 
-
 ## Yield and Borrowing Strategies
 
 Users can deposit assets directly into **ERC-4626 standard vaults**, which execute sophisticated and automated yield strategies. This allows users to skip the arduous process of researching various protocols or connecting to multiple wallets. Instead, they can deposit assets (such as Ethereum or stablecoins) into Concrete’s vaults, and the platform optimizes returns across various decentralized money markets.
 
-Once deposited, users receive **Concrete tokens** (e.g., Concrete ETH) that represent their holdings in the vault. These tokens can then be used as collateral within the Concrete ecosystem to borrow against, providing seamless integration between earning and borrowing. This functionality eliminates the need to repeatedly withdraw, move assets, and deposit into other money markets, significantly reducing the complexity for users.
+Once deposited, users receive **Concrete tokens** (e.g., Concrete ETH) that represent their holdings in the vault. These tokens can then be used as collateral within the Concrete ecosystem to borrow against, providing seamless integration between earning and borrowing. This functionality eliminates the need to repeatedly withdraw, move assets, and deposit into other money markets.
 
+Concrete aims to create a sustainable cycle of capital inflow and yield generation. Alongside Loan Protect, Concrete's vault products serve as vital tools, enabling the deployment of liquidity into yield-optimizing strategies while potentially generating revenue through other mechanisms like IP features.
 
-## Multi-Market Integration and Liquidity
+## Money Market Functionality
 
-Concrete integrates with multiple lending platforms, allowing users to tap into the best yields and borrowing rates across different protocols. Users can deposit their assets once and Concrete takes care of rebalancing between different money markets as conditions change.
+Users can utilize their shares (tokens like ETH) from the ERC-4626 vaults as collateral in the money market. This allows them to create positions in the market and earn additional returns by letting other users borrow their collateralized assets, including the native Concrete Token (CT).
+
+## Network-Specific Routing
+Concrete currently operates within the constraints of specific blockchain ecosystems. For instance, if a money market like Aave is unavailable on a particular chain, Concrete can only operate within the markets present on that chain. This isolated routing is part of Concrete's current design, which focuses on optimizing within each blockchain's ecosystem.
+
+## Hub-and-Spoke Architecture
+
+Concrete's architecture follows a **hub-and-spoke model**, where each blockchain acts as a spoke connected to a central hub. The hub handles computation and accounting for cross-chain interactions. Future iterations of this architecture will also support decentralized exchanges, enabling seamless liquidity movement and collateralized borrowing across different blockchains.

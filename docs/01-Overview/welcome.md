@@ -5,11 +5,12 @@ sidebar_label: "Welcome"
 sidebar_position: 0
 ---
 
-Welcome to **Concrete.xyz**, a DeFi platform that allows you to **borrow**, **protect**, and **earn** on your crypto assets while benefiting from capital efficiency, liquidity protection, and yield optimization across multiple chains.
+Welcome to **Concrete.xyz**, a DeFi platform that allows you to **borrow**, **protect**, and **earn** on your crypto assets while benefiting from capital efficiency, liquidity protection, and yield optimization across multiple chains. Concrete integrates with multiple lending platforms, allowing users to tap into the best yields and borrowing rates across different protocols. Users can deposit their assets once and Concrete takes care of rebalancing between different money markets as conditions change.
 
 In the world of crypto, users often face complexities like navigating multiple networks, choosing the best yields, and managing risks of liquidation. Concrete allows users to earn high yields, borrow against their assets, and mitigate liquidation risks through advanced mechanisms.
 
-Concrete serves:
+## Users
+
 * **Borrowers** seeking protection from liquidation with Concrete's *Probability Engine*, which protects against liquidation by automatically injecting credit
 * **Liquidity Providers** aiming for yield maximization with **Earn Vaults**, which automate the process of finding and deploying liquidity to the highest-yielding opportunities in the DeFi space without constant manual reallocation.
 * **Traders** hunting for market opportunities and profiting from the best rates across integrated DeFi platforms.
