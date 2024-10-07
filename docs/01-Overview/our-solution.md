@@ -5,8 +5,6 @@ sidebar_label: "Our Solution"
 sidebar_position: 1
 ---
 
-Concrete provides a **liquidation protection tool**, helping users avoid being liquidated at the worst possible moment. Traditional DeFi loans are liquidated once the **loan-to-value (LTV)** ratio crosses a threshold set by the lender, which can result in users losing a significant portion of their assets.
-
 In Concrete, users can opt into different levels of protection:
 - **Concrete Light**: This base-level protection reduces the penalties associated with liquidation, ensuring users lose less value if liquidated. By default, users are enrolled in Concrete Light, which applies a **2% fee**.
 - **Concrete Protect**: The premium level of protection, Concrete Protect, prevents liquidation entirely by injecting credit into the user’s loan once their LTV approaches the liquidation threshold. This pulls the loan’s LTV back to safer levels, preventing the loan from entering a liquidation event.
@@ -58,4 +56,6 @@ Concrete currently operates within the constraints of specific blockchain ecosys
 
 ## Hub-and-Spoke Architecture
 
-Concrete's architecture follows a **hub-and-spoke model**, where each blockchain acts as a spoke connected to a central hub. The hub handles computation and accounting for cross-chain interactions. Future iterations of this architecture will also support decentralized exchanges, enabling seamless liquidity movement and collateralized borrowing across different blockchains.
+Concrete's architecture follows a **hub-and-spoke model**, where each blockchain acts as a spoke connected to a central hub. The hub handles computation and accounting for cross-chain interactions. This architecture allows users to manage liquidity across multiple blockchains, overcoming the typical fragmentation in DeFi ecosystems. Users will be able to deposit assets on one chain (e.g., Ethereum) and borrow against them on another (e.g., Avalanche), ensuring liquidity is used in the most effective way across platforms.
+
+ Future iterations of this architecture will also support decentralized exchanges, enabling seamless liquidity movement and collateralized borrowing across different blockchains.
