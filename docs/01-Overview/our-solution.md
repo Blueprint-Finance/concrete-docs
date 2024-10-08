@@ -6,8 +6,10 @@ sidebar_position: 1
 ---
 
 In Concrete, users can opt into different levels of protection:
-- **Concrete Light**: This base-level protection reduces the penalties associated with liquidation, ensuring users lose less value if liquidated. By default, users are enrolled in Concrete Light, which applies a **2% fee**.
-- **Concrete Protect**: The premium level of protection, Concrete Protect, prevents liquidation entirely by injecting credit into the user’s loan once their LTV approaches the liquidation threshold. This pulls the loan’s LTV back to safer levels, preventing the loan from entering a liquidation event.
+
+- **Concrete Light**: Reduces the penalties associated with liquidation, ensuring users lose less value if liquidated. By default, users are enrolled in Concrete Light, which applies a **2% fee**.
+
+- **Concrete Protect**: The premium level of protection, prevents liquidation entirely by injecting credit into the user’s loan once their LTV approaches the liquidation threshold. This pulls the loan’s LTV back to safer levels, preventing the loan from entering a liquidation event.
 
 ## 1. Concrete Borrow (Base Level)
 
