@@ -2,7 +2,7 @@
 title: "Money Market Margin"
 description: "Concrete’s Money Market Margin Project: Enhancing Liquidity and Yield"
 sidebar_label: "Money Market Margin"
-sidebar_position: 0
+sidebar_position: 4
 ---
 
 The **Money Market Margin** feature allows users to engage in both **earning** and **borrowing** activities simultaneously, leveraging their deposited assets for enhanced liquidity without losing access to high APYs.
@@ -21,7 +21,7 @@ This setup allows users to maintain liquidity while maximizing returns on their 
 
 **For example**:
 - A user deposits **10 ETH** into a vault, which is earning 20% APY.
-- The protocol issues them a receipt (e.g., **Concrete ETH**), which represents their deposit.
+- The protocol issues them a receipt (e.g., **Concrete ETH (ctETH)**), which represents their deposit.
 - The user can then **borrow stablecoins** (such as USDC or USDT) against this receipt at a specific loan-to-value (LTV) ratio (e.g., **40% LTV**).
 - Even though the user has borrowed funds, their original deposit continues earning the 20% APY.
 

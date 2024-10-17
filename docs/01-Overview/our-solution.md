@@ -45,13 +45,13 @@ For users who want maximum protection, Concrete Protect can be added. When the v
 
 Users can deposit assets directly into **ERC-4626 standard vaults**, which execute sophisticated and automated yield strategies. This allows users to skip the arduous process of researching various protocols or connecting to multiple wallets. Instead, they can deposit assets (such as Ethereum or stablecoins) into Concrete’s vaults, and the platform optimizes returns across various decentralized money markets.
 
-Once deposited, users receive **Concrete tokens** (e.g., Concrete ETH) that represent their holdings in the vault. These tokens can then be used as collateral within the Concrete ecosystem to borrow against, providing seamless integration between earning and borrowing. This functionality eliminates the need to repeatedly withdraw, move assets, and deposit into other money markets.
+Once deposited, users receive **Concrete Assets** (e.g., ctETH) that represent their holdings in the vault. These tokens can then be used as collateral within the Concrete ecosystem to borrow against, providing seamless integration between earning and borrowing. This functionality eliminates the need to repeatedly withdraw, move assets, and deposit into other money markets.
 
 Concrete aims to create a sustainable cycle of capital inflow and yield generation. Alongside Loan Protect, Concrete's vault products serve as vital tools, enabling the deployment of liquidity into yield-optimizing strategies while potentially generating revenue through other mechanisms like IP features.
 
 ## Money Market Functionality
 
-Users can utilize their shares (tokens like ETH) from the ERC-4626 vaults as collateral in the money market. This allows them to create positions in the market and earn additional returns by letting other users borrow their collateralized assets, including the native Concrete Token (CT).
+Users can utilize their shares (tokens like ETH) from the ERC-4626 vaults as collateral in the money market. This allows them to create positions in the market and earn additional returns by letting other users borrow their collateralized assets.
 
 ## Network-Specific Routing
 Concrete currently operates within the constraints of specific blockchain ecosystems. For instance, if a money market like Aave is unavailable on a particular chain, Concrete can only operate within the markets present on that chain. This isolated routing is part of Concrete's current design, which focuses on optimizing within each blockchain's ecosystem.

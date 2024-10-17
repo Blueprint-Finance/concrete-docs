@@ -6,32 +6,6 @@ sidebar_position: 5
 ---
 This guide will walk you through the key steps to quickly get started with Concrete's platform and begin leveraging its core features.
 
-## Borrow
-
-The **Borrow** dashboard is designed to help you find the best lending positions from various lending protocols (e.g., **Aave**, **Compound**, etc.). Concrete automatically scans the network for the most optimal annual percentage yield (APY) based on your chosen asset.
-
-Key insights provided within the Borrow dashboard include:
-
-- **Total Collateral Deposited**: Displays the total value of assets you've deposited into the protocol as collateral.
-- **Total Borrowed**: Shows the total amount of assets you've borrowed.
-- **Average LTV (Loan-to-Value)**: Displays the average LTV ratio across all your active borrowing positions.
-- **Active Positions**: Indicates the total number of borrowing positions open across the Concrete platform.
-
-![](/img/borrow-1.png)
-
-### Core Borrowing Interaction
-
-In the **Borrow** dashboard, you can manage your borrowing and collateral activities using the selector in the center:
-
-1. **Select the Collateral Asset**: Choose the asset you wish to deposit as collateral (e.g., ETH, BTC).
-2. **Select the Borrowed Asset**: Choose the asset you'd like to borrow (e.g., USDC, DAI).
-3. **Choose Your Network**: Select your preferred blockchain network from those supported by Concrete, such as Ethereum, Arbitrum, or Polygon.
-
-Once you select these options, Concrete will display various **Open Positions** with details such as APR, LTV, and potential liquidation thresholds. You can select one of these positions to initiate borrowing.
-
-![](/img/borrow-2.png)
-
-
 ## Earn
 
 The **Earn** dashboard within the Concrete Protocol enables users to deposit and lock their assets to earn the highest possible yield with optimized strategies. Here's how you can navigate and utilize the Earn feature to maximize your returns:
@@ -70,3 +44,28 @@ The **Portfolio** dashboard allows you to track and manage your activity within 
 3. **Rewards**: Displays all the rewards you've earned through participating in Concrete's earning and borrowing mechanisms. These rewards typically include **CT Tokens**, which can be claimed directly from the dashboard.
 
 ![](/img/portfolio-1.png)
+
+## Borrow
+
+The **Borrow** dashboard is designed to help you find the best lending positions from various lending protocols (e.g., **Aave**, **Compound**, etc.). Concrete automatically scans the network for the most optimal annual percentage yield (APY) based on your chosen asset.
+
+Key insights provided within the Borrow dashboard include:
+
+- **Total Collateral Deposited**: Displays the total value of assets you've deposited into the protocol as collateral.
+- **Total Borrowed**: Shows the total amount of assets you've borrowed.
+- **Average LTV (Loan-to-Value)**: Displays the average LTV ratio across all your active borrowing positions.
+- **Active Positions**: Indicates the total number of borrowing positions open across the Concrete platform.
+
+![](/img/borrow-1.png)
+
+### Core Borrowing Interaction
+
+In the **Borrow** dashboard, you can manage your borrowing and collateral activities using the selector in the center:
+
+1. **Select the Collateral Asset**: Choose the asset you wish to deposit as collateral (e.g., ETH, BTC).
+2. **Select the Borrowed Asset**: Choose the asset you'd like to borrow (e.g., USDC, DAI).
+3. **Choose Your Network**: Select your preferred blockchain network from those supported by Concrete, such as Ethereum, Arbitrum, or Polygon.
+
+Once you select these options, Concrete will display various **Open Positions** with details such as APR, LTV, and potential liquidation thresholds. You can select one of these positions to initiate borrowing.
+
+![](/img/borrow-2.png)
