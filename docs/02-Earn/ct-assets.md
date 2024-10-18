@@ -54,8 +54,14 @@ Concrete ensures that users have access to real-time updates on their dashboard,
 - **Real-Time Updates**: The dashboard provides updates on the user’s current holdings and the yield accrued, offering a transparent view of their investments.
 - **APY and Yield Performance**: A clear breakdown of the historical yield and current APY of the vault, ensuring users can track their returns effectively.
 
-
 Note that users are currently unable to create custom vaults, as this feature is planned for a future release once the platform reaches a stable maturity level (e.g., after accumulating a significant amount of liquidity). The goal is to eventually allow users to create their own vaults and strategies, similar to platforms like Hyperliquid, where qualified users can manage liquidity.
+
+### Example: How User Balances Increase Over Time
+
+Imagine the user deposits 1 ETH into a Concrete vault, and the protocol mints 10 ctETH tokens as digital receipt. Over time, as the vault generates yield through its strategies the value associated with the user's ctETH increases.
+
+- On **Day 1**, User’s dashboard shows holdings of 10 ctETH, which represent the initial deposit of 1 ETH.
+- After **90 days**, assuming the vault’s APY is 15%, User’s ctETH tokens would now reflect the accrued yield. The dashboard might show that the 10 ctETH is now equivalent to 1.0375 ETH, indicating the growth of user's investment based on the yield accumulated.
 
 
 ## How Yield Accrues with ct[assets]
@@ -110,12 +116,3 @@ The platform adjusts swap fees based on its liquidity needs. For instance, if Co
 ### Claiming Pending Rewards
 
 When users swap ct[assets], any pending rewards tied to their initial ct[asset] position are automatically claimed and transferred to their wallet. This ensures users receive the full value of their accrued yield before the swap is executed.
-
-
-
-## Example: How User Balances Increase Over Time
-
-Imagine the user deposits 1 ETH into a Concrete vault, and the protocol mints 10 ctETH tokens as digital receipt. Over time, as the vault generates yield through its strategies the value associated with the user's ctETH increases.
-
-- On **Day 1**, User’s dashboard shows holdings of 10 ctETH, which represent the initial deposit of 1 ETH.
-- After **90 days**, assuming the vault’s APY is 15%, User’s ctETH tokens would now reflect the accrued yield. The dashboard might show that the 10 ctETH is now equivalent to 1.0375 ETH, indicating the growth of user's investment based on the yield accumulated.
