@@ -5,7 +5,9 @@ sidebar_label: "Yield Strategies"
 sidebar_position: 2
 ---
 
-Concrete focuses on **automated strategies** to ensure users receive the best return possible.
+Concrete focuses on **automated strategies** to ensure users receive the best return possible. It offers different yield strategies tailored to each asset type, such as BTC, ETH, and stablecoins. For instance, while BTC might have a safer, lower APY to cater to risk-averse users, ETH and stablecoin vaults may offer higher yields for those comfortable with more risk.
+
+Concrete uses historical and real-time performance data to provide a trailing APY for each vault, allowing users to choose the best strategy for their assets. However, the exact displayed APY may vary based on the chain and market conditions.
 
 These strategies primarily include:
 
