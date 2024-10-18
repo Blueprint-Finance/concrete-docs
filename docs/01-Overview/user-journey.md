@@ -39,15 +39,18 @@ Beyond the simple money market yields from Day One, by Day 500, Concrete offers 
 These strategies offer more lucrative returns compared to the passive methods of Day One, but they require more liquidity or involve more complex risk management.
 
 ### 2. Cross-Chain Asset Management
-As the platform matures, cross-chain functionality becomes available. On Day 500, you can now manage your assets across multiple blockchains. For instance, you could deposit ETH on Ethereum and borrow against it on Avalanche.
+As the platform matures, cross-chain functionality becomes available. Concrete allows users to not only borrow stablecoins like USDT but also to borrow across different chains and assets. By Day 500, users can interact with assets on one chain (e.g., Ethereum) and borrow or manage liquidity on another (e.g., Avalanche), creating **cross-chain liquidity** management capabilities.
 
-### 3. Swapping Assets Within Concrete**
+### 3. Swapping Assets Within Concrete
 A built-in asset swap feature. This enables you to shift your holdings from one asset to another (e.g., swapping ETH for BTC) without leaving the platform.
 
 ### 4. Integration with Community-Driven Money Markets
 Community-built money markets will offer higher yield opportunities but might involve greater risks or liquidity challenges. Additionally, Ecosystem ETFs—diversified portfolios spread across multiple protocols—allow for more balanced yet optimized strategies for returns.
 
 The system has evolved into a **decentralized competition market**, where users can create vaults with their own strategies, and Concrete can select the best ones to integrate into the platform.
+
+### 5. Automatic Rebalancing and Debt Servicing
+Concrete integrates automated debt servicing, using the yield generated from the assets you’ve deposited to cover borrowing costs. This ensures that users never have to worry about manually managing their loan repayments. The yield from your assets can be used to automatically pay off the interest on your loan, leaving users to profit from the remaining yield while maintaining liquidity.
 
 ## How Concrete Makes Money
 
@@ -59,20 +62,6 @@ When you borrow against your assets, Concrete charges an **interest rate** (e.g.
 
 ### Liquidation Protection Fees
 For users opting into **Concrete’s Loan Protect**, an additional fee is charged (e.g., 0.3% of the loan). This service protects users from costly liquidations by managing their loan-to-value ratios with emergency credits, keeping their position safe from market volatility.
-
-To enhance the **user journey** of a single dollar in Concrete, based on our latest conversation and previous details, there are a few key points to add or emphasize to give a fuller picture of how Concrete operates:
-
-### 1. **Enhanced Borrowing Flexibility**
-On **Day 500**, as Concrete matures, users will benefit from enhanced borrowing functionality. Concrete allows users to not only borrow stablecoins like USDT but also to borrow across different chains and assets. By Day 500, users can interact with assets on one chain (e.g., Ethereum) and borrow or manage liquidity on another (e.g., Avalanche), creating **cross-chain liquidity** management capabilities.
-
-### 2. **Automatic Rebalancing and Debt Servicing**
-Concrete integrates **automated debt servicing**, using the yield generated from the assets you’ve deposited to cover borrowing costs. This ensures that users never have to worry about manually managing their loan repayments. The **yield from your assets can be used to automatically pay off the interest on your loan**, leaving users to profit from the remaining yield while maintaining liquidity.
-
-### 3. **Yield and Risk Optimization**
-By **Day 500**, Concrete offers more **advanced risk-adjusted yield strategies**. The platform continues to dynamically optimize both yield and risk exposure. As user funds grow, Concrete reallocates assets between the safest and highest-yielding opportunities in real time. This helps users avoid the risks associated with manual portfolio management and individual DeFi protocol failures.
-
-### 4. **Community-Driven Yield Strategies and Vaults**
-By Day 500, users have access to **community-driven vaults**, which allow expert users to create and share advanced yield strategies. These can be integrated into Concrete’s automated systems, giving users more tailored, higher-risk, or specialized yield options without managing complex strategies themselves.
 
 ## Example Journey
 
