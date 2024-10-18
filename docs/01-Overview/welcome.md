@@ -11,7 +11,7 @@ Decentralized Finance (DeFi) comes with complexities that require users to "Do Y
 
 Concrete offers a **one-stop solution** that automates everything from yield optimization to liquidation protection. Handling the research, security, and optimization while giving users the best of DeFi without the risks or headaches.
 
-## Users
+## Designed For
 
 * **Borrowers** seeking protection from liquidation.
 * **Liquidity Providers** aiming for yield maximization.
