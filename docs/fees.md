@@ -8,13 +8,15 @@ Before diving into the specifics of each service, here’s a quick look at the m
 
 - **Foreclosure Fee**: Applied only when foreclosure is required; it replaces traditional liquidation penalties.
 - **Claim Fee**: Charged per credit line disbursement (up to 3)
-- **Opening Fee**: Assessed upon policy activation for services like Concrete Protect, it is based on how close the user’s position is to liquidation.
+- **Opening Fee**: Assessed upon policy activation of Concrete Protect, it is based on how close the user’s position is to liquidation. It varies by the user’s liquidation distance (measured by Loan-to-Value (LTV) ratio). Users closer to liquidation pay a higher fee, managed through fee “buckets” calculated by backend and frontend systems.
 - **Cancellation Fee**: Set to zero, allowing users to cancel services early without penalty.
 - **Deposit, Maintenance, and Withdrawal Fees**: Applied in traditional finance settings but waived in Concrete Earn, maximizing returns for liquidity providers.
 
 ## 1. Concrete Lite: Your Affordable, Set-and-Forget Protection
 
-Concrete Lite offers foreclosure protection with zero activation cost, so you get peace of mind without spending a penny upfront. If you ever face foreclosure, Concrete Lite’s fee is a predictable 3.5%—significantly lower than typical liquidation penalties of 5% or more. This means more savings in the long run and a safeguard to keep your assets safe.
+Concrete Lite offers foreclosure protection with zero activation cost, so you get peace of mind without spending a penny upfront. The foreclosure fee is clarified to be the same for all assets.
+
+If you ever face foreclosure, Concrete Lite’s fee is 3.5%—significantly lower than typical liquidation penalties of 5% or more. This means more savings in the long run and a safeguard to keep your assets safe.
 
 **Why Concrete Lite?**
 - **Zero Activation Cost**: Get foreclosure protection from the start, free of charge.
