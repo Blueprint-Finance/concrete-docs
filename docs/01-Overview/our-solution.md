@@ -5,9 +5,18 @@ sidebar_label: "Our Solution"
 sidebar_position: 1
 ---
 
+| **Solution**           | **Concrete Earn**                                                                                                   | **Concrete Borrow (with Concrete Lite)**                                                                                                   | **Concrete Protect**                                                                                                       |
+|-----------------------|---------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------|
+| **Purpose**           | Provides a fee-free yield-generating vault for liquidity providers                                                 | Offers optimized DeFi borrowing rates with default foreclosure protection through Concrete Lite                                             | Premium protection that prevents liquidation by injecting credit when LTV is at risk                                        |
+| **Protection Level**  | N/A                                                                                                                | Concrete Lite reduces liquidation penalties by foreclosing early (default protection)                                                       | Prevents liquidation entirely by improving LTV through credit line injections                                              |
+| **Fee Structure**     | None – all deposit, maintenance, and withdrawal fees waived                                                        | 3.5% foreclosure fee (vs. standard 5-15% on other platforms)                                                                                | Opening Fee + Claim Fee per credit line disbursement; protects LTV by adding capital before liquidation                     |
+| **Usage Scenario**    | Ideal for liquidity providers looking to maximize returns without additional fees                                  | Suitable for users needing low-cost access to DeFi lending, with reduced risk of high liquidation penalties                                | Best for high-risk borrowers seeking maximum protection from liquidation, with flexible credit-based support                |
+| **Example Outcome**   | Earns yield by deploying funds across multiple DeFi protocols                                                      | Forecloses a position if LTV approaches the liquidation threshold, charging a lower foreclosure fee                                        | Injects credit to improve LTV, avoiding liquidation altogether and ensuring asset recovery even in high-volatility markets  |
+
+
 In Concrete, users can opt into different levels of protection:
 
-- **Concrete Light**: Reduces the penalties associated with liquidation, ensuring users lose less value if liquidated. By default, users are enrolled in Concrete Light, which applies a **2% fee**.
+- **Concrete Light**: Reduces the penalties associated with liquidation, ensuring users lose less value if liquidated. By default, users are enrolled in Concrete Light, which applies a **3.5% fee**.
 
 - **Concrete Protect**: The premium level of protection, prevents liquidation entirely by injecting credit into the user’s loan once their LTV approaches the liquidation threshold. This pulls the loan’s LTV back to safer levels, preventing the loan from entering a liquidation event.
 
@@ -23,7 +32,7 @@ A borrower deposits 100 ETH into Concrete and borrows USDC using the best rate a
 
 ## 2. Concrete Lite (Default Protection)
 
-For users who want an extra layer of protection, **Concrete Lite** is applied by default for supported assets (with the option to opt out if desired). This feature proactively manages positions, closing loans before full liquidation is triggered, significantly reducing penalties. It charges a smaller foreclosure fee (3.5%) compared to the typical fees charged by lending markets (5-15%).
+**Concrete Lite** provides basic liquidation prevention for borrowers. By default, it activates for supported assets (with the option to opt out if desired), closing positions before they reach full liquidation. Unlike traditional DeFi platforms that impose 5-15% penalties upon liquidation, Concrete Lite forecloses positions early, saving users from steep liquidation fees and charging a reduced 3.5% foreclosure fee instead. This feature operates automatically, allowing users to avoid liquidation with minimal intervention.
 
 By acting before liquidation triggers, Concrete Lite helps users retain more of their collateral.
 
