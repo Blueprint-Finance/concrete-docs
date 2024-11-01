@@ -12,14 +12,14 @@ Before diving into the specifics of each service, here’s a quick look at the m
 - **Cancellation Fee**: Set to zero, allowing users to cancel services early without penalty.
 - **Deposit, Maintenance, and Withdrawal Fees**: Applied in traditional finance settings but waived in Concrete Earn, maximizing returns for liquidity providers.
 
-## 1. Concrete Lite: Your Affordable, Set-and-Forget Protection
+## 1. Concrete Lite: Free Set-and-Forget Protection
 
-Concrete Lite offers foreclosure protection with zero activation cost, so you get peace of mind without spending a penny upfront. The foreclosure fee is clarified to be the same for all assets.
+Concrete Lite offers foreclosure protection with zero activation cost, so you get peace of mind without spending a penny upfront. This feature is included automatically with borrowing. It provides a basic level of protection by foreclosing loans to prevent liquidation without requiring the user to take further action.
 
-If you ever face foreclosure, Concrete Lite’s fee is 3.5%—significantly lower than typical liquidation penalties of 5% or more. This means more savings in the long run and a safeguard to keep your assets safe.
+The foreclosure fee is clarified to be the same for all assets. If you ever face foreclosure, Concrete Lite’s fee is 3.5%—significantly lower than typical liquidation penalties of 5% or more. This means more savings in the long run and a safeguard to keep your assets safe.
 
 **Why Concrete Lite?**
-- **Zero Activation Cost**: Get foreclosure protection from the start, free of charge.
+- **Zero Activation Cost**: It automatically triggers protection by using a flash loan when necessary, requiring no upfront cost or intervention from the user.
 - **Lower Penalties**: Pay only a 3.5% foreclosure fee if liquidation becomes necessary, compared to the 5%+ standard on other platforms.
 - **Set-and-Forget Security**: With Concrete Lite, you can relax knowing your assets have an affordable safety net.
 
