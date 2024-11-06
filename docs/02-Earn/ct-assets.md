@@ -2,7 +2,7 @@
 title: "Concrete Assets and Yield-Bearing Tokens"
 description: "ct[assets] and Yield-Bearing Tokens"
 sidebar_label: "Concrete Assets"
-sidebar_position: 0
+sidebar_position: 1
 ---
 
 ct[assets] are yield-bearing tokens issued to users when they provide liquidity to Concrete’s vaults. Each ct[asset] represents the underlying asset deposited plus any yield accrued during the holding period. When users deposit into an asset-specific vault, they receive ct[asset-type] tokens, which function as a proof of their stake in the vault.
