@@ -22,6 +22,8 @@ By default, Concrete Borrow comes with **Concrete Lite**, which forecloses loans
 
 ## Managing Concrete Borrow (Lite)
 
+![](/img/borrow-4.png)
+
 1. **View Loan Overview**:
    - The loan dashboard shows the current LTV, liquidation threshold, and the status of Concrete Lite.
 
