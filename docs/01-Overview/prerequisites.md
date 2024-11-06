@@ -12,6 +12,10 @@ Before diving into the Concrete Protocol, ensure the following items are set up 
 
 ## How to Use Concrete
 
+<video controls width="90%">
+  <source src="/vid/main-dashboard.mp4"/>
+</video>
+
 ### 1. Launch the Concrete dApp  
    Head to the official **Concrete website** and launch the decentralized app (dApp). You can browse the app and view the features available to you, but you will need to connect your wallet for full access.
 
@@ -29,3 +33,5 @@ Before diving into the Concrete Protocol, ensure the following items are set up 
    - **Borrow**: Find the most favorable borrowing positions.
    - **Earn**: Deposit assets to earn yields in Concrete’s vaults.
    - **Portfolio**: Track your borrowing positions, vault deposits, and rewards.
+
+   ![](/img/portfolio.png)

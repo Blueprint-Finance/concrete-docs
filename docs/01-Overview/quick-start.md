@@ -10,7 +10,7 @@ This guide will walk you through the key steps to quickly get started with Concr
 
 The **Earn** dashboard within the Concrete Protocol enables users to deposit and lock their assets to earn the highest possible yield with optimized strategies. Here's how you can navigate and utilize the Earn feature to maximize your returns:
 
-![](/img/earn-1.png)
+![](/img/earn-3.png)
 
 ### Key Insights of the Earn Dashboard
 
@@ -43,7 +43,7 @@ The **Portfolio** dashboard allows you to track and manage your activity within 
 2. **Vaults**: Lets you manage your deposits into vaults. You can add or withdraw assets, and adjust your investment strategy as needed.
 3. **Rewards**: Displays all the rewards you've earned through participating in Concrete's earning and borrowing mechanisms. These rewards typically include **CT Tokens**, which can be claimed directly from the dashboard.
 
-![](/img/portfolio-1.png)
+![](/img/portfolio.png)
 
 ## Borrow
 
@@ -56,8 +56,6 @@ Key insights provided within the Borrow dashboard include:
 - **Average LTV (Loan-to-Value)**: Displays the average LTV ratio across all your active borrowing positions.
 - **Active Positions**: Indicates the total number of borrowing positions open across the Concrete platform.
 
-![](/img/borrow-1.png)
-
 ### Core Borrowing Interaction
 
 In the **Borrow** dashboard, you can manage your borrowing and collateral activities using the selector in the center:
@@ -68,4 +66,4 @@ In the **Borrow** dashboard, you can manage your borrowing and collateral activi
 
 Once you select these options, Concrete will display various **Open Positions** with details such as APR, LTV, and potential liquidation thresholds. You can select one of these positions to initiate borrowing.
 
-![](/img/borrow-2.png)
+![](/img/borrow-3.png)

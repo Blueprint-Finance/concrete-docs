@@ -70,3 +70,23 @@ Concrete currently operates within the constraints of specific blockchain ecosys
 Concrete's architecture follows a **hub-and-spoke model**, where each blockchain acts as a spoke connected to a central hub. The hub handles computation and accounting for cross-chain interactions. This architecture allows users to manage liquidity across multiple blockchains, overcoming the typical fragmentation in DeFi ecosystems. Users will be able to deposit assets on one chain (e.g., Ethereum) and borrow against them on another (e.g., Avalanche), ensuring liquidity is used in the most effective way across platforms.
 
  Future iterations of this architecture will also support decentralized exchanges, enabling seamless liquidity movement and collateralized borrowing across different blockchains.
+
+## Roadmap
+
+Concrete's roadmap includes robust plans for cross-chain liquidity and asset management, to be implemented across different stages:
+
+### V1
+
+All liquidity remains localized within a specific blockchain, with no cross-chain movement allowed.
+
+### V2
+
+Users will be able to swap assets within the same blockchain ecosystem, facilitating smoother transitions between vaults without external trading.
+
+### V3
+
+Cross-chain lending will be introduced, allowing users to deposit assets on one blockchain and borrow against them on another.
+
+### V4
+
+Full cross-chain liquidity management will enable users to consolidate assets and borrow across multiple connected blockchains.
