@@ -1,7 +1,7 @@
 ---
 title: "How to Activate Concrete Protect"
-description: "How to Activate Concrete Protect
-sidebar_label: "How to Activate Concrete Protect""
+description: "How to Activate Concrete Protect"
+sidebar_label: "How to Activate Concrete Protect"
 sidebar_position: 1
 ---
 
