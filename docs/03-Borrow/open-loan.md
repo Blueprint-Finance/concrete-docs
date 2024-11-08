@@ -17,13 +17,12 @@ Example: Choose **WETH to borrow USDC** on **Arbitrum**.
 
 ## 2. Open Loan  
 
-Click **Open Loan** to proceed. This will display loan options across supported platforms (e.g., Aave, Compound) with optimized Net APR details.  
+- Click **Open Loan** to proceed. This will display loan options across supported platforms (e.g., Aave, Compound) with optimized Net APR details.  
 
 ## 3. Specify Loan Parameters
 
-Enter the amount of collateral (e.g., 120 WETH) and the desired borrow amount (e.g., 150,000 USDC). The system will automatically calculate your Loan-to-Value (LTV), current asset prices, liquidation threshold, and Net APR.  
-
-Click **Continue**.
+- Enter the amount of collateral (e.g., 120 WETH) and the desired borrow amount (e.g., 150,000 USDC). The system will automatically calculate your Loan-to-Value (LTV), current asset prices, liquidation threshold, and Net APR.
+- Click **Continue**.
 
 ## 4. Supply Collateral
 
