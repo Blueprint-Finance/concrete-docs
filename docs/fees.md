@@ -12,22 +12,28 @@ Before diving into the specifics of each service, here’s a quick look at the m
 - **Cancellation Fee**: Set to zero, allowing users to cancel services early without penalty.
 - **Deposit, Maintenance, and Withdrawal Fees**: Applied in traditional finance settings but waived in Concrete Earn, maximizing returns for liquidity providers.
 
-## 1. Concrete Lite: Free Set-and-Forget Protection
+## 1. Concrete Borrow (Lite): Free Set-and-Forget Protection
 
-Concrete Lite offers foreclosure protection with zero activation cost, so you get peace of mind without spending a penny upfront. This feature is included automatically with borrowing. It provides a basic level of protection by foreclosing loans to prevent liquidation without requiring the user to take further action.
+Concrete Borrow is your gateway to major third-party lending platforms like AAVE and Compound, with **zero additional fees** from Concrete Protocol. This means that you benefit from all the borrowing advantages DeFi offers, without paying extra fees, making it an ideal choice for both high-volume and institutional users who value efficiency and low costs. With Concrete Borrow, you’re only responsible for the underlying market fees, making it one of the most cost-effective ways to manage lending in the DeFi space.
+
+Concrete Borrow (Lite) offers foreclosure protection with zero activation cost, so you get peace of mind without spending a penny upfront. This feature is included automatically with borrowing. It provides a basic level of protection by foreclosing loans to prevent liquidation without requiring the user to take further action.
 
 The foreclosure fee is clarified to be the same for all assets. If you ever face foreclosure, Concrete Lite’s fee is 3.5%—significantly lower than typical liquidation penalties of 5% or more. This means more savings in the long run and a safeguard to keep your assets safe.
 
-**Why Concrete Lite?**
+**Why Concrete Borrow (Lite)?**
 - **Zero Activation Cost**: It automatically triggers protection by using a flash loan when necessary, requiring no upfront cost or intervention from the user.
 - **Lower Penalties**: Pay only a 3.5% foreclosure fee if liquidation becomes necessary, compared to the 5%+ standard on other platforms.
 - **Set-and-Forget Security**: With Concrete Lite, you can relax knowing your assets have an affordable safety net.
 
-**Fee Type**       | **Amount**              | **Denomination** | **Description**                                                                                                      |
-|--------------------|-------------------------|------------------|---------------------------------------------------------------------------------------------------------------------|
-| Opening Fee        | None                    | N/A              | No cost to activate Concrete Lite, making it an accessible entry point for users seeking foreclosure protection.   |
-| Early Safe Closure | None                    | N/A              | Users who close their positions safely before foreclosure incur no charges.                                         |
-| Foreclosure Fee    | 3.5% of borrowed amount | Collateral       | Applied only if foreclosure occurs, this fee replaces traditional liquidation penalties (typically 5% or more). It is split as follows: 0.3% to the Earn Vault for liquidity support and 3.2% to the Concrete Treasury for operational costs. |
+| **Fee Type**             | **Amount**              | **Denomination** | **Description**                                                                                                      |
+|--------------------------|-------------------------|------------------|---------------------------------------------------------------------------------------------------------------------|
+| Borrow & Supply Service  | None                    | N/A              | No additional fees from Concrete; users only pay underlying market fees. Designed to attract high-volume users and institutional participants. |
+| Opening Fee              | None                    | N/A              | No cost to activate Concrete Lite, making it an accessible entry point for users seeking foreclosure protection.     |
+| Early Safe Closure       | None                    | N/A              | Users who close their positions safely before foreclosure incur no charges.                                          |
+| Foreclosure Fee          | 3.5% of borrowed amount | Collateral       | Applied only if foreclosure occurs. Replaces traditional liquidation penalties (typically 5% or more). Split as follows: 0.3% to Earn Vault, 3.2% to Concrete Treasury for operational costs. |
+
+Alternatively, users can enhance protection by upgrading to:
+Concrete Protect = Concrete Borrow (Lite) + advanced safety (which offers features such as credit lines and custom liquidation buffers).
 
 ## 2. Concrete Protect: Advanced Safety for Active Users
 
@@ -59,22 +65,8 @@ Concrete Earn is designed with liquidity providers in mind, providing a fee-free
 |-------------------------|------------|------------------|--------------------------------------------------------------------------------------------------------------|
 | Deposit Fee             | None       | N/A              | No fees on deposits, enabling liquidity providers to allocate funds without initial cost barriers.            |
 | Maintenance Fee         | None       | N/A              | The protocol covers operational expenses, meaning no ongoing charges for liquidity providers.                 |
-| Performance Fee         | None       | N/A              | No performance fees, allowing Earn Vault participants to retain their entire returns.                        |
-| Withdrawal Fee          | None       | N/A              | Funds can be withdrawn without penalty, providing flexibility and control over invested capital.
-
-## 4. Concrete Borrow: Seamless, Direct Access to DeFi Lending Markets
-
-Concrete Borrow is your gateway to major third-party lending platforms like AAVE and Compound, with **zero additional fees** from Concrete Protocol. This means that you benefit from all the borrowing advantages DeFi offers, without paying extra fees, making it an ideal choice for both high-volume and institutional users who value efficiency and low costs. With Concrete Borrow, you’re only responsible for the underlying market fees, making it one of the most cost-effective ways to manage lending in the DeFi space.
-
-**Why Concrete Borrow?**
-- **Zero Additional Fees**: Pay only the underlying market fees from AAVE, Compound, or similar platforms, keeping your borrowing costs low.
-- **Direct Market Access**: Enjoy streamlined access to top DeFi lending markets directly through Concrete Protocol.
-- **Tailored for High-Volume Users**: Concrete Borrow is designed to support high-volume borrowing and institutional strategies, keeping costs down while giving you a direct line to essential DeFi tools.
-
-
-| **Fee Type**             | **Amount** | **Denomination** | **Description**                                                                                      |
-|--------------------------|------------|------------------|-----------------------------------------------------------------------------------------------------|
-| Borrow & Supply Service  | None       | N/A              | No additional fees from Concrete, so users only pay underlying market fees. This fee-free approach is designed to attract high-volume users and institutional participants. |
+| Performance Fee         | 20%        | Profits          | A performance fee on yield earned. This fee is calculated based on profits, ensuring sustainability for the protocol and incentivizing optimized returns for liquidity providers. It aligns protocol and user interests by sharing a percentage of successful outcomes.|
+| Withdrawal Fee          | None       | N/A              | Funds can be withdrawn without penalty, providing flexibility and control over invested capital.             |
 
 
 ## Fee Allocation
