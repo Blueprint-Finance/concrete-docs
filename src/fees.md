@@ -2,6 +2,7 @@
 title: "Fees"
 description: "Fees"
 sidebar_label: "Fees"
+sidebar_position: 4
 ---
 
 Before diving into the specifics of each service, here’s a quick look at the main fee types users will encounter across Concrete Protocol services:
