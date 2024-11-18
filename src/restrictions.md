@@ -2,7 +2,7 @@
 title: "Restricted Jurisdictions"
 description: "Restricted Jurisdictions for Concrete Protocol"
 sidebar_label: "Restricted Jurisdictions"
-sidebar_position: 6s
+sidebar_position: 6
 ---
 
 At Concrete Protocol, we prioritize compliance with international laws and regulations. As part of this commitment, access to our services is restricted in certain jurisdictions, including:
