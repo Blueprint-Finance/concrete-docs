@@ -53,21 +53,23 @@ Concrete Protect adds powerful, flexible protection for users who want to take a
 | Early Cancellation Fee | 0%                                                  | N/A              | No fee for early cancellation, allowing users to cancel protection without penalty before the policy term ends.                                           |
 | Foreclosure Fee      | 3.5% of the foreclosed amount                        | Collateral       | Similar to Concrete Lite, this fee replaces high liquidation penalties with a predictable 3.5% charge. The fee distribution mirrors Concrete Lite: 0.3% to Earn Vault, 3.2% to Concrete Treasury. |
 
-## 3. Concrete Earn: Maximize Returns with a Zero-Fee Structure
+## 3. Concrete Earn: Maximize Returns with a Transparent Fee Structure
 
-Concrete Earn is designed with liquidity providers in mind, providing a fee-free experience that maximizes your returns. With **no deposit, maintenance, performance, or withdrawal fees**, Concrete Earn is the go-to solution for those looking to allocate funds with zero operational friction. Whether you're contributing to the liquidity pool or withdrawing, you won’t encounter hidden costs, allowing you to keep every bit of your yield.
+Concrete Earn is designed to provide liquidity providers with optimized returns while maintaining a transparent and user-friendly fee structure. The platform charges **no deposit, maintenance, or withdrawal fees**, ensuring easy entry and exit for users. A **20% performance fee** is applied only to profits, aligning the protocol's success with user gains.
 
 **Why Concrete Earn?**
-- **Fully Fee-Free**: With no charges on deposits, withdrawals, or maintenance, every penny you earn stays with you.
-- **Optimized for Maximum Returns**: By removing all barriers, Concrete Earn enables you to invest and withdraw seamlessly, focusing purely on yield.
-- **Flexible and Transparent**: Funds are accessible whenever you need them, with no penalties or performance fees, giving you complete control over your investments.
 
-| **Fee Type**            | **Amount** | **Denomination** | **Description**                                                                                               |
-|-------------------------|------------|------------------|--------------------------------------------------------------------------------------------------------------|
-| Deposit Fee             | None       | N/A              | No fees on deposits, enabling liquidity providers to allocate funds without initial cost barriers.            |
-| Maintenance Fee         | None       | N/A              | The protocol covers operational expenses, meaning no ongoing charges for liquidity providers.                 |
-| Performance Fee         | 20%        | Profits          | A performance fee on yield earned. This fee is calculated based on profits, ensuring sustainability for the protocol and incentivizing optimized returns for liquidity providers. It aligns protocol and user interests by sharing a percentage of successful outcomes.|
-| Withdrawal Fee          | None       | N/A              | Funds can be withdrawn without penalty, providing flexibility and control over invested capital.             |
+- **Performance-Based Fee Model**: Only pay fees on profits, ensuring you’re only charged when you earn.
+- **No Hidden Costs**: Enjoy zero fees on deposits, withdrawals, and ongoing maintenance.
+- **Optimized Returns**: Concrete Earn helps you maximize yield through advanced strategies, with performance fees designed to sustain the protocol and reward liquidity providers.
+- **Full Control and Transparency**: Funds remain accessible without penalty, offering flexibility for liquidity management.
+
+| **Fee Type**        | **Amount** | **Denomination** | **Description**                                                                                               |
+|---------------------|------------|------------------|--------------------------------------------------------------------------------------------------------------|
+| Deposit Fee         | None       | N/A              | No fees on deposits, enabling liquidity providers to allocate funds without initial cost barriers.            |
+| Maintenance Fee     | None       | N/A              | The protocol covers operational expenses, meaning no ongoing charges for liquidity providers.                 |
+| Performance Fee     | 20%        | Profits          | A performance fee on yield earned. This fee is calculated based on profits, ensuring sustainability for the protocol and incentivizing optimized returns for liquidity providers. It aligns protocol and user interests by sharing a percentage of successful outcomes. |
+| Withdrawal Fee      | None       | N/A              | Funds can be withdrawn without penalty, providing flexibility and control over invested capital.              |
 
 
 ## Fee Allocation
