@@ -11,15 +11,16 @@ Before starting, you must connect your preferred wallet (e.g., MetaMask) to inte
 
 ## Step 1: Navigate to the Desired Vault
 
-1. Go to the **Earn** section in the platform.
-2. Select the asset vault (e.g., **ETH Vault**) from the list.
+- Go to the **Earn** section in the platform.
+- Select the asset vault (e.g., **ETH Vault**) from the list.
    - **Key Metrics**: Check the displayed total staked value and potential APY.
 
 ![](/img/earn-3.png)
 
 ## Step 2: Initiate Deposit
-1. Click the **Deposit** tab.
-2. Enter the amount of the asset you want to deposit (e.g., 3.2 ETH).
+
+- Click the **Deposit** tab.
+- Enter the amount of the asset you want to deposit (e.g., 3.2 ETH).
    - The interface calculates and shows:
      - The equivalent receipt token (e.g., cETH).
      - Deposit value in USD.
@@ -28,12 +29,14 @@ Before starting, you must connect your preferred wallet (e.g., MetaMask) to inte
 ![](/img/earn-4.png)
 
 ## Step 3: Confirm Deposit
-1. Review details in the **Deposit Collateral** modal:
+
+Review details in the **Deposit Collateral** modal:
    - Collateral value.
    - Updated **Loan-to-Value (LTV)** ratio.
    - Improved **Liquidation Price** for added security.
 
 ## Step 4: Verify Deposit in Portfolio
-- Once confirmed on the blockchain, the updated holdings will be visible:
+
+Once confirmed on the blockchain, the updated holdings will be visible:
   - Your **Portfolio** will show the newly deposited assets.
   - Corresponding receipt tokens (e.g., cETH) reflect your vault balance.
