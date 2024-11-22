@@ -55,24 +55,14 @@ Users are notified in their portfolio dashboard each time a tranche is activated
 
 If the market continues to decline after all tranches have been exhausted, Concrete Protect will aim for a controlled exit by closing the position in a way that maximizes the amount of collateral returned. This final exit strategy minimizes user losses and ensures that any remaining assets are returned in the most favorable manner possible.
 
-## Cost Structure
+## Fees
 
-| **Fee Type**          | **Amount**                                           | **Recipient**                   | **Description**                                                                                          |
-|-----------------------|------------------------------------------------------|---------------------------------|----------------------------------------------------------------------------------------------------------|
-| **Opening Fee**       | Based on LTV distance to liquidation                 | Concrete Treasury               | Paid at activation, varies based on risk level, covers 30 days of policy protection.                     |
-| **Claim Fee**         | Asset-specific (e.g., BTC: 1.65%, ETH: 2.95%)        | 80% to Earn Vault, 20% to Treasury | Paid per credit tranche activation, compensates liquidity providers and protocol for credit deployment.  |
-| **Foreclosure Fee**   | 3.5% of foreclosed amount (if needed)                | Split as in Concrete Lite       | Applied only in rare cases of liquidation, ensuring minimized loss if protection is fully exhausted.     |
-
-Concrete Protect’s fees are structured to offer predictable, transparent costs without compounding interest on injected capital. This transparency is achieved through the following components:
-
-1. **Opening Fee**  
-   Paid upon policy activation, this one-time fee varies according to the user’s LTV proximity to liquidation. The closer the position is to the liquidation threshold, the higher the risk, and thus, the higher the opening fee. This fee is credited entirely to the Concrete Treasury.
-
-2. **Claim Fee**  
-   Each time a tranche is activated, a Claim Fee is charged based on the asset type. This fee, which compensates for the risk of injected credit, is distributed with 80% allocated to the Earn Vault and 20% to the Concrete Treasury.
-
-3. **Fixed-Term Cost Predictability**  
-   Concrete Protect users pay a capped, predictable fee structure that includes the Opening Fee and the potential Claim Fees for each credit injection. Since no interest is applied to the credit line itself, users know their maximum expense upfront.
+| **Fee Type**         | **Amount**                                           | **Denomination** | **Description**                                                                                                                                                |
+|----------------------|------------------------------------------------------|------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Opening Fee          | 0.5% - 0.65% of the promised amount                  | Collateral       | A one-time fee based on the user’s proximity to liquidation (LTV). Higher fees apply to users closer to liquidation, reflecting increased risk. The entire fee goes to the Concrete Treasury. |
+| Claim Fee            | BTC: 1.65%, ETH: 2.95% per disbursed credit tranche  | Collateral       | Charged for each credit line disbursement (up to 3 times). 80% of this fee goes to the Earn Vault, rewarding liquidity providers, while 20% goes to the Concrete Treasury. |
+| Early Cancellation Fee | 0%                                                  | N/A              | No fee for early cancellation, allowing users to cancel protection without penalty before the policy term ends.                                           |
+| Foreclosure Fee      | 3.5% of the foreclosed amount                        | Collateral       | Similar to Concrete Lite, this fee replaces high liquidation penalties with a predictable 3.5% charge. The fee distribution mirrors Concrete Lite: 0.3% to Earn Vault, 3.2% to Concrete Treasury. |
 
 ## Ideal Use Cases
 

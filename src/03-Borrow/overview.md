@@ -99,6 +99,9 @@ Here’s a step-by-step outline of the complete Concrete Borrow process:
 
 ## Fees
 
-| **Fee Type**             | **Amount** | **Denomination** | **Description**                                                                                      |
-|--------------------------|------------|------------------|-----------------------------------------------------------------------------------------------------|
-| Borrow & Supply Service  | None       | N/A              | No additional fees from Concrete, so users only pay underlying market fees. This fee-free approach is designed to attract high-volume users and institutional participants. |
+| **Fee Type**             | **Amount**              | **Denomination** | **Description**                                                                                                      |
+|--------------------------|-------------------------|------------------|---------------------------------------------------------------------------------------------------------------------|
+| Borrow & Supply Service  | None                    | N/A              | No additional fees from Concrete; users only pay underlying market fees. Designed to attract high-volume users and institutional participants. |
+| Opening Fee              | None                    | N/A              | No cost to activate Concrete Lite, making it an accessible entry point for users seeking foreclosure protection.     |
+| Early Safe Closure       | None                    | N/A              | Users who close their positions safely before foreclosure incur no charges.                                          |
+| Foreclosure Fee          | 3.5% of borrowed amount | Collateral       | Applied only if foreclosure occurs. Replaces traditional liquidation penalties (typically 5% or more). Split as follows: 0.3% to Earn Vault, 3.2% to Concrete Treasury for operational costs. |
