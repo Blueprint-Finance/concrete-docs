@@ -7,10 +7,11 @@ sidebar_position: 3
 
 Concrete offers an efficient interface to initiate borrowing on external markets such as Aave, leveraging its optimization features to secure the best rates. Here's how to proceed:
 
+<!---
 <video controls width="90%">
   <source src="/vid/borrow-external.mov"/>
 </video>
-
+-->
 
 ## Step 1: Connect Your Wallet
 

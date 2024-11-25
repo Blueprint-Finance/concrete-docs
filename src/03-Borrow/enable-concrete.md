@@ -5,9 +5,11 @@ sidebar_label: "How to Activate Concrete"
 sidebar_position: 1
 ---
 
+<!---
 <video controls width="90%">
   <source src="/vid/get-lite.mov"/>
 </video>
+-->
 
 ## Concrete Borrow (Lite)
 
