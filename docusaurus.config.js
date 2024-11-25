@@ -75,6 +75,13 @@ const config = {
     ({
       // Replace with your project's social card
       image: 'img/concrete-mark.png',
+      metadata: [
+                    { name: 'twitter:card', content: 'summary_large_image' },
+                    { name: 'twitter:title', content: 'Concrete Docs' },
+                    { name: 'twitter:description', content: 'DeFi protocol' },
+                    { name: 'twitter:image', content: 'https://docs.concrete.xyz/img/concrete-mark.png' },
+                    { property: 'og:image', content: 'https://docs.concrete.xyz/img/concrete-mark.png' },
+                  ],
       navbar: {
         logo: {
           alt: 'Concrete Logo',
