@@ -5,12 +5,9 @@ sidebar_label: "How to Borrow Against Collateral"
 sidebar_position: 2
 ---
 
-<!---
 <video controls width="90%">
-  <source src="/vid/borrow-against-collateral.mov"/>
+  <source src="/vid/borrow-against-collateral.mp4"/>
 </video>
--->
-
 
 ## 1. Access the Borrow Interface
 

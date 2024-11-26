@@ -9,11 +9,11 @@ Concrete Protect offers a higher level of security beyond the default Concrete B
 
 Here’s how to activate it for individual positions (applied separately for each loan):
 
-<!---
+
 <video controls width="90%">
-  <source src="/vid/enable-protect.mov"/>
+  <source src="/vid/enable-protect.mp4"/>
 </video>
--->
+
 
 ## 1. Access Your Portfolio
 

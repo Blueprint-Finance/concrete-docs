@@ -91,5 +91,3 @@ Concrete Protocol’s fee structure is designed to support both its treasury and
 - **Claim Fees (Concrete Protect)**: Each credit line disbursement incurs a Claim Fee, with 80% directed to the Earn Vault, rewarding liquidity providers, and 20% going to the Concrete Treasury. This fee is structured to align with market-standard flash loan rates, keeping Earn Vault providers competitive while ensuring sustainable income.
 
 - **Foreclosure Fee Logic**: The foreclosure process involves a flash loan to cover the borrower’s outstanding debt, and Concrete Protocol liquidates the necessary collateral to repay the flash loan and associated fees. This method minimizes capital risk for Concrete, enabling predictable, fixed fees instead of volatile liquidation costs.
-
-- **Variable Adjustments in Fees**: Concrete’s fee structure includes a flexible 10% adjustment range on claim and foreclosure fees, allowing the protocol to adapt to market conditions. This adjustment flexibility benefits both long-term users and liquidity providers, maintaining fairness as demand and capital needs fluctuate.

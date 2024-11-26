@@ -4,6 +4,7 @@ description: "Getting Started with Concrete: Quick Start Guide"
 sidebar_label: "Getting Started"
 sidebar_position: 5
 ---
+
 This guide will walk you through the key steps to quickly get started with Concrete's platform and begin leveraging its core features.
 
 ## Earn

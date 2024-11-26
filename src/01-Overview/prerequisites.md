@@ -11,11 +11,10 @@ Before diving into the Concrete Protocol, ensure the following items are set up 
 2. **ETH for Gas Fees**: Make sure your wallet has sufficient **ETH** to cover gas fees for transactions like deposits, withdrawals, or interacting with smart contracts on the Ethereum network. The exact amount depends on network activity, so ensure to have some extra ETH available.
 
 ## How to Use Concrete
-<!---
+
 <video controls width="90%">
   <source src="/vid/main-dashboard.mp4"/>
 </video>
--->
 
 ### 1. Launch the Concrete dApp  
    Head to the official **Concrete website** and launch the decentralized app (dApp). You can browse the app and view the features available to you, but you will need to connect your wallet for full access.
