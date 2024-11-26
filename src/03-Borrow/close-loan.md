@@ -4,13 +4,10 @@ description: "How to Repay and Withdraw Borrowed Assets"
 sidebar_label: "How to Repay and Withdraw"
 sidebar_position: 4
 ---
-<!---
+
 <video controls width="90%">
   <source src="/vid/close-loan-withdraw.mov"/>
 </video>
--->
-
-
 
 ## Step 1: Access the Portfolio
 
