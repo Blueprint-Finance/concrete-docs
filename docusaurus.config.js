@@ -152,6 +152,13 @@ const config = {
           },
         ],*/
       },
+
+      algolia: {
+        appId: process.env.ALGOLIA_APP_ID,
+        apiKey: process.env.ALGOLIA_API_KEY,
+        indexName: 'concrete',
+      },
+
       prism: {
         theme: prismThemes.github,
         darkTheme: prismThemes.dracula,
