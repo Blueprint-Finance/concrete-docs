@@ -6,7 +6,7 @@ sidebar_position: 1
 ---
 
 <video controls width="90%">
-  <source src="/vid/get-lite.mov"/>
+  <source src="/vid/get-lite.mp4"/>
 </video>
 
 ## Concrete Borrow (Lite)

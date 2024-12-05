@@ -6,7 +6,7 @@ sidebar_position: 4
 ---
 
 <video controls width="90%">
-  <source src="/vid/close-loan-withdraw.mov"/>
+  <source src="/vid/close-loan-withdraw.mp4"/>
 </video>
 
 ## Step 1: Access the Portfolio
