@@ -13,7 +13,9 @@ At Concrete Protocol, we prioritize compliance with international laws and regul
   - **Iran**
   - **Syria**
   - **Cuba**
+  - **Russia**
   - **Crimea region of Ukraine**
+  - **South Sudan**
 
 These restrictions are in place to comply with sanctions that limit access to financial services and technologies. Concrete Protocol prohibits users from these jurisdictions from engaging with our platform to maintain adherence to global regulatory standards.
 
