@@ -11,7 +11,7 @@ Before starting, you must connect your preferred wallet (e.g., MetaMask) to inte
 
 ## Step 1: Navigate to the Desired Vault
 
-- Go to the **Earn** section in the platform.
+- Go to the **Earn** section on the platform.
 - Select the asset vault (e.g., **ETH Vault**) from the list.
    - **Key Metrics**: Check the displayed total staked value and potential APY.
 
@@ -30,7 +30,7 @@ Before starting, you must connect your preferred wallet (e.g., MetaMask) to inte
 
 ## Step 3: Confirm Deposit
 
-Review details in the **Deposit Collateral** modal:
+Review details in the **Deposit Collateral** model:
    - Collateral value.
    - Updated **Loan-to-Value (LTV)** ratio.
    - Improved **Liquidation Price** for added security.
