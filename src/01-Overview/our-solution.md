@@ -37,7 +37,7 @@ A borrower deposits 100 ETH into Concrete and borrows USDC using the best rate a
 With Concrete Lite enabled (default for supported assets), the system forecloses the position before liquidation occurs, saving the user from the full liquidation penalty. Instead of losing up to 15% of their collateral, the borrower only pays a 3.5% fee.
 
 
-## 3. Concrete Protect (Enhanced Protection)
+## 2. Concrete Protect (Enhanced Protection)
 
 Concrete Protect enhances security by offering **credit lines** that improve the loan's LTV (Loan-to-Value) ratio, protecting users from liquidation when collateral value falls. This layer of protection is added on top of Concrete Lite and deploys capital in **tranches**, each providing an extra buffer against liquidation. If all protection tranches are exhausted, Concrete ensures a more favorable exit by returning any remaining assets, minimizing the impact of liquidation.
 

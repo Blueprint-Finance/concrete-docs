@@ -30,10 +30,7 @@ Before starting, you must connect your preferred wallet (e.g., MetaMask) to inte
 
 ## Step 3: Confirm Deposit
 
-Review details in the **Deposit Collateral** model:
-   - Collateral value.
-   - Updated **Loan-to-Value (LTV)** ratio.
-   - Improved **Liquidation Price** for added security.
+Review details in the **Deposit Collateral** model and Confirm.
 
 ## Step 4: Verify Deposit in Portfolio
 
