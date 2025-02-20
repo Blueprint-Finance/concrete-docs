@@ -96,6 +96,12 @@ const config = {
               position: "left",
               label: "Docs"
           },
+          /*{
+              type: "doc",
+              docId: "support",
+              position: "right",
+              label: "Support"
+          },*/
         /* {
             type: 'docSidebar',
             sidebarId: 'tutorialSidebar',
