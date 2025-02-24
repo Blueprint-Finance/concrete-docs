@@ -7,11 +7,13 @@ sidebar_position: 5
 
 This guide will walk you through the key steps to quickly get started with Concrete's platform and begin leveraging its core features.
 
+<video controls width="90%">
+  <source src="/vid/earn3.mp4"/>
+</video>
+
 ## Earn
 
-The **Earn** dashboard within the Concrete Protocol enables users to deposit and lock their assets to earn the highest possible yield with optimized strategies. Here's how you can navigate and utilize the Earn feature to maximize your returns:
-
-![](/img/earn-3.png)
+The **Earn** dashboard within the Concrete Protocol enables users to deposit and lock their assets to earn the highest possible yield with optimized strategies. Here's how you can navigate and utilize the Earn feature to maximize your returns.
 
 ### Key Insights of the Earn Dashboard
 
@@ -19,8 +21,6 @@ The **Earn** dashboard within the Concrete Protocol enables users to deposit and
 - **Vaults Created**: Indicates the number of vaults that have been created using your assets.
 - **Locked Value**: Shows the total value of assets currently locked within these vaults.
 - **CT Distributed**: Displays the total amount of **Concrete Tokens (CT)** distributed to you as rewards for participating in Concrete’s earning programs.
-
-![](/img/earn-2.gif)
 
 ### How to Use the Earn Dashboard
 
