@@ -20,7 +20,7 @@ The **Earn** dashboard within the Concrete Protocol enables users to deposit and
 - **Total Deposited**: Displays the total value of assets you've deposited in various yield-generating vaults.
 - **Vaults Created**: Indicates the number of vaults that have been created using your assets.
 - **Locked Value**: Shows the total value of assets currently locked within these vaults.
-- **CT Distributed**: Displays the total amount of **Concrete Tokens (CT)** distributed to you as rewards for participating in Concrete’s earning programs.
+- **CT Distributed**: This represents the total amount of vault shares (ct[asset], e.g., ctMorphoETH) you hold in Concrete’s earning programs. When you deposit an asset (e.g., WETH), you receive a corresponding amount of ct[asset] tokens, which represent your share of the vault. These vault shares accrue rewards over time, and upon withdrawal, you receive more of your original asset based on the vault’s earnings. For example, if you deposit WETH and receive ctMorphoETH, your balance grows within the vault, and when you withdraw, you receive more WETH than you initially deposited.
 
 ### How to Use the Earn Dashboard
 
