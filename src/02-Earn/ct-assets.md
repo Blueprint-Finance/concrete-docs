@@ -5,7 +5,7 @@ sidebar_label: "Concrete Assets"
 sidebar_position: 1
 ---
 
-ct[assets] are yield-bearing tokens issued to users when they provide liquidity to Concrete’s vaults. Each ct[asset] represents the underlying asset deposited plus any yield accrued during the holding period. When users deposit into an asset-specific vault, they receive ct[asset-type] tokens, which function as a proof of their stake in the vault.
+ct[assets] are vault shares issued to users when they deposit assets into Concrete’s vaults. Each ct[asset] strictly represents the initial deposit amount in dollar terms and does not include any accrued yield or APY. Users receive these tokens as proof of their stake in the vault, but the actual yield is calculated and applied only at the end of the lockup period when the vault deposits are opened.
 
 These tokens ensure that users not only maintain the value of their initial deposit but also benefit from the accumulated yield over time by the vault’s strategies. The tokens are structured to track accrued interest and yield accurately, aligning with Concrete’s goal of offering transparent and optimized yield solutions.
 
