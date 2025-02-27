@@ -2,7 +2,7 @@
 title: "How Earn Vaults Maximize Risk-Adjusted Yields"
 description: "How Earn Vaults Maximize Risk-Adjusted Yields"
 sidebar_label: "Maximize Risk-Adjusted Yields"
-sidebar_position: 3
+sidebar_position: 4
 ---
 
 Concrete’s Earn Vaults are designed to maximize risk-adjusted returns by strategically allocating user funds across various DeFi protocols. These vaults automate the process of finding the best yield opportunities while managing risk to provide liquidity providers with optimized, secure returns.

@@ -13,14 +13,13 @@ This guide will walk you through the key steps to quickly get started with Concr
 
 ## Earn
 
-The **Earn** dashboard within the Concrete Protocol enables users to deposit and lock their assets to earn the highest possible yield with optimized strategies. Here's how you can navigate and utilize the Earn feature to maximize your returns.
+The **Earn** dashboard within the Concrete Protocol enables users to deposit and lock their assets to earn the highest possible yield with optimized strategies.
+
+Here's how you can navigate and utilize the Earn feature to maximize your returns.
 
 ### Key Insights of the Earn Dashboard
 
-- **Total Deposited**: Displays the total value of assets you've deposited in various yield-generating vaults.
-- **Vaults Created**: Indicates the number of vaults that have been created using your assets.
-- **Locked Value**: Shows the total value of assets currently locked within these vaults.
-- **CT Distributed**: Reflects the total amount of vault shares (ct[asset], e.g., ctMorphoETH) you hold, based on the assets you’ve deposited. It does not increase based on yield accumulation. Instead, yield and rewards are determined separately at the end of the vault’s lockup period. For example, if you deposit WETH and receive ctMorphoETH, the balance of your ctMorphoETH remains the same, and upon withdrawal, additional rewards are distributed separately based on the vault’s performance.
+**Total Deposited**: Displays the total value of assets you've deposited in various yield-generating vaults.
 
 ### How to Use the Earn Dashboard
 
