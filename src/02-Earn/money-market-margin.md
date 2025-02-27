@@ -2,7 +2,7 @@
 title: "Money Market Margin"
 description: "Concrete’s Money Market Margin Project: Enhancing Liquidity and Yield"
 sidebar_label: "Money Market Margin"
-sidebar_position: 4
+sidebar_position: 5
 ---
 
 The **Money Market Margin** feature allows users to engage in both **earning** and **borrowing** activities simultaneously, leveraging their deposited assets for enhanced liquidity without losing access to high APYs.
