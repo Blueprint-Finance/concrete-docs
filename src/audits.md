@@ -28,27 +28,27 @@ Concrete Protocol follows a multi-phased audit approach to deliver the highest l
 Below are the audit reports conducted by Halborn, detailing their findings and recommendations:
 
 ### **HUB v1**  
-- Date: September 20, 2024  
+- Date: October 15, 2024  
 - Auditor: Halborn  
 - [View the full report](https://www.halborn.com/audits/concrete/hub-v1)
 
 ### **Hub/Spokes Library v1**  
-- Date: September 11, 2024  
+- Date: October 15, 2024   
 - Auditor: Halborn  
 - [View the full report](https://www.halborn.com/audits/concrete/hub-spokes-library-v1)
 
 ### **Spokes v1**  
-- Date: September 11, 2024  
+- Date: October 15, 2024   
 - Auditor: Halborn  
 - [View the full report](https://www.halborn.com/audits/concrete/spokes-v1)
 
 ### **Earn v1**  
-- Date: July 19, 2024  
+- Date: October 15, 2024
 - Auditor: Halborn  
 - [View the full report](https://www.halborn.com/audits/concrete/earn-v1)
 
 ### **CCCM EVM v1**  
-- Date: July 5, 2024  
+- Date: October 15, 2024  
 - Auditor: Halborn  
 - [View the full report](https://www.halborn.com/audits/concrete/cccm-evm-v1)
 
