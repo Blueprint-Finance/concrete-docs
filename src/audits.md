@@ -27,30 +27,51 @@ Concrete Protocol follows a multi-phased audit approach to deliver the highest l
 
 Below are the audit reports conducted by Halborn, detailing their findings and recommendations:
 
-### **HUB v1**  
-- Date: September 20, 2024  
+### HUB v1  
+- Date: October 15, 2024  
 - Auditor: Halborn  
 - [View the full report](https://www.halborn.com/audits/concrete/hub-v1)
 
-### **Hub/Spokes Library v1**  
-- Date: September 11, 2024  
+### Hub/Spokes Library v1  
+- Date: October 15, 2024   
 - Auditor: Halborn  
 - [View the full report](https://www.halborn.com/audits/concrete/hub-spokes-library-v1)
 
-### **Spokes v1**  
-- Date: September 11, 2024  
+### Spokes v1  
+- Date: October 15, 2024   
 - Auditor: Halborn  
 - [View the full report](https://www.halborn.com/audits/concrete/spokes-v1)
 
-### **Earn v1**  
-- Date: July 19, 2024  
+### Earn v1  
+- Date: October 15, 2024
 - Auditor: Halborn  
 - [View the full report](https://www.halborn.com/audits/concrete/earn-v1)
 
-### **CCCM EVM v1**  
-- Date: July 5, 2024  
+### CCCM EVM v1  
+- Date: October 15, 2024  
 - Auditor: Halborn  
 - [View the full report](https://www.halborn.com/audits/concrete/cccm-evm-v1)
+
+### Morpho Vault Strategy  
+- Date: November 07, 2024
+- Auditor: Halborn
+- [View the full report](/files/Morpho-Vault-Strategy-SSC.pdf)
+
+### Morpho V1 Lender Integration
+- Date: November 22, 2024
+- Auditor: Halborn
+- [View the full report](/files/Morpho-V1-Lender-Integration-SSC.pdf)
+
+### Harvest Rewards Function  
+- Date: November 25, 2024
+- Auditor: Halborn
+- [View the full report](/files/harvestRewards-Function-Improvements-SSC.pdf)
+
+### Code4rena Fixes – Part 1 & Part 2  
+- Date: February 10, 2025
+- Auditor: Code4rena
+- [View Part 1 Report](/files/Code4rena-Review-Part-1-SSC.pdf)
+- [View Part 2 Report](/files/Code4rena-Review-Part-2-SSC.pdf)
 
 ## Commitment to Excellence
 

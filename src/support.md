@@ -9,9 +9,13 @@ At **Concrete**, we prioritize user support and aim to provide timely assistance
 
 ## How to Contact Support
 
-Currently, Concrete provides support via email. If you need help, you can reach out to our team at:
+Concrete offers multiple support channels to assist users:  
 
-[**support@blueprintfinance.com**](mailto:support@blueprintfinance.com)
+📧 **Email:**  
+For direct assistance, reach out to our team at [**support@blueprintfinance.com**](mailto:support@blueprintfinance.com).  
+
+💬 **Community:**  
+Join our **[Concrete Discord](https://discord.gg/concretexyz)** to connect with our team and other community members.
 
 ## What to Include in Your Email
 
