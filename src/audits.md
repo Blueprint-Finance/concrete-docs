@@ -73,6 +73,11 @@ Below are the audit reports conducted by Halborn, detailing their findings and r
 - [View Part 1 Report](/files/Code4rena-Review-Part-1-SSC.pdf)
 - [View Part 2 Report](/files/Code4rena-Review-Part-2-SSC.pdf)
 
+### Withdrawal Pause
+- Date: January 07, 2025
+- Auditor: Halborn
+- [View the full report](/files/Preview-Withdrawal-Pause-SSC.pdf)
+
 ## Commitment to Excellence
 
 Concrete Protocol’s audit process is part of our larger commitment to maintaining a robust, secure, and transparent platform. We continuously work to identify and mitigate risks, safeguarding user funds and building trust across the DeFi ecosystem.
