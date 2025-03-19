@@ -7,11 +7,35 @@ sidebar_position: 6
 
 This guide will walk you through the key steps to quickly get started with Concrete's platform and begin leveraging its core features.
 
+## **How to Use Concrete**
+
+<video controls width="90%">
+  <source src="/vid/main-dashboard.mp4"/>
+</video>
+
+### 1. Launch the Concrete dApp  
+   Head to the official **Concrete website** and launch the decentralized app (dApp). You can browse the app and view the features available to you, but you will need to connect your wallet for full access.
+
+### 2. Connect Your Wallet
+   To access Concrete's core features (borrow, earn, manage), you'll need to authenticate by connecting your wallet.  
+   - Click on the **Connect Wallet** button.
+   - Select your wallet provider (MetaMask, Rainbow, etc.).
+   - Sign the message in your wallet to authenticate.
+
+### 3. Accept Terms & Conditions  
+   Before you proceed, you will be required to read and accept the terms and conditions. This is a mandatory step to ensure legal compliance when using the protocol.
+
+### 4. Explore the Dashboards
+   Once your wallet is connected and terms accepted, you'll be directed to Concrete's main dashboard. Here, you can access key features like:
+   - **Borrow**: Find the most favorable borrowing positions.
+   - **Earn**: Deposit assets to earn yields in Concrete’s vaults.
+   - **Portfolio**: Track your borrowing positions, vault deposits, and rewards.
+
+## **Earn**
+
 <video controls width="90%">
   <source src="/vid/earn3.mp4"/>
 </video>
-
-## Earn
 
 The **Earn** dashboard within the Concrete Protocol enables users to deposit and lock their assets to earn the highest possible yield with optimized strategies.
 
