@@ -7,7 +7,7 @@ sidebar_position: 6
 
 This guide will walk you through the key steps to quickly get started with Concrete's platform and begin leveraging its core features.
 
-## How to Use Concrete
+## **How to Use Concrete**
 
 <video controls width="90%">
   <source src="/vid/main-dashboard.mp4"/>
@@ -31,7 +31,7 @@ This guide will walk you through the key steps to quickly get started with Concr
    - **Earn**: Deposit assets to earn yields in Concrete’s vaults.
    - **Portfolio**: Track your borrowing positions, vault deposits, and rewards.
 
-## Earn
+## **Earn**
 
 <video controls width="90%">
   <source src="/vid/earn3.mp4"/>
