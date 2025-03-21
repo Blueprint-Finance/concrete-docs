@@ -98,7 +98,8 @@ Once supplied, the asset appears in the **"Your Supplies"** section.
 
 ![](/img/money-market-4.png)
 
-## Borrowing Assets  
+## Borrowing Assets
+
 Users can borrow assets by using their supplied collateral:
 
 1. Supply assets to the platform.  
@@ -130,15 +131,18 @@ The Market Overview provides real-time financial data about the lending pools.
 
 ![](/img/money-market-3.png)  
 
-## 5. Managing Your Position & Liquidation Protection  
+## 5. Managing Your Position & Liquidation Protection
+
 Users can optimize and safeguard their positions through risk management tools.
 
 ### Collateral & Borrowing Limits
+
 - Max LTV – Maximum borrowing power against collateral.  
 - Liquidation Threshold – The point where a position can be liquidated.  
 - Liquidation Incentives – Compensation for liquidators in case of forced liquidations.  
 
-### Liquidation Process  
+### Liquidation Process
+
 If a user’s collateral drops below the liquidation threshold, their position may be liquidated.  
 
 How It Works:
