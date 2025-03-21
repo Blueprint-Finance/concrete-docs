@@ -78,6 +78,24 @@ Below are the audit reports conducted by Halborn, detailing their findings and r
 - Auditor: Halborn
 - [View the full report](/files/Preview-Withdrawal-Pause-SSC.pdf)
 
+### Reward Distribution
+
+- Date: March, 17, 2025
+- Auditor: Halborn
+- [View the full report](/files/Rewards-Distribution.pdf)
+
+### Vault Manager
+
+- Date: March, 13, 2025
+- Auditor: Halborn
+- [View the full report](/files/Vault-Manager.pdf)
+
+### Upgradable/Migration Assessment
+
+- Date: March, 13, 2025
+- Auditor: Halborn
+- [View the full report](/files/Upgradeable-Migration-Assessment.pdf)
+
 ## Commitment to Excellence
 
 Concrete Protocol’s audit process is part of our larger commitment to maintaining a robust, secure, and transparent platform. We continuously work to identify and mitigate risks, safeguarding user funds and building trust across the DeFi ecosystem.
