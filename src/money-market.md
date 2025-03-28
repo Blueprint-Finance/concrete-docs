@@ -15,6 +15,7 @@ This guide explains how to use the **Concrete Money Market**, its key features, 
 
 The Concrete Money Market was developed to solve a major gap in DeFi:  
 - Many blockchain projects and ecosystem partners needed a reliable lending market, but they lacked the resources and expertise to build and secure one.
+- Allow Concrete Earn depositors to access liquidity by using their ctTokens as collateral—enabling borrowing without interrupting yield-generating positions.
 - Instead of relying on third-party platforms, the team decided to create its own money market by forking AAVE v3, ensuring trusted deployment, security, and integration with Concrete’s DeFi ecosystem.
 
 ### Key User Groups  
@@ -45,16 +46,8 @@ The **Dashboard** provides a snapshot of:
 
 ![](/img/money-market-1.png)
 
-**Switching Networks:**
-Concrete Money Market supports multiple blockchain networks, allowing users to move assets seamlessly.
-
+**Networks:**
 - **Ethereum Concrete Money Market** – Primary lending market on Ethereum.
-- **BNB Chain Fork** – An alternative deployment.
-
-This allows cross-chain lending and borrowing opportunities.
-
-![](/img/money-market-5.png)
-
 
 ### Markets
 
@@ -125,7 +118,7 @@ The Market Overview provides real-time financial data about the lending pools.
 **Concrete Money Market employs multiple mechanisms to protect users:**
 
 - **Hard Caps on Collateral** – Limits the maximum amount of any asset used as collateral.
-- **Variable LTVs** – Adjusts borrowing power based on liquidity availability.
+- **LTVs are manually set** based on asset volatility, market liquidity, and internal risk assessments. While not variable in real time, they are periodically adjusted as needed. Meanwhile, APYs adjust dynamically based on market utilization to incentivize supply and discourage excessive borrowing.
 - **Automated Market Monitoring** – Off-chain monitoring bots detect and prevent bad debt.
 - **Oracle-Based Pricing (TWAP & Chainlink Feeds)** – Prevents price manipulation.
 
