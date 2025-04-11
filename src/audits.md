@@ -69,6 +69,12 @@ Below are the audit reports conducted by Halborn, detailing their findings and r
 - Auditor: Halborn
 - [View the full report](/files/Morpho-V1-Lender-Integration-SSC.pdf)
 
+### Morpho Strategy (Auto Compounding)
+
+- Date: March 28, 2025
+- Auditor: Halborn
+- [View the full report](/files/Morpho-Strategy-Auto-Compounding-SSC.pdf)
+
 ### Harvest Rewards Function  
 
 - Date: November 25, 2024
