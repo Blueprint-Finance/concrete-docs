@@ -52,6 +52,7 @@ const sidebars = {
     'fees',
     'rewards',
     'restrictions',
+    'risks',
     'audits',
     'support',
   ],
