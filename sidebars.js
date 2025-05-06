@@ -23,13 +23,36 @@ const sidebars = {
         'Earn/deposit-into-vaults',
         'Earn/withdrawing-via-canopy',
         'Earn/ct-assets',
-        'Earn/yield-vaults',
-        'Earn/yield-strategies',
         'Earn/balance-accrual',
         'Earn/how-earn-vaults-maximize-risk-adjusted-yields',
         'Earn/money-market-margin',
       ],
     },
+
+
+    {
+         type: 'category',
+         label: 'Vaults',
+         items: [
+           'Vaults/yield-vaults',
+           'Vaults/yield-strategies',
+           {
+             type: 'category',
+             label: 'Bera',
+             items: [
+               'Vaults/Bera/wbera',
+               'Vaults/Bera/claim-and-transfer',
+               'Vaults/Bera/claim-rewards',
+               'Vaults/Bera/how-to-withdraw',
+               'Vaults/Bera/unclaimed-rewards',
+               'Vaults/Bera/boyco-depositors-claim',
+             ],
+           },
+         ],
+       },
+
+
+
     {
       type: 'category',
       label: 'Borrow',
