@@ -73,4 +73,4 @@ After that, **unclaimed rewards may be reallocated** to other protocol incentive
 | Beraborrow | POLLEN tokens | [https://app.concrete.xyz](https://app.concrete.xyz/) | Claim on Concrete Core app |
 | Dinero | DINERO tokens | [https://app.concrete.xyz](https://app.concrete.xyz/) | Partner to distribute May 9, claim through Concrete Core app |
 
-Pendle depositors - expect rewards by May 18 latest.
+Pendle depositors - expect rewards by May 18 latest via the [Pendle dashboard](https://app.pendle.finance/trade/dashboard/overview/positions?timeframe=allTime).

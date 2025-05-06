@@ -4,7 +4,7 @@ description: "How to Claim and Transfer"
 sidebar_label: "How to Claim & Transfer"
 ---
 
-Bera vaults offer an option to **claim your rewards** and transfer your underlying tokens to a new Bera vault, so you can continue to earn an attractive yield plus Bera Governance Token emissions (BGT). All new vaults will have withdrawals open.
+Bera vaults offer an option to **claim your rewards** and transfer your underlying tokens to a new Bera vault, so you can continue to earn an attractive yield plus Bera Governance Token emissions (BGT). All new vaults will have withdrawals open from May 16 onwards.
 
 - To take advantage of this Claim and Transfer, connect your wallet and you will see a banner which informs you of a destination vault based on your deposited tokens.
 - Rewards claiming will happen instantly
