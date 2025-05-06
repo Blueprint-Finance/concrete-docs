@@ -41,14 +41,14 @@ After that, **unclaimed rewards may be reallocated** to other protocol incentive
 
 **Bitcoin Bera vaults - LBTC, WBTC depositors**
 
-| **Rewarding entity** | **Tokens or Points** | **URL to claim** | **Details** |
+| **Rewarding entity** | **Tokens or Points** | **URL**  | **Details** |
 | --- | --- | --- | --- |
 | Berachain | BERA tokens | [https://app.concrete.xyz](https://app.concrete.xyz/) | Claim on Concrete Core app |
-| Lombard | Lux Points | https://www.lombard.finance/app/dashboard/ | See Lux tokens on the Lombard app |
-| Babylon | BABY tokens | [https://app.concrete.xyz](https://app.concrete.xyz/) | Claim on Concrete Core app |
-| Concrete | Concrete Points | [concrete.xyz](http://concrete.xyz/) | Coming soon |
-| Kodiak | xKDK tokens | - | Airdrop by Kodiak |
-| Dolomite | DOLO tokens | [https://app.concrete.xyz](https://app.concrete.xyz/) | Claim on Concrete Core app |
+| Lombard | Lux Points | - | Points have been earned through Concrete. Distribution will happen at a later date. |
+| Babylon | BABY tokens | - | Lombard to distribute $BABY |
+| Concrete | Concrete Points | [concrete.xyz](http://concrete.xyz/) | Points have been earned through Concrete. More details coming soon. |
+| Kodiak | xKDK tokens | - | Airdrop by Kodiak May 6 |
+| Dolomite | veDOLO tokens | https://app.dolomite.io/boyco | Dolomite to distribute May 7 |
 
 **Ethena Bera vaults - USDe, sUSDe depositors**
 
@@ -56,19 +56,21 @@ After that, **unclaimed rewards may be reallocated** to other protocol incentive
 | --- | --- | --- | --- |
 | Ethena USDe | ENA tokens | https://app.liquifi.finance/ | Claim ENA on Liquifi |
 | Ethena sUSDe | ENA tokens | https://app.liquifi.finance/ | Claim ENA on Liquifi |
-| Concrete | Concrete Points | [concrete.xyz](http://concrete.xyz/) | Coming soon |
+| Concrete | Concrete Points | [concrete.xyz](http://concrete.xyz/) | Points have been earned through Concrete. More details coming soon. |
 | Berachain | BERA tokens | [https://app.concrete.xyz](https://app.concrete.xyz/) | Claim on Concrete Core app |
-| Kodiak | xKDK tokens | - | Airdrop by Kodiak |
-| Dolomite | DOLO tokens | [https://app.concrete.xyz](https://app.concrete.xyz/) | Claim on Concrete Core app |
+| Kodiak | xKDK tokens | - | Airdrop by Kodiak May 6 |
+| Dolomite | veDOLO tokens | https://app.dolomite.io/boyco | Dolomite to distribute May 7 |
 | Beraborrow | POLLEN tokens | [https://app.concrete.xyz](https://app.concrete.xyz/) | Claim on Concrete Core app |
 
 **Dinero Bera vaults - ETH depositors**
 
 | **Entity** | **Tokens or Points** | **Where to claim** | **Details** |
 | --- | --- | --- | --- |
-| Concrete | Concrete Points | [concrete.xyz](http://concrete.xyz/) | Coming soon |
+| Concrete | Concrete Points | [concrete.xyz](http://concrete.xyz/) | Points have been earned through Concrete. More details coming soon. |
 | Berachain | BERA tokens | [https://app.concrete.xyz](https://app.concrete.xyz/) | Claim on Concrete Core app |
-| Kodiak | xKDK tokens | - | Airdrop by Kodiak |
-| Dolomite | DOLO tokens | [https://app.concrete.xyz](https://app.concrete.xyz/) | Claim on Concrete Core app |
+| Kodiak | xKDK tokens | - | Airdrop by Kodiak May 6 |
+| Dolomite | veDOLO tokens | https://app.dolomite.io/boyco | Dolomite to distribute May 7 |
 | Beraborrow | POLLEN tokens | [https://app.concrete.xyz](https://app.concrete.xyz/) | Claim on Concrete Core app |
-| $DINERO | DINERO tokens | [https://app.concrete.xyz](https://app.concrete.xyz/) | Claim on Concrete Core app |
+| Dinero | DINERO tokens | [https://app.concrete.xyz](https://app.concrete.xyz/) | Partner to distribute May 9, claim through Concrete Core app |
+
+Pendle depositors - expect rewards by May 18 latest.
