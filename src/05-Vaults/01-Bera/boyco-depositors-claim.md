@@ -4,7 +4,7 @@ description: "Boyco Depositors: How to Claim"
 sidebar_label: "Boyco Depositors: How to Claim"
 ---
 
-If you deposited into a **Concrete vault through Boyco**, your rewards and positions are now available directly on the **Boyco app**.
+If you deposited into a [Concrete vault](https://app.concrete.xyz/vault/berachain/boyco/0xf0d94806e6E5cB54336ED0f8De459659718F149C) through Boyco, your rewards and positions are now available directly on the **Boyco app**.
 
 ## Where to Claim
 
