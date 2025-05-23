@@ -44,6 +44,7 @@ const sidebars = {
                'Vaults/Bera/claim-and-transfer',
                'Vaults/Bera/claim-rewards',
                'Vaults/Bera/how-to-withdraw',
+               'Vaults/Bera/request-address-change',
                'Vaults/Bera/unclaimed-rewards',
                'Vaults/Bera/boyco-depositors-claim',
              ],
