@@ -17,11 +17,11 @@ If you’ve lost access to your Berachain address, follow these steps to request
 
 ### 1. Contact Support
 
-Start by contacting us on [Discord](https://discord.gg/concretexyz) or via [support@blueprintfinance.com](mailto:support@blueprintfinance.com). Let us know you no longer have access to your Berachain destination address.
+Start by contacting us on [Discord](https://discord.gg/concretexyz) or via [support@blueprintfinance.com](mailto:support@blueprintfinance.com).
 
 ### 2. Sign a Message Using Etherscan
 
-a. Go to [https://etherscan.io/verifiedSignatures#](https://etherscan.io/verifiedSignatures#**) and click on the button “Sign Message”:
+a. Go to [https://etherscan.io/verifiedSignatures#](https://etherscan.io/verifiedSignatures#**) and click on the button **“Sign Message”**:
 
 <img
   src="/img/change-1.png"
