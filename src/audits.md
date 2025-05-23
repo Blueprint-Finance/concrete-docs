@@ -119,7 +119,7 @@ Below are the audit reports conducted by Halborn, detailing their findings and r
 
 ### Withdrawal Queue Toggle
 
-- Date: Maay, 16, 2025
+- Date: May, 16, 2025
 - Auditor: Halborn
 - [View the full report](/files/Withdrawal-Queue-Delay-SSC.pdf)
 
