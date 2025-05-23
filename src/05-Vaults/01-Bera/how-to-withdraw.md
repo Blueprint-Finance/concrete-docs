@@ -32,8 +32,9 @@ In some scenarios, such as vault migrations or strategic updates, users may need
 1. Select your Bera vault position from the [Portfolio](https://app.concrete.xyz/portfolio/vaults)
 2. If you hold more than one asset in a given vault, select the relevant ct Vault Share
 3. Click Bridge to bridge all vault shares to Berachain
-4. Upon bridging, you can then withdraw. Review the assets to withdraw
-5. Withdraw the assets on Berachain
+4. Ensure you control the wallet address on Berachain before bridging. If needed, check the article [requesting a change of Berachain address](./request-address-change.md).
+5. Upon bridging, you can then withdraw. Review the assets to withdraw
+6. Withdraw the assets on Berachain
 
 Once submitted, your request will show as **Queued** and automatically move to **Processing** and then **Available** when the 72-hour period is complete.
 
