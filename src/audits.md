@@ -117,6 +117,11 @@ Below are the audit reports conducted by Halborn, detailing their findings and r
 - Auditor: Halborn
 - [View the full report](/files/Curve-Pendle-Strategy-Report.pdf)
 
+### Withdrawal Queue Toggle
+
+- Date: May, 16, 2025
+- Auditor: Halborn
+- [View the full report](/files/Withdrawal-Queue-Delay-SSC.pdf)
 
 ## Commitment to Excellence
 

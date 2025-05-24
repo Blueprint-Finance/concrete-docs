@@ -11,6 +11,14 @@ When withdrawing vault shares, it’s essential to ensure that you control the d
 
 This article explains how to request a destination address change if needed.
 
+## If You Haven’t Bridged Your ctAssets Yet
+
+If you don’t control the destination address and you haven’t bridged your ctAssets yet, there’s a simpler path instead of requesting an address change:
+
+Send your ctAsset (ERC-20 token) to a wallet where you **fully control the Berachain address**. This allows you to start the [bridging and withdrawal process](./how-to-withdraw.md) from a wallet you control—without needing to request a destination address change or wait for support. Once the ctAsset is in the right wallet, you can bridge to Berachain and withdraw normally.
+
+This only works **before bridging**. Once assets are bridged, you’ll need to go through requesting the address change.
+
 ## How to Request an Address Change
 
 If you’ve lost access to your Berachain address, follow these steps to request a change:
