@@ -4,7 +4,14 @@ description: "How to Withdraw"
 sidebar_label: "How to Withdraw"
 ---
 
-If you're ready to exit your position or redeem your rewards, Bera vaults support **secure and scheduled withdrawals**. This guide walks you through how to withdraw and what to expect during the **72-hour withdrawal queue**.
+If you're ready to exit your position or redeem your rewards, Bera vaults support **secure and scheduled withdrawals**.
+
+When withdrawing your ctAsset:
+
+- Always confirm you control your destination Berachain address, where assets will be sent, before bridging.
+- If you do not control the destination Berachain address, use the [Request a change](./request-address-change.md) option to avoid losing access to your assets.
+
+This guide walks you through how to withdraw and what to expect during the **72-hour withdrawal queue**.
 
 
 ## Understanding the 72-Hour Withdrawal Queue

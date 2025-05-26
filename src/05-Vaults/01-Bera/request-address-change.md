@@ -4,12 +4,15 @@ description: "Confirming and Changing Your Destination Address"
 sidebar_label: "How to Request Address Change"
 ---
 
-When withdrawing vault shares, it’s essential to ensure that you control the destination address where assets will be sent.
+When withdrawing your ctAsset:
 
-- Always confirm you control your Berachain address before bridging.
-- If not, use the **Request a change** option to avoid losing access to your assets.
+- Always confirm you control your destination Berachain address, where assets will be sent, before bridging.
+- If you do not control the destination Berachain address, use the **Request a change** option to avoid losing access to your assets.
 
-This article explains how to request a destination address change if needed.
+If you’ve already bridged your assets and do not control the destination Berachain address, you need to:
+
+* [Sign a message](#1-contact-support) proving ownership of the new Berachain address
+* Bridge your ctAsset to the Withdrawal Multi-Sig by completing [Step 1 of the withdrawal flow](./how-to-withdraw#why-multi-sig-addresses)
 
 ## If You Haven’t Bridged Your ctAssets Yet
 
@@ -26,6 +29,13 @@ If you’ve lost access to your Berachain address, follow these steps to request
 ### 1. Contact Support
 
 Start by contacting us on [Discord](https://discord.gg/concretexyz) or via [support@blueprintfinance.com](mailto:support@blueprintfinance.com).
+
+Before we can fulfill your request of address change, you need to bridge your ctAsset to the Withdrawal Multi-Sig by completing [Step 1 of the withdrawal flow](./how-to-withdraw#why-multi-sig-addresses).
+
+ <img
+   src="/img/bridge-1.png"
+   style={{ maxWidth: "800px", width: "100%", height: "auto", display: "block", margin: "0 auto" }}
+ />
 
 ### 2. Sign a Message Using Etherscan
 
@@ -61,12 +71,9 @@ Next, we’ll check if the funds for your original wallet address have already b
 - **If funds have been redeemed**: We won’t proceed. Your wallet will be marked as redeemed.
 - **If funds have *not* been redeemed**: We’ll proceed to the final step.
 
-### 5. Update and Fulfill
+### 5. Send Underlying to Newly Assigned Address
 
-Our team will:
-
-- Update your data to reflect the new Berachain address
-- Send the remaining vault shares and any pending rewards to your new Berachain address
+Our team will complete the redemption process on your behalf and send the underlying assets to your newly provided Berachain address.
 
 :::tip
 This process may take a few days to complete. You will be notified once it's done.
