@@ -1,5 +1,5 @@
 ---
-title: "Confirming and Changing Your Destination Address"
+title: "Request Address Change"
 description: "Confirming and Changing Your Destination Address"
 sidebar_label: "How to Request Address Change"
 ---
@@ -22,7 +22,7 @@ We strongly recommend proceeding with the [standard bridge flow](./how-to-withdr
 After bridging, you can [request a destination address change](#how-to-request-an-address-change) (if needed).
 
 :::tip
-It is technically possible to send your ctAsset (ERC-20) to a different wallet you control — however, we do not recommend this option as your rewards may not follow and may require additional support steps.
+Technically, it's possible to send your ctAsset (ERC-20) to a different wallet you control — however, we **do not recommend** this option as your rewards may not follow and may require additional support steps.
 :::
 
 ## How to Request an Address Change
