@@ -13,18 +13,16 @@ When withdrawing your ctAsset:
 
 ### You’ve Already Bridged Your ctAsset
 
-You need to [Sign a message](#1-contact-support) proving ownership of the new Berachain address
+You need to [Sign a message](#1-sign-a-message-using-etherscan) proving ownership of the new Berachain address.
 
 ### You Haven’t Bridged Your ctAsset Yet
 
-If you don’t control the destination address and you haven’t bridged your ctAssets yet, there’s a simpler path instead of requesting an address change:
+We strongly recommend proceeding with the [standard bridge flow](./how-to-withdraw#how-to-withdraw) which bridges your ctAsset to the Berachain Withdrawal Multi-Sig. This allows us to process your redemption request securely and ensures that rewards and underlying assets are routed correctly.
 
-Send your ctAsset (ERC-20 token) to a wallet where you **fully control the Berachain address**. This allows you to start the [bridging and withdrawal process](./how-to-withdraw.md) from a wallet you control—without needing to request a destination address change or wait for support. Once the ctAsset is in the right wallet, you can bridge to Berachain and withdraw normally.
-
-This only works **before bridging**. Once assets are bridged, you’ll need to go through requesting the address change.
+After bridging, you can [request a destination address change](#how-to-request-an-address-change) (if needed).
 
 :::tip
-If you choose to send your ctAsset to a new wallet, your rewards may not automatically follow. We will need to manually update reward contracts to reflect your new Berachain address — this can delay your reward access and may require additional support steps.
+It is technically possible to send your ctAsset (ERC-20) to a different wallet you control — however, we do not recommend this option as your rewards may not follow and may require additional support steps.
 :::
 
 ## How to Request an Address Change
