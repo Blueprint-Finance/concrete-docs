@@ -9,13 +9,15 @@ When withdrawing your ctAsset:
 - Always confirm you control your destination Berachain address, where assets will be sent, before bridging.
 - If you do not control the destination Berachain address, use the **Request a change** option to avoid losing access to your assets.
 
-## If You Do Not Control The Destination Berachain Address:
+## If You Do Not Control The Destination Berachain Address
 
-### You’ve Already Bridged Your ctAsset
+There are two paths depending on whether you’ve already bridged your ctAssets:
 
-You need to [Sign a message](#1-sign-a-message-using-etherscan) proving ownership of the new Berachain address.
+### Option A: You’ve Already Bridged Your ctAsset
 
-### You Haven’t Bridged Your ctAsset Yet
+You need to [Sign a message](#1-sign-a-message-using-etherscan) proving ownership of the new Berachain address and complete the address change request as explained in the steps below.
+
+### Option B: You Haven’t Bridged Your ctAsset Yet
 
 We strongly recommend proceeding with the [standard bridge flow](./how-to-withdraw#how-to-withdraw) which bridges your ctAsset to the Berachain Withdrawal Multi-Sig. This allows us to process your redemption request securely and ensures that rewards and underlying assets are routed correctly.
 
