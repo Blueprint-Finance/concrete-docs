@@ -11,11 +11,11 @@ When withdrawing your ctAsset:
 
 ## If You Do Not Control The Destination Berachain Address:
 
-### You’ve Already Bridged Your Assets
+### You’ve Already Bridged Your ctAsset
 
 You need to [Sign a message](#1-contact-support) proving ownership of the new Berachain address
 
-### You Haven’t Bridged Your ctAssets Yet
+### You Haven’t Bridged Your ctAsset Yet
 
 If you don’t control the destination address and you haven’t bridged your ctAssets yet, there’s a simpler path instead of requesting an address change:
 
