@@ -9,11 +9,11 @@ When withdrawing your ctAsset:
 - Always confirm you control your destination Berachain address, where assets will be sent, before bridging.
 - If you do not control the destination Berachain address, use the **Request a change** option to avoid losing access to your assets.
 
-## If you do not control the destination Berachain address:
+## If You Do Not Control The Destination Berachain Address:
 
-### You’ve already bridged your assets
+### You’ve Already Bridged Your Assets
 
-You need to[Sign a message](#1-contact-support) proving ownership of the new Berachain address
+You need to [Sign a message](#1-contact-support) proving ownership of the new Berachain address
 
 ### You Haven’t Bridged Your ctAssets Yet
 
