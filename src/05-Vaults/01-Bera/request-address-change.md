@@ -15,7 +15,7 @@ There are two paths depending on whether you’ve already bridged your ctAssets:
 
 ### Option A: You’ve Already Bridged Your ctAsset
 
-You need to [Sign a message](#1-sign-a-message-using-etherscan) proving ownership of the new Berachain address and complete the address change request as explained in the steps below.
+You need to [Sign a message](#1-sign-a-message-using-etherscan), using the same wallet you held your ct Asset with, proving ownership of the new Berachain address and complete the address change request as explained in the steps below.
 
 ### Option B: You Haven’t Bridged Your ctAsset Yet
 
@@ -47,7 +47,7 @@ b. Enter your new Berachain address in the **Message** form field:
   style={{ maxWidth: "800px", width: "100%", height: "auto", display: "block", margin: "0 auto" }}
 />
 
-c. Sign the message to publish
+c. Sign the message to publish **using the same wallet you held your ct Asset with**
 
 d. Send the **URL of the published message** to us via [Discord](https://discord.gg/concretexyz) or via [support@blueprintfinance.com](mailto:support@blueprintfinance.com)
 
