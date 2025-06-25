@@ -36,7 +36,28 @@ The foreclosure fee is clarified to be the same for all assets. If you ever face
 Alternatively, users can enhance protection by upgrading to:
 Concrete Protect = Concrete Borrow (Lite) + advanced safety (which offers features such as credit lines and custom liquidation buffers).
 
-## 2. Concrete Protect: Advanced Safety for Active Users
+## 2. Concrete Earn: Maximize Returns with a Transparent Fee Structure
+
+Concrete Earn is designed to provide liquidity providers with optimized returns while maintaining a transparent and user-friendly fee structure. The platform charges **no deposit, maintenance, performance or withdrawal fees**, ensuring easy entry and exit for users.
+
+Concrete Earn vaults use an **AUM-based fee structure** (Assets Under Management), charged annually based on the vault balance:
+* **Standard Earn vaults**: 1.5% annualized AUM fee
+* **Sentora vault**: 1.25% annualized AUM fee
+
+**Why Concrete Earn?**
+
+- **No Hidden Costs**: Enjoy zero fees on deposits, withdrawals, and ongoing maintenance.
+- **Optimized Returns**: Concrete Earn helps you maximize yield through advanced strategies.
+- **Full Control and Transparency**: Funds remain accessible without penalty, offering flexibility for liquidity management.
+
+| **Fee Type**        | **Amount** | **Denomination** | **Description**                                                                                               |
+|---------------------|------------|------------------|--------------------------------------------------------------------------------------------------------------|
+| Deposit Fee         | None       | N/A              | No fees on deposits, enabling liquidity providers to allocate funds without initial cost barriers.            |
+| Maintenance Fee     | None       | N/A              | The protocol covers operational expenses, meaning no ongoing charges for liquidity providers.                 |
+|  AUM Fee   | 1.5% annualized (1.25% for Sentora/Lombard)        | Assets Under Management          | Ongoing fee on deposited capital. Sentora and Lombard vaults benefit from reduced rates. |
+| Withdrawal Fee      | None       | N/A              | Funds can be withdrawn without penalty, providing flexibility and control over invested capital.              |
+
+## 3. Concrete Protect: Advanced Safety for Active Users
 
 Concrete Protect adds powerful, flexible protection for users who want to take a more hands-on approach to managing their risk. With Concrete Protect, you have up to three credit line disbursements available during the policy term, giving you access to liquidity exactly when you need it. Its fee structure adapts to your position’s specific needs, with a one-time **Opening Fee** based on your distance from liquidation and a **Claim Fee** applied only when you actually use a credit line.
 
@@ -52,24 +73,6 @@ Concrete Protect adds powerful, flexible protection for users who want to take a
 | Claim Fee            | BTC: 1.65%, ETH: 2.95% per disbursed credit tranche  | Collateral       | Charged for each credit line disbursement (up to 3 times). 80% of this fee goes to the Earn Vault, rewarding liquidity providers, while 20% goes to the Concrete Treasury. |
 | Early Cancellation Fee | 0%                                                  | N/A              | No fee for early cancellation, allowing users to cancel protection without penalty before the policy term ends.                                           |
 | Foreclosure Fee      | 3.5% of the foreclosed amount                        | Collateral       | Similar to Concrete Lite, this fee replaces high liquidation penalties with a predictable 3.5% charge. The fee distribution mirrors Concrete Lite: 0.3% to Earn Vault, 3.2% to Concrete Treasury. |
-
-## 3. Concrete Earn: Maximize Returns with a Transparent Fee Structure
-
-Concrete Earn is designed to provide liquidity providers with optimized returns while maintaining a transparent and user-friendly fee structure. The platform charges **no deposit, maintenance, or withdrawal fees**, ensuring easy entry and exit for users. A **20% performance fee** is applied only to profits, aligning the protocol's success with user gains.
-
-**Why Concrete Earn?**
-
-- **Performance-Based Fee Model**: Only pay fees on profits, ensuring you’re only charged when you earn.
-- **No Hidden Costs**: Enjoy zero fees on deposits, withdrawals, and ongoing maintenance.
-- **Optimized Returns**: Concrete Earn helps you maximize yield through advanced strategies, with performance fees designed to sustain the protocol and reward liquidity providers.
-- **Full Control and Transparency**: Funds remain accessible without penalty, offering flexibility for liquidity management.
-
-| **Fee Type**        | **Amount** | **Denomination** | **Description**                                                                                               |
-|---------------------|------------|------------------|--------------------------------------------------------------------------------------------------------------|
-| Deposit Fee         | None       | N/A              | No fees on deposits, enabling liquidity providers to allocate funds without initial cost barriers.            |
-| Maintenance Fee     | None       | N/A              | The protocol covers operational expenses, meaning no ongoing charges for liquidity providers.                 |
-| Performance Fee     | 20%        | Profits          | A performance fee on yield earned. This fee is calculated based on profits, ensuring sustainability for the protocol and incentivizing optimized returns for liquidity providers. It aligns protocol and user interests by sharing a percentage of successful outcomes. |
-| Withdrawal Fee      | None       | N/A              | Funds can be withdrawn without penalty, providing flexibility and control over invested capital.              |
 
 
 ## Fee Allocation
