@@ -5,11 +5,11 @@ sidebar_label: "Welcome"
 sidebar_position: 0
 ---
 
-Welcome to **Concrete.xyz**, a DeFi platform that allows you to **borrow**, **protect**, and **earn** on your crypto assets while benefiting from capital efficiency, liquidity protection, and yield optimization across multiple chains.
+Welcome to [Concrete.xyz](https://www.concrete.xyz), a suite of DeFi products powering secure, automated yield strategies and unlocking new derivatives for any on-chain asset. Earn the highest rate of return, borrow anywhere without liquidation, trade the risk.
 
 Decentralized Finance (DeFi) comes with complexities that require users to "Do Your Own Research" (DYOR) before engaging. From navigating multiple platforms for the best yields to securing your assets against liquidation, DeFi can feel overwhelming for both new and experienced users.
 
-Concrete offers a **one-stop solution** that automates everything from yield optimization to liquidation protection. Handling the research, security, and optimization while giving users the best of DeFi without the risks or headaches.
+[Launch Concrete App](https://app.concrete.xyz/earn) and deposit to vaults to earn the highest yield on your assets.
 
 ## Designed For
 
