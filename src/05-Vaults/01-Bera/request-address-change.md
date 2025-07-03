@@ -19,7 +19,7 @@ You need to [Sign a message](#1-sign-a-message-using-etherscan), using the same 
 
 ### Option B: You Haven’t Bridged Your ctAsset Yet
 
-We strongly recommend proceeding with the [standard bridge flow](./how-to-withdraw#how-to-withdraw) which bridges your ctAsset to the Berachain Withdrawal Multi-Sig. This allows us to process your redemption request securely and ensures that rewards and underlying assets are routed correctly.
+We strongly recommend proceeding with the [standard bridge flow](./how-to-withdraw#steps-to-withdraw) which bridges your ctAsset to the Berachain Withdrawal Multi-Sig. This allows us to process your redemption request securely and ensures that rewards and underlying assets are routed correctly.
 
 After bridging, you can [request a destination address change](#how-to-request-an-address-change) (if needed).
 
