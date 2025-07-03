@@ -36,6 +36,7 @@ const sidebars = {
          items: [
            'Vaults/yield-vaults',
            'Vaults/yield-strategies',
+           'Vaults/how-withdrawals-work',
            {
              type: 'category',
              label: 'Bera',
