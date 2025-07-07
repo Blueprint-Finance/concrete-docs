@@ -32,7 +32,7 @@ All vaults built on the **Morph Layer 2** network will be deprecated. These vaul
 5. **Morph weETH** — Deposit: weETH
 
 :::tip
-All MorphL2 vaults will be deactivated on October 1st, 2025. From that date, a 1-year withdrawal window begins. We recommend withdrawing your funds before deactivation.
+All MorphL2 vaults will be deactivated on October 1st, 2025. From that date, any remaining funds will be stored in the Recovery Vault, where users can claim them through a manual support process. We recommend withdrawing your funds before deactivation.
 :::
 >
 
@@ -41,7 +41,7 @@ All MorphL2 vaults will be deactivated on October 1st, 2025. From that date, a 1
 Yes. Your deposited assets and yield are secure in smart contracts. You’ll be able to withdraw them using:
 
 - The Concrete Earn app (until vaults are removed)
-- A manual support process (for users returning much later)
+- A manual support process (for users returning after vaults have been removed from the UI)
 
 ## What You Need to Do
 
