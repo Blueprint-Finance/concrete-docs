@@ -42,6 +42,7 @@ const sidebars = {
              label: 'Bera',
              items: [
                'Vaults/Bera/wbera',
+               'Vaults/Bera/pre-deposit-vaults-deprecation-guide',
                'Vaults/Bera/claim-and-transfer',
                'Vaults/Bera/claim-rewards',
                'Vaults/Bera/how-to-withdraw',
