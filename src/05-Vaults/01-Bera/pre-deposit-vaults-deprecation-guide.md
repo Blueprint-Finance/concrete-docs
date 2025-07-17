@@ -79,7 +79,7 @@ You can **claim your new vault assets** directly in the app:
 | --- | --- |
 | Final withdrawal batch | **July 16th, 2025** (bridge requests submitted between July 9th at 12PM UTC and July 15th at 7AM UTC will be automatically processed — no user action required) |
 | Vaults marked as closed migrated | **After July 16th, 2025** |
-| Claim new vault shares UI available | **Starting July 16th, 2025** |
+| Claim new vault shares UI available | **After July 16th, 2025** |
 
 
 ## Need Help?
