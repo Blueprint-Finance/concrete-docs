@@ -46,7 +46,7 @@ Yes. Your funds and earned yield are safely stored in audited smart contracts. Y
 
 | **Event** | **Timing** |
 | --- | --- |
-| Deprecation announcement | July 29, 2025 (announcement via an info box on the Withdrawal tab of each vault page & Discord) |
+| Deposits disabled & Deprecation announcement | July 29, 2025 (announcement via an info box on the Withdrawal tab of each vault page & Discord) |
 | Withdrawals remain open through the app | Until October 1, 2025 |
 | Vault deactivation / Recovery Vault transition | October 1, 2025 |
 | Recovery Vault claim deadline | October 1, 2026 |
