@@ -1,7 +1,7 @@
 ---
-title: "MorphL2 Vault Deprecation Guide"
-description: "MorphL2 Vault Deprecation Guide"
-sidebar_label: "MorphL2 Vault Deprecation Guide"
+title: "Deprecation Guide"
+description: "Deprecation Guide"
+sidebar_label: "Deprecation Guide"
 ---
 
 Concrete is deprecating all vaults built on the **Morph Layer 2 network** as part of a long-term platform consolidation and upgrade strategy.

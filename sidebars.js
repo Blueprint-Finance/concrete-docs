@@ -37,7 +37,6 @@ const sidebars = {
            'Vaults/yield-vaults',
            'Vaults/yield-strategies',
            'Vaults/how-withdrawals-work',
-           'Vaults/morphL2-vault-deprecation-guide',
            {
              type: 'category',
              label: 'Bera',
@@ -51,6 +50,30 @@ const sidebars = {
                'Vaults/Bera/request-address-change',
                'Vaults/Bera/unclaimed-rewards',
                'Vaults/Bera/boyco-depositors-claim',
+             ],
+           },
+           {
+             type: 'category',
+             label: 'Corn',
+             items: [
+               'Vaults/Corn/overview',
+               'Vaults/Corn/vault-deprecation-guide',
+             ],
+           },
+           {
+             type: 'category',
+             label: 'Morph',
+             items: [
+               'Vaults/Morph/overview',
+              'Vaults/Morph/vault-deprecation-guide',
+             ],
+           },
+           {
+             type: 'category',
+             label: 'TAC',
+             items: [
+               'Vaults/TAC/overview',
+               'Vaults/TAC/vault-deprecation-guide',
              ],
            },
          ],
