@@ -69,7 +69,8 @@ If you deposited into the **Corn Stables** vault:
 - No manual action is required to receive them
 
 You can view and claim your rewards here:
-[**Check Your Corn Rewards on Merkl.xyz**](https://app.merkl.xyz/opportunities/ethereum/ERC20/0x3Eb6464A77D7B619AaAfa7e9FFC0fBe3ed7084B3)
+
+[Check Your Corn Rewards on Merkl.xyz](https://app.merkl.xyz/opportunities/ethereum/ERC20/0x3Eb6464A77D7B619AaAfa7e9FFC0fBe3ed7084B3)
 
 ## Need Help?
 
