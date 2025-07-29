@@ -57,8 +57,9 @@ Yes. Your deposited assets and yield remain secure in audited smart contracts. Y
 
 ## What About Rewards or Points?
 
-- If you deposited into a **Corn Bitcoin** vault, Corn rewards were distributed on **June 6, 2025**.
-- If you deposited via Pendle, rewards were distributed by Pendle shortly afterward.
+- **For Corn Bitcoin** vault depositors:
+    - If you deposited on app.concrete.xyz; Corn rewards were distributed on **June 6, 2025**
+    - If you deposited via Pendle, Corn rewards were distributed by Pendle on **June 7, 2025**
 - For **Corn Stables** vault users, rewards are managed via [Merkl.xyz](https://app.merkl.xyz/opportunities/ethereum/ERC20/0x3Eb6464A77D7B619AaAfa7e9FFC0fBe3ed7084B3).
 
 ### How to Check Your Rewards
@@ -69,8 +70,7 @@ If you deposited into the **Corn Stables** vault:
 - No manual action is required to receive them
 
 You can view and claim your rewards here:
-
-[Check Your Corn Rewards on Merkl.xyz](https://app.merkl.xyz/opportunities/ethereum/ERC20/0x3Eb6464A77D7B619AaAfa7e9FFC0fBe3ed7084B3)
+[**Check Your Corn Rewards on Merkl.xyz**](https://app.merkl.xyz/opportunities/ethereum/ERC20/0x3Eb6464A77D7B619AaAfa7e9FFC0fBe3ed7084B3)
 
 ## Need Help?
 
