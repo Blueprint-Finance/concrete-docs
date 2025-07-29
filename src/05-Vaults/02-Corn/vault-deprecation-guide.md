@@ -6,18 +6,21 @@ sidebar_label: "Deprecation Guide"
 
 Concrete is deprecating the **Corn Bitcoin** and **Corn Stables** vaults as part of a long-term platform consolidation and upgrade strategy.
 
-If you deposited into these vaults, we recommend redeeming your funds as soon as possible. The vaults will be removed from the app before **October 1st, 2025**. While a fallback recovery option will remain available after deactivation, withdrawing early ensures full control of your assets and helps avoid delays.
+
+If you deposited into these vaults, we recommend redeeming your funds as soon as possible. While they will remain visible in the app, we strongly encourage early withdrawal to ensure full control of your assets and avoid delays.
+
+A fallback recovery option will remain available after deactivation.
 
 ## Summary for Depositors
 
-- The Corn Bitcoin and Corn Stables vaults are being removed from the app
+- The Corn Bitcoin and Corn Stables vaults are being deprecated
 - Your funds are safe and withdrawable via the app until **October 1st, 2025**
 - Rewards already earned will remain claimable
 - After **October 1st**, any remaining funds will move to a Recovery Vault and will still be redeemable via manual support
 
 ## What’s Changing?
 
-The following vaults will be deprecated and removed from the Concrete app:
+The following vaults will be deprecated:
 
 1. **Corn Bitcoin: uniBTC** — Deposit: uniBTC
 2. **Corn Bitcoin: solvBTC.BBN** — Deposit: solvBTC.BBN
@@ -32,8 +35,8 @@ All affected vaults will be deactivated on October 1, 2025. From that date, any 
 
 Yes. Your deposited assets and yield remain secure in audited smart contracts. You’ll be able to access them via:
 
-- The Concrete Earn app (until vaults are removed)
-- A manual support process (for users returning after vaults have been removed from the UI)
+- The Concrete Earn app
+- A manual support process
 
 ## What Should I Do?
 
