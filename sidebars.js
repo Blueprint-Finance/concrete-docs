@@ -53,6 +53,22 @@ const sidebars = {
                'Vaults/Bera/boyco-depositors-claim',
              ],
            },
+           {
+             type: 'category',
+             label: 'Corn',
+             items: [
+               'Vaults/Corn/overview',
+               'Vaults/Corn/vault-deprecation-guide',
+             ],
+           },
+           {
+             type: 'category',
+             label: 'Morph',
+             items: [
+               'Vaults/Morph/overview',
+              'Vaults/Morph/vault-deprecation-guide',
+             ],
+           },
          ],
        },
 
