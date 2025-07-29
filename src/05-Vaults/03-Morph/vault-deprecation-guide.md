@@ -81,9 +81,9 @@ If you deposited into MorphL2 vaults, you may have earned **Morph Points** as pa
 
 ### How to Check Your Points
 
-All eligible points were **automatically assigned** based on your vault activity — no manual action is required. You can view your balance here:
+All eligible points were **automatically assigned** based on your vault activity — no manual action is required.
 
-[Check your Morph Points →](https://www.morphl2.io/points/greattoken_migration/defirewards)
+You can view your balance here: [Check your Morph Points →](https://www.morphl2.io/points/greattoken_migration/defirewards)
 
 :::tip
 Morph Points are administered by the Morph team, not by Concrete. If you have questions or believe your points are missing, please reach out to Morph support through their official channels.
