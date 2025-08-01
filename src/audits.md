@@ -5,7 +5,13 @@ sidebar_label: "Audits"
 sidebar_position: 7
 ---
 
-Security is at the heart of everything we do at Concrete Protocol. To ensure the integrity of our smart contracts and the trust of our users, we conduct rigorous audits with industry-leading firms. These audits identify and address potential vulnerabilities, logical errors, and inefficiencies, strengthening our platform's security and reliability.
+Security is at the heart of everything we do at Concrete Protocol. To ensure the integrity of our smart contracts and the trust of our users, we work with top-tier audit firms:
+
+* **Code4rena**
+* **Halborn**
+* **Zellic**
+
+These audits identify and address potential vulnerabilities, logical errors, and inefficiencies, strengthening our platform's security and reliability.
 
 ## Our Approach to Audits
 
@@ -69,7 +75,7 @@ Below are the audit reports conducted by Halborn, detailing their findings and r
 - Auditor: Halborn
 - [View the full report](/files/Morpho-V1-Lender-Integration-SSC.pdf)
 
-### Morpho Strategy (Auto Compounding)
+### Morpho Strategy - Auto Compounding
 
 - Date: March 28, 2025
 - Auditor: Halborn
@@ -87,7 +93,7 @@ Below are the audit reports conducted by Halborn, detailing their findings and r
 - Auditor: Halborn
 - [View the full report](/files/Preview-Withdrawal-Pause-SSC.pdf)
 
-### Code4rena Fixes – Part 1 & Part 2  
+### Code4rena Fixes – Part 1 & 2  
 - Date: February 10, 2025
 - Auditor: Code4rena
 - [View Part 1 Report](/files/Code4rena-Review-Part-1-SSC.pdf)
@@ -122,6 +128,12 @@ Below are the audit reports conducted by Halborn, detailing their findings and r
 - Date: May, 16, 2025
 - Auditor: Halborn
 - [View the full report](/files/Withdrawal-Queue-Delay-SSC.pdf)
+
+### Earn - Smart Contract Security
+
+- Date: June, 06, 2025
+- Auditor: Zellic  
+- [View the full report](/files/Zellic-Audit-Report.pdf)
 
 ## Commitment to Excellence
 
