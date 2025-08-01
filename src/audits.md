@@ -11,8 +11,6 @@ Security is at the heart of everything we do at Concrete Protocol. To ensure the
 * **Halborn**
 * **Zellic**
 
-These audits identify and address potential vulnerabilities, logical errors, and inefficiencies, strengthening our platform's security and reliability.
-
 ## Our Approach to Audits
 
 Concrete Protocol follows a multi-phased audit approach to deliver the highest level of security and assurance:
@@ -31,7 +29,7 @@ Concrete Protocol follows a multi-phased audit approach to deliver the highest l
 
 ## Audit Reports
 
-Below are the audit reports conducted by Halborn, detailing their findings and recommendations:
+The following list of audits identify and address potential vulnerabilities, logical errors, and inefficiencies, strengthening our platform's security and reliability:
 
 ### HUB v1  
 
