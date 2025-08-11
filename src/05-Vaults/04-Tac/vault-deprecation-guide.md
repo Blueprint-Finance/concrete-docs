@@ -4,8 +4,7 @@ description: "Deprecation Guide"
 sidebar_label: "Deprecation Guide"
 ---
 
-The **TAC Stone**, **TAC LevelUSD**, and **TAC Renzo** vaults are live on [Turtle.xyz](https://app.turtle.xyz/campaigns/tac) and never appeared in the Concrete app before.
-As part of the deprecation process, the withdrawal instructions, and recovery steps are now hosted on [Concrete.xyz](https://app.concrete.xyz/earn).
+The **TAC Stone**, **TAC LevelUSD**, and **TAC Renzo** vaults are live on [Turtle.xyz](https://app.turtle.xyz/campaigns/tac) and never appeared in the Concrete app before. As part of the deprecation process, the withdrawal instructions, and recovery steps are now hosted on [Concrete.xyz](https://app.concrete.xyz/earn).
 
 If you deposited into these vaults, we recommend redeeming your funds as soon as possible. These vaults will remain visible in the UI but will be marked as **Completed** after **October 1st, 2025**. While a fallback recovery option will remain available after deactivation, withdrawing early ensures full control of your assets and helps avoid delays.
 
