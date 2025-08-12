@@ -69,6 +69,14 @@ const sidebars = {
               'Vaults/Morph/vault-deprecation-guide',
              ],
            },
+
+           {
+             type: 'category',
+             label: 'Tac',
+             items: [
+               'Vaults/Tac/vault-deprecation-guide',
+             ],
+           },
          ],
        },
 
