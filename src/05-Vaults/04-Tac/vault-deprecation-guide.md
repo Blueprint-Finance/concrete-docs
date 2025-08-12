@@ -58,7 +58,7 @@ If the vault is still active in the app:
 
 TAC rewards are managed by Merkl and are now unlocked and fully claimable.
 
-You can view your rewards here: [app.merkl.xyz/users](https://app.merkl.xyz/users).
+You can view your rewards via [app.merkl.xyz/users](https://app.merkl.xyz/users).
 
 For any reward-related questions, please contact the **TAC team** directly.
 
