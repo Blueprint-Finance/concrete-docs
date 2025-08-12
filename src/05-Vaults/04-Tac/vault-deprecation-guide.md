@@ -62,7 +62,7 @@ You can view your rewards here: [app.merkl.xyz/users](https://app.merkl.xyz/user
 
 For any reward-related questions, please contact the **TAC team** directly.
 
-For more details, read the following announcement:
+For more details, check the following announcement:
  https://x.com/turtledotxyz/status/1944899518182646168
 
 ## Need Help?
