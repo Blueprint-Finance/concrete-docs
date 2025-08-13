@@ -40,10 +40,9 @@ You’ll be able to withdraw them using:
 
 If the vault is still active in the app:
 
-1. Visit [Concrete App](https://app.concrete.xyz/)
-2. Select your [relevant Vault](https://app.concrete.xyz/vault/tac/withdrawals)
-3. Click the “Withdraw” tab
-4. Select the asset that corresponds with your deposit and follow the onscreen instructions to withdraw your underlying
+1. Visit [TAC withdrawals page](https://app.concrete.xyz/vault/tac/withdrawals)
+2. Click the “Withdraw” tab
+3. Select the asset that corresponds with your deposit and follow the onscreen instructions to withdraw your underlying
 
 ### Key Dates
 
