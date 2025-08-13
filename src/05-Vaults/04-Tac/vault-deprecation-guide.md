@@ -32,7 +32,7 @@ Yes. Your deposited assets and yield remain secure in audited smart contracts.
 You’ll be able to withdraw them using:
 
 - The **Concrete Earn app** — before **October 1st, 2025**
-- A **manual support process** — after **October 1st, 2025,** the vaults will still be visible on the Concrete app (marked as completed)
+- A **manual support process** — after **October 1st, 2025,**
 
 ## What You Need to Do
 
@@ -41,7 +41,7 @@ You’ll be able to withdraw them using:
 If the vault is still active in the app:
 
 1. Visit [Concrete App](https://app.concrete.xyz/)
-2. Select your [relevant Vault](https://app.concrete.xyz/vault/tac)
+2. Select your [relevant Vault](https://app.concrete.xyz/vault/tac/withdrawals)
 3. Click the “Withdraw” tab
 4. Select the asset that corresponds with your deposit and follow the onscreen instructions to withdraw your underlying
 
@@ -49,7 +49,7 @@ If the vault is still active in the app:
 
 | **Event** | **Timing** |
 | --- | --- |
-| Deposits disabled & deprecation announcement | July 29, 2025 (announcement via an info box on the Withdrawal tab of each vault page) |
+| Deposits disabled | July 29, 2025 |
 | Vault deactivation | October 1, 2025 |
 | Recovery Vault claim deadline | October 1, 2026 (one year after deactivation) |
 
