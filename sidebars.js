@@ -37,6 +37,7 @@ const sidebars = {
            'Vaults/yield-vaults',
            'Vaults/yield-strategies',
            'Vaults/how-withdrawals-work',
+           'Vaults/bridging-with-enso',
            'Vaults/morphL2-vault-deprecation-guide',
            {
              type: 'category',
@@ -66,7 +67,7 @@ const sidebars = {
              label: 'Morph',
              items: [
                'Vaults/Morph/overview',
-              'Vaults/Morph/vault-deprecation-guide',
+               'Vaults/Morph/vault-deprecation-guide',
              ],
            },
 
