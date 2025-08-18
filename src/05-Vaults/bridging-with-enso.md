@@ -86,7 +86,7 @@ If you run into any issues bridging into a vault:
 - Ask in our [Concrete Discord](https://discord.gg/concretexyz)
 - Email us at [support@blueprintfinance.com](mailto:support@blueprintfinance.com)
 
-## Bridging FAQ
+## FAQ
 
 **Q: Can I bridge *out* of a vault using Enso?**
 A: Currently, this feature is for bridging **into** vaults. To exit, withdraw from the vault first, then bridge your assets manually if needed.
