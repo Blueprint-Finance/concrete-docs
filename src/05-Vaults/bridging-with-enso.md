@@ -6,7 +6,7 @@ sidebar_label: "Bridging with Enso"
 
 Concrete now supports bridging directly into vaults from selected assets on Ethereum mainnet and other supported networks — powered by [Enso](https://www.enso.build/).
 
-This feature is only available for vaults whose assets are supported by Enso’s routing. For example, you can bridge into Berachain vaults from USDC or ETH on Ethereum, but not all vaults (e.g. Katana) will support this feature. You can deposit into a Concrete vault even if you don’t already hold the vault’s underlying asset on the destination chain (on a different network).
+This feature is only available for vaults whose assets are supported by Enso’s routing. For example, you can bridge into Berachain vaults from USDC or ETH on Ethereum, but not all vaults (e.g. Katana) will support this feature.
 
 **Example:**
 
@@ -15,7 +15,7 @@ This feature is only available for vaults whose assets are supported by Enso’s
 - That token is **bridged** to the destination chain (e.g., Berachain)
 - The vault automatically **mints your shares** (e.g., `ctBeraLBTC`) and adds them to your portfolio
 
-## Control Your Destination Wallet
+## Ensure You Control Your Destination Wallet
 
 When you deposit with Enso, your assets are sent to the **same wallet address** on the destination chain (e.g., Berachain). Make sure you can control this same address on the destination chain so that you’ll be able to withdraw your funds in the future.
 
