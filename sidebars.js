@@ -71,13 +71,13 @@ const sidebars = {
              ],
            },
 
-           //{
-             //type: 'category',
-             //label: 'Tac',
-             //items: [
-               //'Vaults/Tac/vault-deprecation-guide',
-             //],
-           //},
+           {
+             type: 'category',
+             label: 'Tac',
+             items: [
+               'Vaults/Tac/vault-deprecation-guide',
+             ],
+           },
          ],
        },
 
