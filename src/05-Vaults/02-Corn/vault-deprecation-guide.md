@@ -70,4 +70,4 @@ We’re here for you:
 - Ask questions in the [Concrete Discord](https://discord.gg/concretexyz)
 - Or email us at [support@blueprintfinance.com](mailto:support@blueprintfinance.com)
 
-Our team is ready to walk you through withdrawal steps.
+Our team will walk you through whatever steps you need.
