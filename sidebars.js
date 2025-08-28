@@ -38,12 +38,12 @@ const sidebars = {
            'Vaults/yield-strategies',
            'Vaults/how-withdrawals-work',
            'Vaults/bridging-with-enso',
-           'Vaults/morphL2-vault-deprecation-guide',
            {
              type: 'category',
              label: 'Bera',
              items: [
                'Vaults/Bera/wbera',
+               'Vaults/Bera/vault-deprecation-guide',
                'Vaults/Bera/pre-deposit-vaults-deprecation-guide',
                'Vaults/Bera/berabaddies-earn-deprecation-guide',
                'Vaults/Bera/claim-and-transfer',

@@ -6,22 +6,20 @@ sidebar_label: "Deprecation Guide"
 
 Concrete is deprecating all vaults built on the **Morph Layer 2 network** as part of a long-term platform consolidation and upgrade strategy.
 
-If you deposited into any MorphL2 vault, we recommend redeeming your funds promptly. These vaults are being deprecated and will soon be removed from the app. While a recovery option will remain available after deactivation (as a backup option), withdrawing early ensures you keep full control of your assets and helps reduce delays.
+If you deposited into these vaults, we recommend redeeming your funds promptly. While withdrawals remain open, withdrawing early ensures you keep full control of your assets and helps avoid delays.
 
 ## Summary for Depositors
 
 - MorphL2 vaults are being removed from the app
 - Your funds are safe and still withdrawable
 - Rewards already earned will remain claimable
-- Withdraw early through the app before October 1st, 2025. After that date, any remaining assets will move to a recovery vault and will still be redeemable.
 
 ## What’s Changing?
 
 All vaults built on the **Morph Layer 2** network will be deprecated. These vaults will:
 
 - Stop accepting deposits
-- Immediate withdrawals will remain fully available through the app until October 1st, 2025.
-- Enter a long-term withdrawal-only mode via the Recovery Vault system
+- Immediate withdrawals will remain fully available through the app
 
 **Affected Vaults:**
 
@@ -31,17 +29,12 @@ All vaults built on the **Morph Layer 2** network will be deprecated. These vaul
 4. **Morph Majors** — Deposit: USDC, WETH, USDT, WBTC
 5. **Morph weETH** — Deposit: weETH
 
-:::tip
-All MorphL2 vaults will be deactivated on October 1st, 2025. From that date, any remaining funds will be stored in the Recovery Vault, where users can claim them through a manual support process. We recommend withdrawing your funds before deactivation.
-:::
->
-
 ## Are My Funds Safe?
 
 Yes. Your deposited assets and yield are secure in smart contracts. You’ll be able to withdraw them using:
 
-- The Concrete Earn app (until vaults are removed)
-- A manual support process (for users returning after vaults have been removed from the UI)
+- The Concrete app (until vaults are removed)
+- A manual support process (for users returning after vaults have been disabled on the UI)
 
 ## What You Need to Do
 
@@ -51,7 +44,7 @@ If the vault is still active in the app:
 
 1. Visit [Concrete App](https://app.concrete.xyz/)
 2. Go to the **Portfolio** tab
-3. Select your MorphL2 vault position
+3. Go to your relevant MorphL2 vault
 4. Click **Withdraw** and follow the wallet prompt
 
 ### Key Dates
@@ -61,7 +54,6 @@ If the vault is still active in the app:
 | Vault deactivation begins | July 14, 2025 (announcement via an info box on the Withdrawal tab of each vault page & Discord) |
 | Withdrawals open for affected MorphL2 vaults | July 07, 2025 |
 | Vault deactivation | October 1, 2025 |
-| Recovery Vault claim deadline | October 1, 2026 (one year after deactivation) |
 
 ## What About Points?
 
@@ -96,4 +88,4 @@ We're here for you:
 - Ask questions in the [Concrete Discord](https://discord.gg/concretexyz)
 - Or email us: [support@blueprintfinance.com](mailto:support@blueprintfinance.com)
 
-Our team will walk you through whatever recovery path you need.
+Our team will walk you through whatever steps you need.
