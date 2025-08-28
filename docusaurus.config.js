@@ -172,6 +172,20 @@ const config = {
         darkTheme: prismThemes.dracula,
       },
     }),
+
+    plugins: [
+    [
+      '@docusaurus/plugin-client-redirects',
+      {
+        redirects: [
+          {
+            from: '/Vaults/morphL2-vault-deprecation-guide',
+            to: '/Vaults/Morph/vault-deprecation-guide',
+          },
+        ],
+      },
+    ],
+  ],
 };
 
 export default config;
