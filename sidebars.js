@@ -38,7 +38,6 @@ const sidebars = {
            'Vaults/yield-strategies',
            'Vaults/how-withdrawals-work',
            'Vaults/bridging-with-enso',
-           'Vaults/morphL2-vault-deprecation-guide',
            {
              type: 'category',
              label: 'Bera',
