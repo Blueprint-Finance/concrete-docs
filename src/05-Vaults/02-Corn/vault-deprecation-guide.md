@@ -6,17 +6,13 @@ sidebar_label: "Deprecation Guide"
 
 Concrete is deprecating the **Corn Bitcoin** and **Corn Stables** vaults as part of a long-term platform consolidation and upgrade strategy.
 
-
-If you deposited into these vaults, we recommend redeeming your funds as soon as possible. While they will remain visible in the app, we strongly encourage early withdrawal to ensure full control of your assets and avoid delays.
-
-A fallback recovery option will remain available after deactivation.
+If you deposited into these vaults, we recommend redeeming your funds promptly. While withdrawals remain open, withdrawing early ensures you keep full control of your assets and helps avoid delays.
 
 ## Summary for Depositors
 
 - The Corn Bitcoin and Corn Stables vaults are being deprecated
-- Your funds are safe and withdrawable via the app until **October 1st, 2025**
+- Your funds are safe and withdrawable via the app
 - Rewards already earned will remain claimable
-- After **October 1st**, any remaining funds will move to a Recovery Vault and will still be redeemable via manual support
 
 ## What’s Changing?
 
@@ -26,10 +22,6 @@ The following vaults will be deprecated:
 2. **Corn Bitcoin: solvBTC.BBN** — Deposit: solvBTC.BBN
 3. **Corn Bitcoin: LBTC** — Deposit: LBTC
 4. **Corn Stables** — Deposit: USDT
-
-:::tip
-All affected vaults will be deactivated on October 1, 2025. From that date, any remaining funds will be stored in the Recovery Vault, where users can claim them through a manual support process. We recommend withdrawing your funds before deactivation.
-:::
 
 ## Are My Funds Safe?
 
@@ -53,7 +45,6 @@ Yes. Your deposited assets and yield remain secure in audited smart contracts. Y
 | --- | --- |
 | Deposits disabled & deprecation announcement | July 29, 2025 (announcement via an info box on the Withdrawal tab of each vault page & Discord) |
 | Vault deactivation | October 1, 2025 |
-| Recovery Vault claim deadline | October 1, 2026 (one year after deactivation) |
 
 ## What About Rewards or Points?
 
