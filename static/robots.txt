@@ -1,0 +1,6 @@
+# static/robots.txt
+User-agent: *
+Allow: /
+Disallow: /search
+
+Sitemap: https://docs.concrete.xyz/sitemap.xml
