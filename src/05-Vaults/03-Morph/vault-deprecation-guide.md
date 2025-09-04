@@ -53,7 +53,6 @@ If the vault is still active in the app:
 | --- | --- |
 | Vault deactivation begins | July 14, 2025 (announcement via an info box on the Withdrawal tab of each vault page & Discord) |
 | Withdrawals open for affected MorphL2 vaults | July 07, 2025 |
-| Vault deactivation | October 1, 2025 |
 
 ## What About Points?
 

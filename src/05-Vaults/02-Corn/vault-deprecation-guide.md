@@ -44,7 +44,6 @@ Yes. Your deposited assets and yield remain secure in audited smart contracts. Y
 | **Event** | **Timing** |
 | --- | --- |
 | Deposits disabled & deprecation announcement | July 29, 2025 (announcement via an info box on the Withdrawal tab of each vault page & Discord) |
-| Vault deactivation | October 1, 2025 |
 
 ## What About Rewards or Points?
 

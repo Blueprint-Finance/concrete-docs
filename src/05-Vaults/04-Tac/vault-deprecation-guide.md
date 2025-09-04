@@ -46,7 +46,6 @@ If the vault is still active in the app:
 | **Event** | **Timing** |
 | --- | --- |
 | Deposits disabled | July 29, 2025 |
-| Vault deactivation | October 1, 2025 |
 
 ## What About Rewards or Points?
 
