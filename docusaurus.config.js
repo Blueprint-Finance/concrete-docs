@@ -8,6 +8,9 @@ import {themes as prismThemes} from 'prism-react-renderer';
 
 require('dotenv').config();
 
+const vercelEnv = process.env.VERCEL_ENV;
+const isProd = vercelEnv === "production";
+
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'Concrete Docs',
@@ -19,6 +22,7 @@ const config = {
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/',
+  trailingSlash: false,  // Ensure consistent URL structure
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
@@ -27,6 +31,7 @@ const config = {
 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
+  noIndex: !isProd,  // Prevent non-production from being indexed
 
   // Even if you don't use internationalization, you can use this field to set
   // useful metadata like html lang. For example, if your site is Chinese, you
@@ -67,6 +72,13 @@ const config = {
         },
         theme: {
           customCss: './src/css/custom.css',
+        },
+        sitemap: {
+          lastmod: 'datetime',
+          changefreq: 'weekly',
+          priority: 0.5,
+          ignorePatterns: ['/search', '/tags/**'],
+          filename: 'sitemap.xml',
         },
       }),
     ],
