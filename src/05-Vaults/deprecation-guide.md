@@ -25,11 +25,11 @@ What deprecation means for you:
 | Vault | Vault Address | Atomic Enabled (Deprecation Date) | Rewards/Points |
 | --- | --- | --- | --- |
 | WBERA | [0xEC577E989c02b294D5b8f4324224a5B63F5beef7](https://berascan.com/address/0xEC577E989c02b294D5b8f4324224a5B63F5beef7) | August 29, 2025 |  |
-| USDT0 |  | August 29, 2025 |  |
+| USDT0 | [0xe96E0D5DdA2e24050F43AF92EbB3293f6e605C9a](https://berascan.com/address/0xe96E0D5DdA2e24050F43AF92EbB3293f6e605C9a) | August 29, 2025 |  |
 | USDC.e | [0x585934AfBf1FA9f563b80283F8B916Dd8F66a9b6](https://berascan.com/address/0x585934AfBf1FA9f563b80283F8B916Dd8F66a9b6) | August 29, 2025 |  |
-| HONEY |  | August 29, 2025 |  |
-| uniBTC |  | August 29, 2025 |  |
-| FBTC |  | August 29, 2025 |  |
+| HONEY | [0x81235952ad93987F74e074994Def2a7e1D6F1Fb0](https://berascan.com/address/0x81235952ad93987F74e074994Def2a7e1D6F1Fb0) | August 29, 2025 |  |
+| uniBTC | [0x068D072d1ee7647B9d649a7C2046166Aa81af3D3](https://berascan.com/address/0x068D072d1ee7647B9d649a7C2046166Aa81af3D3) | August 29, 2025 |  |
+| FBTC | [0x127BF6361ff7495F2A69d83d9Ad2092D3dfEE7Ab](https://berascan.com/address/0x127BF6361ff7495F2A69d83d9Ad2092D3dfEE7Ab) | August 29, 2025 |  |
 
 ## What You Need to Do
 
