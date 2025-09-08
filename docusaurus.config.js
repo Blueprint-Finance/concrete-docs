@@ -194,6 +194,11 @@ const config = {
             from: '/Vaults/morphL2-vault-deprecation-guide',
             to: '/Vaults/Morph/vault-deprecation-guide',
           },
+          {
+            from: '/Vaults/Bera/vault-deprecation-guide',
+            to: '/Vaults/deprecation-guide',
+          },
+
         ],
       },
     ],

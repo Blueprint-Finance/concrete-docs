@@ -36,6 +36,7 @@ const sidebars = {
          items: [
            'Vaults/yield-vaults',
            'Vaults/yield-strategies',
+           'Vaults/deprecation-guide',
            'Vaults/how-withdrawals-work',
            'Vaults/bridging-with-enso',
            {
@@ -43,7 +44,6 @@ const sidebars = {
              label: 'Bera',
              items: [
                'Vaults/Bera/wbera',
-               'Vaults/Bera/vault-deprecation-guide',
                'Vaults/Bera/pre-deposit-vaults-deprecation-guide',
                'Vaults/Bera/berabaddies-earn-deprecation-guide',
                'Vaults/Bera/claim-and-transfer',
