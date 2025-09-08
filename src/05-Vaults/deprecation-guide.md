@@ -22,8 +22,8 @@ What deprecation means for you:
 
 ## Deprecation Log
 
-| Vault | Vault Address | Atomic Enabled (Deprecation Date) | Rewards/Points |
-| --- | --- | --- | --- |
+| Vault | Vault Address | Atomic Enabled (Deprecation Date) |
+| --- | --- | --- |
 | WBERA | [0xEC577E989c02b294D5b8f4324224a5B63F5beef7](https://berascan.com/address/0xEC577E989c02b294D5b8f4324224a5B63F5beef7) | August 29, 2025 |  |
 | USDT0 | [0xe96E0D5DdA2e24050F43AF92EbB3293f6e605C9a](https://berascan.com/address/0xe96E0D5DdA2e24050F43AF92EbB3293f6e605C9a) | August 29, 2025 |  |
 | USDC.e | [0x585934AfBf1FA9f563b80283F8B916Dd8F66a9b6](https://berascan.com/address/0x585934AfBf1FA9f563b80283F8B916Dd8F66a9b6) | August 29, 2025 |  |
