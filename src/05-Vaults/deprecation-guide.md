@@ -22,8 +22,9 @@ What deprecation means for you:
 
 ## Deprecation Log
 
-| Vault | Vault Address | Atomic Enabled (Deprecation Date) |
-| --- | --- | --- |
+| Vault | Vault Address | Atomic Enabled (Deprecation Date) | Rewards/Points |
+| --- | --- | --- | --- |
+| ctKataAUSD | [0xCA2470F04945dAd24989Ec6eF2c41Ee808e51039](https://explorer.katanarpc.com/address/0xCA2470F04945dAd24989Ec6eF2c41Ee808e51039) | September 10, 2025 | [Managed by Merkl](https://app.merkl.xyz/users) and are now unlocked and fully claimable. For any reward-related questions, please contact the Katana team directly. |
 | WBERA | [0xEC577E989c02b294D5b8f4324224a5B63F5beef7](https://berascan.com/address/0xEC577E989c02b294D5b8f4324224a5B63F5beef7) | August 29, 2025 |  |
 | USDT0 | [0xe96E0D5DdA2e24050F43AF92EbB3293f6e605C9a](https://berascan.com/address/0xe96E0D5DdA2e24050F43AF92EbB3293f6e605C9a) | August 29, 2025 |  |
 | USDC.e | [0xc3cac88fd629652BBe0C3454D5d3049368A73849](https://berascan.com/address/0xc3cac88fd629652BBe0C3454D5d3049368A73849) | August 29, 2025 |  |
