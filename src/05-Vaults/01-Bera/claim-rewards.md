@@ -26,10 +26,6 @@ Review the list of rewards owed, reward type (points or tokens) and the details 
 
 Clicking claim will claim all rewards in one transaction. If you hold multiple Bera vault shares, claiming rewards will claim for all vault shares in your wallet.
 
-### What about points?
-
-Any reward which is a point will be distributed at the point of TGE, either by the rewarding entity, or by Concrete.
-
 ## Claim Deadline
 
 You must claim your rewards within **3 months** of the unlock date.
@@ -46,7 +42,7 @@ After that, **unclaimed rewards may be reallocated** to other protocol incentive
 | Berachain | BERA tokens | [https://app.concrete.xyz](https://app.concrete.xyz/) | Claim on Concrete Core app |
 | Lombard | Lux Points | - | Points have been earned through Concrete. Distribution will happen at a later date. |
 | Babylon | BABY tokens | - | Lombard to distribute $BABY |
-| Concrete | Concrete Points | [concrete.xyz](http://concrete.xyz/) | Points have been earned through Concrete. More details coming soon. |
+| Concrete | Concrete Points | [concrete.xyz](http://concrete.xyz/) | Points have been earned through Concrete. |
 | Kodiak | xKDK tokens | - | Airdrop by Kodiak May 6 |
 | Dolomite | veDOLO tokens | https://app.dolomite.io/boyco | Dolomite to distribute May 7 |
 
@@ -56,7 +52,7 @@ After that, **unclaimed rewards may be reallocated** to other protocol incentive
 | --- | --- | --- | --- |
 | Ethena USDe | ENA tokens | https://app.liquifi.finance/ | Claim ENA on Liquifi |
 | Ethena sUSDe | ENA tokens | https://app.liquifi.finance/ | Claim ENA on Liquifi |
-| Concrete | Concrete Points | [concrete.xyz](http://concrete.xyz/) | Points have been earned through Concrete. More details coming soon. |
+| Concrete | Concrete Points | [concrete.xyz](http://concrete.xyz/) | Points have been earned through Concrete. |
 | Berachain | BERA tokens | [https://app.concrete.xyz](https://app.concrete.xyz/) | Claim on Concrete Core app |
 | Kodiak | xKDK tokens | - | Airdrop by Kodiak May 6 |
 | Dolomite | veDOLO tokens | https://app.dolomite.io/boyco | Dolomite to distribute May 7 |
@@ -66,7 +62,7 @@ After that, **unclaimed rewards may be reallocated** to other protocol incentive
 
 | **Entity** | **Tokens or Points** | **Where to claim** | **Details** |
 | --- | --- | --- | --- |
-| Concrete | Concrete Points | [concrete.xyz](http://concrete.xyz/) | Points have been earned through Concrete. More details coming soon. |
+| Concrete | Concrete Points | [concrete.xyz](http://concrete.xyz/) | Points have been earned through Concrete. |
 | Berachain | BERA tokens | [https://app.concrete.xyz](https://app.concrete.xyz/) | Claim on Concrete Core app |
 | Kodiak | xKDK tokens | - | Airdrop by Kodiak May 6 |
 | Dolomite | veDOLO tokens | https://app.dolomite.io/boyco | Dolomite to distribute May 7 |
