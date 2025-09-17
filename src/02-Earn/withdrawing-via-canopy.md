@@ -68,16 +68,6 @@ Withdrawals from some vaults—such as Corn vaults—will be enabled approximate
 
 If no rewards are available yet, you’ll see a message indicating when they will be.
 
-## What About Concrete Points?
-
-Your **ctMove tokens** stay in your wallet.
-
-These tokens represent your share of future Concrete rewards.
-
-- Concrete Points are **not claimable yet**
-- Once a **Token Generation Event (TGE)** happens, you’ll be able to redeem your points
-- You'll need to return to the **Concrete app** to claim them when that time comes
-
 ## Need Help?
 
 For follow-up help, the best way to get support is by contacting **Canopy** directly.
