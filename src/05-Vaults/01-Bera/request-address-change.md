@@ -19,7 +19,7 @@ You need to [Sign a message](#1-sign-a-message-using-etherscan), using the same 
 
 ### Option B: You Haven’t Bridged Your ctAsset Yet
 
-We strongly recommend proceeding with the [standard bridge flow](./how-to-withdraw#steps-to-withdraw) which bridges your ctAsset to the Berachain Withdrawal Multi-Sig. This allows us to process your redemption request securely and ensures that rewards and underlying assets are routed correctly.
+We strongly recommend proceeding with the [standard bridge flow](./how-to-withdraw.md#steps-to-withdraw) which bridges your ctAsset to the Berachain Withdrawal Multi-Sig. This allows us to process your redemption request securely and ensures that rewards and underlying assets are routed correctly.
 
 After bridging, you can [request a destination address change](#how-to-request-an-address-change) (if needed).
 
@@ -55,7 +55,7 @@ d. Send the **URL of the published message** to us via [Discord](https://discord
 
 Contact us on [Discord](https://discord.gg/concretexyz) or via [support@blueprintfinance.com](mailto:support@blueprintfinance.com).
 
-Before we can fulfill your request of address change, you need to bridge your ctAsset to the Withdrawal Multi-Sig by completing [Step 1 of the withdrawal flow](./how-to-withdraw#why-multi-sig-addresses).
+Before we can fulfill your request of address change, you need to bridge your ctAsset to the Withdrawal Multi-Sig by completing [Step 1 of the withdrawal flow](./how-to-withdraw.md#why-multi-sig-addresses).
 
  <img
    src="/img/bridge-1.png"
