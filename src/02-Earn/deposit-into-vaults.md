@@ -6,7 +6,7 @@ sidebar_position: 0
 ---
 
 :::tip
-Before starting, you must connect your preferred wallet (e.g., MetaMask) to interact with Concrete. Ensure your wallet is connected and review the [Prerequisites](../Overview/prerequisites) article for initial setup.
+Before starting, you must connect your preferred wallet (e.g., MetaMask) to interact with Concrete. Ensure your wallet is connected and review the [Prerequisites](/Overview/prerequisites) article for initial setup.
 :::
 
 ## Step 1: Navigate to the Desired Vault
