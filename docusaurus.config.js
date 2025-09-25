@@ -210,8 +210,6 @@ const config = {
             from: '/Vaults/Morph/vault-deprecation-guide',
             to: '/Vaults/deprecation-guide',
           },
-
-
         ],
       },
     ],
