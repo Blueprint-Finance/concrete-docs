@@ -198,6 +198,19 @@ const config = {
             from: '/Vaults/Bera/vault-deprecation-guide',
             to: '/Vaults/deprecation-guide',
           },
+          {
+            from: '/Vaults/Bera/berabaddies-earn-deprecation-guide',
+            to: '/Vaults/deprecation-guide',
+          },
+          {
+            from: '/Vaults/Corn/vault-deprecation-guide',
+            to: '/Vaults/deprecation-guide',
+          },
+          {
+            from: '/Vaults/Morph/vault-deprecation-guide',
+            to: '/Vaults/deprecation-guide',
+          },
+
 
         ],
       },
