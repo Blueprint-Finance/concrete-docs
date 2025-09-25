@@ -192,7 +192,7 @@ const config = {
         redirects: [
           {
             from: '/Vaults/morphL2-vault-deprecation-guide',
-            to: '/Vaults/Morph/vault-deprecation-guide',
+            to: '/Vaults/vault-deprecation-guide',
           },
           {
             from: '/Vaults/Bera/vault-deprecation-guide',
