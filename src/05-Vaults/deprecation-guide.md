@@ -20,6 +20,22 @@ What deprecation means for you:
 - All funds can be redeemed through atomic withdrawals
 - Previously earned rewards stay claimable
 
+## What You Need to Do
+
+**Withdraw now —** with atomic withdrawals enabled, you can exit instantly:
+
+1. Visit the [Concrete App](https://app.concrete.xyz/)
+2. Go to your relevant vault
+3. Open the **Withdraw** tab
+4. Click **Withdraw** and follow the wallet prompt
+
+## Are My Funds Safe?
+
+Yes. Your deposited assets and yield are secure in smart contracts. You’ll be able to withdraw them using:
+
+- The Concrete app
+- A manual support process (for users returning after vaults have been disabled on the UI)
+
 ## Deprecation Log
 
 | Vault | Vault Address | Atomic Enabled (Deprecation Date) | Rewards/Points |
@@ -46,23 +62,6 @@ What deprecation means for you:
 | Morph/USDC | [0xfBA338E386896C564963CB52e5EfBA435667DBE2](https://explorer.morphl2.io/address/0xfBA338E386896C564963CB52e5EfBA435667DBE2) | July 14, 2025 | **Morph Points** earned via:<br />– *DeFi Rewards Campaign* (Jan 26–Apr 28, 2025) — daily points for deposits ([Announcement](https://morph.ghost.io/introducing-pilot-defi-rewards-supercharge-your-earnings-on-morph-zoo/))<br />– *7× Multiplier Campaign* (Feb 24–Mar 3, 2025) — boosted points ([Announcement](https://morph.ghost.io/defi-frenzy-concrete-layer-bank-join-morphs-defi-rewards-with-7x-launch-multiplier/))<br />All points were **automatically assigned** based on vault activity.<br />Check balance: [Morph Points Portal](https://www.morphl2.io/points/greattoken_migration/defirewards)<br /><em>Note: Morph Points are managed by Morph, not Concrete.</em> |
 | Morph/WBTC | [0x83625306Bc3B4907e6628Dfc3C6CD0104bED4266](https://explorer.morphl2.io/address/0x83625306Bc3B4907e6628Dfc3C6CD0104bED4266) | July 14, 2025 | **Morph Points** earned via:<br />– *DeFi Rewards Campaign* (Jan 26–Apr 28, 2025) — daily points for deposits ([Announcement](https://morph.ghost.io/introducing-pilot-defi-rewards-supercharge-your-earnings-on-morph-zoo/))<br />– *7× Multiplier Campaign* (Feb 24–Mar 3, 2025) — boosted points ([Announcement](https://morph.ghost.io/defi-frenzy-concrete-layer-bank-join-morphs-defi-rewards-with-7x-launch-multiplier/))<br />All points were **automatically assigned** based on vault activity.<br />Check balance: [Morph Points Portal](https://www.morphl2.io/points/greattoken_migration/defirewards)<br /><em>Note: Morph Points are managed by Morph, not Concrete.</em> |
 | Morph/weETH | [0x6157169A7c68CfB00833a1E7F97F454aEBf54f5D](https://explorer.morphl2.io/address/0x6157169A7c68CfB00833a1E7F97F454aEBf54f5D) |  | **Morph Points** earned via:<br />– *DeFi Rewards Campaign* (Jan 26–Apr 28, 2025) — daily points for deposits ([Announcement](https://morph.ghost.io/introducing-pilot-defi-rewards-supercharge-your-earnings-on-morph-zoo/))<br />– *7× Multiplier Campaign* (Feb 24–Mar 3, 2025) — boosted points ([Announcement](https://morph.ghost.io/defi-frenzy-concrete-layer-bank-join-morphs-defi-rewards-with-7x-launch-multiplier/))<br />All points were **automatically assigned** based on vault activity.<br />Check balance: [Morph Points Portal](https://www.morphl2.io/points/greattoken_migration/defirewards)<br /><em>Note: Morph Points are managed by Morph, not Concrete.</em> |
-
-
-## What You Need to Do
-
-**Withdraw now —** with atomic withdrawals enabled, you can exit instantly:
-
-1. Visit the [Concrete App](https://app.concrete.xyz/)
-2. Go to your relevant vault
-3. Open the **Withdraw** tab
-4. Click **Withdraw** and follow the wallet prompt
-
-## Are My Funds Safe?
-
-Yes. Your deposited assets and yield are secure in smart contracts. You’ll be able to withdraw them using:
-
-- The Concrete app
-- A manual support process (for users returning after vaults have been disabled on the UI)
 
 ## Need Help?
 
