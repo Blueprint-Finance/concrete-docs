@@ -45,7 +45,6 @@ const sidebars = {
              items: [
                'Vaults/Bera/wbera',
                'Vaults/Bera/pre-deposit-vaults-deprecation-guide',
-               'Vaults/Bera/berabaddies-earn-deprecation-guide',
                'Vaults/Bera/claim-and-transfer',
                'Vaults/Bera/claim-rewards',
                'Vaults/Bera/how-to-withdraw',
@@ -59,7 +58,6 @@ const sidebars = {
              label: 'Corn',
              items: [
                'Vaults/Corn/overview',
-               'Vaults/Corn/vault-deprecation-guide',
              ],
            },
            {
@@ -67,7 +65,6 @@ const sidebars = {
              label: 'Morph',
              items: [
                'Vaults/Morph/overview',
-               'Vaults/Morph/vault-deprecation-guide',
              ],
            },
 
