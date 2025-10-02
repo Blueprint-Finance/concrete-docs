@@ -4,7 +4,7 @@
 // There are various equivalent ways to declare your Docusaurus config.
 // See: https://docusaurus.io/docs/api/docusaurus-config
 
-import {themes as prismThemes} from 'prism-react-renderer';
+import { themes as prismThemes } from 'prism-react-renderer';
 
 require('dotenv').config();
 
@@ -16,6 +16,12 @@ const config = {
   title: 'Concrete Docs',
   tagline: 'DeFi protocol',
   favicon: 'img/logo.png',
+  customFields: {
+    metacrmApiKey: process.env.METACRM_API_KEY,
+  },
+  clientModules: [
+    ...(process.env.METACRM_API_KEY ? [require.resolve('./src/metaCRMWidget.js')] : []),
+  ],
 
   // Set the production url of your site here
   url: 'https://docs.concrete.xyz',
@@ -90,12 +96,12 @@ const config = {
       // Replace with your project's social card
       image: 'img/concrete-mark.png',
       metadata: [
-                    { name: 'twitter:card', content: 'summary_large_image' },
-                    { name: 'twitter:title', content: 'Concrete Docs' },
-                    { name: 'twitter:description', content: 'DeFi protocol' },
-                    { name: 'twitter:image', content: 'https://docs.concrete.xyz/img/concrete-mark.png' },
-                    { property: 'og:image', content: 'https://docs.concrete.xyz/img/concrete-mark.png' },
-                  ],
+        { name: 'twitter:card', content: 'summary_large_image' },
+        { name: 'twitter:title', content: 'Concrete Docs' },
+        { name: 'twitter:description', content: 'DeFi protocol' },
+        { name: 'twitter:image', content: 'https://docs.concrete.xyz/img/concrete-mark.png' },
+        { property: 'og:image', content: 'https://docs.concrete.xyz/img/concrete-mark.png' },
+      ],
       navbar: {
         logo: {
           alt: 'Concrete Logo',
@@ -103,10 +109,10 @@ const config = {
         },
         items: [
           {
-              type: "doc",
-              docId: "Overview/welcome",
-              position: "left",
-              label: "Docs"
+            type: "doc",
+            docId: "Overview/welcome",
+            position: "left",
+            label: "Docs"
           },
           /*{
               type: "doc",
@@ -114,18 +120,18 @@ const config = {
               position: "right",
               label: "Support"
           },*/
-        /* {
-            type: 'docSidebar',
-            sidebarId: 'tutorialSidebar',
-            position: 'left',
-            label: 'Tutorial',
-          },
-          {to: '/blog', label: 'Blog', position: 'left'},
-          {
-            href: 'https://github.com/facebook/docusaurus',
-            label: 'GitHub',
-            position: 'right',
-          },*/
+          /* {
+              type: 'docSidebar',
+              sidebarId: 'tutorialSidebar',
+              position: 'left',
+              label: 'Tutorial',
+            },
+            {to: '/blog', label: 'Blog', position: 'left'},
+            {
+              href: 'https://github.com/facebook/docusaurus',
+              label: 'GitHub',
+              position: 'right',
+            },*/
         ],
       },
       footer: {
@@ -185,7 +191,7 @@ const config = {
       },
     }),
 
-    plugins: [
+  plugins: [
     [
       '@docusaurus/plugin-client-redirects',
       {

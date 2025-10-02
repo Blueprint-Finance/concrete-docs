@@ -39,3 +39,11 @@ $ GIT_USER=<Your GitHub username> yarn deploy
 ```
 
 If you are using GitHub pages for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch.
+
+### Environment Variables
+
+```
+METACRM_API_KEY=<MetaCRM widget API key>
+```
+
+This key enables the MetaCRM widget. Without it, the widget script is skipped.
