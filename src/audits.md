@@ -19,7 +19,7 @@ To ensure the integrity of our smart contracts and the trust of our users, we wo
 - Auditor: Halborn
 - [View the full report](/files/Upgradable-Multisig-and-Queue-Changes.pdf)
 
-## Smart Contract Security
+## Earn V1
 
 - Date: June, 06, 2025
 - Auditor: Zellic  
@@ -62,7 +62,7 @@ To ensure the integrity of our smart contracts and the trust of our users, we wo
 - Auditor: Halborn
 - [View the full report](/files/Upgradeable-Migration-Assessment.pdf)
 
-## Code4rena Fixes – Part 1 & 2
+## Code4rena Earn V1 Competition 
 
 - Date: February 10, 2025
 - Auditor: Code4rena
