@@ -5,11 +5,123 @@ sidebar_label: "Audits"
 sidebar_position: 7
 ---
 
-Security is at the heart of everything we do at Concrete Protocol. To ensure the integrity of our smart contracts and the trust of our users, we work with top-tier audit firms:
+Security is at the heart of everything we do at Concrete Protocol.
+
+To ensure the integrity of our smart contracts and the trust of our users, we work with top-tier audit firms:
 
 * **Code4rena**
 * **Halborn**
 * **Zellic**
+
+## Upgradable Multisig and Queue changes
+
+- Date: September, 29, 2025
+- Auditor: Halborn
+- [View the full report](/files/Upgradable-Multisig-and-Queue-Changes.pdf)
+
+## Smart Contract Security
+
+- Date: June, 06, 2025
+- Auditor: Zellic  
+- [View the full report](/files/Zellic-Audit-Report.pdf)
+
+## Withdrawal Queue Toggle
+
+- Date: May, 16, 2025
+- Auditor: Halborn
+- [View the full report](/files/Withdrawal-Queue-Delay-SSC.pdf)
+
+
+## Morpho Strategy - Auto Compounding
+
+- Date: March 28, 2025
+- Auditor: Halborn
+- [View the full report](/files/Morpho-Strategy-Auto-Compounding-SSC.pdf)
+
+## Curve/Pendle Strategy
+
+- Date: March, 24, 2025
+- Auditor: Halborn
+- [View the full report](/files/Curve-Pendle-Strategy-Report.pdf)
+
+## Reward Distribution
+
+- Date: March, 17, 2025
+- Auditor: Halborn
+- [View the full report](/files/Rewards-Distribution.pdf)
+
+## Vault Manager
+
+- Date: March, 13, 2025
+- Auditor: Halborn
+- [View the full report](/files/Vault-Manager.pdf)
+
+## Upgradable/Migration Assessment
+
+- Date: March, 13, 2025
+- Auditor: Halborn
+- [View the full report](/files/Upgradeable-Migration-Assessment.pdf)
+
+## Code4rena Fixes – Part 1 & 2
+
+- Date: February 10, 2025
+- Auditor: Code4rena
+- [View Part 1 Report](/files/Code4rena-Review-Part-1-SSC.pdf)
+- [View Part 2 Report](/files/Code4rena-Review-Part-2-SSC.pdf)
+
+## Withdrawal Pause
+
+- Date: January 07, 2025
+- Auditor: Halborn
+- [View the full report](/files/Preview-Withdrawal-Pause-SSC.pdf)
+
+## Harvest Rewards Function  
+
+- Date: November 25, 2024
+- Auditor: Halborn
+- [View the full report](/files/harvestRewards-Function-Improvements-SSC.pdf)
+
+## Morpho V1 Lender Integration
+
+- Date: November 22, 2024
+- Auditor: Halborn
+- [View the full report](/files/Morpho-V1-Lender-Integration-SSC.pdf)
+
+## Morpho Vault Strategy
+
+- Date: November 07, 2024
+- Auditor: Halborn
+- [View the full report](/files/Morpho-Vault-Strategy-SSC.pdf)
+
+## HUB v1  
+
+- Date: October 15, 2024  
+- Auditor: Halborn  
+- [View the full report](https://www.halborn.com/audits/concrete/hub-v1)
+
+## Hub/Spokes Library v1
+
+- Date: October 15, 2024   
+- Auditor: Halborn  
+- [View the full report](https://www.halborn.com/audits/concrete/hub-spokes-library-v1)
+
+## Spokes v1
+
+- Date: October 15, 2024   
+- Auditor: Halborn  
+- [View the full report](https://www.halborn.com/audits/concrete/spokes-v1)
+
+## Earn v1  
+
+- Date: October 15, 2024
+- Auditor: Halborn  
+- [View the full report](https://www.halborn.com/audits/concrete/earn-v1)
+
+## CCCM EVM v1  
+
+- Date: October 15, 2024  
+- Auditor: Halborn  
+- [View the full report](https://www.halborn.com/audits/concrete/cccm-evm-v1)
 
 ## Our Approach to Audits
 
@@ -26,112 +138,6 @@ Concrete Protocol follows a multi-phased audit approach to deliver the highest l
 
 4. **Public Transparency**  
    All audit results are made publicly accessible, reinforcing our commitment to transparency and accountability.
-
-## Audit Reports
-
-The following list of audits identify and address potential vulnerabilities, logical errors, and inefficiencies, strengthening our platform's security and reliability:
-
-### HUB v1  
-
-- Date: October 15, 2024  
-- Auditor: Halborn  
-- [View the full report](https://www.halborn.com/audits/concrete/hub-v1)
-
-### Hub/Spokes Library v1
-
-- Date: October 15, 2024   
-- Auditor: Halborn  
-- [View the full report](https://www.halborn.com/audits/concrete/hub-spokes-library-v1)
-
-### Spokes v1
-
-- Date: October 15, 2024   
-- Auditor: Halborn  
-- [View the full report](https://www.halborn.com/audits/concrete/spokes-v1)
-
-### Earn v1  
-
-- Date: October 15, 2024
-- Auditor: Halborn  
-- [View the full report](https://www.halborn.com/audits/concrete/earn-v1)
-
-### CCCM EVM v1  
-
-- Date: October 15, 2024  
-- Auditor: Halborn  
-- [View the full report](https://www.halborn.com/audits/concrete/cccm-evm-v1)
-
-### Morpho Vault Strategy
-
-- Date: November 07, 2024
-- Auditor: Halborn
-- [View the full report](/files/Morpho-Vault-Strategy-SSC.pdf)
-
-### Morpho V1 Lender Integration
-
-- Date: November 22, 2024
-- Auditor: Halborn
-- [View the full report](/files/Morpho-V1-Lender-Integration-SSC.pdf)
-
-### Morpho Strategy - Auto Compounding
-
-- Date: March 28, 2025
-- Auditor: Halborn
-- [View the full report](/files/Morpho-Strategy-Auto-Compounding-SSC.pdf)
-
-### Harvest Rewards Function  
-
-- Date: November 25, 2024
-- Auditor: Halborn
-- [View the full report](/files/harvestRewards-Function-Improvements-SSC.pdf)
-
-### Withdrawal Pause
-
-- Date: January 07, 2025
-- Auditor: Halborn
-- [View the full report](/files/Preview-Withdrawal-Pause-SSC.pdf)
-
-### Code4rena Fixes – Part 1 & 2  
-- Date: February 10, 2025
-- Auditor: Code4rena
-- [View Part 1 Report](/files/Code4rena-Review-Part-1-SSC.pdf)
-- [View Part 2 Report](/files/Code4rena-Review-Part-2-SSC.pdf)
-
-### Vault Manager
-
-- Date: March, 13, 2025
-- Auditor: Halborn
-- [View the full report](/files/Vault-Manager.pdf)
-
-### Upgradable/Migration Assessment
-
-- Date: March, 13, 2025
-- Auditor: Halborn
-- [View the full report](/files/Upgradeable-Migration-Assessment.pdf)
-
-### Reward Distribution
-
-- Date: March, 17, 2025
-- Auditor: Halborn
-- [View the full report](/files/Rewards-Distribution.pdf)
-
-### Curve/Pendle Strategy
-
-- Date: March, 24, 2025
-- Auditor: Halborn
-- [View the full report](/files/Curve-Pendle-Strategy-Report.pdf)
-
-### Withdrawal Queue Toggle
-
-- Date: May, 16, 2025
-- Auditor: Halborn
-- [View the full report](/files/Withdrawal-Queue-Delay-SSC.pdf)
-
-### Earn - Smart Contract Security
-
-- Date: June, 06, 2025
-- Auditor: Zellic  
-- [View the full report](/files/Zellic-Audit-Report.pdf)
 
 ## Commitment to Excellence
 
