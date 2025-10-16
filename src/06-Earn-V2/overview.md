@@ -15,6 +15,15 @@ Vaults pool deposits, allocate funds across yield strategies, and automatically 
 
 Vaults can swap strategies, add new hooks, or upgrade logic without redeploying. All actions emit events that can be tracked through Concrete’s subgraph.
 
+## What’s new in Earn V2
+
+* **Upgradeable vaults** — Safe migrations between versions through a controlled factory.
+* **Modular architecture** — Strategies, hooks, and fee logic are all plug-and-play.
+* **Explicit accounting** — Cached totals and accrual events keep state predictable.
+* **Configurable exits** — Async withdrawals make liquidity management smoother.
+* **Granular roles** — Clear boundaries between managers, allocators, and operators.
+* **Full observability** — Complete event coverage for dashboards and audits.
+
 ## Fees
 
 All fees are calculated at the vault level and reflected in the exchange rate between vault shares and underlying assets.
@@ -25,6 +34,22 @@ Each vault defines its **fee parameters** during configuration. While Concrete h
 | --- | --- | --- |
 | **Management Fee** | Continuous fee based on total vault assets (AUM). | 1% annualized, accrued daily. |
 | **Performance Fee** | Applied on yield earned above baseline or high-water mark. | 10% of profits generated. |
+
+## Roles and controls
+
+Earn V2 separates permissions clearly:
+
+* **Factory owner:** manages approved implementations and version upgrades.
+* **Vault owner:** controls upgrades for a specific vault.
+* **Vault roles:**
+
+  * **Vault Manager** – updates parameters, limits, and fees
+  * **Strategy Manager** – adds or removes strategies
+  * **Hook Manager** – manages custom logic hooks
+  * **Allocator** – moves capital between strategies
+  * **Withdrawal Manager** (async vaults) – handles epoch processing and claims
+
+All upgradeable contracts use **EIP-7201** storage and **UUPS proxies** for long-term upgrade safety.
 
 ## How it’s built
 
@@ -57,22 +82,6 @@ Around the core vaults, several helper modules provide additional functionality:
 * **Hooks:** optional contracts that add custom behavior (for example, deposit caps or KYC checks).
 * **Fee Splitter:** routes fees between one or two recipients with a configurable share.
 
-## Roles and controls
-
-Earn V2 separates permissions clearly:
-
-* **Factory owner:** manages approved implementations and version upgrades.
-* **Vault owner:** controls upgrades for a specific vault.
-* **Vault roles:**
-
-  * **Vault Manager** – updates parameters, limits, and fees
-  * **Strategy Manager** – adds or removes strategies
-  * **Hook Manager** – manages custom logic hooks
-  * **Allocator** – moves capital between strategies
-  * **Withdrawal Manager** (async vaults) – handles epoch processing and claims
-
-All upgradeable contracts use **EIP-7201** storage and **UUPS proxies** for long-term upgrade safety.
-
 ## Accounting and accrual
 
 Before any user or admin action, vaults refresh their cached `totalAssets` value by calling an explicit yield-accrual routine.
@@ -83,12 +92,3 @@ Conversions follow ERC-4626 rounding rules and guard against zero-division or ro
 
 Every key action — deployments, upgrades, deposits, withdrawals, yield updates, fee accruals, and async-queue events — emits structured events.
 These are indexed by Concrete’s subgraph for full on-chain transparency and analytics.
-
-## What’s new in Earn V2
-
-* **Upgradeable vaults** — Safe migrations between versions through a controlled factory.
-* **Modular architecture** — Strategies, hooks, and fee logic are all plug-and-play.
-* **Explicit accounting** — Cached totals and accrual events keep state predictable.
-* **Configurable exits** — Async withdrawals make liquidity management smoother.
-* **Granular roles** — Clear boundaries between managers, allocators, and operators.
-* **Full observability** — Complete event coverage for dashboards and audits.
