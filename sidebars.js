@@ -20,8 +20,8 @@ const sidebars = {
     {
       type: 'category',
       label: 'Earn V2',
-      link: { type: 'doc', id: 'Earn-V2/overview' },
       items: [
+        'Earn-V2/overview',
         {
           type: 'category',
           label: 'Smart Contracts',
