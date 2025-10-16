@@ -16,9 +16,72 @@ const sidebars = {
         'Overview/quick-start',
       ],
     },
+
     {
       type: 'category',
-      label: 'Earn',
+      label: 'Earn V2',
+      link: { type: 'doc', id: 'Earn-V2/overview' },
+      items: [
+        {
+          type: 'category',
+          label: 'Smart Contracts',
+          items: [
+            'Earn-V2/Smart-Contracts/architecture',
+            'Earn-V2/Smart-Contracts/asynchronous-withdrawal-system',
+          ],
+        },
+        {
+          type: 'category',
+          label: 'SDK',
+          items: [
+            'Earn-V2/SDK/overview',
+            'Earn-V2/SDK/getting-started',
+            {
+              type: 'category',
+              label: 'Read Methods',
+              items: [
+                'Earn-V2/SDK/read-methods/balanceOf',
+                'Earn-V2/SDK/read-methods/getAddress',
+                'Earn-V2/SDK/read-methods/getUnderlyingDecimals',
+                'Earn-V2/SDK/read-methods/getVaultDetails',
+                'Earn-V2/SDK/read-methods/previewConversion',
+                'Earn-V2/SDK/read-methods/totalAssets',
+                'Earn-V2/SDK/read-methods/symbol',
+                'Earn-V2/SDK/read-methods/decimals',
+                'Earn-V2/SDK/read-methods/applyDecimals',
+                'Earn-V2/SDK/read-methods/toUnderlyingDecimals',
+              ],
+            },
+            {
+              type: 'category',
+              label: 'Write Methods',
+              items: [
+                'Earn-V2/SDK/write-methods/approve',
+                'Earn-V2/SDK/write-methods/deposit',
+                'Earn-V2/SDK/write-methods/redeem',
+                'Earn-V2/SDK/write-methods/transfer',
+                'Earn-V2/SDK/write-methods/transferFrom',
+              ],
+            },
+            'Earn-V2/SDK/decimals-and-conversion-helpers',
+            'Earn-V2/SDK/examples',
+            'Earn-V2/SDK/troubleshooting-and-error-handling',
+          ],
+        },
+        {
+          type: 'category',
+          label: 'Subgraph & Events',
+          items: [
+            'Earn-V2/Subgraph-and-Events/schema-and-queries',
+          ],
+        },
+      ],
+    },
+
+
+    {
+      type: 'category',
+      label: 'Earn V1',
       items: [
         'Earn/deposit-into-vaults',
         'Earn/withdrawing-via-canopy',
