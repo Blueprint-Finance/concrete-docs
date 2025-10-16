@@ -13,6 +13,18 @@ To ensure the integrity of our smart contracts and the trust of our users, we wo
 * **Halborn**
 * **Zellic**
 
+## Earn V2 Core - Async Implementation  
+
+- Date: October 10, 2025
+- Auditor: Halborn
+- [View the full report](/files/Async-Implementation.pdf)
+
+## Earn V2 Core - Standard Implementation  
+
+- Date: October 10, 2025
+- Auditor: Halborn
+- [View the full report](/files/Standard-Implementation.pdf)
+
 ## Upgradable Multisig and Queue changes
 
 - Date: September, 29, 2025
@@ -62,7 +74,7 @@ To ensure the integrity of our smart contracts and the trust of our users, we wo
 - Auditor: Halborn
 - [View the full report](/files/Upgradeable-Migration-Assessment.pdf)
 
-## Code4rena Earn V1 Competition 
+## Code4rena Earn V1 Competition
 
 - Date: February 10, 2025
 - Auditor: Code4rena
@@ -97,31 +109,25 @@ To ensure the integrity of our smart contracts and the trust of our users, we wo
 
 - Date: October 15, 2024  
 - Auditor: Halborn  
-- [View the full report](https://www.halborn.com/audits/concrete/hub-v1)
-
-## Hub/Spokes Library v1
-
-- Date: October 15, 2024   
-- Auditor: Halborn  
-- [View the full report](https://www.halborn.com/audits/concrete/hub-spokes-library-v1)
+- [View the full report](/files/HUB-v1.pdf)
 
 ## Spokes v1
 
-- Date: October 15, 2024   
+- Date: September 10, 2024  
 - Auditor: Halborn  
-- [View the full report](https://www.halborn.com/audits/concrete/spokes-v1)
+- [View the full report](/files/Spokes-V1.pdf)
 
-## Earn v1  
+## Spokes Contracts
 
-- Date: October 15, 2024
+- Date: August 01 , 2024  
+- Auditor: Halborn
+- [View the full report](/files/Spokes-Contracts.pdf)
+
+## Strategies
+
+- Date: July 19, 2024
 - Auditor: Halborn  
-- [View the full report](https://www.halborn.com/audits/concrete/earn-v1)
-
-## CCCM EVM v1  
-
-- Date: October 15, 2024  
-- Auditor: Halborn  
-- [View the full report](https://www.halborn.com/audits/concrete/cccm-evm-v1)
+- [View the full report](/files/Strategies.pdf)
 
 ## Our Approach to Audits
 
