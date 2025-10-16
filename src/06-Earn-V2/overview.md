@@ -4,8 +4,7 @@ description: "Overview"
 sidebar_label: "Overview"
 ---
 
-**Concrete Earn V2** is the next version of Concrete’s on-chain yield system.
-It’s built around a single goal: make yield vaults flexible, upgradeable, and safe to operate — all directly on Ethereum.
+**Concrete Earn V2** is the next version of Concrete’s on-chain yield system. It’s built around a single goal: make yield vaults flexible, upgradeable, and safe to operate — all directly on Ethereum.
 
 Earn V2 lets curators and partners deploy vaults, connect yield strategies, manage allocations, and upgrade over time — all without centralized control.
 
@@ -14,8 +13,18 @@ Earn V2 lets curators and partners deploy vaults, connect yield strategies, mana
 Each Earn V2 vault accepts one underlying asset (for example, USDC), issues ERC-20 shares in return, and tracks performance through transparent on-chain accounting.
 Vaults pool deposits, allocate funds across yield strategies, and automatically record gains, losses, and fees.
 
-Everything is modular: vaults can swap strategies, add new hooks, or upgrade logic without redeploying.
-Everything is auditable: all actions emit events that can be tracked through Concrete’s subgraph.
+Vaults can swap strategies, add new hooks, or upgrade logic without redeploying. All actions emit events that can be tracked through Concrete’s subgraph.
+
+## Fees
+
+All fees are calculated at the vault level and reflected in the exchange rate between vault shares and underlying assets.
+
+Each vault defines its **fee parameters** during configuration. While Concrete handles internal splitting, partners see total accrual and timing at all times.
+
+| Fee Type | Description | Example |
+| --- | --- | --- |
+| **Management Fee** | Continuous fee based on total vault assets (AUM). | 1% annualized, accrued daily. |
+| **Performance Fee** | Applied on yield earned above baseline or high-water mark. | 10% of profits generated. |
 
 ## How it’s built
 
