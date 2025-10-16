@@ -27,7 +27,6 @@ const sidebars = {
           label: 'Smart Contracts',
           items: [
             'Earn-V2/Smart-Contracts/architecture',
-            'Earn-V2/Smart-Contracts/asynchronous-withdrawal-system',
           ],
         },
         {
@@ -73,6 +72,7 @@ const sidebars = {
           label: 'Subgraph & Events',
           items: [
             'Earn-V2/Subgraph-and-Events/schema-and-queries',
+            'Earn-V2/Subgraph-and-Events/event-reference-and-use-cases',
           ],
         },
       ],
