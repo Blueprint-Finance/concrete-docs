@@ -5,14 +5,10 @@ sidebar_label: "Fees"
 sidebar_position: 4
 ---
 
-Before diving into the specifics of each service, here’s a quick look at the main fee types users will encounter across Concrete Protocol services:
 
-- **Foreclosure Fee**: Applied only when foreclosure is required; it replaces traditional liquidation penalties.
-- **Claim Fee**: Charged per credit line disbursement (up to 3)
-- **Cancellation Fee**: Set to zero, allowing users to cancel services early without penalty.
-- **Deposit, Maintenance, and Withdrawal Fees**: Applied in traditional finance settings but waived in Concrete Earn, maximizing returns for liquidity providers.
+Deposit, Maintenance, and Withdrawal Fees that are applied in traditional finance settings but **waived in Concrete Earn**, maximizing returns for liquidity providers.
 
-## Concrete Earn: Maximize Returns with a Transparent Fee Structure
+## Maximize Returns with a Transparent Fee Structure
 
 Concrete Earn is designed to provide liquidity providers with optimized returns while maintaining a transparent and user-friendly fee structure. The platform charges **no deposit, maintenance, performance or withdrawal fees**, ensuring easy entry and exit for users.
 
