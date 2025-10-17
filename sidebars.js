@@ -142,7 +142,7 @@ const sidebars = {
        },
 
 
-
+/*
     {
       type: 'category',
       label: 'Borrow',
@@ -162,6 +162,7 @@ const sidebars = {
         'Protect/activate-concrete-protect',
       ],
     },
+    */
     'fees',
     'rewards',
     'restrictions',
