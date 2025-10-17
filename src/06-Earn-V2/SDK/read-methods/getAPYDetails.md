@@ -79,7 +79,7 @@ import { useEffect, useState } from "react";
 import { useVault } from "@concrete-xyz/sdk/react";
 
 export function ApyWidget({ address, network, provider, signer }) {
-  const vault = useVault(address, network, provider, signer);
+  const vault = useVault(version, address, network, provider, signer);
   const [apy, setApy] = useState<any>(null);
 
   useEffect(() => {
@@ -109,7 +109,7 @@ export function ApyWidget({ address, network, provider, signer }) {
 import { useVault, useVaultQuery } from "@concrete-xyz/sdk/wagmi";
 
 export function ApyPanel({ address, network }) {
-  const vault = useVault(address, network);
+  const vault = useVault(vault config object);
 
   const q = useVaultQuery({
     address,

@@ -39,7 +39,7 @@ async function safeGetDetails() {
 import { useVault, useVaultQuery } from "@concrete-xyz/sdk/wagmi";
 
 export function UseDetails({ address, network }: { address: string; network: any }) {
-  const vault = useVault(address, network);
+  const vault = useVault(vault config object);
 
   const query = useVaultQuery({
     address,
