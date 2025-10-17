@@ -103,7 +103,7 @@ These are indexed by Concrete’s subgraph for full on-chain transparency and an
 
 Earn V2 vaults integrate with partners and monitoring systems designed for institutional trust:
 
-- [TRES](https://tres.finance/) **Accounting Integration** — Provides off-chain and verified accounting.
-- [Hypernative](https://www.hypernative.io/) **Security Monitoring** — Delivers real-time risk detection and verification for trading wallets and multisigs, adding an independent protection layer to vault operations.
+- **[TRES](https://tres.finance/) Accounting Integration** — Provides off-chain and verified accounting.
+- **[Hypernative](https://www.hypernative.io/) Security Monitoring** — Delivers real-time risk detection and verification for trading wallets and multisigs, adding an independent protection layer to vault operations.
 
 Together, these integrations position Earn V2 as the first DeFi vault infrastructure that meets institutional expectations for transparency and compliance.
