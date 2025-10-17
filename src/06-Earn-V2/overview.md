@@ -25,10 +25,12 @@ Vaults can add, remove, or swap strategies, add custom business logic via hooks,
 
 ## Automated Fee Management
 
+Earn V2 supports management fees taken on AUM and performance, each configurable by the Vault owner. Concrete automates the routing of fee revenue between vault owners and concrete.
+
 | Fee Type | Description | Example |
 | --- | --- | --- |
 | **Management Fee** | Continuous fee based on total vault assets (AUM). | 1% annualized, accrued daily. |
-| **Performance Fee** | Applied directly on net positive yield | 10% of profits generated. |
+| **Performance Fee** | Applied directly on returns | 10% of profits generated. |
 
 ## Roles and controls
 
