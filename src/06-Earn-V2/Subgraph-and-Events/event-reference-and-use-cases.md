@@ -1,7 +1,7 @@
 ---
-title: "Schema & Queries"
-description: "Schema & Queries"
-sidebar_label: "Schema & Queries"
+title: "Event Reference And Use Cases"
+description: "Event Reference And Use Cases"
+sidebar_label: "Event Reference"
 ---
 
 This reference lists all key on-chain events tracked by the Earn V2 subgraph and how they update entities.
