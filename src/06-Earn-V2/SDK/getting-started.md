@@ -63,7 +63,7 @@ import { ethers } from "ethers";
 const provider = new ethers.JsonRpcProvider("<https://ethereum-rpc.publicnode.com>");
 
 // Read-only vault instance
-const vault = getVault("0xVaultAddress", "Ethereum", provider);
+const vault = getVault("v1", "0xVaultAddress", "Ethereum", mainnetProvider);
 
 // Example: get metadata
 const details = await vault.getVaultDetails();
@@ -75,7 +75,7 @@ To **write** (approve, deposit, redeem), pass a signer:
 
 ```tsx
 const signer = new ethers.Wallet(PRIVATE_KEY, provider);
-const vaultWithSigner = getVault("0xVaultAddress", "Ethereum", provider, signer);
+const vaultWithSigner = getVault("v1", "0xVaultAddress", "Ethereum", mainnetProvider, signer);
 
 ```
 
@@ -88,7 +88,7 @@ import { useEffect, useState } from "react";
 import { useVault } from "@concrete-xyz/sdk/react";
 
 function VaultInfo({ provider, signer }) {
-  const vault = useVault("0xVaultAddress", "Berachain", provider, signer);
+  const vault = useVault("v1", "0xVaultAddress", "Berachain", provider, signer);
   const [symbol, setSymbol] = useState<string>();
 
   useEffect(() => {
