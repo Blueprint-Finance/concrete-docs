@@ -51,7 +51,7 @@ import { getVault } from "@concrete-xyz/sdk";
 import { ethers } from "ethers";
 
 const provider = new ethers.JsonRpcProvider("<https://ethereum-rpc.publicnode.com>");
-const vault = getVault("0xYourVault", "Ethereum", provider);
+const vault = getVault("0xYourVault", chainId, provider);
 
 const details = await vault.getVaultDetails();
 console.log("Vault shares:", details.vaultAsset.symbol);
@@ -81,7 +81,7 @@ import { ethers } from "ethers";
 // 3. Receive vault shares
 
 const signer = new ethers.Wallet(process.env.PRIVATE_KEY!, provider);
-const vaultWithSigner = getVault("0xYourVault", "Ethereum", provider, signer);
+const vaultWithSigner = getVault("0xYourVault", chainId , provider, signer);
 
 const depositAmount = await vaultWithSigner.toUnderlyingBigInt("1.0");
 

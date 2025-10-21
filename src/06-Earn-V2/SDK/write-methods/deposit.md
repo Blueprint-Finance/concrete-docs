@@ -24,7 +24,7 @@ await vault.deposit(amount: bigint): Promise<Tx>
 
 ```tsx
 // Prerequisite: you created the vault with a signer:
-// const vault = getVault(version, vaultAddress, network, provider, signer)
+// const vault = getVault(version, vaultAddress, chainId, provider, signer)
 // vanilla SDK: needs version, react only SDK: needs version
 
 const details = await vault.getVaultDetails();
