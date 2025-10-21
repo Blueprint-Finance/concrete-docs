@@ -112,10 +112,15 @@ For **queries**, prefer `useVaultQuery`, which handles `loading`/`error` states.
 ```tsx
 import { useVaultQuery } from "@concrete-xyz/sdk/wagmi";
 
+const vaultConfig = {
+  version: "v1",
+  address: "0xVaultAddress",
+  network: "Ethereum",
+} as const;
+
 function VaultInfo() {
   const { data, isLoading, error } = useVaultQuery({
-    address: "0xVaultAddress",
-    network: "Ethereum",
+    vault: vaultConfig,
     queryKey: ["vaultDetails"],
     queryFn: (vault) => vault.getVaultDetails(),
   });
