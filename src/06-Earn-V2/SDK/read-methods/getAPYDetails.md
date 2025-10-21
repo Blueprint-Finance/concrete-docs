@@ -60,7 +60,7 @@ import { getVault } from "@concrete-xyz/sdk";
 import { ethers } from "ethers";
 
 const provider = new ethers.JsonRpcProvider("<https://ethereum-rpc.publicnode.com>");
-const vault = getVault("0xE2d8267D285a7ae1eDf48498fF044241d04e9608", "Arbitrum", provider);
+const vault = getVault("0xE2d8267D285a7ae1eDf48498fF044241d04e9608", chainId, provider);
 
 const apy = await vault.getApyDetails();
 console.log("APY Details:", apy);
@@ -78,8 +78,8 @@ if (apy.apy != null && apy.underlyingPriceUsd != null) {
 import { useEffect, useState } from "react";
 import { useVault } from "@concrete-xyz/sdk/react";
 
-export function ApyWidget({ address, network, provider, signer }) {
-  const vault = useVault(version, address, network, provider, signer);
+export function ApyWidget({ address, chainId, provider, signer }) {
+  const vault = useVault(version, address, chainId, provider, signer);
   const [apy, setApy] = useState<any>(null);
 
   useEffect(() => {
@@ -108,13 +108,13 @@ export function ApyWidget({ address, network, provider, signer }) {
 ```tsx
 import { useVault, useVaultQuery } from "@concrete-xyz/sdk/wagmi";
 
-export function ApyPanel({ address, network }) {
+export function ApyPanel({ address, chainId }) {
   const vault = useVault(vault config object);
 
   const q = useVaultQuery({
     address,
-    network,
-    queryKey: ["apy", address, network],
+    chainId,
+    queryKey: ["apy", address, chainId],
     enabled: !!vault,
     queryFn: (v) => v.getApyDetails(),
     staleTime: 60_000, // cache APY for 60s

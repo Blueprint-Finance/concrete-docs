@@ -13,7 +13,7 @@ import { getVault } from "@concrete-xyz/sdk";
 import { ethers } from "ethers";
 
 const provider = new ethers.JsonRpcProvider(process.env.RPC_URL!);
-const vault = getVault("0xYourVault", "Ethereum", provider);
+const vault = getVault("0xYourVault", chainId, provider);
 
 async function safeGetDetails() {
   try {
@@ -38,13 +38,13 @@ async function safeGetDetails() {
 ```tsx
 import { useVault, useVaultQuery } from "@concrete-xyz/sdk/wagmi";
 
-export function UseDetails({ address, network }: { address: string; network: any }) {
+export function UseDetails({ address, chainId }: { address: string; chainId: any }) {
   const vault = useVault(vault config object);
 
   const query = useVaultQuery({
     address,
-    network,
-    queryKey: ["vaultDetails", address, network],
+    chainId,
+    queryKey: ["vaultDetails", address, chainId],
     enabled: !!vault, // Avoid running before the hook resolves
     queryFn: (v) => v.getVaultDetails(),
     retry: 2,
@@ -63,7 +63,7 @@ export function UseDetails({ address, network }: { address: string; network: any
 | Symptom | Likely Cause | Fix |
 | --- | --- | --- |
 | `NETWORK_ERROR`, `failed to fetch` | Bad/unstable RPC URL, rate limiting | Switch to a reliable RPC. Add retries/backoff. |
-| `CALL_EXCEPTION` / `execution reverted` | Wrong **network** for the vault address; wrong address; deprecated contract | Ensure `getVault(address, network, …)` chain matches the contract’s chain. Verify address is the **vault**, not the underlying. |
+| `CALL_EXCEPTION` / `execution reverted` | Wrong **network** for the vault address; wrong address; deprecated contract | Ensure `getVault(address, chainId, …)` chain matches the contract’s chain. Verify address is the **vault**, not the underlying. |
 | `undefined` / `Cannot read properties of undefined` | Hook not ready (Wagmi client not connected) | Gate reads with `enabled: !!vault` (React Query) or check `if (!vault) return`. |
 | `BigInt` range/format issues | Mixing JS `number` with token base units | Always use `BigInt`; derive units from `await vault.getUnderlyingDecimals()`. |
 | Wrong display amounts | Using wrong decimals for formatting | Use `getUnderlyingDecimals()` for underlying and `decimals()` for shares. |
@@ -166,15 +166,6 @@ const displayUnderlying = await vault.toUnderlyingDecimals(rawUnderlying); // "5
 
 ## Network & Address Guards
 
-### Ensure chain & address match
-
-```tsx
-function assertSameChain(configNet: string, uiNet: string) {
-  if (configNet !== uiNet) throw new Error(`Network mismatch: SDK=${configNet}, UI=${uiNet}`);
-}
-assertSameChain("Ethereum", currentUiNetwork);
-```
-
 ### Validate vault address early
 
 ```tsx
@@ -187,8 +178,8 @@ if (!isAddress(vaultAddress)) throw new Error("Invalid vault address");
 ```tsx
 const result = useVaultQuery({
   address,
-  network,
-  queryKey: ["vault", address, network, "details"],
+  chainId,
+  queryKey: ["vault", address, chainId, "details"],
   queryFn: (v) => v.getVaultDetails(),
   retry: (count, error: any) => {
     // Retry only transient RPC issues
@@ -205,8 +196,8 @@ const result = useVaultQuery({
 Avoid logging private keys.
 
 ```tsx
-function logReadError(method: string, vaultAddr: string, network: string, err: unknown) {
-  console.warn(`[ConcreteSDK] read error`, { method, vaultAddr, network, err: String(err) });
+function logReadError(method: string, vaultAddr: string, chainId: string, err: unknown) {
+  console.warn(`[ConcreteSDK] read error`, { method, vaultAddr, chainId, err: String(err) });
 }
 ```
 

@@ -63,7 +63,7 @@ import { ethers } from "ethers";
 const provider = new ethers.JsonRpcProvider("<https://ethereum-rpc.publicnode.com>");
 
 // Read-only vault instance
-const vault = getVault("v1", "0xVaultAddress", "Ethereum", mainnetProvider);
+const vault = getVault("v1", "0xVaultAddress", chainId, mainnetProvider);
 
 // Example: get metadata
 const details = await vault.getVaultDetails();
@@ -75,7 +75,7 @@ To **write** (approve, deposit, redeem), pass a signer:
 
 ```tsx
 const signer = new ethers.Wallet(PRIVATE_KEY, provider);
-const vaultWithSigner = getVault("v1", "0xVaultAddress", "Ethereum", mainnetProvider, signer);
+const vaultWithSigner = getVault("v1", "0xVaultAddress", chainId, mainnetProvider, signer);
 
 ```
 
@@ -115,7 +115,7 @@ import { useVaultQuery } from "@concrete-xyz/sdk/wagmi";
 const vaultConfig = {
   version: "v1",
   address: "0xVaultAddress",
-  network: "Ethereum",
+  chainId: 1,
 } as const;
 
 function VaultInfo() {
