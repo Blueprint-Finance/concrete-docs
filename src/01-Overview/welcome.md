@@ -26,25 +26,40 @@ Decentralized Finance (DeFi) comes with complexities that require users to "Do Y
 
 Concrete’s value proposition lies in how it addresses common DeFi challenges in a simple and automated way. While other platforms leave users vulnerable to liquidation risks, force them to chase yields manually, and provide fragmented experiences across different chains, Concrete unifies all of these features into one platform.
 
-### 1. Easy to Use
+### Easy to Use
 For many users, DeFi requires connecting to multiple platforms, understanding complex protocols, and constantly monitoring market conditions. Concrete eliminates this complexity by offering a streamlined user experience.
 
 The interface is designed so users don’t have to worry about switching between networks or applications. Concrete brings DeFi on easy mode, allowing users to focus on their strategies while the platform handles the execution.
 
-### 2. Best Yields to Earn
+### Best Yields to Earn
 Yield farming in DeFi often involves searching through numerous protocols to find the highest returns, but this introduces risks like smart contract vulnerabilities and liquidity issues. Concrete’s Earn Vaults automate yield optimization, continuously reallocating your assets to the highest-yielding opportunities across multiple protocols.
 
 Integration with multiple money markets, allowing users to tap into the best yields across different protocols. Users can deposit their assets once and Concrete takes care of rebalancing between different money markets as conditions change.
 
-### 3. Protection Against Liquidation
 
-A major fear in the DeFi world is the risk of liquidation when borrowing against your assets. Traditionally, when the value of your collateral drops below a certain threshold, your position gets liquidated, and you lose a significant portion of your assets. Concrete eliminates this fear by offering multi-layered liquidation protection through its **Concrete Lite** and **Concrete Protect**. The system actively monitors your position, injects credit if needed, and ensures you avoid the full brunt of liquidation penalties.
+## Looking Ahead (future plans)
 
-### 4. Leveraging Long-term Assets
+Concrete’s long-term vision extends beyond yield automation.
 
-Users often want liquidity for short-term needs while holding onto long-term assets like Ethereum. With Concrete, you can easily borrow stablecoins or other assets against your deposits without worrying about liquidation risks. Whether you need liquidity for new investments or just want to use your holdings without selling them, Concrete allows you to do this with peace of mind. The platform handles the complexities, ensuring you get the best borrowing rates and protection.
+Future product layers will reintroduce borrowing and protection mechanisms that integrate seamlessly with the existing Earn vault infrastructure.
 
-## A Real-World Analogy
+These layers will make Concrete a **complete DeFi suite** where users can:
+
+* Earn automated yield through **Concrete Earn**
+* Access liquidity without traditional liquidation risk through future borrowing products
+* Secure positions through optional protection modules
+
+The architecture is being designed so that vault deposits, yield tokens, and credit systems all interconnect natively — creating a unified ecosystem where yield, liquidity, and protection reinforce one another rather than existing as separate products.
+
+### Protection Against Liquidation
+
+A major fear in the DeFi world is the risk of liquidation when borrowing against your assets. Traditionally, when the value of your collateral drops below a certain threshold, your position gets liquidated, and you lose a significant portion of your assets. In the future, Concrete will eliminate this fear by offering multi-layered liquidation protection through its **Concrete Lite** and **Concrete Protect**. The system actively monitors your position, injects credit if needed, and ensures you avoid the full brunt of liquidation penalties.
+
+### Leveraging Long-term Assets
+
+Users often want liquidity for short-term needs while holding onto long-term assets like Ethereum. In the future, Concrete will allow you to easily borrow stablecoins or other assets against your deposits without worrying about liquidation risks. Whether you need liquidity for new investments or just want to use your holdings without selling them, Concrete will allow you to do this with peace of mind. The platform will handle the complexities, ensuring you get the best borrowing rates and protection.
+
+### A Real-World Analogy
 
 Imagine you own a house, which represents your Ethereum (ETH) deposit. Concrete steps in and finds a tenant for you, ensuring you earn rental income—this is akin to the yield Concrete helps you generate from your crypto assets. To prove you own the house and that it's generating income, Concrete gives you a lease agreement—this is your Concrete token (ctETH), which acts as a receipt for your deposit.
 
