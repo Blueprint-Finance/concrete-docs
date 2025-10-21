@@ -37,9 +37,11 @@ Yield farming in DeFi often involves searching through numerous protocols to fin
 Integration with multiple money markets, allowing users to tap into the best yields across different protocols. Users can deposit their assets once and Concrete takes care of rebalancing between different money markets as conditions change.
 
 ### 3. Protection Against Liquidation
+
 A major fear in the DeFi world is the risk of liquidation when borrowing against your assets. Traditionally, when the value of your collateral drops below a certain threshold, your position gets liquidated, and you lose a significant portion of your assets. Concrete eliminates this fear by offering multi-layered liquidation protection through its **Concrete Lite** and **Concrete Protect**. The system actively monitors your position, injects credit if needed, and ensures you avoid the full brunt of liquidation penalties.
 
 ### 4. Leveraging Long-term Assets
+
 Users often want liquidity for short-term needs while holding onto long-term assets like Ethereum. With Concrete, you can easily borrow stablecoins or other assets against your deposits without worrying about liquidation risks. Whether you need liquidity for new investments or just want to use your holdings without selling them, Concrete allows you to do this with peace of mind. The platform handles the complexities, ensuring you get the best borrowing rates and protection.
 
 ## A Real-World Analogy
