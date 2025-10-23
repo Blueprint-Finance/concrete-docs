@@ -16,7 +16,7 @@ These tokens represent your early deposit from the Stable Vaults and make you el
 
 ## Rewards
 
-- Rewards will be distributed upon withdrawal of the deposit token.
+- Rewards will be distributed upon withdrawal of the deposit token
 - Users continue to earn **Concrete Points** for the duration of the campaign
 - Yield is compounded automatically through Concrete’s strategy engine
 - You can track live APY and pending rewards in the vault page
