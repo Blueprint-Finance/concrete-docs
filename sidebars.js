@@ -118,6 +118,14 @@ const sidebars = {
            },
            {
              type: 'category',
+             label: 'Stable',
+             items: [
+               'Vaults/Stable/stable-vaults',
+                'Vaults/Stable/pendle-looping-vaults',
+             ],
+           },
+           {
+             type: 'category',
              label: 'Corn',
              items: [
                'Vaults/Corn/overview',
