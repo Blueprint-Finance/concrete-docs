@@ -1,0 +1,22 @@
+name: Trigger Algolia Crawl
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  trigger-crawl:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger Algolia Crawler
+        run: |
+          # Encode credentials in base64 for Basic Auth
+          CREDENTIALS=$(echo -n "${{ secrets.ALGOLIA_CRAWLER_USER_ID }}:${{ secrets.ALGOLIA_CRAWLER_API_KEY }}" | base64)
+
+          # Call Algolia Crawler API to trigger a new crawl
+          curl -X POST \
+            https://crawler.algolia.com/api/1/crawlers/${{ secrets.ALGOLIA_CRAWLER_ID }}/run \
+            -H "Authorization: Basic $CREDENTIALS" \
+            -H "Content-Type: application/json" \
+            -d '{}'
