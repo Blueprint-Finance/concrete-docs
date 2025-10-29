@@ -38,7 +38,7 @@ It’s the fastest way to explore Concrete’s SDK without setting up a full app
 
 ### Try It Yourself
 
-[**Open the Concrete SDK Playground](https://build.concrete.xyz/)** (Requires wallet connection; runs on test vaults or live networks).
+[Open the Concrete SDK Playground](https://build.concrete.xyz/) (Requires wallet connection; runs on test vaults or live networks).
 
 ### Features
 
