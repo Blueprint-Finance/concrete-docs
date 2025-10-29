@@ -34,7 +34,8 @@ const sidebars = {
           label: 'SDK',
           items: [
             'Earn-V2/SDK/overview',
-            'Earn-V2/SDK/getting-started',
+            'Earn-V2/SDK/quick-start',
+            'Earn-V2/SDK/setup-configuration',
             {
               type: 'category',
               label: 'Read Methods',
