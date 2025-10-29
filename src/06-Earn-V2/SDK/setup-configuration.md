@@ -1,7 +1,7 @@
 ---
-title: "Getting Started"
+title: "Setup Configuration"
 description: "how to install the SDK, handle optional dependencies, set up providers, and initialize a vault instance using vanilla JS/TS, React, or Wagmi."
-sidebar_label: "Getting Started"
+sidebar_label: "Setup Configuration"
 ---
 
 This guide shows how to install the SDK, handle optional dependencies, set up providers, and initialize a vault instance using vanilla JS/TS, React, or Wagmi.
