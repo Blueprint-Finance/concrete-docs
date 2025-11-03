@@ -29,13 +29,13 @@ Concrete Protocol follows a multi-phased audit approach to deliver the highest l
 4. **Public Transparency**  
    All audit results are made publicly accessible, reinforcing our commitment to transparency and accountability.
 
-## Earn V2 Core - Async Implementation  
+## Earn V2 Core - Async Implementation {#earn-v2-core-async}
 
 - Date: October 10, 2025
 - Auditor: Halborn
 - [View the full report](/files/Async-Implementation.pdf)
 
-## Earn V2 Core - Standard Implementation  
+## Earn V2 Core - Standard Implementation {#earn-v2-standard-implementation}  
 
 - Date: October 10, 2025
 - Auditor: Halborn
@@ -47,13 +47,13 @@ Concrete Protocol follows a multi-phased audit approach to deliver the highest l
 - Auditor: Halborn
 - [View the full report](/files/Upgradable-Multisig-and-Queue-Changes.pdf)
 
-## Earn V1 - Halborn
+## Earn V1 - Halborn {#earn-v1-halborn}
 
 - Date: July, 19, 2025
 - Auditor: Halborn  
 - [View the full report](/files/Earn-V1-Halborn.pdf)
 
-## Earn V1 - Zellic
+## Earn V1 - Zellic {#earn-v1-zellic}
 
 - Date: June, 06, 2025
 - Auditor: Zellic  
@@ -66,7 +66,7 @@ Concrete Protocol follows a multi-phased audit approach to deliver the highest l
 - [View the full report](/files/Withdrawal-Queue-Delay-SSC.pdf)
 
 
-## Morpho Strategy - Auto Compounding
+## Morpho Strategy - Auto Compounding {#morpho-strategy-auto-compounding}
 
 - Date: March 28, 2025
 - Auditor: Halborn
