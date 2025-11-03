@@ -47,7 +47,13 @@ Concrete Protocol follows a multi-phased audit approach to deliver the highest l
 - Auditor: Halborn
 - [View the full report](/files/Upgradable-Multisig-and-Queue-Changes.pdf)
 
-## Earn V1
+## Earn V1 - Halborn
+
+- Date: July, 19, 2025
+- Auditor: Halborn  
+- [View the full report](/files/Earn-V1-Halborn.pdf)
+
+## Earn V1 - Zellic
 
 - Date: June, 06, 2025
 - Auditor: Zellic  
