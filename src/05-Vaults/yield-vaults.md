@@ -7,23 +7,7 @@ sidebar_position: 1
 
 The [ERC-4626 Tokenized Vault Standard](https://ethereum.org/en/developers/docs/standards/tokens/erc-4626/) was designed to improve the functionality of yield-bearing vaults within DeFi ecosystems, creating a standardized approach to how vaults interact with tokens. ERC-4626 enables greater interoperability between vaults, enhancing deposits, withdrawals, and yield accounting across platforms.
 
-Concrete adopts this standard to simplify the complex process of managing yields and to offer yield vaults that not only provide users with optimized returns but also **lay the groundwork for a future protection layer and borrowing system**. While these systems are not part of the current roadmap, they remain part of Concrete’s long-term product vision. This dual-utility model will ensure that deposited assets are maximized for yield generation while also safeguarding borrowers from liquidation risks once those features are introduced.
-
-A key innovation is how Concrete vaults allocate capital—currently focused on yield generation, with future plans to reserve funds for protection mechanisms under development in Concrete’s roadmap.
-
-## How Vaults Will Provide Capital for Future Protection Systems
-
-In Concrete’s ecosystem, yield vaults are multi-functional by design. Today they generate returns for users; in future releases, they will also support the platform’s planned **liquidation protection** and **borrowing** modules.
-
-When earners deposit assets into Concrete’s vaults, these funds currently serve the yield-generation function.
-In future iterations, deposits will be split between two main roles:
-
-1. **Yield Generation** – A portion of the deposited assets is actively managed through various money markets and strategies to optimize returns.
-2. **Loan Protection (long-term product vision)** – Another portion of these funds will be reserved specifically to support loan protection features. Concrete’s **Probability Engine** will calculate how much liquidity needs to be set aside to protect loans, ensuring borrowers are safeguarded from liquidation once the Borrow and Protect systems launch.
-
-This allocation will be critical for maintaining loan security in future versions. In cases where a borrower’s collateral might be at risk of liquidation, the reserved liquidity from the vaults will be deployed to stabilize the loan, preventing borrowers from losing their assets.
-
-The reserved liquidity will act as a protective buffer, allowing Concrete to inject liquidity into a borrower’s position before reaching a liquidation threshold. This system will ensure that the vaults evolve from being a tool for passive yield generation to also serving as part of the platform’s risk-management and borrower-protection framework once those features are introduced.
+Concrete adopts this standard to simplify the complex process of managing yields and to offer yield vaults. A key innovation is how Concrete vaults allocate capital—currently focused on yield generation.
 
 ## How ERC-4626 Enables Smooth Integration Between Yield Vaults
 
@@ -51,10 +35,6 @@ Yield is accrued from multiple sources, and earners receive it in the form of th
 
 Funds from the vaults are deposited into various money markets (e.g., Aave, Compound) that offer the best yield opportunities for specific assets. The protocol constantly rebalances these deposits based on changing interest rates and transaction costs, ensuring the highest possible returns.
 
-### Future Loan Protection Revenue *(Planned Feature)*
-
-In long-term product vision, earners will also receive a portion of the fees generated from Concrete’s planned **loan protection** services.
-This will include fees from opening and canceling protection plans, claims triggered during protection, and foreclosure events. Additionally, when borrowers repay credit lines, any difference in collateral value will be passed on to earners as yield.
 
 ### CT Token Emissions
 

@@ -37,11 +37,9 @@ Yield farming in DeFi often involves searching through numerous protocols to fin
 Integration with multiple money markets, allowing users to tap into the best yields across different protocols. Users can deposit their assets once and Concrete takes care of rebalancing between different money markets as conditions change.
 
 
-## Looking Ahead (only future plans)
+## Looking Ahead (Only Future Plans)
 
-Concrete’s long-term vision extends beyond yield automation.
-
-Future product layers might reintroduce borrowing and protection mechanisms that integrate seamlessly with the existing Earn vault infrastructure.
+Concrete’s long-term vision extends beyond yield automation. Future product layers might reintroduce borrowing and protection mechanisms that integrate seamlessly with the existing Earn vault infrastructure.
 
 These layers will make Concrete a **complete DeFi suite** where users can:
 
