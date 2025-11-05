@@ -25,12 +25,6 @@ This strategy involves lending user assets to platforms like Aave to generate st
 
 For users looking for higher returns, Concrete engages in leveraged yield strategies. These involve using liquidity from **earn vaults** to offer **flash loans** or participate in **capital disbursements**, generating income through the fees collected during these activities. By leveraging user deposits, the protocol amplifies potential returns while securing additional protocol rewards through fees.
 
-For instance, when **Concrete Light** (a liquidation protection product) is used, the platform takes **flash loans** from its own vaults and charges a fee (0.3%) for providing the credit lines. These fees add to the protocol's revenue stream, alongside the core lending strategy.
-
-## Loan Protection Income
-
-Concrete's **Protect** and **Concrete Light** products offer users a form of liquidation protection. Users engaging in these products benefit from the security of not being liquidated unexpectedly, while the protocol earns revenue through the associated fees from flash loans and credit line services. This strategy complements the passive and leveraged yield methods, adding an additional layer of income for both the protocol and its users.
-
 ## Future Yield Strategies - Ecosystem ETFs
 
 Concrete plans to roll out Ecosystem ETFs, which will diversify user positions across multiple DeFi protocols, reducing risk while maintaining attractive returns. By balancing exposure to different protocols, users can achieve a more stable income stream, making this strategy ideal for those who want to diversify without taking on high levels of risk.
@@ -39,9 +33,9 @@ These ETFs will provide opportunities for users to take part in a multi-protocol
 
 ## Flow of Funds
 
-- **Earn Vaults**: Users deposit assets (such as **ETH**, **BTC**, or stablecoins) into earn vaults.
-- **Liquidity Allocation**: The platform distributes these funds into different yield-generating strategies, such as lending on money markets or engaging in leveraged activities like flash loans.
-- **Yield Generation**: Profits from these strategies are returned to the users, while protocol fees from leveraged activities (e.g., flash loans) contribute to Concrete's revenue.
+* **Earn Vaults**: Users deposit assets (such as **ETH**, **BTC**, or stablecoins) into earn vaults.
+* **Liquidity Allocation**: The platform distributes these funds into different yield-generating strategies, such as lending on money markets or engaging in leveraged activities like flash loans.
+* **Yield Generation**: Profits from these strategies are returned to the users, while protocol fees from leveraged activities (e.g., flash loans) contribute to Concrete's revenue.
 
 ## The Honeypot Model and Master Funds
 
