@@ -5,7 +5,7 @@ sidebar_label: "Welcome"
 sidebar_position: 0
 ---
 
-Welcome to [Concrete.xyz](https://www.concrete.xyz), a suite of DeFi products powering secure, automated yield strategies and unlocking new derivatives for any on-chain asset. Earn the highest rate of return, borrow anywhere without liquidation, trade the risk.
+Welcome to [Concrete.xyz](https://www.concrete.xyz), a suite of DeFi products powering secure, automated yield strategies and unlocking new derivatives for any on-chain asset. Earn the highest rate of return.
 
 Decentralized Finance (DeFi) comes with complexities that require users to "Do Your Own Research" (DYOR) before engaging. From navigating multiple platforms for the best yields to securing your assets against liquidation, DeFi can feel overwhelming for both new and experienced users.
 
@@ -37,16 +37,14 @@ Yield farming in DeFi often involves searching through numerous protocols to fin
 Integration with multiple money markets, allowing users to tap into the best yields across different protocols. Users can deposit their assets once and Concrete takes care of rebalancing between different money markets as conditions change.
 
 
-## Looking Ahead (future plans)
+## Looking Ahead (Only Future Plans)
 
-Concrete’s long-term vision extends beyond yield automation.
-
-Future product layers will reintroduce borrowing and protection mechanisms that integrate seamlessly with the existing Earn vault infrastructure.
+Concrete’s long-term vision extends beyond yield automation. Future product layers might reintroduce borrowing and protection mechanisms that integrate seamlessly with the existing Earn vault infrastructure.
 
 These layers will make Concrete a **complete DeFi suite** where users can:
 
 * Earn automated yield through **Concrete Earn**
-* Access liquidity without traditional liquidation risk through future borrowing products
+* Access liquidity without traditional liquidation risk through future possible borrowing products
 * Secure positions through optional protection modules
 
 The architecture is being designed so that vault deposits, yield tokens, and credit systems all interconnect natively — creating a unified ecosystem where yield, liquidity, and protection reinforce one another rather than existing as separate products.

@@ -17,7 +17,7 @@ This guide will walk you through the key steps to quickly get started with Concr
    Head to the official **Concrete website** and launch the decentralized app (dApp). You can browse the app and view the features available to you, but you will need to connect your wallet for full access.
 
 ### 2. Connect Your Wallet
-   To access Concrete's core features (borrow, earn, manage), you'll need to authenticate by connecting your wallet.  
+   To access Concrete's core features, you'll need to authenticate by connecting your wallet.  
    - Click on the **Connect Wallet** button.
    - Select your wallet provider (MetaMask, Rainbow, etc.).
    - Sign the message in your wallet to authenticate.
@@ -27,9 +27,9 @@ This guide will walk you through the key steps to quickly get started with Concr
 
 ### 4. Explore the Dashboards
    Once your wallet is connected and terms accepted, you'll be directed to Concrete's main dashboard. Here, you can access key features like:
-   - **Borrow**: Find the most favorable borrowing positions.
+
    - **Earn**: Deposit assets to earn yields in Concrete’s vaults.
-   - **Portfolio**: Track your borrowing positions, vault deposits, and rewards.
+   - **Portfolio**: Track your vault deposit and rewards.
 
 ## **Earn**
 
@@ -63,8 +63,8 @@ Here's how you can navigate and utilize the Earn feature to maximize your return
 
 The **Portfolio** dashboard allows you to track and manage your activity within the Concrete Protocol. It focuses on three main objectives:
 
-1. **Positions**: Displays all your active and closed positions, both for borrowing and earning.
+1. **Positions**: Displays all your active and closed positions
 2. **Vaults**: Lets you manage your deposits into vaults. You can add or withdraw assets, and adjust your investment strategy as needed.
-3. **Rewards**: Displays all the rewards you've earned through participating in Concrete's earning and borrowing mechanisms. These rewards typically include **CT Tokens**, which can be claimed directly from the dashboard.
+3. **Rewards**: Displays all the rewards you've earned through participating in Concrete's earning mechanisms. These rewards typically include **CT Tokens**, which can be claimed directly from the dashboard.
 
 ![](/img/portfolio.png)
