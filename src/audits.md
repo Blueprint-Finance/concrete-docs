@@ -29,6 +29,12 @@ Concrete Protocol follows a multi-phased audit approach to deliver the highest l
 4. **Public Transparency**  
    All audit results are made publicly accessible, reinforcing our commitment to transparency and accountability.
 
+## Earn V2 - Predeposit Vault {#earn-v2-predeposit-vault}
+
+- Date: October 23, 2025
+- Auditor: Halborn
+- [View the full report](/files/Predeposit-Vault.pdf)
+
 ## Earn V2 Core - Async Implementation {#earn-v2-core-async}
 
 - Date: October 10, 2025

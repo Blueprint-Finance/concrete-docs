@@ -29,13 +29,6 @@ What deprecation means for you:
 3. Open the **Withdraw** tab
 4. Click **Withdraw** and follow the wallet prompt
 
-## Are My Funds Safe?
-
-Yes. Your deposited assets and yield are secure in smart contracts. You’ll be able to withdraw them using:
-
-- The Concrete app
-- A manual support process (for users returning after vaults have been disabled on the UI)
-
 ## Deprecation Log
 
 | Vault | Vault Address | Atomic Enabled (Deprecation Date) | Rewards/Points |
