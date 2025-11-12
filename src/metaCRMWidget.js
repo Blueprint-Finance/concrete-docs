@@ -1,13 +1,13 @@
 import ExecutionEnvironment from "@docusaurus/ExecutionEnvironment";
 import siteConfig from "@generated/docusaurus.config";
 
-const METACRM_VERSION = "3.10.1";
+const METACRM_VERSION = "3.12.0";
 const METACRM_SCRIPT_URL = `https://widget.metacrm.inc/static/js/widget-${METACRM_VERSION.replace(
   /\./g,
   "-",
 )}.js`;
 const METACRM_SCRIPT_INTEGRITY =
-  "sha384-zZSg2BlTanuqbyXMt2J8LdSxoj0uZUr2rIfH9ahUFzlL3OB+BOPXMepc/EnDD97q";
+  "sha384-zMcRZtPB3OpylcaJNDNopoRLrHWHs15WLxYJeoMPk0rCBjLXNWDKGIUy6bpJTzqX";
 const METACRM_SCRIPT_ID = "metacrm-widget-script";
 const GLOBAL_STYLE_ID = "metacrm-overrides";
 const IFRAME_STYLE_ID = "concrete-metacrm-style";
