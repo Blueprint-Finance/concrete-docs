@@ -33,6 +33,8 @@ What deprecation means for you:
 
 | Vault | Vault Address | Atomic Enabled (Deprecation Date) | Rewards/Points |
 | --- | --- | --- | --- |
+| autoUSDai | [0x62dDf301B21970e7Cc12c34cAAc9CE9bC975c0a9](https://app.usd.ai/rewards?tab=allo&alignment=ico&strategy=auto) | November 19, 2025 |  |
+| autoSUSDai | [0xE2d8267D285a7ae1eDf48498fF044241d04e9608](https://app.usd.ai/rewards?tab=allo&alignment=airdrop&strategy=auto) | November 19, 2025 |  |
 | ctKataAUSD | [0xCA2470F04945dAd24989Ec6eF2c41Ee808e51039](https://explorer.katanarpc.com/address/0xCA2470F04945dAd24989Ec6eF2c41Ee808e51039) | September 10, 2025 | KAT rewards will be claimable in late December. For the latest updates, visit https://x.com/katana. For any reward-related questions, please contact the Katana team directly. |
 | BERA/WBTC | [0x335e7b56054f830883d1509afdce58dedcefb29c](https://berascan.com/address/0x335e7b56054f830883d1509afdce58dedcefb29c) | October 06, 2025 | All earned rewards were finalized before deprecation.<br />No new rewards are accruing after October 3, 2025.<br />Any remaining reward allocations linked to partner platforms (e.g., Pendle or Royco) will be managed and distributed by Lombard. |
 | BERA/LBTC | [0xb6e3c1154e07f8a3dc04a9a28648c7aa30511120](https://berascan.com/address/0xb6e3c1154e07f8a3dc04a9a28648c7aa30511120) | October 06, 2025 | All earned rewards were finalized before deprecation.<br />No new rewards are accruing after October 3, 2025.<br />Any remaining reward allocations linked to partner platforms (e.g., Pendle or Royco) will be managed and distributed by Lombard. |
