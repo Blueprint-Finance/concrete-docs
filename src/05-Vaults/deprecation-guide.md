@@ -6,7 +6,14 @@ sidebar_label: "Deprecation Guide"
 
 As part of a long-term strategy to consolidate and upgrade the platform, **Concrete** deprecates vaults when the campaign ends.
 
-When a vault enters **deprecation**, it transitions into **atomic withdrawal–only mode**. This ensures a smooth and secure exit process for all users.
+When a vault enters **deprecation**, it becomes **withdrawal-only**. This ensures a safe, orderly transition for depositors while preserving access to funds.
+
+**Important:**
+Deprecation does not always imply atomic withdrawals.
+- Some vaults will support **instant (atomic) withdrawals**.
+- Others may remain in **asynchronous (epoch-based) mode** if they were configured that way.
+
+Please refer to the vault-specific deprecation notice for the exact withdrawal flow.
 
 If you deposited into a vault listed below, we recommend redeeming your funds promptly. While withdrawals remain open, withdrawing early ensures you keep full control of your assets and helps avoid delays.
 
