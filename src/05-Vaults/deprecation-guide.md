@@ -6,35 +6,51 @@ sidebar_label: "Deprecation Guide"
 
 As part of a long-term strategy to consolidate and upgrade the platform, **Concrete** deprecates vaults when the campaign ends.
 
-When a vault enters **deprecation**, it becomes **withdrawal-only**. This ensures a safe, orderly transition for depositors while preserving access to funds.
+When a vault enters deprecation, it begins a controlled wind-down process. Deprecation does *not* always mean the vault will switch to atomic withdrawal–only mode.
+Partners may choose different exit mechanisms, including:
 
-**Important:**
-Deprecation does not always imply atomic withdrawals.
-- Some vaults will support **instant (atomic) withdrawals**.
-- Others may remain in **asynchronous (epoch-based) mode** if they were configured that way.
+- Enabling atomic withdrawals
+- Maintaining async withdrawals
+- Airdropping underlying assets directly to depositors (e.g., **USD.ai** vaults)
+- Coordinated off-chain settlement through partner programs
 
-Please refer to the vault-specific deprecation notice for the exact withdrawal flow.
-
-If you deposited into a vault listed below, we recommend redeeming your funds promptly. While withdrawals remain open, withdrawing early ensures you keep full control of your assets and helps avoid delays.
+Deprecation ensures depositors can exit safely while allowing partners or curators to complete end-of-campaign operations.
 
 ## Summary for Depositors
 
 What deprecation means for you:
 
 - Deposits are permanently disabled
-- No fees are charged after deprecation
-- Any remaining balances no longer earn yield
-- All funds can be redeemed through atomic withdrawals
-- Previously earned rewards stay claimable
+- No new fees accrue after deprecation
+- Remaining balances stop earning yield
+- Withdrawal paths depend on the vault type
+– Some vaults enable atomic withdrawals
+– Others still process through async queues
+– Some partners deliver redemptions via airdrop or external settlement
+- Previously earned rewards remain claimable
+
+Please review the vault-specific notes for accurate instructions.
+
+## **Withdrawal Path by Vault Type**
+
+Use the table below to understand what action is required for your specific deprecated vault:
+
+| **Vault Type** | **How Redemptions Work** | **What You Need to Do** |
+| --- | --- | --- |
+| **Atomic Withdrawal Vault** | Withdrawals execute instantly on-chain | **Withdraw now** through the Concrete App |
+| **Async Withdrawal Vault** | Withdrawals enter an epoch queue and are processed in batches | **Submit a withdrawal request** in the concrete app and wait for the epoch to process |
+| **Partner-Led Exit (Airdrop / Off-Chain Settlement)** | Partner redeems your position and sends assets directly to your wallet (e.g., USD.ai vaults) | **No action required** — simply hold your wallet and wait for settlement |
 
 ## What You Need to Do
 
-**Withdraw now —** with atomic withdrawals enabled, you can exit instantly:
+If your vault supports in-app withdrawals:
 
-1. Visit the [Concrete App](https://app.concrete.xyz/)
-2. Go to your relevant vault
-3. Open the **Withdraw** tab
+1. Visit the [**Concrete App**](https://app.concrete.xyz/)
+2. Open your deprecated vault
+3. Go to the **Withdraw** tab
 4. Click **Withdraw** and follow the wallet prompt
+
+If your vault uses a **partner-led exit** (such as an airdrop or off-chain settlement), follow the instructions provided in the vault announcement — you may **not** need to take any action.
 
 ## Deprecation Log
 
