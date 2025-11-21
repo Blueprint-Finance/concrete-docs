@@ -4,11 +4,22 @@ description: "FAQ"
 sidebar_label: "FAQ"
 ---
 
-* [Concrete Overview](#1.concrete-overview)
+* [Concrete](#concrete-overview)
+* [Earn V2](#earn-v2)
+* [CT Assets](#ct-assets)
+* [Vaults](#vaults)
+* [Yield Strategies](#yield-strategies)
+* [Fees](#fees)
+* [Audits](#audits)
+* [Risks](#risks)
+* [Withdrawals](#withdrawals)
+* [SDK](#sdk)
+* [Subgraph](#subgraph)
+* [Support](#support)
 
 
 
-## 1. Concrete Overview
+## Concrete Overview
 
 ### What is Concrete?
 
@@ -30,7 +41,7 @@ DeFi requires managing multiple protocols, securing liquidity, monitoring yield,
 Concrete automates yield discovery, rebalances between protocols, provides multi-chain UX, integrates custody-native assets, and offers operational safety through role controls and automated accounting.
 
 
-## 2. Earn V2
+## Earn V2
 
 ### What is Earn V2?
 
@@ -74,9 +85,7 @@ Two fee types:
 
 Withdrawals enter epochs, are processed in batches, lock-in share price per epoch, and allow safe unwinding of strategies.
 
-
-
-## 3. Vaults & ERC-4626
+## Vaults
 
 ### What is an ERC-4626 vault?
 
@@ -102,10 +111,7 @@ Yield is reflected in:
 * increased share price
 * optional CT token emissions (depending on product version)
 
-
-
-
-## 4. CT[assets]
+## CT Assets
 
 ### What are CT[assets]?
 
@@ -377,7 +383,7 @@ Yes. Every new backing asset receives:
 - A dedicated Earn V2 vault
 - Its own lifecycle management
 
-## 5. Yield Strategies
+## Yield Strategies
 
 ### What strategies does Concrete use?
 
@@ -395,9 +401,7 @@ It monitors performance, APYs, transaction costs, and liquidity utilization acro
 
 Yes. BTC uses safer/lower-risk yield, while ETH/stablecoins may use more aggressive strategies.
 
-
-
-## 6. Fees
+## Fees
 
 ### What fees does Concrete Earn charge?
 
@@ -411,9 +415,7 @@ Only AUM-based fees:
 
 Gas is paid by users for deposits and withdrawals (standard EVM behavior). Strategy interaction costs are abstracted at the vault level.
 
-
-
-## 7. Audits & Security
+## Audits
 
 ### Who audited Concrete?
 
@@ -431,8 +433,7 @@ Yes — including Hypernative security monitoring and TRES accounting integratio
 All audit reports are published for transparency.
 
 
-
-## 8. Risks & Restrictions
+## Risks
 
 ### What risks exist when using Concrete?
 
@@ -456,9 +457,7 @@ All audit reports are published for transparency.
 * OFAC-sanctioned regions (North Korea, Iran, Cuba, Russia, Crimea, South Sudan)
 
 
-
-
-## 9. Withdrawals
+## Withdrawals
 
 ### Are withdrawals instant?
 
@@ -476,7 +475,7 @@ Approx. 7 days, due to QC settlement and lender repayments.
 
 
 
-## 10. SDK & Developer Experience
+## SDK
 
 ### How do I deposit using the SDK?
 
@@ -501,7 +500,7 @@ Yes — the Concrete SDK Playground in Concrete Build.
 
 
 
-## 11. Subgraph / Data Indexing
+## Subgraph
 
 ### What does the Earn V2 subgraph track?
 
@@ -518,8 +517,7 @@ Yes — the Concrete SDK Playground in Concrete Build.
 No — each chain has its own subgraph.
 
 
-
-## 12. Support
+## Support
 
 ### How do I contact support?
 
