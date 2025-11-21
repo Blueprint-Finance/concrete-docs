@@ -177,6 +177,7 @@ const sidebars = {
     'restrictions',
     'risks',
     'audits',
+    'faq',
     'support',
   ],
 };
