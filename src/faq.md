@@ -1,14 +1,14 @@
-
+---
 title: "FAQ"
 description: "FAQ"
 sidebar_label: "FAQ"
-
+---
 
 ## 1. Concrete Overview
 
 ### What is Concrete?
 
-Concrete is a suite of DeFi infrastructure products that automate yield generation, simplify vault creation, and make institutional-grade yield accessible with minimal user effort. It provides ERC-4626 vaults, automated strategies, custody-backed assets (CT[assets]), and a unified UX across chains. 
+Concrete is a suite of DeFi infrastructure products that automate yield generation, simplify vault creation, and make institutional-grade yield accessible with minimal user effort. It provides ERC-4626 vaults, automated strategies, custody-backed assets (CT[assets]), and a unified UX across chains.
 
 ### What problem does Concrete solve?
 
