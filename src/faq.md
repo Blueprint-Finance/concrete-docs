@@ -8,7 +8,6 @@ sidebar_label: "FAQ"
 * [Earn V2](#earn-v2)
 * [CT Assets](#ct-assets)
 * [Vaults](#vaults)
-* [Yield Strategies](#yield-strategies)
 * [Fees](#fees)
 * [Audits](#audits)
 * [Risks](#risks)
@@ -382,24 +381,6 @@ Yes. Every new backing asset receives:
 - A unique CT[asset] contract
 - A dedicated Earn V2 vault
 - Its own lifecycle management
-
-## Yield Strategies
-
-### What strategies does Concrete use?
-
-* Money market lending
-* Rebalancing between platforms
-* Leveraged yield via flash loans or capital disbursement
-* Future ecosystem ETFs
-
-
-### How does Concrete choose the best yield?
-
-It monitors performance, APYs, transaction costs, and liquidity utilization across markets.
-
-### Do strategies differ by asset?
-
-Yes. BTC uses safer/lower-risk yield, while ETH/stablecoins may use more aggressive strategies.
 
 ## Fees
 
