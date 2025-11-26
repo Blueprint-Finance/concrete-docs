@@ -39,7 +39,7 @@ Check [app.merkl.xyz](https://app.merkl.xyz/) for live reward tracking once the 
 
 1. **Deposits Open** — Users can deposit to Stable vaults (October 23, 2025).
 2. **Claim** —  Users will claim their vault shares to the Stable Network. During this process, you’ll claim your vault shares on Stable, which **burns** your existing vault shares on Ethereum L1 and **mints** the same number of new shares on the Stable Network.
-3. **Withdrawals Enabled** — Once bridging completes, users can enter the withdrawal queue (13 December, 2025).
+3. **Withdrawals Enabled** — Once bridging completes, users can enter the withdrawal queue
 4. **7-Day Withdrawal Queue** — After initial unlocks, withdrawals follow a standard queue for smooth liquidity management.
 
 :::tip
