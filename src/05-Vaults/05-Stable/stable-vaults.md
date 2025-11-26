@@ -80,7 +80,7 @@ During this phase:
 
 Withdrawals occur **on the Stable Network** once bridging is complete.
 
-- Withdrawal queue opens 13 December 2025
+- Withdrawal queue opens
 - Once the queue activates, requests are processed in a **7-day withdrawal queue**
 - The app will clearly display withdrawal status (“In Queue”, “Processing”, “Ready to Claim”)
 - Once processed, your tokens become **claimable** directly from the Earn app
