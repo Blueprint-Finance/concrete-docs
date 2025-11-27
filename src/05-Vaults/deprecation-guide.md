@@ -6,33 +6,45 @@ sidebar_label: "Deprecation Guide"
 
 As part of a long-term strategy to consolidate and upgrade the platform, **Concrete** deprecates vaults when the campaign ends.
 
-When a vault enters **deprecation**, it transitions into **atomic withdrawal–only mode**. This ensures a smooth and secure exit process for all users.
+When a vault enters deprecation, it begins a controlled wind-down process. Deprecation does not always mean the vault will switch to atomic withdrawal–only mode.
+Partners may choose different exit mechanisms, including:
 
-If you deposited into a vault listed below, we recommend redeeming your funds promptly. While withdrawals remain open, withdrawing early ensures you keep full control of your assets and helps avoid delays.
+- Enabling atomic withdrawals
+- Maintaining async withdrawals
+- Airdropping underlying assets directly to depositors (e.g., **USD.ai** vaults)
+- Coordinated off-chain settlement through partner programs
+
+Deprecation ensures depositors can exit safely while allowing partners or curators to complete end-of-campaign operations.
 
 ## Summary for Depositors
 
 What deprecation means for you:
 
 - Deposits are permanently disabled
-- No fees are charged after deprecation
-- Any remaining balances no longer earn yield
-- All funds can be redeemed through atomic withdrawals
-- Previously earned rewards stay claimable
+- No new fees accrue after deprecation
+- Remaining balances stop earning yield
+- Withdrawal paths depend on the vault type
+– Some vaults enable atomic withdrawals. Some partners deliver redemptions via airdrop or external settlement. Others still process through async queues
+- Previously earned rewards remain claimable
 
 ## What You Need to Do
 
-**Withdraw now —** with atomic withdrawals enabled, you can exit instantly:
+If your vault supports in-app withdrawals:
 
-1. Visit the [Concrete App](https://app.concrete.xyz/)
-2. Go to your relevant vault
-3. Open the **Withdraw** tab
+1. Visit the [**Concrete App**](https://app.concrete.xyz/)
+2. Open your deprecated vault
+3. Go to the **Withdraw** tab
 4. Click **Withdraw** and follow the wallet prompt
+
+If your vault uses a **partner-led exit** (such as an airdrop or off-chain settlement), follow the instructions provided in the vault announcement — you may **not** need to take any action.
 
 ## Deprecation Log
 
 | Vault | Vault Address | Atomic Enabled (Deprecation Date) | Rewards/Points |
 | --- | --- | --- | --- |
+| Arbitrum Drip Vault syrupUSDC | [0x09265e4d7ec6822d86b3809ae363bb8ce742835d](https://arbiscan.io/address/0x09265e4d7ec6822d86b3809ae363bb8ce742835d) | November 24, 2025 |  |
+| Arbitrum Drip Vault USDe | [0x8d735f4ed3dcd744746fc3013b5e4f6f4e5ed004](https://arbiscan.io/address/0x8d735f4ed3dcd744746fc3013b5e4f6f4e5ed004) | November 24, 2025 |  |
+| Arbitrum Drip Vault ezETH | [0xb7efc676c327066ba99666451fc2c62d9c81c232](https://arbiscan.io/address/0xb7efc676c327066ba99666451fc2c62d9c81c232) | November 24, 2025 |  |
 | autoUSDai | [0x62dDf301B21970e7Cc12c34cAAc9CE9bC975c0a9](https://app.usd.ai/rewards?tab=allo&alignment=ico&strategy=auto) | November 19, 2025 |  |
 | autoSUSDai | [0xE2d8267D285a7ae1eDf48498fF044241d04e9608](https://app.usd.ai/rewards?tab=allo&alignment=airdrop&strategy=auto) | November 19, 2025 |  |
 | ctKataAUSD | [0xCA2470F04945dAd24989Ec6eF2c41Ee808e51039](https://explorer.katanarpc.com/address/0xCA2470F04945dAd24989Ec6eF2c41Ee808e51039) | September 10, 2025 | KAT rewards will be claimable in late December. For the latest updates, visit https://x.com/katana. For any reward-related questions, please contact the Katana team directly. |
