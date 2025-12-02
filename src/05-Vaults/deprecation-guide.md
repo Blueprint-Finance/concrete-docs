@@ -13,9 +13,9 @@ Depending on the vault’s structure and underlying strategy, **different mechan
 * Enabling atomic withdrawals
 * Airdropping assets directly to depositors
 
-Concrete vaults transition to withdraw-only mode during deprecation. For vaults hosted in partnership and displayed on the Concrete website, please visit the partner’s site for details about their specific deprecation process.
+Concrete vaults transition to **withdraw-only mode** during deprecation. For vaults hosted in partnership and displayed on the Concrete website, please visit the partner’s site for details about their specific deprecation process.
 
-If you deposited into any of the vaults listed below, we recommend **redeeming your funds promptly** or contacting the vault curator for guidance. Withdrawing early from deprecated vaults ensures you retain full control over your assets and helps avoid delays.
+If you deposited into any of the vaults [listed below](#deprecation-log), we recommend **redeeming your funds promptly** or contacting the vault curator for guidance. Withdrawing early from deprecated vaults ensures you retain full control over your assets and helps avoid delays.
 
 ## Summary for Depositors
 
