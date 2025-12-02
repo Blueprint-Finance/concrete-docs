@@ -33,6 +33,9 @@ What deprecation means for you:
 
 | Vault | Vault Address | Atomic Enabled (Deprecation Date) | Rewards/Points |
 | --- | --- | --- | --- |
+| Arbitrum Drip Vault syrupUSDC | [0x09265e4d7ec6822d86b3809ae363bb8ce742835d](https://arbiscan.io/address/0x09265e4d7ec6822d86b3809ae363bb8ce742835d) | November 24, 2025 |  |
+| Arbitrum Drip Vault USDe | [0x8d735f4ed3dcd744746fc3013b5e4f6f4e5ed004](https://arbiscan.io/address/0x8d735f4ed3dcd744746fc3013b5e4f6f4e5ed004) | November 24, 2025 |  |
+| Arbitrum Drip Vault ezETH | [0xb7efc676c327066ba99666451fc2c62d9c81c232](https://arbiscan.io/address/0xb7efc676c327066ba99666451fc2c62d9c81c232) | November 24, 2025 |  |
 | autoUSDai | [0x62dDf301B21970e7Cc12c34cAAc9CE9bC975c0a9](https://app.usd.ai/rewards?tab=allo&alignment=ico&strategy=auto) | November 19, 2025 |  |
 | autoSUSDai | [0xE2d8267D285a7ae1eDf48498fF044241d04e9608](https://app.usd.ai/rewards?tab=allo&alignment=airdrop&strategy=auto) | November 19, 2025 |  |
 | ctKataAUSD | [0xCA2470F04945dAd24989Ec6eF2c41Ee808e51039](https://explorer.katanarpc.com/address/0xCA2470F04945dAd24989Ec6eF2c41Ee808e51039) | September 10, 2025 | KAT rewards will be claimable in late December. For the latest updates, visit https://x.com/katana. For any reward-related questions, please contact the Katana team directly. |
