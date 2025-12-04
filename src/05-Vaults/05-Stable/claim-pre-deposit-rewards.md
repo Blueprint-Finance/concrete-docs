@@ -66,33 +66,19 @@ You can now:
 
 **Option A — Keep earning yield**
 
-Your vault shares will continue accumulating yield on the Stable Network.
+Your vault shares will continue accumulating yield on the Stable Network and will remain fully visible inside the Earn app.
 
 **Option B — Begin withdrawal**
 
 You may exit the vault following the standard Stable withdrawal flow.
 
-## If Your Wallet Is Not Compatible
+### 6. Withdrawal
 
-If the app indicates that your current address **cannot receive rewards**, you can still complete the process:
+You can initiate a withdrawal at any time, but the actual release of funds will follow a **14-day withdrawal delay**.
 
-### Step 1 — Move vault shares to a compatible EOA
+The **14-day window begins once your vault shares appear on the Stable Network** after completing the claim flow.
 
-Transfer your **ctStableUSDT** or **ctStablefrxUSD** shares to a compatible wallet (regular ERC-20 transfer) such as:
-
-* MetaMask
-* Rabby
-* Ledger (as EOA)
-
-### Step 2 — Claim again
-
-Once the EOA holds the shares:
-
-* Refresh the Concrete app
-* Click **Claim** again
-* The app will process the claim and send rewards to your Stable EOA address
-* Your rewards will now be delivered successfully.
-
+During this period, your vault shares will continue earning yield until the withdrawal completes.
 
 ## Troubleshooting
 
