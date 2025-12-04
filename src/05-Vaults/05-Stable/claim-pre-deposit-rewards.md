@@ -14,19 +14,19 @@ To successfully receive your rewards you must **control the same wallet address 
 
 ### Multisigs & Contract Wallets
 
-These do not exist as the same address on Stable, and therefore cannot receive rewards drectly.
+These do not exist as the same address on Stable, and therefore cannot receive rewards directly.
 
 **If this applies to you:**
 
-* Transfer your **ctStableUSDT** vault shares to any EOA you control on Ethereum
-* Then claim using that EOA (which also exists on Stable)
+* Transfer your **ctStableUSDT** or **ctStablefrxUSD** vault shares to any EOA you control on Ethereum (regular ERC-20 transfer)
+* Then claim using that EOA (which uses the same address on Stable)
 * This ensures your rewards are delivered correctly.
 
 ## How to Claim Your Rewards
 
 ### 1. Go to the Concrete App
 
-Visit **[https://app.concrete.xyz](https://app.concrete.xyz)** and connect the wallet holding your **ctStableUSDT** shares.
+Visit **[https://app.concrete.xyz](https://app.concrete.xyz)** and connect the wallet holding your **ctStableUSDT** or **ctStablefrxUSD** shares.
 
 If you are eligible, you will see a **Claim banner** “Tokens ready to claim.” at the top of the Earn page.
 
@@ -78,7 +78,7 @@ If the app indicates that your current address **cannot receive rewards**, you c
 
 ### Step 1 — Move vault shares to a compatible EOA
 
-Transfer your **ctStableUSDT** shares to a compatible wallet (regular ERC-20 transfer) such as:
+Transfer your **ctStableUSDT** or **ctStablefrxUSD** shares to a compatible wallet (regular ERC-20 transfer) such as:
 
 * MetaMask
 * Rabby
@@ -102,36 +102,34 @@ Once the EOA holds the shares:
 * Cross-chain delivery typically takes ~10 minutes
 * Rewards always arrive at the same wallet address on Stable
 
-### I clicked Claim but the app shows 0 tokens:
-
-You are connected to the wrong wallet. Switch to the wallet holding **ctStableUSDT**, or transfer your shares to the currently connected one.
-
 ### I connected a Safe or multisig and cannot claim:
 
-Safe/multisig wallets cannot receive tokens on the Stable chain.
+The *only requirement* is that you must be able to **control the same address on the Stable Network**.
 
-Transfer your ctStableUSDT to an EOA and claim again normally.
+If you are using a multisig or contract wallet, ensure that:
 
-### The claim is pending for a long time:
+- The wallet **exists on Stable using the same address**, and
+- You **control that address** on the destination chain
+
+If your current wallet setup does *not* meet this requirement, you may need to use an EOA that you fully control on both networks.
+
+Transfer your **ctStableUSDT** or **ctStablefrxUSD** to an EOA and claim again normally.
+
+### The claim is pending for a long time
 
 Cross-chain delivery can take several minutes depending on network conditions.
 
-Try:
-* Refreshing the page
-* Reconnecting your wallet
-* Keeping the app open until completion
+Do not refresh the page and Keep the app open until completion.
 
 ### I claimed but don’t see tokens on Stable
 
 Possible reasons:
 
 * Your wallet UI doesn’t auto-detect Stable assets
-* You haven’t added the Stable network
 * You need to add the token contract manually
 
 To fix:
 
-* Add the Stable Network
 * Add the reward token contract manually
 * Verify using a Stable block explorer
 
