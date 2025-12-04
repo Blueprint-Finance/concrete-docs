@@ -27,6 +27,7 @@ These do not exist as the same address on Stable, and therefore cannot receive r
 ### 1. Go to the Concrete App
 
 Visit **[https://app.concrete.xyz](https://app.concrete.xyz)** and connect the wallet holding your **ctStableUSDT** shares.
+
 If you are eligible, you will see a **Claim banner** “Tokens ready to claim.” at the top of the Earn page.
 
 Click **Claim**.
