@@ -121,8 +121,9 @@ const sidebars = {
              type: 'category',
              label: 'Stable',
              items: [
-               'Vaults/Stable/stable-vaults',
-                'Vaults/Stable/pendle-looping-vaults',
+              'Vaults/Stable/stable-vaults',
+              'Vaults/Stable/pendle-looping-vaults',
+              'Vaults/Stable/claim-pre-deposit-rewards',
              ],
            },
            {
