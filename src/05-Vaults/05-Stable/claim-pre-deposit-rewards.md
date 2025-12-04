@@ -93,13 +93,14 @@ Once the EOA holds the shares:
 * The app will process the claim and send rewards to your Stable EOA address
 * Your rewards will now be delivered successfully.
 
-## Claim Timing
+
+## Troubleshooting
+
+### Claim Timing
 
 * Claim initiation is instant on Ethereum
 * Cross-chain delivery typically takes ~10 minutes
 * Rewards always arrive at the same wallet address on Stable
-
-## Troubleshooting
 
 ### I clicked Claim but the app shows 0 tokens:
 
