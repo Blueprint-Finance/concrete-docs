@@ -11,7 +11,7 @@ This help article walks you through the full process — including how to handle
 ## Summary
 
 - Withdrawals for the Stable campaign are now unlocked
-- All users must claim their vault shares — this moves your ctStableUSDT or ctStablefrxUSD to the Stable Network using the [Earn app](https://app.concrete.xyz/) or [stable.concrete.xyz](http://stable.concrete.xyz).
+- All users must claim their vault shares — this moves your **ctStableUSDT** or **ctStablefrxUSD** to the Stable Network using the [Earn app](https://app.concrete.xyz/) or [stable.concrete.xyz](http://stable.concrete.xyz).
 - Claiming your vault shares is required before you can withdraw your collateral on the Stable Network
 - Your rewards will not be delivered in this flow. Rewards will be claimable separately [via Merkl](https://app.merkl.xyz/users/).
 
