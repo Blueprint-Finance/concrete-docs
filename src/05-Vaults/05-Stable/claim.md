@@ -1,7 +1,7 @@
 ---
-title: "How to Claim"
+title: "Claiming Vault Shares, Withdrawals, and Rewards"
 description: "Claiming Vault Shares, Withdrawals, and Rewards"
-sidebar_label: "Claiming Vault Shares, Withdrawals, and Rewards"
+sidebar_label: "How to Claim"
 ---
 
 If you deposited into the **Stable Pre-Deposit Campaign**, your vault shares are now ready to be claimed on the Stable Network.
