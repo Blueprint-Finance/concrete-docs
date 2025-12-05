@@ -10,9 +10,7 @@ This help article walks you through the full process — including how to handle
 
 ## Summary
 
-- Withdrawals for the Stable campaign are now unlocked
-- All users must claim their vault shares — this moves your **ctStableUSDT** or **ctStablefrxUSD** to the Stable Network using the [Earn app](https://app.concrete.xyz/) or [stable.concrete.xyz](http://stable.concrete.xyz).
-- Claiming your vault shares is required before you can withdraw your collateral on the Stable Network
+- All users must claim their vault shares — this moves your ctStableUSDT or ctStablefrxUSD to the Stable Network using the [Earn app](https://app.concrete.xyz/) or [stable.concrete.xyz](http://stable.concrete.xyz).
 - Your rewards will not be delivered in this flow. Rewards will be claimable separately [via Merkl](https://app.merkl.xyz/users/).
 
 **Important - Possible Funds Lost:**
@@ -32,15 +30,9 @@ If you are unsure whether your multisig or contract wallet is supported on Stabl
 
 ### **1. Start claiming**
 
-You can claim your vault shares in two ways:
-
-**Option A — Recommended:**
-
 Go to [**https://stable.concrete.xyz**](https://stable.concrete.xyz/) and connect the wallet holding your **ctStableUSDT** or **ctStablefrxUSD** shares.
 
-**Option B:**
-
-Go to [**https://app.concrete.xyz**](https://app.concrete.xyz/) → Earn, and connect the same wallet. If you are eligible, you will see a banner: “Tokens ready to claim.” Click **Claim**.
+**Or** Go to [**https://app.concrete.xyz**](https://app.concrete.xyz/) → Earn, and connect the same wallet. If you are eligible, you will see a banner: “Tokens ready to claim.” Click **Claim**.
 
 ### 2. Review Your Claim
 
@@ -76,19 +68,11 @@ Click **View** to open your vault page on the Stable Network, where your claimed
 
 ### 6. After Claiming
 
-You can now:
-
-**Option A — Keep earning yield**
-
-Your vault shares will continue accumulating yield on the Stable Network.
-
-**Option B — Begin withdrawal**
-
-You may exit the vault following the standard Stable withdrawal flow.
+Your vault shares will appear on the Stable Network. No additional yield is currently planned for this vault.
 
 ### 7. Withdrawal
 
-You can initiate a withdrawal at any time, but the actual release of funds will follow a **7-day withdrawal delay**. During this period, your vault shares will continue earning yield until the withdrawal completes.
+Withdrawals on the Stable Network are not yet available. Support for withdrawals will be added soon.
 
 ## Troubleshooting
 
@@ -96,7 +80,7 @@ You can initiate a withdrawal at any time, but the actual release of funds will 
 
 - Claim initiation is instant on Ethereum
 - Cross-chain delivery typically takes ~10 minutes
-- Vault shares always arrive at the same wallet address on Stable. Rewards will be claimed separately [via Merkl](https://app.merkl.xyz/users/).
+- Vault shares always arrive at the same address on Stable. Rewards will be claimed separately [via Merkl](https://app.merkl.xyz/users/).
 
 ### The claim is pending for a long time
 
