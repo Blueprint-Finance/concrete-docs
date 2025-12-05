@@ -1,6 +1,6 @@
 ---
-title: "Claiming Vault Shares, Withdrawals, and Rewards"
-description: "Claiming Vault Shares, Withdrawals, and Rewards"
+title: "Claiming Vault Shares and Rewards"
+description: "Claiming Vault Shares and Rewards"
 sidebar_label: "How to Claim"
 ---
 
@@ -14,7 +14,7 @@ This help article walks you through the full process — including how to handle
 - Your rewards will not be delivered in this flow. Rewards will be claimable separately [via Merkl](https://app.merkl.xyz/users/).
 
 **Important - Possible Funds Lost:**
-You must control the same Ethereum address on the Stable Network before claiming. Some multisig users have encountered issues because their Safe or contract wallet does not exist as the same address on Stable. If you do *not* control the same address on Stable, transfer your ctStableUSDT or ctStablefrxUSD to an EOA where you *do* control the same address on Stable before you claim.
+You must control the same Ethereum address on the Stable Network before claiming. Some multisig users have encountered issues because their Safe or contract wallet does not exist as the same address on Stable. If you do *not* control the same address on Stable, transfer your **ctStableUSDT** or **ctStablefrxUSD** to an EOA where you *do* control the same address on Stable before you claim.
 
 ## Multisigs & Contract Wallets
 
