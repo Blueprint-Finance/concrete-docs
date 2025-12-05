@@ -123,7 +123,7 @@ const sidebars = {
              items: [
               'Vaults/Stable/stable-vaults',
               'Vaults/Stable/pendle-looping-vaults',
-              'Vaults/Stable/claim-pre-deposit-rewards',
+              'Vaults/Stable/claim',
              ],
            },
            {
