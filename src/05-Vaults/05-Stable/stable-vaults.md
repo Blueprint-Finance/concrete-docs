@@ -6,8 +6,6 @@ sidebar_label: "Stable Vaults"
 
 Concrete’s **Stable Vaults** let you deposit **USDT** or **frxUSD** early to have your funds automatically deployed on the Stable Network from day one.
 
-The **Stable Pendle Looping** **Vault** launches on the same day and is an optional next step — allowing depositors who want higher returns to move their Stable vault position into a looping strategy.
-
 ## The Stable Network
 
 **Stable** is an institutional-grade blockchain built for stablecoins, designed to support efficient yield, liquidity, and settlement at scale.
