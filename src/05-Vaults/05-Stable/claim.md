@@ -69,7 +69,7 @@ Click **View** to open your vault page on the Stable Network, where your claimed
 
 ### 6. After Claiming
 
-Your vault shares will appear on the Stable Network. No additional yield is currently planned for this vault.
+Your vault shares will appear on the Stable Network. You can view them on the [Stable vault page](https://app.concrete.xyz/vault/stable/usdt) in the Earn app (which is configured for the Stable Network).
 
 ### 7. Withdrawal
 
