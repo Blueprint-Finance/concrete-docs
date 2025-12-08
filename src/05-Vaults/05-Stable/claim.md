@@ -12,7 +12,7 @@ This help article walks you through the full process — including how to handle
 
 - All users must claim their vault shares — this moves your ctStableUSDT or ctStablefrxUSD to the Stable Network using the [Earn app](https://app.concrete.xyz/) or [stable.concrete.xyz](http://stable.concrete.xyz).
 - Your rewards will not be delivered in this flow. Rewards will be claimable separately [via Merkl](https://app.merkl.xyz/users/).
-- Withdrawals on the Stable Network will open on December 13th.
+- Withdrawals will open on December 13th.
 
 **Important - Possible Funds Lost:**
 You must control the same Ethereum address on the Stable Network before claiming. Some multisig users have encountered issues because their Safe or contract wallet does not exist as the same address on Stable. If you do *not* control the same address on Stable, transfer your **ctStableUSDT** or **ctStablefrxUSD** to an EOA where you *do* control the same address on Stable before you claim.
@@ -73,7 +73,7 @@ Your vault shares will appear on the Stable Network. No additional yield is curr
 
 ### 7. Withdrawal
 
-Withdrawals on the Stable Network will open on December 13th.
+Users will be able to enter the withdrawal queue starting December 13th.
 
 ## Troubleshooting
 
