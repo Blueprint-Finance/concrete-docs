@@ -122,7 +122,6 @@ const sidebars = {
              label: 'Stable',
              items: [
               'Vaults/Stable/stable-vaults',
-              'Vaults/Stable/pendle-looping-vaults',
               'Vaults/Stable/claim',
              ],
            },
