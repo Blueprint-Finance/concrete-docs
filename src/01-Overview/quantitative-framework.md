@@ -44,7 +44,7 @@ The framework employs an end-to-end modular approach, ensuring seamless data pro
 
 | **Component** | **Description** |
 | --- | --- |
-| **Data Pipeline** | Ingests raw and processed data from sources such as cryptocurrencies, macroeconomic indicators, ETFs, and derivatives. Built using TimescaleDB, ensuring fast and efficient querying of large datasets.|
+| **Data Pipeline** | Ingests raw and processed data from sources such as cryptocurrencies, macroeconomic indicators, and ETFs. Built using TimescaleDB, ensuring fast and efficient querying of large datasets.|
 | **Quant Forecasting Models** | Combines data-driven factors such as momentum, mean reversion, statistical arbitrage and global macro trends using statistical and machine learning algorithms. Covers forecasting horizons from 5 hours to 30 days.|
 | **Probability Engine** | Converts forecasts into probabilities for specific outcomes, such as downside price movements. Enables the creation of risk mitigation strategies. |
 | **C Scores** | Simplified scoring system translates quantitative insights into intuitive decision-making metrics. Scores range from 0 (maximum bearish) to 10 (maximum bullish).|

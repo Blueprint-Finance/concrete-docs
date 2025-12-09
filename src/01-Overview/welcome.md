@@ -5,7 +5,9 @@ sidebar_label: "Welcome"
 sidebar_position: 0
 ---
 
-Welcome to [Concrete.xyz](https://www.concrete.xyz), a suite of DeFi products powering secure, automated yield strategies and unlocking new derivatives for any on-chain asset. Earn the highest rate of return.
+Welcome to [Concrete.xyz](https://www.concrete.xyz), a suite of DeFi products powering secure, automated yield strategies and unlocking new opportunities for any on-chain asset.
+
+Earn competitive rates of return.
 
 Decentralized Finance (DeFi) comes with complexities that require users to "Do Your Own Research" (DYOR) before engaging. From navigating multiple platforms for the best yields to securing your assets against liquidation, DeFi can feel overwhelming for both new and experienced users.
 
@@ -51,7 +53,9 @@ The architecture is being designed so that vault deposits, yield tokens, and cre
 
 ### Protection Against Liquidation
 
-A major fear in the DeFi world is the risk of liquidation when borrowing against your assets. Traditionally, when the value of your collateral drops below a certain threshold, your position gets liquidated, and you lose a significant portion of your assets. In the future, Concrete will eliminate this fear by offering multi-layered liquidation protection through its **Concrete Lite** and **Concrete Protect**. The system actively monitors your position, injects credit if needed, and ensures you avoid the full brunt of liquidation penalties.
+A major fear in the DeFi world is the risk of liquidation when borrowing against your assets. Traditionally, when the value of your collateral drops below a certain threshold, your position gets liquidated, and you lose a significant portion of your assets.
+
+In the future, Concrete will significantly reduce this fear by offering multi-layered liquidation protection. The system actively monitors your position, injects credit if needed, and ensures you avoid the full brunt of liquidation penalties.
 
 ### Leveraging Long-term Assets
 
