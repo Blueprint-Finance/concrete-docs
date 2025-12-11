@@ -18,7 +18,7 @@ Claiming your vault position is a **two-step process**:
 2. **Claim Your Position on Concrete:**
 
    * Proceed to the [Concrete Boyco Vault Claim Page](https://app.concrete.xyz/vault/berachain/boyco/0xf0d94806e6E5cB54336ED0f8De459659718F149C).
-   * This is where you can claim your vault position and withdraw any eligible rewards (Concrete Points or partner tokens).
+   * This is where you can claim your vault position and withdraw any eligible rewards.
 
 ## Why Claim Happens on Boyco
 

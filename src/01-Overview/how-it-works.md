@@ -22,12 +22,12 @@ Each vault focuses on a single asset and can deploy those funds across multiple 
 
 Strategies are smart contracts that interact with DeFi protocols to earn yield.
 
-Each vault can have several strategies — for example, lending on Aave, providing liquidity on Pendle, or holding yield-bearing tokens.
+Each vault can have several strategies — for example, lending on Aave, providing liquidity on Pendle, or holding yield-bearing assets.
 The vault’s Allocator role moves funds between strategies safely, ensuring target exposures and limits are respected.
 
 ## Accounting and Fees
 
-Vaults automatically track performance and apply management or performance fees. These fees are minted as shares rather than withdrawn in tokens, so vault performance and user balances stay accurate in real time.
+Vaults automatically track performance and apply management or performance fees. These fees are minted as shares, so vault performance and user balances stay accurate in real time.
 
 ## Withdrawals
 

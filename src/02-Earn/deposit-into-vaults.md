@@ -1,6 +1,6 @@
 ---
 title: "Depositing Assets into Concrete Vaults"
-description: "ct[assets] and Yield-Bearing Tokens"
+description: "ct[assets] and Yield-Bearing"
 sidebar_label: "How to Deposit Assets"
 sidebar_position: 0
 ---
@@ -36,4 +36,4 @@ Review details in the **Deposit Collateral** model and Confirm.
 
 Once confirmed on the blockchain, the updated holdings will be visible:
   - Your **Portfolio** will show the newly deposited assets.
-  - Corresponding receipt tokens (e.g., cETH) reflect your vault balance.
+  - Your vault balance.

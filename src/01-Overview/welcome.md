@@ -51,7 +51,7 @@ These layers will make Concrete a **complete DeFi suite** where users can:
 * Access liquidity without traditional liquidation risk through future possible borrowing products
 * Secure positions through optional protection modules
 
-The architecture is being designed so that vault deposits, yield tokens, and credit systems all interconnect natively — creating a unified ecosystem where yield, liquidity, and protection reinforce one another rather than existing as separate products.
+The architecture is being designed so that vault deposits and credit systems all interconnect natively — creating a unified ecosystem where yield, liquidity, and protection reinforce one another rather than existing as separate products.
 
 ### Protection Against Liquidation
 
