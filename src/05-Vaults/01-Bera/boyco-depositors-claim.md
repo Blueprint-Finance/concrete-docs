@@ -14,16 +14,15 @@ Claiming your vault position is a **two-step process**:
 
    * Go to [Boyco Claim Portal](https://berachain.royco.org/portfolio)
    * Connect your wallet.
-   * Here, you will receive **ctTokens** representing your vault position.
 
 2. **Claim Your Position on Concrete:**
 
-   * Once you have received your ctTokens, proceed to the [Concrete Boyco Vault Claim Page](https://app.concrete.xyz/vault/berachain/boyco/0xf0d94806e6E5cB54336ED0f8De459659718F149C).
+   * Proceed to the [Concrete Boyco Vault Claim Page](https://app.concrete.xyz/vault/berachain/boyco/0xf0d94806e6E5cB54336ED0f8De459659718F149C).
    * This is where you can claim your vault position and withdraw any eligible rewards (Concrete Points or partner tokens).
 
 ## Why Claim Happens on Boyco
 
-Boyco acts as a front-end layer for Concrete vaults. If your original deposit was routed through Boyco, then **your ctTokens and rewards are only visible through Boyco’s interface**, not directly on Concrete.
+Boyco acts as a front-end layer for Concrete vaults. If your original deposit was routed through Boyco, then **your rewards are only visible through Boyco’s interface**, not directly on Concrete.
 
 ## Important Notes
 

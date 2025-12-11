@@ -23,7 +23,7 @@ Concrete adopts this standard to simplify the complex process of managing yields
 
 ### 3. Simplified Accounting for Yield Accrual
 
-* Accounting for yield can be complicated across different DeFi platforms, but ERC-4626 simplifies this process by providing a uniform structure for tracking and distributing returns. Concrete’s vaults use this to automatically calculate the yield based on deposits, and the accrued returns are distributed in the form of the asset from which they originated—whether it’s ETH, USDC, or CT tokens.
+* Accounting for yield can be complicated across different DeFi platforms, but ERC-4626 simplifies this process by providing a uniform structure for tracking and distributing returns. Concrete’s vaults use this to automatically calculate the yield based on deposits, and the accrued returns are distributed in the form of the asset from which they originated.
 
 * For users, this means they can easily see how much yield they’ve earned, making it straightforward to claim their rewards or reinvest them.
 
@@ -36,9 +36,7 @@ Yield is accrued from multiple sources, and earners receive it in the form of th
 Funds from the vaults are deposited into various money markets (e.g., Aave, Compound) that offer the best yield opportunities for specific assets. The protocol constantly rebalances these deposits based on changing interest rates and transaction costs, ensuring the highest possible returns.
 
 
-### CT Token Emissions
 
-Concrete rewards earners with CT tokens, adding an extra source of income for those participating in its yield vaults.
 
 ## Example
 
@@ -50,7 +48,6 @@ After some time, you accrue yield from multiple sources:
 
 * 0.01 ETH from money markets,
 * 150 USDC from planned loan-protection fees (future revenue stream), and
-* 100 CT tokens from emissions.
 
 When you decide to withdraw your ETH, you redeem cETH tokens. Concrete’s system ensures there is enough liquidity to facilitate the withdrawal by managing the funds reserved for yield generation and (in future versions) protection modules.
 If liquidity is momentarily tied up, your request enters a redemption queue, with full transparency on when your funds will be available.

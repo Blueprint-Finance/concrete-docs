@@ -29,11 +29,13 @@ Decentralized Finance (DeFi) comes with complexities that require users to "Do Y
 Concrete’s value proposition lies in how it addresses common DeFi challenges in a simple and automated way. While other platforms leave users vulnerable to liquidation risks, force them to chase yields manually, and provide fragmented experiences across different chains, Concrete unifies all of these features into one platform.
 
 ### Easy to Use
+
 For many users, DeFi requires connecting to multiple platforms, understanding complex protocols, and constantly monitoring market conditions. Concrete eliminates this complexity by offering a streamlined user experience.
 
 The interface is designed so users don’t have to worry about switching between networks or applications. Concrete brings DeFi on easy mode, allowing users to focus on their strategies while the platform handles the execution.
 
 ### Best Yields to Earn
+
 Yield farming in DeFi often involves searching through numerous protocols to find the highest returns, but this introduces risks like smart contract vulnerabilities and liquidity issues. Concrete’s Earn Vaults automate yield optimization, continuously reallocating your assets to the highest-yielding opportunities across multiple protocols.
 
 Integration with multiple money markets, allowing users to tap into the best yields across different protocols. Users can deposit their assets once and Concrete takes care of rebalancing between different money markets as conditions change.
@@ -60,11 +62,3 @@ In the future, Concrete will significantly reduce this fear by offering multi-la
 ### Leveraging Long-term Assets
 
 Users often want liquidity for short-term needs while holding onto long-term assets like Ethereum. In the future, Concrete will allow you to easily borrow stablecoins or other assets against your deposits without worrying about liquidation risks. Whether you need liquidity for new investments or just want to use your holdings without selling them, Concrete will allow you to do this with peace of mind. The platform will handle the complexities, ensuring you get the best borrowing rates and protection.
-
-### A Real-World Analogy
-
-Imagine you own a house, which represents your Ethereum (ETH) deposit. Concrete steps in and finds a tenant for you, ensuring you earn rental income—this is akin to the yield Concrete helps you generate from your crypto assets. To prove you own the house and that it's generating income, Concrete gives you a lease agreement—this is your Concrete token (ctETH), which acts as a receipt for your deposit.
-
-Now, let's say you need to borrow money for an investment, but you don’t want to sell your house. Concrete allows you to borrow stablecoins (like USDT) against the lease agreement (ctETH). You get access to the funds without having to sell your long-term asset. If you want to get your house (ETH) back, all you need to do is pay off the loan and return the lease agreement (ctETH).
-
-Meanwhile, Concrete continuously monitors the market for you. If the value of your house (ETH) drops, Concrete steps in to ensure you aren’t liquidated, protecting your investment until the market stabilizes.

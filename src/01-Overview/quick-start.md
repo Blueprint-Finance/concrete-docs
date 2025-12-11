@@ -65,6 +65,6 @@ The **Portfolio** dashboard allows you to track and manage your activity within 
 
 1. **Positions**: Displays all your active and closed positions
 2. **Vaults**: Lets you manage your deposits into vaults. You can add or withdraw assets, and adjust your investment strategy as needed.
-3. **Rewards**: Displays all the rewards you've earned through participating in Concrete's earning mechanisms. These rewards typically include **CT Tokens**, which can be claimed directly from the dashboard.
+3. **Rewards**: Displays all the rewards you've earned through participating in Concrete's earning mechanisms.
 
 ![](/img/portfolio.png)
