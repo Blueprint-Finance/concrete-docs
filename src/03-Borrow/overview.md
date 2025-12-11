@@ -59,7 +59,7 @@ Concrete Lite, enabled by default, protects users from standard liquidation even
 
 ### 5. Repayment and Withdrawal
 
-To close a position, users must repay the borrowed amount. Once the loan is fully repaid, they can redeem their cETH tokens for the original ETH deposit. Concrete ensures all assets remain accessible upon loan closure, with no additional withdrawal fees.
+To close a position, users must repay the borrowed amount. Once the loan is fully repaid, they can redeem their tokens for the original ETH deposit. Concrete ensures all assets remain accessible upon loan closure, with no additional withdrawal fees.
 
 ## Technical Infrastructure and Optimization
 
