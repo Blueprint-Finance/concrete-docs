@@ -73,7 +73,7 @@ Your vault shares will appear on the Stable Network. You can view them on the [S
 
 ### 7. Withdrawal
 
-Users will be able to enter the withdrawal queue starting December 13th, which operates over a 7-day withdrawal queue period. Once a user’s request has been processed, they will be able to complete their withdrawal and retrieve funds from the vault.
+Users will be able to enter the withdrawal queue **starting December 13th**. The queue is a **7-day withdrawal period**. After a user’s request is processed, they will be able to complete their withdrawal and retrieve funds from the vault.
 
 ## Troubleshooting
 
