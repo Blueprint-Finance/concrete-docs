@@ -13,13 +13,13 @@ Concrete adopts this standard to simplify the complex process of managing yields
 
 ### 1. Standardized Deposits and Withdrawals
 
-* With ERC-4626, the process of depositing and withdrawing assets from vaults is streamlined. Users deposit their assets (e.g., ETH, USDC, BTC) into vaults, receiving **cTokens** in return. These tokens represent their share of the vault and are fully transferable across different DeFi platforms that support ERC-4626.
+* With ERC-4626, the process of depositing and withdrawing assets from vaults is streamlined. Users deposit their assets (e.g., ETH, USDC, BTC) into vaults, receiving rewards in return. These tokens represent their share of the vault and are fully transferable across different DeFi platforms that support ERC-4626.
 
-* Withdrawals are just as simple. When a user decides to redeem their position, they burn their cTokens and receive their underlying assets back, along with any yield that has accrued over time.
+* Withdrawals are just as simple. When a user decides to redeem their position and receive their underlying assets back, along with any yield that has accrued over time.
 
 ### 2. Interoperability Across Platforms
 
-* The standardization brought by ERC-4626 makes vaults and cTokens interoperable across various DeFi platforms, enabling users to move between protocols without friction. ERC-4626 vaults integrate smoothly with other DeFi solutions, giving users more flexibility and reducing the need for manual intervention.
+* The standardization brought by ERC-4626 makes vaults interoperable across various DeFi platforms, enabling users to move between protocols without friction. ERC-4626 vaults integrate smoothly with other DeFi solutions, giving users more flexibility and reducing the need for manual intervention.
 
 ### 3. Simplified Accounting for Yield Accrual
 
@@ -54,6 +54,6 @@ If liquidity is momentarily tied up, your request enters a redemption queue, wit
 
 ## User Benefits
 
-* Track your earnings through cTokens. The system calculates and displays the notional value of the yield accrued, expressed in the asset originally deposited (e.g., ETH).
-* Redeem your cTokens to reclaim deposited assets and accrued yield with minimal hassle. Concrete’s liquidity management system ensures that withdrawals are executed efficiently, even if a redemption queue is needed to ensure liquidity.
+* Track your earnings. The system calculates and displays the notional value of the yield accrued, expressed in the asset originally deposited.
+* Redeem your tokens to reclaim deposited assets and accrued yield with minimal hassle. Concrete’s liquidity management system ensures that withdrawals are executed efficiently, even if a redemption queue is needed to ensure liquidity.
 * Assets are constantly being shifted to the best-performing money markets. By monitoring interest rates, transaction costs, and liquidity utilization across multiple DeFi platforms, Concrete optimizes returns without the user needing to micromanage their investments.
