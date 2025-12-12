@@ -31,9 +31,9 @@ Some vaults operate on a **fixed withdrawal schedule**, processing requests once
 - **Processing Time:** Thursdays at 12:00 PM UTC
 - Requests made after the cutoff roll into the next week’s batch
 
-### Stable Network Schedule
+### Stable Schedule
 
-Withdrawals for the Stable Network (ctStableUSDT and ctStablefrxUSD) open on December 13, 2025. The queue is a **7-day withdrawal period**. After users requests are processed, they will be able to complete their withdrawal and retrieve funds from the vault.
+Withdrawals for the Stable (ctStableUSDT and ctStablefrxUSD) open on December 13, 2025. The queue is a **7-day withdrawal period**. After users requests are processed, they will be able to complete their withdrawal and retrieve funds from the vault.
 
 ### Corn Stables Vault Schedule
 
@@ -60,7 +60,7 @@ If she submits after the cutoff (e.g., **Monday at 12:01 PM**), her request will
 
 | Vault Name | Max Wait Time | Schedule |
 | --- | --- | --- |
-| **Stable Network (ctStableUSDT / ctStablefrxUSD)** | Up to 7 days  | Withdrawal queue opens December 13, 2025 |
+| **Stable (ctStableUSDT / ctStablefrxUSD)** | Up to 7 days  | Withdrawal queue opens December 13, 2025 |
 | **Berachain Bitcoin** | Up to 5 days | Processed Mondays & Thursdays |
 | **Berachain Ethereum / Stables / BERA / Berabaddies** | Up to 7 days | Cutoff Wed 12 PM, release Thurs 12 PM |
 | **Corn Stables** | Up to 7 days | Cutoff Mon 12 PM, release Thurs 12 PM |
@@ -100,7 +100,7 @@ Concrete uses queues to:
 
 ## Summary Table
 
-| Feature              | Weekly Vaults (Berachain, Corn) | Instant Vaults (Morpho) | Stable Network                                        |
+| Feature              | Weekly Vaults (Berachain, Corn) | Instant Vaults (Morpho) | Stable                                        |
 | -------------------- | ------------------------------- | ----------------------- | --------------------------------------------------------- |
 | Wait Time            | Up to 5–7 days                  | None                    | Up to 7 days                                              |
 | Schedule             | Fixed days (Mon/Thurs)          | Anytime                 | Queue opens Dec 13, processed anytime within 7-day window |
