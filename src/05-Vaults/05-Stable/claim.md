@@ -29,11 +29,11 @@ If you are unsure whether your multisig or contract wallet is supported on Stabl
 
 ## How to Claim Your Vault Shares
 
-### **1. Start claiming**
+### 1. Start claiming
 
-Go to [**https://stable.concrete.xyz**](https://stable.concrete.xyz/) and connect the wallet holding your **ctStableUSDT** or **ctStablefrxUSD** shares.
+Go to [https://stable.concrete.xyz](https://stable.concrete.xyz/) and connect the wallet holding your **ctStableUSDT** or **ctStablefrxUSD** shares.
 
-**Or** Go to [**https://app.concrete.xyz**](https://app.concrete.xyz/) → Earn, and connect the same wallet. If you are eligible, you will see a banner: “Tokens ready to claim.” Click **Claim**.
+**Or** Go to [https://app.concrete.xyz](https://app.concrete.xyz/) → Earn, and connect the same wallet. If you are eligible, you will see a banner: “Tokens ready to claim.” Click **Claim**.
 
 ### 2. Review Your Claim
 
@@ -94,7 +94,7 @@ Do not refresh the page and Keep the app open until completion.
 The safest way to view your claimed balance is to:
 
 1. Connect your wallet
-2. Go to the **Portfolio** section of the Earn page **or** Visit [**https://stable.concrete.xyz**](https://stable.concrete.xyz/), connect your wallet, and select the vault on Stable to view your balance
+2. Go to the **Portfolio** section of the Earn page **or** Visit [https://stable.concrete.xyz](https://stable.concrete.xyz/), connect your wallet, and select the vault on Stable to view your balance
 
 # Need Help?
 
