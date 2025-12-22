@@ -29,6 +29,12 @@ Concrete Protocol follows a multi-phased audit approach to deliver the highest l
 4. **Public Transparency**  
    All audit results are made publicly accessible, reinforcing our commitment to transparency and accountability.
 
+## Earn V2 - Whitelisting Hook {#whitelisting-hook}
+
+- Date: December 18, 2025
+- Auditor: Halborn
+- [View the full report](/files/Earn-v2-Whitelisting-Hook.pdf)
+
 ## Earn V2 - Predeposit Vault {#earn-v2-predeposit-vault}
 
 - Date: October 23, 2025
