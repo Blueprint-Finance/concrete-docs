@@ -42,8 +42,8 @@ For **vaults hosted in partnership** and displayed on the Concrete website, plea
 
 | Vault | Vault Address | Deprecation Date | Rewards/Points |
 | --- | --- | --- | --- |
+| BERA/USDe | [0x585934afbf1fa9f563b80283f8b916dd8f66a9b6](https://berascan.com/address/0x585934afbf1fa9f563b80283f8b916dd8f66a9b6) | January 05, 2026 |  |
 | BERA/sUSDe | [0xd08e3652e6b29ebdd58fe93b422513862fb49899](https://berascan.com/address/0xd08e3652e6b29ebdd58fe93b422513862fb49899) | December 03, 2025 |  |
-| BERA/USDe | [0x585934afbf1fa9f563b80283f8b916dd8f66a9b6](https://berascan.com/address/0x585934afbf1fa9f563b80283f8b916dd8f66a9b6) | December 03, 2025 |  |
 | BERA/beraETH | [0x49bee393825bbac404fefe6e24f34854f30905d2](https://berascan.com/address/0x49bee393825bbac404fefe6e24f34854f30905d2) | December 03, 2025 |  |
 | BERA/WETH | [0x8d3e53f5521927e5c78d42b4f9e08ae8df91b772](https://berascan.com/address/0x8d3e53f5521927e5c78d42b4f9e08ae8df91b772) | December 03, 2025 |  |
 | Arbitrum Drip Vault syrupUSDC | [0x09265e4d7ec6822d86b3809ae363bb8ce742835d](https://arbiscan.io/address/0x09265e4d7ec6822d86b3809ae363bb8ce742835d) | November 27, 2025 |  |
