@@ -29,6 +29,12 @@ Concrete Protocol follows a multi-phased audit approach to deliver the highest l
 4. **Public Transparency**  
    All audit results are made publicly accessible, reinforcing our commitment to transparency and accountability.
 
+## AssetCT
+
+   - Date: January 09, 2026
+   - Auditor: Halborn
+   - [View the full report](/files/AssetCT.pdf)
+
 ## Earn V2 - Whitelisting Hook {#whitelisting-hook}
 
 - Date: December 18, 2025
