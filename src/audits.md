@@ -29,7 +29,7 @@ Concrete Protocol follows a multi-phased audit approach to deliver the highest l
 4. **Public Transparency**  
    All audit results are made publicly accessible, reinforcing our commitment to transparency and accountability.
 
-## AssetCT
+## AssetCX
 
    - Date: January 09, 2026
    - Auditor: Halborn
