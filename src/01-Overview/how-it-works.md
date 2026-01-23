@@ -25,10 +25,6 @@ Strategies are smart contracts that interact with DeFi protocols to earn yield.
 Each vault can have several strategies — for example, lending on Aave, providing liquidity on Pendle, or holding yield-bearing assets.
 The vault’s Allocator role moves funds between strategies safely, ensuring target exposures and limits are respected.
 
-## Accounting and Fees
-
-Vaults automatically track performance and apply management or performance fees. These fees are minted as shares, so vault performance and user balances stay accurate in real time.
-
 ## Withdrawals
 
 Withdrawals can happen instantly or in epochs (if the vault uses asynchronous mode).
@@ -54,6 +50,6 @@ Let’s look at how a typical Earn V2 vault works in practice:
 1. **A partner launches a USDC vault** through Concrete Build using the Factory. The vault is configured with two strategies: a Pendle yield strategy and a Curve stable pool strategy.
 2. **Users deposit USDC**, receiving vault shares that represent ownership of the vault’s total assets.
 3. **The Allocator moves capital** — half into Pendle, half into Curve — balancing allocations as yields change.
-4. **Each day**, the vault’s automated accounting updates total assets, calculates yield, and applies any management or performance fees.
+4. **Each day**, the vault’s automated accounting updates total assets and calculates yield.
 5. **When users withdraw**, the system converts their shares back into USDC, either instantly or after the next epoch (for async vaults).
 6. **All activity is recorded** on-chain and reflected in the subgraph, giving full transparency to vault operators and depositors.

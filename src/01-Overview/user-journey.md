@@ -32,7 +32,7 @@ These features are not yet active but remain part of Concrete’s long-term prod
 
 ### 4. Simple Fee Structure
 
-On the first day, you begin incurring standard fees like **Yield fees** (a small percentage of profits, typically around 2%).
+On the first day, you begin incurring standard fees like **Yield fees**.
 
 ## Day 500: A Growing Set of Opportunities
 
