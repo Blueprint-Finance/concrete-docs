@@ -127,7 +127,7 @@ The Concrete V2 Vaults are ERC4626-vaults. They adhere to the standard in all bu
 - **Library Structure**: Core functionality is organized in libraries located in `src/lib/` directory
 - **Upgradeability**: Vaults are upgradeable through the factory's upgrade mechanism
 
-The vaults can hold several strategies, which are adapters to other protocols or abstract away functions and features to earn yield. Hence the name __Multi-Strategy-Vault__. Accounting of totalAssets happens through a cached variable, rather than a query of `balanceOf`. All vaults are capable of charging various fee types. By default the vaults come with two fee types, which are the management and performance fees.
+The vaults can hold several strategies, which are adapters to other protocols or abstract away functions and features to earn yield. Hence the name __Multi-Strategy-Vault__. Accounting of totalAssets happens through a cached variable, rather than a query of `balanceOf`. All vaults are capable of charging various fee types.
 
 ### 2.1. Main User Operations
 
@@ -187,32 +187,7 @@ Moreover if fees are accrueing, then fee accrual events will also be emitted.
 
 **IMPORTANT**: The Concrete-V2 vaults are ERC4626-compliant in every point except one, which regards the quote of totalAssets. In case of a broken strategy, where accurate accounting cannot be guaranteed, the value of totalAssets must not reflect a wrong value. Instead totalAssets will revert, which is not compliant to the standard.
 
-### 2.4 Fees
-
-Concrete-V2 comes with the ability to charge fees. By default Concrete charges two types of fees: `management fee` and `performance fee`.
-
-The management fee is charged per annum. Each time the management fee accrues it is checked how much time has elapsed since the previous accrual and based on a state-variable called `uint16 managementFee` which is given in basis points (100% = 10000) the fee is charged accordingly. The fee is charged by minting shares and thus is socialized across all holders. It also leads to a tiny depreciation of the share value.
-
-The performance fee is charged on each positive yield accrual with respect to that yield. This differs from Concrete-V1, where previously the fee has been charged with respect to the share value. In V2 any time the accrual is called and the net effect of the gains and losses across all strategies is positive, a percentage of `uint16 performanceFee` (in basispoints) from that net-yield is deducted. The fee is then minted in shares. However these shares typically do not depreciate the share value, since they are backed by newly accounted assets from the incoming yield.
-
-There is no external function that calls the accrual of fees by themselves. It happens in conjunction with the yield accrual, which is at least for the performance fee a pre-requisite for the accrual. The events that are triggered upon successful fee accrual for the management and performance fees are
-```js
-event ManagementFeeAccrued(address indexed recipient, uint256 shares, uint256 feeAmount);
-event PerformanceFeeAccrued(address indexed recipient, uint256 shares, uint256 feeAmount);
-```
-
-There is one fee recipient per fee type. This allows the vault operators to disentangle the fee types. The fee recipient can either be an EOA, an account abstraction or some auxiliary contract that handles the fee processing or splitting. Concrete provides an out-of-the box basic fee-splitter that can divide the fees for up to two parties. It can be found in __src/periphery/auxiliary/TwoWayFeeSplitter.sol__ . If it is set as a fee recipient, the fees will accumulate there and can be distributed on regular intervals. The Two-Way Fee Splitter can also function as a fee splitter for many vaults. It discerns the fees by the token address, which is identical to the vault address for Concrete-v2 ERC4626 vaults.
-
-In summary the fees are handled as follows:
-
-1. Concrete-V2 charges two types of fees by default: management fee and performance fee.
-2. All fees are minted as shares to a recipient.
-3. Management fees are calculated per annum on every user and operator interaction.
-4. Performance Fees are taken directly from the generated yield (major change from previous v1).
-5. No hurdle rate and no high water mark even.
-6. Fee calculation is global, not at user level.
-
-### 2.5. Access Control And Vault Operations
+### 2.4. Access Control And Vault Operations
 
 The Concrete-V2 vaults have three different modes of access control: Resolution of factory ownership, vault ownership and a role-based model: Every vault has an upgrade admin, who may upgrade the vault to another version. This uses the Openzeppelin `Ownable` model (or the upgradeable version of it). The current imcumbant can be queried via the `owner()` public function. For the common vault operations there are four roles set aside: 1) Vault Manager 2) Strategy Manager 3) Hook Manager 4) Allocator. The Vault Manager is used for updating state variable. The Strategy Manager can add, remove or halt strategies (see below in [Section 3.1](#31-strategies)). The hook Manager can set and update the hook (See [Section 3.2](#32-hooks)). The Allocator can allocate funds to strategies or deallocate them. They can also set a de-allocation order (see [Section 3.1.2](#312-allocator-fund-movement)).
 

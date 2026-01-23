@@ -27,15 +27,6 @@ Earn V2 builds directly on the foundation of Earn V1, addressing operational bot
 - **Modular Architecture** — Pluggable components for strategies and allocation logic
 - **Liquidity Management** — Epoch-based withdrawal system for reliable asynchronous withdrawal schedules and improved operational control.
 
-## Automated Fee Management
-
-Earn V2 supports management fees taken on AUM and performance, each configurable by the Vault owner. Concrete automates the routing of fee revenue between vault owners and concrete.
-
-| Fee Type | Description | Example |
-| --- | --- | --- |
-| **Management Fee** | Continuous fee based on total vault assets (AUM). | 1% annualized, accrued daily. |
-| **Performance Fee** | Applied directly on returns | 10% of profits generated. |
-
 ## Roles and controls
 
 **Vault owner:** controls upgrades for a specific vault.
@@ -61,7 +52,7 @@ A single factory contract deploys vaults, registers approved implementations, an
 Each chain has its own factory that follows the **UUPS** upgrade standard with **EIP-7201** storage layout for safe migrations..
 
 **Vaults**
-Vaults follow the ERC-4626 tokenized-vault standard for deposits, withdrawals, and accounting. They can hold multiple strategies and charge management and performance fees.
+Vaults follow the ERC-4626 tokenized-vault standard for deposits, withdrawals, and accounting. They can hold multiple strategies.
 
 Both fees are minted as vault shares to the fee recipient for transparency and simplicity.
 

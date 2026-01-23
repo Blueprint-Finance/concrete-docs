@@ -57,8 +57,6 @@ type Vault @entity(immutable: false) {
 - Deposits
 - Withdrawals
 - Yield Accrued
-- Management Fee Accrued
-- Performance Fee Accrued
 
 ## Async Vault Extensions
 
