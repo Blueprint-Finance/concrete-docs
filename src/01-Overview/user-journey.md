@@ -66,7 +66,7 @@ Concrete integrates automated asset management and rebalancing, using the yield 
 
 ### Yield Fees
 
-For each yield-generating strategy that Concrete executes on your behalf, a small percentage of the profits (typically around 2%) is paid to the protocol as a **service fee**. This incentivizes Concrete to consistently find the most efficient yield-generating opportunities for its users.
+For each yield-generating strategy that Concrete executes on your behalf, a small percentage of the profits (typically around 2%) is paid to the protocol as a **vault fee**. This incentivizes Concrete to consistently find the most efficient yield-generating opportunities for its users.
 
 ## Example Journey
 
