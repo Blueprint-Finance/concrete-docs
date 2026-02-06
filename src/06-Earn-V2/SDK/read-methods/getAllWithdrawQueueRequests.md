@@ -56,25 +56,55 @@ An array of withdrawal-queue requests:
 import { getVault } from "@concrete-xyz/sdk";
 import { ethers } from "ethers";
 
-const provider = new ethers.JsonRpcProvider(process.env.RPC_URL!);
-const signer = new ethers.Wallet(process.env.PRIVATE_KEY!, provider);
+async function main() {
+  const provider = new ethers.JsonRpcProvider(process.env.RPC_URL!);
+  const signer = new ethers.Wallet(process.env.PRIVATE_KEY!, provider);
 
-const vault = getVault("0xYourVault", "Ethereum", provider, signer);
+  const vault = getVault("0xYourVault", "Ethereum", provider, signer);
 
-const owner = await signer.getAddress();
-const requests = await vault.getAllWithdrawQueueRequests(owner);
+  const owner = await signer.getAddress();
+  const requests = await vault.getAllWithdrawQueueRequests(owner);
 
-// Render list
-for (const r of requests) {
-  console.log({
-    epoch: r.epoch,
-    epochState: r.epochState,
-    amount: r.amount.toString(),
-    claimable: r.claimable,
-    cancelable: r.cancelable,
-  });
+  // Render list
+  for (const r of requests) {
+    console.log({
+      recipient: r.recipient,
+      epoch: r.epoch,
+      epochState: r.epochState,
+      amount: r.amount.toString(),
+      claimable: r.claimable,
+      cancelable: r.cancelable,
+      vaultAddress: r.vaultAddress,
+      chainId: r.chainId,
+      version: r.version,
+    });
+  }
+
+  // Claim the first claimable request (if any)
+  const firstClaimable = requests.find((r) => r.claimable);
+  if (firstClaimable) {
+    console.log("Claiming request in epoch", firstClaimable.epoch);
+    const tx = await firstClaimable.claim();
+    const receipt = await tx.wait();
+    console.log("Claim confirmed:", receipt?.hash ?? receipt?.transactionHash);
+    return;
+  }
+
+  // Otherwise, cancel the first cancelable request (if any)
+  const firstCancelable = requests.find((r) => r.cancelable);
+  if (firstCancelable) {
+    console.log("Canceling request in epoch", firstCancelable.epoch);
+    const tx = await firstCancelable.cancel();
+    const receipt = await tx.wait();
+    console.log("Cancel confirmed:", receipt?.hash ?? receipt?.transactionHash);
+    return;
+  }
+
+  console.log("No claimable or cancelable requests found.");
 }
 
-// Claim the first claimable request
-const firstClaimable =
+main().catch((err) => {
+  console.error("Failed:", err);
+  process.exit(1);
+});
 ```
