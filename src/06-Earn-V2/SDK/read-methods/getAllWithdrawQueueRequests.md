@@ -9,7 +9,7 @@ Fetches **all withdrawal-queue requests** for a given `owner` address, and retur
 * `cancel()` — cancels the request (when `cancelable: true`)
 * `claim()` — claims the withdrawal (when `claimable: true`)
 
-The returned `cancel()` / `claim()` functions are **write actions** and therefore require a **signer**.
+The returned `cancel()` / `claim()` functions are **write actions** and therefore require a signer.
 
 ## Signature
 
