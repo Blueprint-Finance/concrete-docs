@@ -44,6 +44,7 @@ const sidebars = {
                 'Earn-V2/SDK/read-methods/getAddress',
                 'Earn-V2/SDK/read-methods/getUnderlyingDecimals',
                 'Earn-V2/SDK/read-methods/getVaultDetails',
+                'Earn-V2/SDK/read-methods/getAllWithdrawQueueRequests',
                 'Earn-V2/SDK/read-methods/previewConversion',
                 'Earn-V2/SDK/read-methods/totalAssets',
                 'Earn-V2/SDK/read-methods/symbol',
