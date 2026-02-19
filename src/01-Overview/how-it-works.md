@@ -47,7 +47,7 @@ This automation framework eliminates manual interventions, enabling daily update
 
 Let’s look at how a typical Earn V2 vault works in practice:
 
-1. **A partner launches a USDC vault** through Concrete Build using the Factory. The vault is configured with two strategies: a Pendle yield strategy and a Curve stable pool strategy.
+1. **A partner launches a USDC vault** through Concrete Enterprise using the Factory. The vault is configured with two strategies: a Pendle yield strategy and a Curve stable pool strategy.
 2. **Users deposit USDC**, receiving vault shares that represent ownership of the vault’s total assets.
 3. **The Allocator moves capital** — half into Pendle, half into Curve — balancing allocations as yields change.
 4. **Each day**, the vault’s automated accounting updates total assets and calculates yield.

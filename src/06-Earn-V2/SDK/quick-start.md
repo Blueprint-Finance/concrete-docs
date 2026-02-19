@@ -32,7 +32,7 @@ Developers already familiar with Wagmi can use their existing configuration — 
 
 ## SDK Playground
 
-Concrete provides a **live SDK Playground** inside **Concrete Build** — a lightweight web interface that demonstrates SDK + Wagmi hooks in real time.
+Concrete provides a **live SDK Playground** inside **Concrete Enterprise** — a lightweight web interface that demonstrates SDK + Wagmi hooks in real time.
 
 It’s the fastest way to explore Concrete’s SDK without setting up a full app. You can view vault details, deposit, withdraw, and monitor balances all from your browser.
 

@@ -9,7 +9,7 @@ Concrete Earn transforms DeFi vaults from manual, governance-heavy systems into 
 
 | **Component**                  | **Purpose**                                                                                                                                                                   |
 | ------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Concrete Earn**              | Automated vault infrastructure for on-chain yield strategies. Partners can deploy custom ERC-4626 vaults, manage roles, and connect strategies safely through Concrete Build. |
+| **Concrete Earn**              | Automated vault infrastructure for on-chain yield strategies. Partners can deploy custom ERC-4626 vaults, manage roles, and connect strategies safely through Concrete Enterprise. |
 | **Automation Engine**          | Keeps vault accounting up to date through automated yield accrual and fee calculation, ensuring daily NAV precision and real-time performance tracking.                       |
 | **Subgraph Indexing**          | Tracks all deposits, withdrawals, fees, and yield events — delivering full on-chain transparency and analytics.                                                               |
 

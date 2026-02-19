@@ -29,6 +29,13 @@ Concrete Protocol follows a multi-phased audit approach to deliver the highest l
 4. **Public Transparency**  
    All audit results are made publicly accessible, reinforcing our commitment to transparency and accountability.
 
+## Looping Strategy Swapper Contract
+
+
+   - Date: February 13, 2026
+   - Auditor: Halborn
+   - [View the full report](/files/Looping-Strategy-Swapper-Contract.pdf)
+
 ## AssetCX
 
    - Date: January 09, 2026
