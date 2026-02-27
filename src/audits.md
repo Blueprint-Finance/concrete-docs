@@ -12,6 +12,7 @@ To ensure the integrity of our smart contracts and the trust of our users, we wo
 * **Code4rena**
 * **Halborn**
 * **Zellic**
+* **Cantina**
 
 ## Our Approach to Audits
 
@@ -29,8 +30,13 @@ Concrete Protocol follows a multi-phased audit approach to deliver the highest l
 4. **Public Transparency**  
    All audit results are made publicly accessible, reinforcing our commitment to transparency and accountability.
 
-## Looping Strategy Swapper Contract
+## Earn V2 Core
 
+   - Date: February 20, 2026
+   - Auditor: Cantina
+   - [View the full report](/files/cantinacode-concrete-finance.pdf)
+
+## Looping Strategy Swapper Contract
 
    - Date: February 13, 2026
    - Auditor: Halborn
