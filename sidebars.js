@@ -156,7 +156,7 @@ const sidebars = {
            },
            {
              type: 'category',
-             label: 'DeFi USDT',
+             label: 'Concrete DeFi USDT',
              items: [
                'Vaults/DeFi-USDT/how-withdrawals-are-processed',
                'Vaults/DeFi-USDT/important-disclosures',
