@@ -21,7 +21,9 @@ To see when your withdrawal will be available:
 
 The app will always reflect the next upcoming batch date.
 
-![](/img/defi-usdt-withdrawal-tab.png)
+<div style={{textAlign: 'center'}}>
+<img src="/img/defi-usdt-withdrawal-tab.png" width="400" />
+</div>
 
 :::note
 All withdrawals are subject to the specific terms of this vault. See [Important Disclosures](./important-disclosures.md).
