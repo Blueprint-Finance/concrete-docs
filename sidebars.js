@@ -140,12 +140,18 @@ const sidebars = {
                'Vaults/Morph/overview',
              ],
            },
-
            {
              type: 'category',
              label: 'Tac',
              items: [
                'Vaults/Tac/vault-deprecation-guide',
+             ],
+           },
+           {
+             type: 'category',
+             label: 'WBTC',
+             items: [
+               'Vaults/WBTC/wbtc-vault-migration-to-earn-v2',
              ],
            },
          ],
