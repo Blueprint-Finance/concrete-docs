@@ -4,7 +4,7 @@ description: "Important disclosures regarding risks and characteristics of Concr
 sidebar_label: "Important Disclosures"
 ---
 
-Please read these important disclosures carefully before participating in Concrete's Yield Generation Program.
+Please read these important disclosures carefully before participating in Concrete's funds Yield Generation Program.
 
 ## Lack of Regulatory Protections
 
@@ -24,7 +24,7 @@ Smart contracts may contain vulnerabilities or exploits that could result in los
 
 ## Liquidation Risks
 
-If Concrete's collateral value falls relative to borrowed amounts, DeFi money markets may liquidate Concrete's positions, potentially resulting in loss of collateral. If funds experience a significant depeg, this could trigger liquidation with money market lenders having priority claims to custodied funds. In liquidation scenarios, claims priority typically follows: (1) DeFi protocol lenders and liquidators as secured creditors, (2) Concrete's operational claims, and (3) depositors through vault shares. Losses affecting one portion of the pool could impact all depositors proportionally.
+If Concrete's collateral value falls relative to borrowed amounts, DeFi money markets may liquidate Concrete's positions, potentially resulting in loss of collateral. If funds experiences a significant depeg, this could trigger liquidation with money market lenders having priority claims to custodied funds. In liquidation scenarios, claims priority typically follows: (1) DeFi protocol lenders and liquidators as secured creditors, (2) Concrete's operational claims, and (3) depositors through vault shares. Losses affecting one portion of the pool could impact all depositors proportionally.
 
 ## Tax Implications
 
@@ -47,5 +47,5 @@ The program is subject to limited regulatory oversight and evolving regulations 
 By delegating funds to Concrete, you acknowledge that you have read and understand these disclosures and the risks described herein, including lack of regulatory protections, liquidation risks, no guaranteed yields, smart contract and DeFi risks, tax implications, Concrete's profit model and conflicts of interest, and termination rights. Any disputes shall be resolved through binding arbitration per applicable agreements. In the event of any conflict between this disclosure and executed agreements, the executed agreements shall govern.
 
 :::warning
-THESE DISCLOSURES ARE PROVIDED FOR INFORMATIONAL PURPOSES ONLY AND DO NOT CONSTITUTE INVESTMENT, LEGAL, TAX, OR FINANCIAL ADVICE. CONSULT QUALIFIED ADVISORS BEFORE PARTICIPATING AND FOR ADVICE AS TO LEGAL, TAX AND ECONOMIC IMPLICATIONS. CONCRETE MAKES "FORWARD-LOOKING STATEMENTS," WHICH DESCRIBE FUTURE EXPECTATIONS, PLANS, RESULTS OR STRATEGIES AND CAN OFTEN BE IDENTIFIED BY THE USE OF TERMINOLOGY SUCH AS "MAY," "WILL," "EXPECT," "PLAN," OR SIMILAR TERMINOLOGY. THESE STATEMENTS ARE BASED UPON CONCRETE'S CURRENT EXPECTATIONS, ASSUMPTIONS AND ESTIMATES, AND ARE NOT GUARANTEES. ACTUAL RESULTS MAY DIFFER MATERIALLY FROM THOSE CONTEMPLATED IN THESE STATEMENTS DUE TO A VARIETY OF RISKS AND UNCERTAINTIES. THIS DOCUMENT DOES NOT CONSTITUTE AN OFFER OR INVITATION OR SOLICITATION OF ANY OFFER TO SELL, PURCHASE, DELEGATE OR LOAN ANY SECURITIES AND IS NOT INTENDED, AND DOES NOT, CREATE A BINDING OR ENFORCEABLE AGREEMENT ON THE PART OF THE COMPANY.
+THESE DISCLOSURES ARE PROVIDED FOR INFORMATIONAL PURPOSES ONLY AND DO NOT CONSTITUTE INVESTMENT, LEGAL, TAX, OR FINANCIAL ADVICE. CONSULT QUALIFIED ADVISORS BEFORE PARTICIPATING AND FOR ADVICE AS TO LEGAL, TAX AND ECONOMIC IMPLICATIONS. CONCRETE MAKES “FORWARD-LOOKING STATEMENTS,” WHICH DESCRIBE FUTURE EXPECTATIONS, PLANS, RESULTS OR STRATEGIES AND CAN OFTEN BE IDENTIFIED BY THE USE OF TERMINOLOGY SUCH AS “MAY,” “WILL,” “EXPECT,” “PLAN,” OR SIMILAR TERMINOLOGY. THESE STATEMENTS ARE BASED UPON CONCRETE’S CURRENT EXPECTATIONS, ASSUMPTIONS AND ESTIMATES, AND ARE NOT GUARANTEES. ACTUAL RESULTS MAY DIFFER MATERIALLY FROM THOSE CONTEMPLATED IN THESE STATEMENTS DUE TO A VARIETY OF RISKS AND UNCERTAINTIES. THIS DOCUMENT DOES NOT CONSTITUTE AN OFFER OR INVITATION OR SOLICITATION OF ANY OFFER TO SELL, PURCHASE, DELEGATE OR LOAN ANY SECURITIES AND IS NOT INTENDED, AND DOES NOT, CREATE A BINDING OR ENFORCEABLE AGREEMENT ON THE PART OF THE COMPANY
 :::
