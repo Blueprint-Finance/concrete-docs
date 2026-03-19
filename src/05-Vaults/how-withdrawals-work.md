@@ -62,6 +62,7 @@ If she submits after the cutoff (e.g., **Monday at 12:01 PM**), her request will
 | --- | --- | --- |
 | **Stable (ctStableUSDT / ctStablefrxUSD)** | Up to 7 days  | Withdrawal queue opens December 13, 2025 |
 | **Berachain Bitcoin** | Up to 5 days | Processed Mondays & Thursdays |
+| **Concrete DeFi USDT** | Up to 7 days | Processed Mondays & Thursdays |
 | **Berachain Ethereum / Stables / BERA / Berabaddies** | Up to 7 days | Cutoff Wed 12 PM, release Thurs 12 PM |
 | **Corn Stables** | Up to 7 days | Cutoff Mon 12 PM, release Thurs 12 PM |
 | **Corn Bitcoin** | Instant | Withdraw anytime |

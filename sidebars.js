@@ -154,6 +154,13 @@ const sidebars = {
                'Vaults/WBTC/wbtc-vault-migration-to-earn-v2',
              ],
            },
+           {
+             type: 'category',
+             label: 'DeFi USDT',
+             items: [
+               'Vaults/DeFi-USDT/how-withdrawals-are-processed',
+             ],
+           },
          ],
        },
 
