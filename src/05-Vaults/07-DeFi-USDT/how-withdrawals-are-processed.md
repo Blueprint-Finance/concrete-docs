@@ -24,5 +24,5 @@ The app will always reflect the next upcoming batch date.
 ![](/img/defi-usdt-withdrawal-tab.png)
 
 :::note
-All withdrawals are subject to the specific terms of this vault. See [Important Disclosures](/restrictions/).
+All withdrawals are subject to the specific terms of this vault. See [Important Disclosures](./important-disclosures.md).
 :::
