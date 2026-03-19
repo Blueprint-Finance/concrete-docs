@@ -159,6 +159,7 @@ const sidebars = {
              label: 'DeFi USDT',
              items: [
                'Vaults/DeFi-USDT/how-withdrawals-are-processed',
+               'Vaults/DeFi-USDT/important-disclosures',
              ],
            },
          ],
