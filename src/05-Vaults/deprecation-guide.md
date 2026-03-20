@@ -1,6 +1,6 @@
 ---
 title: "Deprecation Guide"
-description: "Deprecation Guide"
+description: "Concrete vault documentation for deprecation Guide, including strategy behavior, withdrawals, migrations, and operational guidance."
 sidebar_label: "Deprecation Guide"
 ---
 

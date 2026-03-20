@@ -1,6 +1,6 @@
 ---
 title: "toUnderlyingDecimals(amount)"
-description: "toUnderlyingDecimals(amount)"
+description: "Read-method reference for toUnderlyingDecimals(amount) in the Concrete Earn V2 SDK, including expected inputs, outputs, and usage context."
 sidebar_label: "toUnderlyingDecimals(amount)"
 ---
 

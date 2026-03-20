@@ -1,6 +1,6 @@
 ---
 title: "Claiming Vault Shares and Rewards"
-description: "Claiming Vault Shares and Rewards"
+description: "Stable vault documentation for how to Claim, including claim flow, queue behavior, and network-specific user actions."
 sidebar_label: "How to Claim"
 ---
 

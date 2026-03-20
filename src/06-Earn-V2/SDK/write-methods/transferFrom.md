@@ -1,6 +1,6 @@
 ---
 title: "transferFrom(from, to, amount)"
-description: "transferFrom(from, to, amount)"
+description: "Write-method reference for transferFrom(from, to, amount) in the Concrete Earn V2 SDK, including transaction flow, required approvals, and integration notes."
 sidebar_label: "transferFrom(from, to, amount)"
 ---
 

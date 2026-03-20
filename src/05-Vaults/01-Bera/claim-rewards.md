@@ -1,6 +1,6 @@
 ---
 title: "How to Claim Rewards"
-description: "How to Claim Rewards"
+description: "Bera vault documentation for how to Claim Rewards, including claims, transfers, withdrawals, and reward handling workflows."
 sidebar_label: "How to Claim Rewards"
 ---
 

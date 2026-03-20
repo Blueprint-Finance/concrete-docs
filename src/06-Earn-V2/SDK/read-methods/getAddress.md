@@ -1,6 +1,6 @@
 ---
 title: "getAddress()"
-description: "getAddress()"
+description: "Read-method reference for getAddress() in the Concrete Earn V2 SDK, including expected inputs, outputs, and usage context."
 sidebar_label: "getAddress()"
 ---
 

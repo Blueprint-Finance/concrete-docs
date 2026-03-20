@@ -1,6 +1,6 @@
 ---
 title: "getApyDetails()"
-description: "getApyDetails()"
+description: "Read-method reference for getApyDetails() in the Concrete Earn V2 SDK, including expected inputs, outputs, and usage context."
 sidebar_label: "getApyDetails()"
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: "User Journey"
-description: "What Happens to Your Dollar on Day One vs. Day 500 in Concrete?"
+description: "Foundational Concrete documentation for user Journey, covering platform context, user intent, and product direction."
 sidebar_label: "User Journey"
 sidebar_position: 2
 ---

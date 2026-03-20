@@ -1,6 +1,6 @@
 ---
 title: "Overview"
-description: "Overview"
+description: "Overview of Concrete Earn V2 vault infrastructure, including architecture goals, operational model, and integration pathways."
 sidebar_label: "Overview"
 ---
 

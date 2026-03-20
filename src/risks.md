@@ -1,6 +1,6 @@
 ---
 title: "Risks and Safety"
-description: "Risks and Safety"
+description: "Risk and safety overview for Concrete vault users, including smart contract, strategy, market, and operational risk considerations."
 sidebar_label: "Risks and Safety"
 sidebar_position: 5
 ---
@@ -11,7 +11,7 @@ For details on each vault’s allocation and strategy, visit its dedicated page 
 
 ## Smart Contract Risk
 
-All vaults are governed by smart contracts. While our contracts are thoroughly [audited by leading security firms](../src/audits.md) like **Trail of Bits**, **Halborn**, and **Code4rena**, there is always residual risk of bugs or vulnerabilities.
+All vaults are governed by smart contracts. While our contracts are thoroughly [audited by leading security firms](/audits/) like **Trail of Bits**, **Halborn**, and **Code4rena**, there is always residual risk of bugs or vulnerabilities.
 
 **How we mitigate:**
 

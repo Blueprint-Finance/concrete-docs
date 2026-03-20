@@ -1,6 +1,6 @@
 ---
 title: "Important Disclosures"
-description: "Important disclosures regarding risks and characteristics of Concrete's Yield Generation Program"
+description: "Concrete DeFi USDT vault documentation for important Disclosures, including withdrawal operations, disclosures, and user safeguards."
 sidebar_label: "Important Disclosures"
 ---
 

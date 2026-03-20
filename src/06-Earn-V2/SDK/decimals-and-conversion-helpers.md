@@ -1,6 +1,6 @@
 ---
 title: "Decimals & Conversion Helpers"
-description: "helpers cache vault decimals internally (faster) to handle conversions consistently"
+description: "Concrete Earn V2 SDK documentation for decimals & Conversion Helpers, with implementation guidance for production-grade integrations."
 sidebar_label: "Decimals & Conversion Helpers"
 ---
 

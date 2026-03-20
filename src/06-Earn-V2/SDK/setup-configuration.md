@@ -1,6 +1,6 @@
 ---
 title: "Setup Configuration"
-description: "how to install the SDK, handle optional dependencies, set up providers, and initialize a vault instance using vanilla JS/TS, React, or Wagmi."
+description: "Concrete Earn V2 SDK documentation for setup Configuration, with implementation guidance for production-grade integrations."
 sidebar_label: "Setup Configuration"
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: "Boyco Depositors: How to Claim"
-description: "Boyco Depositors: How to Claim"
+description: "Bera vault documentation for boyco Depositors: How to Claim, including claims, transfers, withdrawals, and reward handling workflows."
 sidebar_label: "Boyco Depositors: How to Claim"
 ---
 

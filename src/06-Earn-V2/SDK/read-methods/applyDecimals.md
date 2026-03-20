@@ -1,6 +1,6 @@
 ---
 title: "applyDecimals(amount)"
-description: "applyDecimals(amount)"
+description: "Read-method reference for applyDecimals(amount) in the Concrete Earn V2 SDK, including expected inputs, outputs, and usage context."
 sidebar_label: "applyDecimals(amount)"
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: "How to Activate Concrete Protect"
-description: "How to Activate Concrete Protect"
+description: "Concrete Protect documentation for how to Activate Concrete Protect, covering activation, mechanics, and risk-management behavior."
 sidebar_label: "How to Activate Concrete Protect"
 sidebar_position: 1
 ---

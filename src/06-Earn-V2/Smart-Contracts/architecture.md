@@ -1,6 +1,6 @@
 ---
 title: "Architecture"
-description: "Architecture"
+description: "Technical architecture documentation for Concrete Earn V2 smart contracts, roles, modules, and operational design."
 sidebar_label: "Architecture"
 ---
 

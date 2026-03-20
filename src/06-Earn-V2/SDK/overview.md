@@ -1,6 +1,6 @@
 ---
 title: "Overview"
-description: "Overview"
+description: "Concrete Earn V2 SDK documentation for concrete Earn V2 SDK Overview, with implementation guidance for production-grade integrations."
 sidebar_label: "Overview"
 ---
 

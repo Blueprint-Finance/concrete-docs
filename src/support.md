@@ -1,6 +1,6 @@
 ---
 title: "Support"
-description: "Support"
+description: "Support options for Concrete users, including official contact channels and where to get help for account or product issues."
 sidebar_label: "Support"
 sidebar_position: 8
 ---

@@ -1,6 +1,6 @@
 ---
 title: "Rewards (Coming Soon)"
-description: "Rewards for Concrete Protocol"
+description: "Overview of the Concrete rewards program, including eligibility, distribution mechanics, and participation expectations."
 sidebar_label: "Rewards"
 sidebar_position: 5
 ---

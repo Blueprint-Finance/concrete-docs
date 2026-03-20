@@ -1,6 +1,6 @@
 ---
 title: "Event Reference And Use Cases"
-description: "Event Reference And Use Cases"
+description: "Subgraph and event documentation for Earn V2: Event Reference, including data modeling and analytics integration guidance."
 sidebar_label: "Event Reference"
 ---
 

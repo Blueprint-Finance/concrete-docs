@@ -1,6 +1,6 @@
 ---
 title: "Quantitative Framework"
-description: "Quantitative Framework"
+description: "Foundational Concrete documentation for quantitative Framework, covering platform context, user intent, and product direction."
 sidebar_label: "Quantitative Framework"
 sidebar_position: 4
 ---

@@ -1,6 +1,6 @@
 ---
 title: "How to Borrow From External Market"
-description: "How to Borrow From External Market"
+description: "Concrete Borrow documentation for how to Borrow From External Market, including loan lifecycle, collateral behavior, and repayment workflows."
 sidebar_label: "How to Borrow From External Market"
 sidebar_position: 3
 ---

@@ -1,6 +1,6 @@
 ---
 title: "totalAssets()"
-description: "totalAssets()"
+description: "Read-method reference for totalAssets() in the Concrete Earn V2 SDK, including expected inputs, outputs, and usage context."
 sidebar_label: "totalAssets()"
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: "Request Address Change"
-description: "Confirming and Changing Your Destination Address"
+description: "Bera vault documentation for how to Request Address Change, including claims, transfers, withdrawals, and reward handling workflows."
 sidebar_label: "How to Request Address Change"
 ---
 

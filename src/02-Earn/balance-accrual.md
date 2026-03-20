@@ -1,6 +1,6 @@
 ---
 title: "Understanding Balance Accrual in Locked Vaults"
-description: "Understanding Balance Accrual in Locked Vaults"
+description: "Concrete Earn documentation for balance Accrual, including deposits, withdrawals, and yield participation mechanics."
 sidebar_label: "Balance Accrual"
 sidebar_position: 3
 ---

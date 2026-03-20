@@ -1,6 +1,6 @@
 ---
 title: "What is Wrapped BERA (WBERA)?"
-description: "What is Wrapped BERA (WBERA)?"
+description: "Bera vault documentation for wBERA, including claims, transfers, withdrawals, and reward handling workflows."
 sidebar_label: "WBERA"
 ---
 

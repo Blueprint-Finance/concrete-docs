@@ -1,6 +1,6 @@
 ---
 title: "Getting Started"
-description: "Getting Started with Concrete: Quick Start Guide"
+description: "Foundational Concrete documentation for getting Started, covering platform context, user intent, and product direction."
 sidebar_label: "Getting Started"
 sidebar_position: 6
 ---

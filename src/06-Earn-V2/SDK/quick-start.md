@@ -1,6 +1,6 @@
 ---
 title: "Quick Start (Plug-and-Play Integration)"
-description: "Hooks combine ethers, wagmi, and the Concrete SDK internals under the hood."
+description: "Concrete Earn V2 SDK documentation for quick Start, with implementation guidance for production-grade integrations."
 sidebar_label: "Quick Start"
 ---
 
