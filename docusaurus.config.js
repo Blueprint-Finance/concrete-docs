@@ -14,7 +14,7 @@ const isProd = vercelEnv === "production";
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'Concrete Docs',
-  tagline: 'DeFi protocol',
+  tagline: 'Institutional-grade on-chain yield infrastructure documentation',
   favicon: 'img/logo.png',
   customFields: {
     metacrmApiKey: process.env.METACRM_API_KEY,
@@ -98,8 +98,14 @@ const config = {
       metadata: [
         { name: 'twitter:card', content: 'summary_large_image' },
         { name: 'twitter:title', content: 'Concrete Docs' },
-        { name: 'twitter:description', content: 'DeFi protocol' },
+        { name: 'twitter:description', content: 'Official Concrete documentation for on-chain yield infrastructure, Earn V2, SDK integrations, vault operations, and risk disclosures.' },
         { name: 'twitter:image', content: 'https://docs.concrete.xyz/img/concrete-mark.png' },
+        { name: 'twitter:site', content: '@ConcreteXYZ' },
+        { property: 'og:title', content: 'Concrete Docs' },
+        { property: 'og:description', content: 'Official Concrete documentation for on-chain yield infrastructure, Earn V2, SDK integrations, vault operations, and risk disclosures.' },
+        { property: 'og:type', content: 'website' },
+        { property: 'og:url', content: 'https://docs.concrete.xyz/' },
+        { property: 'og:site_name', content: 'Concrete Docs' },
         { property: 'og:image', content: 'https://docs.concrete.xyz/img/concrete-mark.png' },
       ],
       navbar: {
