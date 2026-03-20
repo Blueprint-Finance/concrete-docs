@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "preinstall": "node ./scripts/enforce-yarn.js",
+    "audit": "yarn audit --level low",
     "docusaurus": "docusaurus",
     "start": "docusaurus start",
     "build": "docusaurus build",
