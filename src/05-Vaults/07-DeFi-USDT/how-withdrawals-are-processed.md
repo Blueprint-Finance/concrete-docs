@@ -6,8 +6,8 @@ sidebar_label: "How Withdrawals Are Processed"
 
 ## Withdrawal Schedule
 
-- Withdrawals requested between Monday 8:10 PM UTC and Thursday 8:10 PM UTC are processed and made available for claiming the following Monday at 8 AM UTC.
-- Withdrawals requested between Thursday 8:10 PM UTC and Monday 8:10 PM UTC are processed and made available for claiming the following Thursday at 8 AM UTC.
+- Withdrawals requested between Monday 12:05 PM UTC and Thursday 12:05 PM UTC are processed and made available for claiming the following Monday at 12 AM UTC.
+- Withdrawals requested between Thursday 12:05 PM UTC and Monday 12:05 PM UTC are processed and made available for claiming the following Thursday at 12 AM UTC.
 
 ![](/img/defi-usdt-withdrawal-schedule.png)
 
