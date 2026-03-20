@@ -1,6 +1,6 @@
 ---
 title: "Pre-Deposit Vaults Deprecation Guide"
-description: "Pre-Deposit Vaults Deprecation Guide"
+description: "Bera vault documentation for pre-Deposit Vaults Deprecation Guide, including claims, transfers, withdrawals, and reward handling workflows."
 sidebar_label: "Pre-Deposit Vaults Deprecation Guide"
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: "How It Works"
-description: "How It Works"
+description: "Foundational Concrete documentation for how It Works, covering platform context, user intent, and product direction."
 sidebar_label: "How It Works"
 sidebar_position: 3
 ---

@@ -1,6 +1,6 @@
 ---
 title: "Overview"
-description: "Overview"
+description: "Corn vault documentation for Concrete users, including vault behavior, lifecycle updates, and operational guidance."
 sidebar_label: "Overview"
 ---
 

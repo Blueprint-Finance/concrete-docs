@@ -1,6 +1,6 @@
 ---
 title: "Stable Vaults"
-description: "Deposit USDT or frxUSD early to have your funds automatically deployed on the Stable Network from day one."
+description: "Stable vault documentation for stable Vaults, including claim flow, queue behavior, and network-specific user actions."
 sidebar_label: "Stable Vaults"
 ---
 

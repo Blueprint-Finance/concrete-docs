@@ -1,6 +1,6 @@
 ---
 title: "Restricted Jurisdictions"
-description: "Restricted Jurisdictions for Concrete Protocol"
+description: "Jurisdiction and access restrictions for Concrete services, including regions where product use is limited or unavailable."
 sidebar_label: "Restricted Jurisdictions"
 sidebar_position: 6
 ---

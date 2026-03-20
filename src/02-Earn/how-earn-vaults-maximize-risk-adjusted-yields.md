@@ -1,6 +1,6 @@
 ---
 title: "How Earn Vaults Maximize Risk-Adjusted Yields"
-description: "How Earn Vaults Maximize Risk-Adjusted Yields"
+description: "Concrete Earn documentation for maximize Risk-Adjusted Yields, including deposits, withdrawals, and yield participation mechanics."
 sidebar_label: "Maximize Risk-Adjusted Yields"
 sidebar_position: 4
 ---

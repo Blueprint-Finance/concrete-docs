@@ -1,6 +1,6 @@
 ---
 title: "How to Borrow Against Collateral"
-description: "How to Borrow Against Collateral"
+description: "Concrete Borrow documentation for how to Borrow Against Collateral, including loan lifecycle, collateral behavior, and repayment workflows."
 sidebar_label: "How to Borrow Against Collateral"
 sidebar_position: 2
 ---

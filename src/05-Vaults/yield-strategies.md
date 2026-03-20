@@ -1,6 +1,6 @@
 ---
 title: "Yield Strategies"
-description: "Yield Strategies"
+description: "Concrete vault documentation for yield Strategies, including strategy behavior, withdrawals, migrations, and operational guidance."
 sidebar_label: "Yield Strategies"
 sidebar_position: 2
 ---

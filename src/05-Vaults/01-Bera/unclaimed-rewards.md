@@ -1,6 +1,6 @@
 ---
 title: "Unclaimed Rewards"
-description: "Unclaimed Rewards"
+description: "Bera vault documentation for unclaimed Rewards, including claims, transfers, withdrawals, and reward handling workflows."
 sidebar_label: "Unclaimed Rewards"
 ---
 

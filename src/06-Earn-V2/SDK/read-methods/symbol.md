@@ -1,6 +1,6 @@
 ---
 title: "symbol()"
-description: "symbol()"
+description: "Read-method reference for symbol() in the Concrete Earn V2 SDK, including expected inputs, outputs, and usage context."
 sidebar_label: "symbol()"
 ---
 

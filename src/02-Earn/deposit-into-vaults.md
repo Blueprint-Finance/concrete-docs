@@ -1,6 +1,6 @@
 ---
 title: "Depositing Assets into Concrete Vaults"
-description: "ct[assets] and Yield-Bearing"
+description: "Concrete Earn documentation for how to Deposit Assets, including deposits, withdrawals, and yield participation mechanics."
 sidebar_label: "How to Deposit Assets"
 sidebar_position: 0
 ---

@@ -1,6 +1,6 @@
 ---
 title: "approve(spender, amount)"
-description: "approve(spender, amount)"
+description: "Write-method reference for approve(spender, amount) in the Concrete Earn V2 SDK, including transaction flow, required approvals, and integration notes."
 sidebar_label: "approve(spender, amount)"
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: "Overview"
-description: "Concrete Protect: Technical Overview"
+description: "Concrete Protect documentation for overview, covering activation, mechanics, and risk-management behavior."
 sidebar_label: "Overview"
 sidebar_position: 0
 ---

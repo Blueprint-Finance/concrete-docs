@@ -1,6 +1,6 @@
 ---
 title: "How to Claim and Transfer"
-description: "How to Claim and Transfer"
+description: "Bera vault documentation for how to Claim & Transfer, including claims, transfers, withdrawals, and reward handling workflows."
 sidebar_label: "How to Claim & Transfer"
 ---
 

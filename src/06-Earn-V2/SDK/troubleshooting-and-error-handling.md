@@ -1,6 +1,6 @@
 ---
 title: "Troubleshooting & Error Handling"
-description: "Troubleshooting & Error Handling"
+description: "Concrete Earn V2 SDK documentation for troubleshooting & Error Handling, with implementation guidance for production-grade integrations."
 sidebar_label: "Troubleshooting & Error Handling"
 ---
 

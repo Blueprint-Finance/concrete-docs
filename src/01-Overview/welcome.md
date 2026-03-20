@@ -1,6 +1,6 @@
 ---
 title: "Welcome to Concrete"
-description: "Welcome to Concrete"
+description: "Official welcome guide to Concrete, explaining the platform mission, core product pillars, and how to get started safely."
 sidebar_label: "Welcome"
 sidebar_position: 0
 ---

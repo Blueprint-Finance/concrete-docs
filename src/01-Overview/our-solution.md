@@ -1,6 +1,6 @@
 ---
 title: "Our Solution"
-description: "An Approach to DeFi Lending and Liquidation Protection"
+description: "Foundational Concrete documentation for our Solution, covering platform context, user intent, and product direction."
 sidebar_label: "Our Solution"
 sidebar_position: 1
 ---

@@ -1,6 +1,6 @@
 ---
 title: "Deprecation Guide"
-description: "Deprecation Guide"
+description: "TAC vault deprecation and withdrawal documentation with required actions, timelines, and user support references."
 sidebar_label: "Deprecation Guide"
 ---
 

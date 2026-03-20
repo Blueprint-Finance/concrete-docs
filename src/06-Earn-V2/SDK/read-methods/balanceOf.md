@@ -1,6 +1,6 @@
 ---
 title: "balanceOf(address)"
-description: "balanceOf(address)"
+description: "Read-method reference for balanceOf(address) in the Concrete Earn V2 SDK, including expected inputs, outputs, and usage context."
 sidebar_label: "balanceOf(address)"
 ---
 

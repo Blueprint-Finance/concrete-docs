@@ -1,6 +1,6 @@
 ---
 title: "How to Withdraw and Claim Rewards on Canopy"
-description: "How to Withdraw and Claim Rewards on Canopy"
+description: "Concrete Earn documentation for withdrawing via Canopy, including deposits, withdrawals, and yield participation mechanics."
 sidebar_label: "Withdrawing via Canopy"
 sidebar_position: 0
 ---

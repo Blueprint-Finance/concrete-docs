@@ -1,6 +1,6 @@
 ---
 title: "Overview"
-description: "Overview"
+description: "Morph vault documentation for Concrete users, including current status, lifecycle notes, and operation guidance."
 sidebar_label: "Overview"
 ---
 

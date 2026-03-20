@@ -1,6 +1,6 @@
 ---
 title: "Prerequisites"
-description: "Prerequisites"
+description: "Foundational Concrete documentation for prerequisites, covering platform context, user intent, and product direction."
 sidebar_label: "Prerequisites"
 sidebar_position: 5
 ---

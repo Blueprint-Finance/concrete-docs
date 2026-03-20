@@ -1,6 +1,6 @@
 ---
 title: "Fees"
-description: "Fees"
+description: "Complete fee reference for Concrete products, including how fees are calculated, applied, and communicated across workflows."
 sidebar_label: "Fees"
 sidebar_position: 4
 ---

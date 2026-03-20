@@ -1,6 +1,6 @@
 ---
 title: "redeem(amount)"
-description: "redeem(amount)"
+description: "Write-method reference for redeem(amount) in the Concrete Earn V2 SDK, including transaction flow, required approvals, and integration notes."
 sidebar_label: "redeem(amount)"
 ---
 

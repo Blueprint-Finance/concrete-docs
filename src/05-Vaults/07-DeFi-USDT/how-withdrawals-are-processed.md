@@ -1,6 +1,6 @@
 ---
 title: "How Withdrawals Are Processed For Concrete DeFi USDT"
-description: "How Withdrawals Are Processed For Concrete DeFi USDT"
+description: "Concrete DeFi USDT vault documentation for how Withdrawals Are Processed, including withdrawal operations, disclosures, and user safeguards."
 sidebar_label: "How Withdrawals Are Processed"
 ---
 

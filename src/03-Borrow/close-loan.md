@@ -1,6 +1,6 @@
 ---
 title: "How to Repay and Withdraw Borrowed Assets"
-description: "How to Repay and Withdraw Borrowed Assets"
+description: "Concrete Borrow documentation for how to Repay and Withdraw, including loan lifecycle, collateral behavior, and repayment workflows."
 sidebar_label: "How to Repay and Withdraw"
 sidebar_position: 4
 ---

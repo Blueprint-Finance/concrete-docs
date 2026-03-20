@@ -1,6 +1,6 @@
 ---
 title: "Risks and Safety"
-description: "Risks and Safety"
+description: "Risk and safety overview for Concrete vault users, including smart contract, strategy, market, and operational risk considerations."
 sidebar_label: "Risks and Safety"
 sidebar_position: 5
 ---

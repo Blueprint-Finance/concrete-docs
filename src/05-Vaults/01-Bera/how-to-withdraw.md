@@ -1,6 +1,6 @@
 ---
 title: "How to Withdraw"
-description: "How to Withdraw"
+description: "Bera vault documentation for how to Withdraw, including claims, transfers, withdrawals, and reward handling workflows."
 sidebar_label: "How to Withdraw"
 ---
 

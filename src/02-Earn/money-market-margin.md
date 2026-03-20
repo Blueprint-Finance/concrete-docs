@@ -1,6 +1,6 @@
 ---
 title: "Money Market Margin"
-description: "Concrete’s Money Market Margin Project: Enhancing Liquidity and Yield"
+description: "Concrete Earn documentation for money Market Margin, including deposits, withdrawals, and yield participation mechanics."
 sidebar_label: "Money Market Margin"
 sidebar_position: 5
 ---

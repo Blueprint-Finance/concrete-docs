@@ -1,6 +1,6 @@
 ---
 title: "How to Activate Concrete Borrow (Default Lite)"
-description: "Borrow Overview"
+description: "Concrete Borrow documentation for how to Activate Concrete, including loan lifecycle, collateral behavior, and repayment workflows."
 sidebar_label: "How to Activate Concrete"
 sidebar_position: 1
 ---

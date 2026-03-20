@@ -1,6 +1,6 @@
 ---
 title: "Bridging with Enso"
-description: "Bridging with Enso"
+description: "Concrete vault documentation for bridging with Enso, including strategy behavior, withdrawals, migrations, and operational guidance."
 sidebar_label: "Bridging with Enso"
 ---
 

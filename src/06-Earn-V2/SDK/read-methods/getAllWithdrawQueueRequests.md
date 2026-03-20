@@ -1,6 +1,6 @@
 ---
 title: "getAllWithdrawQueueRequests(owner)"
-description: "getAllWithdrawQueueRequests(owner)"
+description: "Read-method reference for getAllWithdrawQueueRequests(owner) in the Concrete Earn V2 SDK, including expected inputs, outputs, and usage context."
 sidebar_label: "getAllWithdrawQueueRequests(owner)"
 ---
 

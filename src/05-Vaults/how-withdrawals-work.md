@@ -1,6 +1,6 @@
 ---
 title: "How Withdrawals Work"
-description: "How Withdrawals Work"
+description: "Concrete vault documentation for how Withdrawals Work, including strategy behavior, withdrawals, migrations, and operational guidance."
 sidebar_label: "How Withdrawals Work"
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: "Schema & Queries"
-description: "Schema & Queries"
+description: "Subgraph and event documentation for Earn V2: Schema & Queries, including data modeling and analytics integration guidance."
 sidebar_label: "Schema & Queries"
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: "Yield Vaults and ERC-4626 Standard"
-description: "ERC-4626 and Concrete's Yield Vaults: Optimizing DeFi for Earners"
+description: "Concrete vault documentation for yield Vaults, including strategy behavior, withdrawals, migrations, and operational guidance."
 sidebar_label: "Yield Vaults"
 sidebar_position: 1
 ---

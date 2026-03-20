@@ -1,6 +1,6 @@
 ---
 title: "Overview"
-description: "Borrow Overview"
+description: "Concrete Borrow documentation for overview, including loan lifecycle, collateral behavior, and repayment workflows."
 sidebar_label: "Overview"
 sidebar_position: 0
 ---

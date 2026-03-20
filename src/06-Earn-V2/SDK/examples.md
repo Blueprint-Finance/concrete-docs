@@ -1,6 +1,6 @@
 ---
 title: "Examples"
-description: "User approves underlying ERC20, vault consumes underlying, mints ctAssets (shares), user can redeem later."
+description: "Concrete Earn V2 SDK documentation for examples, with implementation guidance for production-grade integrations."
 sidebar_label: "Examples"
 ---
 

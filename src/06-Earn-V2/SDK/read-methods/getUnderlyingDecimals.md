@@ -1,6 +1,6 @@
 ---
 title: "getUnderlyingDecimals()"
-description: "getUnderlyingDecimals()"
+description: "Read-method reference for getUnderlyingDecimals() in the Concrete Earn V2 SDK, including expected inputs, outputs, and usage context."
 sidebar_label: "getUnderlyingDecimals()"
 ---
 

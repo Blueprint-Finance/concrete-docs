@@ -1,6 +1,6 @@
 ---
 title: "previewConversion(amount)"
-description: "previewConversion(amount)"
+description: "Read-method reference for previewConversion(amount) in the Concrete Earn V2 SDK, including expected inputs, outputs, and usage context."
 sidebar_label: "previewConversion(amount)"
 ---
 
