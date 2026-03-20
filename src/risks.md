@@ -11,7 +11,7 @@ For details on each vault’s allocation and strategy, visit its dedicated page 
 
 ## Smart Contract Risk
 
-All vaults are governed by smart contracts. While our contracts are thoroughly [audited by leading security firms](../src/audits.md) like **Trail of Bits**, **Halborn**, and **Code4rena**, there is always residual risk of bugs or vulnerabilities.
+All vaults are governed by smart contracts. While our contracts are thoroughly [audited by leading security firms](/audits/) like **Trail of Bits**, **Halborn**, and **Code4rena**, there is always residual risk of bugs or vulnerabilities.
 
 **How we mitigate:**
 
