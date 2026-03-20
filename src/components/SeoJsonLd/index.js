@@ -49,6 +49,14 @@ function toAbsoluteUrl(siteUrl, path) {
   }
 }
 
+function normalizePath(pathname) {
+  if (!pathname || pathname === '/') {
+    return '/';
+  }
+
+  return pathname.endsWith('/') ? pathname : `${pathname}/`;
+}
+
 function toLabel(segment) {
   return decodeURIComponent(segment)
     .replace(/[-_]+/g, ' ')
@@ -66,8 +74,8 @@ function createBreadcrumbSchema(permalink, pageTitle, siteUrl) {
     {
       '@type': 'ListItem',
       position: 1,
-      name: 'Docs',
-      item: `${siteUrl}/`,
+      name: 'Home',
+      item: toAbsoluteUrl(siteUrl, '/'),
     },
   ];
 
@@ -84,7 +92,6 @@ function createBreadcrumbSchema(permalink, pageTitle, siteUrl) {
 
   return {
     '@type': 'BreadcrumbList',
-    '@id': `${toAbsoluteUrl(siteUrl, permalink)}#breadcrumb`,
     itemListElement: items,
   };
 }
@@ -111,12 +118,13 @@ export function DocJsonLd({metadata}) {
   }
 
   const siteUrl = 'https://docs.concrete.xyz';
-  const pageUrl = toAbsoluteUrl(siteUrl, metadata.permalink);
+  const pagePath = normalizePath(metadata.permalink);
+  const pageUrl = toAbsoluteUrl(siteUrl, pagePath);
   const pageDescription =
     metadata.description ||
     'Official Concrete documentation for on-chain yield infrastructure and product operations.';
   const breadcrumbSchema = createBreadcrumbSchema(
-    metadata.permalink,
+    pagePath,
     metadata.title,
     siteUrl,
   );
@@ -134,9 +142,7 @@ export function DocJsonLd({metadata}) {
     about: {
       '@id': ORG_ID,
     },
-    breadcrumb: {
-      '@id': `${pageUrl}#breadcrumb`,
-    },
+    breadcrumb: breadcrumbSchema,
   };
 
   const articleSchema = {
@@ -164,7 +170,7 @@ export function DocJsonLd({metadata}) {
       dangerouslySetInnerHTML={{
         __html: JSON.stringify({
           '@context': 'https://schema.org',
-          '@graph': [webpageSchema, articleSchema, breadcrumbSchema],
+          '@graph': [webpageSchema, articleSchema],
         }),
       }}
     />
