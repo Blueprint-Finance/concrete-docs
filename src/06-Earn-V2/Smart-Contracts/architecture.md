@@ -17,12 +17,11 @@ Concrete V2 is a protocol for aggregating yield and allows curators to deploy va
 - 2.1. Main User Operations
 - 2.2. Vault Accounting
 - 2.3. Yield Accrual
-- 2.4. Fees
-- 2.5. Access Control And Vault Operations
-- 2.6. Concrete Vault Implementations
-  - 2.6.1. Asynchronous Vault Overview
-  - 2.6.2. Access Control and Events
-  - 2.6.3. Async Vault Initialization
+- 2.4. Access Control And Vault Operations
+- 2.5. Concrete Vault Implementations
+  - 2.5.1. Asynchronous Vault Overview
+  - 2.5.2. Access Control and Events
+  - 2.5.3. Async Vault Initialization
 
 🔧 **[3. Peripheral Contracts](#3-peripheral-contracts)**
 - 3.1. Strategies
@@ -52,7 +51,7 @@ The deployment of vaults works as follows. The deployer can choose from one of s
 ```js
 function create(uint64 version, address ownerAddr, bytes calldata data, bytes32 salt) public returns (address)
 ```
-It is a permissionless function with four arguments. The `version` is the implementation index, the `ownerAddr` is the admin of the vault (see [Section 2.5](#25-access-control-and-vault-operations)), the `data` carries some initialization data and the `salt` allows to create predictable deterministic vault addresses. Upon deployment an ERC-1976 proxy is created that points to the logic of the registered implementations. Upon successful deployment the following event will be emitted:
+It is a permissionless function with four arguments. The `version` is the implementation index, the `ownerAddr` is the admin of the vault (see [Section 2.4](#24-access-control-and-vault-operations)), the `data` carries some initialization data and the `salt` allows to create predictable deterministic vault addresses. Upon deployment an ERC-1976 proxy is created that points to the logic of the registered implementations. Upon successful deployment the following event will be emitted:
 ```js
 event Deployed(address indexed vault, uint64 indexed version, address indexed owner);
 ```
@@ -119,7 +118,7 @@ event Migrated(address indexed vault, uint64 newVersion);
 
 ## 2. Concrete V2 Vaults
 
-The Concrete V2 Vaults are ERC4626-vaults. They adhere to the standard in all but one place, which regards the reporting of totalAssets. This will be covered in [Section 2.5](#25-access-control-and-vault-operations). These vaults are single-asset vaults in the sense that they take one asset type under management. They allow users to deposit and withdraw and the accounting on the vault level works through an ERC20 token whose balance tracks the holders share of the vault.
+The Concrete V2 Vaults are ERC4626-vaults. They adhere to the standard in all but one place, which regards the reporting of totalAssets. This will be covered in [Section 2.4](#24-access-control-and-vault-operations). These vaults are single-asset vaults in the sense that they take one asset type under management. They allow users to deposit and withdraw and the accounting on the vault level works through an ERC20 token whose balance tracks the holders share of the vault.
 
 **Vault Architecture:**
 - **Storage Layout**: Implements EIP-7201 storage layout pattern for upgradeable contracts
@@ -193,24 +192,24 @@ The Concrete-V2 vaults have three different modes of access control: Resolution 
 
 The role-based access control uses the OpenZeppelin `AccessControlUpgradeable` contracts, where each Role has an admin role. Account with that role can grant and revoke the underlying role from role-holders. By default every role that is defined or not defined has the `DEFAULT_ADMIN_ROLE` as admin role. In Concrete-V2 we do not assign this role. Instead each role, in particular the abovementioned standard roles have their own admin roles: 1) Vault Manager Admin 2) Strategy Admin 3) Hook Manager Admin 4) Allocator Admin. They are initially set to the vault admin, whose address is passed into the contructor args. That means that the vault admin may assign all the above roles.
 
-more complex implementations can have additional roles. One of the more common implementation that is used in Concrete-V2 is the AsyncVault Implementation (see [Section 2.6](#26-concrete-vault-implmentations)). It also comes with a WITHDRAWAL MANAGER role and its admin role.
+more complex implementations can have additional roles. One of the more common implementation that is used in Concrete-V2 is the AsyncVault Implementation (see [Section 2.5](#25-concrete-vault-implmentations)). It also comes with a WITHDRAWAL MANAGER role and its admin role.
 
 Here we discuss the main state variables and their access guards:
 
-#### 2.5.1 Vault functions guarded by factory owner
+#### 2.4.1 Vault functions guarded by factory owner
 
 | Function | Event |
 |----------|-------|
 | `vault.updateManagementFeeRecipient(address recipient)` | `ManagementFeeRecipientUpdated(address managementFeeRecipient)` |
 | `vault.updatePerformanceFeeRecipient(address recipient)` | `PerformanceFeeRecipientUpdated(address performanceFeeRecipient)` |
 
-#### 2.5.2 Functions guarded by vault owner
+#### 2.4.2 Functions guarded by vault owner
 
 | Function | Event |
 |----------|-------|
 | `factory.upgrade(address vault, uint64 newVersion, bytes calldata data)` | `Migrated(address indexed vault, uint64 newVersion)` |
 
-#### 2.5.3 Functions guarded by vault manager
+#### 2.4.3 Functions guarded by vault manager
 
 | Function | Event |
 |----------|-------|
@@ -219,7 +218,7 @@ Here we discuss the main state variables and their access guards:
 | `vault.updateManagementFee(uint16 managementFee)` | `ManagementFeeUpdated(uint16 managementFee)` |
 | `vault.updatePerformanceFee(uint16 performanceFee)` | `PerformanceFeeUpdated(uint16 performanceFee)` |
 
-#### 2.5.4 Functions guarded by strategy manager
+#### 2.4.4 Functions guarded by strategy manager
 
 | Function | Event |
 |----------|-------|
@@ -227,13 +226,13 @@ Here we discuss the main state variables and their access guards:
 | `vault.removeStrategy(address strategy)` | `StrategyRemoved(address strategy)` |
 | `vault.toggleStrategyStatus(address strategy)` | `StrategyStatusToggled(address indexed strategy)` |
 
-#### 2.5.5 Functions guarded by hook manager
+#### 2.4.5 Functions guarded by hook manager
 
 | Function | Event |
 |----------|-------|
 | `vault.setHooks(Hooks memory hooks)` | `HooksSet(Hooks hooks)` |
 
-#### 2.5.6 Functions guarded by allocator
+#### 2.4.6 Functions guarded by allocator
 
 | Function | Event |
 |----------|-------|
@@ -241,13 +240,13 @@ Here we discuss the main state variables and their access guards:
 | `vault.setDeallocationOrder(address[] calldata order)` | `DeallocationOrderUpdated()` |
 
 
-### 2.6. Concrete Vault Implmentations
+### 2.5. Concrete Vault Implmentations
 
 Concrete V2 has several implementations. Initially there will be two:
 1) an implementation for synchronous, i.e. atomic, handling of deposits and withdrawals. => Standard Implementation
 2) an implementation for asynchronous handling of withdrawals, but atomic handling of deposits. => Async Implementation
 
-#### 2.6.1. Asynchronous Vault Overview
+#### 2.5.1. Asynchronous Vault Overview
 The asynchronous implementation inherits the standard implementation and only overrides the withdrawal feature. It introduces a queue-based withdrawal system that allows for better liquidity management and batch processing of withdrawal requests. This system operates in epochs and provides several key features:
 
 **Queue Toggle Functionality:**
@@ -294,7 +293,7 @@ Withdrawals are processed in batches for efficiency:
 
 This batched approach allows for gas-efficient processing of multiple withdrawal claims while maintaining the security and accounting integrity of the vault.
 
-#### 2.6.2 Access Control and Events
+#### 2.5.2 Access Control and Events
 
 The async vault implementation adds several additional functions that require specific roles. There is also a specific role called the `WITHDRAWAL_MANAGER` which can trigger various functions. Below are the guarded functions organized by role:
 
@@ -329,7 +328,7 @@ The following async vault functions are publicly accessible and do not require s
 |----------|-------|
 | Vault initialization | `WithdrawalQueueInitialized(uint256 epochID)` |
 
-#### 2.6.3 Async Vault Initialization
+#### 2.5.3 Async Vault Initialization
 
 The async vault uses the same initialization arguments as the standard vault implementation since it inherits from `ConcreteStandardVaultImpl`. The initialization data must be ABI-encoded and passed to the factory's `create()` function:
 
