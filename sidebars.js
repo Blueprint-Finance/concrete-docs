@@ -154,6 +154,14 @@ const sidebars = {
                'Vaults/WBTC/wbtc-vault-migration-to-earn-v2',
              ],
            },
+           {
+             type: 'category',
+             label: 'Concrete DeFi USDT',
+             items: [
+               'Vaults/DeFi-USDT/how-withdrawals-are-processed',
+               'Vaults/DeFi-USDT/important-disclosures',
+             ],
+           },
          ],
        },
 
