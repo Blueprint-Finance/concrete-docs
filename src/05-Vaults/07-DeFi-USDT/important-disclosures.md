@@ -16,7 +16,7 @@ When you delegate funds to Concrete, you transfer operational control over those
 
 ## Yield Rates Not Guaranteed
 
-Concrete cannot and does not guarantee that any target yield rates can be achieved or maintained. DeFi yields fluctuate based on market conditions, and Concrete reserves the right to adjust, refresh, or discontinue offered rates at any time based on changes in borrowing costs, strategy performance, risk assessments, or market liquidity. Concrete cannot guarantee that you will receive the most favorable rates available in the marketplace. Yield rates are subject to periodic review and adjustment based on prevailing conditions and Concrete's cost of capital. You may withdraw your funds if dissatisfied with offered rates, subject to applicable procedures.
+Concrete cannot and does not guarantee that any target yield rates can be achieved or maintained. **Displayed performance may reflect execution cost rebates and strategy partner capital allocations, where applicable**. DeFi yields fluctuate based on market conditions, and Concrete reserves the right to adjust, refresh, or discontinue offered rates at any time based on changes in borrowing costs, strategy performance, risk assessments, or market liquidity. Concrete cannot guarantee that you will receive the most favorable rates available in the marketplace. Yield rates are subject to periodic review and adjustment based on prevailing conditions and Concrete's cost of capital. You may withdraw your funds if dissatisfied with offered rates, subject to applicable procedures.
 
 ## Smart Contract and DeFi Protocol Risks
 
