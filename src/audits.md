@@ -30,6 +30,15 @@ Concrete Protocol follows a multi-phased audit approach to deliver the highest l
 4. **Public Transparency**  
    All audit results are made publicly accessible, reinforcing our commitment to transparency and accountability.
 
+
+
+
+## Earn V2 - Position Management Helper
+
+   - Date: April 17, 2026
+   - Auditor: Halborn
+   - [View the full report](/files/Position_Management_Helper_-_Standalone_Contract___SSC.pdf)
+
 ## Earn V2 Core
 
    - Date: February 20, 2026
