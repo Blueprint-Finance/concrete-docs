@@ -71,6 +71,20 @@ If she submits after the cutoff (e.g., **Monday at 12:01 PM**), her request will
 | **Dinero Ethereum** | Up to 7 days | Bridge first, then claim via UI |
 | **Bitcoin Bera (Lombard)** | Up to 7 days | Claim through Lombard, not Concrete |
 
+## Per-Cycle Withdrawal Caps
+
+Some vaults — currently the **Concrete DeFi USDT** vault — apply a cap on how much can be withdrawn in a single cycle, expressed as a percentage of the vault's TVL. Caps keep batches predictable and aligned with how quickly the underlying strategy can unwind positions.
+
+**How a cap behaves:**
+
+- When the total withdrawals requested in a cycle stay under the cap, the batch processes normally on its scheduled date.
+- When requests exceed the cap, only the portion up to the cap is processed in that cycle. The remainder rolls forward to the next cycle and is processed in the order it was originally requested (FIFO).
+- Deposits waiting across multiple cycles continue to earn yield until they are processed.
+
+:::tip
+If a vault you are using has a withdrawal cap, the app's countdown and expected date already account for any rollover, so the date you see is the date your funds will actually be claimable.
+:::
+
 ## Cross-Chain Withdrawals (Bridging)
 
 If your vault operates across two different chains (e.g., Ethereum → Berachain or Ethereum → Corn), you’ll need to bridge your vault tokens before you can receive your funds.
