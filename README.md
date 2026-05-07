@@ -47,3 +47,4 @@ METACRM_API_KEY=<MetaCRM widget API key>
 ```
 
 This key enables the MetaCRM widget. Without it, the widget script is skipped.
+
