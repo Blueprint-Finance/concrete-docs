@@ -1,0 +1,800 @@
+{
+    "openapi": "3.1.0",
+    "info": {
+      "title": "Earn APY API",
+      "description": "API for managing portfolio strategies and tracking APY",
+      "contact": {
+        "name": "Concrete Backend Team"
+      },
+      "license": {
+        "name": ""
+      },
+      "version": "1.0.0"
+    },
+    "paths": {
+      "/v1/metrics": {
+        "get": {
+          "tags": [
+            "metrics"
+          ],
+          "operationId": "get_metrics",
+          "responses": {
+            "200": {
+              "description": "Metrics retrieved successfully",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/Metrics"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/v1/strategy": {
+        "get": {
+          "tags": [
+            "strategy"
+          ],
+          "operationId": "get_strategy",
+          "parameters": [
+            {
+              "name": "address",
+              "in": "query",
+              "description": "Strategy address",
+              "required": true,
+              "schema": {
+                "type": "string"
+              },
+              "example": "0x33224A0482A2999fD5E766bE46a6665725cD6Ce1"
+            },
+            {
+              "name": "chain_id",
+              "in": "query",
+              "description": "Chain Id",
+              "required": true,
+              "schema": {
+                "type": "integer",
+                "format": "int64",
+                "minimum": 0
+              },
+              "example": "80094"
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "Strategy found",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/StrategyTotalAssetDiff"
+                  }
+                }
+              }
+            },
+            "404": {
+              "description": "Strategy not found",
+              "content": {
+                "application/json": {
+  
+                }
+              }
+            },
+            "500": {
+              "description": "Internal server error",
+              "content": {
+                "application/json": {
+  
+                }
+              }
+            }
+          }
+        }
+      },
+      "/v1/vault:performance": {
+        "get": {
+          "tags": [
+            "vault"
+          ],
+          "operationId": "get_vault_performance",
+          "parameters": [
+            {
+              "name": "address",
+              "in": "query",
+              "description": "Vault address",
+              "required": true,
+              "schema": {
+                "type": "string"
+              },
+              "example": "0xB6E3C1154E07F8A3DC04A9A28648C7AA30511120"
+            },
+            {
+              "name": "chain_id",
+              "in": "query",
+              "description": "Chain Id",
+              "required": true,
+              "schema": {
+                "type": "integer",
+                "format": "int64",
+                "minimum": 0
+              },
+              "example": "80094"
+            },
+            {
+              "name": "limit",
+              "in": "query",
+              "description": "Get history TVL, APY, and TotalAssets with limit days back plus latest data point. Default 30, max: 365",
+              "required": true,
+              "schema": {
+                "type": "integer",
+                "format": "int32",
+                "minimum": 0
+              },
+              "example": "30"
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "Vault found",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "$ref": "#/components/schemas/VaultPerformanceDetailed"
+                  }
+                }
+              }
+            },
+            "404": {
+              "description": "Vault not found",
+              "content": {
+                "application/json": {
+  
+                }
+              }
+            },
+            "500": {
+              "description": "Internal server error",
+              "content": {
+                "application/json": {
+  
+                }
+              }
+            }
+          }
+        }
+      },
+      "/v1/vault:performance/all": {
+        "get": {
+          "tags": [
+            "vault"
+          ],
+          "operationId": "get_all_vault_performance",
+          "responses": {
+            "200": {
+              "description": "Vaults found",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "type": "object",
+                    "additionalProperties": {
+                      "type": "object",
+                      "additionalProperties": {
+                        "$ref": "#/components/schemas/VaultPerformanceOverview"
+                      },
+                      "propertyNames": {
+                        "type": "string"
+                      }
+                    },
+                    "propertyNames": {
+                      "type": "integer",
+                      "format": "int64",
+                      "minimum": 0
+                    }
+                  }
+                }
+              }
+            },
+            "500": {
+              "description": "Internal server error",
+              "content": {
+                "application/json": {
+  
+                }
+              }
+            }
+          }
+        }
+      },
+      "/v1/vault:tvl/all": {
+        "get": {
+          "tags": [
+            "vault"
+          ],
+          "operationId": "get_all_vaults_tvl",
+          "responses": {
+            "200": {
+              "description": "Vaults found",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "type": "object",
+                    "additionalProperties": {
+                      "type": "object",
+                      "additionalProperties": {
+                        "$ref": "#/components/schemas/VaultTVLOverview"
+                      },
+                      "propertyNames": {
+                        "type": "string"
+                      }
+                    },
+                    "propertyNames": {
+                      "type": "integer",
+                      "format": "int64",
+                      "minimum": 0
+                    }
+                  }
+                }
+              }
+            },
+            "500": {
+              "description": "Internal server error",
+              "content": {
+                "application/json": {
+  
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "components": {
+      "schemas": {
+        "ApyDetails": {
+          "type": "object",
+          "required": [
+            "apy",
+            "start_erate",
+            "start_timestamp",
+            "end_erate",
+            "end_timestamp"
+          ],
+          "properties": {
+            "apy": {
+              "type": "string"
+            },
+            "end_erate": {
+              "type": "string"
+            },
+            "end_timestamp": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "start_erate": {
+              "type": "string"
+            },
+            "start_timestamp": {
+              "type": "string",
+              "format": "date-time"
+            }
+          }
+        },
+        "DataPoint": {
+          "type": "object",
+          "required": [
+            "timestamp",
+            "amount"
+          ],
+          "properties": {
+            "amount": {
+              "type": "string"
+            },
+            "timestamp": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        },
+        "Metrics": {
+          "type": "object",
+          "required": [
+            "total_volume_secured_by_concrete",
+            "total_volume_secured_by_partners"
+          ],
+          "properties": {
+            "total_volume_secured_by_concrete": {
+              "$ref": "#/components/schemas/VolumeSecured"
+            },
+            "total_volume_secured_by_partners": {
+              "$ref": "#/components/schemas/VolumeSecured"
+            }
+          }
+        },
+        "StrategyTotalAssetDiff": {
+          "type": "object",
+          "required": [
+            "address",
+            "chain_id",
+            "underlying_token_address",
+            "vault_address",
+            "is_multisig",
+            "total_assets_diff",
+            "total_assets_diff_i256",
+            "timestamp",
+            "block_number"
+          ],
+          "properties": {
+            "address": {
+              "type": "string"
+            },
+            "block_number": {
+              "type": "integer",
+              "format": "int64",
+              "minimum": 0
+            },
+            "chain_id": {
+              "$ref": "#/components/schemas/u64"
+            },
+            "is_multisig": {
+              "type": "boolean"
+            },
+            "timestamp": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "total_assets_diff": {
+              "type": "string"
+            },
+            "total_assets_diff_i256": {
+              "type": "string"
+            },
+            "underlying_token_address": {
+              "type": "string"
+            },
+            "vault_address": {
+              "type": "string"
+            }
+          }
+        },
+        "VaultPerformanceDetailed": {
+          "type": "object",
+          "required": [
+            "address",
+            "chain_id",
+            "decimals",
+            "symbol",
+            "name",
+            "version",
+            "implementation",
+            "underlying_token_address",
+            "underlying_token_price",
+            "underlying_token_decimals",
+            "deployment_block_number",
+            "deployment_timestamp",
+            "timestamp",
+            "apy",
+            "reported_total_assets",
+            "total_supply",
+            "tvl",
+            "peak_tvl",
+            "peak_apy",
+            "e_rate",
+            "tvl_history_30_days",
+            "apy_history_30_days",
+            "total_assets_history_30_days",
+            "apy_avg_7_days",
+            "apy_avg_30_days",
+            "apy_7_days",
+            "apy_30_days"
+          ],
+          "properties": {
+            "address": {
+              "type": "string"
+            },
+            "apy": {
+              "type": "string"
+            },
+            "apy_30_days": {
+              "type": "string"
+            },
+            "apy_30_days_details": {
+              "oneOf": [
+                {
+                  "type": "null"
+                },
+                {
+                  "$ref": "#/components/schemas/ApyDetails"
+                }
+              ]
+            },
+            "apy_7_days": {
+              "type": "string"
+            },
+            "apy_7_days_details": {
+              "oneOf": [
+                {
+                  "type": "null"
+                },
+                {
+                  "$ref": "#/components/schemas/ApyDetails"
+                }
+              ]
+            },
+            "apy_avg_30_days": {
+              "type": "string"
+            },
+            "apy_avg_7_days": {
+              "type": "string"
+            },
+            "apy_details": {
+              "oneOf": [
+                {
+                  "type": "null"
+                },
+                {
+                  "$ref": "#/components/schemas/ApyDetails"
+                }
+              ]
+            },
+            "apy_history_30_days": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/DataPoint"
+              }
+            },
+            "chain_id": {
+              "$ref": "#/components/schemas/u64"
+            },
+            "decimals": {
+              "type": "integer",
+              "format": "int32",
+              "minimum": 0
+            },
+            "deployment_block_number": {
+              "type": "integer",
+              "format": "int64",
+              "minimum": 0
+            },
+            "deployment_timestamp": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "e_rate": {
+              "type": "string"
+            },
+            "implementation": {
+              "type": "integer",
+              "format": "int32",
+              "minimum": 0
+            },
+            "name": {
+              "type": "string"
+            },
+            "next_cutoff_timestamp": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "format": "date-time"
+            },
+            "next_payout_timestamp": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "format": "date-time"
+            },
+            "peak_apy": {
+              "type": "string"
+            },
+            "peak_tvl": {
+              "type": "string"
+            },
+            "reported_total_assets": {
+              "type": "string"
+            },
+            "symbol": {
+              "type": "string"
+            },
+            "timestamp": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "total_assets_history_30_days": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/DataPoint"
+              }
+            },
+            "total_deposited": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "total_deposited_usd": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "total_depositors": {
+              "type": [
+                "integer",
+                "null"
+              ],
+              "minimum": 0
+            },
+            "total_supply": {
+              "type": "string"
+            },
+            "tvl": {
+              "type": "string"
+            },
+            "tvl_history_30_days": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/DataPoint"
+              }
+            },
+            "underlying_token_address": {
+              "type": "string"
+            },
+            "underlying_token_decimals": {
+              "type": "integer",
+              "format": "int32",
+              "minimum": 0
+            },
+            "underlying_token_price": {
+              "type": "string"
+            },
+            "version": {
+              "type": "integer",
+              "format": "int32",
+              "minimum": 0
+            },
+            "withdrawals_config": {
+              "oneOf": [
+                {
+                  "type": "null"
+                },
+                {
+                  "$ref": "#/components/schemas/VaultWithdrawalConfig"
+                }
+              ]
+            },
+            "withdrawals_config_rc": {
+              "oneOf": [
+                {
+                  "type": "null"
+                },
+                {
+                  "$ref": "#/components/schemas/VaultWithdrawalConfig"
+                }
+              ]
+            }
+          }
+        },
+        "VaultPerformanceOverview": {
+          "type": "object",
+          "required": [
+            "address",
+            "chain_id",
+            "decimals",
+            "symbol",
+            "name",
+            "underlying_token_address",
+            "underlying_token_price",
+            "reported_total_assets",
+            "total_supply",
+            "tvl",
+            "apy",
+            "peak_tvl",
+            "peak_apy",
+            "e_rate",
+            "timestamp",
+            "apy_7_days",
+            "apy_30_days"
+          ],
+          "properties": {
+            "address": {
+              "type": "string"
+            },
+            "apy": {
+              "type": "string"
+            },
+            "apy_30_days": {
+              "type": "string"
+            },
+            "apy_7_days": {
+              "type": "string"
+            },
+            "chain_id": {
+              "$ref": "#/components/schemas/u64"
+            },
+            "decimals": {
+              "type": "integer",
+              "format": "int32",
+              "minimum": 0
+            },
+            "e_rate": {
+              "type": "string"
+            },
+            "name": {
+              "type": "string"
+            },
+            "peak_apy": {
+              "type": "string"
+            },
+            "peak_tvl": {
+              "type": "string"
+            },
+            "reported_total_assets": {
+              "type": "string"
+            },
+            "symbol": {
+              "type": "string"
+            },
+            "timestamp": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "total_deposited": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "total_deposited_usd": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "total_depositors": {
+              "type": [
+                "integer",
+                "null"
+              ],
+              "minimum": 0
+            },
+            "total_supply": {
+              "type": "string"
+            },
+            "tvl": {
+              "type": "string"
+            },
+            "underlying_token_address": {
+              "type": "string"
+            },
+            "underlying_token_price": {
+              "type": "string"
+            }
+          }
+        },
+        "VaultTVLOverview": {
+          "type": "object",
+          "required": [
+            "address",
+            "chain_id",
+            "symbol",
+            "name",
+            "version",
+            "implementation",
+            "tvl",
+            "timestamp",
+            "peak_tvl",
+            "peak_apy"
+          ],
+          "properties": {
+            "address": {
+              "type": "string"
+            },
+            "chain_id": {
+              "$ref": "#/components/schemas/u64"
+            },
+            "implementation": {
+              "type": "integer",
+              "format": "int32",
+              "minimum": 0
+            },
+            "name": {
+              "type": "string"
+            },
+            "peak_apy": {
+              "type": "string"
+            },
+            "peak_tvl": {
+              "type": "string"
+            },
+            "symbol": {
+              "type": "string"
+            },
+            "timestamp": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "tvl": {
+              "type": "string"
+            },
+            "version": {
+              "type": "integer",
+              "format": "int32",
+              "minimum": 0
+            }
+          }
+        },
+        "VaultWithdrawalConfig": {
+          "type": "object",
+          "required": [
+            "cutoff_cron",
+            "payout_cron",
+            "withdrawal_queue_threshold"
+          ],
+          "properties": {
+            "cutoff_cron": {
+              "type": "string"
+            },
+            "payout_cron": {
+              "type": "string"
+            },
+            "starting_from": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "format": "date-time"
+            },
+            "withdrawal_queue_threshold": {
+              "type": "string"
+            }
+          }
+        },
+        "VolumeSecured": {
+          "type": "object",
+          "required": [
+            "amount_usd",
+            "transfers_count",
+            "chains_count"
+          ],
+          "properties": {
+            "amount_usd": {
+              "type": "integer",
+              "format": "int64",
+              "minimum": 0
+            },
+            "chains_count": {
+              "type": "integer",
+              "format": "int64",
+              "minimum": 0
+            },
+            "transfers_count": {
+              "type": "integer",
+              "format": "int64",
+              "minimum": 0
+            }
+          }
+        },
+        "u64": {
+          "type": "integer",
+          "format": "int64",
+          "minimum": 0
+        }
+      }
+    },
+    "tags": [
+      {
+        "name": "metrics",
+        "description": "Metrics endpoints"
+      },
+      {
+        "name": "strategy",
+        "description": "Strategy management endpoints"
+      },
+      {
+        "name": "vault",
+        "description": "Vault performance endpoints"
+      }
+    ]
+  }

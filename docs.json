@@ -1,0 +1,18 @@
+{
+    "name": "Concrete Protocol",
+    "openapi": "openapi.json",
+    "navigation": {
+        "groups": [
+          {
+            "group": "API Reference",
+            "pages": [
+              "api-reference/metrics/get-metrics",
+              "api-reference/strategy/get-strategy",
+              "api-reference/vault/get-vault-performance",
+              "api-reference/vault/get-all-vault-performance",
+              "api-reference/vault/get-all-vaults-tvl"
+            ]
+          }
+        ]
+      }
+  }
