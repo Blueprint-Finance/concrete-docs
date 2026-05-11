@@ -17,7 +17,7 @@ When you submit a withdrawal request:
 - You’ll see your **estimated withdrawal time** in the app
 - Track your withdrawal status in your Portfolio tab — you’ll see labels like **“Queued”**, **“Processing”**, or **“Available”**
 
-**Withdrawal Flow:**
+**Withdrawal Flow**
 
 *Submit Withdrawal → In Queue → Funds Ready → Claim (if needed) → Tokens in Wallet (Wait up to 7 days)*
 
@@ -25,64 +25,25 @@ When you submit a withdrawal request:
 
 Some vaults operate on a **fixed withdrawal schedule**, processing requests once or twice a week. If you request after the cutoff, your funds will be processed in the **next batch**.
 
-### Standard Weekly Schedule
-
-- **Cutoff Time:** Wednesdays at 12:00 PM UTC
-- **Processing Time:** Thursdays at 12:00 PM UTC
-- Requests made after the cutoff roll into the next week’s batch
-
-### Stable Schedule
-
-Withdrawals for the Stable (ctStableUSDT and ctStablefrxUSD) open on December 13, 2025. The queue is a **7-day withdrawal period**. After users requests are processed, they will be able to complete their withdrawal and retrieve funds from the vault.
-
-### Corn Stables Vault Schedule
-
-- **Cutoff Time:** Mondays at 12:00 PM UTC
-- **Processing Time:** Thursdays at 12:00 PM UTC
-- Requests made after the cutoff roll into the next week’s batch
-
-:::tip
-A live countdown timer and next batch details are always visible in the app under the withdrawal tab.
-:::
-
-### Berachain Bitcoin Schedule
-
-- **Cutoff Times:** Mondays and Thursdays at 12:00 PM UTC
-- **Processing Time:** 24 hours later (Tuesdays and Fridays at 12:00 PM UTC)
-- Requests made after the cutoff roll into the **next available batch**
-
-### Example – Corn USDT Vault
-
+:::info[Example]
 If Alice submits her request **before Monday, June 3 at 12:00 PM UTC**, she’ll receive her funds by **Thursday, June 6**.
 If she submits after the cutoff (e.g., **Monday at 12:01 PM**), her request will be included in the **next week’s batch**, and her funds will arrive by **Thursday, June 13**.
+:::
 
-## Withdrawal Timing by Vault Type
+## Withdrawal Caps Per Epoch
 
-| Vault Name | Max Wait Time | Schedule |
-| --- | --- | --- |
-| **Stable (ctStableUSDT / ctStablefrxUSD)** | Up to 7 days  | Withdrawal queue opens December 13, 2025 |
-| **Berachain Bitcoin** | Up to 5 days | Processed Mondays & Thursdays |
-| **Concrete DeFi USDT** | Up to 7 days | Processed Mondays & Thursdays |
-| **Berachain Ethereum / Stables / BERA / Berabaddies** | Up to 7 days | Cutoff Wed 12 PM, release Thurs 12 PM |
-| **Corn Stables** | Up to 7 days | Cutoff Mon 12 PM, release Thurs 12 PM |
-| **Corn Bitcoin** | Instant | Withdraw anytime |
-| **Morpho Bitcoin / Ethereum / USD** | Instant | Withdraw anytime |
-| **Ethena (USDe, sUSDe)** | Up to 7 days | Bridge first, then claim via UI |
-| **Dinero Ethereum** | Up to 7 days | Bridge first, then claim via UI |
-| **Bitcoin Bera (Lombard)** | Up to 7 days | Claim through Lombard, not Concrete |
+A withdrawal cap limits the total volume of redemptions processed in a single epoch, expressed as a percentage of vault TVL. Caps work alongside cadence to keep batch sizes predictable and aligned with strategy's unwind capacity.
 
-## Per-Cycle Withdrawal Caps
+**How caps behave**
 
-Some vaults — currently the **Concrete DeFi USDT** vault — apply a cap on how much can be withdrawn in a single cycle, expressed as a percentage of the vault's TVL. Caps keep batches predictable and aligned with how quickly the underlying strategy can unwind positions.
+When requests within an epoch stay under the cap, the batch processes normally at the scheduled time. When requests exceed the cap, only requests up to the cap threshold are processed in that epoch — the remainder roll forward to subsequent epochs and are processed in the order they were originally requested (First In First Out). Depositors waiting across multiple epochs continue earning yield until their portion is processed.
 
-**How a cap behaves:**
+:::info[Example - Weekly Vault with Withdrawal Cap]
+Say a vault processes withdrawals every Tuesday, with a cap of 20% of TVL per epoch.
 
-- When the total withdrawals requested in a cycle stay under the cap, the batch processes normally on its scheduled date.
-- When requests exceed the cap, only the portion up to the cap is processed in that cycle. The remainder rolls forward to the next cycle and is processed in the order it was originally requested (FIFO).
-- Deposits waiting across multiple cycles continue to earn yield until they are processed.
+If Alice submits a withdrawal request on Friday, May 29, her request joins the queue for the next batch on Tuesday, June 3. If total requests that week are under the 20% cap, Alice receives her funds by Friday, June 6.
 
-:::tip
-If a vault you are using has a withdrawal cap, the app's countdown and expected date already account for any rollover, so the date you see is the date your funds will actually be claimable.
+But if the vault has $10M in TVL and $3M in total withdrawal requests that week (30% of TVL), only the first $2M in requests are processed on June 3, in the order they were submitted (FIFO). If Alice's request falls beyond the $2M threshold, her portion rolls forward to the next epoch on Tuesday, June 10. She continues earning yield on her position while she waits, and her funds arrive by Friday, June 13.
 :::
 
 ## Cross-Chain Withdrawals (Bridging)
@@ -98,9 +59,10 @@ Once your vault tokens arrive on the destination chain:
 
 :::tip
 **Always confirm you control the destination wallet**, if you're bridging to another chain in order to withdraw. Need to change your address after bridging?
-
-Follow our [**Request Address Change Guide**](./01-Bera/request-address-change.md)
+Follow our [Request Address Change Guide](./01-Bera/request-address-change.md)
 :::
+
+![](/img/how-withdrawals-work-bridging.png)
 
 ## Why Withdrawal Queues Exist
 
@@ -112,14 +74,3 @@ Concrete uses queues to:
 - Maintain protocol liquidity
 - Protect long-term earners
 - Ensure no user is unfairly prioritized
-
-## Summary Table
-
-| Feature              | Weekly Vaults (Berachain, Corn) | Instant Vaults (Morpho) | Stable                                        |
-| -------------------- | ------------------------------- | ----------------------- | --------------------------------------------------------- |
-| Wait Time            | Up to 5–7 days                  | None                    | Up to 7 days                                              |
-| Schedule             | Fixed days (Mon/Thurs)          | Anytime                 | Queue opens Dec 13, processed anytime within 7-day window |
-| Cutoff Time          | Wed 12 PM / Mon 12 PM           | N/A                     | N/A                                    |
-| Vault Examples       | BTC, ETH, Stables               | Morpho ETH/BTC/USDC     | ctStableUSDT, ctStablefrxUSD                              |
-| Bridging Required?   | Yes (if cross-chain)            | No                      | No                                                        |
-| Claim Step Required? | Sometimes                       | No                      | Yes — first claim vault shares on the Stable Network. If you have not claimed yet, [follow the guide](./05-Stable/claim.md) |
