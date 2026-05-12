@@ -64,8 +64,6 @@ Once your vault tokens arrive on the destination chain:
 Follow our [Request Address Change Guide](./01-Bera/request-address-change.md)
 :::
 
-![](/img/how-withdrawals-work-bridging.png)
-
 ## Why Withdrawal Queues Exist
 
 Vaults use your deposited assets to generate yield or provide protection to borrowers.
