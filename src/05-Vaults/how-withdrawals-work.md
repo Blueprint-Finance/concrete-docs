@@ -19,7 +19,7 @@ When you submit a withdrawal request:
 
 **Withdrawal Flow**
 
-*Submit Withdrawal → In Queue → Funds Ready → Claim (if needed) → Tokens in Wallet (Wait up to 7 days)*
+_Submit Withdrawal → In Queue → Funds Ready → Claim (if needed) → Tokens in Wallet (Wait up to 7 days)_
 
 ## Weekly Vault Batches
 
@@ -32,7 +32,9 @@ If she submits after the cutoff (e.g., **Monday at 12:01 PM**), her request will
 
 ## Withdrawal Caps Per Epoch
 
-A withdrawal cap limits the total volume of redemptions processed in a single epoch, expressed as a percentage of vault TVL. Caps work alongside cadence to keep batch sizes predictable and aligned with strategy's unwind capacity.
+Some vaults may have a withdrawal cap that limits the total volume of redemptions processed in a single epoch, expressed as a percentage of vault TVL. Whether a cap is enabled, and at what threshold, is determined by the vault curator based on the strategy's liquidity profile and unwind capacity. Not all vaults use caps. Caps work alongside cadence to keep batch sizes predictable and aligned with the strategy's unwind capacity. By keeping redemption batches predictable, caps allow curators to maintain more consistent strategy execution, which can contribute to better vault APY over time.
+
+To check the exact redemption process, including whether a cap is active and at what threshold, visit the withdrawal management page for the vault you are interested in.
 
 **How caps behave**
 
@@ -43,7 +45,7 @@ Say a vault processes withdrawals every Tuesday, with a cap of 20% of TVL per ep
 
 If Alice submits a withdrawal request on Friday, May 29, her request joins the queue for the next batch on Tuesday, June 3. If total requests that week are under the 20% cap, Alice receives her funds by Friday, June 6.
 
-But if the vault has $10M in TVL and $3M in total withdrawal requests that week (30% of TVL), only the first $2M in requests are processed on June 3, in the order they were submitted (FIFO). If Alice's request falls beyond the $2M threshold, her portion rolls forward to the next epoch on Tuesday, June 10. She continues earning yield on her position while she waits, and her funds arrive by Friday, June 13.
+If requests in a given epoch exceed the cap, the vault's withdrawal queuing service processes them in the order they were submitted (FIFO) across subsequent epochs. Alice continues earning yield on her position while she waits, and her funds are returned as her place in the queue is reached.
 :::
 
 ## Cross-Chain Withdrawals (Bridging)
