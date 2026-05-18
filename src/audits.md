@@ -31,8 +31,6 @@ Concrete Protocol follows a multi-phased audit approach to deliver the highest l
    All audit results are made publicly accessible, reinforcing our commitment to transparency and accountability.
 
 
-
-
 ## Earn v2 - Hurdle Rate
 
    - Date: April 22, 2026
@@ -44,6 +42,12 @@ Concrete Protocol follows a multi-phased audit approach to deliver the highest l
    - Date: April 17, 2026
    - Auditor: Halborn
    - [View the full report](/files/Position_Management_Helper_-_Standalone_Contract___SSC.pdf)
+
+## Earn v2 - Improvements & priority withdrawal mechanism
+
+   - Date: March 2, 2026
+   - Auditor: Halborn
+   - [View the full report](/files/Earn_V2_Improvements___SSC.pdf)
 
 ## Earn V2 Core
 
