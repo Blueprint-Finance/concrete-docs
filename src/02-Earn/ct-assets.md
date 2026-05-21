@@ -69,7 +69,7 @@ Yield enters the vault when strategies report a higher allocated value than thei
 
 ### Yield Calculation
 
-Yield is calculated from the underlying performance of the vault's strategies — APY across allocated protocols, emission rates, and other relevant factors — and is reflected in the share-to-asset exchange rate. A holder's redeemable value at any time is `convertToAssets(shares)` at the current exchange rate.
+Yield is calculated from the underlying performance of the vault's strategies, including APY across allocated protocols, emission rates, and other relevant factors. The result is reflected in the share-to-asset exchange rate. A holder's redeemable value at any point is `convertToAssets(shares)` at the current exchange rate.
 
 ## How to Withdraw Liquidity from the Vaults
 
