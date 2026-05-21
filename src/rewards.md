@@ -1,15 +1,9 @@
 ---
-title: "Rewards (Coming Soon)"
-description: "Overview of the Concrete rewards program, including eligibility, distribution mechanics, and participation expectations."
+title: "Concrete Points Program"
+description: "Overview of the Concrete Points Program, including eligibility, distribution mechanics, and participation expectations."
 sidebar_label: "Rewards"
 sidebar_position: 5
 ---
-
-More Exciting rewards are on the way!
-
-Stay tuned for more details about how you can earn, track, and redeem your points. This page will be updated with comprehensive information about the rewards structure and benefits as the program becomes available.
-
-Keep an eye out for updates!
 
 ## Concrete Points Program: Phase 1 (Social Campaign)
 

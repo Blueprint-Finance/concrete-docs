@@ -7,11 +7,11 @@ sidebar_position: 0
 
 Welcome to [Concrete.xyz](https://www.concrete.xyz), a suite of DeFi products powering secure, automated yield strategies and unlocking new opportunities for any on-chain asset.
 
-Earn competitive rates of return.
+Earn competitive risk-adjusted return.
 
 Decentralized Finance (DeFi) comes with complexities that require users to "Do Your Own Research" (DYOR) before engaging. From navigating multiple platforms for the best yields to securing your assets against liquidation, DeFi can feel overwhelming for both new and experienced users.
 
-[Launch Concrete App](https://app.concrete.xyz/earn) and deposit to vaults to earn the highest yield on your assets.
+[Launch Concrete App](https://app.concrete.xyz/earn) and deposit into curated vaults engineered for risk-adjusted yield.
 
 ## Designed For
 
@@ -20,7 +20,7 @@ Decentralized Finance (DeFi) comes with complexities that require users to "Do Y
 
 ## How Concrete Stands Apart from Traditional DeFi Solutions
 
-* Instead of users hopping between different money markets, Concrete automatically moves your assets to the best-performing protocols, ensuring maximum yield with zero effort on your part.
+* Instead of routing assets across protocols manually, Concrete vaults run curator-defined strategies that allocate capital across vetted DeFi venues. Allocation decisions are governed by role-based access control and supported by Concrete's Quantitative Framework — engineered for risk-adjusted return rather than headline APY.
 
 * Many DeFi platforms are fragmented across different blockchains. Concrete provides a unified user experience across multiple chains.
 
@@ -34,11 +34,9 @@ For many users, DeFi requires connecting to multiple platforms, understanding co
 
 The interface is designed so users don’t have to worry about switching between networks or applications. Concrete brings DeFi on easy mode, allowing users to focus on their strategies while the platform handles the execution.
 
-### Best Yields to Earn
+### Risk-Adjusted Yield, Engineered
 
-Yield farming in DeFi often involves searching through numerous protocols to find the highest returns, but this introduces risks like smart contract vulnerabilities and liquidity issues. Concrete’s Earn Vaults automate yield optimization, continuously reallocating your assets to the highest-yielding opportunities across multiple protocols.
-
-Integration with multiple money markets, allowing users to tap into the best yields across different protocols. Users can deposit their assets once and Concrete takes care of rebalancing between different money markets as conditions change.
+Concrete's Earn Vaults route capital across multiple DeFi protocols based on quantitatively assessed risk-adjusted return — not headline APY. Allocations rebalance as conditions change, with protocol vetting, capped exposures, and continuous risk monitoring as part of the design.
 
 
 ## Looking Ahead (Only Future Plans)
@@ -53,12 +51,3 @@ These layers will make Concrete a **complete DeFi suite** where users can:
 
 The architecture is being designed so that vault deposits and credit systems all interconnect natively — creating a unified ecosystem where yield, liquidity, and protection reinforce one another rather than existing as separate products.
 
-### Protection Against Liquidation
-
-A major fear in the DeFi world is the risk of liquidation when borrowing against your assets. Traditionally, when the value of your collateral drops below a certain threshold, your position gets liquidated, and you lose a significant portion of your assets.
-
-In the future, Concrete will significantly reduce this fear by offering multi-layered liquidation protection. The system actively monitors your position, injects credit if needed, and ensures you avoid the full brunt of liquidation penalties.
-
-### Leveraging Long-term Assets
-
-Users often want liquidity for short-term needs while holding onto long-term assets like Ethereum. In the future, Concrete will allow you to easily borrow stablecoins or other assets against your deposits without worrying about liquidation risks. Whether you need liquidity for new investments or just want to use your holdings without selling them, Concrete will allow you to do this with peace of mind. The platform will handle the complexities, ensuring you get the best borrowing rates and protection.

@@ -23,7 +23,7 @@ _Submit Withdrawal → In Queue → Funds Ready → Claim (if needed) → Tokens
 
 ## Weekly Vault Batches
 
-Some vaults operate on a **fixed withdrawal schedule**, processing requests once or twice a week. If you request after the cutoff, your funds will be processed in the **next batch**.
+Async vaults process withdrawal requests in epochs configured per vault. The cadence — daily, weekly, or otherwise — depends on the vault's configuration, not a protocol-level rule. Each vault page lists its specific cutoff and processing schedule.
 
 :::info[Example]
 If Alice submits her request **before Monday, June 3 at 12:00 PM UTC**, she’ll receive her funds by **Thursday, June 6**.
@@ -66,7 +66,7 @@ Follow our [Request Address Change Guide](./01-Bera/request-address-change.md)
 
 ## Why Withdrawal Queues Exist
 
-Vaults use your deposited assets to generate yield or provide protection to borrowers.
+Vaults deploy deposited assets into yield strategies. When the vault's idle balance is insufficient to fulfill withdrawal requests immediately, withdrawal queues let the vault deallocate from strategies in an orderly batch — protecting both the vault's integrity and the predictability of redemption.
 
 Concrete uses queues to:
 

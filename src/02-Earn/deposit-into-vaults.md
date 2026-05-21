@@ -22,9 +22,9 @@ Before starting, you must connect your preferred wallet (e.g., MetaMask) to inte
 - Click the **Deposit** tab.
 - Enter the amount of the asset you want to deposit (e.g., 3.2 ETH).
    - The interface calculates and shows:
-     - The equivalent receipt token (e.g., cETH).
+     - The equivalent receipt token (e.g., ctETH).
      - Deposit value in USD.
-     - Expected earnings in both cETH and rewards.
+     - Expected earnings in both ctETH and rewards.
 
 ![](/img/earn-4.png)
 

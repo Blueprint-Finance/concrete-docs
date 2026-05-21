@@ -37,8 +37,6 @@ Concrete’s Probability Engine integrates advanced forecasting models, utilizin
 
 While it does not directly offer price protection or prediction markets, the system provides signals based on asset volatility, allowing users to make informed decisions.
 
-When the Probability Engine detects a market downturn, it reallocates liquidity from yield-farming strategies to more stable, short-term opportunities such as liquidation protection. This ensures that even as traditional APYs compress due to market conditions, Concrete users can still earn stable returns.
-
 ### Strategic Asset Movement
 
 Concrete minimizes unnecessary transaction costs and avoids disrupting yield curves by only moving the necessary amount of liquidity. By monitoring yield curve compression and transaction costs, Concrete ensures that liquidity moves between protocols in a way that maximizes yield while minimizing disruptions.
@@ -62,7 +60,7 @@ The engine looks at the correlation between different crypto assets, which is ty
 The system pulls data from multiple Oracle feeds, including both on-chain and off-chain sources, to gain a comprehensive view of market conditions. This includes price feeds from centralized exchanges, data from decentralized exchanges, and liquidity information from lending markets where Concrete has exposure.
 
 
-## Key Risk Factors Monitored by the Probability Engine and Yield Protection Mechanism
+## Key Risk Factors Monitored by the Probability Engine
 
 Concrete’s Probability Engine monitors the following key risk factors:
 
@@ -70,16 +68,10 @@ Concrete’s Probability Engine monitors the following key risk factors:
 
 - **Liquidity Depth**: It assesses liquidity across different lending and yield markets to understand how quickly and efficiently liquidity can be reallocated when market conditions change.
 
-- **Loan Concentration Risk**: The engine evaluates the distribution of active loans and the potential impact if market conditions turn unfavorable. It ensures there is sufficient capital reserved to protect loans through liquidation events.
-
 - **Emissions and Yield Curves**: The Probability Engine tracks the emission rates and APYs of different protocols, especially during bullish and bearish trends, to determine the most profitable allocation of assets.
 
 ## Example
 
 Imagine you are a liquidity provider looking to earn yield without the hassle of constant monitoring. Concrete’s Earn Vaults automate the entire process for you.
 
-A user deposits $10 million worth of ETH into Concrete’s Earn Vault. Initially, Concrete identifies that Aave offers 7% APY and Compound offers 5% APY. When Compound’s APY jumps to 12%, Concrete’s Probability Engine recalculates the yield curve compression effect of reallocating liquidity. The system decides to shift a portion of the ETH into Compound to maximize returns without negatively impacting the yield structure of either protocol.
-
-Suppose the market begins to show signs of a downturn. The Probability Engine forecasts increased liquidation volumes and assesses that transitioning some of the vault’s assets into loan protection strategies offers better short-term returns than continuing with yield farming. This allows users to capitalize on market corrections, where liquidation fees and protection rewards become more significant.
-
-This automated reallocation ensures that even during volatile periods, liquidity providers earn returns.
+A USDC vault holds two strategies — a Pendle yield strategy and a Morpho lending strategy. As market conditions change, the vault's Allocator role rebalances allocations between these strategies through the Allocation Module, subject to vault-level limits. The Quantitative Framework's signals inform target weights; on-chain execution remains under role-based access control.
