@@ -14,6 +14,7 @@ Before starting, you must connect your preferred wallet (e.g., MetaMask) to inte
 - Go to the **Earn** section on the platform.
 - Select the asset vault (e.g., **ETH Vault**) from the list.
    - **Key Metrics**: Check the displayed total staked value and potential APY.
+   - Life is good.
 
 ![](/img/earn-3.png)
 
