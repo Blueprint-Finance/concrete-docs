@@ -9,10 +9,6 @@ This guide will walk you through the key steps to quickly get started with Concr
 
 ## **How to Use Concrete**
 
-<video controls width="90%">
-  <source src="/vid/main-dashboard.mp4"/>
-</video>
-
 ### 1. Launch the Concrete dApp  
    Head to the official **Concrete website** and launch the decentralized app (dApp). You can browse the app and view the features available to you, but you will need to connect your wallet for full access.
 
@@ -32,10 +28,6 @@ This guide will walk you through the key steps to quickly get started with Concr
    - **Portfolio**: Track your vault deposit and rewards.
 
 ## **Earn**
-
-<video controls width="90%">
-  <source src="/vid/earn3.mp4"/>
-</video>
 
 The **Earn** dashboard is where users deposit into vaults and track positions. Most vaults support standard or epoch-based withdrawals; some campaign vaults have time-bound lockups. Each vault page clearly indicates its withdrawal mechanism before deposit.
 
@@ -65,6 +57,4 @@ The **Portfolio** dashboard allows you to track and manage your activity within 
 
 1. **Positions**: Displays all your active and closed positions
 2. **Vaults**: Lets you manage your deposits into vaults. You can add or withdraw assets, and adjust your investment strategy as needed.
-3. **Rewards**: Displays all the rewards you've earned through participating in Concrete's earning mechanisms.
-
-![](/img/portfolio.png)
+3. **APY**: Displays all the rewards you will earn through participating in the vault.

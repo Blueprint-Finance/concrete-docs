@@ -37,17 +37,3 @@ The interface is designed so users don’t have to worry about switching between
 ### Risk-Adjusted Yield, Engineered
 
 Concrete's Earn Vaults route capital across multiple DeFi protocols based on quantitatively assessed risk-adjusted return — not headline APY. Allocations rebalance as conditions change, with protocol vetting, capped exposures, and continuous risk monitoring as part of the design.
-
-
-## Looking Ahead (Only Future Plans)
-
-Concrete’s long-term vision extends beyond yield automation. Future product layers might reintroduce borrowing and protection mechanisms that integrate seamlessly with the existing Earn vault infrastructure.
-
-These layers will make Concrete a **complete DeFi suite** where users can:
-
-* Earn automated yield through **Concrete Earn**
-* Access liquidity without traditional liquidation risk through future possible borrowing products
-* Secure positions through optional protection modules
-
-The architecture is being designed so that vault deposits and credit systems all interconnect natively — creating a unified ecosystem where yield, liquidity, and protection reinforce one another rather than existing as separate products.
-

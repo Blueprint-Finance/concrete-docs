@@ -15,8 +15,6 @@ Before starting, you must connect your preferred wallet (e.g., MetaMask) to inte
 - Select the asset vault (e.g., **ETH Vault**) from the list.
    - **Key Metrics**: Check the displayed total staked value and potential APY.
 
-![](/img/earn-3.png)
-
 ## Step 2: Initiate Deposit
 
 - Click the **Deposit** tab.
@@ -25,8 +23,6 @@ Before starting, you must connect your preferred wallet (e.g., MetaMask) to inte
      - The equivalent receipt token (e.g., ctETH).
      - Deposit value in USD.
      - Expected earnings in both ctETH and rewards.
-
-![](/img/earn-4.png)
 
 ## Step 3: Confirm Deposit
 
