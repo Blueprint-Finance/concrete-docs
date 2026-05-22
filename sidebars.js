@@ -11,7 +11,6 @@ const sidebars = {
         'Overview/our-solution',
         'Overview/user-journey',
         'Overview/how-it-works',
-        'Overview/quantitative-framework',
         'Overview/prerequisites',
         'Overview/quick-start',
       ],
@@ -86,7 +85,6 @@ const sidebars = {
       label: 'Earn V1',
       items: [
         'Earn/deposit-into-vaults',
-        'Earn/withdrawing-via-canopy',
         'Earn/ct-assets',
         'Earn/balance-accrual',
         'Earn/how-earn-vaults-maximize-risk-adjusted-yields',
