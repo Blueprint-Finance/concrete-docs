@@ -37,7 +37,7 @@ This guide will walk you through the key steps to quickly get started with Concr
   <source src="/vid/earn3.mp4"/>
 </video>
 
-The **Earn** dashboard within the Concrete Protocol enables users to deposit and lock their assets to earn the highest possible yield with optimized strategies.
+The **Earn** dashboard is where users deposit into vaults and track positions. Most vaults support standard or epoch-based withdrawals; some campaign vaults have time-bound lockups. Each vault page clearly indicates its withdrawal mechanism before deposit.
 
 Here's how you can navigate and utilize the Earn feature to maximize your returns.
 
@@ -48,13 +48,13 @@ Here's how you can navigate and utilize the Earn feature to maximize your return
 ### How to Use the Earn Dashboard
 
 1. **View Available Vaults**:  
-   Within the Earn dashboard, you will be able to browse all available vaults for your specific assets. Each vault is associated with a different lending provider (e.g., **Aave**, **Compound**, etc.) and presents varying yield opportunities.
+   Within the Earn dashboard, browse available vaults. Each vault holds one underlying asset and can deploy capital across multiple strategies — for example, lending markets like **Aave** or **Morpho**, liquidity provision on **Pendle**, or curated structured strategies. Vault detail pages list current strategy composition, TVL and APY.
 
 2. **Explore Optimal Yields**:  
    The dashboard allows you to explore yields offered by different lenders, enabling you to find the most favorable return for your assets. You can also filter these options based on the blockchain network (e.g., **Ethereum**, **Arbitrum**).
 
 3. **Deposit Your Assets**:  
-   Once you’ve found the optimal vault, you can deposit your assets directly into it to start earning yield. The deposited assets are locked in the vault, generating returns based on the chosen strategy and protocol.
+   Once you've selected a vault, deposit directly to receive vault shares (ct[asset] tokens) representing your proportional stake. Deposits begin earning yield immediately as the vault's strategies operate. Withdrawal terms are vault-specific — review them before depositing.
 
 4. **Monitor Your Earnings**:  
    The dashboard will continuously display updated information about your deposited assets, the vault’s performance, and how much yield you've earned over time.

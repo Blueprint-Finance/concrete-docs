@@ -90,7 +90,6 @@ const sidebars = {
         'Earn/ct-assets',
         'Earn/balance-accrual',
         'Earn/how-earn-vaults-maximize-risk-adjusted-yields',
-        'Earn/money-market-margin',
       ],
     },
 

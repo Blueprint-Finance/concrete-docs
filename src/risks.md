@@ -11,13 +11,13 @@ For details on each vault’s allocation and strategy, visit its dedicated page 
 
 ## Smart Contract Risk
 
-All vaults are governed by smart contracts. While our contracts are thoroughly [audited by leading security firms](/audits/) like **Trail of Bits**, **Halborn**, and **Code4rena**, there is always residual risk of bugs or vulnerabilities.
+All vaults are governed by smart contracts. Contracts are [audited by leading security firms](/audits/) — **Halborn**, **Cantina**, **Zellic**, and **Code4rena** — with reports published on the Audits page. Residual risk of bugs or vulnerabilities always exists.
 
 **How we mitigate:**
 
 - Regular audits by top-tier firms
 - Open-source contracts with community review
-- Bug bounty programs and ongoing security testing
+- [Public bug bounty program on Cantina](https://cantina.xyz/bounties/e54ee88c-df96-4f80-a6c1-0723548312ab) and ongoing security testing
 
 ## Impermanent Loss (IL)
 
@@ -59,3 +59,7 @@ Each vault may expose users to different underlying protocols. These come with t
 - Vetting and monitoring of all integrated protocols
 - Capped exposures for experimental or new strategies
 - Transparent reward and allocation disclosures
+
+## Jurisdiction Restrictions
+
+Access to Concrete products is not available in every jurisdiction. Before depositing, review the [Restricted Jurisdictions](/restrictions/) page to confirm eligibility.

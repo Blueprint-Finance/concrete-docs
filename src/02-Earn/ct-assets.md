@@ -5,29 +5,29 @@ sidebar_label: "Concrete Assets"
 sidebar_position: 1
 ---
 
-ct[assets] are vault shares issued to users when they deposit assets into Concrete’s vaults. Each ct[asset] strictly represents the initial deposit amount in dollar terms and does not include any accrued yield or APY. Users receive these tokens as proof of their stake in the vault, but the actual yield is calculated and applied only at the end of the lockup period when the vault deposits are opened.
+**ct[asset] tokens** are ERC-20 vault shares that users receive when they deposit the underlying asset into a Concrete vault. The token name and symbol (e.g., "Concrete Senior USDC" / "ctSrUSDC") are set when the vault is deployed.
 
-These tokens ensure that users not only maintain the value of their initial deposit but also benefit from the accumulated yield over time by the vault’s strategies. The tokens are structured to track accrued interest and yield accurately, aligning with Concrete’s goal of offering transparent and optimized yield solutions.
+A user's share balance does **not** change over time on its own — what changes is the **value** of each share. Concrete vaults follow the ERC-4626 standard, where yield accrues by increasing the share's exchange rate rather than by minting more shares to the user.
 
-For instance, if a user deposits 1 ETH into an ETH vault, the Concrete protocol mints 10 ctETH tokens and transfers them to the user's wallet. These tokens accrue yield based on the performance of the vault’s strategies and entitle the holder to claim the accrued yield whenever they decide.
+Per-user yield works as follows: When a user deposits, they receive shares priced at the current exchange rate: `shares = assets × totalSupply / totalAssets` (with a +1 in numerator and denominator to prevent inflation attacks).
+
+As strategies generate yield, the vault's `totalAssets` increases while `totalSupply` stays the same, so each share is now redeemable for more of the underlying asset. The share price is `totalAssets / totalSupply`.
+
+Each user's share of the yield is therefore proportional to the number of shares they hold. Their realised yield equals the difference between the assets they can redeem now (`convertToAssets(shares)`) and what they originally deposited.
+
+Yield is recalculated on-chain whenever `accrueYield()` runs, which is triggered automatically on every deposit, mint, withdraw, and redeem via the `withYieldAccrual` modifier.
+
+For example, if a user deposits 1 ETH into an ETH vault when the share price is 1:1, they receive approximately 1 ctETH. Over time, as the vault generates yield, each ctETH becomes redeemable for more than 1 ETH — so 1 ctETH might later be worth 1.04 ETH after a 4% yield period. Share counts don't change; share value does.
 
 ## Advantages of ct[assets] Over Similar Tokens in DeFi
 
-### 1. Flexibility in Asset Swaps
+### Borrowing Against ct[assets] (Only Future Plans)
 
-Concrete plans to enable swapping between ct[assets], providing users the flexibility to transition between different assets without exiting the vault system. For example, if a user holds ctETH but wants exposure to WBTC, they can swap ctETH for ctWBTC directly within the platform. This swap mechanism is designed to happen seamlessly, maintaining user convenience and minimizing transaction fees.
-
-### 2. Borrowing Against ct[assets] (Only Future Plans)
-
-In the future, one of the key differentiators of Concrete’s ct[assets] might be the ability to use them as collateral for **borrowing** within the platform. This feature is not yet part of the current roadmap but remains in Concrete’s long-term vision.
-
-Once live, users will be able to lock their ct[assets] and borrow against them, accessing liquidity without liquidating their holdings. This will allow users to keep earning yield while also benefiting from additional liquidity.
-
-For example, if a user deposits ETH into a vault and earns 25% APY, they could borrow stablecoins against their ctETH at a lower rate, say 5%. The yield generated from the vault would be used to offset borrowing costs, providing a net positive return. This setup maximizes capital efficiency and removes the need for users to constantly rebalance their positions.
+Concrete's long-term vision includes credit products that could use vault shares as collateral. These are not currently shipped and are not on the active Earn V2 roadmap. For current product scope, see Earn V2 Overview.
 
 ## How ct[assets] Are Structured
 
-ct[assets] are structured as ERC-20 tokens, providing flexibility and compatibility within the Ethereum ecosystem. Users can transfer or swap these tokens between wallets or protocols. However, certain restrictions might apply in the early stages to ensure proper implementation and security.
+ct[assets] are structured as ERC-20 tokens, providing flexibility and compatibility within the Ethereum ecosystem. Users can transfer or swap these tokens between wallets or protocols.
 
 * **Type**: ERC-20
   ct[assets] adhere to the ERC-20 standard, ensuring compatibility and interoperability within the DeFi ecosystem.
@@ -44,8 +44,6 @@ Initially, users can only deposit into Concrete’s predefined vaults, which are
 
 When a user deposits assets (e.g., ETH) into Concrete’s vaults, they receive ct[assets] (like ctETH) in return. These tokens function as a digital receipt, confirming the deposit and entitling the holder to the underlying assets plus any accrued interest.
 
-Each issuance of ct[assets] is timestamped, which records when the assets were deposited. This timestamp is crucial as it determines how yield accrual is calculated over time for each user. For instance, if one user deposits ETH today and another deposits the same amount a week later, their ct[assets] will have different yields based on the duration they have been active.
-
 **What Information is Displayed on the Dashboard?**
 
 Concrete ensures that users have access to real-time updates on their dashboard, showing not only the amount deposited but also the yield that has been accrued. The dashboard also provides a proportional view of the user’s share relative to the total assets in the vault, giving insight into the overall performance of their investment.
@@ -55,14 +53,9 @@ Concrete ensures that users have access to real-time updates on their dashboard,
 * **Real-Time Updates**: The dashboard provides updates on the user’s current holdings and the yield accrued, offering a transparent view of their investments.
 * **APY and Yield Performance**: A clear breakdown of the historical yield and current APY of the vault, ensuring users can track their returns effectively.
 
-Note that users are currently unable to create custom vaults, as this feature is planned for a future release once the platform reaches a stable maturity level (e.g., after accumulating a significant amount of liquidity). The goal is to eventually allow users to create their own vaults and strategies, similar to platforms like Hyperliquid, where qualified users can manage liquidity.
-
 ### Example: How User Balances Increase Over Time
 
-Imagine the user deposits 1 ETH into a Concrete vault, and the protocol mints 10 ctETH tokens as a digital receipt. Over time, as the vault generates yield through its strategies, the value associated with the user's ctETH increases.
-
-* On **Day 1**, the user’s dashboard shows holdings of 10 ctETH, which represent the initial deposit of 1 ETH.
-* After **90 days**, assuming the vault’s APY is 15%, the user’s ctETH tokens would now reflect the accrued yield. The dashboard might show that the 10 ctETH is now equivalent to 1.0375 ETH, indicating the growth of the user's investment based on the yield accumulated.
+On Day 1, the user holds 1 ctETH (assuming 1:1 share price at deposit), redeemable for 1 ETH. After 90 days, if the vault has generated approximately 3.75% over the period, the same 1 ctETH is now redeemable for ~1.0375 ETH. The share count is unchanged; the exchange rate has moved. The dashboard reflects this through the underlying-asset balance, not a change in ctETH quantity.
 
 ## How Yield Accrues with ct[assets]
 
@@ -72,13 +65,11 @@ Concrete currently offers flexibility in how yields are accrued and presented.
 
 ### Yield Accrual Tracking
 
-Concrete uses the timestamped data to ensure that users earn yields proportional to their time in the vault and the overall performance of the vault. This approach prevents any discrepancies between early and late depositors and ensures fairness across the vault ecosystem.
-
-The ct[assets] keep track of yield based on the performance of the underlying strategies within the vault. As yields vary over time due to changing APYs or strategies, each user’s entitlement is adjusted accordingly, offering an accurate reflection of their earnings when they redeem their ct[assets].
+Yield enters the vault when strategies report a higher allocated value than their last recorded value. The vault updates its cached total assets, then accrues management and performance fees by minting shares to fee recipients. Existing shareholders see this reflected as a higher exchange rate per share. Late depositors enter at the prevailing share price, which already accounts for prior yield — preserving fairness without per-user timestamps.
 
 ### Yield Calculation
 
-Yield is calculated based on several metrics, including the APY performance of the vaults, emission rates from protocols, and other relevant factors. The system accurately tracks the duration of each deposit and the yield rates applicable during that period to provide an exact value for each ct[asset] holder.
+Yield is calculated from the underlying performance of the vault's strategies, including APY across allocated protocols, emission rates, and other relevant factors. The result is reflected in the share-to-asset exchange rate. A holder's redeemable value at any point is `convertToAssets(shares)` at the current exchange rate.
 
 ## How to Withdraw Liquidity from the Vaults
 
@@ -100,18 +91,3 @@ The Concrete UI provides a clear view of expected withdrawal timelines, ensuring
 
 For example, suppose a user deposits 1 ETH into a vault and receives ctETH. They can monitor their holdings through Concrete’s dashboard, which displays yield accumulation in real-time. If, over a certain period, the user’s vault strategy generates 10% APY, they will see this reflected in their ctETH value. When they decide to redeem their ctETH, they can do so via a simple process that converts their ctETH back into ETH, including the accumulated yield.
 
-## Future Swapping ct[assets] Feature
-
-Concrete’s protocol includes a swap feature that enables earners to optimize their liquidity by swapping ct[assets] directly within the platform. Users can swap ct[asset]A for ct[asset]B without manually redeeming and reinvesting their tokens, enhancing user flexibility.
-
-### Automated Swapping
-
-When users initiate a swap, the protocol handles it automatically in the background, maintaining the simplicity and efficiency of the process. The swap ratio reflects the underlying asset prices and liquidity requirements set by the protocol.
-
-### Optimized Liquidity Strategy
-
-The platform adjusts swap fees based on its liquidity needs. For instance, if Concrete needs to attract more WBTC liquidity, the swap fee for exchanging ETH to WBTC may be lower than the reverse, incentivizing users to adjust their holdings according to the protocol's needs.
-
-### Claiming Pending Rewards
-
-When users swap ct[assets], any pending rewards tied to their initial ct[asset] position are automatically claimed and transferred to their wallet. This ensures users receive the full value of their accrued yield before the swap is executed.
