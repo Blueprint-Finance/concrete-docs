@@ -21,10 +21,6 @@ For example, if a user deposits 1 ETH into an ETH vault when the share price is 
 
 ## Advantages of ct[assets] Over Similar Tokens in DeFi
 
-### Borrowing Against ct[assets] (Only Future Plans)
-
-Concrete's long-term vision includes credit products that could use vault shares as collateral. These are not currently shipped and are not on the active Earn V2 roadmap. For current product scope, see Earn V2 Overview.
-
 ## How ct[assets] Are Structured
 
 ct[assets] are structured as ERC-20 tokens, providing flexibility and compatibility within the Ethereum ecosystem. Users can transfer or swap these tokens between wallets or protocols.
@@ -43,15 +39,6 @@ ct[assets] are structured as ERC-20 tokens, providing flexibility and compatibil
 Initially, users can only deposit into Concrete’s predefined vaults, which are programmed with optimized strategies. These vaults have varying risk profiles depending on the type of asset (e.g., ETH, BTC) and the specific chain.
 
 When a user deposits assets (e.g., ETH) into Concrete’s vaults, they receive ct[assets] (like ctETH) in return. These tokens function as a digital receipt, confirming the deposit and entitling the holder to the underlying assets plus any accrued interest.
-
-**What Information is Displayed on the Dashboard?**
-
-Concrete ensures that users have access to real-time updates on their dashboard, showing not only the amount deposited but also the yield that has been accrued. The dashboard also provides a proportional view of the user’s share relative to the total assets in the vault, giving insight into the overall performance of their investment.
-
-* **Total Deposited Amount**: The exact amount of assets deposited into the vault.
-* **ct[assets] Balance**: The corresponding ct[assets] received upon deposit, representing the user’s stake in the vault.
-* **Real-Time Updates**: The dashboard provides updates on the user’s current holdings and the yield accrued, offering a transparent view of their investments.
-* **APY and Yield Performance**: A clear breakdown of the historical yield and current APY of the vault, ensuring users can track their returns effectively.
 
 ### Example: How User Balances Increase Over Time
 
@@ -80,14 +67,3 @@ To redeem ct[assets], users simply convert their tokens back into the original a
 ### Redemption Queue
 
 If immediate liquidity is unavailable, the protocol calculates redemption availability based on current utilization rates and forecasted redemption demands. If immediate redemption isn't possible, the user’s request enters a queue, ensuring that liquidity is released as it becomes available.
-
-### On-Chain Verification
-
-The protocol guarantees transparency by allowing any user to verify the on-chain availability of funds. Users can execute a function that checks liquidity and calculates the estimated redemption period, mathematically guaranteeing the user's funds are redeemable within a defined timeframe.
-
-### User Interface (UI)
-
-The Concrete UI provides a clear view of expected withdrawal timelines, ensuring users know when their liquidity will be available. The platform automatically transfers the funds to the user’s wallet once they become available, simplifying the process.
-
-For example, suppose a user deposits 1 ETH into a vault and receives ctETH. They can monitor their holdings through Concrete’s dashboard, which displays yield accumulation in real-time. If, over a certain period, the user’s vault strategy generates 10% APY, they will see this reflected in their ctETH value. When they decide to redeem their ctETH, they can do so via a simple process that converts their ctETH back into ETH, including the accumulated yield.
-

@@ -19,18 +19,7 @@ Once your asset is in the vault, Concrete employs sophisticated strategies to se
 
 Over time, your assets accrue yield. Concrete allows you to periodically claim the rewards generated from the automated strategies. The yield from your assets can be used to automatically compound or be withdrawn at any time, leaving users to profit from the remaining yield while maintaining liquidity.
 
-### 3. Borrowing and Protection — *Only in Future Features*
-
-While **Concrete Earn V2** currently focuses on yield generation and vault management, upcoming roadmap phases may include **Concrete Borrow** and **Concrete Protect** to enable users to borrow against deposited assets and access advanced liquidation safeguards.
-
-In future iterations:
-
-* **Borrow** will allow users to unlock liquidity without withdrawing assets.
-* **Protect** will offer optional liquidation protection to guard against market volatility.
-
-These features are not yet active but remain part of Concrete’s long-term product vision.
-
-### 4. Simple Fee Structure
+### 3. Simple Fee Structure
 
 On the first day, you begin incurring standard fees like **Yield fees**.
 
