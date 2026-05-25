@@ -5,55 +5,34 @@ sidebar_label: "Yield Vaults"
 sidebar_position: 1
 ---
 
-The [ERC-4626 Tokenized Vault Standard](https://ethereum.org/en/developers/docs/standards/tokens/erc-4626/) was designed to improve the functionality of yield-bearing vaults within DeFi ecosystems, creating a standardized approach to how vaults interact with tokens. ERC-4626 enables greater interoperability between vaults, enhancing deposits, withdrawals, and yield accounting across platforms.
+A Concrete vault is a smart contract that accepts your deposits and issues you shares in return. Concrete vaults are built on the [ERC-4626 Tokenized Vault Standard](https://ethereum.org/en/developers/docs/standards/tokens/erc-4626/). When you deposit, you receive vault shares (an ERC-20 token, e.g. ctDefiUSDT) that represent your portion of the vault.
 
-Concrete adopts this standard to simplify the complex process of managing yields and to offer yield vaults. A key innovation is how Concrete vaults allocate capital—currently focused on yield generation.
+## How You Earn Yield
 
-## How ERC-4626 Enables Smooth Integration Between Yield Vaults
+Your share balance does not change over time. Instead, each share becomes worth more (or less) of the underlying asset as the vault's value changes.
 
-### 1. Standardized Deposits and Withdrawals
+In practice:
+- You deposit 1,000 USDT → you receive a fixed number of vault shares.
+- Over time, the vault's strategy generates yield.
+- The exchange rate between your shares and USDT increases.
+- When you withdraw, you redeem your shares for more USDT than you put in.
 
-* With ERC-4626, the process of depositing and withdrawing assets from vaults is streamlined. Users deposit their assets (e.g., ETH, USDC, BTC) into vaults, receiving rewards in return. These tokens represent their share of the vault and are fully transferable across different DeFi platforms that support ERC-4626.
+Where the yield comes from depends on the specific vault's strategy, which is managed by the partner operating the vault. The protocol itself does not prescribe a yield source.
 
-* Withdrawals are just as simple. When a user decides to redeem their position and receive their underlying assets back, along with any yield that has accrued over time.
+### Vault Implementations
 
-### 2. Interoperability Across Platforms
+Concrete offers three ERC-4626 vault implementations, each suited to a different operational pattern. All three share a common base: full ERC-4626 compliance, multi-strategy support, fee management, hooks, and role-based access control. 
 
-* The standardization brought by ERC-4626 makes vaults interoperable across various DeFi platforms, enabling users to move between protocols without friction. ERC-4626 vaults integrate smoothly with other DeFi solutions, giving users more flexibility and reducing the need for manual intervention.
+- **Standard (Atomic) Vault** The base implementation. Deposits and withdrawals execute in a single transaction. Suitable for vaults where strategy liquidity is always available on-chain and can be unwound atomically. 
+- **Async Vault** Extends the Standard vault by adding an epoch-based withdrawal queue. Withdrawal requests are collected during an epoch, processed at a scheduled point (which locks a share price and reserves assets), and then claimed by users. The queue can be toggled on or off by a VAULT_MANAGER. This is the most common production configuration, used when the strategy involves off-chain custody (e.g. a MultisigStrategy pointing to a Safe or Fordefi wallet).
+- **Pre-deposit Vault** Extends the Standard vault for cross-chain launch flows. Users deposit on a source chain, the vault is locked, assets are bridged to a target chain, and users claim shares on the target chain via LayerZero messaging. This is a phase-specific vault type, typically succeeded by an Async vault on the target chain after launch. 
 
-### 3. Simplified Accounting for Yield Accrual
+All three implementations inherit from a common base, so Async and Predeposit vaults retain all capabilities of the Standard vault.
 
-* Accounting for yield can be complicated across different DeFi platforms, but ERC-4626 simplifies this process by providing a uniform structure for tracking and distributing returns. Concrete’s vaults use this to automatically calculate the yield based on deposits, and the accrued returns are distributed in the form of the asset from which they originated.
+### Limits to Be Aware Of
 
-* For users, this means they can easily see how much yield they’ve earned, making it straightforward to claim their rewards or reinvest them.
-
-## How Yield is Accrued for Earners
-
-Yield is accrued from multiple sources, and earners receive it in the form of the underlying assets. The protocol calculates a notional APY in the vault’s base asset to offer clarity on expected return.
-
-### Money Markets
-
-Funds from the vaults are deposited into various money markets (e.g., Aave, Compound) that offer the best yield opportunities for specific assets. The protocol constantly rebalances these deposits based on changing interest rates and transaction costs, ensuring the highest possible returns.
-
-
-
-
-## Example
-
-Imagine you deposit **1 ETH** into a Concrete yield vault. In return, you will receive **10 cETH**, which represents your share of the vault.
-Behind the scenes, your ETH is currently used for yield generation through money markets.
-In the future, portions of deposits will also provide liquidity for borrower protection mechanisms.
-
-After some time, you accrue yield from multiple sources:
-
-* 0.01 ETH from money markets,
-* 150 USDC from planned loan-protection fees (future revenue stream), and
-
-When you decide to withdraw your ETH, you redeem cETH tokens. Concrete’s system ensures there is enough liquidity to facilitate the withdrawal by managing the funds reserved for yield generation and (in future versions) protection modules.
-If liquidity is momentarily tied up, your request enters a redemption queue, with full transparency on when your funds will be available.
-
-## User Benefits
-
-* Track your earnings. The system calculates and displays the notional value of the yield accrued, expressed in the asset originally deposited.
-* Redeem your tokens to reclaim deposited assets and accrued yield with minimal hassle. Concrete’s liquidity management system ensures that withdrawals are executed efficiently, even if a redemption queue is needed to ensure liquidity.
-* Assets are constantly being shifted to the best-performing money markets. By monitoring interest rates, transaction costs, and liquidity utilization across multiple DeFi platforms, Concrete optimizes returns without the user needing to micromanage their investments.
+Each vault can enforce:
+- A maximum total deposit cap for the vault.
+- Minimum and maximum amounts per deposit and per withdrawal.
+- Optional per-user deposit caps.
+If the vault is full or your amount is outside the configured range, the transaction will not go through.
