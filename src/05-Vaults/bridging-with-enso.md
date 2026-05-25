@@ -1,7 +1,7 @@
 ---
 title: "Bridging with Enso"
 description: "Concrete vault documentation for bridging with Enso, including strategy behavior, withdrawals, migrations, and operational guidance."
-sidebar_label: "Bridging with Enso"
+sidebar_label: "Bridge and deposit with Enso"
 ---
 
 Concrete now supports bridging directly into vaults from selected assets on Ethereum mainnet and other supported networks — powered by [Enso](https://www.enso.build/).
