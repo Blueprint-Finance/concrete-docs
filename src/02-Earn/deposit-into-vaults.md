@@ -11,7 +11,7 @@ After you deposit, the vault puts your assets to work in the yield strategy — 
 
 ## Supported assets
 
-Each vault accepts a specific asset, for example **WBTC Vault** accepts WBTC, and the **Concrete DeFi USDT** vault accepts USDT. Some vaults have Enso integration, meaning you can bridge, and/or swap and deposit into the vault using all of the listed tokens. See [Bridge and deposit with Enso](https://docs.concrete.xyz/Vaults/bridging-with-enso/)for more.
+Each vault accepts a specific asset, for example **WBTC Vault** accepts WBTC, and the **Concrete DeFi USDT** vault accepts USDT. Some vaults have Enso integration, meaning you can bridge, and/or swap and deposit into the vault using all of the listed tokens. See [Bridge and deposit with Enso](https://docs.concrete.xyz/Vaults/bridging-with-enso/) for more.
  
 
 ## Before you start
