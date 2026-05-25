@@ -1,104 +1,66 @@
 ---
 title: "Bridging with Enso"
-description: "Concrete vault documentation for bridging with Enso, including strategy behavior, withdrawals, migrations, and operational guidance."
+description: "Concrete vault documentation for bridging into vaults with Enso, covering the cross-chain deposit flow, costs and slippage, and what to expect."
 sidebar_label: "Bridge and deposit with Enso"
 ---
 
-Concrete now supports bridging directly into vaults from selected assets on Ethereum mainnet and other supported networks — powered by [Enso](https://www.enso.build/).
+Concrete supports depositing into a vault directly from assets you hold on another chain, routed through [Enso](https://www.enso.build/). A cross-chain deposit removes the need to swap or bridge manually first and reduces the number of transactions to enter a vault. This page explains how it works, what it costs, and what to expect.
 
-This feature is only available for vaults whose assets are supported by Enso’s routing. For example, you can bridge into Berachain vaults from USDC or ETH on Ethereum, but not all vaults (e.g. Katana) will support this feature.
+This option is available only for vaults whose assets Enso can route to. For example, you can deposit into a Berachain vault from USDC or ETH on Ethereum, while some vaults (such as Katana) do not support it. The app shows which assets and vaults are available.
 
 **Example:**
 
-- You start with **USDC** or **ETH** on Ethereum mainnet
-- Enso **swaps** your asset into the vault’s required token (e.g., USDC → LBTC)
-- That token is **bridged** to the destination chain (e.g., Berachain)
-- The vault automatically **mints your shares** (e.g., `ctBeraLBTC`) and adds them to your portfolio
+- You hold **USDC** or **ETH** on Ethereum mainnet.
+- Enso **swaps** your asset into the vault's base asset (for example, USDC to LBTC).
+- That asset is **bridged** to the destination chain (for example, Berachain).
+- The vault **mints your shares** (for example, `ctBeraLBTC`) and adds them to your portfolio.
 
-## Ensure You Control Your Destination Wallet
+## Control your destination wallet
 
-When you deposit with Enso, your assets are sent to the **same wallet address** on the destination chain (e.g., Berachain). Make sure you can control this same address on the destination chain so that you’ll be able to withdraw your funds in the future.
+Your shares are sent to the **same wallet address** on the destination chain. Make sure you control that address on the destination chain, because you withdraw your funds from there later. If you cannot control it, you will not be able to withdraw.
 
-## How It Works
+## How it works
 
-1. Select a supported asset from your wallet (on Ethereum mainnet or another supported chain).
-2. Select your destination vault, Enso will calculate the optimal route.
-3. **Enso route execution**
-    - If needed, Enso will swap your asset into the vault’s underlying token
-    - The asset is then bridged to the vault’s network
-    - Deposited into the vault and converted into vault shares
-4. Receive vault shares, your vault shares appear in your portfolio just like a direct deposit.
-5. Withdrawals happen directly from the destination chain vault into your wallet. You must control the same wallet address on the destination chain. If you don’t, you won’t be able to withdraw your funds later.
+1. Select a supported asset from your wallet on a supported source chain.
+2. Select the destination vault. Enso calculates the route.
+3. Confirm the transaction. Enso swaps your asset into the vault's base asset if needed, bridges it to the vault's network, and deposits it into the vault.
+4. Receive your vault shares, which appear in your portfolio like a direct deposit.
 
-## Why This is Useful
+## Costs and slippage
 
-- No need to manually swap or bridge assets first
-- Reduces the number of steps (and transactions) needed to enter a vault
-- Enso automatically finds a competitive route for swaps and bridges
+Three things affect how much you receive. The app shows the estimates before you confirm.
 
-## Price Impact & Gas Costs
+- **Slippage** – Cross-chain routes apply a fixed slippage tolerance of 3%. Slippage is the maximum acceptable gap between the quoted and executed price; the route does not execute if the price moves beyond it. You cannot change this value.
+- **Price impact** – Large trades, or trades routed through low-liquidity pools, move the market price. Higher-liquidity assets such as USDC and WETH usually have lower price impact; thinly traded or volatile assets have more.
+- **Gas** – Standard network gas applies on both the source and destination chains. The app shows an estimated gas cost in ETH and USD.
+- **Bridge fees** – The underlying bridge protocol (for example, Stargate) may charge a fee. Any such fee is already reflected in the final amount you receive.
 
-When you bridge into a Concrete vault using Enso, your transaction may include swaps and bridging steps. This can involve the following costs and effects:
+## What to expect
 
-### Price Impact
+- **Availability varies** – Swap and bridge routes depend on provider liquidity, which changes over time and with the amount you deposit. A route is not guaranteed for every asset, amount, or moment. If none is available, the app tells you, and you can try a larger amount or deposit directly on the vault's own chain instead.
+- **Very small deposits may not route** – Below a certain amount, route costs make a deposit inefficient or impossible. The minimum depends on the vault's base asset and the current route cost. The app warns you when your amount is too small.
+- **Progress is shown step by step** – Each swap and bridge step appears as it happens, with a link to [LayerZero Scan](https://layerzeroscan.com) for that transaction. You can also check the status later by entering your original deposit transaction on LayerZero Scan.
+- **Failures are rare, and gas is not refunded** – If a route cannot be built or the first transaction reverts, your assets stay in your wallet, but the gas you paid for any failed transaction is not returned. If a step fails after the first transaction has gone through, the swap or bridge is already in progress, and gas is likewise not returned.
 
-- Enso simulates each route and returns an estimated `priceImpact`, showing how much the trade might shift the market price.
-- This accounts for slippage across all swaps and bridge operations in the route.
-- Small deposits (e.g., ~$100) may face higher price impact if the trade routes through illiquid pools.
-- Large deposits can also experience price impact if the amount exceeds the liquidity available on the preferred route or provider.
-- Higher liquidity assets (e.g., USDC, WETH) typically have lower price impact.
-- Thinly traded or volatile assets can have higher price impact.
-- For cross-chain operations, it’s common to allow **slightly higher slippage** (3–5%) vs. single-chain swaps (0.5–1%).
+## Withdrawals
 
-### Gas Costs
+Bridging and swapping apply only to deposits. When you withdraw, you always receive the vault's base asset in exchange for your shares, on the vault's own chain. To move those assets to another chain afterward, withdraw first, then bridge them yourself.
 
-- **Gas Estimation** — Enso returns a `gas` estimate from simulation to help avoid out-of-gas errors.
-- **Multi-Chain Gas** — For recursive bridging, LayerZero’s “native drop” feature allows paying all gas fees up front on the origin chain.
-- **Standard Blockchain Gas Fees** — Apply on both the source and destination chains, depending on the route.
+## Supported assets and vaults
 
-### Bridge Protocol Fees
+Support starts with a limited set of assets and vaults and expands over time. The current options always appear in the Concrete app.
 
-- Underlying bridge protocols (e.g., Stargate) may charge **bridge fees**.
-- These are shown in the route’s `feeAmount` field and are already included in the final output amount you see before confirming.
-- Enso itself does **not** charge an additional protocol fee — only the bridge protocol fees and standard gas apply.
+## Need help?
 
-### Key Route Info You’ll See
+If you run into any issues depositing into a vault:
 
-- `priceImpact` — Expected price impact from simulation
-- `gas` — Estimated gas usage for the transaction
-- `feeAmount` — Bridge protocol fees included in the route
-- `amountOut` — Final output after all fees and slippage
-
-For more technical details and examples, read:
-
-- [Enso Bridging Examples](https://docs.enso.build/pages/build/examples/bridging)
-- [Recursive Bridging](https://docs.enso.build/pages/build/examples/recursive-bridging)
-
-## Supported Assets & Vaults
-
-We’re starting with a limited set of supported assets and vaults, and will expand over time.
-You can always see the currently available options directly in the app.
-
-## Need Help?
-
-If you run into any issues bridging into a vault:
-
-- Ask in our [Concrete Discord](https://discord.gg/concretexyz)
-- Email us at [support@blueprintfinance.com](mailto:support@blueprintfinance.com)
+- Ask in the [Concrete Discord](https://discord.gg/concretexyz).
+- Email [support@blueprintfinance.com](mailto:support@blueprintfinance.com).
 
 ## FAQ
 
-**Q: Can I bridge *out* of a vault using Enso?**
-A: Currently, this feature is for bridging **into** vaults. To exit, withdraw from the vault first, then bridge your assets manually if needed.
+**Q: Do I need to approve assets before depositing?**
+A: For ERC-20 tokens such as USDC, the app prompts you to approve the token before the first transaction. Native ETH needs no approval.
 
-**Q: Is there a minimum deposit amount?**
-A: Yes — the minimum depends on the vault’s underlying asset and the route cost. The app will warn you if your amount is too small to be efficient after fees.
-
-**Q: What happens if my bridging transaction fails?**
-A: If the route fails, your starting asset remains in your wallet. You can retry with a different amount or wait for better liquidity.
-
-**Q: Do I need to approve assets before bridging?**
-A: Yes — for ERC20 tokens like USDC, you’ll be prompted to approve the token before the first bridge transaction.
-
-**Q: Can I see the exact fees before confirming?**
-A: Absolutely — Enso displays estimated price impact, gas cost, and bridge fees before you approve.
+**Q: Can I bridge out of a vault?**
+A: No. Cross-chain routing applies to deposits only. To exit, withdraw from the vault to receive its base asset on the vault's chain, then bridge those assets yourself if needed.
