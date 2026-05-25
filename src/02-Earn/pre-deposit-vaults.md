@@ -9,11 +9,11 @@ A pre-deposit vault accepts deposits during a set open period, before the vault 
 
 ## How Deposits and Yield Work
 
-As soon as you deposit, your balance begins accruing yield based on the vault's strategy. The headline yield is not fixed during the pre-deposit period. The final yield is determined when the pre-deposit period ends and the vault launches.
+As soon as you deposit, your balance begins accruing yield based on the vault's strategy. The headline yield is not fixed during the pre-deposit period. The final yield is determined when the pre-deposit period ends.
 
 ## Why Withdrawals Are Paused
 
-Deposits stay locked for the duration of the pre-deposit period, so withdrawals are not available during this time. Treat a pre-deposit allocation as committed until the vault launches. The vault page shows the date the pre-deposit period ends and your funds become claimable.
+Deposits stay locked for the duration of the pre-deposit period, so withdrawals are not available during this time. Treat a pre-deposit allocation as committed until withdrawals are available. The vault page shows the date the pre-deposit period ends and your funds become claimable.
 
 ## Claiming Your Position at Launch
 
