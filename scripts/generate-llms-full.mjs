@@ -8,7 +8,7 @@ const repoRoot = path.resolve(scriptDir, '..');
 const docsRoot = path.join(repoRoot, 'src');
 const staticRoot = path.join(repoRoot, 'static');
 const sidebarPath = path.join(repoRoot, 'sidebars.js');
-const outputPath = path.join(repoRoot, 'llms-full.txt');
+const outputPath = path.join(staticRoot, 'llms-full.txt');
 const siteUrl = 'https://docs.concrete.xyz';
 
 function walk(dir, predicate = () => true) {
@@ -53,7 +53,7 @@ function publicStaticUrl(filePath) {
 function makeAssetIndex() {
   if (!fs.existsSync(staticRoot)) return '';
 
-  const files = walk(staticRoot)
+  const files = walk(staticRoot, (filePath) => filePath !== outputPath)
     .map((filePath) => ({
       path: path.relative(repoRoot, filePath).replace(/\\/g, '/'),
       url: publicStaticUrl(filePath),
@@ -83,6 +83,10 @@ function makeAssetIndex() {
   }
 
   return lines.join('\n').trim();
+}
+
+function contentWithoutTimestamp(content) {
+  return content.replace(/^Generated: .*$/m, '');
 }
 
 function normalizeDocBody(body) {
@@ -221,6 +225,12 @@ async function main() {
     makeAssetIndex(),
     '',
   ].join('\n');
+
+  const existing = fs.existsSync(outputPath) ? fs.readFileSync(outputPath, 'utf8') : null;
+  if (existing !== null && contentWithoutTimestamp(existing) === contentWithoutTimestamp(output)) {
+    console.log(`${path.relative(repoRoot, outputPath)} is already up to date; leaving it unchanged.`);
+    return;
+  }
 
   fs.writeFileSync(outputPath, output, 'utf8');
   console.log(`Wrote ${path.relative(repoRoot, outputPath)} with ${allDocs.length} docs and ${Buffer.byteLength(output)} bytes.`);

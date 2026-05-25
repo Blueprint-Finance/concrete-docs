@@ -32,5 +32,3 @@ build/
 tmp/
 
 package-lock.json
-
-llms-full.txt
