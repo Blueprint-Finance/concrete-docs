@@ -464,6 +464,7 @@ lowercase "curator".
 - **Hook Manager** – manages hooks. _Source: `src/01-Overview/our-solution.md`._
 - **Allocator** – moves capital between strategies and processes withdrawals. Capitalized. Avoid lowercase "allocator" or "fund mover". _Source: `src/01-Overview/our-solution.md`, `src/01-Overview/how-it-works.md`._
 - **Withdrawal Manager** – handles epoch processing and claims on async vaults. _Source: `src/01-Overview/our-solution.md`._
+- **Pauser** – allows the incident response team to pause the vault independently of operational roles. _Source: `src/06-Earn-V2/overview.md`._
 - **curator** – the entity managing a vault's strategy and configuration. Lowercase; descriptive, not a formal on-chain role name. _Source: `src/05-Vaults/how-withdrawals-work.md`, `src/01-Overview/our-solution.md`._
 
 ### Fees and rewards
