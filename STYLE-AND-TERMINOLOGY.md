@@ -141,15 +141,17 @@ Never skip a level (no H1 directly to H3).
 
 ### 3.4 Length calibration
 
-| Article type | Target length | Example |
+These are upper guides, not quotas. There is no minimum length. A page is finished when it serves its audience (Section 2), explains before it specifies (Section 4.1), and includes at least one example, whether that takes 300 words or 800. Do not pad to reach a number; conciseness is preferred. The figures below flag pages long enough to consider splitting, not pages that are short.
+
+| Article type | Length guide | Example |
 |---|---|---|
-| Overview / welcome | 400–800 words | Welcome, Our Solution |
-| How-it-works / conceptual | 600–1,200 words | How It Works |
-| User guide / walkthrough | 500–1,000 words | User Journey, Deposit into Vaults |
-| Smart contract reference | 2,000–5,000 words | Architecture |
-| SDK reference method | 300–600 words per method | SDK Read/Write Methods |
-| Vault-specific | 400–800 words | Stable Vaults, WBTC Migration |
-| Policy / disclosure | 200–500 words | Fees, Risks, Restrictions |
+| Overview / welcome | up to 800 words | Welcome, Our Solution |
+| How-it-works / conceptual | up to 1,200 words | How It Works |
+| User guide / walkthrough | up to 1,000 words | User Journey, Deposit into Vaults |
+| Smart contract reference | up to 5,000 words | Architecture |
+| SDK reference method | up to 600 words per method | SDK Read/Write Methods |
+| Vault-specific | up to 800 words | Stable Vaults, WBTC Migration |
+| Policy / disclosure | up to 500 words | Fees, Risks, Restrictions |
 
 ## 4. Technical Content Rules
 
@@ -331,7 +333,7 @@ Every page has Docusaurus front-matter with:
 - [ ] No promotional language (superlatives or unbacked value claims) and no em dashes.
 - [ ] Internal links use relative paths; external links use official URLs.
 - [ ] `description` follows the metadata pattern.
-- [ ] Page length falls within the target range for its article type.
+- [ ] Page does not exceed the length guide for its article type; if it does, split or trim it. There is no minimum length, so do not pad a short page.
 
 ---
 
