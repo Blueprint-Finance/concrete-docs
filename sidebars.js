@@ -86,7 +86,7 @@ const sidebars = {
       items: [
         'Earn/deposit-into-vaults',
         'Earn/ct-assets',
-        'Earn/balance-accrual',
+        'Earn/pre-deposit-vaults',
         'Earn/how-earn-vaults-maximize-risk-adjusted-yields',
       ],
     },
