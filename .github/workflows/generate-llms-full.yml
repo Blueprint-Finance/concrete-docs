@@ -1,22 +1,27 @@
 name: Generate llms-full.txt
 
 on:
-  push:
-    branches:
-      - main
+  pull_request:
+    branches: [main]
+    paths:
+      - 'src/**/*.md'
+      - 'src/**/*.mdx'
+      - 'sidebars.js'
+      - 'scripts/generate-llms-full.mjs'
+
+permissions:
+  contents: write
 
 jobs:
   regenerate:
-    # Skip the run triggered by our own regenerate commit so we do not loop.
-    # We do not use [skip ci]: that would also stop Vercel from publishing the file.
-    if: "${{ !contains(github.event.head_commit.message, 'chore(llms): regenerate') }}"
+    # Skip fork PRs: GITHUB_TOKEN is read-only from forks and can't push back.
+    if: ${{ github.event.pull_request.head.repo.full_name == github.repository }}
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
+      - name: Checkout PR branch
         uses: actions/checkout@v4
         with:
-          # PAT so the push can re-deploy on Vercel and reach a protected main.
-          token: ${{ secrets.LLMS_FULL_KEY }}
+          ref: ${{ github.event.pull_request.head.ref }}
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
