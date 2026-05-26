@@ -11,7 +11,6 @@ const sidebars = {
         'Overview/our-solution',
         'Overview/user-journey',
         'Overview/how-it-works',
-        'Overview/prerequisites',
         'Overview/quick-start',
       ],
     },

@@ -1,7 +1,7 @@
 ---
 title: "Bridging with Enso"
 description: "Concrete vault documentation for bridging into vaults with Enso, covering the cross-chain deposit flow, costs and slippage, and what to expect."
-sidebar_label: "Bridging with Enso"
+sidebar_label: "Bridge and deposit with Enso"
 ---
 
 Concrete supports depositing into a vault directly from assets you hold on another chain, routed through [Enso](https://www.enso.build/). A cross-chain deposit removes the need to swap or bridge manually first and reduces the number of transactions to enter a vault. This page explains how it works, what it costs, and what to expect.
