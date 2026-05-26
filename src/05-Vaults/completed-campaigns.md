@@ -29,4 +29,4 @@ If you do not withdraw during the Withdrawal Period, your holdings may be migrat
 For full details on the Withdrawal Period and what it means for your position, see the [Terms of Use](https://concrete.xyz/terms).
 
 For more on support, see [Support](/support/)
-For more on withdrawals, see [Support](/how-withdrawals-work/)
+For more on withdrawals, see [Support](/Vaults/how-withdrawals-work/)
