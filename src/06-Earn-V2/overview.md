@@ -4,97 +4,64 @@ description: "Overview of Concrete Earn V2 vault infrastructure, including archi
 sidebar_label: "Overview"
 ---
 
-[Concrete Earn V2](https://app.concrete.xyz/earn) is the next version of Concrete's on-chain yield system, setting the new institutional standard for DeFi vault infrastructure — where strategy drives decisions, governance protects capital, and automation keeps everything in motion.
-
-Built around a single goal of making yield vaults flexible, upgradeable, and safe to operate directly on Ethereum ecosystem, Earn V2 lets curators and partners deploy vaults, connect yield strategies, manage allocations, and upgrade over time with seamless operations that never sacrifice control.
-
-This is the groundwork for a faster, safer, and more transparent generation of vault infrastructure.
+Concrete Earn V2 vaults are the foundation on which finance leverages blockchain efficiencies. Designed to be flexible, configurable, and interoperable with the infrastructure curators already use, they let curators focus on what they do best — generating returns — without changing how they operate to run a vault.
+Earn V2 lets curators and partners deploy vaults, connect strategies, manage allocations, and upgrade implementations over time, with role separation between high-impact governance actions and routine operations.
 
 ## What it does
 
-Each Earn V2 vault accepts one underlying asset (for example, USDC), issues ERC-20 shares in return, and tracks performance through transparent on-chain accounting.
-Vaults collect deposits from users, pool those assets together, and allocate or deallocate funds across yield strategies as needed — automatically recording gains, losses, and fees.
-
-Vaults can add, remove, or swap strategies, add custom business logic via hooks, and upgrade their logic. All actions emit events that can be tracked through Concrete’s subgraph.
-
-## What’s new in Earn V2
-
-Earn V2 builds directly on the foundation of Earn V1, addressing operational bottlenecks that limited scalability. Where V1 required manual coordination for rebalances and withdrawal processing, V2 introduces automation and role-based permissions that remove friction without compromising security. The result is a vault system that moves at market speed while preserving control and transparency.
-
-- **Granular Roles** — Clear boundaries to delegate high-frequency but less critical tasks to specific team members or automations, while maintaining full control over critical actions.
-- **Growing Library of Implementations** — Flexible vault setups with predefined behaviors and clear upgrade paths specific to your vault.
-- **Any Strategy Design** — strategy interfaces built for maximum flexibility and composability.
-- **Modular Architecture** — Pluggable components for strategies and allocation logic
-- **Liquidity Management** — Epoch-based withdrawal system for reliable asynchronous withdrawal schedules and improved operational control.
+Each Earn V2 vault accepts a single underlying asset (for example, USDC), issues ERC-20 shares in return, and tracks performance through on-chain accounting that refreshes before every user or admin action.
+Vaults pool deposits, allocate and deallocate funds across one or more strategies, and record yield, losses, and fees as they accrue. They can add, remove, or swap strategies, extend lifecycle behaviour through hooks, and upgrade their implementation via the factory.
+All actions emit structured events, which are indexed by Concrete's subgraph for off-chain access.
 
 ## Roles and controls
 
-**Vault owner:** controls upgrades for a specific vault.
+Earn V2 separates structural changes that require oversight from routine operations that can run on automation. All operational roles have a dedicated admin role for delegation and reassignment.
 
-**Vault roles:** Each operational role has its own **Admin Role**, allowing secure delegation and reassignment.
+- **Vault Manager** — Updates parameters, limits, fees, and (on async vaults) the withdrawal queue toggle.
+- **Strategy Manager** — Adds, removes, and toggles strategies.
+- **Hook Manager** — Configures lifecycle hooks.
+- **Allocator** — Moves capital between strategies, processes withdrawals, and sets deallocation order.
+- **Withdrawal Manager (async vaults)** — Closes and processes epochs, handles batch claims.
+- **Pauser** — Allows the incident response team to take independent action and pause the vault.
+- **Vault owner** — Separate from the operational roles; controls upgrades for the vault.
 
-Earn V2 distinguishes between structural changes that require oversight and routine operations that can run instantly — enabling governance to protect capital while automation handles daily flows.
+All admin roles default to the initial vault manager at deployment and can be reassigned to other addresses or automation services.
 
-- **Vault Manager** – updates parameters, limits, fees, and manages the withdrawal queue
-- **Strategy Manager** – adds or removes strategies
-- **Hook Manager** – manages custom logic hooks and withdrawal logic
-- **Allocator** – moves capital between strategies, withdrawal processing, and the unwinding of funds for users.
-- **Withdrawal Manager** (async vaults) – handles epoch processing and claims
+## What's new in Earn V2
 
-This separation keeps high-impact moves under tight governance, while letting routine operations flow without delay.
+Earn V2 builds directly on Earn V1 and addresses the operational bottlenecks that limited V1's scalability. Where V1 required manual coordination for rebalances and withdrawal processing, V2 introduces automation, modular components, and role-based permissions that remove friction without compromising security.
 
-All admin roles default to the vault owner at deployment. Role reassignment to other addresses or automation services will be available following the upcoming epoch remediations. All upgradeable contracts use **EIP-7201** storage and **UUPS proxies** for long-term upgrade safety.
+**Granular Roles** — Routine operational tasks can be delegated to specific addresses or automation services while high-impact actions stay under separate governance. Each role has a dedicated admin role for reassignment.
+**Factory and Implementations** — A single factory contract per chain deploys vaults from a library of pre-approved implementations and gates upgrades along approved migration paths. New implementations expand the library over time. All upgradeable contracts use EIP-7201 namespaced storage and UUPS proxies.
+**Flexible Strategy Interface** — Strategies are smart contracts that deploy funds into yield sources while tracking vault accounting. The production strategy in standard deployments is the `MultisigStrategy`, which forwards assets to a designated custody address — a Gnosis Safe or any other address, including an MPC wallet — and reports value back on-chain through bounded accounting updates.
+**Modular Architecture** — Vaults follow the ERC-4626 standard and can hold multiple strategies. Lifecycle hooks extend behaviour at specific points (per-user deposit caps, whitelists, custom logic); a hook revert fails the entire vault operation.
+**Async Liquidity Management** — Vaults can run in asynchronous mode, queuing withdrawal requests into epochs, processing them in batches, and locking a price-per-share per epoch — for strategies that require unwind time.
+**Fee Accountant** — Each vault is paired with a `FeeAccountant` that acts as its fee recipient and executes a configured waterfall on a periodic schedule. Deal terms — priority levels, recipients, allocation methods, remainder splits, and choice of hurdle oracle — are expressed as configuration rather than custom code. The hurdle rate itself is read from an oracle, with implementations supporting fixed APR, fixed APY, or a live market benchmark.
 
-## How it’s built
+## Accounting and on-chain / off-chain governance
 
-**Factory**
-A single factory contract deploys vaults, registers approved implementations, and handles upgrades between versions.
-Each chain has its own factory that follows the **UUPS** upgrade standard with **EIP-7201** storage layout for safe migrations..
+Earn V2 vaults split governance between what smart contracts enforce on-chain and what operators execute off-chain within those bounds.
 
-**Vaults**
-Vaults follow the ERC-4626 tokenized-vault standard for deposits, withdrawals, and accounting. They can hold multiple strategies.
+**On-chain (enforced by the smart contracts):** share accounting, role-based access control, fee accrual, strategy registration and allocation, epoch state transitions, and the accounting bounds on the MultisigStrategy.
+**Off-chain (operated by Concrete’s automation and custody infrastructure):** daily exchange-rate updates, epoch lifecycle orchestration, transaction proposal and validation, and withdrawal processing.
+The mechanism that connects them is the **MultisigStrategy**. Vault assets are held in a designated multi-signature custody address. On-chain accounting is kept current through a three-party model:
+- **Transaction Proposer** — Tracks the custody wallet’s balance via external data sources and proposes an `adjustTotalAssets(diff, nonce)` update.
+- **Independent Signer** — Validates the proposal against an independent data source and co-signs only if it matches.
+- **Smart Contract Safeguards**  — The strategy enforces three on-chain bounds: a `maxAccountingChangeThreshold` that auto-pauses the strategy on out-of-range updates, a `cooldownPeriod` between updates, and an `accountingValidityPeriod` after which accounting-dependent operations revert until a fresh update is posted.
 
-Both fees are minted as vault shares to the fee recipient for transparency and simplicity.
-
-**Async withdrawals (optional)**
-Beyond standard instant withdrawals, vaults can also run in “asynchronous” mode.
-This queues withdrawal requests into epochs, processes them in batches, and locks a fixed price per epoch.
-Vault owners can toggle between async and instant modes when needed.
-
-**Periphery**
-Around the core vaults, several helper modules provide additional functionality:
-
-- **Strategies:** smart contracts which deploy funds into yield strategies whilst tracking vault accounting.
-- **Multisig Strategies:** Earn V2 supports strategies that forward assets to multi-signature wallets — allowing curators or external partners to custody funds while preserving accurate on-chain accounting. Automated accounting integrations continuously monitor these wallets and update the vault’s reported assets to reflect yield accrued.
-- **Allocation Module:** a built-in module that lets the “Allocator” ****role move funds between strategies safely and efficiently. The allocator submits batched allocation or deallocation calls, and the module executes them while enforcing vault limits and role checks.
-- **Hooks:** optional contracts that add custom behavior (for example, deposit caps or KYC checks).
-- **Fee Splitter:** routes fees between one or two recipients with a configurable share.
-
-## Accounting and accrual
-
-Before any user or admin action, vaults refresh their cached `totalAssets` value by calling an explicit yield-accrual routine.
-This updates strategy performance, applies any fees, and ensures all share-to-asset conversions reflect the current vault value.
-
-**Automated Accounting System**
-
-Earn V2 introduces a three-party automation model that replaces manual bookkeeping and stale NAV updates with daily, verified accounting.
-
-- **Transaction Proposer** — Tracks strategist wallet balances and proposes updates based on live data.
-- **Independent Signer** — Validates that proposals match on-chain state.
-- **Smart Contract Safeguards** — Only accepts updates within expected yield ranges; out-of-range updates require manual approval.
-
-Together, these automations synchronize strategy balances and share prices with daily precision, enabling secure multisig strategies and real-time NAV reporting.
+No single party can unilaterally update vault NAV, and out-of-bounds proposals halt the strategy rather than being accepted.
 
 ## Events and indexing
 
-Every key action — deployments, upgrades, deposits, withdrawals, yield updates, fee accruals, and async-queue events — emits structured events.
-These are indexed by Concrete’s subgraph for full on-chain transparency and analytics.
+Every key action — deployments, upgrades, deposits, withdrawals, yield updates, fee accruals, and async-queue events — emits structured events indexed by Concrete’s subgraph.
 
-## Institutional-Grade Infrastructure
+## Institutional-grade infrastructure
 
-Earn V2 vaults integrate with partners and monitoring systems designed for institutional trust:
+Earn V2 is designed for partners whose operational standards extend beyond the smart-contract surface. The protocol integrates with custody, monitoring, and incident-response infrastructure used by institutional desks:
 
-- [TRES Accounting Integration](https://tres.finance/) — Provides off-chain and verified accounting.
-- [Hypernative Security Monitoring](https://www.hypernative.io/) — Delivers real-time risk detection and verification for trading wallets and multisigs, adding an independent protection layer to vault operations.
+- **Custody** — MPC-based wallet infrastructure (Fordefi, Fireblocks) with policy engines that enforce contract whitelisting, function restrictions, amount limits, and quorum-based approval.
+- **Monitoring** — Hypernative provides real-time monitoring of vault and strategy addresses, with alerts on anomalous activity and threshold breaches.
+- **Incident response** — ZeroShadow operates as a retained partner with standing authorization to pause vaults when unwind risks are detected, enabling sub-minute response to active threats.
+- **Independent attestation** — Partners can opt into Accountable as a third-party proof-of-funds dashboard for on-chain attestation of vault holdings.
 
-Together, these integrations position Earn V2 as the first DeFi vault infrastructure that meets institutional expectations for transparency and compliance.
+These integrations are arrangements within Concrete’s operational stack, not on-chain protocol guarantees — but together they extend the trust model beyond what the smart contracts enforce in isolation.
