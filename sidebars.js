@@ -97,7 +97,7 @@ const sidebars = {
          items: [
            'Vaults/yield-vaults',
            'Vaults/yield-strategies',
-           'Vaults/deprecation-guide',
+           'Vaults/completed-campaigns',
            'Vaults/how-withdrawals-work',
            'Vaults/bridging-with-enso',
            {

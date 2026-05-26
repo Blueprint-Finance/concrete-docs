@@ -204,23 +204,27 @@ const config = {
         redirects: [
           {
             from: '/Vaults/morphL2-vault-deprecation-guide',
-            to: '/Vaults/deprecation-guide',
+            to: '/Vaults/completed-campaigns',
           },
           {
             from: '/Vaults/Bera/vault-deprecation-guide',
-            to: '/Vaults/deprecation-guide',
+            to: '/Vaults/completed-campaigns',
           },
           {
             from: '/Vaults/Bera/berabaddies-earn-deprecation-guide',
-            to: '/Vaults/deprecation-guide',
+            to: '/Vaults/completed-campaigns',
           },
           {
             from: '/Vaults/Corn/vault-deprecation-guide',
-            to: '/Vaults/deprecation-guide',
+            to: '/Vaults/completed-campaigns',
           },
           {
             from: '/Vaults/Morph/vault-deprecation-guide',
-            to: '/Vaults/deprecation-guide',
+            to: '/Vaults/completed-campaigns',
+          },
+          {
+            from: '/Vaults/deprecation-guide',
+            to: '/Vaults/completed-campaigns',
           },
         ],
       },
