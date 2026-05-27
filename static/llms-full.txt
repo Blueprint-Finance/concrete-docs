@@ -1,6 +1,6 @@
 # Concrete Docs - LLM Full Context
 
-Generated: 2026-05-27T17:43:31.428Z
+Generated: 2026-05-27T17:47:10.713Z
 Source repository: concrete-docs
 Canonical docs URL: https://docs.concrete.xyz/
 
@@ -3358,7 +3358,7 @@ If requests in a given epoch exceed the cap, the queue processes them in the ord
 
 ### Cadence of Epochs
 
-Different vaults run on different epoch schedules, which determines how often withdrawals are processed. Vaults may close epochs daily, twice weekly, or weekly. For example, the Concrete DeFi USDT vault closes two epochs per week, so under normal load the queue settles within 3.5 to 7 days; if requests exceed the vault's withdrawal cap, the queue extends until later epochs settle the remainder.
+Different vaults run on different epoch schedules, which determines how often withdrawals are processed. The default cadence is one epoch per week. The Concrete DeFi USDT vault runs two epochs per week, so under normal load its queue settles within 3.5 to 7 days; if requests exceed the vault's withdrawal cap, the queue extends until later epochs settle the remainder. Each vault's page lists its specific schedule.
 
 ### Things to Know About Async Vaults
 
