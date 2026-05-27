@@ -8,41 +8,64 @@ on:
       - 'src/**/*.mdx'
       - 'sidebars.js'
       - 'scripts/generate-llms-full.mjs'
+  issue_comment:
+    types: [created]
 
 permissions:
   contents: write
+  pull-requests: read
 
 jobs:
-  regenerate:
-    # Skip fork PRs: GITHUB_TOKEN is read-only from forks and can't push back.
-    if: ${{ github.event.pull_request.head.repo.full_name == github.repository }}
+  regenerate-on-pr:
+    # PR events from the same repo (forks get a read-only token and can't push back).
+    if: >-
+      github.event_name == 'pull_request' &&
+      github.event.pull_request.head.repo.full_name == github.repository
     runs-on: ubuntu-latest
     steps:
       - name: Checkout PR branch
         uses: actions/checkout@v4
         with:
           ref: ${{ github.event.pull_request.head.ref }}
+          fetch-depth: 0
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: 20
-          cache: yarn
+      - uses: Blueprint-Finance/concrete-docs/.github/actions/sync-and-regenerate@main
 
-      - name: Install dependencies
-        run: yarn install --frozen-lockfile
-
-      - name: Generate llms-full.txt
-        run: yarn generate:llms
-
-      - name: Commit if changed
+  regenerate-on-command:
+    # Comment '/sync-llms' on an open PR by a collaborator forces a resync + regen.
+    # Useful when a previous run couldn't auto-resolve a conflict outside llms-full.txt
+    # and the PR's been resolved manually but still has a stale generated file.
+    if: >-
+      github.event_name == 'issue_comment' &&
+      github.event.issue.pull_request != null &&
+      github.event.issue.state == 'open' &&
+      contains(github.event.comment.body, '/sync-llms') &&
+      (github.event.comment.author_association == 'OWNER' ||
+       github.event.comment.author_association == 'MEMBER' ||
+       github.event.comment.author_association == 'COLLABORATOR')
+    runs-on: ubuntu-latest
+    steps:
+      - name: Resolve PR head ref
+        id: pr
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add static/llms-full.txt
-          if git diff --staged --quiet; then
-            echo "llms-full.txt unchanged; nothing to commit."
-          else
-            git commit -m "chore(llms): regenerate llms-full.txt"
-            git push
+          pr=$(gh api repos/${{ github.repository }}/pulls/${{ github.event.issue.number }})
+          ref=$(echo "$pr" | jq -r .head.ref)
+          repo=$(echo "$pr" | jq -r .head.repo.full_name)
+          if [ "$repo" != "${{ github.repository }}" ]; then
+            echo "PR is from a fork; cannot push back. Skipping."
+            echo "skip=true" >> "$GITHUB_OUTPUT"
+            exit 0
           fi
+          echo "ref=$ref" >> "$GITHUB_OUTPUT"
+
+      - name: Checkout PR branch
+        if: steps.pr.outputs.skip != 'true'
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ steps.pr.outputs.ref }}
+          fetch-depth: 0
+
+      - if: steps.pr.outputs.skip != 'true'
+        uses: Blueprint-Finance/concrete-docs/.github/actions/sync-and-regenerate@main
