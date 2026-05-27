@@ -1,6 +1,6 @@
 # Concrete Docs - LLM Full Context
 
-Generated: 2026-05-27T17:38:52.578Z
+Generated: 2026-05-27T18:02:12.653Z
 Source repository: concrete-docs
 Canonical docs URL: https://docs.concrete.xyz/
 
@@ -404,7 +404,7 @@ Doc ID: Earn-V2/Smart-Contracts/architecture
 Public URL: https://docs.concrete.xyz/Earn-V2/Smart-Contracts/architecture/
 In active sidebar: yes
 Description: Technical architecture documentation for Concrete Earn V2 smart contracts, roles, modules, and operational design.
-This page is for integrators and curators working against the Concrete Earn V2 smart contracts. It walks through how the four cooperating layers fit together: a factory that deploys vaults, vaults that hold user deposits and account for value, strategies that route capital into yield venues, and hooks that gate behavior at specific lifecycle points.
+This page is for integrators and curators working against the Concrete Earn V2 smart contracts. It explains how the four layers fit together: a factory that deploys vaults, vaults that hold user deposits and account for value, strategies that route capital into yield venues, and hooks that gate behavior at specific lifecycle points. After reading, you can plan a vault deployment and reason about the operational pitfalls described at the end.
 
 ## System overview
 
@@ -415,7 +415,7 @@ Three things sit around the vault:
 - **Strategies** – each bound to a single vault, executing the actual yield logic.
 - **Hooks** – optional modules that run before and after each user operation.
 
-This separation is the central design choice. The vault is small and standard; variation between products lives in contracts the vault holds references to, including what venues to use, what restrictions to enforce, and how withdrawals settle. A curator launching a new vault is composing modules, not forking a contract.
+This separation is the central design choice. The vault's contract surface is small and follows ERC-4626; variation between products lives in the contracts the vault holds references to: what venues to use, what restrictions to enforce, and how withdrawals settle. A curator launching a new vault is composing modules, not forking a contract.
 
 ## Factory
 
@@ -459,7 +459,7 @@ If a vault's strategy mix includes asynchronous-accounting strategies, the vault
 
 Strategies are adapters. Each is bound to a single vault, uses the same underlying asset, and implements the `IStrategyTemplate` interface. The vault only knows how to ask a strategy for its current value, push assets in, and pull assets out. New strategies plug in without changing the vault.
 
-Strategies built against this interface include a simple idle strategy that holds assets without seeking yield, a `MultisigStrategy` that forwards assets to a designated multisig with off-chain accounting reported back on-chain, and a looping strategy that runs flash-loan-driven leveraged positions composed from interchangeable lender, flash, and swap modules. New venues integrate by implementing the three module interfaces (roughly two dozen functions in total). The looping strategy contract itself contains no protocol-specific code.
+Strategies built against this interface include a simple idle strategy that holds assets without seeking yield, a `MultisigStrategy` that forwards assets to a designated multisig with off-chain accounting reported back on-chain, and a looping strategy that runs flash-loan-driven leveraged positions. The looping strategy composes interchangeable lender, flash, and swap modules; new venues integrate by implementing the three module interfaces (roughly two dozen functions in total) without changing the strategy contract.
 
 A vault can hold a conservative lending strategy alongside a leveraged looping strategy and a custodied multisig strategy at the same time. The **Allocator** (`ALLOCATOR`) decides what proportion sits where, calling `vault.allocate(...)` with per-strategy instructions. Routing and sizing decisions are off-chain; the allocator's payload tells the vault exactly which strategy to move how much into. The vault enforces postconditions (idle balance covers locked assets, and on async vaults also covers past-epoch unclaimed assets) but does not make policy decisions on-chain. From a user's perspective, the vault is one share token with one yield curve.
 
@@ -469,7 +469,7 @@ Hooks are optional modules that run at fixed lifecycle points: before and after 
 
 Two things to know:
 - **Hook reverts are not isolated.** A revert in any hook, pre or post, reverts the whole user operation. A buggy or misconfigured hook can block all vault operations until the hook configuration is updated. Only the **Hook Manager** (`HOOK_MANAGER`) can attach or replace hooks.
-- **Hooks gate the standard vault lifecycle, not every state change.** Cross-chain claim paths on the Predeposit vault and the `unbackedMint` function on Bridged variants do not fire hooks. Curators relying on whitelist enforcement on those implementations need to scope gating appropriately.
+- **Hooks gate the standard vault lifecycle, not every state change.** Cross-chain claim paths on the pre-deposit vault and the `unbackedMint` function on Bridged variants do not fire hooks. Curators relying on whitelist enforcement on those implementations need to scope gating appropriately.
 
 ## Authority and roles
 
@@ -480,11 +480,11 @@ Authority is split across three axes so that no single key controls every dimens
 
 Operational keys can be split across multiple parties. The curator does not need to be the allocator, and neither needs to be the pauser.
 
-A freshly deployed vault is **not** ready for production. The factory's initialization grants only `ROLE_ADMIN` and `VAULT_MANAGER`, both to the `initialVaultManager` passed in the deployment data. Every other role has no holder until `ROLE_ADMIN` grants it. Deploying a vault is a two-step operation: a runbook needs to follow `create()` with role grants before any allocation or strategy work can happen.
+A freshly deployed vault is **not** ready for production. The factory's initialization grants only `ROLE_ADMIN` and `VAULT_MANAGER`, both to the `initialVaultManager` passed in the deployment data. Every other role has no holder until `ROLE_ADMIN` grants it. Deploying a vault is a two-step operation: a `create()` call followed by role grants before any allocation or strategy work can happen. See the worked example below.
 
 ## Async withdrawals
 
-On Async vaults, withdrawals queue into epochs. The **Withdrawal Manager** (`WITHDRAWAL_MANAGER`) advances epochs through close, process, and claim phases. Users can cancel a request only while the epoch is open; once `closeEpoch()` is called, the user is locked in for that epoch and depends on the Withdrawal Manager to move their request forward via `moveRequestToNextEpoch(...)`.
+On async vaults, withdrawals queue into epochs. The **Withdrawal Manager** (`WITHDRAWAL_MANAGER`) advances epochs through close, process, and claim phases. Users can cancel a request only while the epoch is open; once `closeEpoch()` is called, the user is locked in for that epoch and depends on the Withdrawal Manager to move their request forward via `moveRequestToNextEpoch(...)`.
 
 The **Priority Withdrawal Executor** (`PRIORITY_WITHDRAWAL_EXECUTOR`) is a privileged fast-path that can settle a withdrawal against the active epoch immediately, paying the user out at `grossAssets - unwindCost`. The executor supplies the `unwindCost` at call time, bounded by an admin-configured cap (`unwindCostCapBP`, default 500 bps, ceiling 10000 bps, set via `setUnwindCostCap`). Calls where the supplied `unwindCost` exceeds the cap revert. This is a trusted operational role, not an automated mechanism.
 
@@ -492,22 +492,20 @@ See [How Withdrawals Work](../../05-Vaults/how-withdrawals-work.md) for the user
 
 ## Fee distribution
 
-Vaults charge management and performance fees by minting shares to a `managementFeeRecipient` and a `performanceFeeRecipient`. Both addresses are set by the factory owner via vault-side setters (`updateManagementFeeRecipient`, `updatePerformanceFeeRecipient`). Each recipient typically points to a `TwoWayFeeSplitter` contract, which routes accumulated fees between two configurable recipients (commonly the curator and the protocol) according to a basis-points share.
+Vaults charge management and performance fees by minting shares to a `managementFeeRecipient` and a `performanceFeeRecipient`. Both addresses are set by the factory owner via vault-side setters (`updateManagementFeeRecipient`, `updatePerformanceFeeRecipient`). Each recipient typically points to a `TwoWayFeeSplitter` contract, which routes accumulated fees between a `mainRecipient` (commonly the curator) and a `secondaryRecipient` (commonly the protocol). The split is set by `feeFractionOfSecondaryRecipient`, denominated in basis points out of 10,000: `0` sends everything to the main recipient, `10000` sends everything to the secondary.
 
-The splitter lives in the periphery, separate from the vault, so a single vault can mint to one shared splitter or to per-recipient splitters. See [Fees](../../fees.md) for the user-facing fee schedule.
+The splitter lives in the periphery, separate from the vault, so a single vault can mint to one shared splitter or to per-recipient splitters. Anyone can call `distributeFees(vault)` to flush accrued fees to the configured recipients. See [Fees](../../fees.md) for the user-facing fee schedule.
 
 ## Operational notes
-
-A short worked example, then two operational facts.
 
 ### Example: deploying and turning on a vault
 
 A curator wants to launch a USDC vault that allocates between an idle reserve and one looping strategy.
 
-1. Call `factory.create(version, ownerAddr, abi.encode(allocateModule, USDC, initialVaultManager, "Concrete USDC", "ctUSDC"), salt)`. The factory deploys a vault proxy. `ROLE_ADMIN` and `VAULT_MANAGER` are granted to `initialVaultManager`.
-2. From the `ROLE_ADMIN` account, grant `STRATEGY_MANAGER`, `ALLOCATOR`, `PAUSER`, and (for an async vault) `WITHDRAWAL_MANAGER`. The vault cannot service users yet because no strategy is attached and no role can yet add one.
+1. Call `factory.create(version, ownerAddr, abi.encode(allocateModule, USDC, initialVaultManager, "Concrete USDC", "ctUSDC"), salt)`. The factory deploys a vault proxy. `ROLE_ADMIN` and `VAULT_MANAGER` are granted to `initialVaultManager`; the `ownerAddr` argument becomes the proxy's `Ownable` owner, the address authorized to call `factory.upgrade(...)` later.
+2. From the `ROLE_ADMIN` account, grant `STRATEGY_MANAGER`, `ALLOCATOR`, `PAUSER`, and (for an async vault) `WITHDRAWAL_MANAGER` and `PRIORITY_WITHDRAWAL_EXECUTOR`. The vault cannot service users yet because no strategy is attached and no role can yet add one.
 3. From the `STRATEGY_MANAGER` account, call `addStrategy` for the idle strategy and the looping strategy.
-4. From the `ALLOCATOR` account, call `setDeallocationOrder` covering both strategies, then call `vault.allocate(...)` to move funds into the looping strategy as users deposit. Any strategy that is registered but missing from the deallocation order will still count toward `totalAssets()` but cannot be sourced for user withdrawals.
+4. From the `ALLOCATOR` account, call `setDeallocationOrder` covering both strategies, then call `vault.allocate(...)` to move funds into the looping strategy as users deposit. Any strategy that is registered but missing from the deallocation order still counts toward `totalAssets()` but cannot be sourced for user withdrawals.
 
 ### Things to know
 
@@ -516,7 +514,7 @@ A curator wants to launch a USDC vault that allocates between an idle reserve an
 
 ## Source access
 
-Concrete's smart contract source is held in a private repository. Partners and integrators can request access by contacting the team after signing an NDA.
+Concrete's smart-contract source is held in a private repository. Partners and integrators can request access by contacting the team after signing an NDA.
 
 ---
 
