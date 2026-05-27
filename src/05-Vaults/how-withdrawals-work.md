@@ -55,12 +55,12 @@ Different vaults run on different epoch schedules, which determines how often wi
 
 ## Things to know about Queued Withdrawals
 
-**Withdrawals aren't instant.** There's a delay between requesting and receiving your funds, based on the vault's schedule and the time needed to free up liquidity from its strategies.
-**Your price is set at processing, not at request.** The share price applied to your withdrawal is the one locked in when the batch is processed — so your final amount can move up or down between when you submit and when it settles.
-**You keep your position until the batch is processed.** Your shares sit with the vault but aren't burned until processing happens. Up to that point, you're still in.
-**You can cancel — but only before the batch closes.** Once your batch closes, your request is locked in and can't be cancelled.
-**Requests can be moved to the next batch.** If processing is delayed, Concrete's automation may roll your request forward to the next epoch.
-**Each vault sets minimum and maximum withdrawal sizes.** Your request needs to fall within these limits. Some vaults may also pause new withdrawal requests entirely.
+- **Withdrawals aren't instant.** There's a delay between requesting and receiving your funds, based on the vault's schedule and the time needed to free up liquidity from its strategies.
+- **Your price is set at processing, not at request.** The share price applied to your withdrawal is the one locked in when the batch is processed — so your final amount can move up or down between when you submit and when it settles.
+- **You keep your position until the batch is processed.** Your shares sit with the vault but aren't burned until processing happens. Up to that point, you're still in.
+- **You can cancel — but only before the batch closes.** Once your batch closes, your request is locked in and can't be cancelled.
+- **Requests can be moved to the next batch.** If processing is delayed, Concrete's automation may roll your request forward to the next epoch.
+- **Each vault sets minimum and maximum withdrawal sizes.** Your request needs to fall within these limits. Some vaults may also pause new withdrawal requests entirely.
 
 # Standard (Atomic) Vault
 
