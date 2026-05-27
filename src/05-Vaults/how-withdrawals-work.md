@@ -84,6 +84,6 @@ When a Predeposit vault enters its claim phase, the vault page in the Concrete a
 
 ## Frequently asked questions
 
-**Do my shares continue earning yield while in the queue?** Shares are held by the vault and are not burned until `processEpoch()` runs. Share price is locked at processing time, so any yield (or loss) the vault records between request and processing is reflected in the price applied to the request.
-**Can I cancel a withdrawal request?** Yes, for the current (still-open) epoch only, you can cancel on the vault page. Once the epoch closes, the request cannot be cancelled.
-**What if epoch processing is delayed?** The `WITHDRAWAL_MANAGER` can move a request to the next epoch.
+- **Do my shares continue earning yield while in the queue?** Shares are held by the vault and are not burned until `processEpoch()` runs. Share price is locked at processing time, so any yield (or loss) the vault records between request and processing is reflected in the price applied to the request.
+- **Can I cancel a withdrawal request?** Yes, for the current (still-open) epoch only, you can cancel on the vault page. Once the epoch closes, the request cannot be cancelled.
+- **What if epoch processing is delayed?** The `WITHDRAWAL_MANAGER` can move a request to the next epoch.
