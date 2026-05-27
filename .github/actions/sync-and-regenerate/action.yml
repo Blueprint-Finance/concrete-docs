@@ -1,0 +1,66 @@
+name: Sync and regenerate llms-full.txt
+description: >
+  Merges origin/main into the currently checked-out branch (auto-resolving
+  static/llms-full.txt by keeping ours), regenerates the file, and pushes
+  the merge commit plus any regeneration commit back to the branch. If
+  conflicts exist outside static/llms-full.txt, the merge is aborted and the
+  branch is left untouched for humans to resolve.
+
+runs:
+  using: composite
+  steps:
+    - name: Configure git identity
+      shell: bash
+      run: |
+        git config user.name  "github-actions[bot]"
+        git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+    - name: Sync with main, accepting our llms-full.txt on conflict
+      id: sync
+      shell: bash
+      run: |
+        git fetch origin main
+        if git merge-base --is-ancestor origin/main HEAD; then
+          echo "Branch already up to date with main."
+        else
+          if ! git merge origin/main --no-edit -X ours; then
+            remaining=$(git ls-files -u | awk '{print $4}' | sort -u | grep -v '^static/llms-full.txt$' || true)
+            if [ -n "$remaining" ]; then
+              echo "Conflicts outside static/llms-full.txt; leaving branch untouched:"
+              echo "$remaining"
+              git merge --abort
+              echo "skip=true" >> "$GITHUB_OUTPUT"
+              exit 0
+            fi
+            git checkout --ours static/llms-full.txt
+            git add static/llms-full.txt
+            git commit --no-edit
+          fi
+        fi
+
+    - name: Setup Node.js
+      if: steps.sync.outputs.skip != 'true'
+      uses: actions/setup-node@v4
+      with:
+        node-version: 20
+        cache: yarn
+
+    - name: Install dependencies
+      if: steps.sync.outputs.skip != 'true'
+      shell: bash
+      run: yarn install --frozen-lockfile
+
+    - name: Generate llms-full.txt
+      if: steps.sync.outputs.skip != 'true'
+      shell: bash
+      run: yarn generate:llms
+
+    - name: Commit and push if changed
+      if: steps.sync.outputs.skip != 'true'
+      shell: bash
+      run: |
+        git add static/llms-full.txt
+        if ! git diff --staged --quiet; then
+          git commit -m "chore(llms): regenerate llms-full.txt"
+        fi
+        git push
