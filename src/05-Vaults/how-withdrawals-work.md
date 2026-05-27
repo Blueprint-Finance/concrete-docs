@@ -10,7 +10,7 @@ Withdrawal behavior depends on the vault. Most Concrete Earn vaults are async va
 
 Concrete Earn ships two vault implementations and one launch-time variant, each with different withdrawal behavior:
 
-- **Async vault** – settles withdrawals through the **Withdrawal Queue**. Used whenever the strategy cannot return assets atomically, for example positions in off-chain custody, Pendle LP unwinds, or money markets with withdrawal cooldowns. This is the most common configuration on Concrete.
+- **Async vault** – settles withdrawals through the **Withdrawal Queue**. Used whenever the strategy cannot return assets atomically, for example positions held in a multi-sig wallet for off-chain or multi-venue execution, Pendle LP unwinds, or money markets with withdrawal cooldowns. This is the most common configuration on Concrete.
 - **Standard (atomic) vault** – `withdraw()` and `redeem()` execute in a single transaction. Used when the underlying strategy can return assets immediately.
 - **Pre-deposit vault** – accepts deposits on one chain before the target vault launches on another. Exit is via a cross-chain share claim, not the Withdrawal Queue. See [Pre-Deposit (Cross-Chain) Vault](#pre-deposit-cross-chain-vault) below.
 
@@ -21,8 +21,7 @@ Concrete Earn ships two vault implementations and one launch-time variant, each 
 3. **The epoch is processed.** Shortly after the cutoff:
    - The share price for the epoch is locked in at that moment, not at request time.
    - Your shares are burned.
-   - Your assets are reserved for you to claim.
-   - The **Allocator** deallocates from strategies if the vault needs more liquidity to cover the epoch.
+   - Your assets are reserved for you to claim. They come from the vault's unallocated balance first (idle deposits and previous unwind leftovers); if that is not enough, the **Allocator** deallocates from strategies to cover the difference.
 4. **Claim your assets.** Your withdrawal status moves to **Available** in the Portfolio tab. Click Claim, confirm in your wallet, and the assets arrive in your wallet. If you have multiple withdrawals ready across different epochs, you can claim them together.
 
 You can track each request in the **Portfolio** tab with status labels **Queued**, **Processing**, and **Available**. The app shows an **estimated withdrawal time** based on the vault's cadence and queue depth.
@@ -83,4 +82,4 @@ When a pre-deposit vault enters its claim phase, the vault page in the Concrete 
 
 - **Do my shares continue earning yield while in the queue?** Shares are held by the vault and are not burned until `processEpoch()` runs. Share price is locked at processing time, so any yield (or loss) the vault records between request and processing is reflected in the price applied to the request.
 - **Can I cancel a withdrawal request?** Yes, for the current open epoch only, you can cancel on the vault page. Once the cutoff passes, the request cannot be cancelled.
-- **What if epoch processing is delayed?** The **Withdrawal Manager** can move a request to the next epoch.
+- **What happens if my request cannot be filled in its epoch?** When the epoch reaches its withdrawal cap or processing is delayed, the **Withdrawal Manager** moves the remainder to the next epoch via `moveRequestToNextEpoch()`. Your queue position is preserved (FIFO).
