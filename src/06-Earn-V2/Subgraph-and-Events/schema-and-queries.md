@@ -1,122 +1,121 @@
 ---
 title: "Schema & Queries"
-description: "Subgraph and event documentation for Earn V2: Schema & Queries, including data modeling and analytics integration guidance."
+description: "Schema and query documentation for the Earn V2 subgraph, covering factory and vault entities, async extensions, user positions, strategies, daily aggregations, and example GraphQL queries."
 sidebar_label: "Schema & Queries"
 ---
 
-The Earn V2 subgraph leverages the **Factory pattern** used in Earn V2 smart contracts to track all Vault instances created by this factory.
+# Schema & Queries
 
-At factory level, the subgraph tracks top-level information (e.g., total vault count, deployment/migration events), while the main entities capture per-vault and per-strategy state.
+This page is for integrators and analytics developers querying the Earn V2 Subgraph. It documents the GraphQL entities exposed by the subgraph, how they relate to one another, and includes example queries against the most common access patterns. Each chain is a separate subgraph deployment and data is not aggregated across chains.
 
-:::tip
-While all entities and vaults for each chain coexist and can be queried from the same subgraph, it is not possible to aggregate information across chains. Each chain requires a specific subgraph deployment; data is isolated per chain.
+The subgraph uses The Graph's factory-pattern templates: `ConcreteFactory` is the root data source and each deployed vault is tracked through a `ConcreteVault` template instance created when the factory emits `Deployed` or `VaultRegistered`.
+
+:::info
+Exactly one `ConcreteFactory` exists per chain. The subgraph is built once per supported chain (Ethereum mainnet, Arbitrum One, Stable), and each deployment indexes that chain's single factory address declared in `networks.json`.
 :::
 
 ## Factory
 
-Although typically one factory exists per chain, the subgraph supports multiple.
-
-Each factory stores:
+Each factory stores the entity below. Only `id` and `vaultCount` are commonly queried; `roleMembers` is a reverse-derived list used for access-control introspection.
 
 ```graphql
 type Factory @entity(immutable: false) {
   id: Bytes!
   vaultCount: Int!
+  roleMembers: [RoleMember!]! @derivedFrom(field: "factory")
 }
 ```
 
-## Vault (Base Implementation)
+## Vault
 
-The core `Vault` entity tracks all standard vault implementations (both Standard and Async).
+The core `Vault` entity covers both standard and async implementations. Async fields are populated only on async vaults; standard vaults leave them at their initial values.
 
 ```graphql
 type Vault @entity(immutable: false) {
   id: Bytes!
   factory: Factory!
+
   allocateModule: Bytes!
   name: String!
   symbol: String!
+  decimals: BigInt!
   isAsync: Boolean!
+  imported: Boolean!
+
   underlyingAsset: Token!
+
   totalSupply: BigDecimal!
   cachedTotalAssets: BigDecimal!
   sharePrice: BigDecimal!
+
   totalManagementFeeAccrued: BigDecimal!
   totalPerformanceFeeAccrued: BigDecimal!
   totalHistoricalDeposits: BigDecimal!
   totalHistoricalWithdrawals: BigDecimal!
+
   createdAtBlockNumber: BigInt!
   createdAtBlockTimestamp: BigInt!
   createdAtTransactionHash: Bytes!
-  strategies: [Strategy]
-}
-```
+  strategies: [Strategy!]! @derivedFrom(field: "vault")
 
-**Tracked Events:**
-
-- Deposits
-- Withdrawals
-- Yield Accrued
-
-## Async Vault Extensions
-
-Async vaults extend the base vault entity with epoch-based fields.
-
-```graphql
-type Vault @entity(immutable: false) {
-  # Base implementation fields ...
+  # Async vaults only
+  isQueueActive: Boolean!
   currentEpoch: BigInt!
+  latestProcessedEpoch: BigInt!
   pastEpochUnclaimedAssets: BigDecimal!
+  processingEpochRequestedShares: BigDecimal!
   currentEpochRequestedShares: BigDecimal!
   nextEpochRequestedShares: BigDecimal!
+
+  withdrawalQueue: [WithdrawalQueue!]! @derivedFrom(field: "vault")
+  epochs: [Epoch!]! @derivedFrom(field: "vault")
 }
 ```
 
-**Tracked Events:**
+Tracked events: `Deposit`, `Withdraw`, `YieldAccrued`, `ManagementFeeAccrued`, `PerformanceFeeAccrued`. Full event-to-entity mapping is in the [Event Reference](./event-reference-and-use-cases).
 
-- Epoch Processed
-- Queued Withdrawal
-- Request Cancelled
-- Request Claimed
-- Request Moved To Next Epoch
+## WithdrawalQueue
 
-### WithdrawalQueue Entity
-
-Tracks pending requests per user per epoch.
+Tracks pending requests per user per epoch. Created on `QueuedWithdrawal`, updated on `RequestClaimed` (sets `isClaimed = true`) and `RequestMovedToNextEpoch`, and removed from the store on `RequestCancelled`. Mutable because handlers update `isClaimed`, `shares`, `sharesRaw`, `movedFromEpoch`, and the `last*` cursor fields after creation.
 
 ```graphql
-type WithdrawalQueue @entity(immutable: true) {
+type WithdrawalQueue @entity(immutable: false) {
   id: Bytes!
   vault: Vault!
   account: Account!
   receiver: Bytes!
   epochID: BigInt!
+  epoch: Epoch!
   shares: BigDecimal!
+  sharesRaw: BigInt!
+  isClaimed: Boolean!
+  movedFromEpoch: BigInt
+  lastBlockNumber: BigInt!
+  lastBlockTimestamp: BigInt!
+  lastTransactionHash: Bytes!
+  lastTransactionLogIndex: BigInt!
 }
 ```
 
-Created/updated on **Queued Withdrawal**, deleted on **Claimed** or **Cancelled**.
+Tracked events: `EpochProcessed`, `QueuedWithdrawal`, `RequestCancelled`, `RequestClaimed`, `RequestMovedToNextEpoch`.
 
-## Registered Vaults
+## Registered vaults
 
-Vaults can be imported into the Factory registry even if deployed elsewhere.
+Vaults can be imported into the Factory registry even when deployed elsewhere. Once registered, the factory begins managing and updating their data.
 
-Once registered, the factory begins managing and updating their data.
-
-:::tip
-Historical data before registration may not be available.
-To recover it, deploy a temporary subgraph for that vault, then import values on registration.
+:::info
+Historical data before registration is not available. To recover it, deploy a temporary subgraph for that vault and import values on registration.
 :::
 
-## User Positions
+## User positions
 
-User positions are represented through `Account` and `SharesBalance` entities.
+User positions are represented through the `Account` and `SharesBalance` entities. Both list fields on `Account` are reverse-derived from the foreign-key field on the child entity.
 
 ```graphql
 type Account @entity(immutable: false) {
   id: Bytes!
-  sharesBalances: [SharesBalance]
-  withdrawalQueue: [WithdrawalQueue]
+  sharesBalances: [SharesBalance!]! @derivedFrom(field: "account")
+  withdrawalQueue: [WithdrawalQueue!]! @derivedFrom(field: "account")
 }
 
 type SharesBalance @entity(immutable: false) {
@@ -128,91 +127,149 @@ type SharesBalance @entity(immutable: false) {
 }
 ```
 
-:::tip
-lastActivityTimestamp only updates on deposit or withdraw. Receiving transferred shares does **not** update this field.
+:::info
+`lastActivityTimestamp` updates on `Deposit` and `Withdraw` only. Receiving transferred shares via `Transfer` does not update this field.
 :::
 
 ## Strategy
 
-Each strategy attached to a vault is tracked as its own entity.
+Each strategy attached to a vault is tracked as its own entity. `vault` is nullable because a strategy can exist before it is added to a vault (created by the chain-wide `Initialized` listener) and after it is removed (`handleStrategyRemoved` sets `vault = null`); the alternative `0x000…000` sentinel broke GraphQL queries on `strategy.vault.id` for orphan strategies.
 
 ```graphql
 type Strategy @entity(immutable: false) {
   id: Bytes!
-  vault: Vault!
+  vault: Vault
   strategyType: Int!
   allocatedValue: BigDecimal!
+  roleMembers: [RoleMember!]! @derivedFrom(field: "strategy")
 }
 ```
 
-`allocatedValue` updates with each **StrategyYieldAccrued** event.
+`allocatedValue` is updated by `StrategyYieldAccrued`, `AllocateFunds`, `DeallocateFunds`, `StrategyWithdraw`, and `AdjustTotalAssets` (multisig strategies).
 
 ## Aggregations
 
-Subgraphs build *time-series* aggregations for daily/hourly data.
+The subgraph builds daily aggregations from internal `@entity(timeseries: true)` rows emitted by the vault handlers. See [Timeseries sources for daily aggregations](./event-reference-and-use-cases#timeseries-sources-for-daily-aggregations) for the mapping of source rows to aggregations.
 
-### New Users by Vault
+### NewUserStats (per vault)
 
-```graphql
-type NewUserStats @aggregation(intervals: ["day"], source: "NewUser") {
-  id: Int8!
-  timestamp: Timestamp!
-  vault: Vault!
-  count: Int8! @aggregate(fn: "count")
-  countCum: Int8! @aggregate(fn: "count", cumulative: true)
-}
-```
-
-A “new user” is counted when they:
-
-- Deposit for the first time in a vault, or
-- Receive shares via transfer.
-
-### New Users Global
-
-Tracks new users **across all vaults** in the subgraph.
+Counts unique `(vault, account)` first appearances per day.
 
 ```graphql
 type NewUserStats @aggregation(intervals: ["day"], source: "NewUser") {
   id: Int8!
   timestamp: Timestamp!
-  vault: Vault!
+  vault: Bytes!
   count: Int8! @aggregate(fn: "count")
   countCum: Int8! @aggregate(fn: "count", cumulative: true)
 }
 ```
 
-Triggered on first deposit, first transfer, or first withdrawal receipt across any vault.
+A new user is counted the first time a `(vault, account)` pair appears in any indexed event: the first `Deposit` or `Withdraw` for that owner, or the first `Transfer` involving that account as sender or receiver (excluding mint and burn legs).
 
-### Vault Stats
+### NewUserGlobalStats (across all vaults)
+
+Counts unique addresses across the entire protocol per day. There is no `vault` field; the aggregation is intentionally global.
+
+```graphql
+type NewUserGlobalStats
+  @aggregation(intervals: ["day"], source: "NewUserGlobal") {
+  id: Int8!
+  timestamp: Timestamp!
+  count: Int8! @aggregate(fn: "count")
+  countCum: Int8! @aggregate(fn: "count", cumulative: true)
+}
+```
+
+A new global user is counted on the first `Account` creation for an address. Triggering handlers are `handleDeposit`, `handleWithdraw`, `handleTransfer` (either side), `handleQueuedWithdrawal` (receiver, on a new queue entry), and `handleRequestMovedToNextEpoch` (user).
+
+### VaultStats
+
+Daily vault balance snapshots, sampled by aggregating with `fn: "last"` on each day's final `VaultBalanceUpdated` row.
 
 ```graphql
 type VaultStats
   @aggregation(intervals: ["day"], source: "VaultBalanceUpdated") {
   id: Int8!
-  timestamp: Int!
-  vault: Vault!
-  totalSupply: BigDecimal! @aggregate(fn: "avg", arg: "totalSupply")
-  cachedTotalAssets: BigDecimal! @aggregate(fn: "avg", arg: "cachedTotalAssets")
-  sharePrice: BigDecimal! @aggregate(fn: "avg", arg: "sharePrice")
+  timestamp: Timestamp!
+  vault: Bytes!
+  totalSupply: BigDecimal! @aggregate(fn: "last", arg: "totalSupply")
+  cachedTotalAssets: BigDecimal!
+    @aggregate(fn: "last", arg: "cachedTotalAssets")
+  sharePrice: BigDecimal! @aggregate(fn: "last", arg: "sharePrice")
 }
 ```
 
-### Vault Fees Stats
+### VaultFeesStats
+
+Daily and cumulative totals for management and performance fees, summed from the `VaultFeesAccrued` rows the fee handlers emit.
 
 ```graphql
 type VaultFeesStats
   @aggregation(intervals: ["day"], source: "VaultFeesAccrued") {
   id: Int8!
-  timestamp: Int!
-  vault: Vault!
+  timestamp: Timestamp!
+  vault: Bytes!
   managementFeeAccrued: BigDecimal!
-    @aggregate(fn: "avg", arg: "managementFeeAccrued")
+    @aggregate(fn: "sum", arg: "managementFeeAccrued")
   managementFeeAccruedCum: BigDecimal!
-    @aggregate(fn: "avg", arg: "managementFeeAccrued", cumulative: true)
+    @aggregate(fn: "sum", arg: "managementFeeAccrued", cumulative: true)
   performanceFeeAccrued: BigDecimal!
-    @aggregate(fn: "avg", arg: "performanceFeeAccrued")
+    @aggregate(fn: "sum", arg: "performanceFeeAccrued")
   performanceFeeAccruedCum: BigDecimal!
-    @aggregate(fn: "avg", arg: "performanceFeeAccrued", cumulative: true)
+    @aggregate(fn: "sum", arg: "performanceFeeAccrued", cumulative: true)
+}
+```
+
+## Example queries
+
+The Graph auto-generates plural lowercase query roots from each entity type (`Factory` → `factories`, `Vault` → `vaults`, `WithdrawalQueue` → `withdrawalQueues`), and a singular lowercase root for each aggregation (`VaultStats` → `vaultStats`).
+
+### List vaults for a factory
+
+The `Factory` entity has no reverse-derived `vaults` field, so query the top-level `vaults` root and filter by `factory`.
+
+```graphql
+{
+  factories {
+    id
+    vaultCount
+  }
+  vaults(where: { factory: "0x..." }) {
+    id
+    name
+    sharePrice
+    totalSupply
+  }
+}
+```
+
+### Query daily vault stats
+
+`VaultStats.vault` is a `Bytes!` address scalar, not a `Vault` reference. Resolve the vault name via a separate `vaults(where: { id: $address })` lookup if needed.
+
+```graphql
+{
+  vaultStats(interval: day, first: 30) {
+    timestamp
+    vault
+    totalSupply
+    sharePrice
+  }
+}
+```
+
+### Pending withdrawal queue for a vault
+
+```graphql
+{
+  withdrawalQueues(where: { vault: "0x123..." }) {
+    account {
+      id
+    }
+    epochID
+    shares
+    isClaimed
+  }
 }
 ```
