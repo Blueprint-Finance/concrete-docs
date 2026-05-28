@@ -1,6 +1,6 @@
 # Concrete Docs - LLM Full Context
 
-Generated: 2026-05-28T00:01:28.561Z
+Generated: 2026-05-28T17:54:04.009Z
 Source repository: concrete-docs
 Canonical docs URL: https://docs.concrete.xyz/
 
@@ -8,328 +8,108 @@ This file consolidates every Markdown documentation page in `src/**/*.md` for re
 
 # Table of Contents
 
-1. Welcome to Concrete [sidebar] - src/01-Overview/welcome.md
-2. Our Solution [sidebar] - src/01-Overview/our-solution.md
-3. User Journey [sidebar] - src/01-Overview/user-journey.md
-4. How It Works [sidebar] - src/01-Overview/how-it-works.md
-5. Getting Started [sidebar] - src/01-Overview/quick-start.md
-6. Overview [sidebar] - src/06-Earn-V2/overview.md
-7. Architecture [sidebar] - src/06-Earn-V2/Smart-Contracts/architecture.md
-8. Overview [sidebar] - src/06-Earn-V2/SDK/overview.md
-9. Quick Start (Plug-and-Play Integration) [sidebar] - src/06-Earn-V2/SDK/quick-start.md
-10. Setup Configuration [sidebar] - src/06-Earn-V2/SDK/setup-configuration.md
-11. balanceOf(address) [sidebar] - src/06-Earn-V2/SDK/read-methods/balanceOf.md
-12. getAddress() [sidebar] - src/06-Earn-V2/SDK/read-methods/getAddress.md
-13. getUnderlyingDecimals() [sidebar] - src/06-Earn-V2/SDK/read-methods/getUnderlyingDecimals.md
-14. getVaultDetails() [sidebar] - src/06-Earn-V2/SDK/read-methods/getVaultDetails.md
-15. getAllWithdrawQueueRequests(owner) [sidebar] - src/06-Earn-V2/SDK/read-methods/getAllWithdrawQueueRequests.md
-16. previewConversion(amount) [sidebar] - src/06-Earn-V2/SDK/read-methods/previewConversion.md
-17. totalAssets() [sidebar] - src/06-Earn-V2/SDK/read-methods/totalAssets.md
-18. symbol() [sidebar] - src/06-Earn-V2/SDK/read-methods/symbol.md
-19. decimals() [sidebar] - src/06-Earn-V2/SDK/read-methods/decimals.md
-20. applyDecimals(amount) [sidebar] - src/06-Earn-V2/SDK/read-methods/applyDecimals.md
-21. toUnderlyingDecimals(amount) [sidebar] - src/06-Earn-V2/SDK/read-methods/toUnderlyingDecimals.md
-22. approve(spender, amount) [sidebar] - src/06-Earn-V2/SDK/write-methods/approve.md
-23. deposit(amount) [sidebar] - src/06-Earn-V2/SDK/write-methods/deposit.md
-24. redeem(amount) [sidebar] - src/06-Earn-V2/SDK/write-methods/redeem.md
-25. transfer(to, amount) [sidebar] - src/06-Earn-V2/SDK/write-methods/transfer.md
-26. transferFrom(from, to, amount) [sidebar] - src/06-Earn-V2/SDK/write-methods/transferFrom.md
-27. Decimals & Conversion Helpers [sidebar] - src/06-Earn-V2/SDK/decimals-and-conversion-helpers.md
-28. Examples [sidebar] - src/06-Earn-V2/SDK/examples.md
-29. Troubleshooting & Error Handling [sidebar] - src/06-Earn-V2/SDK/troubleshooting-and-error-handling.md
-30. Schema & Queries [sidebar] - src/06-Earn-V2/Subgraph-and-Events/schema-and-queries.md
-31. Event Reference [sidebar] - src/06-Earn-V2/Subgraph-and-Events/event-reference-and-use-cases.md
-32. How to Deposit into a Concrete Earn Vault [sidebar] - src/02-Earn/deposit-into-vaults.md
-33. Concrete Assets and Yield-Bearing Tokens [sidebar] - src/02-Earn/ct-assets.md
-34. Pre-Deposit Vaults [sidebar] - src/02-Earn/pre-deposit-vaults.md
-35. How Earn Vaults Maximize Risk-Adjusted Yields [sidebar] - src/02-Earn/how-earn-vaults-maximize-risk-adjusted-yields.md
-36. Yield Vaults and ERC-4626 Standard [sidebar] - src/05-Vaults/yield-vaults.md
-37. Yield Strategies [sidebar] - src/05-Vaults/yield-strategies.md
-38. Completed Campaigns [sidebar] - src/05-Vaults/completed-campaigns.md
-39. How Withdrawals Work [sidebar] - src/05-Vaults/how-withdrawals-work.md
-40. Bridging with Enso [sidebar] - src/05-Vaults/bridging-with-enso.md
-41. What is Wrapped BERA (WBERA)? [sidebar] - src/05-Vaults/01-Bera/wbera.md
-42. Pre-Deposit Vaults Deprecation Guide [sidebar] - src/05-Vaults/01-Bera/pre-deposit-vaults-deprecation-guide.md
-43. How to Claim and Transfer [sidebar] - src/05-Vaults/01-Bera/claim-and-transfer.md
-44. How to Claim Rewards [sidebar] - src/05-Vaults/01-Bera/claim-rewards.md
-45. How to Withdraw [sidebar] - src/05-Vaults/01-Bera/how-to-withdraw.md
-46. Request Address Change [sidebar] - src/05-Vaults/01-Bera/request-address-change.md
-47. Unclaimed Rewards [sidebar] - src/05-Vaults/01-Bera/unclaimed-rewards.md
-48. Boyco Depositors: How to Claim [sidebar] - src/05-Vaults/01-Bera/boyco-depositors-claim.md
-49. Stable Vaults [sidebar] - src/05-Vaults/05-Stable/stable-vaults.md
-50. Claiming Vault Shares and Rewards [sidebar] - src/05-Vaults/05-Stable/claim.md
-51. Overview [sidebar] - src/05-Vaults/02-Corn/overview.md
-52. Overview [sidebar] - src/05-Vaults/03-Morph/overview.md
-53. Deprecation Guide [sidebar] - src/05-Vaults/04-Tac/vault-deprecation-guide.md
-54. WBTC Vault Migration to Earn V2 [sidebar] - src/05-Vaults/06-WBTC/wbtc-vault-migration-to-earn-v2.md
-55. How Withdrawals Are Processed For Concrete DeFi USDT [sidebar] - src/05-Vaults/07-DeFi-USDT/how-withdrawals-are-processed.md
-56. Important Disclosures [sidebar] - src/05-Vaults/07-DeFi-USDT/important-disclosures.md
-57. Fees [sidebar] - src/fees.md
-58. Concrete Points Program [sidebar] - src/rewards.md
-59. Restricted Jurisdictions [sidebar] - src/restrictions.md
-60. Risks and Safety [sidebar] - src/risks.md
-61. Audits [sidebar] - src/audits.md
-62. Support [sidebar] - src/support.md
-63. How to Repay and Withdraw Borrowed Assets [unlisted] - src/03-Borrow/close-loan.md
-64. How to Activate Concrete Borrow (Default Lite) [unlisted] - src/03-Borrow/enable-concrete.md
-65. How to Borrow From External Market [unlisted] - src/03-Borrow/open-loan-externally.md
-66. How to Borrow Against Collateral [unlisted] - src/03-Borrow/open-loan.md
-67. Overview [unlisted] - src/03-Borrow/overview.md
-68. How to Activate Concrete Protect [unlisted] - src/04-Protect/activate-concrete-protect.md
-69. Overview [unlisted] - src/04-Protect/overview.md
-70. getApyDetails() [unlisted] - src/06-Earn-V2/SDK/read-methods/getAPYDetails.md
+1. Concrete: Earn Yield on Supported On-Chain Assets [sidebar] - src/01-Overview/welcome.md
+2. Overview [sidebar] - src/06-Earn-V2/overview.md
+3. Architecture [sidebar] - src/06-Earn-V2/Smart-Contracts/architecture.md
+4. Overview [sidebar] - src/06-Earn-V2/SDK/overview.md
+5. Setup Configuration [sidebar] - src/06-Earn-V2/SDK/setup-configuration.md
+6. balanceOf(address) [sidebar] - src/06-Earn-V2/SDK/read-methods/balanceOf.md
+7. getAddress() [sidebar] - src/06-Earn-V2/SDK/read-methods/getAddress.md
+8. getUnderlyingDecimals() [sidebar] - src/06-Earn-V2/SDK/read-methods/getUnderlyingDecimals.md
+9. getVaultDetails() [sidebar] - src/06-Earn-V2/SDK/read-methods/getVaultDetails.md
+10. getAllWithdrawQueueRequests(owner) [sidebar] - src/06-Earn-V2/SDK/read-methods/getAllWithdrawQueueRequests.md
+11. previewConversion(amount) [sidebar] - src/06-Earn-V2/SDK/read-methods/previewConversion.md
+12. totalAssets() [sidebar] - src/06-Earn-V2/SDK/read-methods/totalAssets.md
+13. symbol() [sidebar] - src/06-Earn-V2/SDK/read-methods/symbol.md
+14. decimals() [sidebar] - src/06-Earn-V2/SDK/read-methods/decimals.md
+15. applyDecimals(amount) [sidebar] - src/06-Earn-V2/SDK/read-methods/applyDecimals.md
+16. toUnderlyingDecimals(amount) [sidebar] - src/06-Earn-V2/SDK/read-methods/toUnderlyingDecimals.md
+17. approve(spender, amount) [sidebar] - src/06-Earn-V2/SDK/write-methods/approve.md
+18. deposit(amount) [sidebar] - src/06-Earn-V2/SDK/write-methods/deposit.md
+19. redeem(amount) [sidebar] - src/06-Earn-V2/SDK/write-methods/redeem.md
+20. transfer(to, amount) [sidebar] - src/06-Earn-V2/SDK/write-methods/transfer.md
+21. transferFrom(from, to, amount) [sidebar] - src/06-Earn-V2/SDK/write-methods/transferFrom.md
+22. Decimals & Conversion Helpers [sidebar] - src/06-Earn-V2/SDK/decimals-and-conversion-helpers.md
+23. Examples [sidebar] - src/06-Earn-V2/SDK/examples.md
+24. Troubleshooting & Error Handling [sidebar] - src/06-Earn-V2/SDK/troubleshooting-and-error-handling.md
+25. Schema & Queries [sidebar] - src/06-Earn-V2/Subgraph-and-Events/schema-and-queries.md
+26. Event Reference [sidebar] - src/06-Earn-V2/Subgraph-and-Events/event-reference-and-use-cases.md
+27. How to Deposit into a Concrete Earn Vault [sidebar] - src/02-Earn/deposit-into-vaults.md
+28. Concrete Assets and Yield-Bearing Tokens [sidebar] - src/02-Earn/ct-assets.md
+29. Pre-Deposit Vaults [sidebar] - src/02-Earn/pre-deposit-vaults.md
+30. How Earn Vaults Maximize Risk-Adjusted Yields [sidebar] - src/02-Earn/how-earn-vaults-maximize-risk-adjusted-yields.md
+31. Yield Vaults and ERC-4626 Standard [sidebar] - src/05-Vaults/yield-vaults.md
+32. Yield Strategies [sidebar] - src/05-Vaults/yield-strategies.md
+33. Completed Campaigns [sidebar] - src/05-Vaults/completed-campaigns.md
+34. How Withdrawals Work [sidebar] - src/05-Vaults/how-withdrawals-work.md
+35. Bridge and deposit with Enso [sidebar] - src/05-Vaults/bridging-with-enso.md
+36. What is Wrapped BERA (WBERA)? [sidebar] - src/05-Vaults/01-Bera/wbera.md
+37. Pre-Deposit Vaults Deprecation Guide [sidebar] - src/05-Vaults/01-Bera/pre-deposit-vaults-deprecation-guide.md
+38. How to Claim and Transfer [sidebar] - src/05-Vaults/01-Bera/claim-and-transfer.md
+39. How to Claim Rewards [sidebar] - src/05-Vaults/01-Bera/claim-rewards.md
+40. How to Withdraw [sidebar] - src/05-Vaults/01-Bera/how-to-withdraw.md
+41. Request Address Change [sidebar] - src/05-Vaults/01-Bera/request-address-change.md
+42. Unclaimed Rewards [sidebar] - src/05-Vaults/01-Bera/unclaimed-rewards.md
+43. Boyco Depositors: How to Claim [sidebar] - src/05-Vaults/01-Bera/boyco-depositors-claim.md
+44. Stable Vaults [sidebar] - src/05-Vaults/05-Stable/stable-vaults.md
+45. Claiming Vault Shares and Rewards [sidebar] - src/05-Vaults/05-Stable/claim.md
+46. Overview [sidebar] - src/05-Vaults/02-Corn/overview.md
+47. Overview [sidebar] - src/05-Vaults/03-Morph/overview.md
+48. Deprecation Guide [sidebar] - src/05-Vaults/04-Tac/vault-deprecation-guide.md
+49. WBTC Vault Migration to Earn V2 [sidebar] - src/05-Vaults/06-WBTC/wbtc-vault-migration-to-earn-v2.md
+50. How Withdrawals Are Processed For Concrete DeFi USDT [sidebar] - src/05-Vaults/07-DeFi-USDT/how-withdrawals-are-processed.md
+51. Important Disclosures [sidebar] - src/05-Vaults/07-DeFi-USDT/important-disclosures.md
+52. Fees [sidebar] - src/fees.md
+53. Concrete Points Program [sidebar] - src/rewards.md
+54. Restricted Jurisdictions [sidebar] - src/restrictions.md
+55. Risks and Safety [sidebar] - src/risks.md
+56. Audits [sidebar] - src/audits.md
+57. Support [sidebar] - src/support.md
+58. How to Repay and Withdraw Borrowed Assets [unlisted] - src/03-Borrow/close-loan.md
+59. How to Activate Concrete Borrow (Default Lite) [unlisted] - src/03-Borrow/enable-concrete.md
+60. How to Borrow From External Market [unlisted] - src/03-Borrow/open-loan-externally.md
+61. How to Borrow Against Collateral [unlisted] - src/03-Borrow/open-loan.md
+62. Overview [unlisted] - src/03-Borrow/overview.md
+63. How to Activate Concrete Protect [unlisted] - src/04-Protect/activate-concrete-protect.md
+64. Overview [unlisted] - src/04-Protect/overview.md
+65. Quick Start (Plug-and-Play Integration) [unlisted] - src/06-Earn-V2/SDK/quick-start.md
+66. getApyDetails() [unlisted] - src/06-Earn-V2/SDK/read-methods/getAPYDetails.md
 
-# Document 1: Welcome to Concrete
+# Document 1: Concrete: Earn Yield on Supported On-Chain Assets
 Source: src/01-Overview/welcome.md
 Doc ID: Overview/welcome
 Public URL: https://docs.concrete.xyz/Overview/welcome/
 In active sidebar: yes
 Description: Official welcome guide to Concrete, explaining the platform mission, core product pillars, and how to get started safely.
-Welcome to [Concrete.xyz](https://www.concrete.xyz), a suite of DeFi products powering secure, automated yield strategies and unlocking new opportunities for any on-chain asset.
+Concrete operates ERC-4626 vaults that accept deposits in a designated underlying asset and deploy that asset into vetted yield strategies. Concrete built the tech stack handles allocation between strategies, real-time accounting updates, and withdrawal processing through automated operator roles. Users interact only with the vault.
 
-Earn competitive risk-adjusted return.
+## What You Get
 
-Decentralized Finance (DeFi) comes with complexities that require users to "Do Your Own Research" (DYOR) before engaging. From navigating multiple platforms for the best yields to securing your assets against liquidation, DeFi can feel overwhelming for both new and experienced users.
+* **One deposit, fully deployed** – a single deposit puts your capital to work. Curators allocate it across strategies behind the scenes, so you do not juggle positions or chase yield across protocols.
+* **Yield-bearing shares you actually hold** – deposit and you receive ERC-20 vault shares like ctWBTC or ctDefiUSDT. Your share count stays constant. Yield generation occurs through an exchange rate as the vault earns.
+* **Points and rewards, tracked for you** – eligible vaults accrue on-chain rewards that are indexed automatically.
 
-[Launch Concrete App](https://app.concrete.xyz/earn) and deposit into curated vaults engineered for risk-adjusted yield.
 
-## Designed For
+## Security
 
-* **Liquidity Providers** aiming for yield maximization.
-* **Traders** hunting for market opportunities and profiting from the best rates across integrated DeFi platforms.
+Concrete's security model has several layers:
 
-## How Concrete Stands Apart from Traditional DeFi Solutions
+* **Roles are separated** – governance roles (Vault Manager, Strategy Manager, Hook Manager) are held by the Vault Admin and handle low-frequency, high-impact decisions.
+* **Operational roles are automated** – the Allocator and Withdrawal Manager execute high-frequency, low-impact actions through automated services built and run by Concrete.
+* **Assets live in custody, not the vault** – deposits forward to a MultisigStrategy backed by a Gnosis Safe or Fordefi MPC wallet.
+* **Accounting updates are bounded on-chain** – a change threshold, cooldown, and validity window constrain how off-chain values move the vault.
+* **Monitoring is independent** – Hypernative provides real-time risk detection.
+* **Pause authority is pre-delegated** – ZeroShadow can pause vaults per mandate.
+* **Code is audited before it ships** – audited by [Halborn, Cantina, Code4rena, and Zellic](../audits.md).
+* **Upgrades are pull-based** – vault owners pull from the factory; Concrete cannot push changes to deployed vaults.
 
-* Instead of routing assets across protocols manually, Concrete vaults run curator-defined strategies that allocate capital across vetted DeFi venues. Allocation decisions are governed by role-based access control and supported by Concrete's Quantitative Framework — engineered for risk-adjusted return rather than headline APY.
+**Risk.** Yields are not guaranteed and may fluctuate. Strategy losses reduce share price. You may lose some or all of your deposited assets. Past performance is not indicative of future results.
 
-* Many DeFi platforms are fragmented across different blockchains. Concrete provides a unified user experience across multiple chains.
-
-## Why Concrete?
-
-Concrete’s value proposition lies in how it addresses common DeFi challenges in a simple and automated way. While other platforms leave users vulnerable to liquidation risks, force them to chase yields manually, and provide fragmented experiences across different chains, Concrete unifies all of these features into one platform.
-
-### Easy to Use
-
-For many users, DeFi requires connecting to multiple platforms, understanding complex protocols, and constantly monitoring market conditions. Concrete eliminates this complexity by offering a streamlined user experience.
-
-The interface is designed so users don’t have to worry about switching between networks or applications. Concrete brings DeFi on easy mode, allowing users to focus on their strategies while the platform handles the execution.
-
-### Risk-Adjusted Yield, Engineered
-
-Concrete's Earn Vaults route capital across multiple DeFi protocols based on quantitatively assessed risk-adjusted return — not headline APY. Allocations rebalance as conditions change, with protocol vetting, capped exposures, and continuous risk monitoring as part of the design.
+For full risk disclosures see [Risks and Safety](../risks.md).
 
 ---
 
-# Document 2: Our Solution
-Source: src/01-Overview/our-solution.md
-Doc ID: Overview/our-solution
-Public URL: https://docs.concrete.xyz/Overview/our-solution/
-In active sidebar: yes
-Description: Foundational Concrete documentation for our Solution, covering platform context, user intent, and product direction.
-Concrete Earn transforms DeFi vaults from manual, governance-heavy systems into fully automated yield infrastructure that’s transparent, secure, and scalable.
-
-| **Component**                  | **Purpose**                                                                                                                                                                   |
-| ------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Concrete Earn**              | Automated vault infrastructure for on-chain yield strategies. Partners can deploy custom ERC-4626 vaults, manage roles, and connect strategies safely through Concrete Enterprise. |
-| **Automation Engine**          | Keeps vault accounting up to date through automated yield accrual and fee calculation, ensuring daily NAV precision and real-time performance tracking.                       |
-| **Subgraph Indexing**          | Tracks all deposits, withdrawals, fees, and yield events — delivering full on-chain transparency and analytics.                                                               |
-
-## Concrete Earn
-
-**Concrete Earn** provides automated, transparent yield vaults for liquidity providers and partners.
-
-Each vault accepts one base asset (for example, USDC or ETH) and issues ERC-20 shares that represent proportional ownership of the vault.
-Vaults deploy capital across curated DeFi strategies — such as lending, liquidity provision, or yield tokenization — and automatically rebalance allocations as market conditions evolve.
-
-Concrete Earn is built for both scalability and flexibility:
-
-* **Granular Role Controls** – Vault operators can delegate permissions for managing fees, strategies, and withdrawals.
-* **Modular Strategies** – Plug-and-play strategy contracts let vaults adapt to any yield source.
-* **Async Withdrawals** – Vaults can enable epoch-based withdrawal cycles for reliable liquidity management.
-
-## Earn V1
-
-Earn V1 introduced the foundation of Concrete’s vault system — a unified framework for earning on-chain yield through ERC-4626 vaults.
-It provided fee-free, single-asset vaults optimized for consistent returns across lending markets and DeFi strategies.
-
-While highly efficient for early users, Earn V1 still required manual accounting and operational oversight. Withdrawals and rebalancing processes relied on curator actions and multi-signature approvals, which limited the system’s speed and scalability.
-
-## Earn V2
-
-Earn V2 represents a complete evolution of the platform — a next-generation vault architecture designed for automation and institutional-grade transparency.
-
-**Key Upgrades in V2:**
-
-* **Role-Based Automation** – Introduces operational roles (Vault Manager, Allocator, Strategy Manager, Hook Manager, and Withdrawal Manager) to separate high-impact changes from daily operations.
-* **Automated Accounting System** – Integrates a three-party process (Transaction Proposer, Independent Signer, and Smart Contract Safeguards) for verified, daily NAV updates.
-* **Multisig Strategy Support** – Enables external custodians and curators to manage positions securely with automated data syncs.
-* **Institutional Partnerships** – Built-in integration for real-time security monitoring.
-* **Async Vault Mode** – Allows withdrawal requests to queue into epochs, giving operators control over liquidity while users maintain predictable exits.
-
-**Result:** Earn V2 vaults operate at market speed — updating daily, rebalancing automatically, and providing full transparency without requiring manual oversight.
-
----
-
-# Document 3: User Journey
-Source: src/01-Overview/user-journey.md
-Doc ID: Overview/user-journey
-Public URL: https://docs.concrete.xyz/Overview/user-journey/
-In active sidebar: yes
-Description: Foundational Concrete documentation for user Journey, covering platform context, user intent, and product direction.
-**Concrete** is designed to help users optimize yield generation from the moment they deposit assets. The walkthrough below traces how your **Day One** deposit is put to work across the vault's strategies.
-
-## Day One: Laying the Foundation for Yield and Security
-
-### 1. Deposit into a 4626 Vault
-
-On **Day One**, your journey starts when you deposit an asset (e.g., ETH, BTC, USDC) into a 4626 vault. This vault is a specialized structure designed to streamline investment processes while ensuring compatibility with other protocols. You don’t need to take any action beyond depositing—the system is built to automate the most efficient strategies.
-
-### 2. Passive Yield Generation
-
-Once your asset is in the vault, Concrete employs sophisticated strategies to seek the best yield opportunities available in various crypto markets. For example, your funds might be allocated to money markets like Aave or Compound, where the protocol identifies the highest risk-adjusted returns. The entire process is handled seamlessly by Concrete’s backend, eliminating the need for you to manually move assets around or keep track of yield rates across different platforms.
-
-Over time, your assets accrue yield. Concrete allows you to periodically claim the rewards generated from the automated strategies. The yield from your assets can be used to automatically compound or be withdrawn at any time, leaving users to profit from the remaining yield while maintaining liquidity.
-
-### 3. Simple Fee Structure
-
-On the first day, you begin incurring standard fees like **Yield fees**.
-
-## How Concrete Makes Money
-
-### Yield Fees
-
-Concrete vaults charge a management fee on AUM (typically 1.5% annualized for standard vaults) and may charge a performance fee on net positive yield. See the [Fees page](https://docs.concrete.xyz/fees/) for full details.
-
-## Example Journey
-
-Imagine you deposit **1 ETH** into Concrete on **Day One**. Concrete immediately places your ETH into its vaults, actively seeking the highest risk-adjusted returns through lending protocols like Aave or Compound. You earn passive yield on your deposit, and Concrete handles all the research and market movements.
-
-Over time, as your assets accrue yield and the market evolves, Concrete’s automated system continuously compounds your returns and optimizes allocations, leaving you to profit from the growing yield without manual intervention.
-
-Throughout the process, Concrete handles everything—from rebalancing your assets to maintaining accurate accounting—while ensuring that your deposits are safe and optimally managed.
-
----
-
-# Document 4: How It Works
-Source: src/01-Overview/how-it-works.md
-Doc ID: Overview/how-it-works
-Public URL: https://docs.concrete.xyz/Overview/how-it-works/
-In active sidebar: yes
-Description: Foundational Concrete documentation for how It Works, covering platform context, user intent, and product direction.
-At its core, Concrete simplifies:
-
-1. **Vault Creation:** Partners deploy new vaults through the Concrete Factory.
-2. **Asset Management:** Deposited funds are allocated across yield strategies.
-3. **Automated Operations:** Fees, yield, and accounting are all updated continuously through on-chain events and automations.
-
-## Deposit
-
-Users deposit a supported base asset (for example, USDC) into a vault.
-The vault mints ERC-20 shares representing proportional ownership in the total assets under management.
-
-Each vault focuses on a single asset and can deploy those funds across multiple strategies to earn yield.
-
-## Yield Generation
-
-Strategies are smart contracts that interact with DeFi protocols to earn yield.
-
-Each vault can have several strategies — for example, lending on Aave, providing liquidity on Pendle, or holding yield-bearing assets.
-The vault’s Allocator role moves funds between strategies safely, ensuring target exposures and limits are respected.
-
-## Withdrawals
-
-Withdrawals can happen instantly or in epochs (if the vault uses asynchronous mode).
-
-Async vaults queue requests in time-based batches, allowing the vault to process redemptions efficiently and maintain liquidity control.
-Instant withdrawals remain available for vaults configured in standard mode.
-
-## Behind the Scenes
-
-Concrete ties vault operations together through automations and on-chain transparency:
-
-* **Automated yield accrual** keeps total asset values up to date.
-* **Subgraph indexing** tracks every vault action, from deposits to yield updates.
-* **Role-based access** ensures that only authorized operators can move funds or change parameters.
-* **Factory deployment and upgrades** guarantee that vaults can evolve safely over time.
-
-This automation framework eliminates manual interventions, enabling daily updates that reflect real-time NAV (Net Asset Value) accuracy and institutional-grade accounting.
-
-## Example Scenario
-
-Let’s look at how a typical Earn V2 vault works in practice:
-
-1. **A partner specifies the configuration for a USDC vault**, which Concrete deploys via the `ConcreteFactory` contract. The vault is configured with two strategies: a Pendle yield strategy and a Curve stable pool strategy.
-2. **Users deposit USDC**, receiving vault shares that represent ownership of the vault’s total assets.
-3. **The Allocator moves capital** — half into Pendle, half into Curve — balancing allocations as yields change.
-4. **Each day**, the vault’s automated accounting updates total assets and calculates yield.
-5. **When users withdraw**, the system converts their shares back into USDC, either instantly or after the next epoch (for async vaults).
-6. **All activity is recorded** on-chain and reflected in the subgraph, giving full transparency to vault operators and depositors.
-
----
-
-# Document 5: Getting Started
-Source: src/01-Overview/quick-start.md
-Doc ID: Overview/quick-start
-Public URL: https://docs.concrete.xyz/Overview/quick-start/
-In active sidebar: yes
-Description: Foundational Concrete documentation for getting Started, covering platform context, user intent, and product direction.
-This guide will walk you through the key steps to quickly get started with Concrete's platform and begin leveraging its core features.
-
-## **How to Use Concrete**
-
-### 1. Launch the Concrete dApp  
-   Head to the official **Concrete website** and launch the decentralized app (dApp). You can browse the app and view the features available to you, but you will need to connect your wallet for full access.
-
-### 2. Connect Your Wallet
-   To access Concrete's core features, you'll need to authenticate by connecting your wallet.  
-   - Click on the **Connect Wallet** button.
-   - Select your wallet provider (MetaMask, Rainbow, etc.).
-   - Sign the message in your wallet to authenticate.
-
-### 3. Accept Terms & Conditions  
-   Before you proceed, you will be required to read and accept the terms and conditions. This is a mandatory step to ensure legal compliance when using the protocol.
-
-### 4. Explore the Dashboards
-   Once your wallet is connected and terms accepted, you'll be directed to Concrete's main dashboard. Here, you can access key features like:
-
-   - **Earn**: Deposit assets to earn yields in Concrete’s vaults.
-   - **Portfolio**: Track your vault deposit and rewards.
-
-## **Earn**
-
-The **Earn** dashboard is where users deposit into vaults and track positions. Most vaults support standard or epoch-based withdrawals; some campaign vaults have time-bound lockups. Each vault page clearly indicates its withdrawal mechanism before deposit.
-
-Here's how you can navigate and utilize the Earn feature to maximize your returns.
-
-### Key Insights of the Earn Dashboard
-
-**Total Deposited**: Displays the total value of assets you've deposited in various yield-generating vaults.
-
-### How to Use the Earn Dashboard
-
-1. **View Available Vaults**:  
-   Within the Earn dashboard, browse available vaults. Each vault holds one underlying asset and can deploy capital across multiple strategies — for example, lending markets like **Aave** or **Morpho**, liquidity provision on **Pendle**, or curated structured strategies. Vault detail pages list current strategy composition, TVL and APY.
-
-2. **Explore Optimal Yields**:  
-   The dashboard allows you to explore yields offered by different lenders, enabling you to find the most favorable return for your assets. You can also filter these options based on the blockchain network (e.g., **Ethereum**, **Arbitrum**).
-
-3. **Deposit Your Assets**:  
-   Once you've selected a vault, deposit directly to receive vault shares (ct[asset] tokens) representing your proportional stake. Deposits begin earning yield immediately as the vault's strategies operate. Withdrawal terms are vault-specific — review them before depositing.
-
-4. **Monitor Your Earnings**:  
-   The dashboard will continuously display updated information about your deposited assets, the vault’s performance, and how much yield you've earned over time.
-
-## Portfolio Dashboard
-
-The **Portfolio** dashboard allows you to track and manage your activity within the Concrete Protocol. It focuses on three main objectives:
-
-1. **Positions**: Displays all your active and closed positions
-2. **Vaults**: Lets you manage your deposits into vaults. You can add or withdraw assets, and adjust your investment strategy as needed.
-3. **APY**: Displays all the rewards you will earn through participating in the vault.
-
----
-
-# Document 6: Overview
+# Document 2: Overview
 Source: src/06-Earn-V2/overview.md
 Doc ID: Earn-V2/overview
 Public URL: https://docs.concrete.xyz/Earn-V2/overview/
@@ -398,7 +178,7 @@ These integrations are arrangements within Concrete’s operational stack, not o
 
 ---
 
-# Document 7: Architecture
+# Document 3: Architecture
 Source: src/06-Earn-V2/Smart-Contracts/architecture.md
 Doc ID: Earn-V2/Smart-Contracts/architecture
 Public URL: https://docs.concrete.xyz/Earn-V2/Smart-Contracts/architecture/
@@ -938,100 +718,100 @@ function setFeeFraction(address vault, uint32 newFeeFractionOfSecondaryRecipient
 
 ---
 
-# Document 8: Overview
+# Document 4: Overview
 Source: src/06-Earn-V2/SDK/overview.md
 Doc ID: Earn-V2/SDK/overview
 Public URL: https://docs.concrete.xyz/Earn-V2/SDK/overview/
 In active sidebar: yes
 Description: Concrete Earn V2 SDK documentation for concrete Earn V2 SDK Overview, with implementation guidance for production-grade integrations.
-Concrete Vaults are [ERC-4626](https://eips.ethereum.org/EIPS/eip-4626)-compliant smart contracts that wrap underlying ERC20 assets (e.g., WBTC, USDC) into vault shares (ctAssets).
+Concrete Vaults are [ERC-4626](https://eips.ethereum.org/EIPS/eip-4626)-compliant smart contracts that wrap underlying ERC20 assets (for example WBTC, USDC) into vault shares (ctAssets).
 
-Developers can think of each vault as a **yield wrapper** — deposits are deployed into yield strategies (money markets, liquidity provision, restaking, etc.).
+Each vault behaves as a yield wrapper: deposits are deployed into yield strategies such as money markets, liquidity provision, or restaking.
 
-From an integration perspective, this means a user’s deposit always results in ERC20 shares (ctAssets) that represent their claim on the vault’s underlying and accrued yield.
+From an integration perspective, a user's deposit always results in ERC20 shares (ctAssets) that represent their claim on the vault's underlying and accrued yield.
 
 ## Usage
 
-Whether you’re using vanilla JS/TS, React hooks, or Wagmi integration, you interact with the same underlying vault abstraction.
+Whether you are using vanilla JS/TS, React hooks, or Wagmi integration, you interact with the same underlying vault abstraction.
 
 The Concrete SDK provides:
 
-- **Query vault details** — decimals, symbols, total assets, balances.
-- **Approvals** — approve the vault to spend the underlying ERC20.
-- **Deposits & redemptions** — mint and redeem shares.
-- **Preview conversions** — estimate output before sending a transaction.
-- **Multi-chain support** — works on Ethereum, Arbitrum, Berachain, Katana, Corn, Morph.
+- **Query vault details**: decimals, symbols, total assets, balances.
+- **Approvals**: approve the vault to spend the underlying ERC20.
+- **Deposits and redemptions**: mint and redeem shares.
+- **Preview conversions**: estimate output before sending a transaction.
+- **Multi-chain support**: Ethereum, Arbitrum, Berachain, Katana, Corn, Morph.
 
-| **User Action** | **SDK Method** | **Result** |
+| **User action** | **SDK method** | **Result** |
 | --- | --- | --- |
-| Get vault details | `vault.getVaultDetails()` | Metadata: symbols, decimals, ERC20 instances |
-| Check underlying balance | `details.underlying.erc20.balanceOf(address)` | User’s token balance |
-| Approve deposit | `details.underlying.erc20.approve(vaultAddr, amount)` | Allow vault to spend |
-| Preview conversion | `vault.previewConversion(amount)` | Estimate shares minted / tokens redeemed |
-| Deposit | `vault.deposit(amount)` | underlying consumed, shares minted |
-| Check share balance | `vault.balanceOf(address)` | User’s ctAsset balance |
+| Get vault details | `vault.getVaultDetails()` | Metadata: symbols, decimals, underlying address |
+| Check underlying balance | `(await vault.getUnderlyingErc20()).balanceOf(address)` | User's underlying token balance |
+| Approve deposit | `(await vault.getUnderlyingErc20()).approve(vaultAddr, amount)` | Allow vault to spend the underlying |
+| Preview conversion | `vault.previewConversion(amount)` | Estimate shares minted or tokens redeemed |
+| Deposit | `vault.deposit(amount)` | Underlying consumed, shares minted |
+| Check share balance | `vault.balanceOf(address)` | User's ctAsset balance |
 | Redeem shares | `vault.redeem(amount)` | Shares burned, underlying returned |
 
 ## Vault = ERC20 + underlying ERC20
 
-Every vault exposes two ERC20 layers (while still being ERC-4626 compliant):
+Every vault exposes two ERC20 layers while staying ERC-4626 compliant:
 
-1. **Vault Shares (ctAssets)**
+1. **Vault shares (ctAssets)**
     - The vault itself extends ERC20.
-    - You can call `balanceOf`, `approve`, `transfer`, etc. on the shares.
-2. **underlying ERC20**
+    - You can call `balanceOf`, `approve`, `transfer`, and other ERC20 methods on the shares.
+2. **Underlying ERC20**
     - Exposed via `vault.getUnderlyingErc20()`.
-    - Full ERC20 instance: `approve`, `balanceOf`, `transfer`, etc.
+    - Full ERC20 instance: `approve`, `balanceOf`, `transfer`.
 
-## Example Flow:
+## Example flow
 
-User → approves underlying ERC20 → vault consumes underlying → mints ctAssets (shares) → user can redeem later.
+A user approves the underlying ERC20, the vault consumes the underlying and mints ctAssets (shares), and the user can redeem the shares later.
 
-Before writing code, it often helps to build a mental model of the flow by trying it out directly in the Concrete app:
+Before writing code, you can build a mental model of the flow by trying it directly in the Concrete app:
 
-- [Earn page](https://app.concrete.xyz/earn) — deposit into a live vault, see shares minted.
-- [Earn docs](https://docs.concrete.xyz/Earn/deposit-into-vaults) — walkthrough of how vault deposits work at the user level.
+- [Earn page](https://app.concrete.xyz/earn): deposit into a live vault and see shares minted.
+- [Earn docs](https://docs.concrete.xyz/Earn/deposit-into-vaults): walkthrough of how vault deposits work at the user level.
 
-Then, when you come back to the SDK, you’ll see the exact same steps expressed in code.
+The SDK expresses the same steps in code:
 
 1. **Check underlying balance**
 
 ```tsx
-const details = await vault.getVaultDetails();
-const balance = await details.underlying.erc20.balanceOf(user);
-console.log("USDC balance:", balance.toString());
-
+const erc20 = await vault.getUnderlyingErc20();
+const balance = await erc20.balanceOf(user);
+console.log("Underlying balance:", balance.toString());
 ```
 
-1. **Approve vault to spend underlying**
+2. **Approve vault to spend underlying**
 
 ```tsx
-await details.underlying.erc20.approve(vault.getAddress(), amount);
+const erc20 = await vault.getUnderlyingErc20();
+await (await erc20.approve(vault.getAddress(), amount)).wait();
 ```
 
-1. **Optionally preview deposit**
+3. **Optionally preview deposit**
 
 ```tsx
 const decimals = await vault.getUnderlyingDecimals();
 const preview = await vault.previewConversion(1n * 10n ** BigInt(decimals));
-console.log("Vault tokens (preview):", preview.vaultTokensReciving.toString());
+console.log("Vault tokens (preview):", preview.vaultTokensReceiving);
 ```
 
-1. **Deposit into vault**
+4. **Deposit into vault**
 
 ```tsx
 const tx = await vault.deposit(amount);
 await tx.wait();
 ```
 
-1. **Receive ctAssets (vault shares)**
+5. **Receive ctAssets (vault shares)**
 
 ```tsx
 const shareBal = await vault.balanceOf(user);
 console.log("Vault shares:", shareBal.toString());
 ```
 
-1. **Redeem back into underlying**
+6. **Redeem back into underlying**
 
 ```tsx
 const redeemTx = await vault.redeem(shareBal);
@@ -1040,176 +820,7 @@ await redeemTx.wait();
 
 ---
 
-# Document 9: Quick Start (Plug-and-Play Integration)
-Source: src/06-Earn-V2/SDK/quick-start.md
-Doc ID: Earn-V2/SDK/quick-start
-Public URL: https://docs.concrete.xyz/Earn-V2/SDK/quick-start/
-In active sidebar: yes
-Description: Concrete Earn V2 SDK documentation for quick Start, with implementation guidance for production-grade integrations.
-Concrete’s SDK provides **ready-to-use React + Wagmi hooks** that allow you to integrate deposits, withdrawals, and balance views with just a few lines of code.
-
-These hooks combine ethers, wagmi, and the Concrete SDK internals under the hood. As a developer, you can use them to go from setup → live app in minutes.
-
-## Quick Wagmi Setup
-
-If you’re using Wagmi hooks like `useVaultDeposit()` or `useVaultWithdraw()`, you only need a minimal configuration file.
-
-Concrete’s hooks automatically detect your connected wallet and network from Wagmi.
-
-The following example shows how to setup a vault configuration:
-
-```tsx
-// src/vault-config.ts
-export const vault = {
-  version: "v1",
-  address: "0x6d8d73bD121970e7c12c34caac9ce9bc975c0a9", // Example vault
-  chainId: 42161, // Arbitrum
-  fallbackRpcUrl: "https://arb1.arbitrum.io/rpc", // Optional fallback
-} as const;
-```
-
-:::tip
-Developers already familiar with Wagmi can use their existing configuration — this snippet is only a quick reference. For full setup details, see [Setup Configuration](https://docs.concrete.xyz/Earn-V2/SDK/setup-configuration/) in the main SDK documentation.
-:::
-
-## SDK Playground
-
-Concrete provides a **live SDK Playground** inside **Concrete Enterprise** — a lightweight web interface that demonstrates SDK + Wagmi hooks in real time.
-
-It’s the fastest way to explore Concrete’s SDK without setting up a full app. You can view vault details, deposit, withdraw, and monitor balances all from your browser.
-
-### Try It Yourself
-
-[Open the Concrete SDK Playground](https://build.concrete.xyz/) (Requires wallet connection; runs on test vaults or live networks).
-
-### Features
-
-| Tab | Description | SDK Hook Used |
-| --- | --- | --- |
-| **Vault Details** | Displays live vault metadata and totals | `useVaultDetails()` |
-| **Deposits** | Deposit with auto approvals and conversions | `useVaultDeposit()` |
-| **Withdrawals** | Redeem shares for underlying assets | `useVaultWithdraw()` |
-| **Balances** | Show current user balances | `useVaultBalance()` |
-
-## Simple USDC Deposit
-
-```tsx
-import { useVaultDeposit } from "@concrete-xyz/sdk/wagmi";
-import { vault } from "src/vault-config";
-
-function DepositUSDC() {
-  const deposit = useVaultDeposit(
-    vault,
-    { amount: "100", amountToBigInt: true }
-  );
-
-  return (
-    <button disabled={deposit.isPending} onClick={() => deposit.mutate({})}>
-      {deposit.isPending ? "Depositing…" : "Deposit 100 USDC"}
-    </button>
-  );
-}
-```
-
-## Withdraw Hook
-
-```tsx
-import { useVaultWithdraw } from "@concrete-xyz/sdk/wagmi";
-import { vault } from "src/vault-config";
-
-export default function VaultWithdrawPage() {
-  const [amount, setAmount] = useState("0");
-  const withdraw = useVaultWithdraw(vault, { amount, amountToBigInt: true });
-
-  if (withdraw.loading) return <div>Loading...</div>;
-
-  return (
-    <div>
-      <input
-        value={amount}
-        onChange={(e) => setAmount(e.target.value)}
-        placeholder="Amount to withdraw"
-      />
-      <button onClick={() => withdraw.withdraw.mutate({})}>Withdraw</button>
-
-      {withdraw.withdraw.isPending && "In progress..."}
-      {withdraw.withdraw.isSuccess && "✅ Success!"}
-      {withdraw.withdraw.isError && `❌ ${withdraw.withdraw.error.message}`}
-    </div>
-  );
-}
-```
-
-## Deposit ETH → WETH Vault
-
-```tsx
-import { useState } from "react";
-import { useVaultDeposit } from "@concrete-xyz/sdk/wagmi";
-
-import { vault } from "src/vault-config";
-
-function DepositETH() {
-
-  const [amount, setAmount] = useState("1");
-
-  const deposit = useVaultDeposit(vault, {
-    amount,              // accepts string or number
-    amountToBigInt: true, // auto converts based on vault decimals
-    useEther: true,       // wraps ETH → WETH automatically
-  });
-
-  const handleDeposit = () => deposit.mutate({});
-
-  return (
-    <div>
-      <input
-        type="number"
-        step="0.01"
-        value={amount}
-        onChange={(e) => setAmount(e.target.value)}
-        placeholder="Amount in ETH"
-      />
-      <button onClick={handleDeposit}>
-        {deposit.isPending ? "Processing..." : `Deposit ${amount} ETH`}
-      </button>
-      {deposit.isSuccess && <div>Deposit confirmed ✅</div>}
-      {deposit.isError && <div>Error: {String(deposit.error)}</div>}
-    </div>
-  );
-}
-
-export default DepositETH;
-```
-
-### What Happens Under the Hood
-
-1. Detects provider & signer automatically via Wagmi.
-2. Converts human-readable values → `BigInt` based on vault decimals.
-3. Auto-wraps ETH → WETH when `useEther` is `true`.
-4. Handles approvals automatically.
-5. Executes deposit and updates transaction state.
-6. Returns `isPending`, `isSuccess`, `isError`, and a `mutate()` trigger.
-
-##
-
-## Hook Options
-
-```tsx
-const deposit = useVaultDeposit(vaultConfig, options);
-```
-
-| Option | Type | Default | Description |
-| --- | --- | --- | --- |
-| `amount` | `string | number` | — |
-| `amountToBigInt` | `boolean` | `true` | Converts using vault decimals. |
-| `useEther` | `boolean` | `false` | Wrap native ETH → WETH. |
-| `onSuccess` | `function` | — | Callback when tx confirms. |
-| `onError` | `function` | — | Callback on tx failure. |
-| `onSettled` | `function` | — | Runs after success or error. |
-
----
-
-# Document 10: Setup Configuration
+# Document 5: Setup Configuration
 Source: src/06-Earn-V2/SDK/setup-configuration.md
 Doc ID: Earn-V2/SDK/setup-configuration
 Public URL: https://docs.concrete.xyz/Earn-V2/SDK/setup-configuration/
@@ -1219,11 +830,11 @@ This guide shows how to install the SDK, handle optional dependencies, set up pr
 
 ## Prerequisites
 
-Before you can interact with the SDK, you’ll need:
+Before you can interact with the SDK, you need:
 
-- **A Vault Address** → Each call to the SDK requires a target vault contract (e.g., `0x15cE9bE...`). Without it, you can’t query metadata, preview conversions, or deposit.
-- **A Supported Network** → The vault must exist on one of the supported chains (Ethereum, Arbitrum, Berachain, Katana, Corn, Morph).
-- **(Optional) A Signer** → Needed only if you plan to send transactions (e.g., deposits, approvals, redemptions). For read-only queries, a provider is enough.
+- **A vault address**. Each SDK call targets a specific vault contract (for example `0x15cE9bE...`). Without it, you cannot query metadata, preview conversions, or deposit.
+- **A supported network**. The vault must exist on one of the supported chains: Ethereum, Arbitrum, Berachain, Katana, Corn, Morph.
+- **A signer (optional)**. Required for transactions (deposits, approvals, redemptions). Read-only queries only need a provider.
 
 ## Installation
 
@@ -1250,20 +861,20 @@ import { useVault, useVaultQuery } from "@concrete-xyz/sdk/wagmi";
 ```
 
 
-Peer dependencies like ethers.js or wagmi are optional.
+Peer dependencies like ethers.js or wagmi are optional:
 
-- If you’re using **vanilla** integration, you’ll need `ethers`.
-- If you’re using **Wagmi**, the SDK auto-wires into your Wagmi setup.
+- For **vanilla** integration, you need `ethers`.
+- For **Wagmi**, the SDK auto-wires into your Wagmi setup.
 
-## Provider Setup
+## Provider setup
 
 Depending on your environment:
 
-- **Vanilla (ethers.js):** you must pass a `JsonRpcProvider`, and optionally a `signer` for write methods.
-- **React hook:** you provide both `provider` and `signer`.
-- **Wagmi hook:** no provider config needed; it auto-detects from your Wagmi app.
+- **Vanilla (ethers.js)**: pass a `JsonRpcProvider`, and optionally a `signer` for write methods.
+- **React hook**: pass both `provider` and `signer`.
+- **Wagmi hook**: no provider config required. The SDK auto-detects from your Wagmi app.
 
-## Initializing a Vault
+## Initializing a vault
 
 ### Vanilla (JS/TS)
 
@@ -1271,35 +882,33 @@ Depending on your environment:
 import { getVault } from "@concrete-xyz/sdk";
 import { ethers } from "ethers";
 
-const provider = new ethers.JsonRpcProvider("<https://ethereum-rpc.publicnode.com>");
+const provider = new ethers.JsonRpcProvider("https://ethereum-rpc.publicnode.com");
 
 // Read-only vault instance
-const vault = getVault("v1", "0xVaultAddress", chainId, mainnetProvider);
+const vault = getVault("v1", "0xVaultAddress", chainId, provider);
 
 // Example: get metadata
 const details = await vault.getVaultDetails();
 console.log("Vault symbol:", details.vaultAsset.symbol);
-
 ```
 
-To **write** (approve, deposit, redeem), pass a signer:
+To send transactions (approve, deposit, redeem), pass a signer:
 
 ```tsx
 const signer = new ethers.Wallet(PRIVATE_KEY, provider);
-const vaultWithSigner = getVault("v1", "0xVaultAddress", chainId, mainnetProvider, signer);
-
+const vaultWithSigner = getVault("v1", "0xVaultAddress", chainId, provider, signer);
 ```
 
-### React Hook
+### React hook
 
-The React hook wraps `getVault` in a `useMemo`. For reads/writes, pass both `provider` and `signer`.
+The React hook wraps `getVault` in a `useMemo`. The `chainId` must be a number. For reads and writes, pass both `provider` and `signer`.
 
 ```tsx
 import { useEffect, useState } from "react";
 import { useVault } from "@concrete-xyz/sdk/react";
 
 function VaultInfo({ provider, signer }) {
-  const vault = useVault("v1", "0xVaultAddress", "Berachain", provider, signer);
+  const vault = useVault("v1", "0xVaultAddress", 80094, provider, signer);
   const [symbol, setSymbol] = useState<string>();
 
   useEffect(() => {
@@ -1310,15 +919,13 @@ function VaultInfo({ provider, signer }) {
     })();
   }, [vault]);
 
-  return <div>Vault: {symbol ?? "…"}</div>;
+  return <div>Vault: {symbol ?? "..."}</div>;
 }
-
 ```
 
-### Wagmi Hook
+### Wagmi hook
 
-If your app already uses Wagmi, the SDK wires in automatically.
-For **queries**, prefer `useVaultQuery`, which handles `loading`/`error` states.
+If your app already uses Wagmi, the SDK wires in automatically. For queries, prefer `useVaultQuery`, which handles `loading` and `error` states.
 
 ```tsx
 import { useVaultQuery } from "@concrete-xyz/sdk/wagmi";
@@ -1336,7 +943,7 @@ function VaultInfo() {
     queryFn: (vault) => vault.getVaultDetails(),
   });
 
-  if (isLoading) return <>Loading…</>;
+  if (isLoading) return <>Loading...</>;
   if (error) return <>Error</>;
   return <div>Vault: {data?.vaultAsset.symbol}</div>;
 }
@@ -1344,13 +951,13 @@ function VaultInfo() {
 
 ## Summary
 
-- **Reads** (e.g., `getVaultDetails`, `totalAssets`) → only need a provider.
-- **Writes** (e.g., `approve`, `deposit`, `redeem`) → require a signer.
-- **Wagmi hook** → may briefly return `undefined` while connectors load; `useVaultQuery` handles this safely.
+- **Reads** (for example `getVaultDetails`, `totalAssets`): only need a provider.
+- **Writes** (for example `approve`, `deposit`, `redeem`): require a signer.
+- **Wagmi hook**: may briefly return `undefined` while connectors load. `useVaultQuery` handles this safely.
 
 ---
 
-# Document 11: balanceOf(address)
+# Document 6: balanceOf(address)
 Source: src/06-Earn-V2/SDK/read-methods/balanceOf.md
 Doc ID: Earn-V2/SDK/read-methods/balanceOf
 Public URL: https://docs.concrete.xyz/Earn-V2/SDK/read-methods/balanceOf/
@@ -1366,29 +973,29 @@ balanceOf(holder: string): Promise<bigint>
 
 ## Parameters
 
-- `holder` (string, required) — Ethereum address of the account.
+- `holder` (string, required): Ethereum address of the account.
 
 ## Returns
 
-- `bigint` — balance of ctAssets (vault shares).
+- `bigint`: balance of ctAssets (vault shares).
 
 ## Example
 
 ```tsx
 const shares = await vault.balanceOf("0xUserAddress");
 
-// Option 1: Use ethers.formatUnits
+// Option 1: ethers.formatUnits
 console.log("Shares:", ethers.formatUnits(shares, await vault.decimals()));
 
-// Option 2: Use SDK helpers for faster + simpler conversions, It applies the decimals of the vault, and stores the decimal value
+// Option 2: SDK helpers (caches decimals internally)
 console.log("Shares (human):", await vault.applyDecimals(shares));
 
-// Convert human → ctShares bigint
+// Convert human value to a ctShares bigint
 const sharesBigInt = await vault.toBigInt("1.0"); // "1.0" ctAsset
 console.log("Shares BigInt:", sharesBigInt);
 
 // Underlying conversions
-console.log("Underlying (to human):", await vault.toUnderlayingDecimals(shares));
+console.log("Underlying (to human):", await vault.toUnderlyingDecimals(shares));
 console.log("Underlying (from human):", await vault.toUnderlyingBigInt("1.0"));
 ```
 
@@ -1400,21 +1007,21 @@ console.log("Underlying (from human):", await vault.toUnderlyingBigInt("1.0"));
 
 ---
 
-# Document 12: getAddress()
+# Document 7: getAddress()
 Source: src/06-Earn-V2/SDK/read-methods/getAddress.md
 Doc ID: Earn-V2/SDK/read-methods/getAddress
 Public URL: https://docs.concrete.xyz/Earn-V2/SDK/read-methods/getAddress/
 In active sidebar: yes
 Description: Read-method reference for getAddress() in the Concrete Earn V2 SDK, including expected inputs, outputs, and usage context.
-Returns the **onchain address** of the vault contract.
+Returns the onchain address of the vault contract.
 
 ## Parameters
 
-- *None*
+- None
 
 ## Returns
 
-- `string` — the vault contract address.
+- `string`: the vault contract address.
 
 ## Example
 
@@ -1423,7 +1030,7 @@ const vaultAddr = vault.getAddress();
 console.log("Vault contract address:", vaultAddr);
 ```
 
-## Example Response
+## Example response
 
 ```json
 "0x15cE9bE6609db102b70D68ca75a39c555bEa5Fac"
@@ -1431,22 +1038,21 @@ console.log("Vault contract address:", vaultAddr);
 
 ---
 
-# Document 13: getUnderlyingDecimals()
+# Document 8: getUnderlyingDecimals()
 Source: src/06-Earn-V2/SDK/read-methods/getUnderlyingDecimals.md
 Doc ID: Earn-V2/SDK/read-methods/getUnderlyingDecimals
 Public URL: https://docs.concrete.xyz/Earn-V2/SDK/read-methods/getUnderlyingDecimals/
 In active sidebar: yes
 Description: Read-method reference for getUnderlyingDecimals() in the Concrete Earn V2 SDK, including expected inputs, outputs, and usage context.
-Returns the number of **decimals** used by the vault’s underlying ERC20 token.
-This is helpful when formatting amounts or constructing `BigInt` inputs.
+Returns the number of decimals used by the vault's underlying ERC20 token. Useful when formatting amounts or constructing `BigInt` inputs.
 
 ## Parameters
 
-- *None*
+- None
 
 ## Returns
 
-- `Promise<number>` — decimals used by the underlying ERC20 (e.g., `6` for USDC, `18` for WETH).
+- `Promise<number>`: decimals used by the underlying ERC20 (for example `6` for USDC, `18` for WETH).
 
 ## Example
 
@@ -1458,7 +1064,7 @@ const oneUnit = BigInt(10) ** BigInt(decimals);
 console.log("One unit in base:", oneUnit.toString());
 ```
 
-## Example Response
+## Example response
 
 ```json
 18
@@ -1466,7 +1072,7 @@ console.log("One unit in base:", oneUnit.toString());
 
 ---
 
-# Document 14: getVaultDetails()
+# Document 9: getVaultDetails()
 Source: src/06-Earn-V2/SDK/read-methods/getVaultDetails.md
 Doc ID: Earn-V2/SDK/read-methods/getVaultDetails
 Public URL: https://docs.concrete.xyz/Earn-V2/SDK/read-methods/getVaultDetails/
@@ -1488,47 +1094,87 @@ getVaultDetails(): Promise<VaultDetails>
 
 ```tsx
 type VaultDetails = {
+  version: 1 | 2;
+  source: "onchain" | "gql";
   address: string;
-  symbolDetails: string;
-  vaultAsset: { address: string; symbol: string; decimals: number };
-  underlying: { address: string; symbol: string; decimals: number; erc20: any };
+  paused: boolean;
+  symbolDetails: { symbol: string; underlyingSymbol: string };
+  underlying: { address: string; decimals: number; symbol: string };
+  vaultAsset: { address: string; decimals: number; symbol: string; token: string };
+  deposits: {
+    enabled: boolean;
+    depositedRaw: bigint;
+    deposited: number;
+    limitUsed: number;
+    limitRaw: bigint;
+    minLimitRaw: bigint;
+    depositedUsd: number | null;
+    limitUsd: number | null;
+  };
+  withdrawals: {
+    isQueueMandatory: boolean;
+    limitRaw: bigint;
+    minLimitRaw: bigint;
+  };
+  network: EnabledNetwork;
 };
 ```
+
+To get an ERC20 instance for the underlying token, call `await vault.getUnderlyingErc20()`. The `underlying` object on `VaultDetails` only exposes metadata.
 
 ## Example
 
 ```tsx
 const details = await vault.getVaultDetails();
-console.log(details.symbolDetails);      // "ctBeraLBTC"
-console.log(details.vaultAsset.symbol);  // "ctLBTC"
-console.log(details.underlying.symbol); // "LBTC
+console.log(details.symbolDetails.symbol);   // "ctBeraLBTC"
+console.log(details.vaultAsset.symbol);      // "ctLBTC"
+console.log(details.underlying.symbol);      // "LBTC"
 ```
 
-## Response Example
+## Response example
 
 ```json
 {
+  "version": 2,
+  "source": "onchain",
   "address": "0x15cE9bE6609db102b70D68ca75a39c555bEa5Fac",
-  "symbolDetails": "ctBeraLBTC",
-  "vaultAsset": { "address": "0x...", "symbol": "ctLBTC", "decimals": 18 },
-  "underlying": { "address": "0x...", "symbol": "LBTC", "decimals": 18 }
+  "paused": false,
+  "symbolDetails": { "symbol": "ctBeraLBTC", "underlyingSymbol": "LBTC" },
+  "underlying": { "address": "0x...", "symbol": "LBTC", "decimals": 18 },
+  "vaultAsset": { "address": "0x...", "symbol": "ctLBTC", "decimals": 18, "token": "ctberalbtc" },
+  "deposits": {
+    "enabled": true,
+    "depositedRaw": "123456789",
+    "deposited": 123.456,
+    "limitUsed": 0.5,
+    "limitRaw": "1000000000",
+    "minLimitRaw": "0",
+    "depositedUsd": null,
+    "limitUsd": null
+  },
+  "withdrawals": {
+    "isQueueMandatory": true,
+    "limitRaw": "-1",
+    "minLimitRaw": "0"
+  },
+  "network": "berachain"
 }
 ```
 
 ---
 
-# Document 15: getAllWithdrawQueueRequests(owner)
+# Document 10: getAllWithdrawQueueRequests(owner)
 Source: src/06-Earn-V2/SDK/read-methods/getAllWithdrawQueueRequests.md
 Doc ID: Earn-V2/SDK/read-methods/getAllWithdrawQueueRequests
 Public URL: https://docs.concrete.xyz/Earn-V2/SDK/read-methods/getAllWithdrawQueueRequests/
 In active sidebar: yes
 Description: Read-method reference for getAllWithdrawQueueRequests(owner) in the Concrete Earn V2 SDK, including expected inputs, outputs, and usage context.
-Fetches **all withdrawal-queue requests** for a given `owner` address, and returns an array of request objects. Each request includes status metadata and two executable actions:
+Fetches all withdrawal-queue requests for a given `owner` address. Returns an array of request objects. Each request includes status metadata and two executable actions:
 
-* `cancel()` — cancels the request (when `cancelable: true`)
-* `claim()` — claims the withdrawal (when `claimable: true`)
+* `cancel()`: cancels the request (when `cancelable: true`)
+* `claim()`: claims the withdrawal (when `claimable: true`)
 
-The returned `cancel()` / `claim()` functions are **write actions** and therefore require a signer.
+The returned `cancel()` and `claim()` functions are write actions and require a signer.
 
 ## Signature
 
@@ -1545,7 +1191,8 @@ getAllWithdrawQueueRequests(owner: Address): Promise<
     amount: bigint;
     version: 2;
     vaultAddress: string;
-    chainId: number;
+    chainId: number | undefined;
+    timestamp: number | undefined;
   }[]
 >;
 ```
@@ -1554,20 +1201,20 @@ getAllWithdrawQueueRequests(owner: Address): Promise<
 
 An array of withdrawal-queue requests:
 
-* `recipient` — where the underlying will be sent when claimed
-* `epoch` — epoch index for the request
-* `epochState` — current epoch status (`inactive | active | processing | processed`)
-* `claimable` — whether `claim()` can be called right now
-* `cancelable` — whether `cancel()` can be called right now
-* `amount` — requested amount (in **vault share units** unless your implementation states otherwise)
-* `version` — always `2` for these requests
-* `vaultAddress`, `chainId` — identifies the vault/network
-* `cancel()` / `claim()` — callable functions that send transactions
+* `recipient`: address where the underlying is sent when claimed.
+* `epoch`: epoch index for the request.
+* `epochState`: current epoch status (`inactive`, `active`, `processing`, `processed`).
+* `claimable`: whether `claim()` can be called right now.
+* `cancelable`: whether `cancel()` can be called right now.
+* `amount`: requested amount in vault share units.
+* `version`: always `2` for these requests.
+* `vaultAddress`, `chainId`: identify the vault and network.
+* `timestamp`: request timestamp when available.
+* `cancel()`, `claim()`: callable functions that send transactions.
 
 ## Parameters
 
-* `owner` (**Address**, required)
-  The wallet address whose withdrawal requests you want to load.
+* `owner` (Address, required): the wallet address whose withdrawal requests you want to load.
 
 ## Example
 
@@ -1579,7 +1226,7 @@ async function main() {
   const provider = new ethers.JsonRpcProvider(process.env.RPC_URL!);
   const signer = new ethers.Wallet(process.env.PRIVATE_KEY!, provider);
 
-  const vault = getVault("0xYourVault", "Ethereum", provider, signer);
+  const vault = getVault("v2", "0xYourVault", 1, provider, signer);
 
   const owner = await signer.getAddress();
   const requests = await vault.getAllWithdrawQueueRequests(owner);
@@ -1630,7 +1277,7 @@ main().catch((err) => {
 
 ---
 
-# Document 16: previewConversion(amount)
+# Document 11: previewConversion(amount)
 Source: src/06-Earn-V2/SDK/read-methods/previewConversion.md
 Doc ID: Earn-V2/SDK/read-methods/previewConversion
 Public URL: https://docs.concrete.xyz/Earn-V2/SDK/read-methods/previewConversion/
@@ -1638,82 +1285,86 @@ In active sidebar: yes
 Description: Read-method reference for previewConversion(amount) in the Concrete Earn V2 SDK, including expected inputs, outputs, and usage context.
 Previews how many tokens would be received from:
 
-- A **deposit** (underlying → shares)
-- A **redeem** (shares → underlying)
+- A deposit (underlying to shares)
+- A redeem (shares to underlying)
 
 ## Signature
 
 ```tsx
 previewConversion(amount: bigint): Promise<{
-  vaultTokensReciving?: bigint;
-  underlyingReciving?: bigint;
+  vaultTokensReceiving: number | null;
+  vaultTokensReceivingRaw: bigint | null;
+  vaultTokensRate: number;
+  underlyingReceiving: number | null;
+  underlyingReceivingRaw: bigint | null;
+  underlyingRate: number;
 }>
 ```
 
 ## Parameters
 
-- `amount` (bigint, required) — amount of tokens to simulate deposit/redeem with.
+- `amount` (bigint, required): amount of tokens to simulate the deposit or redeem with.
 
 ## Returns
 
-- `vaultTokensReciving` (bigint, optional) — shares received when depositing underlying.
-- `underlyingReciving` (bigint, optional) — underlying received when redeeming shares.
+- `vaultTokensReceiving` (`number | null`): shares received when depositing the underlying.
+- `vaultTokensReceivingRaw` (`bigint | null`): raw share amount in base units.
+- `vaultTokensRate` (`number`): vault tokens per unit of underlying.
+- `underlyingReceiving` (`number | null`): underlying received when redeeming shares.
+- `underlyingReceivingRaw` (`bigint | null`): raw underlying amount in base units.
+- `underlyingRate` (`number`): underlying per unit of shares.
 
-## Deposit Example
+## Deposit example
 
 ```tsx
-import { ethers } from "ethers";
-
 const details = await vault.getVaultDetails();
 
-// Use helper to get 1.0 underlying as bigint
+// Use the helper to get 1.0 underlying as bigint
 const oneUnderlying = await vault.toUnderlyingBigInt("1.0");
 
-// Preview how many vault tokens you'd receive
+// Preview how many vault tokens you would receive
 const preview = await vault.previewConversion(oneUnderlying);
 
 console.log(
-  `1 ${details.underlaying.symbol} -> ${await vault.applyDecimals(
-    preview.vaultTokensReciving
+  `1 ${details.underlying.symbol} -> ${await vault.applyDecimals(
+    preview.vaultTokensReceivingRaw
   )} ${details.vaultAsset.symbol}`
 );
 ```
 
-## Redeem Example
+## Redeem example
 
 ```tsx
-import { ethers } from "ethers";
-
 const details = await vault.getVaultDetails();
 
-// Use helper to get 1.0 share as bigint
+// Use the helper to get 1.0 share as bigint
 const oneShare = await vault.toBigInt("1.0");
 
-// Preview how much underlying you'd receive
+// Preview how much underlying you would receive
 const preview = await vault.previewConversion(oneShare);
 
 console.log(
-  `1 ${details.vaultAsset.symbol} -> ${await vault.toUnderlayingDecimals(
-    preview.underlyingReciving
-  )} ${details.underlaying.symbol}`
+  `1 ${details.vaultAsset.symbol} -> ${await vault.toUnderlyingDecimals(
+    preview.underlyingReceivingRaw
+  )} ${details.underlying.symbol}`
 );
 ```
 
-## Response Example (Deposit)
+## Response example (deposit)
 
 ```json
-{ "vaultTokensReciving": "10000000000000000" }
+{ "vaultTokensReceiving": 0.01, "vaultTokensReceivingRaw": "10000000000000000" }
 ```
 
-## Response Example (Redeem)
+## Response example (redeem)
 
 ```json
-{ "underlyingReciving": "0" }
+{ "underlyingReceiving": 0, "underlyingReceivingRaw": "0" }
 ```
 
 ---
 
-# Document 17: totalAssets()
+# Document 12: totalAssets()
 Source: src/06-Earn-V2/SDK/read-methods/totalAssets.md
 Doc ID: Earn-V2/SDK/read-methods/totalAssets
 Public URL: https://docs.concrete.xyz/Earn-V2/SDK/read-methods/totalAssets/
@@ -1733,7 +1384,7 @@ totalAssets(): Promise<bigint>
 
 ## Returns
 
-- `bigint` — total underlying managed by the vault.
+- `bigint`: total underlying managed by the vault.
 
 ## Example
 
@@ -1741,18 +1392,18 @@ totalAssets(): Promise<bigint>
 const details = await vault.getVaultDetails();
 const total = await vault.totalAssets();
 
-// Option 1: Using SDK helper (faster and simpler to calculate)
+// Option 1: SDK helper (caches decimals internally)
 console.log(
   "Total assets:",
-  await vault.toUnderlayingDecimals(total),
-  details.underlaying.symbol
+  await vault.toUnderlyingDecimals(total),
+  details.underlying.symbol
 );
 
-// Option 2: Using ethers.js formatting
+// Option 2: ethers.js formatting
 console.log(
   "Total assets:",
-  ethers.formatUnits(total, details.underlaying.decimals),
-  details.underlaying.symbol
+  ethers.formatUnits(total, details.underlying.decimals),
+  details.underlying.symbol
 );
 ```
 
@@ -1764,7 +1415,7 @@ console.log(
 
 ---
 
-# Document 18: symbol()
+# Document 13: symbol()
 Source: src/06-Earn-V2/SDK/read-methods/symbol.md
 Doc ID: Earn-V2/SDK/read-methods/symbol
 Public URL: https://docs.concrete.xyz/Earn-V2/SDK/read-methods/symbol/
@@ -1784,7 +1435,7 @@ symbol(): Promise<string>
 
 ## Returns
 
-- `string` — vault share symbol.
+- `string`: vault share symbol.
 
 ## Example
 
@@ -1800,7 +1451,7 @@ console.log(await vault.symbol()); // "ctLBTC"
 
 ---
 
-# Document 19: decimals()
+# Document 14: decimals()
 Source: src/06-Earn-V2/SDK/read-methods/decimals.md
 Doc ID: Earn-V2/SDK/read-methods/decimals
 Public URL: https://docs.concrete.xyz/Earn-V2/SDK/read-methods/decimals/
@@ -1820,7 +1471,7 @@ decimals(): Promise<number>
 
 ## Returns
 
-- `number` — decimals used for ctAssets.
+- `number`: decimals used for ctAssets.
 
 ## Example
 
@@ -1836,21 +1487,21 @@ console.log(await vault.decimals()); // 18
 
 ---
 
-# Document 20: applyDecimals(amount)
+# Document 15: applyDecimals(amount)
 Source: src/06-Earn-V2/SDK/read-methods/applyDecimals.md
 Doc ID: Earn-V2/SDK/read-methods/applyDecimals
 Public URL: https://docs.concrete.xyz/Earn-V2/SDK/read-methods/applyDecimals/
 In active sidebar: yes
 Description: Read-method reference for applyDecimals(amount) in the Concrete Earn V2 SDK, including expected inputs, outputs, and usage context.
-Converts a raw `BigInt` amount into a human-readable decimal-adjusted string based on the vault’s share decimals. Useful to show vault share balances to users in UIs and to convert share amounts into display-friendly format.
+Converts a raw `BigInt` amount into a human-readable decimal-adjusted value using the vault's share decimals. Use it to display vault share balances and to convert share amounts into a display-friendly format.
 
 ## Parameters
 
-- `amount: bigint` — raw token amount in base units.
+- `amount: bigint`: raw token amount in base units.
 
 ## Returns
 
-- `Promise<string>` — formatted string with decimals applied.
+- `Promise<number>`: numeric value with decimals applied.
 
 ## Example
 
@@ -1860,54 +1511,53 @@ const display = await vault.applyDecimals(rawShares);
 console.log("Formatted vault shares:", display);
 ```
 
-## Example Response
+## Example response
 
 ```json
-"1.0"
+1.0
 ```
 
 ---
 
-# Document 21: toUnderlyingDecimals(amount)
+# Document 16: toUnderlyingDecimals(amount)
 Source: src/06-Earn-V2/SDK/read-methods/toUnderlyingDecimals.md
 Doc ID: Earn-V2/SDK/read-methods/toUnderlyingDecimals
 Public URL: https://docs.concrete.xyz/Earn-V2/SDK/read-methods/toUnderlyingDecimals/
 In active sidebar: yes
 Description: Read-method reference for toUnderlyingDecimals(amount) in the Concrete Earn V2 SDK, including expected inputs, outputs, and usage context.
-Converts a raw `BigInt` amount into a human-readable decimal-adjusted string based on the **underlying asset’s** decimals. Useful to displaying underlying balances (e.g., USDC, WETH) and to Interpret preview results from `previewConversion()` .
+Converts a raw `BigInt` amount into a human-readable decimal-adjusted value using the underlying asset's decimals. Use it to display underlying balances (for example USDC, WETH) and to interpret preview results from `previewConversion()`.
 
 ## Parameters
 
-- `amount: bigint` — raw token amount in base units.
+- `amount: bigint`: raw token amount in base units.
 
 ## Returns
 
-- `Promise<string>` — formatted string with decimals applied.
+- `Promise<number>`: numeric value with decimals applied.
 
 ## Example
 
 ```tsx
 const rawUnderlying = BigInt("1000000"); // 1 USDC in base units (6 decimals)
-const display = await vault.toUnderlayingDecimals(rawUnderlying);
+const display = await vault.toUnderlyingDecimals(rawUnderlying);
 console.log("Formatted underlying:", display);
 ```
 
-## Example Response
+## Example response
 
 ```json
-"1.0"
+1.0
 ```
 
 ---
 
-# Document 22: approve(spender, amount)
+# Document 17: approve(spender, amount)
 Source: src/06-Earn-V2/SDK/write-methods/approve.md
 Doc ID: Earn-V2/SDK/write-methods/approve
 Public URL: https://docs.concrete.xyz/Earn-V2/SDK/write-methods/approve/
 In active sidebar: yes
 Description: Write-method reference for approve(spender, amount) in the Concrete Earn V2 SDK, including transaction flow, required approvals, and integration notes.
-Set an allowance on **ctAssets** (vault shares). This is **not** required for a normal `deposit`.
-Use it if another contract (or account) needs permission to move your **shares** via `transferFrom`.
+Set an allowance on ctAssets (vault shares). This is not required for a normal `deposit`. Use it when another contract or account needs permission to move your shares via `transferFrom`.
 
 ## Signature
 
@@ -1917,12 +1567,12 @@ await vault.approve(spender: string, amount: bigint): Promise<Tx>
 
 ## Parameters
 
-- `spender`: the vault address (`vault.getAddress()`).
-- `amount`: allowance in underlying token units (BigInt).
+- `spender`: the address allowed to move the shares.
+- `amount`: allowance in share base units (`bigint`).
 
 ## Returns
 
-- `Tx`: an Ethers v6 `TransactionResponse`like object (use `await tx.wait()` for confirmation).
+- `Tx`: an Ethers v6 `TransactionResponse`-like object. Use `await tx.wait()` for confirmation.
 
 ## Example
 
@@ -1933,21 +1583,22 @@ const tx = await vault.approve(spender, allowance);
 await tx.wait();
 ```
 
-## Approve: Underlying vs. Shares
+## Approve: underlying versus shares
 
-There are **two separate approvals** you may encounter when working with Concrete Vaults.
+There are two separate approvals you may encounter when working with Concrete Vaults.
 
-| **Type** | **When to Use** | **Method** | **Units** | **Required?** |
+| Type | When to use | Method | Units | Required? |
 | --- | --- | --- | --- | --- |
-| **Underlying Approval** | Before calling `deposit` — vault must be allowed to pull the underlying ERC20 (e.g. USDC, WETH). | `details.underlaying.erc20.approve(vault.getAddress(), amount)` | Underlying decimals | Always required for deposits |
-| **Share Approval** | If another contract/account needs to move your **vault shares** (ctAssets) with `transferFrom`. | `vault.approve(spender, amount)` | Share decimals | Only for external share movement (not required for deposits) |
+| **Underlying approval** | Before calling `deposit`. The vault must be allowed to pull the underlying ERC20 (for example USDC, WETH). | `(await vault.getUnderlyingErc20()).approve(vault.getAddress(), amount)` | Underlying decimals | Always required for deposits |
+| **Share approval** | When another contract or account needs to move your vault shares (ctAssets) with `transferFrom`. | `vault.approve(spender, amount)` | Share decimals | Only for external share movement (not required for deposits) |
 
 ### Examples
 
 ```tsx
 // Approve underlying (required before deposit)
+const erc20 = await vault.getUnderlyingErc20();
 const amount = await vault.toUnderlyingBigInt("1.0");
-await (await details.underlaying.erc20.approve(vault.getAddress(), amount)).wait();
+await (await erc20.approve(vault.getAddress(), amount)).wait();
 
 // Approve shares (optional, for transferFrom)
 const shareAllowance = await vault.toBigInt("50.0");
@@ -1956,13 +1607,13 @@ await (await vault.approve(spender, shareAllowance)).wait();
 
 ---
 
-# Document 23: deposit(amount)
+# Document 18: deposit(amount)
 Source: src/06-Earn-V2/SDK/write-methods/deposit.md
 Doc ID: Earn-V2/SDK/write-methods/deposit
 Public URL: https://docs.concrete.xyz/Earn-V2/SDK/write-methods/deposit/
 In active sidebar: yes
 Description: Write-method reference for deposit(amount) in the Concrete Earn V2 SDK, including transaction flow, required approvals, and integration notes.
-Mint **ctAssets** by consuming the underlying token previously approved to the vault. Before calling the `deposit(amount)` method, the vault must be approved to spend the underlying token.
+Mint ctAssets by consuming the underlying token previously approved to the vault. Before calling `deposit(amount)`, the vault must be approved to spend the underlying token.
 
 ## Signature
 
@@ -1972,49 +1623,47 @@ await vault.deposit(amount: bigint): Promise<Tx>
 
 ## Parameters
 
-- `amount`: **underlying** amount (in underlying decimals).
+- `amount`: underlying amount, in underlying base units (`bigint`).
 
 ## Returns
 
-- `Tx`: transaction object; call `await tx.wait()` to confirm.
+- `Tx`: transaction object. Call `await tx.wait()` to confirm.
 
 ## Example
 
 ```tsx
-// Prerequisite: you created the vault with a signer:
+// Prerequisite: the vault was created with a signer:
 // const vault = getVault(version, vaultAddress, chainId, provider, signer)
-// vanilla SDK: needs version, react only SDK: needs version
 
-const details = await vault.getVaultDetails();
 const vaultAddr = vault.getAddress();
 
-// Approve 1.0 underlying (SDK helper → BigInt in underlying units)
+// Approve 1.0 underlying (SDK helper produces a BigInt in underlying units)
 const amount = await vault.toUnderlyingBigInt("1.0");
 
 // 1) Approve underlying to the vault
-const approveTx = await details.underlaying.erc20.approve(vaultAddr, amount);
+const erc20 = await vault.getUnderlyingErc20();
+const approveTx = await erc20.approve(vaultAddr, amount);
 await approveTx.wait();
 
-// (Optional) Preview how many shares you'll mint
+// (Optional) Preview how many shares you will mint
 const preview = await vault.previewConversion(amount);
-// console.log("Expected shares:", await vault.applyDecimals(preview.vaultTokensReciving));
+// console.log("Expected shares:", await vault.applyDecimals(preview.vaultTokensReceivingRaw));
 
 // 2) Deposit 1.0 underlying
 const depositTx = await vault.deposit(amount);
 const receipt = await depositTx.wait();
 console.log("Deposit confirmed in block", receipt.blockNumber);
-
 ```
 
 ---
 
-# Document 24: redeem(amount)
+# Document 19: redeem(amount)
 Source: src/06-Earn-V2/SDK/write-methods/redeem.md
 Doc ID: Earn-V2/SDK/write-methods/redeem
 Public URL: https://docs.concrete.xyz/Earn-V2/SDK/write-methods/redeem/
 In active sidebar: yes
 Description: Write-method reference for redeem(amount) in the Concrete Earn V2 SDK, including transaction flow, required approvals, and integration notes.
-Burn **ctAssets** (shares) and receive underlying.
+Burn ctAssets (shares) and receive the underlying.
 
 ## Signature
 
@@ -2024,11 +1673,11 @@ await vault.redeem(amount: bigint): Promise<Tx>
 
 ## Parameters
 
-- `amount`: **share** amount (in **share decimals**, i.e., `await vault.decimals()`).
+- `amount`: share amount, in share base units (`await vault.decimals()`).
 
 ## Returns
 
-- `Tx`: transaction object; `await tx.wait()` to confirm.
+- `Tx`: transaction object. Call `await tx.wait()` to confirm.
 
 ## Example
 
@@ -2045,13 +1694,13 @@ if (myShares > 0n) {
 
 ---
 
-# Document 25: transfer(to, amount)
+# Document 20: transfer(to, amount)
 Source: src/06-Earn-V2/SDK/write-methods/transfer.md
 Doc ID: Earn-V2/SDK/write-methods/transfer
 Public URL: https://docs.concrete.xyz/Earn-V2/SDK/write-methods/transfer/
 In active sidebar: yes
 Description: Write-method reference for transfer(to, amount) in the Concrete Earn V2 SDK, including transaction flow, required approvals, and integration notes.
-Transfer **ctAssets** (vault shares) directly to another address.
+Transfer ctAssets (vault shares) directly to another address.
 
 ## Signature
 
@@ -2061,14 +1710,12 @@ await vault.transfer(to: string, amount: bigint): Promise<Tx>
 
 ## Parameters
 
-- `to` (**string**) — Recipient wallet address.
-- `amount` (**bigint**) — Amount of **shares** (in vault decimals).
-Use `vault.toBigInt("10.0")` to convert a human number to `bigint`.
+- `to` (string): recipient wallet address.
+- `amount` (bigint): amount of shares in vault base units. Use `vault.toBigInt("10.0")` to convert from a human value.
 
 ## Returns
 
-- `Tx`: an Ethers v6 `TransactionResponse`like object.
-Call `await tx.wait()` to confirm.
+- `Tx`: an Ethers v6 `TransactionResponse`-like object. Call `await tx.wait()` to confirm.
 
 ## Example
 
@@ -2080,13 +1727,13 @@ await (await vault.transfer(to, shareAmount)).wait();
 
 ---
 
-# Document 26: transferFrom(from, to, amount)
+# Document 21: transferFrom(from, to, amount)
 Source: src/06-Earn-V2/SDK/write-methods/transferFrom.md
 Doc ID: Earn-V2/SDK/write-methods/transferFrom
 Public URL: https://docs.concrete.xyz/Earn-V2/SDK/write-methods/transferFrom/
 In active sidebar: yes
 Description: Write-method reference for transferFrom(from, to, amount) in the Concrete Earn V2 SDK, including transaction flow, required approvals, and integration notes.
-Move **ctAssets** from one address to another using an existing **shares allowance** (granted via `vault.approve`).
+Move ctAssets from one address to another using an existing shares allowance granted via `vault.approve`.
 
 ## Signature
 
@@ -2096,15 +1743,13 @@ await vault.transferFrom(from: string, to: string, amount: bigint): Promise<Tx>
 
 ## Parameters
 
-- `from` (**string**) — Owner of the shares (the address that approved you).
-- `to` (**string**) — Recipient of the shares.
-- `amount` (**bigint**) — Amount of **shares** (in vault decimals).
-Use `vault.toBigInt("5.0")` to convert from human-readable input.
+- `from` (string): owner of the shares (the address that approved you).
+- `to` (string): recipient of the shares.
+- `amount` (bigint): amount of shares in vault base units. Use `vault.toBigInt("5.0")` to convert from a human value.
 
 ## Returns
 
-- `Tx`: an Ethers v6 `TransactionResponse`like object.
-Call `await tx.wait()` to confirm.
+- `Tx`: an Ethers v6 `TransactionResponse`-like object. Call `await tx.wait()` to confirm.
 
 ## Example
 
@@ -2119,7 +1764,7 @@ await (await vault.transferFrom(owner, to, shareAmount)).wait();
 
 ---
 
-# Document 27: Decimals & Conversion Helpers
+# Document 22: Decimals & Conversion Helpers
 Source: src/06-Earn-V2/SDK/decimals-and-conversion-helpers.md
 Doc ID: Earn-V2/SDK/decimals-and-conversion-helpers
 Public URL: https://docs.concrete.xyz/Earn-V2/SDK/decimals-and-conversion-helpers/
@@ -2127,34 +1772,34 @@ In active sidebar: yes
 Description: Concrete Earn V2 SDK documentation for decimals & Conversion Helpers, with implementation guidance for production-grade integrations.
 Working with raw `BigInt` values is error-prone.
 
-The following helpers cache vault decimals internally (faster) to handle conversions consistently:
+The following helpers cache vault decimals internally and handle conversions consistently:
 
-| Conversion | Helper Method |
+| Conversion | Helper |
 | --- | --- |
-| Shares → human-readable | `vault.applyDecimals(bigint)` |
-| Human → shares BigInt | `vault.toBigInt("1.0")` |
-| Underlying → human-readable | `vault.toUnderlayingDecimals(bigint)` |
-| Human → underlying BigInt | `vault.toUnderlyingBigInt("1.0")` |
+| Shares to human-readable | `vault.applyDecimals(bigint)` |
+| Human to shares `BigInt` | `vault.toBigInt("1.0")` |
+| Underlying to human-readable | `vault.toUnderlyingDecimals(bigint)` |
+| Human to underlying `BigInt` | `vault.toUnderlyingBigInt("1.0")` |
 
 ---
 
-# Document 28: Examples
+# Document 23: Examples
 Source: src/06-Earn-V2/SDK/examples.md
 Doc ID: Earn-V2/SDK/examples
 Public URL: https://docs.concrete.xyz/Earn-V2/SDK/examples/
 In active sidebar: yes
 Description: Concrete Earn V2 SDK documentation for examples, with implementation guidance for production-grade integrations.
-## 1. Check & Top-Up Allowance
+## 1. Check and top up allowance
 
-Before depositing, always confirm the user has approved enough underlying for the vault. If not, approve the difference.
+Before depositing, confirm the user has approved enough underlying for the vault. If not, approve the difference.
 
 ```tsx
-const details = await vaultWithSigner.getVaultDetails();
 const vaultAddr = vaultWithSigner.getAddress();
+const erc20 = await vaultWithSigner.getUnderlyingErc20();
 const depositAmount = await vaultWithSigner.toUnderlyingBigInt("5.0"); // 5 underlying tokens
 
 // Check existing allowance
-const currentAllowance = await details.underlying.erc20.allowance(
+const currentAllowance = await erc20.allowance(
   await signer.getAddress(),
   vaultAddr
 );
@@ -2162,16 +1807,16 @@ const currentAllowance = await details.underlying.erc20.allowance(
 if (currentAllowance < depositAmount) {
   const approveAmount = depositAmount - currentAllowance;
   console.log("Approving extra allowance:", approveAmount.toString());
-  await (await details.underlying.erc20.approve(vaultAddr, approveAmount)).wait();
+  await (await erc20.approve(vaultAddr, approveAmount)).wait();
 }
 
 // Safe to deposit
 await (await vaultWithSigner.deposit(depositAmount)).wait();
 ```
 
-## 2. Read Total Assets
+## 2. Read total assets
 
-Get the vault’s TVL (total assets under management), and format it using the SDK’s helpers.
+Get the vault's total assets and format the value with the SDK's helpers.
 
 ```tsx
 const details = await vault.getVaultDetails();
@@ -2184,34 +1829,34 @@ console.log(
 );
 ```
 
-## 3. Fetch Vault Details
+## 3. Fetch vault details
 
 ```tsx
 import { getVault } from "@concrete-xyz/sdk";
 import { ethers } from "ethers";
 
-const provider = new ethers.JsonRpcProvider("<https://ethereum-rpc.publicnode.com>");
-const vault = getVault("0xYourVault", chainId, provider);
+const provider = new ethers.JsonRpcProvider("https://ethereum-rpc.publicnode.com");
+const vault = getVault("v2", "0xYourVault", chainId, provider);
 
 const details = await vault.getVaultDetails();
 console.log("Vault shares:", details.vaultAsset.symbol);
 console.log("Underlying:", details.underlying.symbol);
 ```
 
-## 4. Preview Deposit
+## 4. Preview deposit
 
-Estimate how many shares (ctAssets) you’ll receive for a deposit.
+Estimate how many shares (ctAssets) you will receive for a deposit.
 
 ```tsx
 const oneUnderlying = await vault.toUnderlyingBigInt("1.0");
 const preview = await vault.previewConversion(oneUnderlying);
 
 console.log(
-  `1 ${details.underlying.symbol} ≈ ${await vault.applyDecimals(preview.vaultTokensReciving)} ${details.vaultAsset.symbol}`
+  `1 ${details.underlying.symbol} ≈ ${await vault.applyDecimals(preview.vaultTokensReceivingRaw)} ${details.vaultAsset.symbol}`
 );
 ```
 
-## 5. Deposit Flow
+## 5. Deposit flow
 
 ```tsx
 import { ethers } from "ethers";
@@ -2221,20 +1866,20 @@ import { ethers } from "ethers";
 // 3. Receive vault shares
 
 const signer = new ethers.Wallet(process.env.PRIVATE_KEY!, provider);
-const vaultWithSigner = getVault("0xYourVault", chainId , provider, signer);
+const vaultWithSigner = getVault("v2", "0xYourVault", chainId, provider, signer);
 
 const depositAmount = await vaultWithSigner.toUnderlyingBigInt("1.0");
 
 // (1) Approve underlying to the vault
-await (await (await vaultWithSigner.getVaultDetails()).underlying.erc20
-  .approve(vaultWithSigner.getAddress(), depositAmount)).wait();
+const erc20 = await vaultWithSigner.getUnderlyingErc20();
+await (await erc20.approve(vaultWithSigner.getAddress(), depositAmount)).wait();
 
 // (2) Deposit
 const receipt = await (await vaultWithSigner.deposit(depositAmount)).wait();
 console.log("Deposit confirmed:", receipt.transactionHash);
 ```
 
-## 6. Redeem Flow
+## 6. Redeem flow
 
 ```tsx
 const owner = await signer.getAddress();
@@ -2246,7 +1891,7 @@ if (shareBalance > 0n) {
 
   console.log(
     `${await vaultWithSigner.applyDecimals(shareBalance)} ${details.vaultAsset.symbol} ≈ ` +
-    `${await vaultWithSigner.toUnderlyingDecimals(preview.underlyingReciving)} ${details.underlying.symbol}`
+    `${await vaultWithSigner.toUnderlyingDecimals(preview.underlyingReceivingRaw)} ${details.underlying.symbol}`
   );
 
   const receipt = await (await vaultWithSigner.redeem(shareBalance)).wait();
@@ -2256,7 +1901,7 @@ if (shareBalance > 0n) {
 
 ## 7. Transfer ctAssets
 
-Shares (ctAssets) behave like ERC20s — they can be transferred.
+Shares (ctAssets) behave like ERC20 tokens and can be transferred.
 
 ```tsx
 const recipient = "0xRecipient...";
@@ -2264,7 +1909,7 @@ const tenShares = await vaultWithSigner.toBigInt("10.0");
 await (await vaultWithSigner.transfer(recipient, tenShares)).wait();
 ```
 
-## 8. Move Shares with Allowance
+## 8. Move shares with allowance
 
 Grant another address permission to spend your shares.
 
@@ -2281,20 +1926,20 @@ await (await vaultWithSigner.approve(spender, allowance)).wait();
 await (await vaultWithSigner.transferFrom(owner, recipient, allowance)).wait();
 ```
 
-## 9. End-to-End Example
+## 9. End-to-end example
 
 ```tsx
-// (1 Underlying → Redeem)
+// 1 underlying deposit, then redeem
 
 const oneUnderlying = await vaultWithSigner.toUnderlyingBigInt("1.0");
 
 // Preview deposit
 const pvDeposit = await vaultWithSigner.previewConversion(oneUnderlying);
-console.log("Expected shares:", await vaultWithSigner.applyDecimals(pvDeposit.vaultTokensReciving));
+console.log("Expected shares:", await vaultWithSigner.applyDecimals(pvDeposit.vaultTokensReceivingRaw));
 
-// Approve + Deposit
-const details = await vaultWithSigner.getVaultDetails();
-await (await details.underlying.erc20.approve(vaultWithSigner.getAddress(), oneUnderlying)).wait();
+// Approve and deposit
+const erc20 = await vaultWithSigner.getUnderlyingErc20();
+await (await erc20.approve(vaultWithSigner.getAddress(), oneUnderlying)).wait();
 await (await vaultWithSigner.deposit(oneUnderlying)).wait();
 
 // Redeem
@@ -2305,13 +1950,13 @@ await (await vaultWithSigner.redeem(shares)).wait();
 
 ---
 
-# Document 29: Troubleshooting & Error Handling
+# Document 24: Troubleshooting & Error Handling
 Source: src/06-Earn-V2/SDK/troubleshooting-and-error-handling.md
 Doc ID: Earn-V2/SDK/troubleshooting-and-error-handling
 Public URL: https://docs.concrete.xyz/Earn-V2/SDK/troubleshooting-and-error-handling/
 In active sidebar: yes
 Description: Concrete Earn V2 SDK documentation for troubleshooting & Error Handling, with implementation guidance for production-grade integrations.
-## TL;DR Patterns
+## Quick patterns
 
 ### 1) Vanilla (ethers)
 
@@ -2320,7 +1965,7 @@ import { getVault } from "@concrete-xyz/sdk";
 import { ethers } from "ethers";
 
 const provider = new ethers.JsonRpcProvider(process.env.RPC_URL!);
-const vault = getVault("0xYourVault", chainId, provider);
+const vault = getVault("v2", "0xYourVault", chainId, provider);
 
 async function safeGetDetails() {
   try {
@@ -2328,71 +1973,76 @@ async function safeGetDetails() {
     return details;
   } catch (err: any) {
     if (err.code === "NETWORK_ERROR") {
-      // RPC down / bad URL
+      // RPC down or bad URL
       throw new Error("RPC unavailable: check RPC_URL and network.");
     }
     if (err.code === "CALL_EXCEPTION") {
-      // Wrong chain / wrong address / ABI mismatch
-      throw new Error("Call failed: verify vault address & network match.");
+      // Wrong chain, wrong address, or ABI mismatch
+      throw new Error("Call failed: verify vault address and network match.");
     }
     throw err;
   }
 }
 ```
 
-### 2) Wagmi + React Query
+### 2) Wagmi and React Query
 
 ```tsx
 import { useVault, useVaultQuery } from "@concrete-xyz/sdk/wagmi";
 
-export function UseDetails({ address, chainId }: { address: string; chainId: any }) {
-  const vault = useVault(vault config object);
+const vaultConfig = {
+  version: "v2",
+  address: "0xYourVault",
+  chainId: 1,
+} as const;
+
+export function UseDetails() {
+  const vault = useVault(vaultConfig);
 
   const query = useVaultQuery({
-    address,
-    chainId,
-    queryKey: ["vaultDetails", address, chainId],
+    vault: vaultConfig,
+    queryKey: ["vaultDetails"],
     enabled: !!vault, // Avoid running before the hook resolves
     queryFn: (v) => v.getVaultDetails(),
     retry: 2,
     staleTime: 30_000,
   });
 
-  if (query.isLoading) return <div>Loading…</div>;
+  if (query.isLoading) return <div>Loading...</div>;
   if (query.isError) return <div>Failed to load vault details. {String(query.error)}</div>;
 
   return <pre>{JSON.stringify(query.data, null, 2)}</pre>;
 }
 ```
 
-## Common Error Sources & Fixes
+## Common error sources and fixes
 
-| Symptom | Likely Cause | Fix |
+| Symptom | Likely cause | Fix |
 | --- | --- | --- |
-| `NETWORK_ERROR`, `failed to fetch` | Bad/unstable RPC URL, rate limiting | Switch to a reliable RPC. Add retries/backoff. |
-| `CALL_EXCEPTION` / `execution reverted` | Wrong **network** for the vault address; wrong address; deprecated contract | Ensure `getVault(address, chainId, …)` chain matches the contract’s chain. Verify address is the **vault**, not the underlying. |
-| `undefined` / `Cannot read properties of undefined` | Hook not ready (Wagmi client not connected) | Gate reads with `enabled: !!vault` (React Query) or check `if (!vault) return`. |
-| `BigInt` range/format issues | Mixing JS `number` with token base units | Always use `BigInt`; derive units from `await vault.getUnderlyingDecimals()`. |
-| Wrong display amounts | Using wrong decimals for formatting | Use `getUnderlyingDecimals()` for underlying and `decimals()` for shares. |
-| CORS / Browser blocking | Direct RPC calls from browser blocked | Use a proxy RPC provider or server side. |
-| Inconsistent results caching | React Query defaults | Provide a `queryKey`, set `staleTime`, `cacheTime`, and `retry` policies explicitly. |
+| `NETWORK_ERROR`, `failed to fetch` | Bad or unstable RPC URL, rate limiting | Switch to a reliable RPC. Add retries and backoff. |
+| `CALL_EXCEPTION` or `execution reverted` | Wrong network for the vault address, wrong address, or deprecated contract | Ensure the `chainId` passed to `getVault(version, address, chainId, ...)` matches the contract's chain. Verify the address is the vault, not the underlying. |
+| `undefined` or `Cannot read properties of undefined` | Hook not ready (Wagmi client not connected) | Gate reads with `enabled: !!vault` (React Query) or `if (!vault) return`. |
+| `BigInt` range or format issues | Mixing JS `number` with token base units | Always use `BigInt`. Derive units from `await vault.getUnderlyingDecimals()`. |
+| Wrong display amounts | Using wrong decimals for formatting | Use `getUnderlyingDecimals()` for the underlying and `decimals()` for shares. |
+| CORS or browser blocking | Direct RPC calls from the browser blocked | Use a proxy RPC provider or call from the server. |
+| Inconsistent results caching | React Query defaults | Provide a `queryKey`, and set `staleTime`, `gcTime`, and `retry` policies explicitly. |
 
-## Read Methods Recommendations
+## Read method recommendations
 
 ### `getVaultDetails()`
 
-*Validate the shape and presence of nested fields (e.g., `underlying`).*
+Validate the shape and presence of nested fields (for example `underlying`).
 
 ```tsx
 const details = await vault.getVaultDetails();
-if (!details?.underlying?.erc20) {
-  throw new Error("Malformed details: missing underlying erc20");
+if (!details?.underlying?.address) {
+  throw new Error("Malformed details: missing underlying metadata");
 }
 ```
 
 ### `totalAssets()`
 
-*Wrap with retries—RPCs can flake.*
+Wrap with retries. RPCs can flake.
 
 ```tsx
 async function withRetry<T>(fn: () => Promise<T>, n = 2): Promise<T> {
@@ -2401,19 +2051,19 @@ async function withRetry<T>(fn: () => Promise<T>, n = 2): Promise<T> {
 const total = await withRetry(() => vault.totalAssets());
 ```
 
-### `symbol()` / `decimals()` / `getUnderlyingDecimals()`
+### `symbol()`, `decimals()`, `getUnderlyingDecimals()`
 
-*Handle non-standard tokens by falling back to metadata if you cache it.*
+Handle non-standard tokens by falling back to cached metadata.
 
 ```tsx
 let uDec = 18;
 try { uDec = await vault.getUnderlyingDecimals(); }
-catch { uDec = 18; /* fallback default if you must */ }
+catch { uDec = 18; /* fallback default if needed */ }
 ```
 
 ### `balanceOf(address)`
 
-*Validate address and handle ENS resolution externally if needed.*
+Validate the address. Resolve ENS externally if needed.
 
 ```tsx
 import { isAddress } from "viem"; // or ethers
@@ -2423,70 +2073,70 @@ const bal = await vault.balanceOf(user);
 
 ### `previewConversion(amount)`
 
-*Always build `amount` with correct decimals; catch `CALL_EXCEPTION` for paused/frozen states.*
+Always build `amount` with correct decimals, and catch `CALL_EXCEPTION` for paused or frozen states.
 
 ```tsx
 const uDec = await vault.getUnderlyingDecimals();
 const amount = BigInt(10) ** BigInt(uDec); // 1 unit
 try {
   const preview = await vault.previewConversion(amount);
-  // use preview.vaultTokensReciving / preview.underlyingReciving
+  // Use preview.vaultTokensReceiving / preview.underlyingReceiving,
+  // or the *Raw bigint siblings when you need raw values.
 } catch (e: any) {
   if (e.code === "CALL_EXCEPTION") {
-    throw new Error("Preview unavailable (vault paused / wrong chain / wrong address).");
+    throw new Error("Preview unavailable (vault paused, wrong chain, or wrong address).");
   }
   throw e;
 }
 ```
 
-### `applyDecimals(value)` / `toUnderlyingDecimals(value)`
+### `applyDecimals(value)` and `toUnderlyingDecimals(value)`
 
-Avoid Decimal Bugs by using the built-in helpers to prevent unit mistakes.
+Use the built-in helpers to avoid unit mistakes.
 
 Common pitfalls:
 
-- **Input type** → must be `BigInt`, not `number` or `string`.
-- **Order of calls** → call after `getVaultDetails()`, so decimals are loaded.
-- **Correct usage** →
-    - `applyDecimals()` = format **vault shares (ctAssets)**
-    - `toUnderlyingDecimals()` = format **underlying ERC20**
-- **Precision** → only use for display; keep core math in `BigInt`.
-- **Network differences** → don’t assume decimals; USDC is 6 on Ethereum, 18 on other chains.
+- **Input type**: must be `BigInt`, not `number` or `string`.
+- **Order of calls**: call after `getVaultDetails()` so decimals are loaded.
+- **Correct usage**:
+    - `applyDecimals()` formats vault shares (ctAssets).
+    - `toUnderlyingDecimals()` formats the underlying ERC20.
+- **Precision**: use for display only. Keep core math in `BigInt`.
+- **Network differences**: do not assume decimals. USDC is 6 on Ethereum, and may differ elsewhere.
 
 ```tsx
 const details = await vault.getVaultDetails();
 
 const rawShares = await vault.balanceOf(user);
-const displayShares = await vault.applyDecimals(rawShares); // "1.00 ctETH"
+const displayShares = await vault.applyDecimals(rawShares); // "1.00"
 
-const rawUnderlying = await details.underlying.erc20.balanceOf(user);
-const displayUnderlying = await vault.toUnderlyingDecimals(rawUnderlying); // "5000.00 USDC"
-
+const erc20 = await vault.getUnderlyingErc20();
+const rawUnderlying = await erc20.balanceOf(user);
+const displayUnderlying = await vault.toUnderlyingDecimals(rawUnderlying); // "5000.00"
 ```
 
-**When NOT to use them**
+**When not to use them**
 
-- **Do not** pass formatted strings back into write calls—always pass **BigInt** base units.
-- Never feed `applyDecimals()` or `toUnderlyingDecimals()` outputs back into **write methods** like `deposit()`, `redeem()`, or `approve()`.
-- These helpers are **for display only**.
+- Do not pass formatted strings back into write calls. Always pass `BigInt` base units.
+- Never feed `applyDecimals()` or `toUnderlyingDecimals()` outputs back into write methods like `deposit()`, `redeem()`, or `approve()`.
+- These helpers are for display only.
 - Always pass raw `BigInt` values (base units) into transactions.
 
-## Network & Address Guards
+## Network and address guards
 
-### Validate vault address early
+### Validate the vault address early
 
 ```tsx
 import { isAddress } from "viem";
 if (!isAddress(vaultAddress)) throw new Error("Invalid vault address");
 ```
 
-## React Query: Robust Defaults
+## React Query: robust defaults
 
 ```tsx
 const result = useVaultQuery({
-  address,
-  chainId,
-  queryKey: ["vault", address, chainId, "details"],
+  vault: vaultConfig,
+  queryKey: ["details"],
   queryFn: (v) => v.getVaultDetails(),
   retry: (count, error: any) => {
     // Retry only transient RPC issues
@@ -2498,7 +2148,7 @@ const result = useVaultQuery({
 });
 ```
 
-## Logging & Telemetry
+## Logging and telemetry
 
 Avoid logging private keys.
 
@@ -2508,101 +2158,100 @@ function logReadError(method: string, vaultAddr: string, chainId: string, err: u
 }
 ```
 
-## Write Methods: Common Failures & Fixes
+## Write methods: common failures and fixes
 
-### Insufficient Allowance (Underlying)
+### Insufficient allowance (underlying)
 
-**Symptom:** `execution reverted: ERC20: insufficient allowance` (or router-specific revert)
-**Fix:** Ensure you approved the **underlying** (not shares) and for **enough** amount.
+**Symptom**: `execution reverted: ERC20: insufficient allowance` (or a router-specific revert).
+**Fix**: Approve the underlying (not shares) for a sufficient amount.
 
 ```tsx
-// Re-approve remaining delta
+// Re-approve the remaining delta
+const erc20 = await vault.getUnderlyingErc20();
 const need = await vault.toUnderlyingBigInt("1.0");
-const cur = await details.underlaying.erc20.allowance(user, vault.getAddress());
+const cur = await erc20.allowance(user, vault.getAddress());
 if (cur < need) {
-  await (await details.underlaying.erc20.approve(vault.getAddress(), need)).wait();
+  await (await erc20.approve(vault.getAddress(), need)).wait();
 }
-
 ```
 
-### Insufficient Balance/Gas
+### Insufficient balance or gas
 
-**Symptom:** `insufficient funds for intrinsic transaction cost` or `transfer amount exceeds balance`**Fix:** Check **native gas token** (ETH) balance and underlying/share balances before sending.
+**Symptom**: `insufficient funds for intrinsic transaction cost` or `transfer amount exceeds balance`.
+**Fix**: Check native gas token (ETH) balance and underlying or share balances before sending.
 
 ```tsx
-const bal = await details.underlaying.erc20.balanceOf(user);
+const erc20 = await vault.getUnderlyingErc20();
+const bal = await erc20.balanceOf(user);
 if (bal < amount) throw new Error("Not enough underlying to deposit.");
-
 ```
 
-### Nonce/Replacement Errors
+### Nonce or replacement errors
 
-**Symptom:** `nonce too low`, `replacement fee too low`**Fix:** Read current nonce and resubmit with a higher max fee.
+**Symptom**: `nonce too low`, `replacement fee too low`.
+**Fix**: Read the current nonce and resubmit with a higher max fee.
 
 ```tsx
 const nonce = await signer.getNonce();
 await vault.deposit(amount, { nonce, maxFeePerGas: prev * 12n / 10n }); // +20%
-
 ```
 
-### Paused/Deprecated Vaults
+### Paused or deprecated vaults
 
-**Symptom:** `CALL_EXCEPTION` or custom revert string (e.g., “paused”) on `deposit`/`redeem`**Fix:** Surface a clear UI message; gate write actions based on a health flag if you expose one.
+**Symptom**: `CALL_EXCEPTION` or a custom revert string (for example "paused") on `deposit` or `redeem`.
+**Fix**: Surface a clear UI message. Gate write actions based on a health flag where available.
 
 ```tsx
 try { await vault.deposit(amount); }
-catch (e:any) {
+catch (e: any) {
   if (/paused|deprecated/i.test(String(e.message))) {
-    throw new Error("This vault is paused/deprecated. Withdrawals only.");
+    throw new Error("This vault is paused or deprecated. Withdrawals only.");
   }
   throw e;
 }
-
 ```
 
-### Preview ≠ Final (State Changed Between Calls)
+### Preview differs from final (state changed between calls)
 
-**Symptom:** Actual mint/redeem differs from `previewConversion` (TVL/price moved)
-**Fix:** Treat preview as indicative; consider a tolerance check and re-preview on confirm step.
+**Symptom**: Actual mint or redeem differs from `previewConversion` because TVL or price moved.
+**Fix**: Treat preview as indicative. Consider a tolerance check and re-preview on the confirm step.
 
 ```tsx
 const pre = await vault.previewConversion(amount);
-// (Optional) Assert minimum expected output for UX only; on-chain still authoritative
-
+// Optional: assert a minimum expected output for UX. On-chain output is still authoritative.
 ```
 
-## ERC-20 Weirdness (Non-Standard Tokens)
+## Non-standard ERC20 tokens
 
 Some tokens:
 
-- Don’t return `bool` on `approve/transfer`.
-- Require **reset-to-zero** before increasing allowance.
-- Have chain-specific **decimals** (e.g., USDC 6 vs 18 elsewhere).
+- Do not return `bool` from `approve` or `transfer`.
+- Require resetting allowance to zero before increasing it.
+- Have chain-specific decimals (for example USDC is 6 on Ethereum).
 
-**Defensive pattern:**
+**Defensive pattern**:
 
 ```tsx
-// Reset-to-zero pattern (safe for finicky tokens)
+// Reset-to-zero pattern (safe for non-standard tokens)
 await (await erc20.approve(vault.getAddress(), 0n)).wait();
 await (await erc20.approve(vault.getAddress(), amount)).wait();
-
 ```
 
-## Allowance Race Conditions
+## Allowance race conditions
 
-If you fire multiple approvals/deposits in parallel, transactions can race and revert.
+If you fire multiple approvals or deposits in parallel, transactions can race and revert.
 
-**Fix:** Sequence writes, or serialize by vault+user key.
+**Fix**: Sequence writes, or serialize by vault and user key.
 
 ```tsx
 await (await erc20.approve(vault.getAddress(), amount)).wait();
 await (await vault.deposit(amount)).wait();
 ```
 
-## Signer/Wallet Lifecycle
+## Signer and wallet lifecycle
 
-**Symptoms:** `vault is undefined`, `signer missing`, user switched accounts/networks mid-flow.
-**Fix:** Re-acquire signer before writes and assert chain id matches.
+**Symptoms**: `vault is undefined`, `signer missing`, user switched accounts or networks mid-flow.
+**Fix**: Re-acquire the signer before writes and assert the chain ID matches.
 
 ```tsx
 // Wagmi
@@ -2610,12 +2259,11 @@ if (!vault) throw new Error("Wallet not connected. Connect before writing.");
 // Vanilla
 const networkOk = (await provider.getNetwork()).chainId === expectedChainId;
 if (!networkOk) throw new Error("Wrong network selected in wallet.");
-
 ```
 
-## EIP-1559 Fee Strategy (Busy Networks)
+## EIP-1559 fee strategy (busy networks)
 
-Avoid underpriced TXs on L2/L1 spikes.
+Avoid underpriced transactions on L2 or L1 spikes.
 
 ```tsx
 const fee = await provider.getFeeData();
@@ -2625,37 +2273,36 @@ await vault.deposit(amount, {
 });
 ```
 
-## Reorgs & Finality
+## Reorgs and finality
 
-A receipt can succeed, then be reorged in rare cases.
-**Fix:** Wait for extra confirmations where it matters (admin ops, high TVL).
+A receipt can succeed and then be reorged in rare cases.
+**Fix**: Wait for extra confirmations where it matters (admin ops, high TVL).
 
 ```tsx
 const rc = await (await vault.deposit(amount)).wait(2);
-// wait for 2 confirmations
+// Wait for 2 confirmations
 ```
 
-## Retry & Backoff for Transient RPC Errors
+## Retry and backoff for transient RPC errors
 
-Only retry **idempotent reads** or **broadcast** errors clearly marked transient.
+Only retry idempotent reads or broadcast errors clearly marked transient.
 
 ```tsx
-async function retry<T>(fn:()=>Promise<T>, times=2) {
+async function retry<T>(fn: () => Promise<T>, times = 2) {
   try { return await fn(); }
-  catch (e:any) {
+  catch (e: any) {
     if (times && /timeout|429|NETWORK_ERROR/.test(String(e?.message))) {
-      await new Promise(r=>setTimeout(r, 800));
-      return retry(fn, times-1);
+      await new Promise(r => setTimeout(r, 800));
+      return retry(fn, times - 1);
     }
     throw e;
   }
 }
-
 ```
 
 ---
 
-# Document 30: Schema & Queries
+# Document 25: Schema & Queries
 Source: src/06-Earn-V2/Subgraph-and-Events/schema-and-queries.md
 Doc ID: Earn-V2/Subgraph-and-Events/schema-and-queries
 Public URL: https://docs.concrete.xyz/Earn-V2/Subgraph-and-Events/schema-and-queries/
@@ -2933,7 +2580,7 @@ The `Factory` entity has no reverse-derived `vaults` field, so query the top-lev
 
 ---
 
-# Document 31: Event Reference
+# Document 26: Event Reference
 Source: src/06-Earn-V2/Subgraph-and-Events/event-reference-and-use-cases.md
 Doc ID: Earn-V2/Subgraph-and-Events/event-reference-and-use-cases
 Public URL: https://docs.concrete.xyz/Earn-V2/Subgraph-and-Events/event-reference-and-use-cases/
@@ -3003,7 +2650,7 @@ The following are not on-chain events. They are subgraph-internal `@entity(times
 
 ---
 
-# Document 32: How to Deposit into a Concrete Earn Vault
+# Document 27: How to Deposit into a Concrete Earn Vault
 Source: src/02-Earn/deposit-into-vaults.md
 Doc ID: Earn/deposit-into-vaults
 Public URL: https://docs.concrete.xyz/Earn/deposit-into-vaults/
@@ -3039,7 +2686,7 @@ Once deposited, your capital is put to work across the yield strategies listed o
 
 ---
 
-# Document 33: Concrete Assets and Yield-Bearing Tokens
+# Document 28: Concrete Assets and Yield-Bearing Tokens
 Source: src/02-Earn/ct-assets.md
 Doc ID: Earn/ct-assets
 Public URL: https://docs.concrete.xyz/Earn/ct-assets/
@@ -3110,7 +2757,7 @@ If immediate liquidity is unavailable, the protocol calculates redemption availa
 
 ---
 
-# Document 34: Pre-Deposit Vaults
+# Document 29: Pre-Deposit Vaults
 Source: src/02-Earn/pre-deposit-vaults.md
 Doc ID: Earn/pre-deposit-vaults
 Public URL: https://docs.concrete.xyz/Earn/pre-deposit-vaults/
@@ -3144,7 +2791,7 @@ Check the vault page for two dates: when the pre-deposit period ends and when cl
 
 ---
 
-# Document 35: How Earn Vaults Maximize Risk-Adjusted Yields
+# Document 30: How Earn Vaults Maximize Risk-Adjusted Yields
 Source: src/02-Earn/how-earn-vaults-maximize-risk-adjusted-yields.md
 Doc ID: Earn/how-earn-vaults-maximize-risk-adjusted-yields
 Public URL: https://docs.concrete.xyz/Earn/how-earn-vaults-maximize-risk-adjusted-yields/
@@ -3223,7 +2870,7 @@ A USDC vault holds two strategies — a Pendle yield strategy and a Morpho lendi
 
 ---
 
-# Document 36: Yield Vaults and ERC-4626 Standard
+# Document 31: Yield Vaults and ERC-4626 Standard
 Source: src/05-Vaults/yield-vaults.md
 Doc ID: Vaults/yield-vaults
 Public URL: https://docs.concrete.xyz/Vaults/yield-vaults/
@@ -3264,7 +2911,7 @@ If the vault is full or your amount is outside the configured range, the transac
 
 ---
 
-# Document 37: Yield Strategies
+# Document 32: Yield Strategies
 Source: src/05-Vaults/yield-strategies.md
 Doc ID: Vaults/yield-strategies
 Public URL: https://docs.concrete.xyz/Vaults/yield-strategies/
@@ -3298,7 +2945,7 @@ Selected vaults employ structured strategies — for example, delta-neutral basi
 
 ---
 
-# Document 38: Completed Campaigns
+# Document 33: Completed Campaigns
 Source: src/05-Vaults/completed-campaigns.md
 Doc ID: Vaults/completed-campaigns
 Public URL: https://docs.concrete.xyz/Vaults/completed-campaigns/
@@ -3333,109 +2980,124 @@ For more on support, see [Support](https://docs.concrete.xyz/support/). For more
 
 ---
 
-# Document 39: How Withdrawals Work
+# Document 34: How Withdrawals Work
 Source: src/05-Vaults/how-withdrawals-work.md
 Doc ID: Vaults/how-withdrawals-work
 Public URL: https://docs.concrete.xyz/Vaults/how-withdrawals-work/
 In active sidebar: yes
-Description: Concrete vault documentation for how Withdrawals Work, including strategy behavior, withdrawals, migrations, and operational guidance.
-Concrete vaults use a **Withdrawal Queue** to make redemptions predictable, secure, and fair. This protects both users and the protocol.
+Description: Withdrawal documentation for Concrete vaults, covering vault types, the Withdrawal Queue, epoch cadence, and withdrawal caps.
+Withdrawal behavior depends on the vault. Most Concrete Earn vaults are async vaults: you submit a withdrawal request, the vault groups requests into epochs, processes them on a schedule, and makes the funds available to claim from the **Portfolio** tab. Other vaults settle atomically, and pre-deposit vaults exit through a cross-chain claim. Each vault's page in the Concrete app states which model it uses.
 
-## What Is the Withdrawal Queue?
+## Vault Types and Withdrawal Behavior
 
-If a vault uses a queue, this will be clearly shown in the Concrete App before you deposit.
+Concrete Earn ships two vault implementations and one launch-time variant, each with different withdrawal behavior:
 
-When you submit a withdrawal request:
+- **Async vault** – settles withdrawals through the **Withdrawal Queue**. Used whenever the strategy cannot return assets atomically, for example positions held in a multi-sig wallet for off-chain or multi-venue execution, Pendle LP unwinds, or money markets with withdrawal cooldowns. This is the most common configuration on Concrete.
+- **Standard (atomic) vault** – `withdraw()` and `redeem()` execute in a single transaction. Used when the underlying strategy can return assets immediately.
+- **Pre-deposit vault** – accepts deposits on one chain before the target vault launches on another. Exit is via a cross-chain share claim, not the Withdrawal Queue. See [Pre-Deposit (Cross-Chain) Vault](#pre-deposit-cross-chain-vault) below.
 
-- Your request is **added to a queue**
-- Funds are prepared and released in batches
-- You’ll see your **estimated withdrawal time** in the app
-- Track your withdrawal status in your Portfolio tab — you’ll see labels like **“Queued”**, **“Processing”**, or **“Available”**
+## Async Vault (Withdrawal Queue)
 
-**Withdrawal Flow**
+1. **Submit your request.** On the vault page, open the Withdraw tab, enter the amount, and confirm in your wallet. Your ct[Asset] shares are held by the vault and the request joins the current epoch.
+2. **The cutoff passes.** At the vault's scheduled cutoff, the epoch closes to new requests. You can cancel up to the cutoff; once it passes, the request is locked in and a new epoch opens.
+3. **The epoch is processed.** Shortly after the cutoff:
+   - The share price for the epoch is locked in at that moment, not at request time.
+   - Your shares are burned.
+   - Your assets are reserved for you to claim. They come from the vault's unallocated balance first (idle deposits and previous unwind leftovers); if that is not enough, the **Allocator** deallocates from strategies to cover the difference.
+4. **Claim your assets.** Your withdrawal status moves to **Available** in the Portfolio tab. Click Claim, confirm in your wallet, and the assets arrive in your wallet. If you have multiple withdrawals ready across different epochs, you can claim them together.
 
-_Submit Withdrawal → In Queue → Funds Ready → Claim (if needed) → Tokens in Wallet (Wait up to 7 days)_
+You can track each request in the **Portfolio** tab with status labels **Queued**, **Processing**, and **Available**. The app shows an **estimated withdrawal time** based on the vault's cadence and queue depth.
 
-## Weekly Vault Batches
+### Withdrawal Caps Per Epoch
 
-Async vaults process withdrawal requests in epochs configured per vault. The cadence — daily, weekly, or otherwise — depends on the vault's configuration, not a protocol-level rule. Each vault page lists its specific cutoff and processing schedule.
+Some vaults set a withdrawal cap that limits the total volume of redemptions processed in a single epoch, expressed as a percentage of vault TVL. Whether a cap is enabled, and at what threshold, is set by the vault curator based on the strategy's liquidity profile and unwind capacity. Not all vaults use caps. Caps work alongside cadence to keep epoch sizes aligned with the strategy's unwind capacity.
 
-:::info[Example]
-If Alice submits her request **before Monday, June 3 at 12:00 PM UTC**, she’ll receive her funds by **Thursday, June 6**.
-If she submits after the cutoff (e.g., **Monday at 12:01 PM**), her request will be included in the **next week’s batch**, and her funds will arrive by **Thursday, June 13**.
-:::
-
-## Withdrawal Caps Per Epoch
-
-Some vaults may have a withdrawal cap that limits the total volume of redemptions processed in a single epoch, expressed as a percentage of vault TVL. Whether a cap is enabled, and at what threshold, is determined by the vault curator based on the strategy's liquidity profile and unwind capacity. Not all vaults use caps. Caps work alongside cadence to keep batch sizes predictable and aligned with the strategy's unwind capacity. By keeping redemption batches predictable, caps allow curators to maintain more consistent strategy execution, which can contribute to better vault APY over time.
-
-To check the exact redemption process, including whether a cap is active and at what threshold, visit the withdrawal management page for the vault you are interested in.
+To check the exact redemption process, including whether a cap is active and at what threshold, visit the withdrawal management page for the vault.
 
 **How caps behave**
 
-When requests within an epoch stay under the cap, the batch processes normally at the scheduled time. When requests exceed the cap, only requests up to the cap threshold are processed in that epoch — the remainder roll forward to subsequent epochs and are processed in the order they were originally requested (First In First Out). Depositors waiting across multiple epochs continue earning yield until their portion is processed.
+When requests in an epoch stay under the cap, the epoch processes normally at the scheduled time. When requests exceed the cap, only requests up to the cap threshold are processed in that epoch. The remainder roll forward to subsequent epochs and are processed in the order they were originally requested (First In, First Out). Depositors waiting across multiple epochs continue earning yield until their portion is processed.
 
-:::info[Example - Weekly Vault with Withdrawal Cap]
-Say a vault processes withdrawals every Tuesday, with a cap of 20% of TVL per epoch.
+:::info[Example: weekly vault with withdrawal cap]
+Say a vault processes withdrawals every Tuesday with a cap of 20% of TVL per epoch.
 
-If Alice submits a withdrawal request on Friday, May 29, her request joins the queue for the next batch on Tuesday, June 3. If total requests that week are under the 20% cap, Alice receives her funds by Friday, June 6.
+If Alice submits a withdrawal request on Friday, May 29, her request joins the queue for the next epoch on Tuesday, June 3. If total requests that week are under the 20% cap, Alice receives her funds by Friday, June 6.
 
-If requests in a given epoch exceed the cap, the vault's withdrawal queuing service processes them in the order they were submitted (FIFO) across subsequent epochs. Alice continues earning yield on her position while she waits, and her funds are returned as her place in the queue is reached.
+If requests in a given epoch exceed the cap, the queue processes them in the order they were submitted (FIFO) across subsequent epochs. Alice continues earning yield on her position while she waits, and her funds are returned as her place in the queue is reached.
 :::
 
-## Cross-Chain Withdrawals (Bridging)
+### Cadence of Epochs
 
-If your vault operates across two different chains (e.g., Ethereum → Berachain or Ethereum → Corn), you’ll need to bridge your vault tokens before you can receive your funds.
+Different vaults run on different epoch schedules, which determines how often withdrawals are processed. The default cadence is one epoch per week. The Concrete DeFi USDT vault runs two epochs per week, so under normal load its queue settles within 3.5 to 7 days; if requests exceed the vault's withdrawal cap, the queue extends until later epochs settle the remainder. Each vault's page lists its specific schedule.
 
-The app handles this automatically — no need to use an external bridge or tool. You’ll see exactly what to do in your Portfolio view when your funds are available.
+### Things to Know About Async Vaults
 
-Once your vault tokens arrive on the destination chain:
+- **Withdrawals are not instant** – there is a delay between requesting and receiving your funds, set by the vault's epoch schedule and the time needed to deallocate from strategies.
+- **Your share price is set at processing, not at request** – the share price applied to your withdrawal is locked in when the epoch is processed, so your final amount can move up or down between submission and settlement.
+- **You keep your position until the epoch is processed** – your shares sit with the vault and are not burned until processing happens.
+- **You can cancel, but only before the cutoff** – once the epoch closes, the request is locked in and cannot be cancelled.
+- **Requests can roll into the next epoch** – when an epoch hits the cap or processing is delayed, the **Withdrawal Manager** can move a request to the next epoch.
+- **Each vault sets minimum and maximum withdrawal sizes** – your request must fall within these limits. Some vaults can also pause new withdrawal requests entirely.
 
-- Some vaults send funds automatically
-- Others require you to click “Claim” when ready
+## Standard (Atomic) Vault
 
-:::tip
-**Always confirm you control the destination wallet**, if you're bridging to another chain in order to withdraw. Need to change your address after bridging?
-Follow our [Request Address Change Guide](./01-Bera/request-address-change.md)
-:::
+A standard vault returns assets in a single transaction. `withdraw()` and `redeem()` deallocate from strategies in the vault's configured deallocation order, burn your shares, and transfer the underlying asset to your wallet in one call.
 
-## Why Withdrawal Queues Exist
+1. On the vault page, open the Withdraw tab, enter the amount, and confirm in your wallet.
+2. The vault deallocates from strategies in its configured order to cover the withdrawal.
+3. Your shares are burned and the underlying asset is transferred to your wallet in the same transaction.
 
-Vaults deploy deposited assets into yield strategies. When the vault's idle balance is insufficient to fulfill withdrawal requests immediately, withdrawal queues let the vault deallocate from strategies in an orderly batch — protecting both the vault's integrity and the predictability of redemption.
+## Pre-Deposit (Cross-Chain) Vault
 
-Concrete uses queues to:
+Some Concrete vaults are pre-deposit vaults, designed for launches where you deposit on one chain and receive shares on another. These do not use the Withdrawal Queue; instead, you claim your shares on the destination chain when the vault is ready.
 
-- Smooth out large withdrawals
-- Maintain protocol liquidity
-- Protect long-term earners
-- Ensure no user is unfairly prioritized
+**What you see in the app**
+
+When a pre-deposit vault enters its claim phase, the vault page in the Concrete app shows a **Claim** action. Click it and confirm in your wallet. Your shares on the original chain are exchanged for shares on the destination chain, delivered to the same wallet address.
+
+**Before you claim, make sure:**
+
+- **You control the wallet on the destination network** – for some multi-sig wallets, you need to confirm you control the same address on the destination chain.
+- **You have enough native token on the source chain to cover the fee** – the app shows the estimated fee before you confirm.
+
+## Frequently Asked Questions
+
+- **Do my shares continue earning yield while in the queue?** Shares are held by the vault and are not burned until `processEpoch()` runs. Share price is locked at processing time, so any yield (or loss) the vault records between request and processing is reflected in the price applied to the request.
+- **Can I cancel a withdrawal request?** Yes, for the current open epoch only, you can cancel on the vault page. Once the cutoff passes, the request cannot be cancelled.
+- **What happens if my request cannot be filled in its epoch?** When the epoch reaches its withdrawal cap or processing is delayed, the **Withdrawal Manager** moves the remainder to the next epoch via `moveRequestToNextEpoch()`. Your queue position is preserved (FIFO).
 
 ---
 
-# Document 40: Bridging with Enso
+# Document 35: Bridge and deposit with Enso
 Source: src/05-Vaults/bridging-with-enso.md
 Doc ID: Vaults/bridging-with-enso
 Public URL: https://docs.concrete.xyz/Vaults/bridging-with-enso/
 In active sidebar: yes
 Description: Concrete vault documentation for bridging into vaults with Enso, covering the cross-chain deposit flow, costs and slippage, and what to expect.
-Concrete supports depositing into a vault directly from assets you hold on another chain, routed through [Enso](https://www.enso.build/). A cross-chain deposit removes the need to swap or bridge manually first and reduces the number of transactions to enter a vault. This page explains how it works, what it costs, and what to expect.
+# Bridge and deposit with Enso
 
-This option is available only for vaults whose assets Enso can route to. For example, you can deposit into a Berachain vault from USDC or ETH on Ethereum, while some vaults (such as Katana) do not support it. The app shows which assets and vaults are available.
+If you hold assets on a chain different from your target vault, you can deposit directly using [Enso](https://www.enso.build/) without manually swapping or bridging first. This page walks you through what happens, what it costs, and what to expect.
 
-**Example:**
+Cross-chain deposit is available only for vaults whose assets Enso can route to. For example, you can deposit into a Berachain vault from USDC or ETH on Ethereum, while some vaults (such as Katana) do not support it. The app shows which assets and vaults are available.
 
+:::info[Example]
 - You hold **USDC** or **ETH** on Ethereum mainnet.
 - Enso **swaps** your asset into the vault's base asset (for example, USDC to LBTC).
 - That asset is **bridged** to the destination chain (for example, Berachain).
 - The vault **mints your shares** (for example, `ctBeraLBTC`) and adds them to your portfolio.
+:::
 
-## Control your destination wallet
+## Before you deposit
 
-Your shares are sent to the **same wallet address** on the destination chain. Make sure you control that address on the destination chain, because you withdraw your funds from there later. If you cannot control it, you will not be able to withdraw.
+:::warning[Control your destination address]
+Your shares are sent to the same wallet address on the destination chain. Make sure you control that address on the destination chain, because you withdraw your funds from there later. If you cannot control it, you will not be able to withdraw.
+:::
+
+For ERC-20 tokens such as USDC, the app prompts you to approve the token before the first transaction. Native ETH needs no approval.
 
 ## How it works
 
-1. Select a supported asset from your wallet on a supported source chain.
+1. In the Deposit tab, open the Accepted Tokens dropdown to see which tokens are accepted using Enso.
 2. Select the destination vault. Enso calculates the route.
 3. Confirm the transaction. Enso swaps your asset into the vault's base asset if needed, bridges it to the vault's network, and deposits it into the vault.
 4. Receive your vault shares, which appear in your portfolio like a direct deposit.
@@ -3444,25 +3106,21 @@ Your shares are sent to the **same wallet address** on the destination chain. Ma
 
 Three things affect how much you receive. The app shows the estimates before you confirm.
 
-- **Slippage** – Cross-chain routes apply a fixed slippage tolerance of 3%. Slippage is the maximum acceptable gap between the quoted and executed price; the route does not execute if the price moves beyond it. You cannot change this value.
+- **Slippage** – Cross-chain routes apply a fixed slippage tolerance of 3%, which you cannot change. The route does not execute if the price moves beyond that gap between quote and execution.
 - **Price impact** – Large trades, or trades routed through low-liquidity pools, move the market price. Higher-liquidity assets such as USDC and WETH usually have lower price impact; thinly traded or volatile assets have more.
-- **Gas** – Standard network gas applies on both the source and destination chains. The app shows an estimated gas cost in ETH and USD.
-- **Bridge fees** – The underlying bridge protocol (for example, Stargate) may charge a fee. Any such fee is already reflected in the final amount you receive.
+- **Gas** – Standard network gas applies on the source chain (destination execution is paid via the bridge fee, not as a separate user gas payment). The app shows an estimated gas cost in ETH and USD.
+- **Bridge fees** – The underlying bridge protocol selected by Enso may charge a fee. Any such fee is already reflected in the final amount you receive.
 
 ## What to expect
 
-- **Availability varies** – Swap and bridge routes depend on provider liquidity, which changes over time and with the amount you deposit. A route is not guaranteed for every asset, amount, or moment. If none is available, the app tells you, and you can try a larger amount or deposit directly on the vault's own chain instead.
-- **Very small deposits may not route** – Below a certain amount, route costs make a deposit inefficient or impossible. The minimum depends on the vault's base asset and the current route cost. The app warns you when your amount is too small.
-- **Progress is shown step by step** – Each swap and bridge step appears as it happens, with a link to [LayerZero Scan](https://layerzeroscan.com) for that transaction. You can also check the status later by entering your original deposit transaction on LayerZero Scan.
-- **Failures are rare, and gas is not refunded** – If a route cannot be built or the first transaction reverts, your assets stay in your wallet, but the gas you paid for any failed transaction is not returned. If a step fails after the first transaction has gone through, the swap or bridge is already in progress, and gas is likewise not returned.
+- **Route availability** – Swap and bridge routes depend on provider liquidity and are not guaranteed for every asset, amount, or moment. If none is available, the app tells you, and you can try a larger amount or deposit directly on the vault's chain.
+- **Minimum deposit size** – Below a certain amount, route costs make a deposit inefficient or impossible. The minimum depends on the vault's base asset and current route cost, and the app warns you when your amount is too small.
+- **Step-by-step progress** – Each swap and bridge step appears as it happens, linking to [LayerZero Scan](https://layerzeroscan.com) for source-side steps (sending the route, verifying DVNs, sealing) and to the destination chain's block explorer for destination-side steps (executor transaction, executing on destination, delivery). You can also check the status later by entering your original deposit transaction on LayerZero Scan.
+- **Failures and gas** – If a route cannot be built or the first transaction reverts, your assets stay in your wallet, but the gas you paid for any failed transaction is not returned. If a later step fails after the first transaction, the swap or bridge is already in progress and gas is likewise not returned.
 
 ## Withdrawals
 
-Bridging and swapping apply only to deposits. When you withdraw, you always receive the vault's base asset in exchange for your shares, on the vault's own chain. To move those assets to another chain afterward, withdraw first, then bridge them yourself.
-
-## Supported assets and vaults
-
-Support starts with a limited set of assets and vaults and expands over time. The current options always appear in the Concrete app.
+Cross-chain routing applies only to deposits. There is no bridge-out of a vault. When you withdraw, you always receive the vault's base asset in exchange for your shares, on the vault's own chain. To move those assets to another chain afterward, withdraw first, then bridge them yourself.
 
 ## Need help?
 
@@ -3471,17 +3129,9 @@ If you run into any issues depositing into a vault:
 - Ask in the [Concrete Discord](https://discord.gg/concretexyz).
 - Email [support@blueprintfinance.com](mailto:support@blueprintfinance.com).
 
-## FAQ
-
-**Q: Do I need to approve assets before depositing?**
-A: For ERC-20 tokens such as USDC, the app prompts you to approve the token before the first transaction. Native ETH needs no approval.
-
-**Q: Can I bridge out of a vault?**
-A: No. Cross-chain routing applies to deposits only. To exit, withdraw from the vault to receive its base asset on the vault's chain, then bridge those assets yourself if needed.
-
 ---
 
-# Document 41: What is Wrapped BERA (WBERA)?
+# Document 36: What is Wrapped BERA (WBERA)?
 Source: src/05-Vaults/01-Bera/wbera.md
 Doc ID: Vaults/Bera/wbera
 Public URL: https://docs.concrete.xyz/Vaults/Bera/wbera/
@@ -3516,7 +3166,7 @@ Wrapping does not affect your ownership — WBERA is fully backed 1:1 by BERA an
 
 ---
 
-# Document 42: Pre-Deposit Vaults Deprecation Guide
+# Document 37: Pre-Deposit Vaults Deprecation Guide
 Source: src/05-Vaults/01-Bera/pre-deposit-vaults-deprecation-guide.md
 Doc ID: Vaults/Bera/pre-deposit-vaults-deprecation-guide
 Public URL: https://docs.concrete.xyz/Vaults/Bera/pre-deposit-vaults-deprecation-guide/
@@ -3611,7 +3261,7 @@ Our team is happy to walk you through the process.
 
 ---
 
-# Document 43: How to Claim and Transfer
+# Document 38: How to Claim and Transfer
 Source: src/05-Vaults/01-Bera/claim-and-transfer.md
 Doc ID: Vaults/Bera/claim-and-transfer
 Public URL: https://docs.concrete.xyz/Vaults/Bera/claim-and-transfer/
@@ -3657,7 +3307,7 @@ If you have multiple Bera vault shares, all your claimable rewards will be claim
 
 ---
 
-# Document 44: How to Claim Rewards
+# Document 39: How to Claim Rewards
 Source: src/05-Vaults/01-Bera/claim-rewards.md
 Doc ID: Vaults/Bera/claim-rewards
 Public URL: https://docs.concrete.xyz/Vaults/Bera/claim-rewards/
@@ -3731,7 +3381,7 @@ Pendle depositors - expect rewards by May 18 latest via the [Pendle dashboard](h
 
 ---
 
-# Document 45: How to Withdraw
+# Document 40: How to Withdraw
 Source: src/05-Vaults/01-Bera/how-to-withdraw.md
 Doc ID: Vaults/Bera/how-to-withdraw
 Public URL: https://docs.concrete.xyz/Vaults/Bera/how-to-withdraw/
@@ -3783,7 +3433,7 @@ In some scenarios, such as vault migrations or strategic updates, users may need
 
 ---
 
-# Document 46: Request Address Change
+# Document 41: Request Address Change
 Source: src/05-Vaults/01-Bera/request-address-change.md
 Doc ID: Vaults/Bera/request-address-change
 Public URL: https://docs.concrete.xyz/Vaults/Bera/request-address-change/
@@ -3879,7 +3529,7 @@ You’ll encounter this ownership validation in:
 
 ---
 
-# Document 47: Unclaimed Rewards
+# Document 42: Unclaimed Rewards
 Source: src/05-Vaults/01-Bera/unclaimed-rewards.md
 Doc ID: Vaults/Bera/unclaimed-rewards
 Public URL: https://docs.concrete.xyz/Vaults/Bera/unclaimed-rewards/
@@ -3905,7 +3555,7 @@ Claiming is quick and only requires a signature from your connected wallet.
 
 ---
 
-# Document 48: Boyco Depositors: How to Claim
+# Document 43: Boyco Depositors: How to Claim
 Source: src/05-Vaults/01-Bera/boyco-depositors-claim.md
 Doc ID: Vaults/Bera/boyco-depositors-claim
 Public URL: https://docs.concrete.xyz/Vaults/Bera/boyco-depositors-claim/
@@ -3940,7 +3590,7 @@ Boyco acts as a front-end layer for Concrete vaults. If your original deposit wa
 
 ---
 
-# Document 49: Stable Vaults
+# Document 44: Stable Vaults
 Source: src/05-Vaults/05-Stable/stable-vaults.md
 Doc ID: Vaults/Stable/stable-vaults
 Public URL: https://docs.concrete.xyz/Vaults/Stable/stable-vaults/
@@ -4015,7 +3665,7 @@ When the campaign ends, any remaining vault balances will continue accruing yiel
 
 ---
 
-# Document 50: Claiming Vault Shares and Rewards
+# Document 45: Claiming Vault Shares and Rewards
 Source: src/05-Vaults/05-Stable/claim.md
 Doc ID: Vaults/Stable/claim
 Public URL: https://docs.concrete.xyz/Vaults/Stable/claim/
@@ -4119,7 +3769,7 @@ Please refer to the main documentation's [support section](https://docs.concrete
 
 ---
 
-# Document 51: Overview
+# Document 46: Overview
 Source: src/05-Vaults/02-Corn/overview.md
 Doc ID: Vaults/Corn/overview
 Public URL: https://docs.concrete.xyz/Vaults/Corn/overview/
@@ -4153,7 +3803,7 @@ Withdrawals are processed on Ethereum mainnet. For Corn Stables, batched withdra
 
 ---
 
-# Document 52: Overview
+# Document 47: Overview
 Source: src/05-Vaults/03-Morph/overview.md
 Doc ID: Vaults/Morph/overview
 Public URL: https://docs.concrete.xyz/Vaults/Morph/overview/
@@ -4193,7 +3843,7 @@ Vaults that are deprecated can be exited using the in-app withdraw tab (if still
 
 ---
 
-# Document 53: Deprecation Guide
+# Document 48: Deprecation Guide
 Source: src/05-Vaults/04-Tac/vault-deprecation-guide.md
 Doc ID: Vaults/Tac/vault-deprecation-guide
 Public URL: https://docs.concrete.xyz/Vaults/Tac/vault-deprecation-guide/
@@ -4264,7 +3914,7 @@ Our team will walk you through whatever steps you need.
 
 ---
 
-# Document 54: WBTC Vault Migration to Earn V2
+# Document 49: WBTC Vault Migration to Earn V2
 Source: src/05-Vaults/06-WBTC/wbtc-vault-migration-to-earn-v2.md
 Doc ID: Vaults/WBTC/wbtc-vault-migration-to-earn-v2
 Public URL: https://docs.concrete.xyz/Vaults/WBTC/wbtc-vault-migration-to-earn-v2/
@@ -4374,7 +4024,7 @@ https://docs.concrete.xyz/support/
 
 ---
 
-# Document 55: How Withdrawals Are Processed For Concrete DeFi USDT
+# Document 50: How Withdrawals Are Processed For Concrete DeFi USDT
 Source: src/05-Vaults/07-DeFi-USDT/how-withdrawals-are-processed.md
 Doc ID: Vaults/DeFi-USDT/how-withdrawals-are-processed
 Public URL: https://docs.concrete.xyz/Vaults/DeFi-USDT/how-withdrawals-are-processed/
@@ -4423,7 +4073,7 @@ All withdrawals are subject to the specific terms of this vault. See [Important 
 
 ---
 
-# Document 56: Important Disclosures
+# Document 51: Important Disclosures
 Source: src/05-Vaults/07-DeFi-USDT/important-disclosures.md
 Doc ID: Vaults/DeFi-USDT/important-disclosures
 Public URL: https://docs.concrete.xyz/Vaults/DeFi-USDT/important-disclosures/
@@ -4477,41 +4127,38 @@ THESE DISCLOSURES ARE PROVIDED FOR INFORMATIONAL PURPOSES ONLY AND DO NOT CONSTI
 
 ---
 
-# Document 57: Fees
+# Document 52: Fees
 Source: src/fees.md
 Doc ID: fees
 Public URL: https://docs.concrete.xyz/fees/
 In active sidebar: yes
 Description: Complete fee reference for Concrete products, including how fees are calculated, applied, and communicated across workflows.
-Concrete Earn applies no deposit, withdrawal, or maintenance fees. Vaults charge a management fee on assets under management and may charge a performance fee on net positive yield. Both are paid through share minting rather than asset transfers — preserving the underlying balance and surfacing the cost transparently in the share price.
+Concrete offers a transparent fee structure, ensuring competitive rates across its ecosystem.
+Two fee types are available — a management fee and a performance fee — but not every vault applies both. Each vault's fee configuration depends on its strategy and commercial terms. Both fees are paid by minting vault shares to a fee recipient rather than transferring the underlying asset, so the cost is reflected directly in the share price.
 
-## Maximize Returns with a Transparent Fee Structure
+## Fee summary
 
-Concrete Earn vaults support two configurable fee types, each capped at the protocol level:
+| **Fee Type**        | **Range** | **Description**                                                                                               |
+|---------------------|------------------|--------------------------------------------------------------------------------------------------------------|
+| Deposit Fee         | None       | No fees on deposits |
+| Withdrawal Fee         | None       | No fees on withdrawals |
+| Management Fee      | 0-10% of AUM |Annualized charge on vault AUM, accrued continuously based on time elapsed.Configured per vault, with a standard rate of 1.5% applied to most vaults — see individual vault pages for rates applied to your vault. |
+| Performance Fee     | 0–30% of net positive yield | Charged only when strategies produce net gains after losses at the time of yield accrual. Configured per vault — see individual vault pages for current rates. |
 
-- **Management fee**: an annualized charge on vault AUM, accrued continuously and paid by minting shares to the fee recipient. Capped at 10%; current standard configuration is 1.5% for most vaults.
-- **Performance fee**: a charge on net positive yield at the time of yield accrual, paid by minting shares to the fee recipient. Capped at 100% of net positive yield. Configured per vault — see individual vault pages for current rates.
+Actual rates are configured per vault — refer to individual vault pages for current values.
+Because fees are paid in shares, existing shareholders are diluted proportionally rather than charged separately. Every fee accrual emits on-chain events indexed by Concrete's subgraph, so share-price impact is observable in real time.
 
-Both fees are paid in shares, not in the underlying asset. Existing shareholders are diluted proportionally rather than charged separately, and the cost of fees is reflected directly in the share-to-asset exchange rate.
+## How fees accrue
 
-Fees paid in shares align incentives for both the curator and the shareholders.
+Fees are calculated as part of the vault's yield accrual process, in this order:
 
-**Why Concrete Earn?**
-
-- **Transparent on-chain accounting**: Every fee accrual emits a structured event indexed by Concrete's subgraph. Share-price impact is observable in real time — there are no hidden charges on deposits, withdrawals, or maintenance.
-- **Optimized Returns**: Concrete Earn helps you maximize yield through advanced strategies.
-- **Full Control and Transparency**: Funds remain accessible without penalty, offering flexibility for liquidity management.
-
-| **Fee Type**        | **Amount** | **Denomination** | **Description**                                                                                               |
-|---------------------|------------|------------------|--------------------------------------------------------------------------------------------------------------|
-| Deposit Fee         | None       | N/A              | No fees on deposits, enabling liquidity providers to allocate funds without initial cost barriers.            |
-| Management Fee      | ~ 1.5% (Max possible management fee is 10%) | % of AUM | Time-based, accrued continuously, paid via share minting. |
-| Performance Fee     | ~30% (Max possible performance fee is 100%) of net positive yield | % of yield | Charged only when strategies generate net gains; paid via share minting. |
-| Withdrawal Fee      | None       | N/A              | Funds can be withdrawn without penalty, providing flexibility and control over invested capital.              |
+1. **Yield and loss update** — Each strategy's current value is compared to its last recorded value.
+2. **Management fee** — Accrues on the updated total assets, calculated based on time elapsed since the last accrual.
+3. **Performance fee** — Accrues on net positive yield (gains minus losses). If there is no net positive yield, no performance fee is charged.
 
 ---
 
-# Document 58: Concrete Points Program
+# Document 53: Concrete Points Program
 Source: src/rewards.md
 Doc ID: rewards
 Public URL: https://docs.concrete.xyz/rewards/
@@ -4571,7 +4218,7 @@ If you have questions about the campaign or how to participate, please refer to 
 
 ---
 
-# Document 59: Restricted Jurisdictions
+# Document 54: Restricted Jurisdictions
 Source: src/restrictions.md
 Doc ID: restrictions
 Public URL: https://docs.concrete.xyz/restrictions/
@@ -4596,25 +4243,56 @@ This list is subject to updates based on changes in international regulatory and
 
 ---
 
-# Document 60: Risks and Safety
+# Document 55: Risks and Safety
 Source: src/risks.md
 Doc ID: risks
 Public URL: https://docs.concrete.xyz/risks/
 In active sidebar: yes
 Description: Risk and safety overview for Concrete vault users, including smart contract, strategy, market, and operational risk considerations.
-Concrete vaults are designed to optimize yield while prioritizing security and transparency. However, like all DeFi products, they carry inherent risks. This article outlines the main categories of risk and how Concrete addresses them.
+Concrete vaults use smart contracts, connect to third-party protocols, and operate in on-chain markets. As with all DeFi products, this comes with risk.
 
-For details on each vault’s allocation and strategy, visit its dedicated page or reach out to our team for support.
+This page explains the main risk categories and what Concrete does to protect your funds. Concrete organizes its vault's security into three layers. Each layer has its own controls, audits, and responsibilities.
 
-## Smart Contract Risk
 
-All vaults are governed by smart contracts. Contracts are [audited by leading security firms](https://docs.concrete.xyz/audits/) — **Halborn**, **Cantina**, **Zellic**, and **Code4rena** — with reports published on the Audits page. Residual risk of bugs or vulnerabilities always exists.
+## Vault Infrastructure Layer
 
-**How we mitigate:**
+The on-chain smart contracts and custody setup that hold your funds.
 
-- Regular audits by top-tier firms
-- Open-source contracts with community review
-- [Public bug bounty program on Cantina](https://cantina.xyz/bounties/e54ee88c-df96-4f80-a6c1-0723548312ab) and ongoing security testing
+### Smart Contract Protections
+
+**Audited before launch.** All smart contract code is audited by established security firms (Halborn, Cantina, Code4rena or Zellic) before it goes live. Concrete also runs an ongoing bug bounty program with Cantina. See all reports on the Audits page.
+**Separated roles.** Vault operations are split across distinct roles. No single key has full control or can drain a vault.
+**On-chain accounting limits.** The vault automatically pauses if it detects unusual changes in asset values. Accounting updates are rate-limited to prevent manipulation.
+**Controlled upgrades.** Vault contracts use the UUPS proxy pattern. Upgrades are only possible through authorized paths approved by the protocol. Any unauthorized upgrade attempt is automatically rejected.
+**Multi-signature custody.** All vault wallets require multiple approvals to move funds. Signing authority is divided across independent authorised groups.
+
+### Withdrawal Timing
+
+Most production vaults use Queued Withdrawal. This means withdrawals enter a queue and are processed on a set schedule. This delay creates a monitoring window where irregularities can be detected before funds leave the vault.
+
+## Strategy Layer
+
+This layer controls how your funds are deployed and how transactions are checked before they run.
+
+### Strategy-Specific Protections
+
+**Vetted before use.** Every strategy passes a risk, accounting, and compliance review before receiving any funds.
+**Whitelisted interactions only.** Vaults can only transact with pre-approved addresses. All others are blocked.
+**Transaction validation.** Every automated transaction must clear multiple independent checks including a full simulation,  before it executes.
+**Granular controls.** Each strategy can be paused independently, and a policy engine governs what actions are allowed. Changes require multi-party approval.
+
+## Oversight and Verification Layer
+
+This layer operates above the vault and strategy layers. It provides independent monitoring, incident response, and accounting checks.
+
+**24/7 monitoring.** Hypernative watches all vault addresses around the clock and alerts the Concrete team about unusual activity.
+**Automatic safeguards.** If something unexpected is detected, protective measures activate immediately - no manual intervention needed.
+**Ongoing asset verification.** Vault values are cross-checked by multiple independent sources at regular intervals to ensure accuracy.
+
+## Market Risks
+
+Even with the protections above, DeFi markets carry inherent risks. Vaults that interact with lending protocols, AMMs (automated market makers), or liquidity pools may be affected by price volatility, impermanent loss, and slippage. Here are the main ones to be aware of.
+
 
 ## Impermanent Loss (IL)
 
@@ -4663,7 +4341,7 @@ Access to Concrete products is not available in every jurisdiction. Before depos
 
 ---
 
-# Document 61: Audits
+# Document 56: Audits
 Source: src/audits.md
 Doc ID: audits
 Public URL: https://docs.concrete.xyz/audits/
@@ -4873,7 +4551,7 @@ Stay tuned for upcoming enhancements and future audits as we expand our security
 
 ---
 
-# Document 62: Support
+# Document 57: Support
 Source: src/support.md
 Doc ID: support
 Public URL: https://docs.concrete.xyz/support/
@@ -4908,7 +4586,7 @@ We are working on expanding our support channels. Stay tuned for updates!
 
 ---
 
-# Document 63: How to Repay and Withdraw Borrowed Assets
+# Document 58: How to Repay and Withdraw Borrowed Assets
 Source: src/03-Borrow/close-loan.md
 Doc ID: Borrow/close-loan
 Public URL: https://docs.concrete.xyz/Borrow/close-loan/
@@ -4950,7 +4628,7 @@ Description: Concrete Borrow documentation for how to Repay and Withdraw, includ
 
 ---
 
-# Document 64: How to Activate Concrete Borrow (Default Lite)
+# Document 59: How to Activate Concrete Borrow (Default Lite)
 Source: src/03-Borrow/enable-concrete.md
 Doc ID: Borrow/enable-concrete
 Public URL: https://docs.concrete.xyz/Borrow/enable-concrete/
@@ -5019,7 +4697,7 @@ By default, Concrete Borrow comes with **Concrete Lite**, which forecloses loans
 
 ---
 
-# Document 65: How to Borrow From External Market
+# Document 60: How to Borrow From External Market
 Source: src/03-Borrow/open-loan-externally.md
 Doc ID: Borrow/open-loan-externally
 Public URL: https://docs.concrete.xyz/Borrow/open-loan-externally/
@@ -5062,7 +4740,7 @@ Concrete offers an efficient interface to initiate borrowing on external markets
 
 ---
 
-# Document 66: How to Borrow Against Collateral
+# Document 61: How to Borrow Against Collateral
 Source: src/03-Borrow/open-loan.md
 Doc ID: Borrow/open-loan
 Public URL: https://docs.concrete.xyz/Borrow/open-loan/
@@ -5117,7 +4795,7 @@ You can manage your loan in the **Portfolio** tab, which displays:
 
 ---
 
-# Document 67: Overview
+# Document 62: Overview
 Source: src/03-Borrow/overview.md
 Doc ID: Borrow/overview
 Public URL: https://docs.concrete.xyz/Borrow/overview/
@@ -5226,7 +4904,7 @@ Here’s a step-by-step outline of the complete Concrete Borrow process:
 
 ---
 
-# Document 68: How to Activate Concrete Protect
+# Document 63: How to Activate Concrete Protect
 Source: src/04-Protect/activate-concrete-protect.md
 Doc ID: Protect/activate-concrete-protect
 Public URL: https://docs.concrete.xyz/Protect/activate-concrete-protect/
@@ -5274,7 +4952,7 @@ Users can manage all protected positions from the Portfolio:
 
 ---
 
-# Document 69: Overview
+# Document 64: Overview
 Source: src/04-Protect/overview.md
 Doc ID: Protect/overview
 Public URL: https://docs.concrete.xyz/Protect/overview/
@@ -5359,17 +5037,183 @@ Concrete Protect is engineered for users who require proactive asset security an
 
 ---
 
-# Document 70: getApyDetails()
+# Document 65: Quick Start (Plug-and-Play Integration)
+Source: src/06-Earn-V2/SDK/quick-start.md
+Doc ID: Earn-V2/SDK/quick-start
+Public URL: https://docs.concrete.xyz/Earn-V2/SDK/quick-start/
+In active sidebar: no
+Description: Concrete Earn V2 SDK documentation for quick Start, with implementation guidance for production-grade integrations.
+Concrete's SDK provides ready-to-use React and Wagmi hooks for integrating deposits, withdrawals, and balance views in a few lines of code.
+
+These hooks combine ethers, wagmi, and the Concrete SDK internals under the hood. You can use them to go from setup to a live app in minutes.
+
+## Quick Wagmi setup
+
+If you use Wagmi hooks like `useVaultDeposit()` or `useVaultWithdraw()`, you only need a minimal vault configuration object.
+
+Concrete's hooks automatically detect your connected wallet and network from Wagmi.
+
+The following example shows a vault configuration:
+
+```tsx
+// src/vault-config.ts
+export const vault = {
+  version: "v1",
+  address: "0x6d8d73bD121970e7c12c34caac9ce9bc975c0a9", // Example vault
+  chainId: 42161, // Arbitrum
+  fallbackRpcUrl: "https://arb1.arbitrum.io/rpc", // Optional fallback
+} as const;
+```
+
+:::tip
+Developers already familiar with Wagmi can use their existing configuration. This snippet is only a quick reference. For full setup details, see [Setup Configuration](https://docs.concrete.xyz/Earn-V2/SDK/setup-configuration/) in the main SDK documentation.
+:::
+
+## SDK Playground
+
+Concrete provides a live SDK Playground inside Concrete Enterprise: a web interface that demonstrates the SDK and Wagmi hooks in real time.
+
+It is the fastest way to explore the SDK without setting up a full app. You can view vault details, deposit, withdraw, and monitor balances from your browser.
+
+### Try it yourself
+
+[Open the Concrete SDK Playground](https://build.concrete.xyz/). Requires a wallet connection. Runs on test vaults or live networks.
+
+### Features
+
+| Tab | Description | SDK hook |
+| --- | --- | --- |
+| **Vault details** | Displays live vault metadata and totals | `useVaultDetails()` |
+| **Deposits** | Deposit with auto approvals and conversions | `useVaultDeposit()` |
+| **Withdrawals** | Redeem shares for underlying assets | `useVaultWithdraw()` |
+| **Balances** | Show current user balances | `useVaultUserBalance()` |
+
+## Simple USDC Deposit
+
+```tsx
+import { useVaultDeposit } from "@concrete-xyz/sdk/wagmi";
+import { vault } from "src/vault-config";
+
+function DepositUSDC() {
+  const deposit = useVaultDeposit(
+    vault,
+    { amount: "100", amountToBigInt: true }
+  );
+
+  return (
+    <button disabled={deposit.isPending} onClick={() => deposit.mutate({})}>
+      {deposit.isPending ? "Depositing…" : "Deposit 100 USDC"}
+    </button>
+  );
+}
+```
+
+## Withdraw Hook
+
+```tsx
+import { useVaultWithdraw } from "@concrete-xyz/sdk/wagmi";
+import { vault } from "src/vault-config";
+
+export default function VaultWithdrawPage() {
+  const [amount, setAmount] = useState("0");
+  const withdraw = useVaultWithdraw(vault, { amount, amountToBigInt: true });
+
+  if (withdraw.loading) return <div>Loading...</div>;
+
+  return (
+    <div>
+      <input
+        value={amount}
+        onChange={(e) => setAmount(e.target.value)}
+        placeholder="Amount to withdraw"
+      />
+      <button onClick={() => withdraw.withdraw.mutate({})}>Withdraw</button>
+
+      {withdraw.withdraw.isPending && "In progress..."}
+      {withdraw.withdraw.isSuccess && "✅ Success!"}
+      {withdraw.withdraw.isError && `❌ ${withdraw.withdraw.error.message}`}
+    </div>
+  );
+}
+```
+
+## Deposit ETH → WETH Vault
+
+```tsx
+import { useState } from "react";
+import { useVaultDeposit } from "@concrete-xyz/sdk/wagmi";
+
+import { vault } from "src/vault-config";
+
+function DepositETH() {
+
+  const [amount, setAmount] = useState("1");
+
+  const deposit = useVaultDeposit(vault, {
+    amount,              // accepts string or number
+    amountToBigInt: true, // auto converts based on vault decimals
+    useEther: true,       // wraps ETH → WETH automatically
+  });
+
+  const handleDeposit = () => deposit.mutate({});
+
+  return (
+    <div>
+      <input
+        type="number"
+        step="0.01"
+        value={amount}
+        onChange={(e) => setAmount(e.target.value)}
+        placeholder="Amount in ETH"
+      />
+      <button onClick={handleDeposit}>
+        {deposit.isPending ? "Processing..." : `Deposit ${amount} ETH`}
+      </button>
+      {deposit.isSuccess && <div>Deposit confirmed ✅</div>}
+      {deposit.isError && <div>Error: {String(deposit.error)}</div>}
+    </div>
+  );
+}
+
+export default DepositETH;
+```
+
+### What happens under the hood
+
+1. Detects provider and signer automatically via Wagmi.
+2. Converts human-readable values to `BigInt` based on vault decimals.
+3. Auto-wraps ETH to WETH when `useEther` is `true`.
+4. Handles approvals automatically.
+5. Executes the deposit and updates transaction state.
+6. Returns `isPending`, `isSuccess`, `isError`, and a `mutate()` trigger.
+
+## Hook options
+
+```tsx
+const deposit = useVaultDeposit(vaultConfig, options);
+```
+
+| Option | Type | Default | Description |
+| --- | --- | --- | --- |
+| `amount` | `string \| number \| bigint` | – | Amount to deposit. Pass a human value when using `amountToBigInt: true`, or a `BigInt` in base units otherwise. |
+| `amountToBigInt` | `boolean` | `false` | When `true`, converts `amount` to a `BigInt` using the vault's underlying decimals. |
+| `useEther` | `boolean` | `false` | Wrap native ETH to WETH before depositing. |
+| `onSuccess` | `function` | – | Callback when the transaction confirms. |
+| `onError` | `function` | – | Callback on transaction failure. |
+| `onSettled` | `function` | – | Runs after success or error. |
+
+---
+
+# Document 66: getApyDetails()
 Source: src/06-Earn-V2/SDK/read-methods/getAPYDetails.md
 Doc ID: Earn-V2/SDK/read-methods/getAPYDetails
 Public URL: https://docs.concrete.xyz/Earn-V2/SDK/read-methods/getAPYDetails/
 In active sidebar: no
 Description: Read-method reference for getApyDetails() in the Concrete Earn V2 SDK, including expected inputs, outputs, and usage context.
-Fetch APY info and the current underlying price for a vault.
-This method is exposed on the **Vault instance**, but it’s backed by the **ConcreteAPI** (our backend), not an on-chain call.
+Fetches APY history and headline metrics for a vault. The method is exposed on the vault instance but is backed by the Concrete API, not an on-chain call.
 
 :::tip
-Works the same in vanilla, React, and Wagmi integrations because all return the same Vault object.
+Works the same in vanilla, React, and Wagmi integrations because all return the same vault object.
 :::
 
 ## Signature
@@ -5380,37 +5224,25 @@ const apy = await vault.getApyDetails(): Promise<ApyDetails>
 
 ## Parameters
 
-None.
+- None
 
 ## Returns
 
-A plain object with APY/price metadata from ConcreteAPI.
-
-The exact payload may evolve. Typical fields include:
-
 ```tsx
+type ApyPoint = { timestamp: string | number; amount: string };
+
 type ApyDetails = {
-  // headline fields
-  apy?: number;                // annualized % as a decimal (e.g., 0.072 = 7.2%)
-  apr?: number;                // optional APR if reported
-  netApy?: number;             // after-fee APY (if available)
-  grossApy?: number;           // before-fee APY (if available)
-
-  // decomposition (if available)
-  components?: Array<{
-    label: string;             // e.g., "Lending", "Restaking", "Incentives"
-    apy: number;               // decimal (0.01 = 1%)
-  }>;
-
-  // price metadata
-  underlyingPriceUsd?: number; // current underlying price in USD
-  underlyingSymbol?: string;   // e.g., "USDC", "WBTC"
-
-  // bookkeeping
-  updatedAt?: string | number; // ISO timestamp or epoch
-  source?: "ConcreteAPI";      // data source marker
+  apyHistory30Days: ApyPoint[];
+  tvlHistory30Days: ApyPoint[];
+  totalAssetsHistory30Days: ApyPoint[];
+  apy: string | undefined;            // latest APY point amount, as a numeric string
+  tvl: string | undefined;            // latest TVL point amount, as a numeric string
+  totalAssets: string | undefined;    // latest total-assets point amount, as a numeric string
+  nextPayout: Date | null;            // next payout timestamp, when reported
 };
 ```
+
+The headline `apy`, `tvl`, and `totalAssets` fields are numeric strings taken from the latest history point. Convert them with `Number(...)` before doing arithmetic. The underlying token price is exposed separately via `vault.getUnderlyingPrice()`.
 
 ## Examples
 
@@ -5420,16 +5252,16 @@ type ApyDetails = {
 import { getVault } from "@concrete-xyz/sdk";
 import { ethers } from "ethers";
 
-const provider = new ethers.JsonRpcProvider("<https://ethereum-rpc.publicnode.com>");
-const vault = getVault("0xE2d8267D285a7ae1eDf48498fF044241d04e9608", chainId, provider);
+const provider = new ethers.JsonRpcProvider("https://ethereum-rpc.publicnode.com");
+const vault = getVault("v2", "0xE2d8267D285a7ae1eDf48498fF044241d04e9608", chainId, provider);
 
 const apy = await vault.getApyDetails();
 console.log("APY Details:", apy);
 
-// Example usage
-if (apy.apy != null && apy.underlyingPriceUsd != null) {
-  console.log(`APY: ${(apy.apy * 100).toFixed(2)}%`);
-  console.log(`Underlying ~ $${apy.underlyingPriceUsd.toFixed(2)} USD`);
+if (apy.apy != null) {
+  const price = await vault.getUnderlyingPrice();
+  console.log(`APY: ${(Number(apy.apy) * 100).toFixed(2)}%`);
+  console.log(`Underlying ~ $${price.toFixed(2)} USD`);
 }
 ```
 
@@ -5439,70 +5271,78 @@ if (apy.apy != null && apy.underlyingPriceUsd != null) {
 import { useEffect, useState } from "react";
 import { useVault } from "@concrete-xyz/sdk/react";
 
-export function ApyWidget({ address, chainId, provider, signer }) {
+export function ApyWidget({ version, address, chainId, provider, signer }) {
   const vault = useVault(version, address, chainId, provider, signer);
   const [apy, setApy] = useState<any>(null);
+  const [price, setPrice] = useState<number | null>(null);
 
   useEffect(() => {
     let active = true;
     (async () => {
-      const data = await vault.getApyDetails();
-      if (active) setApy(data);
+      const [data, p] = await Promise.all([vault.getApyDetails(), vault.getUnderlyingPrice()]);
+      if (active) {
+        setApy(data);
+        setPrice(p);
+      }
     })();
     return () => { active = false; };
   }, [vault]);
 
-  if (!apy) return <div>Loading APY…</div>;
+  if (!apy) return <div>Loading APY...</div>;
   return (
     <div>
-      <div>APY: {(apy.apy * 100).toFixed(2)}%</div>
-      {apy.underlyingPriceUsd != null && (
-        <div>Underlying: ${apy.underlyingPriceUsd.toFixed(2)}</div>
-      )}
+      <div>APY: {(Number(apy.apy) * 100).toFixed(2)}%</div>
+      {price != null && <div>Underlying: ${price.toFixed(2)}</div>}
     </div>
   );
 }
 ```
 
-### Wagmi + `useVaultQuery`
+### Wagmi with `useVaultQuery`
 
 ```tsx
 import { useVault, useVaultQuery } from "@concrete-xyz/sdk/wagmi";
 
-export function ApyPanel({ address, chainId }) {
-  const vault = useVault(vault config object);
+const vaultConfig = {
+  version: "v2",
+  address: "0xE2d8267D285a7ae1eDf48498fF044241d04e9608",
+  chainId: 1,
+} as const;
+
+export function ApyPanel() {
+  const vault = useVault(vaultConfig);
 
   const q = useVaultQuery({
-    address,
-    chainId,
-    queryKey: ["apy", address, chainId],
+    vault: vaultConfig,
+    queryKey: ["apy"],
     enabled: !!vault,
-    queryFn: (v) => v.getApyDetails(),
-    staleTime: 60_000, // cache APY for 60s
+    queryFn: async (v) => {
+      const [apy, price] = await Promise.all([v.getApyDetails(), v.getUnderlyingPrice()]);
+      return { apy, price };
+    },
+    staleTime: 60_000,
     retry: 2,
   });
 
-  if (q.isLoading) return <div>Loading APY…</div>;
+  if (q.isLoading) return <div>Loading APY...</div>;
   if (q.isError) return <div>Failed to load APY</div>;
 
-  const apy = q.data!;
+  const { apy, price } = q.data!;
   return (
     <div>
-      <div>APY: {(apy.apy * 100).toFixed(2)}%</div>
-      {apy.underlyingPriceUsd != null && (
-        <div>Underlying: ${apy.underlyingPriceUsd.toFixed(2)}</div>
-      )}
+      <div>APY: {(Number(apy.apy) * 100).toFixed(2)}%</div>
+      {price != null && <div>Underlying: ${price.toFixed(2)}</div>}
     </div>
   );
 }
 ```
 
-## Notes & Error Handling
+## Notes and error handling
 
-- **Backend-backed:** Unlike `symbol()` or `totalAssets()`, this hits ConcreteAPI. Handle **HTTP/network** failures and timeouts.
-- **Staleness:** APY is not block-by-block; cache reasonably (`staleTime` 30–120s).
-- **Evolving schema:** Treat extra fields as optional; guard with null checks.
-- **Rate limits:** If you batch widgets, share a single query via React Query to avoid redundant calls.
+- **Backend-backed**: unlike `symbol()` or `totalAssets()`, this hits the Concrete API. Handle HTTP and network failures and timeouts.
+- **Staleness**: APY is not block-by-block. Cache reasonably (`staleTime` 30 to 120 seconds).
+- **String values**: headline fields are numeric strings. Convert with `Number(...)` before arithmetic.
+- **Rate limits**: if you batch widgets, share a single query via React Query to avoid redundant calls.
 
 **Minimal guard**
 
