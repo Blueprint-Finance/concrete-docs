@@ -1,7 +1,7 @@
 # Concrete Docs - LLM Full Context
 
-Generated: 2026-05-28T16:07:48.560Z
-Source repository: concrete-docs-02
+Generated: 2026-05-28T16:08:58.555Z
+Source repository: concrete-docs
 Canonical docs URL: https://docs.concrete.xyz/
 
 This file consolidates every Markdown documentation page in `src/**/*.md` for retrieval and LLM ingestion. Active sidebar pages appear first in sidebar order; Markdown pages not present in the active sidebar follow afterward. Static binary/media assets are listed at the end by path and public URL.
