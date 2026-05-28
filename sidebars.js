@@ -8,9 +8,6 @@ const sidebars = {
       label: 'Overview',
       items: [
         'Overview/welcome',
-        'Overview/our-solution',
-        'Overview/user-journey',
-        'Overview/how-it-works',
         'Overview/quick-start',
       ],
     },
@@ -32,7 +29,6 @@ const sidebars = {
           label: 'SDK',
           items: [
             'Earn-V2/SDK/overview',
-            'Earn-V2/SDK/quick-start',
             'Earn-V2/SDK/setup-configuration',
             {
               type: 'category',
