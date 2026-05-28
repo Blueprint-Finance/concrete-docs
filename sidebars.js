@@ -8,7 +8,6 @@ const sidebars = {
       label: 'Overview',
       items: [
         'Overview/welcome',
-        'Overview/quick-start',
       ],
     },
 
