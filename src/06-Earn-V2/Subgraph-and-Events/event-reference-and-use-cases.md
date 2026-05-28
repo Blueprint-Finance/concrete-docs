@@ -6,7 +6,7 @@ sidebar_label: "Event Reference"
 
 # Event Reference
 
-This reference is for integrators and analytics developers consuming the Earn V2 Subgraph. It lists the on-chain events the subgraph indexes, the entities each handler updates, and the subgraph-internal timeseries entities that feed daily aggregations. Use it together with the [Schema & Queries](./schema-and-queries) page, which defines the entities referenced here.
+This reference is for integrators and analytics developers consuming the Earn V2 Subgraph. It lists the on-chain events the subgraph indexes, the entities each handler updates, and the subgraph-internal timeseries entities that feed daily aggregations. Use it together with the [Schema & Queries](./schema-and-queries.md) page, which defines the entities referenced here.
 
 ## Factory-level events
 
@@ -57,7 +57,7 @@ Emitted by `ConcreteAsyncVaultImpl`. The handlers maintain epoch state on the Va
 
 ## Timeseries sources for daily aggregations
 
-The following are not on-chain events. They are subgraph-internal `@entity(timeseries: true)` rows the mappings emit so the daily aggregations in the [Schema & Queries](./schema-and-queries) page have a per-row source.
+The following are not on-chain events. They are subgraph-internal `@entity(timeseries: true)` rows the mappings emit so the daily aggregations in the [Schema & Queries](./schema-and-queries.md) page have a per-row source.
 
 | Timeseries entity | Written by | Feeds aggregation |
 | --- | --- | --- |

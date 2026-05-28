@@ -72,7 +72,7 @@ type Vault @entity(immutable: false) {
 }
 ```
 
-Tracked events: `Deposit`, `Withdraw`, `YieldAccrued`, `ManagementFeeAccrued`, `PerformanceFeeAccrued`. Full event-to-entity mapping is in the [Event Reference](./event-reference-and-use-cases).
+Tracked events: `Deposit`, `Withdraw`, `YieldAccrued`, `ManagementFeeAccrued`, `PerformanceFeeAccrued`. Full event-to-entity mapping is in the [Event Reference](./event-reference-and-use-cases.md).
 
 ## WithdrawalQueue
 
@@ -149,7 +149,7 @@ type Strategy @entity(immutable: false) {
 
 ## Aggregations
 
-The subgraph builds daily aggregations from internal `@entity(timeseries: true)` rows emitted by the vault handlers. See [Timeseries sources for daily aggregations](./event-reference-and-use-cases#timeseries-sources-for-daily-aggregations) for the mapping of source rows to aggregations.
+The subgraph builds daily aggregations from internal `@entity(timeseries: true)` rows emitted by the vault handlers. See [Timeseries sources for daily aggregations](./event-reference-and-use-cases.md#timeseries-sources-for-daily-aggregations) for the mapping of source rows to aggregations.
 
 ### NewUserStats (per vault)
 
