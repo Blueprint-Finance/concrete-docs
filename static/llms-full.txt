@@ -1,6 +1,6 @@
 # Concrete Docs - LLM Full Context
 
-Generated: 2026-05-28T09:29:52.186Z
+Generated: 2026-05-28T11:12:19.291Z
 Source repository: concrete-docs
 Canonical docs URL: https://docs.concrete.xyz/
 
@@ -106,7 +106,7 @@ Concrete's security model has several layers:
 
 **Risk.** Yields are not guaranteed and may fluctuate. Strategy losses reduce share price. You may lose some or all of your deposited assets. Past performance is not indicative of future results.
 
-For full risk disclosures see [Risks and Safety](#risks.md)
+For full risk disclosures see [Risks and Safety](../risks.md)
 
 ---
 
