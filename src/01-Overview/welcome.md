@@ -9,10 +9,9 @@ Concrete operates ERC-4626 vaults that accept deposits in a designated underlyin
 
 ## What You Get
 
-* **One deposit, fully deployed.** A single transaction puts your capital to work across every strategy the vault runs — no juggling positions, no chasing yield across protocols.
-* **Always-on portfolio management.** Concrete's automation handles allocation, rebalancing, and withdrawal processing in the background, so your position keeps working.
+* **One deposit, fully deployed.** A single deposit puts your capital to work. Curators allocate it across strategies behind the scenes, so you do not juggle positions or chase yield across protocols.
 * **Yield-bearing shares you actually hold.** Deposit and you receive ERC-20 vault shares like ctWBTC or ctDefiUSDT. Your share count stays constant — yield generation occurs through an exchange rate as the vault earns.
-* **Points and rewards, tracked for you.** Eligible vaults accrue on-chain rewards that are indexed automatically and claimable through the Rewards Center — no manual tracking across campaigns or protocols. 
+* **Points and rewards, tracked for you.** Eligible vaults accrue on-chain rewards that are indexed automatically.
 
 
 ## Security
@@ -25,7 +24,7 @@ Concrete's security model has several layers:
 * **Accounting updates are bounded on-chain.** A change threshold, cooldown, and validity window constrain how off-chain values move the vault.
 * **Monitoring is independent.** Hypernative provides real-time risk detection
 * **Pause authority is pre-delegated.** ZeroShadow can pause vaults per mandate.
-* **Code is audited before it ships.** Audits by Halborn and Cantina. 
+* **Code is audited before it ships.** Audited by [Halborn, Cantina, Code4rena, and Zellic](../audits.md).
 * **Upgrades are pull-based.** Vault owners pull from the factory; Concrete cannot push changes to deployed vaults.
 
 **Risk.** Yields are not guaranteed and may fluctuate. Strategy losses reduce share price. You may lose some or all of your deposited assets. Past performance is not indicative of future results.
