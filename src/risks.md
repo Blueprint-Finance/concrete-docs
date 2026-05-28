@@ -5,19 +5,50 @@ sidebar_label: "Risks and Safety"
 sidebar_position: 5
 ---
 
-Concrete vaults are designed to optimize yield while prioritizing security and transparency. However, like all DeFi products, they carry inherent risks. This article outlines the main categories of risk and how Concrete addresses them.
+Concrete vaults use smart contracts, connect to third-party protocols, and operate in on-chain markets. As with all DeFi products, this comes with risk.
 
-For details on each vault’s allocation and strategy, visit its dedicated page or reach out to our team for support.
+This page explains the main risk categories and what Concrete does to protect your funds. Concrete organizes its vault's security into three layers. Each layer has its own controls, audits, and responsibilities.
 
-## Smart Contract Risk
 
-All vaults are governed by smart contracts. Contracts are [audited by leading security firms](/audits/) — **Halborn**, **Cantina**, **Zellic**, and **Code4rena** — with reports published on the Audits page. Residual risk of bugs or vulnerabilities always exists.
+## Vault Infrastructure Layer
 
-**How we mitigate:**
+The on-chain smart contracts and custody setup that hold your funds.
 
-- Regular audits by top-tier firms
-- Open-source contracts with community review
-- [Public bug bounty program on Cantina](https://cantina.xyz/bounties/e54ee88c-df96-4f80-a6c1-0723548312ab) and ongoing security testing
+### Smart Contract Protections
+
+**Audited before launch.** All smart contract code is audited by established security firms (Halborn, Cantina, Code4rena or Zellic) before it goes live. Concrete also runs an ongoing bug bounty program with Cantina. See all reports on the Audits page.
+**Separated roles.** Vault operations are split across distinct roles. No single key has full control or can drain a vault.
+**On-chain accounting limits.** The vault automatically pauses if it detects unusual changes in asset values. Accounting updates are rate-limited to prevent manipulation.
+**Controlled upgrades.** Vault contracts use the UUPS proxy pattern. Upgrades are only possible through authorized paths approved by the protocol. Any unauthorized upgrade attempt is automatically rejected.
+**Multi-signature custody.** All vault wallets require multiple approvals to move funds. Signing authority is divided across independent authorised groups.
+
+### Withdrawal Timing
+
+Most production vaults use Queued Withdrawal. This means withdrawals enter a queue and are processed on a set schedule. This delay creates a monitoring window where irregularities can be detected before funds leave the vault.
+
+## Strategy Layer
+
+This layer controls how your funds are deployed and how transactions are checked before they run.
+
+### Strategy-Specific Protections
+
+**Vetted before use.** Every strategy passes a risk, accounting, and compliance review before receiving any funds.
+**Whitelisted interactions only.** Vaults can only transact with pre-approved addresses. All others are blocked.
+**Transaction validation.** Every automated transaction must clear multiple independent checks including a full simulation,  before it executes.
+**Granular controls.** Each strategy can be paused independently, and a policy engine governs what actions are allowed. Changes require multi-party approval.
+
+## Oversight and Verification Layer
+
+This layer operates above the vault and strategy layers. It provides independent monitoring, incident response, and accounting checks.
+
+**24/7 monitoring.** Hypernative watches all vault addresses around the clock and alerts the Concrete team about unusual activity.
+**Automatic safeguards.** If something unexpected is detected, protective measures activate immediately - no manual intervention needed.
+**Ongoing asset verification.** Vault values are cross-checked by multiple independent sources at regular intervals to ensure accuracy.
+
+## Market Risks
+
+Even with the protections above, DeFi markets carry inherent risks. Vaults that interact with lending protocols, AMMs (automated market makers), or liquidity pools may be affected by price volatility, impermanent loss, and slippage. Here are the main ones to be aware of.
+
 
 ## Impermanent Loss (IL)
 
