@@ -1,7 +1,7 @@
 ---
-title: "Architecture"
+title: "Architecture: Core Concepts"
 description: "Technical architecture documentation for Concrete Earn V2 smart contracts, roles, modules, and operational design."
-sidebar_label: "Architecture"
+sidebar_label: "Architecture: Core Concepts"
 ---
 
 Concrete V2 is a protocol for aggregating yield and allows curators to deploy vaults permissionlessly. As such it comprises three main components: Vaults of various flavour, a factory for vault deployments and peripherial infrastructure that complement the core features such as bespoke strategies, hooks, fee splitters and other auxiliary contracts.

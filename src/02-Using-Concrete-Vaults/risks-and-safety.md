@@ -62,4 +62,4 @@ Each vault may expose users to different underlying protocols. These come with t
 
 ## Jurisdiction Restrictions
 
-Access to Concrete products is not available in every jurisdiction. Before depositing, review the [Restricted Jurisdictions](/restrictions/) page to confirm eligibility.
+Access to Concrete products is not available in every jurisdiction. Before depositing, review the [Restricted Jurisdictions](/Using-Concrete-Vaults/restricted-jurisdictions/) page to confirm eligibility.

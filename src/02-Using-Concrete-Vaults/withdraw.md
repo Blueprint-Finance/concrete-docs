@@ -1,7 +1,7 @@
 ---
-title: "How Withdrawals Work"
-description: "Concrete vault documentation for how Withdrawals Work, including strategy behavior, withdrawals, migrations, and operational guidance."
-sidebar_label: "How Withdrawals Work"
+title: "Withdraw"
+description: "Concrete vault documentation for how withdrawals work, including strategy behavior, withdrawals, migrations, and operational guidance."
+sidebar_label: "Withdraw"
 ---
 
 Concrete vaults use a **Withdrawal Queue** to make redemptions predictable, secure, and fair. This protects both users and the protocol.
@@ -61,7 +61,7 @@ Once your vault tokens arrive on the destination chain:
 
 :::tip
 **Always confirm you control the destination wallet**, if you're bridging to another chain in order to withdraw. Need to change your address after bridging?
-Follow our [Request Address Change Guide](./01-Bera/request-address-change.md)
+Contact [Support](/support/) for assistance.
 :::
 
 ## Why Withdrawal Queues Exist

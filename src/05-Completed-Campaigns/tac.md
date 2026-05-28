@@ -1,7 +1,7 @@
 ---
-title: "Deprecation Guide"
+title: "TAC"
 description: "TAC vault deprecation and withdrawal documentation with required actions, timelines, and user support references."
-sidebar_label: "Deprecation Guide"
+sidebar_label: "TAC"
 ---
 
 The **TAC Stone**, **TAC LevelUSD**, and **TAC Renzo** vaults are live on [Turtle.xyz](https://app.turtle.xyz/campaigns/tac). As part of the deprecation process, the withdrawal instructions steps are now hosted on [Concrete.xyz](https://app.concrete.xyz/earn).

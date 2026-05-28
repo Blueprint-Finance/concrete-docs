@@ -27,7 +27,7 @@ export const vault = {
 ```
 
 :::tip
-Developers already familiar with Wagmi can use their existing configuration — this snippet is only a quick reference. For full setup details, see [Setup Configuration](https://docs.concrete.xyz/Earn-V2/SDK/setup-configuration/) in the main SDK documentation.
+Developers already familiar with Wagmi can use their existing configuration — this snippet is only a quick reference. For full setup details, see [Setup Configuration](https://docs.concrete.xyz/Developers/SDK/setup-configuration/) in the main SDK documentation.
 :::
 
 ## SDK Playground

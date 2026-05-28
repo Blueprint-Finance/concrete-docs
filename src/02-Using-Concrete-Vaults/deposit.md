@@ -1,7 +1,7 @@
 ---
-title: "How to Deposit into a Concrete Earn Vault"
+title: "Deposit"
 description: "Concrete Earn documentation for depositing into vaults, covering supported assets, deposit steps, and how yield accrues to your shares."
-sidebar_label: "How to Deposit"
+sidebar_label: "Deposit"
 sidebar_position: 0
 ---
 
@@ -11,7 +11,7 @@ After you deposit, the vault puts your assets to work in the yield strategy. No 
 
 ## Supported assets
 
-Each vault accepts a specific asset, for example **WBTC Vault** accepts WBTC, and the **Concrete DeFi USDT** vault accepts USDT. Some vaults have Enso integration, meaning you can bridge, and/or swap and deposit into the vault using all of the listed tokens. See [Bridge and deposit with Enso](/Vaults/bridging-with-enso) for more.
+Each vault accepts a specific asset, for example **WBTC Vault** accepts WBTC, and the **Concrete DeFi USDT** vault accepts USDT. Some vaults have Enso integration, meaning you can bridge, and/or swap and deposit into the vault using all of the listed tokens. See [Bridging and Depositing with Enso](/Using-Concrete-Vaults/bridging-and-depositing-with-enso/) for more.
 
 ## Before you start
 

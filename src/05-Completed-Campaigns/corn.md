@@ -1,7 +1,7 @@
 ---
-title: "Overview"
+title: "Corn"
 description: "Corn vault documentation for Concrete users, including vault behavior, lifecycle updates, and operational guidance."
-sidebar_label: "Overview"
+sidebar_label: "Corn"
 ---
 
 Concrete’s Corn Vaults offer access to yield opportunities across the Corn network by bridging assets from Ethereum and deploying them into curated DeFi strategies.
