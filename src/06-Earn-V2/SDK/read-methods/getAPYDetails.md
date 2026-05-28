@@ -4,11 +4,10 @@ description: "Read-method reference for getApyDetails() in the Concrete Earn V2 
 sidebar_label: "getApyDetails()"
 ---
 
-Fetch APY info and the current underlying price for a vault.
-This method is exposed on the **Vault instance**, but it’s backed by the **ConcreteAPI** (our backend), not an on-chain call.
+Fetches APY history and headline metrics for a vault. The method is exposed on the vault instance but is backed by the Concrete API, not an on-chain call.
 
 :::tip
-Works the same in vanilla, React, and Wagmi integrations because all return the same Vault object.
+Works the same in vanilla, React, and Wagmi integrations because all return the same vault object.
 :::
 
 ## Signature
@@ -19,37 +18,25 @@ const apy = await vault.getApyDetails(): Promise<ApyDetails>
 
 ## Parameters
 
-None.
+- None
 
 ## Returns
 
-A plain object with APY/price metadata from ConcreteAPI.
-
-The exact payload may evolve. Typical fields include:
-
 ```tsx
+type ApyPoint = { timestamp: string | number; amount: string };
+
 type ApyDetails = {
-  // headline fields
-  apy?: number;                // annualized % as a decimal (e.g., 0.072 = 7.2%)
-  apr?: number;                // optional APR if reported
-  netApy?: number;             // after-fee APY (if available)
-  grossApy?: number;           // before-fee APY (if available)
-
-  // decomposition (if available)
-  components?: Array<{
-    label: string;             // e.g., "Lending", "Restaking", "Incentives"
-    apy: number;               // decimal (0.01 = 1%)
-  }>;
-
-  // price metadata
-  underlyingPriceUsd?: number; // current underlying price in USD
-  underlyingSymbol?: string;   // e.g., "USDC", "WBTC"
-
-  // bookkeeping
-  updatedAt?: string | number; // ISO timestamp or epoch
-  source?: "ConcreteAPI";      // data source marker
+  apyHistory30Days: ApyPoint[];
+  tvlHistory30Days: ApyPoint[];
+  totalAssetsHistory30Days: ApyPoint[];
+  apy: string | undefined;            // latest APY point amount, as a numeric string
+  tvl: string | undefined;            // latest TVL point amount, as a numeric string
+  totalAssets: string | undefined;    // latest total-assets point amount, as a numeric string
+  nextPayout: Date | null;            // next payout timestamp, when reported
 };
 ```
+
+The headline `apy`, `tvl`, and `totalAssets` fields are numeric strings taken from the latest history point. Convert them with `Number(...)` before doing arithmetic. The underlying token price is exposed separately via `vault.getUnderlyingPrice()`.
 
 ## Examples
 
@@ -59,16 +46,16 @@ type ApyDetails = {
 import { getVault } from "@concrete-xyz/sdk";
 import { ethers } from "ethers";
 
-const provider = new ethers.JsonRpcProvider("<https://ethereum-rpc.publicnode.com>");
-const vault = getVault("0xE2d8267D285a7ae1eDf48498fF044241d04e9608", chainId, provider);
+const provider = new ethers.JsonRpcProvider("https://ethereum-rpc.publicnode.com");
+const vault = getVault("v2", "0xE2d8267D285a7ae1eDf48498fF044241d04e9608", chainId, provider);
 
 const apy = await vault.getApyDetails();
 console.log("APY Details:", apy);
 
-// Example usage
-if (apy.apy != null && apy.underlyingPriceUsd != null) {
-  console.log(`APY: ${(apy.apy * 100).toFixed(2)}%`);
-  console.log(`Underlying ~ $${apy.underlyingPriceUsd.toFixed(2)} USD`);
+if (apy.apy != null) {
+  const price = await vault.getUnderlyingPrice();
+  console.log(`APY: ${(Number(apy.apy) * 100).toFixed(2)}%`);
+  console.log(`Underlying ~ $${price.toFixed(2)} USD`);
 }
 ```
 
@@ -78,70 +65,78 @@ if (apy.apy != null && apy.underlyingPriceUsd != null) {
 import { useEffect, useState } from "react";
 import { useVault } from "@concrete-xyz/sdk/react";
 
-export function ApyWidget({ address, chainId, provider, signer }) {
+export function ApyWidget({ version, address, chainId, provider, signer }) {
   const vault = useVault(version, address, chainId, provider, signer);
   const [apy, setApy] = useState<any>(null);
+  const [price, setPrice] = useState<number | null>(null);
 
   useEffect(() => {
     let active = true;
     (async () => {
-      const data = await vault.getApyDetails();
-      if (active) setApy(data);
+      const [data, p] = await Promise.all([vault.getApyDetails(), vault.getUnderlyingPrice()]);
+      if (active) {
+        setApy(data);
+        setPrice(p);
+      }
     })();
     return () => { active = false; };
   }, [vault]);
 
-  if (!apy) return <div>Loading APY…</div>;
+  if (!apy) return <div>Loading APY...</div>;
   return (
     <div>
-      <div>APY: {(apy.apy * 100).toFixed(2)}%</div>
-      {apy.underlyingPriceUsd != null && (
-        <div>Underlying: ${apy.underlyingPriceUsd.toFixed(2)}</div>
-      )}
+      <div>APY: {(Number(apy.apy) * 100).toFixed(2)}%</div>
+      {price != null && <div>Underlying: ${price.toFixed(2)}</div>}
     </div>
   );
 }
 ```
 
-### Wagmi + `useVaultQuery`
+### Wagmi with `useVaultQuery`
 
 ```tsx
 import { useVault, useVaultQuery } from "@concrete-xyz/sdk/wagmi";
 
-export function ApyPanel({ address, chainId }) {
-  const vault = useVault(vault config object);
+const vaultConfig = {
+  version: "v2",
+  address: "0xE2d8267D285a7ae1eDf48498fF044241d04e9608",
+  chainId: 1,
+} as const;
+
+export function ApyPanel() {
+  const vault = useVault(vaultConfig);
 
   const q = useVaultQuery({
-    address,
-    chainId,
-    queryKey: ["apy", address, chainId],
+    vault: vaultConfig,
+    queryKey: ["apy"],
     enabled: !!vault,
-    queryFn: (v) => v.getApyDetails(),
-    staleTime: 60_000, // cache APY for 60s
+    queryFn: async (v) => {
+      const [apy, price] = await Promise.all([v.getApyDetails(), v.getUnderlyingPrice()]);
+      return { apy, price };
+    },
+    staleTime: 60_000,
     retry: 2,
   });
 
-  if (q.isLoading) return <div>Loading APY…</div>;
+  if (q.isLoading) return <div>Loading APY...</div>;
   if (q.isError) return <div>Failed to load APY</div>;
 
-  const apy = q.data!;
+  const { apy, price } = q.data!;
   return (
     <div>
-      <div>APY: {(apy.apy * 100).toFixed(2)}%</div>
-      {apy.underlyingPriceUsd != null && (
-        <div>Underlying: ${apy.underlyingPriceUsd.toFixed(2)}</div>
-      )}
+      <div>APY: {(Number(apy.apy) * 100).toFixed(2)}%</div>
+      {price != null && <div>Underlying: ${price.toFixed(2)}</div>}
     </div>
   );
 }
 ```
 
-## Notes & Error Handling
+## Notes and error handling
 
-- **Backend-backed:** Unlike `symbol()` or `totalAssets()`, this hits ConcreteAPI. Handle **HTTP/network** failures and timeouts.
-- **Staleness:** APY is not block-by-block; cache reasonably (`staleTime` 30–120s).
-- **Evolving schema:** Treat extra fields as optional; guard with null checks.
-- **Rate limits:** If you batch widgets, share a single query via React Query to avoid redundant calls.
+- **Backend-backed**: unlike `symbol()` or `totalAssets()`, this hits the Concrete API. Handle HTTP and network failures and timeouts.
+- **Staleness**: APY is not block-by-block. Cache reasonably (`staleTime` 30 to 120 seconds).
+- **String values**: headline fields are numeric strings. Convert with `Number(...)` before arithmetic.
+- **Rate limits**: if you batch widgets, share a single query via React Query to avoid redundant calls.
 
 **Minimal guard**
 

@@ -4,26 +4,26 @@ description: "Read-method reference for toUnderlyingDecimals(amount) in the Conc
 sidebar_label: "toUnderlyingDecimals(amount)"
 ---
 
-Converts a raw `BigInt` amount into a human-readable decimal-adjusted string based on the **underlying asset’s** decimals. Useful to displaying underlying balances (e.g., USDC, WETH) and to Interpret preview results from `previewConversion()` .
+Converts a raw `BigInt` amount into a human-readable decimal-adjusted value using the underlying asset's decimals. Use it to display underlying balances (for example USDC, WETH) and to interpret preview results from `previewConversion()`.
 
 ## Parameters
 
-- `amount: bigint` — raw token amount in base units.
+- `amount: bigint`: raw token amount in base units.
 
 ## Returns
 
-- `Promise<string>` — formatted string with decimals applied.
+- `Promise<number>`: numeric value with decimals applied.
 
 ## Example
 
 ```tsx
 const rawUnderlying = BigInt("1000000"); // 1 USDC in base units (6 decimals)
-const display = await vault.toUnderlayingDecimals(rawUnderlying);
+const display = await vault.toUnderlyingDecimals(rawUnderlying);
 console.log("Formatted underlying:", display);
 ```
 
-## Example Response
+## Example response
 
 ```json
-"1.0"
+1.0
 ```

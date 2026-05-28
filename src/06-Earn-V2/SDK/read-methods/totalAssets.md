@@ -18,7 +18,7 @@ totalAssets(): Promise<bigint>
 
 ## Returns
 
-- `bigint` — total underlying managed by the vault.
+- `bigint`: total underlying managed by the vault.
 
 ## Example
 
@@ -26,18 +26,18 @@ totalAssets(): Promise<bigint>
 const details = await vault.getVaultDetails();
 const total = await vault.totalAssets();
 
-// Option 1: Using SDK helper (faster and simpler to calculate)
+// Option 1: SDK helper (caches decimals internally)
 console.log(
   "Total assets:",
-  await vault.toUnderlayingDecimals(total),
-  details.underlaying.symbol
+  await vault.toUnderlyingDecimals(total),
+  details.underlying.symbol
 );
 
-// Option 2: Using ethers.js formatting
+// Option 2: ethers.js formatting
 console.log(
   "Total assets:",
-  ethers.formatUnits(total, details.underlaying.decimals),
-  details.underlaying.symbol
+  ethers.formatUnits(total, details.underlying.decimals),
+  details.underlying.symbol
 );
 ```
 
