@@ -30,4 +30,4 @@ Concrete's security model has several layers:
 
 **Risk.** Yields are not guaranteed and may fluctuate. Strategy losses reduce share price. You may lose some or all of your deposited assets. Past performance is not indicative of future results.
 
-For full risk disclosures see [Risks and Safety](#risks.md)
+For full risk disclosures see [Risks and Safety](../risks.md)
