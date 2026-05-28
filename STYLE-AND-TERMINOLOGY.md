@@ -350,12 +350,12 @@ items feed the translation map in Part 3.
 - **Concrete Protocol** – the formal protocol name, used where the legal or
   platform entity is meant. _Source: `src/restrictions.md`._
 - **Concrete Earn** – the automated yield-vault product. Capitalized. Leads in
-  headers. _Source: `src/01-Overview/our-solution.md`._
+  headers. _Source: `src/02-Earn/deposit-into-vaults.md`._
 - **Earn V1 / Earn V2** – product generations. Capital "V". "Earn V2" is the
   current automated system; "Earn V1" is the legacy generation. Avoid lowercase
-  "Earn v2". _Source: `src/01-Overview/our-solution.md`._
+  "Earn v2". _Source: `src/06-Earn-V2/overview.md`._
 - **Concrete Enterprise** – the partner offering for deploying custom vaults.
-  _Source: `src/01-Overview/our-solution.md`._
+  _Source: `src/06-Earn-V2/SDK/quick-start.md`._
 - **Concrete Points** – the incentive points distributed to users. Capitalized.
   _Source: `src/rewards.md`, `src/05-Vaults/02-Corn/overview.md`._
 - **Portfolio** – the in-app tab where a user tracks positions and withdrawal
@@ -365,23 +365,23 @@ items feed the translation map in Part 3.
 
 - **vault** – a smart-contract product into which a user deposits a base asset
   and receives shares. Lowercase noun. Avoid "pool", "fund", or "contract" when
-  referring to a vault. _Source: `src/01-Overview/our-solution.md`._
+  referring to a vault. _Source: `src/01-Overview/welcome.md`._
 - **shares / vault shares** – the ERC-20 tokens representing proportional
   ownership of a vault. Avoid "tokens" (generically) or "receipts". _Source:
-  `src/01-Overview/our-solution.md`._
+  `src/01-Overview/welcome.md`._
 - **ctAssets** – Concrete's vault shares, formatted as "ct" plus the asset
   symbol (ctUSDC, ctETH). Use the "ct" prefix. Avoid "cTokens" except when
   specifically discussing Earn V1 naming. _Source: `src/02-Earn/ct-assets.md`._
 - **base asset / underlying asset** – the token a vault accepts on deposit and
   pays out on withdrawal (USDC, ETH, WBTC). Avoid "deposit token" or "input
-  token". _Source: `src/01-Overview/our-solution.md`, `src/05-Vaults/yield-vaults.md`._
+  token". _Source: `src/01-Overview/welcome.md`, `src/05-Vaults/yield-vaults.md`._
 - **ERC-4626** – the tokenized-vault standard. Always hyphenated. Avoid
-  "ERC4626". _Source: `src/01-Overview/our-solution.md`. Note: `src/06-Earn-V2/Smart-Contracts/architecture.md` currently uses the unhyphenated form; the hyphenated form is canonical._
+  "ERC4626". _Source: `src/01-Overview/welcome.md`. Note: `src/06-Earn-V2/Smart-Contracts/architecture.md` currently uses the unhyphenated form; the hyphenated form is canonical._
 - **ERC-20** – the token standard. Always hyphenated.
 - **exchange rate / share price** – the conversion ratio between shares and the
   underlying asset; moves with yield. _Source: `src/02-Earn/ct-assets.md`._
 - **NAV (Net Asset Value)** – the total value of a vault, updated daily in
-  Earn V2. Expand on first use per page. _Source: `src/01-Overview/how-it-works.md`._
+  Earn V2. Expand on first use per page. _Source: `src/05-Vaults/07-DeFi-USDT/important-disclosures.md`._
 - **strategy / yield strategies** – the smart contracts that deploy capital to
   earn yield (lending on Aave, liquidity on Pendle, and similar). Avoid
   "protocol adapter" or "yield module". _Source: `src/05-Vaults/how-withdrawals-work.md`, `src/02-Earn/how-earn-vaults-maximize-risk-adjusted-yields.md`._
@@ -394,7 +394,7 @@ items feed the translation map in Part 3.
   _Source: `src/01-Overview/welcome.md`, `src/02-Earn/how-earn-vaults-maximize-risk-adjusted-yields.md`._
 - **Subgraph** – the on-chain indexing service for analytics and events.
   Capitalized as the component; lowercase acceptable in generic prose. _Source:
-  `src/01-Overview/our-solution.md`, `src/fees.md`._
+  `src/06-Earn-V2/Subgraph-and-Events/event-reference-and-use-cases.md`, `src/fees.md`._
 - **Hook** – custom logic triggered at specific vault operations; managed by the
   Hook Manager. _Source: `src/06-Earn-V2/overview.md`._
 - **Fee Splitter** – the contract that routes fees between recipients with a
@@ -414,8 +414,7 @@ items feed the translation map in Part 3.
   the queue rather than instantly. Avoid "queued vault". _Source:
   `src/06-Earn-V2/overview.md`, `src/06-Earn-V2/Smart-Contracts/architecture.md`._
 - **instant withdrawal / standard mode** – atomic, same-transaction redemption,
-  available for vaults configured in standard mode. _Source:
-  `src/01-Overview/how-it-works.md`, `src/06-Earn-V2/overview.md`._
+  available for vaults configured in standard mode. _Source: `src/06-Earn-V2/overview.md`._
 - **epoch** – a vault's withdrawal accounting period; requests are processed per
   epoch on the vault's configured cadence. Lowercase. This is the correct
   precise term and a body-level mechanism word. Avoid "batch", "round", or
@@ -461,13 +460,13 @@ On-chain roles are capitalized. The generic person who runs a vault is a
 lowercase "curator".
 
 - **Vault Owner** – controls upgrades for a vault. _Source: `src/06-Earn-V2/Smart-Contracts/architecture.md`._
-- **Vault Manager** – updates parameters, limits, and fees. Avoid "admin" or unqualified "manager". _Source: `src/01-Overview/our-solution.md`._
-- **Strategy Manager** – adds or removes strategies. _Source: `src/01-Overview/our-solution.md`._
-- **Hook Manager** – manages hooks. _Source: `src/01-Overview/our-solution.md`._
-- **Allocator** – moves capital between strategies and processes withdrawals. Capitalized. Avoid lowercase "allocator" or "fund mover". _Source: `src/01-Overview/our-solution.md`, `src/01-Overview/how-it-works.md`._
-- **Withdrawal Manager** – handles epoch processing and claims on async vaults. _Source: `src/01-Overview/our-solution.md`._
+- **Vault Manager** – updates parameters, limits, and fees. Avoid "admin" or unqualified "manager". _Source: `src/01-Overview/welcome.md`._
+- **Strategy Manager** – adds or removes strategies. _Source: `src/01-Overview/welcome.md`._
+- **Hook Manager** – manages hooks. _Source: `src/01-Overview/welcome.md`._
+- **Allocator** – moves capital between strategies and processes withdrawals. Capitalized. Avoid lowercase "allocator" or "fund mover". _Source: `src/01-Overview/welcome.md`._
+- **Withdrawal Manager** – handles epoch processing and claims on async vaults. _Source: `src/01-Overview/welcome.md`._
 - **Pauser** – allows the incident response team to pause the vault independently of operational roles. _Source: `src/06-Earn-V2/overview.md`._
-- **curator** – the entity managing a vault's strategy and configuration. Lowercase; descriptive, not a formal on-chain role name. _Source: `src/05-Vaults/how-withdrawals-work.md`, `src/01-Overview/our-solution.md`._
+- **curator** – the entity managing a vault's strategy and configuration. Lowercase; descriptive, not a formal on-chain role name. _Source: `src/05-Vaults/how-withdrawals-work.md`._
 
 ### Fees and rewards
 
