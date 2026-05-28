@@ -4,7 +4,7 @@ description: "Write-method reference for deposit(amount) in the Concrete Earn V2
 sidebar_label: "deposit(amount)"
 ---
 
-Mint **ctAssets** by consuming the underlying token previously approved to the vault. Before calling the `deposit(amount)` method, the vault must be approved to spend the underlying token.
+Mint ctAssets by consuming the underlying token previously approved to the vault. Before calling `deposit(amount)`, the vault must be approved to spend the underlying token.
 
 ## Signature
 
@@ -14,36 +14,34 @@ await vault.deposit(amount: bigint): Promise<Tx>
 
 ## Parameters
 
-- `amount`: **underlying** amount (in underlying decimals).
+- `amount`: underlying amount, in underlying base units (`bigint`).
 
 ## Returns
 
-- `Tx`: transaction object; call `await tx.wait()` to confirm.
+- `Tx`: transaction object. Call `await tx.wait()` to confirm.
 
 ## Example
 
 ```tsx
-// Prerequisite: you created the vault with a signer:
+// Prerequisite: the vault was created with a signer:
 // const vault = getVault(version, vaultAddress, chainId, provider, signer)
-// vanilla SDK: needs version, react only SDK: needs version
 
-const details = await vault.getVaultDetails();
 const vaultAddr = vault.getAddress();
 
-// Approve 1.0 underlying (SDK helper → BigInt in underlying units)
+// Approve 1.0 underlying (SDK helper produces a BigInt in underlying units)
 const amount = await vault.toUnderlyingBigInt("1.0");
 
 // 1) Approve underlying to the vault
-const approveTx = await details.underlaying.erc20.approve(vaultAddr, amount);
+const erc20 = await vault.getUnderlyingErc20();
+const approveTx = await erc20.approve(vaultAddr, amount);
 await approveTx.wait();
 
-// (Optional) Preview how many shares you'll mint
+// (Optional) Preview how many shares you will mint
 const preview = await vault.previewConversion(amount);
-// console.log("Expected shares:", await vault.applyDecimals(preview.vaultTokensReciving));
+// console.log("Expected shares:", await vault.applyDecimals(preview.vaultTokensReceivingRaw));
 
 // 2) Deposit 1.0 underlying
 const depositTx = await vault.deposit(amount);
 const receipt = await depositTx.wait();
 console.log("Deposit confirmed in block", receipt.blockNumber);
-
 ```

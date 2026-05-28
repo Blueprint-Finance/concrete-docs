@@ -4,7 +4,7 @@ description: "Write-method reference for transfer(to, amount) in the Concrete Ea
 sidebar_label: "transfer(to, amount)"
 ---
 
-Transfer **ctAssets** (vault shares) directly to another address.
+Transfer ctAssets (vault shares) directly to another address.
 
 ## Signature
 
@@ -14,14 +14,12 @@ await vault.transfer(to: string, amount: bigint): Promise<Tx>
 
 ## Parameters
 
-- `to` (**string**) — Recipient wallet address.
-- `amount` (**bigint**) — Amount of **shares** (in vault decimals).
-Use `vault.toBigInt("10.0")` to convert a human number to `bigint`.
+- `to` (string): recipient wallet address.
+- `amount` (bigint): amount of shares in vault base units. Use `vault.toBigInt("10.0")` to convert from a human value.
 
 ## Returns
 
-- `Tx`: an Ethers v6 `TransactionResponse`like object.
-Call `await tx.wait()` to confirm.
+- `Tx`: an Ethers v6 `TransactionResponse`-like object. Call `await tx.wait()` to confirm.
 
 ## Example
 

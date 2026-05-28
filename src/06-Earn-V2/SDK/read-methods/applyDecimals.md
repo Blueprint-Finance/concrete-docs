@@ -4,15 +4,15 @@ description: "Read-method reference for applyDecimals(amount) in the Concrete Ea
 sidebar_label: "applyDecimals(amount)"
 ---
 
-Converts a raw `BigInt` amount into a human-readable decimal-adjusted string based on the vault’s share decimals. Useful to show vault share balances to users in UIs and to convert share amounts into display-friendly format.
+Converts a raw `BigInt` amount into a human-readable decimal-adjusted value using the vault's share decimals. Use it to display vault share balances and to convert share amounts into a display-friendly format.
 
 ## Parameters
 
-- `amount: bigint` — raw token amount in base units.
+- `amount: bigint`: raw token amount in base units.
 
 ## Returns
 
-- `Promise<string>` — formatted string with decimals applied.
+- `Promise<number>`: numeric value with decimals applied.
 
 ## Example
 
@@ -22,8 +22,8 @@ const display = await vault.applyDecimals(rawShares);
 console.log("Formatted vault shares:", display);
 ```
 
-## Example Response
+## Example response
 
 ```json
-"1.0"
+1.0
 ```

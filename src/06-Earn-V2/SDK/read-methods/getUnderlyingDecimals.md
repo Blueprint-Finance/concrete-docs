@@ -4,16 +4,15 @@ description: "Read-method reference for getUnderlyingDecimals() in the Concrete 
 sidebar_label: "getUnderlyingDecimals()"
 ---
 
-Returns the number of **decimals** used by the vault’s underlying ERC20 token.
-This is helpful when formatting amounts or constructing `BigInt` inputs.
+Returns the number of decimals used by the vault's underlying ERC20 token. Useful when formatting amounts or constructing `BigInt` inputs.
 
 ## Parameters
 
-- *None*
+- None
 
 ## Returns
 
-- `Promise<number>` — decimals used by the underlying ERC20 (e.g., `6` for USDC, `18` for WETH).
+- `Promise<number>`: decimals used by the underlying ERC20 (for example `6` for USDC, `18` for WETH).
 
 ## Example
 
@@ -25,7 +24,7 @@ const oneUnit = BigInt(10) ** BigInt(decimals);
 console.log("One unit in base:", oneUnit.toString());
 ```
 
-## Example Response
+## Example response
 
 ```json
 18

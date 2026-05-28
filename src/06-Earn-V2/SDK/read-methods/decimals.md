@@ -18,7 +18,7 @@ decimals(): Promise<number>
 
 ## Returns
 
-- `number` — decimals used for ctAssets.
+- `number`: decimals used for ctAssets.
 
 ## Example
 
