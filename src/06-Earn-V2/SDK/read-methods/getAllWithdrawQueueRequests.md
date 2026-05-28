@@ -4,12 +4,12 @@ description: "Read-method reference for getAllWithdrawQueueRequests(owner) in th
 sidebar_label: "getAllWithdrawQueueRequests(owner)"
 ---
 
-Fetches **all withdrawal-queue requests** for a given `owner` address, and returns an array of request objects. Each request includes status metadata and two executable actions:
+Fetches all withdrawal-queue requests for a given `owner` address. Returns an array of request objects. Each request includes status metadata and two executable actions:
 
-* `cancel()` — cancels the request (when `cancelable: true`)
-* `claim()` — claims the withdrawal (when `claimable: true`)
+* `cancel()`: cancels the request (when `cancelable: true`)
+* `claim()`: claims the withdrawal (when `claimable: true`)
 
-The returned `cancel()` / `claim()` functions are **write actions** and therefore require a signer.
+The returned `cancel()` and `claim()` functions are write actions and require a signer.
 
 ## Signature
 
@@ -26,7 +26,8 @@ getAllWithdrawQueueRequests(owner: Address): Promise<
     amount: bigint;
     version: 2;
     vaultAddress: string;
-    chainId: number;
+    chainId: number | undefined;
+    timestamp: number | undefined;
   }[]
 >;
 ```
@@ -35,20 +36,20 @@ getAllWithdrawQueueRequests(owner: Address): Promise<
 
 An array of withdrawal-queue requests:
 
-* `recipient` — where the underlying will be sent when claimed
-* `epoch` — epoch index for the request
-* `epochState` — current epoch status (`inactive | active | processing | processed`)
-* `claimable` — whether `claim()` can be called right now
-* `cancelable` — whether `cancel()` can be called right now
-* `amount` — requested amount (in **vault share units** unless your implementation states otherwise)
-* `version` — always `2` for these requests
-* `vaultAddress`, `chainId` — identifies the vault/network
-* `cancel()` / `claim()` — callable functions that send transactions
+* `recipient`: address where the underlying is sent when claimed.
+* `epoch`: epoch index for the request.
+* `epochState`: current epoch status (`inactive`, `active`, `processing`, `processed`).
+* `claimable`: whether `claim()` can be called right now.
+* `cancelable`: whether `cancel()` can be called right now.
+* `amount`: requested amount in vault share units.
+* `version`: always `2` for these requests.
+* `vaultAddress`, `chainId`: identify the vault and network.
+* `timestamp`: request timestamp when available.
+* `cancel()`, `claim()`: callable functions that send transactions.
 
 ## Parameters
 
-* `owner` (**Address**, required)
-  The wallet address whose withdrawal requests you want to load.
+* `owner` (Address, required): the wallet address whose withdrawal requests you want to load.
 
 ## Example
 
@@ -60,7 +61,7 @@ async function main() {
   const provider = new ethers.JsonRpcProvider(process.env.RPC_URL!);
   const signer = new ethers.Wallet(process.env.PRIVATE_KEY!, provider);
 
-  const vault = getVault("0xYourVault", "Ethereum", provider, signer);
+  const vault = getVault("v2", "0xYourVault", 1, provider, signer);
 
   const owner = await signer.getAddress();
   const requests = await vault.getAllWithdrawQueueRequests(owner);

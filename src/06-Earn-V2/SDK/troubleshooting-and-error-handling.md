@@ -4,7 +4,7 @@ description: "Concrete Earn V2 SDK documentation for troubleshooting & Error Han
 sidebar_label: "Troubleshooting & Error Handling"
 ---
 
-## TL;DR Patterns
+## Quick patterns
 
 ### 1) Vanilla (ethers)
 
@@ -13,7 +13,7 @@ import { getVault } from "@concrete-xyz/sdk";
 import { ethers } from "ethers";
 
 const provider = new ethers.JsonRpcProvider(process.env.RPC_URL!);
-const vault = getVault("0xYourVault", chainId, provider);
+const vault = getVault("v2", "0xYourVault", chainId, provider);
 
 async function safeGetDetails() {
   try {
@@ -21,71 +21,76 @@ async function safeGetDetails() {
     return details;
   } catch (err: any) {
     if (err.code === "NETWORK_ERROR") {
-      // RPC down / bad URL
+      // RPC down or bad URL
       throw new Error("RPC unavailable: check RPC_URL and network.");
     }
     if (err.code === "CALL_EXCEPTION") {
-      // Wrong chain / wrong address / ABI mismatch
-      throw new Error("Call failed: verify vault address & network match.");
+      // Wrong chain, wrong address, or ABI mismatch
+      throw new Error("Call failed: verify vault address and network match.");
     }
     throw err;
   }
 }
 ```
 
-### 2) Wagmi + React Query
+### 2) Wagmi and React Query
 
 ```tsx
 import { useVault, useVaultQuery } from "@concrete-xyz/sdk/wagmi";
 
-export function UseDetails({ address, chainId }: { address: string; chainId: any }) {
-  const vault = useVault(vault config object);
+const vaultConfig = {
+  version: "v2",
+  address: "0xYourVault",
+  chainId: 1,
+} as const;
+
+export function UseDetails() {
+  const vault = useVault(vaultConfig);
 
   const query = useVaultQuery({
-    address,
-    chainId,
-    queryKey: ["vaultDetails", address, chainId],
+    vault: vaultConfig,
+    queryKey: ["vaultDetails"],
     enabled: !!vault, // Avoid running before the hook resolves
     queryFn: (v) => v.getVaultDetails(),
     retry: 2,
     staleTime: 30_000,
   });
 
-  if (query.isLoading) return <div>Loading…</div>;
+  if (query.isLoading) return <div>Loading...</div>;
   if (query.isError) return <div>Failed to load vault details. {String(query.error)}</div>;
 
   return <pre>{JSON.stringify(query.data, null, 2)}</pre>;
 }
 ```
 
-## Common Error Sources & Fixes
+## Common error sources and fixes
 
-| Symptom | Likely Cause | Fix |
+| Symptom | Likely cause | Fix |
 | --- | --- | --- |
-| `NETWORK_ERROR`, `failed to fetch` | Bad/unstable RPC URL, rate limiting | Switch to a reliable RPC. Add retries/backoff. |
-| `CALL_EXCEPTION` / `execution reverted` | Wrong **network** for the vault address; wrong address; deprecated contract | Ensure `getVault(address, chainId, …)` chain matches the contract’s chain. Verify address is the **vault**, not the underlying. |
-| `undefined` / `Cannot read properties of undefined` | Hook not ready (Wagmi client not connected) | Gate reads with `enabled: !!vault` (React Query) or check `if (!vault) return`. |
-| `BigInt` range/format issues | Mixing JS `number` with token base units | Always use `BigInt`; derive units from `await vault.getUnderlyingDecimals()`. |
-| Wrong display amounts | Using wrong decimals for formatting | Use `getUnderlyingDecimals()` for underlying and `decimals()` for shares. |
-| CORS / Browser blocking | Direct RPC calls from browser blocked | Use a proxy RPC provider or server side. |
-| Inconsistent results caching | React Query defaults | Provide a `queryKey`, set `staleTime`, `cacheTime`, and `retry` policies explicitly. |
+| `NETWORK_ERROR`, `failed to fetch` | Bad or unstable RPC URL, rate limiting | Switch to a reliable RPC. Add retries and backoff. |
+| `CALL_EXCEPTION` or `execution reverted` | Wrong network for the vault address, wrong address, or deprecated contract | Ensure the `chainId` passed to `getVault(version, address, chainId, ...)` matches the contract's chain. Verify the address is the vault, not the underlying. |
+| `undefined` or `Cannot read properties of undefined` | Hook not ready (Wagmi client not connected) | Gate reads with `enabled: !!vault` (React Query) or `if (!vault) return`. |
+| `BigInt` range or format issues | Mixing JS `number` with token base units | Always use `BigInt`. Derive units from `await vault.getUnderlyingDecimals()`. |
+| Wrong display amounts | Using wrong decimals for formatting | Use `getUnderlyingDecimals()` for the underlying and `decimals()` for shares. |
+| CORS or browser blocking | Direct RPC calls from the browser blocked | Use a proxy RPC provider or call from the server. |
+| Inconsistent results caching | React Query defaults | Provide a `queryKey`, and set `staleTime`, `gcTime`, and `retry` policies explicitly. |
 
-## Read Methods Recommendations
+## Read method recommendations
 
 ### `getVaultDetails()`
 
-*Validate the shape and presence of nested fields (e.g., `underlying`).*
+Validate the shape and presence of nested fields (for example `underlying`).
 
 ```tsx
 const details = await vault.getVaultDetails();
-if (!details?.underlying?.erc20) {
-  throw new Error("Malformed details: missing underlying erc20");
+if (!details?.underlying?.address) {
+  throw new Error("Malformed details: missing underlying metadata");
 }
 ```
 
 ### `totalAssets()`
 
-*Wrap with retries—RPCs can flake.*
+Wrap with retries. RPCs can flake.
 
 ```tsx
 async function withRetry<T>(fn: () => Promise<T>, n = 2): Promise<T> {
@@ -94,19 +99,19 @@ async function withRetry<T>(fn: () => Promise<T>, n = 2): Promise<T> {
 const total = await withRetry(() => vault.totalAssets());
 ```
 
-### `symbol()` / `decimals()` / `getUnderlyingDecimals()`
+### `symbol()`, `decimals()`, `getUnderlyingDecimals()`
 
-*Handle non-standard tokens by falling back to metadata if you cache it.*
+Handle non-standard tokens by falling back to cached metadata.
 
 ```tsx
 let uDec = 18;
 try { uDec = await vault.getUnderlyingDecimals(); }
-catch { uDec = 18; /* fallback default if you must */ }
+catch { uDec = 18; /* fallback default if needed */ }
 ```
 
 ### `balanceOf(address)`
 
-*Validate address and handle ENS resolution externally if needed.*
+Validate the address. Resolve ENS externally if needed.
 
 ```tsx
 import { isAddress } from "viem"; // or ethers
@@ -116,70 +121,70 @@ const bal = await vault.balanceOf(user);
 
 ### `previewConversion(amount)`
 
-*Always build `amount` with correct decimals; catch `CALL_EXCEPTION` for paused/frozen states.*
+Always build `amount` with correct decimals, and catch `CALL_EXCEPTION` for paused or frozen states.
 
 ```tsx
 const uDec = await vault.getUnderlyingDecimals();
 const amount = BigInt(10) ** BigInt(uDec); // 1 unit
 try {
   const preview = await vault.previewConversion(amount);
-  // use preview.vaultTokensReciving / preview.underlyingReciving
+  // Use preview.vaultTokensReceiving / preview.underlyingReceiving,
+  // or the *Raw bigint siblings when you need raw values.
 } catch (e: any) {
   if (e.code === "CALL_EXCEPTION") {
-    throw new Error("Preview unavailable (vault paused / wrong chain / wrong address).");
+    throw new Error("Preview unavailable (vault paused, wrong chain, or wrong address).");
   }
   throw e;
 }
 ```
 
-### `applyDecimals(value)` / `toUnderlyingDecimals(value)`
+### `applyDecimals(value)` and `toUnderlyingDecimals(value)`
 
-Avoid Decimal Bugs by using the built-in helpers to prevent unit mistakes.
+Use the built-in helpers to avoid unit mistakes.
 
 Common pitfalls:
 
-- **Input type** → must be `BigInt`, not `number` or `string`.
-- **Order of calls** → call after `getVaultDetails()`, so decimals are loaded.
-- **Correct usage** →
-    - `applyDecimals()` = format **vault shares (ctAssets)**
-    - `toUnderlyingDecimals()` = format **underlying ERC20**
-- **Precision** → only use for display; keep core math in `BigInt`.
-- **Network differences** → don’t assume decimals; USDC is 6 on Ethereum, 18 on other chains.
+- **Input type**: must be `BigInt`, not `number` or `string`.
+- **Order of calls**: call after `getVaultDetails()` so decimals are loaded.
+- **Correct usage**:
+    - `applyDecimals()` formats vault shares (ctAssets).
+    - `toUnderlyingDecimals()` formats the underlying ERC20.
+- **Precision**: use for display only. Keep core math in `BigInt`.
+- **Network differences**: do not assume decimals. USDC is 6 on Ethereum, and may differ elsewhere.
 
 ```tsx
 const details = await vault.getVaultDetails();
 
 const rawShares = await vault.balanceOf(user);
-const displayShares = await vault.applyDecimals(rawShares); // "1.00 ctETH"
+const displayShares = await vault.applyDecimals(rawShares); // "1.00"
 
-const rawUnderlying = await details.underlying.erc20.balanceOf(user);
-const displayUnderlying = await vault.toUnderlyingDecimals(rawUnderlying); // "5000.00 USDC"
-
+const erc20 = await vault.getUnderlyingErc20();
+const rawUnderlying = await erc20.balanceOf(user);
+const displayUnderlying = await vault.toUnderlyingDecimals(rawUnderlying); // "5000.00"
 ```
 
-**When NOT to use them**
+**When not to use them**
 
-- **Do not** pass formatted strings back into write calls—always pass **BigInt** base units.
-- Never feed `applyDecimals()` or `toUnderlyingDecimals()` outputs back into **write methods** like `deposit()`, `redeem()`, or `approve()`.
-- These helpers are **for display only**.
+- Do not pass formatted strings back into write calls. Always pass `BigInt` base units.
+- Never feed `applyDecimals()` or `toUnderlyingDecimals()` outputs back into write methods like `deposit()`, `redeem()`, or `approve()`.
+- These helpers are for display only.
 - Always pass raw `BigInt` values (base units) into transactions.
 
-## Network & Address Guards
+## Network and address guards
 
-### Validate vault address early
+### Validate the vault address early
 
 ```tsx
 import { isAddress } from "viem";
 if (!isAddress(vaultAddress)) throw new Error("Invalid vault address");
 ```
 
-## React Query: Robust Defaults
+## React Query: robust defaults
 
 ```tsx
 const result = useVaultQuery({
-  address,
-  chainId,
-  queryKey: ["vault", address, chainId, "details"],
+  vault: vaultConfig,
+  queryKey: ["details"],
   queryFn: (v) => v.getVaultDetails(),
   retry: (count, error: any) => {
     // Retry only transient RPC issues
@@ -191,7 +196,7 @@ const result = useVaultQuery({
 });
 ```
 
-## Logging & Telemetry
+## Logging and telemetry
 
 Avoid logging private keys.
 
@@ -201,101 +206,100 @@ function logReadError(method: string, vaultAddr: string, chainId: string, err: u
 }
 ```
 
-## Write Methods: Common Failures & Fixes
+## Write methods: common failures and fixes
 
-### Insufficient Allowance (Underlying)
+### Insufficient allowance (underlying)
 
-**Symptom:** `execution reverted: ERC20: insufficient allowance` (or router-specific revert)
-**Fix:** Ensure you approved the **underlying** (not shares) and for **enough** amount.
+**Symptom**: `execution reverted: ERC20: insufficient allowance` (or a router-specific revert).
+**Fix**: Approve the underlying (not shares) for a sufficient amount.
 
 ```tsx
-// Re-approve remaining delta
+// Re-approve the remaining delta
+const erc20 = await vault.getUnderlyingErc20();
 const need = await vault.toUnderlyingBigInt("1.0");
-const cur = await details.underlaying.erc20.allowance(user, vault.getAddress());
+const cur = await erc20.allowance(user, vault.getAddress());
 if (cur < need) {
-  await (await details.underlaying.erc20.approve(vault.getAddress(), need)).wait();
+  await (await erc20.approve(vault.getAddress(), need)).wait();
 }
-
 ```
 
-### Insufficient Balance/Gas
+### Insufficient balance or gas
 
-**Symptom:** `insufficient funds for intrinsic transaction cost` or `transfer amount exceeds balance`**Fix:** Check **native gas token** (ETH) balance and underlying/share balances before sending.
+**Symptom**: `insufficient funds for intrinsic transaction cost` or `transfer amount exceeds balance`.
+**Fix**: Check native gas token (ETH) balance and underlying or share balances before sending.
 
 ```tsx
-const bal = await details.underlaying.erc20.balanceOf(user);
+const erc20 = await vault.getUnderlyingErc20();
+const bal = await erc20.balanceOf(user);
 if (bal < amount) throw new Error("Not enough underlying to deposit.");
-
 ```
 
-### Nonce/Replacement Errors
+### Nonce or replacement errors
 
-**Symptom:** `nonce too low`, `replacement fee too low`**Fix:** Read current nonce and resubmit with a higher max fee.
+**Symptom**: `nonce too low`, `replacement fee too low`.
+**Fix**: Read the current nonce and resubmit with a higher max fee.
 
 ```tsx
 const nonce = await signer.getNonce();
 await vault.deposit(amount, { nonce, maxFeePerGas: prev * 12n / 10n }); // +20%
-
 ```
 
-### Paused/Deprecated Vaults
+### Paused or deprecated vaults
 
-**Symptom:** `CALL_EXCEPTION` or custom revert string (e.g., “paused”) on `deposit`/`redeem`**Fix:** Surface a clear UI message; gate write actions based on a health flag if you expose one.
+**Symptom**: `CALL_EXCEPTION` or a custom revert string (for example "paused") on `deposit` or `redeem`.
+**Fix**: Surface a clear UI message. Gate write actions based on a health flag where available.
 
 ```tsx
 try { await vault.deposit(amount); }
-catch (e:any) {
+catch (e: any) {
   if (/paused|deprecated/i.test(String(e.message))) {
-    throw new Error("This vault is paused/deprecated. Withdrawals only.");
+    throw new Error("This vault is paused or deprecated. Withdrawals only.");
   }
   throw e;
 }
-
 ```
 
-### Preview ≠ Final (State Changed Between Calls)
+### Preview differs from final (state changed between calls)
 
-**Symptom:** Actual mint/redeem differs from `previewConversion` (TVL/price moved)
-**Fix:** Treat preview as indicative; consider a tolerance check and re-preview on confirm step.
+**Symptom**: Actual mint or redeem differs from `previewConversion` because TVL or price moved.
+**Fix**: Treat preview as indicative. Consider a tolerance check and re-preview on the confirm step.
 
 ```tsx
 const pre = await vault.previewConversion(amount);
-// (Optional) Assert minimum expected output for UX only; on-chain still authoritative
-
+// Optional: assert a minimum expected output for UX. On-chain output is still authoritative.
 ```
 
-## ERC-20 Weirdness (Non-Standard Tokens)
+## Non-standard ERC20 tokens
 
 Some tokens:
 
-- Don’t return `bool` on `approve/transfer`.
-- Require **reset-to-zero** before increasing allowance.
-- Have chain-specific **decimals** (e.g., USDC 6 vs 18 elsewhere).
+- Do not return `bool` from `approve` or `transfer`.
+- Require resetting allowance to zero before increasing it.
+- Have chain-specific decimals (for example USDC is 6 on Ethereum).
 
-**Defensive pattern:**
+**Defensive pattern**:
 
 ```tsx
-// Reset-to-zero pattern (safe for finicky tokens)
+// Reset-to-zero pattern (safe for non-standard tokens)
 await (await erc20.approve(vault.getAddress(), 0n)).wait();
 await (await erc20.approve(vault.getAddress(), amount)).wait();
-
 ```
 
-## Allowance Race Conditions
+## Allowance race conditions
 
-If you fire multiple approvals/deposits in parallel, transactions can race and revert.
+If you fire multiple approvals or deposits in parallel, transactions can race and revert.
 
-**Fix:** Sequence writes, or serialize by vault+user key.
+**Fix**: Sequence writes, or serialize by vault and user key.
 
 ```tsx
 await (await erc20.approve(vault.getAddress(), amount)).wait();
 await (await vault.deposit(amount)).wait();
 ```
 
-## Signer/Wallet Lifecycle
+## Signer and wallet lifecycle
 
-**Symptoms:** `vault is undefined`, `signer missing`, user switched accounts/networks mid-flow.
-**Fix:** Re-acquire signer before writes and assert chain id matches.
+**Symptoms**: `vault is undefined`, `signer missing`, user switched accounts or networks mid-flow.
+**Fix**: Re-acquire the signer before writes and assert the chain ID matches.
 
 ```tsx
 // Wagmi
@@ -303,12 +307,11 @@ if (!vault) throw new Error("Wallet not connected. Connect before writing.");
 // Vanilla
 const networkOk = (await provider.getNetwork()).chainId === expectedChainId;
 if (!networkOk) throw new Error("Wrong network selected in wallet.");
-
 ```
 
-## EIP-1559 Fee Strategy (Busy Networks)
+## EIP-1559 fee strategy (busy networks)
 
-Avoid underpriced TXs on L2/L1 spikes.
+Avoid underpriced transactions on L2 or L1 spikes.
 
 ```tsx
 const fee = await provider.getFeeData();
@@ -318,30 +321,29 @@ await vault.deposit(amount, {
 });
 ```
 
-## Reorgs & Finality
+## Reorgs and finality
 
-A receipt can succeed, then be reorged in rare cases.
-**Fix:** Wait for extra confirmations where it matters (admin ops, high TVL).
+A receipt can succeed and then be reorged in rare cases.
+**Fix**: Wait for extra confirmations where it matters (admin ops, high TVL).
 
 ```tsx
 const rc = await (await vault.deposit(amount)).wait(2);
-// wait for 2 confirmations
+// Wait for 2 confirmations
 ```
 
-## Retry & Backoff for Transient RPC Errors
+## Retry and backoff for transient RPC errors
 
-Only retry **idempotent reads** or **broadcast** errors clearly marked transient.
+Only retry idempotent reads or broadcast errors clearly marked transient.
 
 ```tsx
-async function retry<T>(fn:()=>Promise<T>, times=2) {
+async function retry<T>(fn: () => Promise<T>, times = 2) {
   try { return await fn(); }
-  catch (e:any) {
+  catch (e: any) {
     if (times && /timeout|429|NETWORK_ERROR/.test(String(e?.message))) {
-      await new Promise(r=>setTimeout(r, 800));
-      return retry(fn, times-1);
+      await new Promise(r => setTimeout(r, 800));
+      return retry(fn, times - 1);
     }
     throw e;
   }
 }
-
 ```

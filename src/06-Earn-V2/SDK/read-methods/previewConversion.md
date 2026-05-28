@@ -4,78 +4,81 @@ description: "Read-method reference for previewConversion(amount) in the Concret
 sidebar_label: "previewConversion(amount)"
 ---
 
-
 Previews how many tokens would be received from:
 
-- A **deposit** (underlying → shares)
-- A **redeem** (shares → underlying)
+- A deposit (underlying to shares)
+- A redeem (shares to underlying)
 
 ## Signature
 
 ```tsx
 previewConversion(amount: bigint): Promise<{
-  vaultTokensReciving?: bigint;
-  underlyingReciving?: bigint;
+  vaultTokensReceiving: number | null;
+  vaultTokensReceivingRaw: bigint | null;
+  vaultTokensRate: number;
+  underlyingReceiving: number | null;
+  underlyingReceivingRaw: bigint | null;
+  underlyingRate: number;
 }>
 ```
 
 ## Parameters
 
-- `amount` (bigint, required) — amount of tokens to simulate deposit/redeem with.
+- `amount` (bigint, required): amount of tokens to simulate the deposit or redeem with.
 
 ## Returns
 
-- `vaultTokensReciving` (bigint, optional) — shares received when depositing underlying.
-- `underlyingReciving` (bigint, optional) — underlying received when redeeming shares.
+- `vaultTokensReceiving` (`number | null`): shares received when depositing the underlying.
+- `vaultTokensReceivingRaw` (`bigint | null`): raw share amount in base units.
+- `vaultTokensRate` (`number`): vault tokens per unit of underlying.
+- `underlyingReceiving` (`number | null`): underlying received when redeeming shares.
+- `underlyingReceivingRaw` (`bigint | null`): raw underlying amount in base units.
+- `underlyingRate` (`number`): underlying per unit of shares.
 
-## Deposit Example
+## Deposit example
 
 ```tsx
-import { ethers } from "ethers";
-
 const details = await vault.getVaultDetails();
 
-// Use helper to get 1.0 underlying as bigint
+// Use the helper to get 1.0 underlying as bigint
 const oneUnderlying = await vault.toUnderlyingBigInt("1.0");
 
-// Preview how many vault tokens you'd receive
+// Preview how many vault tokens you would receive
 const preview = await vault.previewConversion(oneUnderlying);
 
 console.log(
-  `1 ${details.underlaying.symbol} -> ${await vault.applyDecimals(
-    preview.vaultTokensReciving
+  `1 ${details.underlying.symbol} -> ${await vault.applyDecimals(
+    preview.vaultTokensReceivingRaw
   )} ${details.vaultAsset.symbol}`
 );
 ```
 
-## Redeem Example
+## Redeem example
 
 ```tsx
-import { ethers } from "ethers";
-
 const details = await vault.getVaultDetails();
 
-// Use helper to get 1.0 share as bigint
+// Use the helper to get 1.0 share as bigint
 const oneShare = await vault.toBigInt("1.0");
 
-// Preview how much underlying you'd receive
+// Preview how much underlying you would receive
 const preview = await vault.previewConversion(oneShare);
 
 console.log(
-  `1 ${details.vaultAsset.symbol} -> ${await vault.toUnderlayingDecimals(
-    preview.underlyingReciving
-  )} ${details.underlaying.symbol}`
+  `1 ${details.vaultAsset.symbol} -> ${await vault.toUnderlyingDecimals(
+    preview.underlyingReceivingRaw
+  )} ${details.underlying.symbol}`
 );
 ```
 
-## Response Example (Deposit)
+## Response example (deposit)
 
 ```json
-{ "vaultTokensReciving": "10000000000000000" }
+{ "vaultTokensReceiving": 0.01, "vaultTokensReceivingRaw": "10000000000000000" }
 ```
 
-## Response Example (Redeem)
+## Response example (redeem)
 
 ```json
-{ "underlyingReciving": "0" }
+{ "underlyingReceiving": 0, "underlyingReceivingRaw": "0" }
 ```

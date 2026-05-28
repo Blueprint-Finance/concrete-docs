@@ -4,7 +4,7 @@ description: "Write-method reference for redeem(amount) in the Concrete Earn V2 
 sidebar_label: "redeem(amount)"
 ---
 
-Burn **ctAssets** (shares) and receive underlying.
+Burn ctAssets (shares) and receive the underlying.
 
 ## Signature
 
@@ -14,11 +14,11 @@ await vault.redeem(amount: bigint): Promise<Tx>
 
 ## Parameters
 
-- `amount`: **share** amount (in **share decimals**, i.e., `await vault.decimals()`).
+- `amount`: share amount, in share base units (`await vault.decimals()`).
 
 ## Returns
 
-- `Tx`: transaction object; `await tx.wait()` to confirm.
+- `Tx`: transaction object. Call `await tx.wait()` to confirm.
 
 ## Example
 

@@ -4,15 +4,15 @@ description: "Read-method reference for getAddress() in the Concrete Earn V2 SDK
 sidebar_label: "getAddress()"
 ---
 
-Returns the **onchain address** of the vault contract.
+Returns the onchain address of the vault contract.
 
 ## Parameters
 
-- *None*
+- None
 
 ## Returns
 
-- `string` — the vault contract address.
+- `string`: the vault contract address.
 
 ## Example
 
@@ -21,7 +21,7 @@ const vaultAddr = vault.getAddress();
 console.log("Vault contract address:", vaultAddr);
 ```
 
-## Example Response
+## Example response
 
 ```json
 "0x15cE9bE6609db102b70D68ca75a39c555bEa5Fac"

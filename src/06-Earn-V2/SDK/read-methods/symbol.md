@@ -18,7 +18,7 @@ symbol(): Promise<string>
 
 ## Returns
 
-- `string` — vault share symbol.
+- `string`: vault share symbol.
 
 ## Example
 

@@ -8,11 +8,11 @@ This guide shows how to install the SDK, handle optional dependencies, set up pr
 
 ## Prerequisites
 
-Before you can interact with the SDK, you’ll need:
+Before you can interact with the SDK, you need:
 
-- **A Vault Address** → Each call to the SDK requires a target vault contract (e.g., `0x15cE9bE...`). Without it, you can’t query metadata, preview conversions, or deposit.
-- **A Supported Network** → The vault must exist on one of the supported chains (Ethereum, Arbitrum, Berachain, Katana, Corn, Morph).
-- **(Optional) A Signer** → Needed only if you plan to send transactions (e.g., deposits, approvals, redemptions). For read-only queries, a provider is enough.
+- **A vault address**. Each SDK call targets a specific vault contract (for example `0x15cE9bE...`). Without it, you cannot query metadata, preview conversions, or deposit.
+- **A supported network**. The vault must exist on one of the supported chains: Ethereum, Arbitrum, Berachain, Katana, Corn, Morph.
+- **A signer (optional)**. Required for transactions (deposits, approvals, redemptions). Read-only queries only need a provider.
 
 ## Installation
 
@@ -39,20 +39,20 @@ import { useVault, useVaultQuery } from "@concrete-xyz/sdk/wagmi";
 ```
 
 
-Peer dependencies like ethers.js or wagmi are optional.
+Peer dependencies like ethers.js or wagmi are optional:
 
-- If you’re using **vanilla** integration, you’ll need `ethers`.
-- If you’re using **Wagmi**, the SDK auto-wires into your Wagmi setup.
+- For **vanilla** integration, you need `ethers`.
+- For **Wagmi**, the SDK auto-wires into your Wagmi setup.
 
-## Provider Setup
+## Provider setup
 
 Depending on your environment:
 
-- **Vanilla (ethers.js):** you must pass a `JsonRpcProvider`, and optionally a `signer` for write methods.
-- **React hook:** you provide both `provider` and `signer`.
-- **Wagmi hook:** no provider config needed; it auto-detects from your Wagmi app.
+- **Vanilla (ethers.js)**: pass a `JsonRpcProvider`, and optionally a `signer` for write methods.
+- **React hook**: pass both `provider` and `signer`.
+- **Wagmi hook**: no provider config required. The SDK auto-detects from your Wagmi app.
 
-## Initializing a Vault
+## Initializing a vault
 
 ### Vanilla (JS/TS)
 
@@ -60,35 +60,33 @@ Depending on your environment:
 import { getVault } from "@concrete-xyz/sdk";
 import { ethers } from "ethers";
 
-const provider = new ethers.JsonRpcProvider("<https://ethereum-rpc.publicnode.com>");
+const provider = new ethers.JsonRpcProvider("https://ethereum-rpc.publicnode.com");
 
 // Read-only vault instance
-const vault = getVault("v1", "0xVaultAddress", chainId, mainnetProvider);
+const vault = getVault("v1", "0xVaultAddress", chainId, provider);
 
 // Example: get metadata
 const details = await vault.getVaultDetails();
 console.log("Vault symbol:", details.vaultAsset.symbol);
-
 ```
 
-To **write** (approve, deposit, redeem), pass a signer:
+To send transactions (approve, deposit, redeem), pass a signer:
 
 ```tsx
 const signer = new ethers.Wallet(PRIVATE_KEY, provider);
-const vaultWithSigner = getVault("v1", "0xVaultAddress", chainId, mainnetProvider, signer);
-
+const vaultWithSigner = getVault("v1", "0xVaultAddress", chainId, provider, signer);
 ```
 
-### React Hook
+### React hook
 
-The React hook wraps `getVault` in a `useMemo`. For reads/writes, pass both `provider` and `signer`.
+The React hook wraps `getVault` in a `useMemo`. The `chainId` must be a number. For reads and writes, pass both `provider` and `signer`.
 
 ```tsx
 import { useEffect, useState } from "react";
 import { useVault } from "@concrete-xyz/sdk/react";
 
 function VaultInfo({ provider, signer }) {
-  const vault = useVault("v1", "0xVaultAddress", "Berachain", provider, signer);
+  const vault = useVault("v1", "0xVaultAddress", 80094, provider, signer);
   const [symbol, setSymbol] = useState<string>();
 
   useEffect(() => {
@@ -99,15 +97,13 @@ function VaultInfo({ provider, signer }) {
     })();
   }, [vault]);
 
-  return <div>Vault: {symbol ?? "…"}</div>;
+  return <div>Vault: {symbol ?? "..."}</div>;
 }
-
 ```
 
-### Wagmi Hook
+### Wagmi hook
 
-If your app already uses Wagmi, the SDK wires in automatically.
-For **queries**, prefer `useVaultQuery`, which handles `loading`/`error` states.
+If your app already uses Wagmi, the SDK wires in automatically. For queries, prefer `useVaultQuery`, which handles `loading` and `error` states.
 
 ```tsx
 import { useVaultQuery } from "@concrete-xyz/sdk/wagmi";
@@ -125,7 +121,7 @@ function VaultInfo() {
     queryFn: (vault) => vault.getVaultDetails(),
   });
 
-  if (isLoading) return <>Loading…</>;
+  if (isLoading) return <>Loading...</>;
   if (error) return <>Error</>;
   return <div>Vault: {data?.vaultAsset.symbol}</div>;
 }
@@ -133,6 +129,6 @@ function VaultInfo() {
 
 ## Summary
 
-- **Reads** (e.g., `getVaultDetails`, `totalAssets`) → only need a provider.
-- **Writes** (e.g., `approve`, `deposit`, `redeem`) → require a signer.
-- **Wagmi hook** → may briefly return `undefined` while connectors load; `useVaultQuery` handles this safely.
+- **Reads** (for example `getVaultDetails`, `totalAssets`): only need a provider.
+- **Writes** (for example `approve`, `deposit`, `redeem`): require a signer.
+- **Wagmi hook**: may briefly return `undefined` while connectors load. `useVaultQuery` handles this safely.
