@@ -27,7 +27,7 @@ For ERC-20 tokens such as USDC, the app prompts you to approve the token before 
 
 ## How it works
 
-1. Select a supported asset from your wallet on a supported source chain.
+1. In the Deposit tab, open the Accepted Tokens dropdown to see which tokens are accepted using Enso.
 2. Select the destination vault. Enso calculates the route.
 3. Confirm the transaction. Enso swaps your asset into the vault's base asset if needed, bridges it to the vault's network, and deposits it into the vault.
 4. Receive your vault shares, which appear in your portfolio like a direct deposit.
