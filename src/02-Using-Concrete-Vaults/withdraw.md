@@ -4,25 +4,25 @@ description: "Withdrawal documentation for Concrete vaults, covering vault types
 sidebar_label: "Withdraw"
 ---
 
-Withdrawal behavior depends on the vault. Most Concrete vaults are async vaults: you submit a withdrawal request, the vault groups requests into Epochs, processes them on a schedule, and makes the funds available to claim from the vault page. Other vaults settle atomically, and pre-deposit vaults exit through a cross-chain claim. Each vault's page in the Concrete app states which model it uses.
+Withdrawal behavior depends on the vault. Most Concrete vaults are Queued Withdrawal Vaults: you submit a withdrawal request, the vault groups requests into Epochs, processes them on a schedule, and makes the funds available to claim from the vault page. Other vaults settle atomically, and pre-deposit vaults exit through a cross-chain claim. Each vault's page in the Concrete app states which model it uses.
 
 ## Vault Types and Withdrawal Behavior
 
 Concrete ships two vault implementations and one launch-time variant, each with different withdrawal behavior:
 
-- **Atomic vault** – `withdraw()` and `redeem()` execute in a single transaction. Used when the underlying strategy can return assets immediately. Withdrawn assets are returned to the depositor instantly.
-- **Async vault** – settles withdrawals through the **Withdrawal Queue**. Used whenever the strategy cannot return assets atomically, for example positions held in a multi-sig wallet for off-chain or multi-venue execution, Pendle LP unwinds, or money markets with withdrawal cooldowns. A depositor submits a withdrawal request and waits in the queue for a predefined period. This is the most common configuration on Concrete.
-- **Pre-deposit vault** – accepts deposits on one chain before the target vault launches on another. Exit is via a cross-chain share claim, not the Withdrawal Queue. See [Pre-Deposit (Cross-Chain) Vault](#pre-deposit-cross-chain-vault) below.
+- **Standard (Atomic) Vault** – The base implementation; deposits and withdrawals execute in a single transaction. It suits vaults where strategy liquidity is always available on-chain and can be unwound atomically.
+- **Queued Withdrawal Vault** – Adds an Epoch-based withdrawal queue to the Standard vault, where requests are collected during an Epoch, processed at a scheduled point that locks a share price and reserves assets, then claimed by users. Toggled on or off by the Vault Manager, it is the most common production configuration and suits strategies with off-chain custody.
+- **Pre-deposit (Cross Chain) Vault** – Extends the Standard vault for cross-chain launches: users deposit on a source chain, the vault locks, assets bridge to a target chain, and users claim shares there via LayerZero messaging. This phase-specific type is typically succeeded by a Queued Withdrawal Vault on the target chain after launch. See [Pre-deposit (Cross Chain) Vault](#pre-deposit-cross-chain-vault) below.
 
-## Atomic Vault
+## Standard (Atomic) Vault
 
-An atomic vault returns assets in a single transaction. `withdraw()` and `redeem()` deallocate from strategies in the vault's configured deallocation order, burn your shares, and transfer the underlying asset to your wallet in one call.
+A Standard (Atomic) Vault returns assets in a single transaction. `withdraw()` and `redeem()` deallocate from strategies in the vault's configured deallocation order, burn your shares, and transfer the underlying asset to your wallet in one call.
 
 1. **Submit your request.** On the vault page, open the Withdraw tab, enter the amount, and confirm in your wallet.
 2. **The vault settles.** The vault deallocates from strategies in its configured order to cover the withdrawal.
 3. **Receive your assets.** Your shares are burned and the underlying asset is transferred to your wallet in the same transaction.
 
-## Async Vault (Withdrawal Queue)
+## Queued Withdrawal Vault
 
 1. **Submit your request.** On the vault page, open the Withdraw tab, enter the amount, and confirm in your wallet. Your ct[Asset] shares are held by the vault and the request joins the current Epoch.
 2. **The cutoff passes.** At the vault's scheduled cutoff, the Epoch closes to new requests. You can cancel up to the cutoff; once it passes, the request is locked in and a new Epoch opens.
@@ -52,7 +52,7 @@ If Alice submits a withdrawal request on Friday, May 29, her request joins the q
 If requests in a given Epoch exceed the cap, the queue processes them in the order they were submitted (FIFO) across subsequent Epochs. Alice continues earning yield on her position while she waits, and her funds are returned as her place in the queue is reached.
 :::
 
-### Things to Know About Async Vaults
+### Things to Know About Queued Withdrawal Vaults
 
 - **Withdrawals are not instant** – there is a delay between requesting and receiving your funds, set by the vault's Epoch schedule and the time needed to deallocate from strategies.
 - **Your share price is set at processing, not at request** – the share price applied to your withdrawal is locked in when the Epoch is processed, so your final amount can move up or down between submission and settlement.
@@ -61,7 +61,7 @@ If requests in a given Epoch exceed the cap, the queue processes them in the ord
 - **Requests can roll into the next Epoch** – when an Epoch hits the cap or processing is delayed, the remainder of a request can move to the next Epoch.
 - **Each vault sets minimum and maximum withdrawal sizes** – your request must fall within these limits.
 
-## Pre-Deposit (Cross-Chain) Vault
+## Pre-deposit (Cross Chain) Vault
 
 Some Concrete vaults are pre-deposit vaults, designed for launches where you deposit on one chain and receive shares on another. These do not use the Withdrawal Queue; instead, you claim your shares on the destination chain when the vault is ready.
 
