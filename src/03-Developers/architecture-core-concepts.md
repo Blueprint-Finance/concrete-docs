@@ -1,7 +1,7 @@
 ---
-title: "Architecture"
+title: "Architecture: Core Concepts"
 description: "Technical architecture documentation for Concrete Earn V2 smart contracts, roles, modules, and operational design."
-sidebar_label: "Architecture"
+sidebar_label: "Architecture: Core Concepts"
 ---
 
 This page is for integrators and curators working against the Concrete Earn V2 smart contracts. It explains how the four layers fit together: a factory that deploys vaults, vaults that hold user deposits and account for value, strategies that route capital into yield venues, and hooks that gate behavior at specific lifecycle points. After reading, you can plan a vault deployment and reason about the operational pitfalls described at the end.
@@ -33,7 +33,7 @@ A separate **Periphery Factory** deploys strategies and position helpers. Unlike
 
 All vault behavior starts from a single abstract base. The Standard implementation is the baseline; other implementations override specific functions to change one aspect of behavior:
 - **Standard** – the baseline ERC-4626 vault with strategy allocation.
-- **Async** – overrides withdraw semantics with an epoch-based queue. See [How Withdrawals Work](../../05-Vaults/how-withdrawals-work.md) for the user-facing view.
+- **Async** – overrides withdraw semantics with an epoch-based queue. See [How Withdrawals Work](/Using-Concrete-Vaults/withdraw/) for the user-facing view.
 - **Predeposit** – adds a LayerZero-based cross-chain claim flow for assets pre-staked on a source chain before vault deployment on the target. The claim path bypasses the hook lifecycle, so curators using a whitelist hook on a Predeposit vault need a separate gating mechanism for cross-chain claims.
 - **Bridged Standard / Bridged Async** – add a single `unbackedMint` function for one-shot cross-chain migrations. The function requires `totalSupply() == 0` and `maxDepositLimit == 0`, so it can only be used to seed a vault at deployment-init time. These implementations are migration scaffolding rather than ongoing product variants.
 
@@ -88,13 +88,13 @@ On async vaults, withdrawals queue into epochs. The **Withdrawal Manager** (`WIT
 
 The **Priority Withdrawal Executor** (`PRIORITY_WITHDRAWAL_EXECUTOR`) is a privileged fast-path that can settle a withdrawal against the active epoch immediately, paying the user out at `grossAssets - unwindCost`. The executor supplies the `unwindCost` at call time, bounded by an admin-configured cap (`unwindCostCapBP`, default 500 bps, ceiling 10000 bps, set via `setUnwindCostCap`). Calls where the supplied `unwindCost` exceeds the cap revert. This is a trusted operational role, not an automated mechanism.
 
-See [How Withdrawals Work](../../05-Vaults/how-withdrawals-work.md) for the user-side timeline and the relationship between epochs, the cutoff, and queue placement.
+See [How Withdrawals Work](/Using-Concrete-Vaults/withdraw/) for the user-side timeline and the relationship between epochs, the cutoff, and queue placement.
 
 ## Fee distribution
 
 Vaults charge management and performance fees by minting shares to a `managementFeeRecipient` and a `performanceFeeRecipient`. Both addresses are set by the factory owner via vault-side setters (`updateManagementFeeRecipient`, `updatePerformanceFeeRecipient`). Each recipient typically points to a `TwoWayFeeSplitter` contract, which routes accumulated fees between a `mainRecipient` (commonly the curator) and a `secondaryRecipient` (commonly the protocol). The split is set by `feeFractionOfSecondaryRecipient`, denominated in basis points out of 10,000: `0` sends everything to the main recipient, `10000` sends everything to the secondary.
 
-The splitter lives in the periphery, separate from the vault, so a single vault can mint to one shared splitter or to per-recipient splitters. Anyone can call `distributeFees(vault)` to flush accrued fees to the configured recipients. See [Fees](../../fees.md) for the user-facing fee schedule.
+The splitter lives in the periphery, separate from the vault, so a single vault can mint to one shared splitter or to per-recipient splitters. Anyone can call `distributeFees(vault)` to flush accrued fees to the configured recipients. See [Fees](/Using-Concrete-Vaults/fees/) for the user-facing fee schedule.
 
 ## Operational notes
 

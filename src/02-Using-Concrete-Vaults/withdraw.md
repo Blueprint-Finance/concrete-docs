@@ -1,7 +1,7 @@
 ---
-title: "How Withdrawals Work"
+title: "Withdraw"
 description: "Withdrawal documentation for Concrete vaults, covering vault types, the Withdrawal Queue, epoch cadence, and withdrawal caps."
-sidebar_label: "How Withdrawals Work"
+sidebar_label: "Withdraw"
 ---
 
 Withdrawal behavior depends on the vault. Most Concrete Earn vaults are async vaults: you submit a withdrawal request, the vault groups requests into epochs, processes them on a schedule, and makes the funds available to claim from the **Portfolio** tab. Other vaults settle atomically, and pre-deposit vaults exit through a cross-chain claim. Each vault's page in the Concrete app states which model it uses.

@@ -1,7 +1,7 @@
 ---
 title: "Concrete Points Program"
 description: "Overview of the Concrete Points Program, including eligibility, distribution mechanics, and participation expectations."
-sidebar_label: "Rewards"
+sidebar_label: "Concrete Points"
 sidebar_position: 5
 ---
 

@@ -8,180 +8,110 @@ const sidebars = {
       label: 'Overview',
       items: [
         'Overview/welcome',
+        'Overview/yield-vaults-and-erc-4626-standard',
       ],
     },
 
     {
       type: 'category',
-      label: 'Earn V2',
+      label: 'Using Concrete Vaults',
       items: [
-        'Earn-V2/overview',
-        {
-          type: 'category',
-          label: 'Smart Contracts',
-          items: [
-            'Earn-V2/Smart-Contracts/architecture',
-          ],
-        },
+        'Using-Concrete-Vaults/concrete-vault-shares',
+        'Using-Concrete-Vaults/deposit',
+        'Using-Concrete-Vaults/withdraw',
+        'Using-Concrete-Vaults/bridging-and-depositing-with-enso',
+        'Using-Concrete-Vaults/fees',
+        'Using-Concrete-Vaults/concrete-points',
+        'Using-Concrete-Vaults/restricted-jurisdictions',
+        'Using-Concrete-Vaults/risks-and-safety',
+      ],
+    },
+
+    {
+      type: 'category',
+      label: 'Developers',
+      items: [
+        'Developers/architecture-core-concepts',
         {
           type: 'category',
           label: 'SDK',
           items: [
-            'Earn-V2/SDK/overview',
-            'Earn-V2/SDK/setup-configuration',
+            'Developers/SDK/overview',
+            'Developers/SDK/setup-configuration',
             {
               type: 'category',
               label: 'Read Methods',
               items: [
-                'Earn-V2/SDK/read-methods/balanceOf',
-                'Earn-V2/SDK/read-methods/getAddress',
-                'Earn-V2/SDK/read-methods/getUnderlyingDecimals',
-                'Earn-V2/SDK/read-methods/getVaultDetails',
-                'Earn-V2/SDK/read-methods/getAllWithdrawQueueRequests',
-                'Earn-V2/SDK/read-methods/previewConversion',
-                'Earn-V2/SDK/read-methods/totalAssets',
-                'Earn-V2/SDK/read-methods/symbol',
-                'Earn-V2/SDK/read-methods/decimals',
-                'Earn-V2/SDK/read-methods/applyDecimals',
-                'Earn-V2/SDK/read-methods/toUnderlyingDecimals',
+                'Developers/SDK/read-methods/balanceOf',
+                'Developers/SDK/read-methods/getAddress',
+                'Developers/SDK/read-methods/getUnderlyingDecimals',
+                'Developers/SDK/read-methods/getVaultDetails',
+                'Developers/SDK/read-methods/getAllWithdrawQueueRequests',
+                'Developers/SDK/read-methods/previewConversion',
+                'Developers/SDK/read-methods/totalAssets',
+                'Developers/SDK/read-methods/symbol',
+                'Developers/SDK/read-methods/decimals',
+                'Developers/SDK/read-methods/applyDecimals',
+                'Developers/SDK/read-methods/toUnderlyingDecimals',
               ],
             },
             {
               type: 'category',
               label: 'Write Methods',
               items: [
-                'Earn-V2/SDK/write-methods/approve',
-                'Earn-V2/SDK/write-methods/deposit',
-                'Earn-V2/SDK/write-methods/redeem',
-                'Earn-V2/SDK/write-methods/transfer',
-                'Earn-V2/SDK/write-methods/transferFrom',
+                'Developers/SDK/write-methods/approve',
+                'Developers/SDK/write-methods/deposit',
+                'Developers/SDK/write-methods/redeem',
+                'Developers/SDK/write-methods/transfer',
+                'Developers/SDK/write-methods/transferFrom',
               ],
             },
-            'Earn-V2/SDK/decimals-and-conversion-helpers',
-            'Earn-V2/SDK/examples',
-            'Earn-V2/SDK/troubleshooting-and-error-handling',
+            'Developers/SDK/decimals-and-conversion-helpers',
+            'Developers/SDK/examples',
+            'Developers/SDK/troubleshooting-and-error-handling',
           ],
         },
         {
           type: 'category',
           label: 'Subgraph & Events',
           items: [
-            'Earn-V2/Subgraph-and-Events/schema-and-queries',
-            'Earn-V2/Subgraph-and-Events/event-reference-and-use-cases',
+            'Developers/Subgraph-and-Events/schema-and-queries',
+            'Developers/Subgraph-and-Events/event-reference-and-use-cases',
           ],
         },
       ],
     },
 
-
     {
       type: 'category',
-      label: 'Earn V1',
+      label: 'Live Vaults',
       items: [
-        'Earn/deposit-into-vaults',
-        'Earn/ct-assets',
-        'Earn/pre-deposit-vaults',
-        'Earn/how-earn-vaults-maximize-risk-adjusted-yields',
+        {
+          type: 'category',
+          label: 'Concrete DeFi USDT',
+          items: [
+            'Live-Vaults/DeFi-USDT/how-withdrawals-are-processed',
+            'Live-Vaults/DeFi-USDT/important-disclosures',
+          ],
+        },
+        'Live-Vaults/wbtc-vault',
       ],
     },
 
-
-    {
-         type: 'category',
-         label: 'Vaults',
-         items: [
-           'Vaults/yield-vaults',
-           'Vaults/yield-strategies',
-           'Vaults/completed-campaigns',
-           'Vaults/how-withdrawals-work',
-           'Vaults/bridging-with-enso',
-           {
-             type: 'category',
-             label: 'Bera',
-             items: [
-               'Vaults/Bera/wbera',
-               'Vaults/Bera/pre-deposit-vaults-deprecation-guide',
-               'Vaults/Bera/claim-and-transfer',
-               'Vaults/Bera/claim-rewards',
-               'Vaults/Bera/how-to-withdraw',
-               'Vaults/Bera/request-address-change',
-               'Vaults/Bera/unclaimed-rewards',
-               'Vaults/Bera/boyco-depositors-claim',
-             ],
-           },
-           {
-             type: 'category',
-             label: 'Stable',
-             items: [
-              'Vaults/Stable/stable-vaults',
-              'Vaults/Stable/claim',
-             ],
-           },
-           {
-             type: 'category',
-             label: 'Corn',
-             items: [
-               'Vaults/Corn/overview',
-             ],
-           },
-           {
-             type: 'category',
-             label: 'Morph',
-             items: [
-               'Vaults/Morph/overview',
-             ],
-           },
-           {
-             type: 'category',
-             label: 'Tac',
-             items: [
-               'Vaults/Tac/vault-deprecation-guide',
-             ],
-           },
-           {
-             type: 'category',
-             label: 'WBTC',
-             items: [
-               'Vaults/WBTC/wbtc-vault-migration-to-earn-v2',
-             ],
-           },
-           {
-             type: 'category',
-             label: 'Concrete DeFi USDT',
-             items: [
-               'Vaults/DeFi-USDT/how-withdrawals-are-processed',
-               'Vaults/DeFi-USDT/important-disclosures',
-             ],
-           },
-         ],
-       },
-
-
-/*
     {
       type: 'category',
-      label: 'Borrow',
+      label: 'Completed Campaigns',
       items: [
-        'Borrow/overview',
-        'Borrow/enable-concrete',
-        'Borrow/open-loan',
-        'Borrow/open-loan-externally',
-        'Borrow/close-loan',
+        'Completed-Campaigns/overview',
+        'Completed-Campaigns/bera',
+        'Completed-Campaigns/stable',
+        'Completed-Campaigns/corn',
+        'Completed-Campaigns/morph',
+        'Completed-Campaigns/tac',
+        'Completed-Campaigns/pre-deposit-campaigns',
       ],
     },
-    {
-      type: 'category',
-      label: 'Protect',
-      items: [
-        'Protect/overview',
-        'Protect/activate-concrete-protect',
-      ],
-    },
-    */
-    'fees',
-    'rewards',
-    'restrictions',
-    'risks',
+
     'audits',
     'support',
   ],

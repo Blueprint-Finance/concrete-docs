@@ -1,7 +1,7 @@
 ---
-title: "Overview"
+title: "Morph"
 description: "Morph vault documentation for Concrete users, including current status, lifecycle notes, and operation guidance."
-sidebar_label: "Overview"
+sidebar_label: "Morph"
 ---
 
 Concrete’s Morph Vaults provided yield opportunities across the Morph Layer 2 network through ecosystem partnerships with protocols like Quokka, Bulbaswap, and Ethena.
