@@ -4,7 +4,7 @@ description: "Withdrawal documentation for Concrete vaults, covering vault types
 sidebar_label: "Withdraw"
 ---
 
-Withdrawal behavior depends on the vault. Most Concrete vaults are async vaults: you submit a withdrawal request, the vault groups requests into Epochs, processes them on a schedule, and makes the funds available to claim from the **Portfolio** tab. Other vaults settle atomically, and pre-deposit vaults exit through a cross-chain claim. Each vault's page in the Concrete app states which model it uses.
+Withdrawal behavior depends on the vault. Most Concrete vaults are async vaults: you submit a withdrawal request, the vault groups requests into Epochs, processes them on a schedule, and makes the funds available to claim from the vault page. Other vaults settle atomically, and pre-deposit vaults exit through a cross-chain claim. Each vault's page in the Concrete app states which model it uses.
 
 ## Vault Types and Withdrawal Behavior
 
@@ -30,9 +30,9 @@ An atomic vault returns assets in a single transaction. `withdraw()` and `redeem
    - The share price for the Epoch is locked in at that moment, not at request time.
    - Your shares are burned.
    - Your assets are reserved for you to claim. They come from the vault's unallocated balance first (idle deposits and previous unwind leftovers); if that is not enough, the **Allocator** deallocates from strategies to cover the difference.
-4. **Claim your assets.** Your withdrawal status moves to **Available** in the Portfolio tab. Click Claim, confirm in your wallet, and the assets arrive in your wallet. If you have multiple withdrawals ready across different Epochs, you can claim them together.
+4. **Claim your assets.** Your withdrawal status moves to **Available** in the vault page. Click Claim, confirm in your wallet, and the assets arrive in your wallet. If you have multiple withdrawals ready across different Epochs, you can claim them together.
 
-You can track each request in the **Portfolio** tab with status labels **Queued**, **Processing**, and **Available**. The app shows an **estimated withdrawal time** based on the vault's cadence and queue depth.
+You can track each request in the vault page with status labels **Queued**, **Processing**, and **Available**. The app shows an **estimated withdrawal time** based on the vault's cadence and queue depth.
 
 ### Withdrawal Caps Per Epoch
 
