@@ -1,10 +1,10 @@
 ---
-title: "Bridge and deposit with Enso"
+title: "Bridging and Depositing with Enso"
 description: "Concrete vault documentation for bridging into vaults with Enso, covering the cross-chain deposit flow, costs and slippage, and what to expect."
-sidebar_label: "Bridge and deposit with Enso"
+sidebar_label: "Bridging and Depositing with Enso"
 ---
 
-# Bridge and deposit with Enso
+# Bridging and Depositing with Enso
 
 If you hold assets on a chain different from your target vault, you can deposit directly using [Enso](https://www.enso.build/) without manually swapping or bridging first. This page walks you through what happens, what it costs, and what to expect.
 

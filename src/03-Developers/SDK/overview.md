@@ -50,7 +50,7 @@ A user approves the underlying ERC20, the vault consumes the underlying and mint
 Before writing code, you can build a mental model of the flow by trying it directly in the Concrete app:
 
 - [Earn page](https://app.concrete.xyz/earn): deposit into a live vault and see shares minted.
-- [Earn docs](https://docs.concrete.xyz/Earn/deposit-into-vaults): walkthrough of how vault deposits work at the user level.
+- [Earn docs](https://docs.concrete.xyz/Using-Concrete-Vaults/deposit/): walkthrough of how vault deposits work at the user level.
 
 The SDK expresses the same steps in code:
 

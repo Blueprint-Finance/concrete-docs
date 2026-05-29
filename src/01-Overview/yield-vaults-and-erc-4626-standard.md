@@ -1,7 +1,7 @@
 ---
 title: "Yield Vaults and ERC-4626 Standard"
 description: "Concrete vault documentation for yield vaults, covering ERC-4626 shares, how yield accrues, the three vault implementations, and deposit limits."
-sidebar_label: "Yield Vaults"
+sidebar_label: "Yield Vaults and ERC-4626 Standard"
 sidebar_position: 1
 ---
 

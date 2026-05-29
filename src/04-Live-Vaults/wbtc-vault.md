@@ -1,9 +1,10 @@
 ---
-title: "WBTC Vault Migration to Earn V2"
+title: "WBTC Vault"
 description: "WBTC vault migration documentation covering Earn V2 transition steps, claim requirements, and continuity expectations."
+sidebar_label: "WBTC Vault"
 ---
 
-# WBTC Vault Migration to Earn V2
+# WBTC Vault
 
 The WBTC Vault is being upgraded from **Earn V1** to **Earn V2** as part of Concrete’s continued evolution toward institutional-grade vault infrastructure.
 

@@ -1,7 +1,7 @@
 ---
-title: "Concrete Assets and Yield-Bearing Tokens"
-description: "Concrete Earn documentation for concrete Assets, including deposits, withdrawals, and yield participation mechanics."
-sidebar_label: "Concrete Assets"
+title: "Concrete Vault Shares"
+description: "Concrete Earn documentation for Concrete vault shares (ctAssets), including deposits, withdrawals, and yield participation mechanics."
+sidebar_label: "Concrete Vault Shares"
 sidebar_position: 1
 ---
 
