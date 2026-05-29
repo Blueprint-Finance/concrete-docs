@@ -24,9 +24,9 @@ Concrete's security model has several layers:
 * **Accounting updates are bounded on-chain** – a change threshold, cooldown, and validity window constrain how off-chain values move the vault.
 * **Monitoring is independent** – Hypernative provides real-time risk detection.
 * **Pause authority is pre-delegated** – ZeroShadow can pause vaults per mandate.
-* **Code is audited before it ships** – audited by [Halborn, Cantina, Code4rena, and Zellic](../audits.md).
+* **Code is audited before it ships** – audited by [Halborn, Cantina, Code4rena, and Zellic](/Audits/overview/).
 * **Upgrades are pull-based** – vault owners pull from the factory; Concrete cannot push changes to deployed vaults.
 
 **Risk.** Yields are not guaranteed and may fluctuate. Strategy losses reduce share price. You may lose some or all of your deposited assets. Past performance is not indicative of future results.
 
-For full risk disclosures see [Risks and Safety](/Using-Concrete-Vaults/risks-and-safety/).
+For full risk disclosures see [Risks and Safety](/Audits/risks-and-safety/).
