@@ -1,6 +1,6 @@
 # Concrete Docs - LLM Full Context
 
-Generated: 2026-05-28T16:03:31.422Z
+Generated: 2026-05-29T09:45:14.539Z
 Source repository: concrete-docs
 Canonical docs URL: https://docs.concrete.xyz/
 
@@ -195,14 +195,14 @@ Three things sit around the vault:
 - **Strategies** – each bound to a single vault, executing the actual yield logic.
 - **Hooks** – optional modules that run before and after each user operation.
 
-This separation is the central design choice. The vault's contract surface is small and follows ERC-4626; variation between products lives in the contracts the vault holds references to: what venues to use, what restrictions to enforce, and how withdrawals settle. A curator launching a new vault is composing modules, not forking a contract.
+This separation is the central design choice. The vault's contract surface stays close to ERC-4626; product-specific variants (epoch withdrawals, cross-chain claims) layer on top of the standard deposit / mint / withdraw / redeem interface rather than replacing it.; variation between products lives in the contracts the vault holds references to: what venues to use, what restrictions to enforce, and how withdrawals settle. A curator launching a new vault is composing modules, not forking a contract.
 
 ## Factory
 
 The factory is a UUPS-upgradeable contract that CREATE2-deploys vaults as ERC-1967 proxies, maintains a registry of approved implementations, and controls upgrade paths between versions.
 
 Two properties matter:
-- **Vault deployment is permissionless.** Anyone can call `create()` to spin up a new vault, choosing from the implementations the factory owner has approved. The factory is the immutable admin of every vault proxy. Vault upgrade authority cannot be transferred off the factory short of upgrading the factory itself.
+- **Vault deployment is permissionless.** Anyone can call `create()` to spin up a new vault, choosing from the implementations the factory owner has approved. The factory is the immutable admin of every vault proxy. Vault upgrade authority is anchored to the factory and cannot be moved off it short of upgrading the factory itself; the vault's Ownable owner, however, is transferable via standard transferOwnership.
 - **Implementations are curated.** Only approved (and not subsequently blocked) implementations can be deployed, and upgrades only succeed along migration paths the factory owner has explicitly enabled with `setMigratable`.
 
 The result is permissionless launches against the set of vault implementations the factory owner has approved, with new vault types added without forcing existing vaults to migrate.
@@ -225,13 +225,13 @@ The vault is the share token. Depositing mints ERC-20 shares; redeeming burns th
 
 Note that `totalAssets()` is not the cached snapshot. It calls `_previewAccrueYieldAndFees()`, which re-reads each active strategy's `totalAllocatedValue()` live. The cached snapshot is exposed separately as `cachedTotalAssets()` and is the value conversion math reads inside `withYieldAccrual`-guarded operations.
 
-Every user-facing economic operation (`deposit`, `mint`, `withdraw`, `redeem`, `allocate`), plus `configure` and the fee-recipient setters, is wrapped in `withYieldAccrual`. Before the operation runs, the vault polls each strategy's reported value, books the delta as yield or loss, accrues management and performance fees against the new state, and only then proceeds. Share prices users transact against always reflect the latest reconciled value. Pure book-keeping ops (strategy registry, hook updates, deallocation order, pause) skip the modifier because they do not move asset values.
+Every user-facing economic operation (`deposit`, `mint`, `withdraw`, `redeem`), plus `allocate`, configure and the fee-recipient setters (callable only by the factory owner), is wrapped in `withYieldAccrual`. Before the operation runs, the vault polls each strategy's reported value, books the delta as yield or loss, accrues management and performance fees against the new state, and only then proceeds. Share prices users transact against always reflect the latest reconciled value. Pure book-keeping ops (strategy registry, hook updates, deallocation order, pause) skip the modifier because they do not move asset values.
 
 ### Strategy reverts and vault halts
 
 The vault treats whatever a strategy reports as ground truth. There is no on-vault delta threshold, no oracle cross-check, no safety flag. Safety rails live on the strategy side, and the distinction that matters is whether a strategy's value is fully on-chain or depends on an operator push:
 - **Strategies with on-chain accounting** (for example, a lending position) compute their value directly from on-chain state. No off-chain dependency.
-- **Strategies with asynchronous accounting** (for example, multisig-custodied positions) require an operator to push a signed value within a configured `accountingValidityPeriod`. If the push is late, the strategy's value function reverts. `totalAssets()` reverts with it, halting deposits, withdrawals, and async epoch processing until either the strategy admin calls `unpauseAndAdjustTotalAssets` or the **Strategy Manager** toggles the strategy inactive on the vault.
+- **Strategies with asynchronous accounting** (for example, multisig-custodied positions) require an operator to push a signed value within a configured `accountingValidityPeriod`. If the push is late, the strategy's value function reverts. `totalAssets()` reverts with it, halting deposits, withdrawals, and async epoch processing until either the strategy admin calls `unpauseAndAdjustTotalAssets` or the Strategy Manager toggles the strategy inactive on the vault.
 
 If a vault's strategy mix includes asynchronous-accounting strategies, the vault has a hard off-chain dependency on operator availability. Pick the validity period accordingly.
 
@@ -245,10 +245,10 @@ A vault can hold a conservative lending strategy alongside a leveraged looping s
 
 ## Hooks
 
-Hooks are optional modules that run at fixed lifecycle points: before and after `deposit`, `mint`, `withdraw`, and `redeem`. A vault stores at most one hook target plus a flag bitmap; the hook fires only when the relevant bit is set. Shipped hooks include `UserDepositCapHook` (a per-user deposit cap, deployed per vault) and `WhitelistUserDepositHook` (gates deposits to an approved address set). To attach multiple hooks, curators use a `HookContainer` contract that fans out a single vault-side call into up to six downstream hook calls.
+Hooks are optional modules that run at fixed lifecycle points: before and after `deposit`, `mint`, `withdraw`, `redeem` and `transfer`. A vault stores at most one hook target plus a flag bitmap; the hook fires only when the relevant bit is set. Shipped hooks include `UserDepositCapHook` (a per-user deposit cap, deployed per vault) and `WhitelistUserDepositHook` (gates deposits to an approved address set). `DepositLockHook` time-locks shares minted on deposit/mint: locked shares cannot be transferred, withdrawn, or redeemed until each lock’s unlock time (one hook deployment per vault). `DepositLockWithFeeHook` extends that behavior with optional early unlock: users can release locked shares before expiry by paying a time-decaying fee in vault shares. To attach multiple hooks, curators use a `HookContainer` contract that fans out a single vault-side call into up to six downstream hook calls.
 
 Two things to know:
-- **Hook reverts are not isolated.** A revert in any hook, pre or post, reverts the whole user operation. A buggy or misconfigured hook can block all vault operations until the hook configuration is updated. Only the **Hook Manager** (`HOOK_MANAGER`) can attach or replace hooks.
+- **Hook reverts are not isolated.** A revert in any hook, pre or post, reverts the whole user operation. A buggy or misconfigured hook can block all vault operations until the hook configuration is updated. Only the Hook Manager (`HOOK_MANAGER`) can attach or replace hooks.
 - **Hooks gate the standard vault lifecycle, not every state change.** Cross-chain claim paths on the pre-deposit vault and the `unbackedMint` function on Bridged variants do not fire hooks. Curators relying on whitelist enforcement on those implementations need to scope gating appropriately.
 
 ## Authority and roles
