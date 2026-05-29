@@ -10,13 +10,13 @@ Withdrawal behavior depends on the vault. Most Concrete vaults are Queued Withdr
 
 Concrete ships two vault implementations and one launch-time variant, each with different withdrawal behavior:
 
-- **Standard (Atomic) Vault** – The base implementation; deposits and withdrawals execute in a single transaction. It suits vaults where strategy liquidity is always available on-chain and can be unwound atomically.
-- **Queued Withdrawal Vault** – Adds an Epoch-based withdrawal queue to the Standard vault, where requests are collected during an Epoch, processed at a scheduled point that locks a share price and reserves assets, then claimed by users. Toggled on or off by the Vault Manager, it is the most common production configuration and suits strategies with off-chain custody.
-- **Pre-deposit (Cross Chain) Vault** – Extends the Standard vault for cross-chain launches: users deposit on a source chain, the vault locks, assets bridge to a target chain, and users claim shares there via LayerZero messaging. This phase-specific type is typically succeeded by a Queued Withdrawal Vault on the target chain after launch. See [Pre-deposit (Cross Chain) Vault](#pre-deposit-cross-chain-vault) below.
+- **Atomic Vault** – The base implementation; deposits and withdrawals execute in a single transaction. It suits vaults where strategy liquidity is always available on-chain and can be unwound atomically.
+- **Queued Withdrawal Vault** – Adds an Epoch-based withdrawal queue to the Atomic vault, where requests are collected during an Epoch, processed at a scheduled point that locks a share price and reserves assets, then claimed by users. Toggled on or off by the Vault Manager, it is the most common production configuration and suits strategies with off-chain custody.
+- **Pre-deposit (Cross Chain) Vault** – Extends the Atomic vault for cross-chain launches: users deposit on a source chain, the vault locks, assets bridge to a target chain, and users claim shares there via LayerZero messaging. This phase-specific type is typically succeeded by a Queued Withdrawal Vault on the target chain after launch. See [Pre-deposit (Cross Chain) Vault](#pre-deposit-cross-chain-vault) below.
 
-## Standard (Atomic) Vault
+## Atomic Vault
 
-A Standard (Atomic) Vault returns assets in a single transaction. `withdraw()` and `redeem()` deallocate from strategies in the vault's configured deallocation order, burn your shares, and transfer the underlying asset to your wallet in one call.
+An Atomic Vault returns assets in a single transaction. `withdraw()` and `redeem()` deallocate from strategies in the vault's configured deallocation order, burn your shares, and transfer the underlying asset to your wallet in one call.
 
 1. **Submit your request.** On the vault page, open the Withdraw tab, enter the amount, and confirm in your wallet.
 2. **The vault settles.** The vault deallocates from strategies in its configured order to cover the withdrawal.
