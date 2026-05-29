@@ -271,8 +271,11 @@ const config = {
 
           { from: '/fees', to: '/Using-Concrete-Vaults/fees' },
           { from: '/rewards', to: '/Using-Concrete-Vaults/concrete-points' },
-          { from: '/restrictions', to: '/Using-Concrete-Vaults/restricted-jurisdictions' },
-          { from: '/risks', to: '/Using-Concrete-Vaults/risks-and-safety' },
+          { from: '/restrictions', to: '/Audits/restricted-jurisdictions' },
+          { from: '/risks', to: '/Audits/risks-and-safety' },
+          { from: '/audits', to: '/Audits/overview' },
+          { from: '/Using-Concrete-Vaults/restricted-jurisdictions', to: '/Audits/restricted-jurisdictions' },
+          { from: '/Using-Concrete-Vaults/risks-and-safety', to: '/Audits/risks-and-safety' },
         ],
       },
     ],
