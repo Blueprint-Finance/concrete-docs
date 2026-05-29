@@ -218,7 +218,7 @@ Tether. A U.S. dollar-pegged stablecoin issued by Tether Operations.
 
 ### UTC {#utc}
 
-Coordinated Universal Time. The reference time zone used for epoch schedules and other on-chain timing.
+Coordinated Universal Time. The reference time zone used for Epoch schedules and other on-chain timing.
 
 ### UUPS {#uups}
 
