@@ -4,7 +4,7 @@ description: "Read-method reference for balanceOf(address) in the Concrete Earn 
 sidebar_label: "balanceOf(address)"
 ---
 
-Returns the vault share balance (ctAssets) for a given user.
+Returns the vault share balance ([ctAssets](/glossary/#ct-asset)) for a given user.
 
 ## Signature
 
@@ -18,7 +18,7 @@ balanceOf(holder: string): Promise<bigint>
 
 ## Returns
 
-- `bigint`: balance of ctAssets (vault shares).
+- `bigint`: balance of [ctAssets](/glossary/#ct-asset) (vault shares).
 
 ## Example
 

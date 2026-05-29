@@ -4,7 +4,7 @@ description: "Corn vault documentation for Concrete users, including vault behav
 sidebar_label: "Corn"
 ---
 
-Concrete’s Corn Vaults offer access to yield opportunities across the Corn network by bridging assets from Ethereum and deploying them into curated DeFi strategies.
+Concrete’s Corn Vaults offer access to yield opportunities across the Corn network by bridging assets from Ethereum and deploying them into curated [DeFi](/glossary/#defi) strategies.
 
 These vaults are designed for users seeking exposure to optimized stablecoin and Bitcoin strategies, often involving integrations with Curve, lending markets, and partner protocols.
 

@@ -31,7 +31,7 @@ await (await vaultWithSigner.deposit(depositAmount)).wait();
 
 ## 2. Read total assets
 
-Get the vault's total assets and format the value with the SDK's helpers.
+Get the vault's total assets and format the value with the [SDK](/glossary/#sdk)'s helpers.
 
 ```tsx
 const details = await vault.getVaultDetails();
@@ -60,7 +60,7 @@ console.log("Underlying:", details.underlying.symbol);
 
 ## 4. Preview deposit
 
-Estimate how many shares (ctAssets) you will receive for a deposit.
+Estimate how many shares ([ctAssets](/glossary/#ct-asset)) you will receive for a deposit.
 
 ```tsx
 const oneUnderlying = await vault.toUnderlyingBigInt("1.0");
@@ -114,9 +114,9 @@ if (shareBalance > 0n) {
 }
 ```
 
-## 7. Transfer ctAssets
+## 7. Transfer [ctAssets](/glossary/#ct-asset)
 
-Shares (ctAssets) behave like ERC20 tokens and can be transferred.
+Shares (ctAssets) behave like [ERC20](/glossary/#erc-20) tokens and can be transferred.
 
 ```tsx
 const recipient = "0xRecipient...";

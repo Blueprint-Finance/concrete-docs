@@ -23,7 +23,7 @@ sidebar_position: 4
 ## Step 3: Repay and Withdraw
 
 - Select the **Repay Position** option. This will automatically calculate the amount required to repay the loan, including any interest or fees.
-- Below, you'll see the assets available for withdrawal (e.g., USDC or WETH).
+- Below, you'll see the assets available for withdrawal (e.g., [USDC](/glossary/#usdc) or [WETH](/glossary/#weth)).
 - Confirm the repayment and withdrawal by clicking on the **Repay and Withdraw** button.
 
 ## Step 4: Confirm in MetaMask

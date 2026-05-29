@@ -4,7 +4,7 @@ description: "WBTC vault migration documentation covering Earn V2 transition ste
 sidebar_label: "WBTC Vault"
 ---
 
-# WBTC Vault
+# [WBTC](/glossary/#wbtc) Vault
 
 The WBTC Vault is being upgraded from **Earn V1** to **Earn V2** as part of Concrete’s continued evolution toward institutional-grade vault infrastructure.
 
@@ -14,14 +14,14 @@ Only the vault implementation is being upgraded to the Earn V2 framework. Strate
 
 ## Migration Summary
 
-- The WBTC vault is migrating from Earn V1 to Earn V2.
+- The [WBTC](/glossary/#wbtc) vault is migrating from Earn V1 to Earn V2.
 - If you take no action, your underlying WBTC will continue earning yield.
 - After migration, you will not see your Earn V1 shares in the app. Instead, you will see the ability to claim the equivalent amount of Earn V2 shares.
 - You must complete the claim transaction to restore your visible balance in the app.
 
 ## What Is Changing
 
-The WBTC deposited in the **ctWBTC Earn V1 vault** (contract address `0xacce65B9dB4810125adDEa9797BaAaaaD2B73788`) is being migrated to a new Earn V2 **ctWBTC** vault contract (`0xF72bD5A56dE97840F1fdd3641B556126c10aA1c4`).
+The [WBTC](/glossary/#wbtc) deposited in the **[ctWBTC](/glossary/#ct-wbtc) Earn V1 vault** (contract address `0xacce65B9dB4810125adDEa9797BaAaaaD2B73788`) is being migrated to a new Earn V2 **ctWBTC** vault contract (`0xF72bD5A56dE97840F1fdd3641B556126c10aA1c4`).
 
 What changes is the vault implementation and the share token contract representing your position. Your underlying WBTC assets remain fully accounted for.
 
@@ -31,8 +31,8 @@ Earn V2 introduces a more advanced and modular vault framework designed for secu
 
 The upgrade enables:
 
-- Automated accounting and daily NAV synchronization
-- Standardized ERC-4626 share mechanics
+- Automated accounting and daily [NAV](/glossary/#nav) synchronization
+- Standardized [ERC-4626](/glossary/#erc-4626) share mechanics
 - Improved liquidity management architecture
 - Modular strategy integrations
 - Long-term upgrade flexibility
@@ -90,7 +90,7 @@ No. Claiming your new Earn V2 shares is sufficient.
 
 You do not need to:
 
-- Withdraw WBTC
+- Withdraw [WBTC](/glossary/#wbtc)
 - Bridge assets
 - Manually re-deposit
 

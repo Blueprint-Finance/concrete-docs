@@ -16,9 +16,9 @@ Concrete offers a transparent fee structure, ensuring competitive rates across i
 | Deposit fee | None | No fees on deposits. |
 | Withdrawal fee | None | No fees on withdrawals. |
 | Cooldown Exit fee | 0–1% of position | The Withdrawal Cooldown can be bypassed for a fee. Fee size decays linearly as Cooldown approaches the expiry date. |
-| Management fee | 0–10% of position | Annualized charge on vault AUM, accrued continuously based on time elapsed. Configured per vault, with a standard rate of 1.5% applied to most vaults. See individual vault pages for rates applied to your vault. |
+| Management fee | 0–10% of position | Annualized charge on vault [AUM](/glossary/#aum), accrued continuously based on time elapsed. Configured per vault, with a standard rate of 1.5% applied to most vaults. See individual vault pages for rates applied to your vault. |
 | Performance fee | 0–30% of net positive yield | Charged only when strategies produce net gains after losses at the time of yield accrual. Configured per vault. See individual vault pages for current rates. |
-| Hurdle rate on Performance fee | 0–30% of net positive yield | Target return (the hurdle) is defined for depositors, and fees apply only to yield generated above that threshold. Yield up to the hurdle is distributed to depositors.<br /><br />**Fixed APY** – a constant annualized target that compounds.<br />**Fixed APR** – a constant annualized target calculated on a simple (non-compounding) basis.<br />**Dynamic hurdle** – a variable target that adjusts based on external rate. |
+| Hurdle rate on Performance fee | 0–30% of net positive yield | Target return (the hurdle) is defined for depositors, and fees apply only to yield generated above that threshold. Yield up to the hurdle is distributed to depositors.<br /><br />**Fixed [APY](/glossary/#apy)** – a constant annualized target that compounds.<br />**Fixed [APR](/glossary/#apr)** – a constant annualized target calculated on a simple (non-compounding) basis.<br />**Dynamic hurdle** – a variable target that adjusts based on external rate. |
 
 Actual rates are configured per vault. Refer to individual vault pages for current values.
 

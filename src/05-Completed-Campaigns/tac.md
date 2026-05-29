@@ -4,7 +4,7 @@ description: "TAC vault deprecation and withdrawal documentation with required a
 sidebar_label: "TAC"
 ---
 
-The **TAC Stone**, **TAC LevelUSD**, and **TAC Renzo** vaults are live on [Turtle.xyz](https://app.turtle.xyz/campaigns/tac). As part of the deprecation process, the withdrawal instructions steps are now hosted on [Concrete.xyz](https://app.concrete.xyz/earn).
+The **[TAC](/glossary/#tac) Stone**, **TAC LevelUSD**, and **TAC Renzo** vaults are live on [Turtle.xyz](https://app.turtle.xyz/campaigns/tac). As part of the deprecation process, the withdrawal instructions steps are now hosted on [Concrete.xyz](https://app.concrete.xyz/earn).
 
 If you deposited into these vaults, we recommend redeeming your funds promptly. While withdrawals remain open, withdrawing early ensures you keep full control of your assets and helps avoid delays.
 
@@ -12,13 +12,13 @@ If you deposited into these vaults, we recommend redeeming your funds promptly. 
 
 - Your funds are safe and withdrawable via the app
 - Rewards already earned will remain claimable
-- **TAC rewards are managed by Merkl** — they are now unlocked and fully claimable via [app.merkl.xyz/users](https://app.merkl.xyz/users)
+- **[TAC](/glossary/#tac) rewards are managed by Merkl** — they are now unlocked and fully claimable via [app.merkl.xyz/users](https://app.merkl.xyz/users)
 
 ## What’s Changing?
 
 The following vaults will be deprecated:
 
-1. **TAC Stone** — Deposit: `uniBTC`
+1. **[TAC](/glossary/#tac) Stone** — Deposit: `uniBTC`
 2. **TAC LevelUSD** — Deposit: `lvlUSD`
 3. **TAC Renzo** — Deposit: `ezETH`
 
@@ -29,7 +29,7 @@ Yes. Your deposited assets and yield remain secure in audited smart contracts.
 You’ll be able to withdraw them using:
 
 - The Concrete app (until vaults are removed)
-- A manual support process (for users returning after vaults have been disabled on the UI)
+- A manual support process (for users returning after vaults have been disabled on the [UI](/glossary/#ui))
 
 ## What You Need to Do
 
@@ -49,7 +49,7 @@ If the vault is still active in the app:
 
 ## What About Rewards or Points?
 
-TAC rewards are managed by Merkl and are now unlocked and fully claimable.
+[TAC](/glossary/#tac) rewards are managed by Merkl and are now unlocked and fully claimable.
 
 You can view your rewards via [app.merkl.xyz/users](https://app.merkl.xyz/users).
 

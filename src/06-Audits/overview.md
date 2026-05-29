@@ -202,6 +202,6 @@ Concrete Protocol follows a multi-phased audit approach to deliver the highest l
 
 ## Commitment to Excellence
 
-Concrete Protocol’s audit process is part of our larger commitment to maintaining a robust, secure, and transparent platform. We continuously work to identify and mitigate risks, safeguarding user funds and building trust across the DeFi ecosystem.
+Concrete Protocol’s audit process is part of our larger commitment to maintaining a robust, secure, and transparent platform. We continuously work to identify and mitigate risks, safeguarding user funds and building trust across the [DeFi](/glossary/#defi) ecosystem.
 
 Stay tuned for upcoming enhancements and future audits as we expand our security initiatives.

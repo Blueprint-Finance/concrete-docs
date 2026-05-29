@@ -4,7 +4,7 @@ description: "Write-method reference for approve(spender, amount) in the Concret
 sidebar_label: "approve(spender, amount)"
 ---
 
-Set an allowance on ctAssets (vault shares). This is not required for a normal `deposit`. Use it when another contract or account needs permission to move your shares via `transferFrom`.
+Set an allowance on [ctAssets](/glossary/#ct-asset) (vault shares). This is not required for a normal `deposit`. Use it when another contract or account needs permission to move your shares via `transferFrom`.
 
 ## Signature
 
@@ -36,8 +36,8 @@ There are two separate approvals you may encounter when working with Concrete Va
 
 | Type | When to use | Method | Units | Required? |
 | --- | --- | --- | --- | --- |
-| **Underlying approval** | Before calling `deposit`. The vault must be allowed to pull the underlying ERC20 (for example USDC, WETH). | `(await vault.getUnderlyingErc20()).approve(vault.getAddress(), amount)` | Underlying decimals | Always required for deposits |
-| **Share approval** | When another contract or account needs to move your vault shares (ctAssets) with `transferFrom`. | `vault.approve(spender, amount)` | Share decimals | Only for external share movement (not required for deposits) |
+| **Underlying approval** | Before calling `deposit`. The vault must be allowed to pull the underlying [ERC20](/glossary/#erc-20) (for example [USDC](/glossary/#usdc), [WETH](/glossary/#weth)). | `(await vault.getUnderlyingErc20()).approve(vault.getAddress(), amount)` | Underlying decimals | Always required for deposits |
+| **Share approval** | When another contract or account needs to move your vault shares ([ctAssets](/glossary/#ct-asset)) with `transferFrom`. | `vault.approve(spender, amount)` | Share decimals | Only for external share movement (not required for deposits) |
 
 ### Examples
 

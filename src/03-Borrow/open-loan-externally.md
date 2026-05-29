@@ -21,8 +21,8 @@ Concrete offers an efficient interface to initiate borrowing on external markets
 
 ## Step 3: Select Supply and Borrow Assets
 
-- Choose the asset you wish to supply (e.g., **WETH**).
-- Select the asset you want to borrow (e.g., **USDC**).
+- Choose the asset you wish to supply (e.g., **[WETH](/glossary/#weth)**).
+- Select the asset you want to borrow (e.g., **[USDC](/glossary/#usdc)**).
 - You can also specify the external market where you'd like the transaction to take place. For instance, choose **Aave** as the borrowing platform.
 
 ## Step 4: Initiate the Loan
@@ -30,9 +30,9 @@ Concrete offers an efficient interface to initiate borrowing on external markets
 - Click **Open Loan**.
 - In the subsequent window, enter the amount of the selected collateral (supply amount) and the amount you wish to borrow.
 - Review the provided details such as:
-  - **LTV (Loan-to-Value)** percentage
+  - **[LTV](/glossary/#ltv) (Loan-to-Value)** percentage
   - **Asset Prices** (current collateral and liquidation prices)
-  - **Net APR** (interest rate post-optimization)
+  - **Net [APR](/glossary/#apr)** (interest rate post-optimization)
 
 ## Step 5: Confirm and Finalize
 

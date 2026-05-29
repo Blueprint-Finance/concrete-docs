@@ -4,7 +4,7 @@ description: "Write-method reference for deposit(amount) in the Concrete Earn V2
 sidebar_label: "deposit(amount)"
 ---
 
-Mint ctAssets by consuming the underlying token previously approved to the vault. Before calling `deposit(amount)`, the vault must be approved to spend the underlying token.
+Mint [ctAssets](/glossary/#ct-asset) by consuming the underlying token previously approved to the vault. Before calling `deposit(amount)`, the vault must be approved to spend the underlying token.
 
 ## Signature
 
