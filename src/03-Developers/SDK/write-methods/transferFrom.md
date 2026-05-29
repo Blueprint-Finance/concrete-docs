@@ -4,7 +4,7 @@ description: "Write-method reference for transferFrom(from, to, amount) in the C
 sidebar_label: "transferFrom(from, to, amount)"
 ---
 
-Move **ctAssets** from one address to another using an existing **shares allowance** (granted via `vault.approve`).
+Move ctAssets from one address to another using an existing shares allowance granted via `vault.approve`.
 
 ## Signature
 
@@ -14,15 +14,13 @@ await vault.transferFrom(from: string, to: string, amount: bigint): Promise<Tx>
 
 ## Parameters
 
-- `from` (**string**) — Owner of the shares (the address that approved you).
-- `to` (**string**) — Recipient of the shares.
-- `amount` (**bigint**) — Amount of **shares** (in vault decimals).
-Use `vault.toBigInt("5.0")` to convert from human-readable input.
+- `from` (string): owner of the shares (the address that approved you).
+- `to` (string): recipient of the shares.
+- `amount` (bigint): amount of shares in vault base units. Use `vault.toBigInt("5.0")` to convert from a human value.
 
 ## Returns
 
-- `Tx`: an Ethers v6 `TransactionResponse`like object.
-Call `await tx.wait()` to confirm.
+- `Tx`: an Ethers v6 `TransactionResponse`-like object. Call `await tx.wait()` to confirm.
 
 ## Example
 

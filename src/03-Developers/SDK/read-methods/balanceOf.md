@@ -14,29 +14,29 @@ balanceOf(holder: string): Promise<bigint>
 
 ## Parameters
 
-- `holder` (string, required) — Ethereum address of the account.
+- `holder` (string, required): Ethereum address of the account.
 
 ## Returns
 
-- `bigint` — balance of ctAssets (vault shares).
+- `bigint`: balance of ctAssets (vault shares).
 
 ## Example
 
 ```tsx
 const shares = await vault.balanceOf("0xUserAddress");
 
-// Option 1: Use ethers.formatUnits
+// Option 1: ethers.formatUnits
 console.log("Shares:", ethers.formatUnits(shares, await vault.decimals()));
 
-// Option 2: Use SDK helpers for faster + simpler conversions, It applies the decimals of the vault, and stores the decimal value
+// Option 2: SDK helpers (caches decimals internally)
 console.log("Shares (human):", await vault.applyDecimals(shares));
 
-// Convert human → ctShares bigint
+// Convert human value to a ctShares bigint
 const sharesBigInt = await vault.toBigInt("1.0"); // "1.0" ctAsset
 console.log("Shares BigInt:", sharesBigInt);
 
 // Underlying conversions
-console.log("Underlying (to human):", await vault.toUnderlayingDecimals(shares));
+console.log("Underlying (to human):", await vault.toUnderlyingDecimals(shares));
 console.log("Underlying (from human):", await vault.toUnderlyingBigInt("1.0"));
 ```
 

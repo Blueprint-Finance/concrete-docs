@@ -4,17 +4,17 @@ description: "Concrete Earn V2 SDK documentation for quick Start, with implement
 sidebar_label: "Quick Start"
 ---
 
-Concrete’s SDK provides **ready-to-use React + Wagmi hooks** that allow you to integrate deposits, withdrawals, and balance views with just a few lines of code.
+Concrete's SDK provides ready-to-use React and Wagmi hooks for integrating deposits, withdrawals, and balance views in a few lines of code.
 
-These hooks combine ethers, wagmi, and the Concrete SDK internals under the hood. As a developer, you can use them to go from setup → live app in minutes.
+These hooks combine ethers, wagmi, and the Concrete SDK internals under the hood. You can use them to go from setup to a live app in minutes.
 
-## Quick Wagmi Setup
+## Quick Wagmi setup
 
-If you’re using Wagmi hooks like `useVaultDeposit()` or `useVaultWithdraw()`, you only need a minimal configuration file.
+If you use Wagmi hooks like `useVaultDeposit()` or `useVaultWithdraw()`, you only need a minimal vault configuration object.
 
-Concrete’s hooks automatically detect your connected wallet and network from Wagmi.
+Concrete's hooks automatically detect your connected wallet and network from Wagmi.
 
-The following example shows how to setup a vault configuration:
+The following example shows a vault configuration:
 
 ```tsx
 // src/vault-config.ts
@@ -27,27 +27,27 @@ export const vault = {
 ```
 
 :::tip
-Developers already familiar with Wagmi can use their existing configuration — this snippet is only a quick reference. For full setup details, see [Setup Configuration](https://docs.concrete.xyz/Developers/SDK/setup-configuration/) in the main SDK documentation.
+Developers already familiar with Wagmi can use their existing configuration. This snippet is only a quick reference. For full setup details, see [Setup Configuration](https://docs.concrete.xyz/Developers/SDK/setup-configuration/) in the main SDK documentation.
 :::
 
 ## SDK Playground
 
-Concrete provides a **live SDK Playground** inside **Concrete Enterprise** — a lightweight web interface that demonstrates SDK + Wagmi hooks in real time.
+Concrete provides a live SDK Playground inside Concrete Enterprise: a web interface that demonstrates the SDK and Wagmi hooks in real time.
 
-It’s the fastest way to explore Concrete’s SDK without setting up a full app. You can view vault details, deposit, withdraw, and monitor balances all from your browser.
+It is the fastest way to explore the SDK without setting up a full app. You can view vault details, deposit, withdraw, and monitor balances from your browser.
 
-### Try It Yourself
+### Try it yourself
 
-[Open the Concrete SDK Playground](https://build.concrete.xyz/) (Requires wallet connection; runs on test vaults or live networks).
+[Open the Concrete SDK Playground](https://build.concrete.xyz/). Requires a wallet connection. Runs on test vaults or live networks.
 
 ### Features
 
-| Tab | Description | SDK Hook Used |
+| Tab | Description | SDK hook |
 | --- | --- | --- |
-| **Vault Details** | Displays live vault metadata and totals | `useVaultDetails()` |
+| **Vault details** | Displays live vault metadata and totals | `useVaultDetails()` |
 | **Deposits** | Deposit with auto approvals and conversions | `useVaultDeposit()` |
 | **Withdrawals** | Redeem shares for underlying assets | `useVaultWithdraw()` |
-| **Balances** | Show current user balances | `useVaultBalance()` |
+| **Balances** | Show current user balances | `useVaultUserBalance()` |
 
 ## Simple USDC Deposit
 
@@ -139,18 +139,16 @@ function DepositETH() {
 export default DepositETH;
 ```
 
-### What Happens Under the Hood
+### What happens under the hood
 
-1. Detects provider & signer automatically via Wagmi.
-2. Converts human-readable values → `BigInt` based on vault decimals.
-3. Auto-wraps ETH → WETH when `useEther` is `true`.
+1. Detects provider and signer automatically via Wagmi.
+2. Converts human-readable values to `BigInt` based on vault decimals.
+3. Auto-wraps ETH to WETH when `useEther` is `true`.
 4. Handles approvals automatically.
-5. Executes deposit and updates transaction state.
+5. Executes the deposit and updates transaction state.
 6. Returns `isPending`, `isSuccess`, `isError`, and a `mutate()` trigger.
 
-##
-
-## Hook Options
+## Hook options
 
 ```tsx
 const deposit = useVaultDeposit(vaultConfig, options);
@@ -158,9 +156,9 @@ const deposit = useVaultDeposit(vaultConfig, options);
 
 | Option | Type | Default | Description |
 | --- | --- | --- | --- |
-| `amount` | `string | number` | — |
-| `amountToBigInt` | `boolean` | `true` | Converts using vault decimals. |
-| `useEther` | `boolean` | `false` | Wrap native ETH → WETH. |
-| `onSuccess` | `function` | — | Callback when tx confirms. |
-| `onError` | `function` | — | Callback on tx failure. |
-| `onSettled` | `function` | — | Runs after success or error. |
+| `amount` | `string \| number \| bigint` | – | Amount to deposit. Pass a human value when using `amountToBigInt: true`, or a `BigInt` in base units otherwise. |
+| `amountToBigInt` | `boolean` | `false` | When `true`, converts `amount` to a `BigInt` using the vault's underlying decimals. |
+| `useEther` | `boolean` | `false` | Wrap native ETH to WETH before depositing. |
+| `onSuccess` | `function` | – | Callback when the transaction confirms. |
+| `onError` | `function` | – | Callback on transaction failure. |
+| `onSettled` | `function` | – | Runs after success or error. |
