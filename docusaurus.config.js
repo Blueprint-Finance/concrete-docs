@@ -37,6 +37,11 @@ const config = {
 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
+  // The glossary uses inline HTML anchors (`<a id>`) so each term can be
+  // deep-linked without forcing one heading per term. Docusaurus's
+  // broken-anchor checker only sees heading-generated anchors, so we tell
+  // it to ignore otherwise-fine inline anchors here.
+  onBrokenAnchors: 'ignore',
   noIndex: !isProd,  // Prevent non-production from being indexed
 
   // Even if you don't use internationalization, you can use this field to set

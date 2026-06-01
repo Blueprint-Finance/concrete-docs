@@ -10,226 +10,130 @@ This page indexes the acronyms, token tickers, and technical short-forms that sh
 
 ## A
 
-### ABI {#abi}
+<a id="abi"></a>**ABI** – Application Binary Interface. The structured format that defines how clients encode calls to a smart contract and decode its return values.
 
-Application Binary Interface. The structured format that defines how clients encode calls to a smart contract and decode its return values.
+<a id="amm"></a>**AMM** – Automated Market Maker. A smart contract that prices and settles swaps from on-chain liquidity pools rather than from an order book.
 
-### AMM {#amm}
+<a id="api"></a>**API** – Application Programming Interface. A defined set of endpoints or functions one program exposes for another to call.
 
-Automated Market Maker. A smart contract that prices and settles swaps from on-chain liquidity pools rather than from an order book.
+<a id="apr"></a>**APR** – Annual Percentage Rate. An annualized return calculated on a simple (non-compounding) basis.
 
-### API {#api}
+<a id="apy"></a>**APY** – Annual Percentage Yield. An annualized return that assumes compounding.
 
-Application Programming Interface. A defined set of endpoints or functions one program exposes for another to call.
-
-### APR {#apr}
-
-Annual Percentage Rate. An annualized return calculated on a simple (non-compounding) basis.
-
-### APY {#apy}
-
-Annual Percentage Yield. An annualized return that assumes compounding.
-
-### AUM {#aum}
-
-Assets Under Management. The total value of assets a vault or strategy holds and deploys.
+<a id="aum"></a>**AUM** – Assets Under Management. The total value of assets a vault or strategy holds and deploys.
 
 ## B
 
-### BERA {#bera}
+<a id="bera"></a>**BERA** – The native token of the Berachain network.
 
-The native token of the Berachain network.
+<a id="bgt"></a>**BGT** – Berachain Governance Token. The governance token issued by Berachain.
 
-### BGT {#bgt}
-
-Berachain Governance Token. The governance token issued by Berachain.
-
-### BTC {#btc}
-
-Bitcoin. The native asset of the Bitcoin network.
+<a id="btc"></a>**BTC** – Bitcoin. The native asset of the Bitcoin network.
 
 ## C
 
-### ctAsset / ctAssets {#ct-asset}
+<a id="ct-asset"></a>**ctAsset / ctAssets** – Concrete vault share tokens. ERC-20 tokens minted to depositors that represent their portion of a vault's underlying assets and accrued yield. The full term for any vault share issued by Concrete; per-vault tickers follow the pattern `ct<Underlying>`. See [Concrete Vault Shares](/Using-Concrete-Vaults/concrete-vault-shares/).
 
-Concrete vault share tokens. ERC-20 tokens minted to depositors that represent their portion of a vault's underlying assets and accrued yield. The full term for any vault share issued by Concrete; per-vault tickers follow the pattern `ct<Underlying>`. See [Concrete Vault Shares](/Using-Concrete-Vaults/concrete-vault-shares/).
+<a id="ct-beralbtc"></a>**ctBeraLBTC** – Vault share for the Berachain LBTC vault.
 
-### ctBeraLBTC {#ct-beralbtc}
+<a id="ct-defiusdt"></a>**ctDefiUSDT** – Vault share for the Concrete DeFi USDT vault.
 
-Vault share for the Berachain LBTC vault.
+<a id="ct-eth"></a>**ctETH** – Vault share for an ETH-denominated vault.
 
-### ctDefiUSDT {#ct-defiusdt}
+<a id="ct-lbtc"></a>**ctLBTC** – Vault share for an LBTC-denominated vault.
 
-Vault share for the Concrete DeFi USDT vault.
+<a id="ct-stablefrxusd"></a>**ctStablefrxUSD** – Vault share for the Stable Network frxUSD pre-deposit vault.
 
-### ctETH {#ct-eth}
+<a id="ct-stableusdt"></a>**ctStableUSDT** – Vault share for the Stable Network USDT pre-deposit vault.
 
-Vault share for an ETH-denominated vault.
-
-### ctLBTC {#ct-lbtc}
-
-Vault share for an LBTC-denominated vault.
-
-### ctStablefrxUSD {#ct-stablefrxusd}
-
-Vault share for the Stable Network frxUSD pre-deposit vault.
-
-### ctStableUSDT {#ct-stableusdt}
-
-Vault share for the Stable Network USDT pre-deposit vault.
-
-### ctWBTC {#ct-wbtc}
-
-Vault share for a WBTC-denominated vault.
+<a id="ct-wbtc"></a>**ctWBTC** – Vault share for a WBTC-denominated vault.
 
 ## D
 
-### DeFi {#defi}
-
-Decentralized Finance. The class of financial services delivered by smart contracts on public blockchains rather than by intermediated institutions.
+<a id="defi"></a>**DeFi** – Decentralized Finance. The class of financial services delivered by smart contracts on public blockchains rather than by intermediated institutions.
 
 ## E
 
-### EIP {#eip}
+<a id="eip"></a>**EIP** – Ethereum Improvement Proposal. A design document proposing a change or addition to the Ethereum protocol or its standards.
 
-Ethereum Improvement Proposal. A design document proposing a change or addition to the Ethereum protocol or its standards.
+<a id="ena"></a>**ENA** – The governance token of the Ethena protocol.
 
-### ENA {#ena}
+<a id="eoa"></a>**EOA** – Externally Owned Account. A wallet controlled by a private key, in contrast with a smart-contract wallet.
 
-The governance token of the Ethena protocol.
+<a id="erc-20"></a>**ERC-20** – The Ethereum standard for fungible tokens, defined in [EIP-20](https://eips.ethereum.org/EIPS/eip-20).
 
-### EOA {#eoa}
+<a id="erc-4626"></a>**ERC-4626** – The Ethereum standard for tokenized yield-bearing vaults, defined in [EIP-4626](https://eips.ethereum.org/EIPS/eip-4626). The base standard Concrete vaults implement. See [Yield Vaults and ERC-4626 Standard](/Overview/yield-vaults-and-erc-4626-standard/).
 
-Externally Owned Account. A wallet controlled by a private key, in contrast with a smart-contract wallet.
-
-### ERC-20 {#erc-20}
-
-The Ethereum standard for fungible tokens, defined in [EIP-20](https://eips.ethereum.org/EIPS/eip-20).
-
-### ERC-4626 {#erc-4626}
-
-The Ethereum standard for tokenized yield-bearing vaults, defined in [EIP-4626](https://eips.ethereum.org/EIPS/eip-4626). The base standard Concrete vaults implement. See [Yield Vaults and ERC-4626 Standard](/Overview/yield-vaults-and-erc-4626-standard/).
-
-### ETH {#eth}
-
-Ether. The native asset of the Ethereum network.
+<a id="eth"></a>**ETH** – Ether. The native asset of the Ethereum network.
 
 ## F
 
-### FIFO {#fifo}
+<a id="fifo"></a>**FIFO** – First In, First Out. The order in which queued withdrawal requests are processed: the earliest submitted request settles first.
 
-First In, First Out. The order in which queued withdrawal requests are processed: the earliest submitted request settles first.
-
-### frxUSD {#frxusd}
-
-A USD-pegged stablecoin issued by Frax Finance.
+<a id="frxusd"></a>**frxUSD** – A USD-pegged stablecoin issued by Frax Finance.
 
 ## I
 
-### IL {#il}
-
-Impermanent Loss. The unrealized loss an LP can experience when the prices of tokens in a liquidity pool diverge.
+<a id="il"></a>**IL** – Impermanent Loss. The unrealized loss an LP can experience when the prices of tokens in a liquidity pool diverge.
 
 ## J
 
-### JS {#js}
-
-JavaScript.
+<a id="js"></a>**JS** – JavaScript.
 
 ## L
 
-### LBTC {#lbtc}
+<a id="lbtc"></a>**LBTC** – Lombard BTC. A liquid Bitcoin-backed token issued by Lombard.
 
-Lombard BTC. A liquid Bitcoin-backed token issued by Lombard.
+<a id="lp"></a>**LP** – Liquidity Provider, or by extension a liquidity-provider position in an AMM pool.
 
-### LP {#lp}
-
-Liquidity Provider, or by extension a liquidity-provider position in an AMM pool.
-
-### LTV {#ltv}
-
-Loan-to-Value. The ratio of a loan's outstanding amount to the market value of the collateral backing it.
+<a id="ltv"></a>**LTV** – Loan-to-Value. The ratio of a loan's outstanding amount to the market value of the collateral backing it.
 
 ## M
 
-### MPC {#mpc}
-
-Multi-Party Computation. A cryptographic technique that lets multiple parties jointly authorize signatures without any one party holding the full private key.
+<a id="mpc"></a>**MPC** – Multi-Party Computation. A cryptographic technique that lets multiple parties jointly authorize signatures without any one party holding the full private key.
 
 ## N
 
-### NAV {#nav}
-
-Net Asset Value. The value of a vault's holdings net of liabilities, used to derive share price.
+<a id="nav"></a>**NAV** – Net Asset Value. The value of a vault's holdings net of liabilities, used to derive share price.
 
 ## O
 
-### OFAC {#ofac}
-
-Office of Foreign Assets Control. The U.S. Treasury agency that administers economic sanctions and maintains restricted-jurisdiction lists.
+<a id="ofac"></a>**OFAC** – Office of Foreign Assets Control. The U.S. Treasury agency that administers economic sanctions and maintains restricted-jurisdiction lists.
 
 ## R
 
-### RPC {#rpc}
-
-Remote Procedure Call. The request/response interface a client uses to read from or send transactions to a blockchain node.
+<a id="rpc"></a>**RPC** – Remote Procedure Call. The request/response interface a client uses to read from or send transactions to a blockchain node.
 
 ## S
 
-### SDK {#sdk}
-
-Software Development Kit. The Concrete SDK exposes typed methods for reading vault state and submitting deposits, withdrawals, and approvals. See [SDK](/Developers/SDK/overview/).
+<a id="sdk"></a>**SDK** – Software Development Kit. The Concrete SDK exposes typed methods for reading vault state and submitting deposits, withdrawals, and approvals. See [SDK](/Developers/SDK/overview/).
 
 ## T
 
-### TAC {#tac}
+<a id="tac"></a>**TAC** – TAC Network. The blockchain that hosted the TAC Stone, TAC LevelUSD, and TAC Renzo pre-deposit vaults. See [TAC](/Completed-Campaigns/tac/).
 
-TAC Network. The blockchain that hosted the TAC Stone, TAC LevelUSD, and TAC Renzo pre-deposit vaults. See [TAC](/Completed-Campaigns/tac/).
+<a id="ts"></a>**TS** – TypeScript.
 
-### TS {#ts}
-
-TypeScript.
-
-### TVL {#tvl}
-
-Total Value Locked. The total value of assets a protocol, vault, or strategy holds.
+<a id="tvl"></a>**TVL** – Total Value Locked. The total value of assets a protocol, vault, or strategy holds.
 
 ## U
 
-### UI {#ui}
+<a id="ui"></a>**UI** – User Interface.
 
-User Interface.
+<a id="url"></a>**URL** – Uniform Resource Locator. A web address.
 
-### URL {#url}
+<a id="usd"></a>**USD** – U.S. Dollar.
 
-Uniform Resource Locator. A web address.
+<a id="usdc"></a>**USDC** – USD Coin. A U.S. dollar-pegged stablecoin issued by Circle.
 
-### USD {#usd}
+<a id="usdt"></a>**USDT** – Tether. A U.S. dollar-pegged stablecoin issued by Tether Operations.
 
-U.S. Dollar.
+<a id="utc"></a>**UTC** – Coordinated Universal Time. The reference time zone used for Epoch schedules and other on-chain timing.
 
-### USDC {#usdc}
-
-USD Coin. A U.S. dollar-pegged stablecoin issued by Circle.
-
-### USDT {#usdt}
-
-Tether. A U.S. dollar-pegged stablecoin issued by Tether Operations.
-
-### UTC {#utc}
-
-Coordinated Universal Time. The reference time zone used for Epoch schedules and other on-chain timing.
-
-### UUPS {#uups}
-
-Universal Upgradeable Proxy Standard. The upgradeable proxy pattern Concrete vaults use, defined in [EIP-1822](https://eips.ethereum.org/EIPS/eip-1822).
+<a id="uups"></a>**UUPS** – Universal Upgradeable Proxy Standard. The upgradeable proxy pattern Concrete vaults use, defined in [EIP-1822](https://eips.ethereum.org/EIPS/eip-1822).
 
 ## W
 
-### WBTC {#wbtc}
+<a id="wbtc"></a>**WBTC** – Wrapped Bitcoin. An ERC-20 token backed 1:1 by BTC custodied off-chain. See [WBTC Vault](/Live-Vaults/wbtc-vault/).
 
-Wrapped Bitcoin. An ERC-20 token backed 1:1 by BTC custodied off-chain. See [WBTC Vault](/Live-Vaults/wbtc-vault/).
-
-### WETH {#weth}
-
-Wrapped Ether. An ERC-20 representation of ETH used in protocols that expect ERC-20 tokens.
+<a id="weth"></a>**WETH** – Wrapped Ether. An ERC-20 representation of ETH used in protocols that expect ERC-20 tokens.
