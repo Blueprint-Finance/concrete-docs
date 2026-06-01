@@ -242,6 +242,57 @@ Use Docusaurus admonition syntax, sparingly. Limit to one per major section.
 - Link to the Concrete app (`app.concrete.xyz`) when referencing a user action.
 - Never use "click here". Use descriptive text: "visit the Earn page".
 
+### 5.6 Glossary linking
+
+Every page that uses an acronym, token ticker, or technical short-form
+defined in [`/glossary/`](src/glossary.md) MUST link the first occurrence per
+H2 section to its glossary anchor. The link target is `/glossary/#<anchor>`;
+canonical anchors are listed in `src/glossary.md`.
+
+**Rules:**
+
+- Link the first occurrence of each defined term in every H2 section.
+  Subsequent occurrences in the same section stay plain — repeat-linking the
+  same term adds visual noise.
+- Each H2 section resets the "first occurrence" counter. The first mention
+  in `## Withdrawals` and the first mention in `## Fees` are both linked.
+- Skip linking inside:
+  - Fenced code blocks (` ``` ` ... ` ``` `)
+  - Inline code (`` ` ` ``)
+  - HTML / JSX tags
+  - Text already inside a Markdown link
+- Skip the glossary page itself (`src/glossary.md`) — the entries already
+  define the terms.
+
+**Tooling:**
+
+- `scripts/link-glossary-terms.mjs` walks `src/` and applies the rule
+  mechanically. Run it after adding or editing prose. It is idempotent only
+  if all defined terms already appear linked; running it twice on
+  freshly-edited prose can double-link. The safest flow is: revert the
+  affected file with `git checkout HEAD -- <file>` and re-run, or hand-edit
+  and skip the script.
+- The term-to-anchor map lives at the top of that script. When you add a new
+  term to `src/glossary.md`, also add the term-to-anchor pair to the script
+  in length-descending order so e.g. `ctStableUSDT` resolves before `USDT`.
+
+**Example:**
+
+```md
+## How yield accrues
+
+A vault's [APY](/glossary/#apy) is set at strategy level. Each [APY](#)
+quote on the vault page is a 7-day rolling average.
+
+## Fees
+
+A vault's [APY](/glossary/#apy) is reported net of fees. The fee schedule
+lives on the vault's own page.
+```
+
+Both H2s link `APY` on first mention; the second mention in the first H2
+stays plain (and so would the second mention in the second H2).
+
 ## 6. Content Patterns by Article Type
 
 ### 6.1 Conceptual / overview
