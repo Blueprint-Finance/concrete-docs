@@ -23,11 +23,11 @@ Where the yield comes from depends on the specific vault's strategy, which is ma
 
 Concrete offers three ERC-4626 vault implementations, each suited to a different operational pattern. All three share a common base: full ERC-4626 compliance, multi-strategy support, fee management, hooks, and role-based access control.
 
-- **Standard (Atomic) Vault** – The base implementation; deposits and withdrawals execute in a single transaction. It suits vaults where strategy liquidity is always available on-chain and can be unwound atomically.
-- **Queued Withdrawal Vault** – Adds an epoch-based withdrawal queue to the Standard vault, where requests are collected during an epoch, processed at a scheduled point that locks a share price and reserves assets, then claimed by users. Toggled on or off by the Vault Manager, it is the most common production configuration and suits strategies with off-chain custody.
-- **Pre-deposit (Cross Chain) Vault** – Extends the Standard vault for cross-chain launches: users deposit on a source chain, the vault locks, assets bridge to a target chain, and users claim shares there via LayerZero messaging. This phase-specific type is typically succeeded by a Queued Withdrawal Vault on the target chain after launch.
+- **Atomic Vault** – The base implementation; deposits and withdrawals execute in a single transaction. It suits vaults where strategy liquidity is always available on-chain and can be unwound atomically.
+- **Queued Withdrawal Vault** – Adds an epoch-based withdrawal queue to the Atomic vault, where requests are collected during an epoch, processed at a scheduled point that locks a share price and reserves assets, then claimed by users. Toggled on or off by the Vault Manager, it is the most common production configuration and suits strategies with off-chain custody.
+- **Pre-deposit (Cross Chain) Vault** – Extends the Atomic vault for cross-chain launches: users deposit on a source chain, the vault locks, assets bridge to a target chain, and users claim shares there via LayerZero messaging. This phase-specific type is typically succeeded by a Queued Withdrawal Vault on the target chain after launch.
 
-Because they share this base, the Queued Withdrawal and Pre-deposit vaults retain every capability of the Standard vault.
+Because they share this base, the Queued Withdrawal and Pre-deposit vaults retain every capability of the Atomic vault.
 
 ### Limits to Be Aware Of
 
