@@ -267,11 +267,11 @@ canonical anchors are listed in `src/glossary.md`.
 **Tooling:**
 
 - `scripts/link-glossary-terms.mjs` walks `src/` and applies the rule
-  mechanically. Run it after adding or editing prose. It is idempotent only
-  if all defined terms already appear linked; running it twice on
-  freshly-edited prose can double-link. The safest flow is: revert the
-  affected file with `git checkout HEAD -- <file>` and re-run, or hand-edit
-  and skip the script.
+  mechanically. Run `yarn glossary:links` after adding or editing prose and
+  commit the result. The pass is idempotent, so it is safe to re-run.
+- `yarn glossary:check` reports drift without writing and exits non-zero if any
+  first-occurrence link is missing or stale. CI runs this (plus the unit tests,
+  `yarn test`) on every PR that touches `src/`, the glossary, or the script.
 - The term-to-anchor map lives at the top of that script. When you add a new
   term to `src/glossary.md`, also add the term-to-anchor pair to the script
   in length-descending order so e.g. `ctStableUSDT` resolves before `USDT`.

@@ -1,18 +1,26 @@
-// One-off helper for the glossary PR. Walks all docs and links the
-// first occurrence of each glossary term per H2 section to its anchor
-// on /glossary/. Skips the glossary page itself, frontmatter, fenced
-// and inline code, and text already inside a Markdown link.
+// Links the first occurrence of each glossary term per H2 section to its
+// anchor on /glossary/. Skips the glossary page itself, frontmatter, fenced
+// and inline code, raw HTML/JSX, and text already inside a Markdown link.
 //
-// Run from repo root: node scripts/link-glossary-terms.mjs
+// Usage (from repo root):
+//   node scripts/link-glossary-terms.mjs            apply links in place
+//   node scripts/link-glossary-terms.mjs --check    report drift, write
+//                                                    nothing, exit 1 if any
+//                                                    file would change (CI)
+//
+// The pure transform (`linkText`) and its helpers are exported for unit tests
+// in scripts/link-glossary-terms.test.mjs. Importing this module has no side
+// effects; the filesystem walk only runs when the file is executed directly.
 
 import { readdirSync, readFileSync, statSync, writeFileSync } from 'node:fs';
 import { join, relative } from 'node:path';
+import { pathToFileURL } from 'node:url';
 
 const ROOT = new URL('..', import.meta.url).pathname;
 const SRC = join(ROOT, 'src');
 
 // term → anchor on /glossary/
-const TERMS = [
+export const TERMS = [
   // Order matters: longer / more specific tokens first so e.g. `ctStableUSDT`
   // matches before `USDT`, and `ERC-4626` matches before `ERC-20`.
   ['ctBeraLBTC', 'ct-beralbtc'],
@@ -67,29 +75,25 @@ const TERMS = [
   ['UI', 'ui'],
 ];
 
-// Walk src/ recursively for .md and .mdx files
-function walk(dir) {
-  const out = [];
-  for (const entry of readdirSync(dir)) {
-    const full = join(dir, entry);
-    const st = statSync(full);
-    if (st.isDirectory()) out.push(...walk(full));
-    else if (full.endsWith('.md') || full.endsWith('.mdx')) out.push(full);
-  }
-  return out;
-}
-
-// Split text into segments preserving fenced code, inline code, and
-// existing Markdown links / image references / raw HTML tags so we can
-// replace ONLY in plain prose.
-function splitProtected(text) {
-  // Pattern matches, in order of priority, things we must skip:
+// Split text into segments, marking fenced code, inline code, existing
+// Markdown links, image references, and raw HTML/JSX tags as `skip` so terms
+// inside them are never linked. Everything else is `prose`.
+//
+// Known limitations (acceptable for this corpus; the --check CI gate will
+// surface any real fallout):
+//   - A Markdown link whose URL contains a literal `)` (e.g. a Wikipedia
+//     "..._(disambiguation)" link) is matched only up to that first `)`, so
+//     text after it within the same link is treated as prose. None exist in
+//     the docs today.
+//   - Text *between* raw HTML tags (e.g. `<div>APY</div>`) is prose and could
+//     be linked. Inline HTML attributes are protected; block content is not.
+export function splitProtected(text) {
+  // Matched alternatives, in priority order:
   //   1. Fenced code blocks (``` ... ```)
   //   2. HTML/JSX tags like <a ...> ... </a> or self-closing <br />
   //   3. Markdown image syntax ![alt](url)
   //   4. Markdown links [text](url) or [text][ref]
   //   5. Inline code (`...`)
-  // Anything not matched is plain prose, which is what we want to edit.
   const re = /(```[\s\S]*?```)|(<[^>]+>)|(!\[[^\]]*\]\([^)]*\))|(\[[^\]]*\]\([^)]*\)|\[[^\]]*\]\[[^\]]*\])|(`[^`\n]*`)/g;
   const out = [];
   let last = 0;
@@ -103,7 +107,8 @@ function splitProtected(text) {
   return out;
 }
 
-function linkFirstInSection(section) {
+// Link the first prose occurrence of each term within a single section.
+export function linkFirstInSection(section) {
   // Strip frontmatter on the very first section if present.
   let frontmatter = '';
   let body = section;
@@ -117,6 +122,15 @@ function linkFirstInSection(section) {
 
   const segs = splitProtected(body);
   const used = new Set();
+  // Pre-seed with terms that already link to the glossary somewhere in this
+  // section. Without this the pass is not idempotent: a term linked on a
+  // previous run sits inside a protected `[...](...)` segment and is invisible
+  // to the loop below, so the next plain occurrence in the same section would
+  // get linked too, growing one extra link per run. Seeding keeps the "first
+  // occurrence per section" guarantee stable across repeated runs.
+  for (const [term, anchor] of TERMS) {
+    if (body.includes(`](/glossary/#${anchor})`)) used.add(term);
+  }
   for (const seg of segs) {
     if (seg.kind !== 'prose') continue;
     for (const [term, anchor] of TERMS) {
@@ -137,29 +151,83 @@ function linkFirstInSection(section) {
   return frontmatter + segs.map((s) => s.text).join('');
 }
 
-// Split a doc into sections at `## ` headers (top-of-file region before
-// the first H2 counts as one section).
-function processFile(path) {
-  const text = readFileSync(path, 'utf8');
-  if (text.length === 0) return false;
-
-  // Match boundaries at start-of-line `## ` (not `### ` or deeper).
-  const parts = text.split(/(?=^## [^#])/m);
-  const linked = parts.map(linkFirstInSection).join('');
-  if (linked === text) return false;
-  writeFileSync(path, linked);
-  return true;
+// Split a document into H2 sections. A boundary is a line starting with `## `
+// (not `### ` or deeper) that is NOT inside a fenced code block. The
+// top-of-file region before the first H2 is its own section. Fence-aware so a
+// `## ` comment line inside ``` ... ``` is not mistaken for a heading, which
+// would split a code block and expose its contents to linking.
+// `sections.join('\n')` reconstructs the input exactly.
+export function splitSections(text) {
+  const lines = text.split('\n');
+  const sections = [];
+  let current = [];
+  let fence = null; // the active fence marker char (` or ~), or null
+  for (const line of lines) {
+    const open = line.match(/^(```+|~~~+)/);
+    if (open) {
+      const marker = open[1][0];
+      if (fence === null) fence = marker;
+      else if (line.startsWith(fence === '`' ? '```' : '~~~')) fence = null;
+    } else if (fence === null && /^## [^#]/.test(line) && current.length) {
+      sections.push(current.join('\n'));
+      current = [];
+    }
+    current.push(line);
+  }
+  sections.push(current.join('\n'));
+  return sections;
 }
 
-const SKIP = new Set([join(SRC, 'glossary.md')]);
-let changed = 0;
-let scanned = 0;
-for (const f of walk(SRC)) {
-  if (SKIP.has(f)) continue;
-  scanned++;
-  if (processFile(f)) {
+// Pure document-level transform: split into H2 sections and link each.
+// Returns the rewritten document. Idempotent: linkText(linkText(x)) === linkText(x).
+export function linkText(text) {
+  if (text.length === 0) return text;
+  return splitSections(text).map(linkFirstInSection).join('\n');
+}
+
+// Walk src/ recursively for .md and .mdx files.
+function walk(dir) {
+  const out = [];
+  for (const entry of readdirSync(dir)) {
+    const full = join(dir, entry);
+    const st = statSync(full);
+    if (st.isDirectory()) out.push(...walk(full));
+    else if (full.endsWith('.md') || full.endsWith('.mdx')) out.push(full);
+  }
+  return out;
+}
+
+function main() {
+  const check = process.argv.includes('--check');
+  const skip = new Set([join(SRC, 'glossary.md')]);
+  let changed = 0;
+  let scanned = 0;
+  for (const f of walk(SRC)) {
+    if (skip.has(f)) continue;
+    scanned++;
+    const text = readFileSync(f, 'utf8');
+    const linked = linkText(text);
+    if (linked === text) continue;
     changed++;
-    console.log('linked:', relative(ROOT, f));
+    if (!check) writeFileSync(f, linked);
+    console.log(check ? 'out of date:' : 'linked:', relative(ROOT, f));
+  }
+
+  if (check) {
+    if (changed > 0) {
+      console.error(
+        `\n${changed} file(s) have missing or stale glossary links. ` +
+          'Run `node scripts/link-glossary-terms.mjs` and commit the result.',
+      );
+      process.exit(1);
+    }
+    console.log(`\nScanned ${scanned} files, all glossary links up to date.`);
+  } else {
+    console.log(`\nScanned ${scanned} files, modified ${changed}.`);
   }
 }
-console.log(`\nScanned ${scanned} files, modified ${changed}.`);
+
+// Run the walk only when executed directly, not when imported by tests.
+if (import.meta.url === pathToFileURL(process.argv[1] ?? '').href) {
+  main();
+}

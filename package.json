@@ -14,7 +14,10 @@
     "serve": "docusaurus serve",
     "write-translations": "docusaurus write-translations",
     "generate:llms": "node scripts/generate-llms-full.mjs",
-    "write-heading-ids": "docusaurus write-heading-ids"
+    "write-heading-ids": "docusaurus write-heading-ids",
+    "glossary:links": "node scripts/link-glossary-terms.mjs",
+    "glossary:check": "node scripts/link-glossary-terms.mjs --check",
+    "test": "node --test scripts/"
   },
   "dependencies": {
     "@docusaurus/core": "3.9.2",
