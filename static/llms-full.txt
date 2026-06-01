@@ -1,6 +1,6 @@
 # Concrete Docs - LLM Full Context
 
-Generated: 2026-06-01T16:38:18.208Z
+Generated: 2026-06-01T16:51:54.095Z
 Source repository: concrete-docs
 Canonical docs URL: https://docs.concrete.xyz/
 
@@ -53,16 +53,17 @@ This file consolidates every Markdown documentation page in `src/**/*.md` for re
 43. Audits [sidebar] - src/06-Audits/overview.md
 44. Restricted Jurisdictions [sidebar] - src/06-Audits/restricted-jurisdictions.md
 45. Risks and Safety [sidebar] - src/06-Audits/risks-and-safety.md
-46. Support [sidebar] - src/support.md
-47. How to Repay and Withdraw Borrowed Assets [unlisted] - src/03-Borrow/close-loan.md
-48. How to Activate Concrete Borrow (Default Lite) [unlisted] - src/03-Borrow/enable-concrete.md
-49. How to Borrow From External Market [unlisted] - src/03-Borrow/open-loan-externally.md
-50. How to Borrow Against Collateral [unlisted] - src/03-Borrow/open-loan.md
-51. Overview [unlisted] - src/03-Borrow/overview.md
-52. Quick Start (Plug-and-Play Integration) [unlisted] - src/03-Developers/SDK/quick-start.md
-53. getApyDetails() [unlisted] - src/03-Developers/SDK/read-methods/getAPYDetails.md
-54. How to Activate Concrete Protect [unlisted] - src/04-Protect/activate-concrete-protect.md
-55. Overview [unlisted] - src/04-Protect/overview.md
+46. Glossary [sidebar] - src/glossary.md
+47. Support [sidebar] - src/support.md
+48. How to Repay and Withdraw Borrowed Assets [unlisted] - src/03-Borrow/close-loan.md
+49. How to Activate Concrete Borrow (Default Lite) [unlisted] - src/03-Borrow/enable-concrete.md
+50. How to Borrow From External Market [unlisted] - src/03-Borrow/open-loan-externally.md
+51. How to Borrow Against Collateral [unlisted] - src/03-Borrow/open-loan.md
+52. Overview [unlisted] - src/03-Borrow/overview.md
+53. Quick Start (Plug-and-Play Integration) [unlisted] - src/03-Developers/SDK/quick-start.md
+54. getApyDetails() [unlisted] - src/03-Developers/SDK/read-methods/getAPYDetails.md
+55. How to Activate Concrete Protect [unlisted] - src/04-Protect/activate-concrete-protect.md
+56. Overview [unlisted] - src/04-Protect/overview.md
 
 # Document 1: Concrete: Earn Yield on Supported On-Chain Assets
 Source: src/01-Overview/welcome.md
@@ -70,12 +71,12 @@ Doc ID: Overview/welcome
 Public URL: https://docs.concrete.xyz/Overview/welcome/
 In active sidebar: yes
 Description: Official welcome guide to Concrete, explaining the platform mission, core product pillars, and how to get started safely.
-Concrete operates ERC-4626 vaults that accept deposits in a designated underlying asset and deploy that asset into vetted yield strategies. Concrete built the tech stack handles allocation between strategies, real-time accounting updates, and withdrawal processing through automated operator roles. Users interact only with the vault.
+Concrete operates [ERC-4626](https://docs.concrete.xyz/glossary/#erc-4626) vaults that accept deposits in a designated underlying asset and deploy that asset into vetted yield strategies. Concrete built the tech stack handles allocation between strategies, real-time accounting updates, and withdrawal processing through automated operator roles. Users interact only with the vault.
 
 ## What You Get
 
 * **One deposit, fully deployed** – a single deposit puts your capital to work. Curators allocate it across strategies behind the scenes, so you do not juggle positions or chase yield across protocols.
-* **Yield-bearing shares you actually hold** – deposit and you receive ERC-20 vault shares like ctWBTC or ctDefiUSDT. Your share count stays constant. Yield generation occurs through an exchange rate as the vault earns.
+* **Yield-bearing shares you actually hold** – deposit and you receive [ERC-20](https://docs.concrete.xyz/glossary/#erc-20) vault shares like [ctWBTC](https://docs.concrete.xyz/glossary/#ct-wbtc) or [ctDefiUSDT](https://docs.concrete.xyz/glossary/#ct-defiusdt). Your share count stays constant. Yield generation occurs through an exchange rate as the vault earns.
 * **Points and rewards, tracked for you** – eligible vaults accrue on-chain rewards that are indexed automatically.
 
 
@@ -85,7 +86,7 @@ Concrete's security model has several layers:
 
 * **Roles are separated** – governance roles (Vault Manager, Strategy Manager, Hook Manager) are held by the Vault Admin and handle low-frequency, high-impact decisions.
 * **Operational roles are automated** – the Allocator and Withdrawal Manager execute high-frequency, low-impact actions through automated services built and run by Concrete.
-* **Assets live in custody, not the vault** – deposits forward to a MultisigStrategy backed by a Gnosis Safe or Fordefi MPC wallet.
+* **Assets live in custody, not the vault** – deposits forward to a MultisigStrategy backed by a Gnosis Safe or Fordefi [MPC](https://docs.concrete.xyz/glossary/#mpc) wallet.
 * **Accounting updates are bounded on-chain** – a change threshold, cooldown, and validity window constrain how off-chain values move the vault.
 * **Monitoring is independent** – Hypernative provides real-time risk detection.
 * **Pause authority is pre-delegated** – ZeroShadow can pause vaults per mandate.
@@ -104,14 +105,14 @@ Doc ID: Overview/yield-vaults-and-erc-4626-standard
 Public URL: https://docs.concrete.xyz/Overview/yield-vaults-and-erc-4626-standard/
 In active sidebar: yes
 Description: Concrete vault documentation for yield vaults, covering ERC-4626 shares, how yield accrues, the three vault implementations, and deposit limits.
-A Concrete vault is a smart contract that accepts your deposits and issues you shares in return. Concrete vaults are built on the [ERC-4626 Tokenized Vault Standard](https://ethereum.org/en/developers/docs/standards/tokens/erc-4626/). When you deposit, you receive vault shares (an ERC-20 token, e.g. ctDefiUSDT) that represent your portion of the vault.
+A Concrete vault is a smart contract that accepts your deposits and issues you shares in return. Concrete vaults are built on the [ERC-4626 Tokenized Vault Standard](https://ethereum.org/en/developers/docs/standards/tokens/erc-4626/). When you deposit, you receive vault shares (an [ERC-20](https://docs.concrete.xyz/glossary/#erc-20) token, e.g. [ctDefiUSDT](https://docs.concrete.xyz/glossary/#ct-defiusdt)) that represent your portion of the vault.
 
 ## How You Earn Yield
 
 Your share balance does not change over time. Instead, each share becomes worth more (or less) of the underlying asset as the vault's value changes.
 
 In practice:
-- You deposit 1,000 USDT → you receive a fixed number of vault shares.
+- You deposit 1,000 [USDT](https://docs.concrete.xyz/glossary/#usdt) → you receive a fixed number of vault shares.
 - Over time, the vault's strategy generates yield.
 - The exchange rate between your shares and USDT increases.
 - When you withdraw, you redeem your shares for more USDT than you put in.
@@ -120,7 +121,7 @@ Where the yield comes from depends on the specific vault's strategy, which is ma
 
 ### Vault Implementations
 
-Concrete offers three ERC-4626 vault implementations, each suited to a different operational pattern. All three share a common base: full ERC-4626 compliance, multi-strategy support, fee management, hooks, and role-based access control.
+Concrete offers three [ERC-4626](https://docs.concrete.xyz/glossary/#erc-4626) vault implementations, each suited to a different operational pattern. All three share a common base: full ERC-4626 compliance, multi-strategy support, fee management, hooks, and role-based access control.
 
 - **Atomic Vault** – The base implementation; deposits and withdrawals execute in a single transaction. It suits vaults where strategy liquidity is always available on-chain and can be unwound atomically.
 - **Queued Withdrawal Vault** – Adds an epoch-based withdrawal queue to the Atomic vault, where requests are collected during an epoch, processed at a scheduled point that locks a share price and reserves assets, then claimed by users. Toggled on or off by the Vault Manager, it is the most common production configuration and suits strategies with off-chain custody.
@@ -145,9 +146,9 @@ Doc ID: Using-Concrete-Vaults/concrete-vault-shares
 Public URL: https://docs.concrete.xyz/Using-Concrete-Vaults/concrete-vault-shares/
 In active sidebar: yes
 Description: Concrete Earn documentation for Concrete vault shares (ctAssets), including deposits, withdrawals, and yield participation mechanics.
-**ct[asset] tokens** are ERC-20 vault shares that users receive when they deposit the underlying asset into a Concrete vault. The token name and symbol (e.g., "Concrete Senior USDC" / "ctSrUSDC") are set when the vault is deployed.
+**ct[asset] tokens** are [ERC-20](https://docs.concrete.xyz/glossary/#erc-20) vault shares that users receive when they deposit the underlying asset into a Concrete vault. The token name and symbol (e.g., "Concrete Senior [USDC](https://docs.concrete.xyz/glossary/#usdc)" / "ctSrUSDC") are set when the vault is deployed.
 
-A user's share balance does **not** change over time on its own — what changes is the **value** of each share. Concrete vaults follow the ERC-4626 standard, where yield accrues by increasing the share's exchange rate rather than by minting more shares to the user.
+A user's share balance does **not** change over time on its own — what changes is the **value** of each share. Concrete vaults follow the [ERC-4626](https://docs.concrete.xyz/glossary/#erc-4626) standard, where yield accrues by increasing the share's exchange rate rather than by minting more shares to the user.
 
 Per-user yield works as follows: When a user deposits, they receive shares priced at the current exchange rate: `shares = assets × totalSupply / totalAssets` (with a +1 in numerator and denominator to prevent inflation attacks).
 
@@ -157,16 +158,16 @@ Each user's share of the yield is therefore proportional to the number of shares
 
 Yield is recalculated on-chain whenever `accrueYield()` runs, which is triggered automatically on every deposit, mint, withdraw, and redeem via the `withYieldAccrual` modifier.
 
-For example, if a user deposits 1 ETH into an ETH vault when the share price is 1:1, they receive approximately 1 ctETH. Over time, as the vault generates yield, each ctETH becomes redeemable for more than 1 ETH — so 1 ctETH might later be worth 1.04 ETH after a 4% yield period. Share counts don't change; share value does.
+For example, if a user deposits 1 [ETH](https://docs.concrete.xyz/glossary/#eth) into an ETH vault when the share price is 1:1, they receive approximately 1 [ctETH](https://docs.concrete.xyz/glossary/#ct-eth). Over time, as the vault generates yield, each ctETH becomes redeemable for more than 1 ETH — so 1 ctETH might later be worth 1.04 ETH after a 4% yield period. Share counts don't change; share value does.
 
-## Advantages of ct[assets] Over Similar Tokens in DeFi
+## Advantages of ct[assets] Over Similar Tokens in [DeFi](https://docs.concrete.xyz/glossary/#defi)
 
 ## How ct[assets] Are Structured
 
-ct[assets] are structured as ERC-20 tokens, providing flexibility and compatibility within the Ethereum ecosystem. Users can transfer or swap these tokens between wallets or protocols.
+ct[assets] are structured as [ERC-20](https://docs.concrete.xyz/glossary/#erc-20) tokens, providing flexibility and compatibility within the Ethereum ecosystem. Users can transfer or swap these tokens between wallets or protocols.
 
 * **Type**: ERC-20
-  ct[assets] adhere to the ERC-20 standard, ensuring compatibility and interoperability within the DeFi ecosystem.
+  ct[assets] adhere to the ERC-20 standard, ensuring compatibility and interoperability within the [DeFi](https://docs.concrete.xyz/glossary/#defi) ecosystem.
 * **Yield-Bearing**:
   ct[assets] accrue yield from their respective vaults. Holders can claim the yield accumulated during their ownership period, giving them flexibility over when they receive returns.
 * **Transferrable**:
@@ -176,9 +177,9 @@ ct[assets] are structured as ERC-20 tokens, providing flexibility and compatibil
 
 ## Tokenization of Deposits
 
-Initially, users can only deposit into Concrete’s predefined vaults, which are programmed with optimized strategies. These vaults have varying risk profiles depending on the type of asset (e.g., ETH, BTC) and the specific chain.
+Initially, users can only deposit into Concrete’s predefined vaults, which are programmed with optimized strategies. These vaults have varying risk profiles depending on the type of asset (e.g., [ETH](https://docs.concrete.xyz/glossary/#eth), [BTC](https://docs.concrete.xyz/glossary/#btc)) and the specific chain.
 
-When a user deposits assets (e.g., ETH) into Concrete’s vaults, they receive ct[assets] (like ctETH) in return. These tokens function as a digital receipt, confirming the deposit and entitling the holder to the underlying assets plus any accrued interest.
+When a user deposits assets (e.g., ETH) into Concrete’s vaults, they receive ct[assets] (like [ctETH](https://docs.concrete.xyz/glossary/#ct-eth)) in return. These tokens function as a digital receipt, confirming the deposit and entitling the holder to the underlying assets plus any accrued interest.
 
 ### Example: How User Balances Increase Over Time
 
@@ -196,7 +197,7 @@ Yield enters the vault when strategies report a higher allocated value than thei
 
 ### Yield Calculation
 
-Yield is calculated from the underlying performance of the vault's strategies, including APY across allocated protocols, emission rates, and other relevant factors. The result is reflected in the share-to-asset exchange rate. A holder's redeemable value at any point is `convertToAssets(shares)` at the current exchange rate.
+Yield is calculated from the underlying performance of the vault's strategies, including [APY](https://docs.concrete.xyz/glossary/#apy) across allocated protocols, emission rates, and other relevant factors. The result is reflected in the share-to-asset exchange rate. A holder's redeemable value at any point is `convertToAssets(shares)` at the current exchange rate.
 
 ## How to Withdraw Liquidity from the Vaults
 
@@ -222,13 +223,13 @@ After you deposit, the vault puts your assets to work in the yield strategy. No 
 
 ## Supported assets
 
-Each vault accepts a specific asset, for example **WBTC Vault** accepts WBTC, and the **Concrete DeFi USDT** vault accepts USDT. Some vaults have Enso integration, meaning you can bridge, and/or swap and deposit into the vault using all of the listed tokens. See [Bridging and Depositing with Enso](https://docs.concrete.xyz/Using-Concrete-Vaults/bridging-and-depositing-with-enso/) for more.
+Each vault accepts a specific asset, for example **[WBTC](https://docs.concrete.xyz/glossary/#wbtc) Vault** accepts WBTC, and the **Concrete [DeFi](https://docs.concrete.xyz/glossary/#defi) [USDT](https://docs.concrete.xyz/glossary/#usdt)** vault accepts USDT. Some vaults have Enso integration, meaning you can bridge, and/or swap and deposit into the vault using all of the listed tokens. See [Bridging and Depositing with Enso](https://docs.concrete.xyz/Using-Concrete-Vaults/bridging-and-depositing-with-enso/) for more.
 
 ## Before you start
 
 - You need a Web3 wallet (e.g. MetaMask) connected to Concrete.
 - Wallet connection on Earn requires Terms of Use and Privacy Policy acceptance, and the address is screened via Chainalysis for high-risk or restricted-jurisdiction addresses.
-- Ensure you have sufficient tokens for any network fees, for example ETH for Ethereum network deposit fees.
+- Ensure you have sufficient tokens for any network fees, for example [ETH](https://docs.concrete.xyz/glossary/#eth) for Ethereum network deposit fees.
 
 ## Deposit steps
 
@@ -238,7 +239,7 @@ Each vault accepts a specific asset, for example **WBTC Vault** accepts WBTC, an
 4. **Enter the amount** – Type the amount you want to deposit into the vault.
 5. **Approve the token** – If this is your first deposit with this token, you will need to submit an approval transaction allowing the vault contract to spend your tokens. Confirm this in your wallet.
 6. **Confirm the deposit** – Review the deposit summary and click Deposit. Confirm the transaction in your wallet.
-7. **Receive your shares** – Once the transaction confirms, you receive ctAssets (for example, ctWBTC) in your wallet. These shares represent your proportional ownership of the vault and appreciate in value as the vault earns yield.
+7. **Receive your shares** – Once the transaction confirms, you receive [ctAssets](https://docs.concrete.xyz/glossary/#ct-asset) (for example, [ctWBTC](https://docs.concrete.xyz/glossary/#ct-wbtc)) in your wallet. These shares represent your proportional ownership of the vault and appreciate in value as the vault earns yield.
 
 ## What happens after you deposit
 
@@ -284,7 +285,7 @@ You can track each request in the vault page with status labels **Queued**, **Pr
 
 ### Withdrawal Caps Per Epoch
 
-Some vaults set a withdrawal cap that limits the total volume of redemptions processed in a single Epoch, expressed as a percentage of vault TVL. Whether a cap is enabled, and at what threshold, is decided per vault based on the strategy's liquidity profile and unwind capacity. Not all vaults use caps. Caps work alongside cadence to keep Epoch sizes aligned with the strategy's unwind capacity.
+Some vaults set a withdrawal cap that limits the total volume of redemptions processed in a single Epoch, expressed as a percentage of vault [TVL](https://docs.concrete.xyz/glossary/#tvl). Whether a cap is enabled, and at what threshold, is decided per vault based on the strategy's liquidity profile and unwind capacity. Not all vaults use caps. Caps work alongside cadence to keep Epoch sizes aligned with the strategy's unwind capacity.
 
 To check the exact redemption process, including whether a cap is active and at what threshold, visit the specific vault's page.
 
@@ -297,7 +298,7 @@ Say a vault processes withdrawals every Tuesday with a cap of 20% of TVL per Epo
 
 If Alice submits a withdrawal request on Friday, May 29, her request joins the queue for the next Epoch on Tuesday, June 3. If total requests that week are under the 20% cap, Alice receives her funds by Friday, June 6.
 
-If requests in a given Epoch exceed the cap, the queue processes them in the order they were submitted (FIFO) across subsequent Epochs. Alice continues earning yield on her position while she waits, and her funds are returned as her place in the queue is reached.
+If requests in a given Epoch exceed the cap, the queue processes them in the order they were submitted ([FIFO](https://docs.concrete.xyz/glossary/#fifo)) across subsequent Epochs. Alice continues earning yield on her position while she waits, and her funds are returned as her place in the queue is reached.
 :::
 
 ### Things to Know About Queued Withdrawal Vaults
@@ -326,7 +327,7 @@ When a pre-deposit vault enters its claim phase, the vault page in the Concrete 
 
 - **Do my shares continue earning yield while in the queue?** Shares are held by the vault and are not burned until the Epoch is processed. Share price is locked at processing time, so any yield (or loss) the vault records between request and processing is reflected in the price applied to the request.
 - **Can I cancel a withdrawal request?** Yes, for the current open Epoch only, you can cancel on the vault page. Once the cutoff passes, the request cannot be cancelled.
-- **What happens if my request cannot be filled in its Epoch?** When the Epoch reaches its withdrawal cap, the remainder of your withdrawal request is moved to the next Epoch. Your queue position is preserved (FIFO).
+- **What happens if my request cannot be filled in its Epoch?** When the Epoch reaches its withdrawal cap, the remainder of your withdrawal request is moved to the next Epoch. Your queue position is preserved ([FIFO](https://docs.concrete.xyz/glossary/#fifo)).
 
 ---
 
@@ -340,11 +341,11 @@ Description: Concrete vault documentation for bridging into vaults with Enso, co
 
 If you hold assets on a chain different from your target vault, you can deposit directly using [Enso](https://www.enso.build/) without manually swapping or bridging first. This page walks you through what happens, what it costs, and what to expect.
 
-Cross-chain deposit is available only for vaults whose assets Enso can route to. For example, you can deposit into a Berachain vault from USDC or ETH on Ethereum, while some vaults (such as Katana) do not support it. The app shows which assets and vaults are available.
+Cross-chain deposit is available only for vaults whose assets Enso can route to. For example, you can deposit into a Berachain vault from [USDC](https://docs.concrete.xyz/glossary/#usdc) or [ETH](https://docs.concrete.xyz/glossary/#eth) on Ethereum, while some vaults (such as Katana) do not support it. The app shows which assets and vaults are available.
 
 :::info[Example]
 - You hold **USDC** or **ETH** on Ethereum mainnet.
-- Enso **swaps** your asset into the vault's base asset (for example, USDC to LBTC).
+- Enso **swaps** your asset into the vault's base asset (for example, USDC to [LBTC](https://docs.concrete.xyz/glossary/#lbtc)).
 - That asset is **bridged** to the destination chain (for example, Berachain).
 - The vault **mints your shares** (for example, `ctBeraLBTC`) and adds them to your portfolio.
 :::
@@ -355,7 +356,7 @@ Cross-chain deposit is available only for vaults whose assets Enso can route to.
 Your shares are sent to the same wallet address on the destination chain. Make sure you control that address on the destination chain, because you withdraw your funds from there later. If you cannot control it, you will not be able to withdraw.
 :::
 
-For ERC-20 tokens such as USDC, the app prompts you to approve the token before the first transaction. Native ETH needs no approval.
+For [ERC-20](https://docs.concrete.xyz/glossary/#erc-20) tokens such as [USDC](https://docs.concrete.xyz/glossary/#usdc), the app prompts you to approve the token before the first transaction. Native [ETH](https://docs.concrete.xyz/glossary/#eth) needs no approval.
 
 ## How it works
 
@@ -369,8 +370,8 @@ For ERC-20 tokens such as USDC, the app prompts you to approve the token before 
 Three things affect how much you receive. The app shows the estimates before you confirm.
 
 - **Slippage** – Cross-chain routes apply a fixed slippage tolerance of 3%, which you cannot change. The route does not execute if the price moves beyond that gap between quote and execution.
-- **Price impact** – Large trades, or trades routed through low-liquidity pools, move the market price. Higher-liquidity assets such as USDC and WETH usually have lower price impact; thinly traded or volatile assets have more.
-- **Gas** – Standard network gas applies on the source chain (destination execution is paid via the bridge fee, not as a separate user gas payment). The app shows an estimated gas cost in ETH and USD.
+- **Price impact** – Large trades, or trades routed through low-liquidity pools, move the market price. Higher-liquidity assets such as [USDC](https://docs.concrete.xyz/glossary/#usdc) and [WETH](https://docs.concrete.xyz/glossary/#weth) usually have lower price impact; thinly traded or volatile assets have more.
+- **Gas** – Standard network gas applies on the source chain (destination execution is paid via the bridge fee, not as a separate user gas payment). The app shows an estimated gas cost in [ETH](https://docs.concrete.xyz/glossary/#eth) and [USD](https://docs.concrete.xyz/glossary/#usd).
 - **Bridge fees** – The underlying bridge protocol selected by Enso may charge a fee. Any such fee is already reflected in the final amount you receive.
 
 ## What to expect
@@ -410,9 +411,9 @@ Fees are paid by minting vault shares to a fee recipient rather than transferrin
 | Deposit fee | None | No fees on deposits. |
 | Withdrawal fee | None | No fees on withdrawals. |
 | Cooldown Exit fee | 0–1% of position | The Withdrawal Cooldown can be bypassed for a fee. Fee size decays linearly as Cooldown approaches the expiry date. |
-| Management fee | 0–10% of position | Annualized charge on vault AUM, accrued continuously based on time elapsed. Configured per vault, with a standard rate of 1.5% applied to most vaults. See individual vault pages for rates applied to your vault. |
+| Management fee | 0–10% of position | Annualized charge on vault [AUM](https://docs.concrete.xyz/glossary/#aum), accrued continuously based on time elapsed. Configured per vault, with a standard rate of 1.5% applied to most vaults. See individual vault pages for rates applied to your vault. |
 | Performance fee | 0–30% of net positive yield | Charged only when strategies produce net gains after losses at the time of yield accrual. Configured per vault. See individual vault pages for current rates. |
-| Hurdle rate on Performance fee | 0–30% of net positive yield | Target return (the hurdle) is defined for depositors, and fees apply only to yield generated above that threshold. Yield up to the hurdle is distributed to depositors.<br /><br />**Fixed APY** – a constant annualized target that compounds.<br />**Fixed APR** – a constant annualized target calculated on a simple (non-compounding) basis.<br />**Dynamic hurdle** – a variable target that adjusts based on external rate. |
+| Hurdle rate on Performance fee | 0–30% of net positive yield | Target return (the hurdle) is defined for depositors, and fees apply only to yield generated above that threshold. Yield up to the hurdle is distributed to depositors.<br /><br />**Fixed [APY](https://docs.concrete.xyz/glossary/#apy)** – a constant annualized target that compounds.<br />**Fixed [APR](https://docs.concrete.xyz/glossary/#apr)** – a constant annualized target calculated on a simple (non-compounding) basis.<br />**Dynamic hurdle** – a variable target that adjusts based on external rate. |
 
 Actual rates are configured per vault. Refer to individual vault pages for current values.
 
@@ -505,7 +506,7 @@ Three things sit around the vault:
 - **Strategies** – each bound to a single vault, executing the actual yield logic.
 - **Hooks** – optional modules that run before and after each user operation.
 
-This separation is the central design choice. The vault's contract surface stays close to ERC-4626; product-specific variants (epoch withdrawals, cross-chain claims) layer on top of the standard deposit / mint / withdraw / redeem interface rather than replacing it.; variation between products lives in the contracts the vault holds references to: what venues to use, what restrictions to enforce, and how withdrawals settle. A curator launching a new vault is composing modules, not forking a contract.
+This separation is the central design choice. The vault's contract surface stays close to [ERC-4626](https://docs.concrete.xyz/glossary/#erc-4626); product-specific variants (epoch withdrawals, cross-chain claims) layer on top of the standard deposit / mint / withdraw / redeem interface rather than replacing it.; variation between products lives in the contracts the vault holds references to: what venues to use, what restrictions to enforce, and how withdrawals settle. A curator launching a new vault is composing modules, not forking a contract.
 
 ## Factory
 
@@ -522,7 +523,7 @@ A separate **Periphery Factory** deploys strategies and position helpers. Unlike
 ## Vault implementations
 
 All vault behavior starts from a single abstract base. The Standard implementation is the baseline; other implementations override specific functions to change one aspect of behavior:
-- **Standard** – the baseline ERC-4626 vault with strategy allocation.
+- **Standard** – the baseline [ERC-4626](https://docs.concrete.xyz/glossary/#erc-4626) vault with strategy allocation.
 - **Async** – overrides withdraw semantics with an epoch-based queue. See [How Withdrawals Work](https://docs.concrete.xyz/Using-Concrete-Vaults/withdraw/) for the user-facing view.
 - **Predeposit** – adds a LayerZero-based cross-chain claim flow for assets pre-staked on a source chain before vault deployment on the target. The claim path bypasses the hook lifecycle, so curators using a whitelist hook on a Predeposit vault need a separate gating mechanism for cross-chain claims.
 - **Bridged Standard / Bridged Async** – add a single `unbackedMint` function for one-shot cross-chain migrations. The function requires `totalSupply() == 0` and `maxDepositLimit == 0`, so it can only be used to seed a vault at deployment-init time. These implementations are migration scaffolding rather than ongoing product variants.
@@ -531,7 +532,7 @@ Looping strategies and fee splitting are not vault implementations. Looping is a
 
 ## The vault: custody, shares, and accounting
 
-The vault is the share token. Depositing mints ERC-20 shares; redeeming burns them. The vault keeps a cached snapshot of total assets and refreshes it through the `withYieldAccrual` modifier before any economic operation. The combination of a controlled-update cache and accrual-before-conversion defends against donation and inflation attacks, because user-facing conversions settle against the snapshot taken at the start of the call rather than against the live `balanceOf` of the vault.
+The vault is the share token. Depositing mints [ERC-20](https://docs.concrete.xyz/glossary/#erc-20) shares; redeeming burns them. The vault keeps a cached snapshot of total assets and refreshes it through the `withYieldAccrual` modifier before any economic operation. The combination of a controlled-update cache and accrual-before-conversion defends against donation and inflation attacks, because user-facing conversions settle against the snapshot taken at the start of the call rather than against the live `balanceOf` of the vault.
 
 Note that `totalAssets()` is not the cached snapshot. It calls `_previewAccrueYieldAndFees()`, which re-reads each active strategy's `totalAllocatedValue()` live. The cached snapshot is exposed separately as `cachedTotalAssets()` and is the value conversion math reads inside `withYieldAccrual`-guarded operations.
 
@@ -590,7 +591,7 @@ The splitter lives in the periphery, separate from the vault, so a single vault 
 
 ### Example: deploying and turning on a vault
 
-A curator wants to launch a USDC vault that allocates between an idle reserve and one looping strategy.
+A curator wants to launch a [USDC](https://docs.concrete.xyz/glossary/#usdc) vault that allocates between an idle reserve and one looping strategy.
 
 1. Call `factory.create(version, ownerAddr, abi.encode(allocateModule, USDC, initialVaultManager, "Concrete USDC", "ctUSDC"), salt)`. The factory deploys a vault proxy. `ROLE_ADMIN` and `VAULT_MANAGER` are granted to `initialVaultManager`; the `ownerAddr` argument becomes the proxy's `Ownable` owner, the address authorized to call `factory.upgrade(...)` later.
 2. From the `ROLE_ADMIN` account, grant `STRATEGY_MANAGER`, `ALLOCATOR`, `PAUSER`, and (for an async vault) `WITHDRAWAL_MANAGER` and `PRIORITY_WITHDRAWAL_EXECUTOR`. The vault cannot service users yet because no strategy is attached and no role can yet add one.
@@ -614,7 +615,7 @@ Doc ID: Developers/SDK/overview
 Public URL: https://docs.concrete.xyz/Developers/SDK/overview/
 In active sidebar: yes
 Description: Concrete Earn V2 SDK documentation for concrete Earn V2 SDK Overview, with implementation guidance for production-grade integrations.
-Concrete Vaults are [ERC-4626](https://eips.ethereum.org/EIPS/eip-4626)-compliant smart contracts that wrap underlying ERC20 assets (for example WBTC, USDC) into vault shares (ctAssets).
+Concrete Vaults are [ERC-4626](https://eips.ethereum.org/EIPS/eip-4626)-compliant smart contracts that wrap underlying [ERC20](https://docs.concrete.xyz/glossary/#erc-20) assets (for example [WBTC](https://docs.concrete.xyz/glossary/#wbtc), [USDC](https://docs.concrete.xyz/glossary/#usdc)) into vault shares ([ctAssets](https://docs.concrete.xyz/glossary/#ct-asset)).
 
 Each vault behaves as a yield wrapper: deposits are deployed into yield strategies such as money markets, liquidity provision, or restaking.
 
@@ -622,12 +623,12 @@ From an integration perspective, a user's deposit always results in ERC20 shares
 
 ## Usage
 
-Whether you are using vanilla JS/TS, React hooks, or Wagmi integration, you interact with the same underlying vault abstraction.
+Whether you are using vanilla [JS](https://docs.concrete.xyz/glossary/#js)/[TS](https://docs.concrete.xyz/glossary/#ts), React hooks, or Wagmi integration, you interact with the same underlying vault abstraction.
 
-The Concrete SDK provides:
+The Concrete [SDK](https://docs.concrete.xyz/glossary/#sdk) provides:
 
 - **Query vault details**: decimals, symbols, total assets, balances.
-- **Approvals**: approve the vault to spend the underlying ERC20.
+- **Approvals**: approve the vault to spend the underlying [ERC20](https://docs.concrete.xyz/glossary/#erc-20).
 - **Deposits and redemptions**: mint and redeem shares.
 - **Preview conversions**: estimate output before sending a transaction.
 - **Multi-chain support**: Ethereum, Arbitrum, Berachain, Katana, Corn, Morph.
@@ -639,14 +640,14 @@ The Concrete SDK provides:
 | Approve deposit | `(await vault.getUnderlyingErc20()).approve(vaultAddr, amount)` | Allow vault to spend the underlying |
 | Preview conversion | `vault.previewConversion(amount)` | Estimate shares minted or tokens redeemed |
 | Deposit | `vault.deposit(amount)` | Underlying consumed, shares minted |
-| Check share balance | `vault.balanceOf(address)` | User's ctAsset balance |
+| Check share balance | `vault.balanceOf(address)` | User's [ctAsset](https://docs.concrete.xyz/glossary/#ct-asset) balance |
 | Redeem shares | `vault.redeem(amount)` | Shares burned, underlying returned |
 
-## Vault = ERC20 + underlying ERC20
+## Vault = [ERC20](https://docs.concrete.xyz/glossary/#erc-20) + underlying ERC20
 
-Every vault exposes two ERC20 layers while staying ERC-4626 compliant:
+Every vault exposes two ERC20 layers while staying [ERC-4626](https://docs.concrete.xyz/glossary/#erc-4626) compliant:
 
-1. **Vault shares (ctAssets)**
+1. **Vault shares ([ctAssets](https://docs.concrete.xyz/glossary/#ct-asset))**
     - The vault itself extends ERC20.
     - You can call `balanceOf`, `approve`, `transfer`, and other ERC20 methods on the shares.
 2. **Underlying ERC20**
@@ -655,14 +656,14 @@ Every vault exposes two ERC20 layers while staying ERC-4626 compliant:
 
 ## Example flow
 
-A user approves the underlying ERC20, the vault consumes the underlying and mints ctAssets (shares), and the user can redeem the shares later.
+A user approves the underlying [ERC20](https://docs.concrete.xyz/glossary/#erc-20), the vault consumes the underlying and mints [ctAssets](https://docs.concrete.xyz/glossary/#ct-asset) (shares), and the user can redeem the shares later.
 
 Before writing code, you can build a mental model of the flow by trying it directly in the Concrete app:
 
 - [Earn page](https://app.concrete.xyz/earn): deposit into a live vault and see shares minted.
 - [Earn docs](https://docs.concrete.xyz/Using-Concrete-Vaults/deposit/): walkthrough of how vault deposits work at the user level.
 
-The SDK expresses the same steps in code:
+The [SDK](https://docs.concrete.xyz/glossary/#sdk) expresses the same steps in code:
 
 1. **Check underlying balance**
 
@@ -716,11 +717,11 @@ Doc ID: Developers/SDK/setup-configuration
 Public URL: https://docs.concrete.xyz/Developers/SDK/setup-configuration/
 In active sidebar: yes
 Description: Concrete Earn V2 SDK documentation for setup Configuration, with implementation guidance for production-grade integrations.
-This guide shows how to install the SDK, handle optional dependencies, set up providers, and initialize a vault instance using vanilla JS/TS, React, or Wagmi.
+This guide shows how to install the [SDK](https://docs.concrete.xyz/glossary/#sdk), handle optional dependencies, set up providers, and initialize a vault instance using vanilla [JS](https://docs.concrete.xyz/glossary/#js)/[TS](https://docs.concrete.xyz/glossary/#ts), React, or Wagmi.
 
 ## Prerequisites
 
-Before you can interact with the SDK, you need:
+Before you can interact with the [SDK](https://docs.concrete.xyz/glossary/#sdk), you need:
 
 - **A vault address**. Each SDK call targets a specific vault contract (for example `0x15cE9bE...`). Without it, you cannot query metadata, preview conversions, or deposit.
 - **A supported network**. The vault must exist on one of the supported chains: Ethereum, Arbitrum, Berachain, Katana, Corn, Morph.
@@ -728,7 +729,7 @@ Before you can interact with the SDK, you need:
 
 ## Installation
 
-Install the core SDK:
+Install the core [SDK](https://docs.concrete.xyz/glossary/#sdk):
 
 ```bash
 npm install @concrete-xyz/sdk
@@ -762,11 +763,11 @@ Depending on your environment:
 
 - **Vanilla (ethers.js)**: pass a `JsonRpcProvider`, and optionally a `signer` for write methods.
 - **React hook**: pass both `provider` and `signer`.
-- **Wagmi hook**: no provider config required. The SDK auto-detects from your Wagmi app.
+- **Wagmi hook**: no provider config required. The [SDK](https://docs.concrete.xyz/glossary/#sdk) auto-detects from your Wagmi app.
 
 ## Initializing a vault
 
-### Vanilla (JS/TS)
+### Vanilla ([JS](https://docs.concrete.xyz/glossary/#js)/[TS](https://docs.concrete.xyz/glossary/#ts))
 
 ```tsx
 import { getVault } from "@concrete-xyz/sdk";
@@ -815,7 +816,7 @@ function VaultInfo({ provider, signer }) {
 
 ### Wagmi hook
 
-If your app already uses Wagmi, the SDK wires in automatically. For queries, prefer `useVaultQuery`, which handles `loading` and `error` states.
+If your app already uses Wagmi, the [SDK](https://docs.concrete.xyz/glossary/#sdk) wires in automatically. For queries, prefer `useVaultQuery`, which handles `loading` and `error` states.
 
 ```tsx
 import { useVaultQuery } from "@concrete-xyz/sdk/wagmi";
@@ -853,7 +854,7 @@ Doc ID: Developers/SDK/read-methods/balanceOf
 Public URL: https://docs.concrete.xyz/Developers/SDK/read-methods/balanceOf/
 In active sidebar: yes
 Description: Read-method reference for balanceOf(address) in the Concrete Earn V2 SDK, including expected inputs, outputs, and usage context.
-Returns the vault share balance (ctAssets) for a given user.
+Returns the vault share balance ([ctAssets](https://docs.concrete.xyz/glossary/#ct-asset)) for a given user.
 
 ## Signature
 
@@ -867,7 +868,7 @@ balanceOf(holder: string): Promise<bigint>
 
 ## Returns
 
-- `bigint`: balance of ctAssets (vault shares).
+- `bigint`: balance of [ctAssets](https://docs.concrete.xyz/glossary/#ct-asset) (vault shares).
 
 ## Example
 
@@ -934,7 +935,7 @@ Doc ID: Developers/SDK/read-methods/getUnderlyingDecimals
 Public URL: https://docs.concrete.xyz/Developers/SDK/read-methods/getUnderlyingDecimals/
 In active sidebar: yes
 Description: Read-method reference for getUnderlyingDecimals() in the Concrete Earn V2 SDK, including expected inputs, outputs, and usage context.
-Returns the number of decimals used by the vault's underlying ERC20 token. Useful when formatting amounts or constructing `BigInt` inputs.
+Returns the number of decimals used by the vault's underlying [ERC20](https://docs.concrete.xyz/glossary/#erc-20) token. Useful when formatting amounts or constructing `BigInt` inputs.
 
 ## Parameters
 
@@ -942,7 +943,7 @@ Returns the number of decimals used by the vault's underlying ERC20 token. Usefu
 
 ## Returns
 
-- `Promise<number>`: decimals used by the underlying ERC20 (for example `6` for USDC, `18` for WETH).
+- `Promise<number>`: decimals used by the underlying [ERC20](https://docs.concrete.xyz/glossary/#erc-20) (for example `6` for [USDC](https://docs.concrete.xyz/glossary/#usdc), `18` for [WETH](https://docs.concrete.xyz/glossary/#weth)).
 
 ## Example
 
@@ -968,7 +969,7 @@ Doc ID: Developers/SDK/read-methods/getVaultDetails
 Public URL: https://docs.concrete.xyz/Developers/SDK/read-methods/getVaultDetails/
 In active sidebar: yes
 Description: Read-method reference for getVaultDetails() in the Concrete Earn V2 SDK, including expected inputs, outputs, and usage context.
-Returns metadata about the vault and its underlying ERC20.
+Returns metadata about the vault and its underlying [ERC20](https://docs.concrete.xyz/glossary/#erc-20).
 
 ## Signature
 
@@ -1010,7 +1011,7 @@ type VaultDetails = {
 };
 ```
 
-To get an ERC20 instance for the underlying token, call `await vault.getUnderlyingErc20()`. The `underlying` object on `VaultDetails` only exposes metadata.
+To get an [ERC20](https://docs.concrete.xyz/glossary/#erc-20) instance for the underlying token, call `await vault.getUnderlyingErc20()`. The `underlying` object on `VaultDetails` only exposes metadata.
 
 ## Example
 
@@ -1311,7 +1312,7 @@ Doc ID: Developers/SDK/read-methods/symbol
 Public URL: https://docs.concrete.xyz/Developers/SDK/read-methods/symbol/
 In active sidebar: yes
 Description: Read-method reference for symbol() in the Concrete Earn V2 SDK, including expected inputs, outputs, and usage context.
-Returns the vault share symbol (ctAsset symbol).
+Returns the vault share symbol ([ctAsset](https://docs.concrete.xyz/glossary/#ct-asset) symbol).
 
 ## Signature
 
@@ -1361,7 +1362,7 @@ decimals(): Promise<number>
 
 ## Returns
 
-- `number`: decimals used for ctAssets.
+- `number`: decimals used for [ctAssets](https://docs.concrete.xyz/glossary/#ct-asset).
 
 ## Example
 
@@ -1415,7 +1416,7 @@ Doc ID: Developers/SDK/read-methods/toUnderlyingDecimals
 Public URL: https://docs.concrete.xyz/Developers/SDK/read-methods/toUnderlyingDecimals/
 In active sidebar: yes
 Description: Read-method reference for toUnderlyingDecimals(amount) in the Concrete Earn V2 SDK, including expected inputs, outputs, and usage context.
-Converts a raw `BigInt` amount into a human-readable decimal-adjusted value using the underlying asset's decimals. Use it to display underlying balances (for example USDC, WETH) and to interpret preview results from `previewConversion()`.
+Converts a raw `BigInt` amount into a human-readable decimal-adjusted value using the underlying asset's decimals. Use it to display underlying balances (for example [USDC](https://docs.concrete.xyz/glossary/#usdc), [WETH](https://docs.concrete.xyz/glossary/#weth)) and to interpret preview results from `previewConversion()`.
 
 ## Parameters
 
@@ -1447,7 +1448,7 @@ Doc ID: Developers/SDK/write-methods/approve
 Public URL: https://docs.concrete.xyz/Developers/SDK/write-methods/approve/
 In active sidebar: yes
 Description: Write-method reference for approve(spender, amount) in the Concrete Earn V2 SDK, including transaction flow, required approvals, and integration notes.
-Set an allowance on ctAssets (vault shares). This is not required for a normal `deposit`. Use it when another contract or account needs permission to move your shares via `transferFrom`.
+Set an allowance on [ctAssets](https://docs.concrete.xyz/glossary/#ct-asset) (vault shares). This is not required for a normal `deposit`. Use it when another contract or account needs permission to move your shares via `transferFrom`.
 
 ## Signature
 
@@ -1479,8 +1480,8 @@ There are two separate approvals you may encounter when working with Concrete Va
 
 | Type | When to use | Method | Units | Required? |
 | --- | --- | --- | --- | --- |
-| **Underlying approval** | Before calling `deposit`. The vault must be allowed to pull the underlying ERC20 (for example USDC, WETH). | `(await vault.getUnderlyingErc20()).approve(vault.getAddress(), amount)` | Underlying decimals | Always required for deposits |
-| **Share approval** | When another contract or account needs to move your vault shares (ctAssets) with `transferFrom`. | `vault.approve(spender, amount)` | Share decimals | Only for external share movement (not required for deposits) |
+| **Underlying approval** | Before calling `deposit`. The vault must be allowed to pull the underlying [ERC20](https://docs.concrete.xyz/glossary/#erc-20) (for example [USDC](https://docs.concrete.xyz/glossary/#usdc), [WETH](https://docs.concrete.xyz/glossary/#weth)). | `(await vault.getUnderlyingErc20()).approve(vault.getAddress(), amount)` | Underlying decimals | Always required for deposits |
+| **Share approval** | When another contract or account needs to move your vault shares ([ctAssets](https://docs.concrete.xyz/glossary/#ct-asset)) with `transferFrom`. | `vault.approve(spender, amount)` | Share decimals | Only for external share movement (not required for deposits) |
 
 ### Examples
 
@@ -1503,7 +1504,7 @@ Doc ID: Developers/SDK/write-methods/deposit
 Public URL: https://docs.concrete.xyz/Developers/SDK/write-methods/deposit/
 In active sidebar: yes
 Description: Write-method reference for deposit(amount) in the Concrete Earn V2 SDK, including transaction flow, required approvals, and integration notes.
-Mint ctAssets by consuming the underlying token previously approved to the vault. Before calling `deposit(amount)`, the vault must be approved to spend the underlying token.
+Mint [ctAssets](https://docs.concrete.xyz/glossary/#ct-asset) by consuming the underlying token previously approved to the vault. Before calling `deposit(amount)`, the vault must be approved to spend the underlying token.
 
 ## Signature
 
@@ -1553,7 +1554,7 @@ Doc ID: Developers/SDK/write-methods/redeem
 Public URL: https://docs.concrete.xyz/Developers/SDK/write-methods/redeem/
 In active sidebar: yes
 Description: Write-method reference for redeem(amount) in the Concrete Earn V2 SDK, including transaction flow, required approvals, and integration notes.
-Burn ctAssets (shares) and receive the underlying.
+Burn [ctAssets](https://docs.concrete.xyz/glossary/#ct-asset) (shares) and receive the underlying.
 
 ## Signature
 
@@ -1590,7 +1591,7 @@ Doc ID: Developers/SDK/write-methods/transfer
 Public URL: https://docs.concrete.xyz/Developers/SDK/write-methods/transfer/
 In active sidebar: yes
 Description: Write-method reference for transfer(to, amount) in the Concrete Earn V2 SDK, including transaction flow, required approvals, and integration notes.
-Transfer ctAssets (vault shares) directly to another address.
+Transfer [ctAssets](https://docs.concrete.xyz/glossary/#ct-asset) (vault shares) directly to another address.
 
 ## Signature
 
@@ -1623,7 +1624,7 @@ Doc ID: Developers/SDK/write-methods/transferFrom
 Public URL: https://docs.concrete.xyz/Developers/SDK/write-methods/transferFrom/
 In active sidebar: yes
 Description: Write-method reference for transferFrom(from, to, amount) in the Concrete Earn V2 SDK, including transaction flow, required approvals, and integration notes.
-Move ctAssets from one address to another using an existing shares allowance granted via `vault.approve`.
+Move [ctAssets](https://docs.concrete.xyz/glossary/#ct-asset) from one address to another using an existing shares allowance granted via `vault.approve`.
 
 ## Signature
 
@@ -1706,7 +1707,7 @@ await (await vaultWithSigner.deposit(depositAmount)).wait();
 
 ## 2. Read total assets
 
-Get the vault's total assets and format the value with the SDK's helpers.
+Get the vault's total assets and format the value with the [SDK](https://docs.concrete.xyz/glossary/#sdk)'s helpers.
 
 ```tsx
 const details = await vault.getVaultDetails();
@@ -1735,7 +1736,7 @@ console.log("Underlying:", details.underlying.symbol);
 
 ## 4. Preview deposit
 
-Estimate how many shares (ctAssets) you will receive for a deposit.
+Estimate how many shares ([ctAssets](https://docs.concrete.xyz/glossary/#ct-asset)) you will receive for a deposit.
 
 ```tsx
 const oneUnderlying = await vault.toUnderlyingBigInt("1.0");
@@ -1789,9 +1790,9 @@ if (shareBalance > 0n) {
 }
 ```
 
-## 7. Transfer ctAssets
+## 7. Transfer [ctAssets](https://docs.concrete.xyz/glossary/#ct-asset)
 
-Shares (ctAssets) behave like ERC20 tokens and can be transferred.
+Shares (ctAssets) behave like [ERC20](https://docs.concrete.xyz/glossary/#erc-20) tokens and can be transferred.
 
 ```tsx
 const recipient = "0xRecipient...";
@@ -1909,10 +1910,10 @@ export function UseDetails() {
 
 | Symptom | Likely cause | Fix |
 | --- | --- | --- |
-| `NETWORK_ERROR`, `failed to fetch` | Bad or unstable RPC URL, rate limiting | Switch to a reliable RPC. Add retries and backoff. |
+| `NETWORK_ERROR`, `failed to fetch` | Bad or unstable [RPC](https://docs.concrete.xyz/glossary/#rpc) [URL](https://docs.concrete.xyz/glossary/#url), rate limiting | Switch to a reliable RPC. Add retries and backoff. |
 | `CALL_EXCEPTION` or `execution reverted` | Wrong network for the vault address, wrong address, or deprecated contract | Ensure the `chainId` passed to `getVault(version, address, chainId, ...)` matches the contract's chain. Verify the address is the vault, not the underlying. |
 | `undefined` or `Cannot read properties of undefined` | Hook not ready (Wagmi client not connected) | Gate reads with `enabled: !!vault` (React Query) or `if (!vault) return`. |
-| `BigInt` range or format issues | Mixing JS `number` with token base units | Always use `BigInt`. Derive units from `await vault.getUnderlyingDecimals()`. |
+| `BigInt` range or format issues | Mixing [JS](https://docs.concrete.xyz/glossary/#js) `number` with token base units | Always use `BigInt`. Derive units from `await vault.getUnderlyingDecimals()`. |
 | Wrong display amounts | Using wrong decimals for formatting | Use `getUnderlyingDecimals()` for the underlying and `decimals()` for shares. |
 | CORS or browser blocking | Direct RPC calls from the browser blocked | Use a proxy RPC provider or call from the server. |
 | Inconsistent results caching | React Query defaults | Provide a `queryKey`, and set `staleTime`, `gcTime`, and `retry` policies explicitly. |
@@ -1989,10 +1990,10 @@ Common pitfalls:
 - **Input type**: must be `BigInt`, not `number` or `string`.
 - **Order of calls**: call after `getVaultDetails()` so decimals are loaded.
 - **Correct usage**:
-    - `applyDecimals()` formats vault shares (ctAssets).
-    - `toUnderlyingDecimals()` formats the underlying ERC20.
+    - `applyDecimals()` formats vault shares ([ctAssets](https://docs.concrete.xyz/glossary/#ct-asset)).
+    - `toUnderlyingDecimals()` formats the underlying [ERC20](https://docs.concrete.xyz/glossary/#erc-20).
 - **Precision**: use for display only. Keep core math in `BigInt`.
-- **Network differences**: do not assume decimals. USDC is 6 on Ethereum, and may differ elsewhere.
+- **Network differences**: do not assume decimals. [USDC](https://docs.concrete.xyz/glossary/#usdc) is 6 on Ethereum, and may differ elsewhere.
 
 ```tsx
 const details = await vault.getVaultDetails();
@@ -2068,7 +2069,7 @@ if (cur < need) {
 ### Insufficient balance or gas
 
 **Symptom**: `insufficient funds for intrinsic transaction cost` or `transfer amount exceeds balance`.
-**Fix**: Check native gas token (ETH) balance and underlying or share balances before sending.
+**Fix**: Check native gas token ([ETH](https://docs.concrete.xyz/glossary/#eth)) balance and underlying or share balances before sending.
 
 ```tsx
 const erc20 = await vault.getUnderlyingErc20();
@@ -2089,7 +2090,7 @@ await vault.deposit(amount, { nonce, maxFeePerGas: prev * 12n / 10n }); // +20%
 ### Paused or deprecated vaults
 
 **Symptom**: `CALL_EXCEPTION` or a custom revert string (for example "paused") on `deposit` or `redeem`.
-**Fix**: Surface a clear UI message. Gate write actions based on a health flag where available.
+**Fix**: Surface a clear [UI](https://docs.concrete.xyz/glossary/#ui) message. Gate write actions based on a health flag where available.
 
 ```tsx
 try { await vault.deposit(amount); }
@@ -2103,7 +2104,7 @@ catch (e: any) {
 
 ### Preview differs from final (state changed between calls)
 
-**Symptom**: Actual mint or redeem differs from `previewConversion` because TVL or price moved.
+**Symptom**: Actual mint or redeem differs from `previewConversion` because [TVL](https://docs.concrete.xyz/glossary/#tvl) or price moved.
 **Fix**: Treat preview as indicative. Consider a tolerance check and re-preview on the confirm step.
 
 ```tsx
@@ -2111,13 +2112,13 @@ const pre = await vault.previewConversion(amount);
 // Optional: assert a minimum expected output for UX. On-chain output is still authoritative.
 ```
 
-## Non-standard ERC20 tokens
+## Non-standard [ERC20](https://docs.concrete.xyz/glossary/#erc-20) tokens
 
 Some tokens:
 
 - Do not return `bool` from `approve` or `transfer`.
 - Require resetting allowance to zero before increasing it.
-- Have chain-specific decimals (for example USDC is 6 on Ethereum).
+- Have chain-specific decimals (for example [USDC](https://docs.concrete.xyz/glossary/#usdc) is 6 on Ethereum).
 
 **Defensive pattern**:
 
@@ -2166,14 +2167,14 @@ await vault.deposit(amount, {
 ## Reorgs and finality
 
 A receipt can succeed and then be reorged in rare cases.
-**Fix**: Wait for extra confirmations where it matters (admin ops, high TVL).
+**Fix**: Wait for extra confirmations where it matters (admin ops, high [TVL](https://docs.concrete.xyz/glossary/#tvl)).
 
 ```tsx
 const rc = await (await vault.deposit(amount)).wait(2);
 // Wait for 2 confirmations
 ```
 
-## Retry and backoff for transient RPC errors
+## Retry and backoff for transient [RPC](https://docs.concrete.xyz/glossary/#rpc) errors
 
 Only retry idempotent reads or broadcast errors clearly marked transient.
 
@@ -2533,7 +2534,7 @@ Emitted by `ConcreteFactory`. Names are the on-chain identifiers as declared in 
 
 ## Vault-level events
 
-Emitted by the standard vault implementation (`ConcreteStandardVaultImpl`). `Deposit` and `Withdraw` are inherited from ERC-4626.
+Emitted by the standard vault implementation (`ConcreteStandardVaultImpl`). `Deposit` and `Withdraw` are inherited from [ERC-4626](https://docs.concrete.xyz/glossary/#erc-4626).
 
 | Event | Entity updated | Description |
 | --- | --- | --- |
@@ -2592,11 +2593,11 @@ Doc ID: Live-Vaults/DeFi-USDT/how-withdrawals-are-processed
 Public URL: https://docs.concrete.xyz/Live-Vaults/DeFi-USDT/how-withdrawals-are-processed/
 In active sidebar: yes
 Description: Concrete DeFi USDT vault documentation for how Withdrawals Are Processed, including withdrawal operations, disclosures, and user safeguards.
-The Concrete DeFi USDT vault deploys deposits into yield-generating strategies that require time to unwind. To protect APY for all depositors while still offering reasonable liquidity, withdrawals are processed through a scheduled queue.
+The Concrete [DeFi](https://docs.concrete.xyz/glossary/#defi) [USDT](https://docs.concrete.xyz/glossary/#usdt) vault deploys deposits into yield-generating strategies that require time to unwind. To protect [APY](https://docs.concrete.xyz/glossary/#apy) for all depositors while still offering reasonable liquidity, withdrawals are processed through a scheduled queue.
 
 ## Standard Timing
 
-Withdrawals typically take between 3.5 and 7 days, depending on when you submit your request and on available liquidity (see below). They're processed twice weekly on a fixed schedule (all times UTC):
+Withdrawals typically take between 3.5 and 7 days, depending on when you submit your request and on available liquidity (see below). They're processed twice weekly on a fixed schedule (all times [UTC](https://docs.concrete.xyz/glossary/#utc)):
 
 | Request submitted between | Claimable from |
 | :---- | :---- |
@@ -2605,7 +2606,7 @@ Withdrawals typically take between 3.5 and 7 days, depending on when you submit 
 
 ## Liquidity Buffer and Extended Queues
 
-Up to 10% of the vault's TVL is available for withdrawals each cycle. If requests exceed this threshold, the queue extends beyond 7 days and withdrawals are processed in the order they were requested (FIFO). During periods of high demand, your wait may be longer than the standard schedule.
+Up to 10% of the vault's [TVL](https://docs.concrete.xyz/glossary/#tvl) is available for withdrawals each cycle. If requests exceed this threshold, the queue extends beyond 7 days and withdrawals are processed in the order they were requested ([FIFO](https://docs.concrete.xyz/glossary/#fifo)). During periods of high demand, your wait may be longer than the standard schedule.
 
 ## How to Check Your Next Withdrawal Date
 
@@ -2645,23 +2646,23 @@ Please read these important disclosures carefully before participating in Concre
 
 ## Lack of Regulatory Protections
 
-THE PROVISIONS OF THE SECURITIES INVESTOR PROTECTION ACT OF 1970 ("SIPA"), THE FEDERAL DEPOSIT INSURANCE CORPORATION ("FDIC"), OR SIMILAR REGULATORY PROTECTIONS MAY NOT PROTECT YOUR FUNDS WHILE DELEGATED TO CONCRETE. In the event of Concrete's insolvency or default, the collateral securing Concrete's DeFi borrowing obligations may constitute the primary or sole source of recovery for your funds.
+THE PROVISIONS OF THE SECURITIES INVESTOR PROTECTION ACT OF 1970 ("SIPA"), THE FEDERAL DEPOSIT INSURANCE CORPORATION ("FDIC"), OR SIMILAR REGULATORY PROTECTIONS MAY NOT PROTECT YOUR FUNDS WHILE DELEGATED TO CONCRETE. In the event of Concrete's insolvency or default, the collateral securing Concrete's [DeFi](https://docs.concrete.xyz/glossary/#defi) borrowing obligations may constitute the primary or sole source of recovery for your funds.
 
 ## Loss of Control and Concrete's Profit Model
 
-When you delegate funds to Concrete, you transfer operational control over those assets to Concrete while retaining beneficial ownership through vault shares. Concrete has sole discretion to select DeFi protocols, determine collateralization ratios, choose yield strategies, and manage all positions.
+When you delegate funds to Concrete, you transfer operational control over those assets to Concrete while retaining beneficial ownership through vault shares. Concrete has sole discretion to select [DeFi](https://docs.concrete.xyz/glossary/#defi) protocols, determine collateralization ratios, choose yield strategies, and manage all positions.
 
 ## Yield Rates Not Guaranteed
 
-Concrete cannot and does not guarantee that any target yield rates can be achieved or maintained. Displayed performance may reflect execution cost rebates and strategy partner capital allocations, where applicable. DeFi yields fluctuate based on market conditions, and Concrete reserves the right to adjust, refresh, or discontinue offered rates at any time based on changes in borrowing costs, strategy performance, risk assessments, or market liquidity. Concrete cannot guarantee that you will receive the most favorable rates available in the marketplace. Yield rates are subject to periodic review and adjustment based on prevailing conditions and Concrete's cost of capital. You may withdraw your funds if dissatisfied with offered rates, subject to applicable procedures.
+Concrete cannot and does not guarantee that any target yield rates can be achieved or maintained. Displayed performance may reflect execution cost rebates and strategy partner capital allocations, where applicable. [DeFi](https://docs.concrete.xyz/glossary/#defi) yields fluctuate based on market conditions, and Concrete reserves the right to adjust, refresh, or discontinue offered rates at any time based on changes in borrowing costs, strategy performance, risk assessments, or market liquidity. Concrete cannot guarantee that you will receive the most favorable rates available in the marketplace. Yield rates are subject to periodic review and adjustment based on prevailing conditions and Concrete's cost of capital. You may withdraw your funds if dissatisfied with offered rates, subject to applicable procedures.
 
-## Smart Contract and DeFi Protocol Risks
+## Smart Contract and [DeFi](https://docs.concrete.xyz/glossary/#defi) Protocol Risks
 
-Smart contracts may contain vulnerabilities or exploits that could result in loss of funds. DeFi money markets where Concrete deposits funds are subject to smart contract exploits, protocol insolvency, oracle failures, governance attacks, and liquidity crises. If DeFi protocols experience hacks or failures, Concrete's funds collateral could be lost, stolen, or inaccessible. Recovery of stolen funds may be delayed, partial, or impossible. The system relies on accurate price feeds; oracle failures could trigger unwarranted liquidations. Concrete implements continuous position monitoring, daily NAV accounting, and conservative collateralization ratios to mitigate these risks but cannot eliminate them.
+Smart contracts may contain vulnerabilities or exploits that could result in loss of funds. DeFi money markets where Concrete deposits funds are subject to smart contract exploits, protocol insolvency, oracle failures, governance attacks, and liquidity crises. If DeFi protocols experience hacks or failures, Concrete's funds collateral could be lost, stolen, or inaccessible. Recovery of stolen funds may be delayed, partial, or impossible. The system relies on accurate price feeds; oracle failures could trigger unwarranted liquidations. Concrete implements continuous position monitoring, daily [NAV](https://docs.concrete.xyz/glossary/#nav) accounting, and conservative collateralization ratios to mitigate these risks but cannot eliminate them.
 
 ## Liquidation Risks
 
-If Concrete's collateral value falls relative to borrowed amounts, DeFi money markets may liquidate Concrete's positions, potentially resulting in loss of collateral. If funds experiences a significant depeg, this could trigger liquidation with money market lenders having priority claims to custodied funds. In liquidation scenarios, claims priority typically follows: (1) DeFi protocol lenders and liquidators as secured creditors, (2) Concrete's operational claims, and (3) depositors through vault shares. Losses affecting one portion of the pool could impact all depositors proportionally.
+If Concrete's collateral value falls relative to borrowed amounts, [DeFi](https://docs.concrete.xyz/glossary/#defi) money markets may liquidate Concrete's positions, potentially resulting in loss of collateral. If funds experiences a significant depeg, this could trigger liquidation with money market lenders having priority claims to custodied funds. In liquidation scenarios, claims priority typically follows: (1) DeFi protocol lenders and liquidators as secured creditors, (2) Concrete's operational claims, and (3) depositors through vault shares. Losses affecting one portion of the pool could impact all depositors proportionally.
 
 ## Tax Implications
 
@@ -2669,7 +2670,7 @@ Yield earned on delegated funds may be characterized differently from other inco
 
 ## Withdrawal and Termination Rights
 
-You may request to withdraw delegated funds at any time, subject to operational mechanics, liquidity availability, unwinding of DeFi positions, custody transfer timing, and network conditions. Withdrawals may be delayed in extreme circumstances including smart contract failures or DeFi protocol issues. Concrete reserves the right to terminate the program or your participation due to regulatory changes, risk management decisions, insolvency, breach of terms, or strategic decisions. Concrete may terminate and liquidate positions if you become insolvent, bankrupt, subject to receivership, unable to meet obligations, subject to regulatory actions, or breach representations.
+You may request to withdraw delegated funds at any time, subject to operational mechanics, liquidity availability, unwinding of [DeFi](https://docs.concrete.xyz/glossary/#defi) positions, custody transfer timing, and network conditions. Withdrawals may be delayed in extreme circumstances including smart contract failures or DeFi protocol issues. Concrete reserves the right to terminate the program or your participation due to regulatory changes, risk management decisions, insolvency, breach of terms, or strategic decisions. Concrete may terminate and liquidate positions if you become insolvent, bankrupt, subject to receivership, unable to meet obligations, subject to regulatory actions, or breach representations.
 
 ## Conflicts of Interest
 
@@ -2677,11 +2678,11 @@ Concrete's economic interest in maximizing spreads between yields earned and yie
 
 ## Regulatory and Liability Limitations
 
-The program is subject to limited regulatory oversight and evolving regulations that could require program termination, impose new restrictions, affect tax treatment, or impact enforceability of rights. No regulatory authority has reviewed or endorsed the program. To the maximum extent permitted by law, Concrete's liability is limited to the value of funds held in custody and associated collateral, subject to priority claims in liquidation. Concrete is not liable for DeFi protocol failures, market fluctuations, inability to achieve target returns, third-party failures, regulatory changes, or force majeure events. Concrete's total liability to any depositor is capped at the delegation amount plus accrued yield, less applicable fees and losses.
+The program is subject to limited regulatory oversight and evolving regulations that could require program termination, impose new restrictions, affect tax treatment, or impact enforceability of rights. No regulatory authority has reviewed or endorsed the program. To the maximum extent permitted by law, Concrete's liability is limited to the value of funds held in custody and associated collateral, subject to priority claims in liquidation. Concrete is not liable for [DeFi](https://docs.concrete.xyz/glossary/#defi) protocol failures, market fluctuations, inability to achieve target returns, third-party failures, regulatory changes, or force majeure events. Concrete's total liability to any depositor is capped at the delegation amount plus accrued yield, less applicable fees and losses.
 
 ## Acknowledgments and Governing Provisions
 
-By delegating funds to Concrete, you acknowledge that you have read and understand these disclosures and the risks described herein, including lack of regulatory protections, liquidation risks, no guaranteed yields, smart contract and DeFi risks, tax implications, Concrete's profit model and conflicts of interest, and termination rights. Any disputes shall be resolved through binding arbitration per applicable agreements. In the event of any conflict between this disclosure and executed agreements, the executed agreements shall govern.
+By delegating funds to Concrete, you acknowledge that you have read and understand these disclosures and the risks described herein, including lack of regulatory protections, liquidation risks, no guaranteed yields, smart contract and [DeFi](https://docs.concrete.xyz/glossary/#defi) risks, tax implications, Concrete's profit model and conflicts of interest, and termination rights. Any disputes shall be resolved through binding arbitration per applicable agreements. In the event of any conflict between this disclosure and executed agreements, the executed agreements shall govern.
 
 :::warning
 THESE DISCLOSURES ARE PROVIDED FOR INFORMATIONAL PURPOSES ONLY AND DO NOT CONSTITUTE INVESTMENT, LEGAL, TAX, OR FINANCIAL ADVICE. CONSULT QUALIFIED ADVISORS BEFORE PARTICIPATING AND FOR ADVICE AS TO LEGAL, TAX AND ECONOMIC IMPLICATIONS. CONCRETE MAKES “FORWARD-LOOKING STATEMENTS,” WHICH DESCRIBE FUTURE EXPECTATIONS, PLANS, RESULTS OR STRATEGIES AND CAN OFTEN BE IDENTIFIED BY THE USE OF TERMINOLOGY SUCH AS “MAY,” “WILL,” “EXPECT,” “PLAN,” OR SIMILAR TERMINOLOGY. THESE STATEMENTS ARE BASED UPON CONCRETE’S CURRENT EXPECTATIONS, ASSUMPTIONS AND ESTIMATES, AND ARE NOT GUARANTEES. ACTUAL RESULTS MAY DIFFER MATERIALLY FROM THOSE CONTEMPLATED IN THESE STATEMENTS DUE TO A VARIETY OF RISKS AND UNCERTAINTIES. THIS DOCUMENT DOES NOT CONSTITUTE AN OFFER OR INVITATION OR SOLICITATION OF ANY OFFER TO SELL, PURCHASE, DELEGATE OR LOAN ANY SECURITIES AND IS NOT INTENDED, AND DOES NOT, CREATE A BINDING OR ENFORCEABLE AGREEMENT ON THE PART OF THE COMPANY
@@ -2695,7 +2696,7 @@ Doc ID: Live-Vaults/wbtc-vault
 Public URL: https://docs.concrete.xyz/Live-Vaults/wbtc-vault/
 In active sidebar: yes
 Description: WBTC vault migration documentation covering Earn V2 transition steps, claim requirements, and continuity expectations.
-# WBTC Vault
+# [WBTC](https://docs.concrete.xyz/glossary/#wbtc) Vault
 
 The WBTC Vault is being upgraded from **Earn V1** to **Earn V2** as part of Concrete’s continued evolution toward institutional-grade vault infrastructure.
 
@@ -2705,14 +2706,14 @@ Only the vault implementation is being upgraded to the Earn V2 framework. Strate
 
 ## Migration Summary
 
-- The WBTC vault is migrating from Earn V1 to Earn V2.
+- The [WBTC](https://docs.concrete.xyz/glossary/#wbtc) vault is migrating from Earn V1 to Earn V2.
 - If you take no action, your underlying WBTC will continue earning yield.
 - After migration, you will not see your Earn V1 shares in the app. Instead, you will see the ability to claim the equivalent amount of Earn V2 shares.
 - You must complete the claim transaction to restore your visible balance in the app.
 
 ## What Is Changing
 
-The WBTC deposited in the **ctWBTC Earn V1 vault** (contract address `0xacce65B9dB4810125adDEa9797BaAaaaD2B73788`) is being migrated to a new Earn V2 **ctWBTC** vault contract (`0xF72bD5A56dE97840F1fdd3641B556126c10aA1c4`).
+The [WBTC](https://docs.concrete.xyz/glossary/#wbtc) deposited in the **[ctWBTC](https://docs.concrete.xyz/glossary/#ct-wbtc) Earn V1 vault** (contract address `0xacce65B9dB4810125adDEa9797BaAaaaD2B73788`) is being migrated to a new Earn V2 **ctWBTC** vault contract (`0xF72bD5A56dE97840F1fdd3641B556126c10aA1c4`).
 
 What changes is the vault implementation and the share token contract representing your position. Your underlying WBTC assets remain fully accounted for.
 
@@ -2722,8 +2723,8 @@ Earn V2 introduces a more advanced and modular vault framework designed for secu
 
 The upgrade enables:
 
-- Automated accounting and daily NAV synchronization
-- Standardized ERC-4626 share mechanics
+- Automated accounting and daily [NAV](https://docs.concrete.xyz/glossary/#nav) synchronization
+- Standardized [ERC-4626](https://docs.concrete.xyz/glossary/#erc-4626) share mechanics
 - Improved liquidity management architecture
 - Modular strategy integrations
 - Long-term upgrade flexibility
@@ -2781,7 +2782,7 @@ No. Claiming your new Earn V2 shares is sufficient.
 
 You do not need to:
 
-- Withdraw WBTC
+- Withdraw [WBTC](https://docs.concrete.xyz/glossary/#wbtc)
 - Bridge assets
 - Manually re-deposit
 
@@ -2805,7 +2806,7 @@ Doc ID: Completed-Campaigns/overview
 Public URL: https://docs.concrete.xyz/Completed-Campaigns/overview/
 In active sidebar: yes
 Description: Overview of Concrete's completed vault campaigns, covering wind-down behavior, withdrawal paths, and how rewards remain claimable.
-Some Concrete vaults run as time-bounded campaigns. When such a campaign reaches its end date, the vault transitions to withdraw-only mode through a controlled wind-down process. Once the campaign closes, the vault moves to the Completed Campaigns section of the [Concrete app](https://app.concrete.xyz/). If you still hold ctAssets from that vault, they remain accessible in the Portfolio tab.
+Some Concrete vaults run as time-bounded campaigns. When such a campaign reaches its end date, the vault transitions to withdraw-only mode through a controlled wind-down process. Once the campaign closes, the vault moves to the Completed Campaigns section of the [Concrete app](https://app.concrete.xyz/). If you still hold [ctAssets](https://docs.concrete.xyz/glossary/#ct-asset) from that vault, they remain accessible in the Portfolio tab.
 
 During the wind-down, deposits are permanently disabled and strategies are deallocated. The mechanism that returns funds to depositors depends on the vault's structure and strategy:
 
@@ -2899,7 +2900,7 @@ If you haven’t withdrawn by **July 15**, Concrete will automatically migrate y
 You can **claim your new vault assets** directly in the app:
 
 1. Go to the **Portfolio** tab
-2. Find your ctAssets (they now show a $0 balance because your underlying asset has been migrated to a new vault)
+2. Find your [ctAssets](https://docs.concrete.xyz/glossary/#ct-asset) (they now show a $0 balance because your underlying asset has been migrated to a new vault)
 3. Click on the asset (you’ll see a success message confirming the migration)
 4. If you had deposits in multiple vaults, a dropdown selector will let you choose which asset to claim
 5. Use the **"Claim"** button to mint your new ctAssets
@@ -2915,9 +2916,9 @@ You can **claim your new vault assets** directly in the app:
 
 | **Event** | **Date / Timing** |
 | --- | --- |
-| Final withdrawal batch | **July 16th, 2025** (bridge requests submitted between July 9th at 12PM UTC and July 15th at 7AM UTC will be automatically processed — no user action required) |
+| Final withdrawal batch | **July 16th, 2025** (bridge requests submitted between July 9th at 12PM [UTC](https://docs.concrete.xyz/glossary/#utc) and July 15th at 7AM UTC will be automatically processed — no user action required) |
 | Vaults marked as closed migrated | **After July 16th, 2025** |
-| Claim new vault shares UI available | **After July 16th, 2025** |
+| Claim new vault shares [UI](https://docs.concrete.xyz/glossary/#ui) available | **After July 16th, 2025** |
 
 
 ### Need Help?
@@ -2960,12 +2961,12 @@ Boyco acts as a front-end layer for Concrete vaults. If your original deposit wa
 
 ## How to Claim and Transfer
 
-Bera vaults offer an option to **claim your rewards** and transfer your underlying tokens to a new Bera vault, so you can continue to earn an attractive yield plus Bera Governance Token emissions (BGT). All new vaults will have withdrawals open from May 16 onwards.
+Bera vaults offer an option to **claim your rewards** and transfer your underlying tokens to a new Bera vault, so you can continue to earn an attractive yield plus Bera Governance Token emissions ([BGT](https://docs.concrete.xyz/glossary/#bgt)). All new vaults will have withdrawals open from May 16 onwards.
 
 - To take advantage of this Claim and Transfer, connect your wallet and you will see a banner which informs you of a destination vault based on your deposited tokens.
 - Rewards claiming will happen instantly
 - Transferring the underlying enters into a 72 hour queue
-- Choose **“Claim and Transfer”** in the UI to begin this process
+- Choose **“Claim and Transfer”** in the [UI](https://docs.concrete.xyz/glossary/#ui) to begin this process
 
 For long-term stakers, transferring is a powerful way to boost returns while minimizing effort.
 
@@ -3005,7 +3006,7 @@ If you deposited into a **Bera Vault**, your rewards are now ready to be **claim
 
 There are two ways to Claim your Rewards. You can :
 
-1. [Claim your Rewards and Transfer](#how-to-claim-and-transfer) your underlying asset to a new vault to keep earning yield and Bera Governance Tokens (BGT)
+1. [Claim your Rewards and Transfer](#how-to-claim-and-transfer) your underlying asset to a new vault to keep earning yield and Bera Governance Tokens ([BGT](https://docs.concrete.xyz/glossary/#bgt))
 2. Claim your Rewards on the vault page
 
 ### Step-by-Step: Claim Rewards
@@ -3031,11 +3032,11 @@ After that, **unclaimed rewards may be reallocated** to other protocol incentive
 
 ### What Rewards are available to claim?
 
-**Bitcoin Bera vaults - LBTC, WBTC depositors**
+**Bitcoin Bera vaults - [LBTC](https://docs.concrete.xyz/glossary/#lbtc), [WBTC](https://docs.concrete.xyz/glossary/#wbtc) depositors**
 
-| **Rewarding entity** | **Tokens or Points** | **URL**  | **Details** |
+| **Rewarding entity** | **Tokens or Points** | **[URL](https://docs.concrete.xyz/glossary/#url)**  | **Details** |
 | --- | --- | --- | --- |
-| Berachain | BERA tokens | [https://app.concrete.xyz](https://app.concrete.xyz/) | Claim on Concrete Core app |
+| Berachain | [BERA](https://docs.concrete.xyz/glossary/#bera) tokens | [https://app.concrete.xyz](https://app.concrete.xyz/) | Claim on Concrete Core app |
 | Lombard | Lux Points | - | Points have been earned through Concrete. Distribution will happen at a later date. |
 | Babylon | BABY tokens | - | Lombard to distribute $BABY |
 | Concrete | Concrete Points | [concrete.xyz](http://concrete.xyz/) | Points have been earned through Concrete. |
@@ -3046,7 +3047,7 @@ After that, **unclaimed rewards may be reallocated** to other protocol incentive
 
 | **Rewarding entity** | **Tokens or Points** | **URL** | **Details** |
 | --- | --- | --- | --- |
-| Ethena USDe | ENA tokens | https://app.liquifi.finance/ | Claim ENA on Liquifi |
+| Ethena USDe | [ENA](https://docs.concrete.xyz/glossary/#ena) tokens | https://app.liquifi.finance/ | Claim ENA on Liquifi |
 | Ethena sUSDe | ENA tokens | https://app.liquifi.finance/ | Claim ENA on Liquifi |
 | Concrete | Concrete Points | [concrete.xyz](http://concrete.xyz/) | Points have been earned through Concrete. |
 | Berachain | BERA tokens | [https://app.concrete.xyz](https://app.concrete.xyz/) | Claim on Concrete Core app |
@@ -3054,7 +3055,7 @@ After that, **unclaimed rewards may be reallocated** to other protocol incentive
 | Dolomite | veDOLO tokens | https://app.dolomite.io/boyco | Dolomite to distribute May 7 |
 | Beraborrow | POLLEN tokens | [https://app.concrete.xyz](https://app.concrete.xyz/) | Claim on Concrete Core app |
 
-**Dinero Bera vaults - ETH depositors**
+**Dinero Bera vaults - [ETH](https://docs.concrete.xyz/glossary/#eth) depositors**
 
 | **Entity** | **Tokens or Points** | **Where to claim** | **Details** |
 | --- | --- | --- | --- |
@@ -3071,7 +3072,7 @@ Pendle depositors - expect rewards by May 18 latest via the [Pendle dashboard](h
 
 If you're ready to exit your position or redeem your rewards, Bera vaults support **secure and scheduled withdrawals**.
 
-When withdrawing your ctAsset:
+When withdrawing your [ctAsset](https://docs.concrete.xyz/glossary/#ct-asset):
 
 - Always confirm you control your destination Berachain address, where assets will be sent, before bridging.
 - If you do not control the destination Berachain address, contact [Support](https://docs.concrete.xyz/support/) to avoid losing access to your assets.
@@ -3115,7 +3116,7 @@ In some scenarios, such as vault migrations or strategic updates, users may need
 
 ## Unclaimed Rewards
 
-If you participated in the Bera vault and are eligible for rewards, you can claim them via the Concrete Core UI within 3 months of the unlock date.
+If you participated in the Bera vault and are eligible for rewards, you can claim them via the Concrete Core [UI](https://docs.concrete.xyz/glossary/#ui) within 3 months of the unlock date.
 
 ### Claim Window
 
@@ -3143,7 +3144,7 @@ In active sidebar: yes
 Description: Stable vault documentation covering the Stable Network pre-deposit campaign, deposits, rewards, withdrawals, and claiming vault shares on Stable.
 ## Stable Vaults
 
-Concrete’s **Stable Vaults** let you deposit **USDT** or **frxUSD** early to have your funds automatically deployed on the Stable Network from day one.
+Concrete’s **Stable Vaults** let you deposit **[USDT](https://docs.concrete.xyz/glossary/#usdt)** or **[frxUSD](https://docs.concrete.xyz/glossary/#frxusd)** early to have your funds automatically deployed on the Stable Network from day one.
 
 ### The Stable Network
 
@@ -3190,11 +3191,11 @@ Any funds left in the Stable vault after migration will continue to earn yield d
 4. Enter the amount of stablecoins that you want to deposit
 5. Approve the vault by providing  wallet permission to spend your stablecoin
 6. Confirm the deposit by signing the deposit transaction in your wallet
-7. After confirmation, you’ll receive **ctStableUSDT** or **ctStablefrxUSD** representing your deposit.
+7. After confirmation, you’ll receive **[ctStableUSDT](https://docs.concrete.xyz/glossary/#ct-stableusdt)** or **[ctStablefrxUSD](https://docs.concrete.xyz/glossary/#ct-stablefrxusd)** representing your deposit.
 
 ### After Bridging Complete
 
-- Your balance and vault TVL will become visible
+- Your balance and vault [TVL](https://docs.concrete.xyz/glossary/#tvl) will become visible
 - You can see your deposited position under **My Deposits**
 
 ### Withdrawals
@@ -3218,12 +3219,12 @@ This help article walks you through the full process — including how to handle
 
 ### Summary
 
-- All users must claim their vault shares — this moves your ctStableUSDT or ctStablefrxUSD to the Stable Network using the [Earn app](https://app.concrete.xyz/) or [stable.concrete.xyz](http://stable.concrete.xyz).
+- All users must claim their vault shares — this moves your [ctStableUSDT](https://docs.concrete.xyz/glossary/#ct-stableusdt) or [ctStablefrxUSD](https://docs.concrete.xyz/glossary/#ct-stablefrxusd) to the Stable Network using the [Earn app](https://app.concrete.xyz/) or [stable.concrete.xyz](http://stable.concrete.xyz).
 - Your rewards will not be delivered in this flow. Rewards will be claimable separately [via Merkl](https://app.merkl.xyz/users/).
 - Withdrawals open on December 13th. Users can enter the withdrawal queue starting on this date. Withdrawals will be processed during a 7-day withdrawal queue period.
 
 **Important - Possible Funds Lost:**
-You must control the same Ethereum address on the Stable Network before claiming. Some multisig users have encountered issues because their Safe or contract wallet does not exist as the same address on Stable. If you do *not* control the same address on Stable, transfer your **ctStableUSDT** or **ctStablefrxUSD** to an EOA where you *do* control the same address on Stable before you claim.
+You must control the same Ethereum address on the Stable Network before claiming. Some multisig users have encountered issues because their Safe or contract wallet does not exist as the same address on Stable. If you do *not* control the same address on Stable, transfer your **ctStableUSDT** or **ctStablefrxUSD** to an [EOA](https://docs.concrete.xyz/glossary/#eoa) where you *do* control the same address on Stable before you claim.
 
 ### Multisigs & Contract Wallets
 
@@ -3231,7 +3232,7 @@ Concrete does not restrict which wallet types can claim. However, users must ens
 
 If you are unsure whether your multisig or contract wallet is supported on Stable, you can:
 
-- Transfer your **ctStableUSDT** or **ctStablefrxUSD** vault shares to any EOA you control on Ethereum (regular ERC-20 transfer)
+- Transfer your **ctStableUSDT** or **ctStablefrxUSD** vault shares to any EOA you control on Ethereum (regular [ERC-20](https://docs.concrete.xyz/glossary/#erc-20) transfer)
 - Then claim using that EOA (which uses the same address on Stable)
 - This ensures your vault shares are delivered correctly.
 
@@ -3316,7 +3317,7 @@ Doc ID: Completed-Campaigns/corn
 Public URL: https://docs.concrete.xyz/Completed-Campaigns/corn/
 In active sidebar: yes
 Description: Corn vault documentation for Concrete users, including vault behavior, lifecycle updates, and operational guidance.
-Concrete’s Corn Vaults offer access to yield opportunities across the Corn network by bridging assets from Ethereum and deploying them into curated DeFi strategies.
+Concrete’s Corn Vaults offer access to yield opportunities across the Corn network by bridging assets from Ethereum and deploying them into curated [DeFi](https://docs.concrete.xyz/glossary/#defi) strategies.
 
 These vaults are designed for users seeking exposure to optimized stablecoin and Bitcoin strategies, often involving integrations with Curve, lending markets, and partner protocols.
 
@@ -3352,13 +3353,13 @@ In active sidebar: yes
 Description: Morph vault documentation for Concrete users, including current status, lifecycle notes, and operation guidance.
 Concrete’s Morph Vaults provided yield opportunities across the Morph Layer 2 network through ecosystem partnerships with protocols like Quokka, Bulbaswap, and Ethena.
 
-These vaults accepted deposits on Ethereum and deployed assets into Morph-native strategies focused on ETH, stablecoins, and blue-chip assets. Most vaults in this category are now closed and in the process of deprecation.
+These vaults accepted deposits on Ethereum and deployed assets into Morph-native strategies focused on [ETH](https://docs.concrete.xyz/glossary/#eth), stablecoins, and blue-chip assets. Most vaults in this category are now closed and in the process of deprecation.
 
 ## Included Vaults
 
 ### Morph Majors
 
-**Assets:** ETH, BTC, USD
+**Assets:** [ETH](https://docs.concrete.xyz/glossary/#eth), [BTC](https://docs.concrete.xyz/glossary/#btc), [USD](https://docs.concrete.xyz/glossary/#usd)
 **Rewards:** Morph, Quokka, Bulbaswap, Concrete
 **Status:** Closed to deposits
 
@@ -3390,7 +3391,7 @@ Doc ID: Completed-Campaigns/tac
 Public URL: https://docs.concrete.xyz/Completed-Campaigns/tac/
 In active sidebar: yes
 Description: TAC vault deprecation and withdrawal documentation with required actions, timelines, and user support references.
-The **TAC Stone**, **TAC LevelUSD**, and **TAC Renzo** vaults are live on [Turtle.xyz](https://app.turtle.xyz/campaigns/tac). As part of the deprecation process, the withdrawal instructions steps are now hosted on [Concrete.xyz](https://app.concrete.xyz/earn).
+The **[TAC](https://docs.concrete.xyz/glossary/#tac) Stone**, **TAC LevelUSD**, and **TAC Renzo** vaults are live on [Turtle.xyz](https://app.turtle.xyz/campaigns/tac). As part of the deprecation process, the withdrawal instructions steps are now hosted on [Concrete.xyz](https://app.concrete.xyz/earn).
 
 If you deposited into these vaults, we recommend redeeming your funds promptly. While withdrawals remain open, withdrawing early ensures you keep full control of your assets and helps avoid delays.
 
@@ -3398,13 +3399,13 @@ If you deposited into these vaults, we recommend redeeming your funds promptly. 
 
 - Your funds are safe and withdrawable via the app
 - Rewards already earned will remain claimable
-- **TAC rewards are managed by Merkl** — they are now unlocked and fully claimable via [app.merkl.xyz/users](https://app.merkl.xyz/users)
+- **[TAC](https://docs.concrete.xyz/glossary/#tac) rewards are managed by Merkl** — they are now unlocked and fully claimable via [app.merkl.xyz/users](https://app.merkl.xyz/users)
 
 ## What’s Changing?
 
 The following vaults will be deprecated:
 
-1. **TAC Stone** — Deposit: `uniBTC`
+1. **[TAC](https://docs.concrete.xyz/glossary/#tac) Stone** — Deposit: `uniBTC`
 2. **TAC LevelUSD** — Deposit: `lvlUSD`
 3. **TAC Renzo** — Deposit: `ezETH`
 
@@ -3415,7 +3416,7 @@ Yes. Your deposited assets and yield remain secure in audited smart contracts.
 You’ll be able to withdraw them using:
 
 - The Concrete app (until vaults are removed)
-- A manual support process (for users returning after vaults have been disabled on the UI)
+- A manual support process (for users returning after vaults have been disabled on the [UI](https://docs.concrete.xyz/glossary/#ui))
 
 ## What You Need to Do
 
@@ -3435,7 +3436,7 @@ If the vault is still active in the app:
 
 ## What About Rewards or Points?
 
-TAC rewards are managed by Merkl and are now unlocked and fully claimable.
+[TAC](https://docs.concrete.xyz/glossary/#tac) rewards are managed by Merkl and are now unlocked and fully claimable.
 
 You can view your rewards via [app.merkl.xyz/users](https://app.merkl.xyz/users).
 
@@ -3469,7 +3470,7 @@ Deposits stay locked for the duration of the pre-deposit period, so withdrawals 
 
 ## Claiming Your Position at Launch
 
-When the pre-deposit period ends, the vault launches as its full version, sometimes on a different network, and your deposit becomes claimable there. You claim your [shares](https://docs.concrete.xyz/Using-Concrete-Vaults/concrete-vault-shares/) (ctAssets) on the launched vault through the [Concrete app](https://app.concrete.xyz). Your claimed position reflects your deposit plus the yield accrued during the pre-deposit period. The vault page provides the claim steps and the date claiming opens.
+When the pre-deposit period ends, the vault launches as its full version, sometimes on a different network, and your deposit becomes claimable there. You claim your [shares](https://docs.concrete.xyz/Using-Concrete-Vaults/concrete-vault-shares/) ([ctAssets](https://docs.concrete.xyz/glossary/#ct-asset)) on the launched vault through the [Concrete app](https://app.concrete.xyz). Your claimed position reflects your deposit plus the yield accrued during the pre-deposit period. The vault page provides the claim steps and the date claiming opens.
 
 :::tip
 Check the vault page for two dates: when the pre-deposit period ends and when claiming opens. Until then, your deposit stays locked and your final yield is not yet set.
@@ -3681,7 +3682,7 @@ Concrete Protocol follows a multi-phased audit approach to deliver the highest l
 
 ## Commitment to Excellence
 
-Concrete Protocol’s audit process is part of our larger commitment to maintaining a robust, secure, and transparent platform. We continuously work to identify and mitigate risks, safeguarding user funds and building trust across the DeFi ecosystem.
+Concrete Protocol’s audit process is part of our larger commitment to maintaining a robust, secure, and transparent platform. We continuously work to identify and mitigate risks, safeguarding user funds and building trust across the [DeFi](https://docs.concrete.xyz/glossary/#defi) ecosystem.
 
 Stay tuned for upcoming enhancements and future audits as we expand our security initiatives.
 
@@ -3696,7 +3697,7 @@ Description: Jurisdiction and access restrictions for Concrete services, includi
 At Concrete Protocol, we prioritize compliance with international laws and regulations. As part of this commitment, access to our services is restricted in certain jurisdictions, including:
 
 - **United States**: Restricted due to regulatory compliance requirements.
-- **OFAC-Sanctioned Countries**: These are countries and regions sanctioned by the Office of Foreign Assets Control (OFAC), including:
+- **OFAC-Sanctioned Countries**: These are countries and regions sanctioned by the Office of Foreign Assets Control ([OFAC](https://docs.concrete.xyz/glossary/#ofac)), including:
   - **North Korea**
   - **Iran**
   - **Cuba**
@@ -3718,7 +3719,7 @@ Doc ID: Audits/risks-and-safety
 Public URL: https://docs.concrete.xyz/Audits/risks-and-safety/
 In active sidebar: yes
 Description: Risk and safety overview for Concrete vault users, including smart contract, strategy, market, and operational risk considerations.
-Concrete vaults use smart contracts, connect to third-party protocols, and operate in on-chain markets. As with all DeFi products, this comes with risk.
+Concrete vaults use smart contracts, connect to third-party protocols, and operate in on-chain markets. As with all [DeFi](https://docs.concrete.xyz/glossary/#defi) products, this comes with risk.
 
 This page explains the main risk categories and what Concrete does to protect your funds. Concrete organizes its vault's security into three layers. Each layer has its own controls, audits, and responsibilities.
 
@@ -3734,7 +3735,7 @@ The on-chain smart contracts and custody setup that hold your funds.
 
 **On-chain accounting limits.** The vault automatically pauses if it detects unusual changes in asset values. Accounting updates are rate-limited to prevent manipulation.
 
-**Controlled upgrades.** Vault contracts use the UUPS proxy pattern. Upgrades are only possible through authorized paths approved by the protocol. Any unauthorized upgrade attempt is automatically rejected.
+**Controlled upgrades.** Vault contracts use the [UUPS](https://docs.concrete.xyz/glossary/#uups) proxy pattern. Upgrades are only possible through authorized paths approved by the protocol. Any unauthorized upgrade attempt is automatically rejected.
 
 **Multi-signature custody.** All vault wallets require multiple approvals to move funds. Signing authority is divided across independent authorised groups.
 
@@ -3770,15 +3771,15 @@ This layer operates above the vault and strategy layers. It provides independent
 
 ## Market Risks
 
-Even with the protections above, DeFi markets carry inherent risks. Vaults that interact with lending protocols, AMMs (automated market makers), or liquidity pools may be affected by price volatility, impermanent loss, and slippage. Here are the main ones to be aware of.
+Even with the protections above, [DeFi](https://docs.concrete.xyz/glossary/#defi) markets carry inherent risks. Vaults that interact with lending protocols, AMMs (automated market makers), or liquidity pools may be affected by price volatility, impermanent loss, and slippage. Here are the main ones to be aware of.
 
-## Impermanent Loss (IL)
+## Impermanent Loss ([IL](https://docs.concrete.xyz/glossary/#il))
 
-Impermanent loss occurs when the price of tokens in a liquidity pool diverges, potentially making LP positions less valuable than simply holding the tokens. This affects vaults that allocate to AMMs, LP pools, or engage in multi-asset yield farming.
+Impermanent loss occurs when the price of tokens in a liquidity pool diverges, potentially making [LP](https://docs.concrete.xyz/glossary/#lp) positions less valuable than simply holding the tokens. This affects vaults that allocate to AMMs, LP pools, or engage in multi-asset yield farming.
 
 **When IL is more likely:**
 
-* Non-stablecoin pairs (e.g. ETH/BTC)
+* Non-stablecoin pairs (e.g. [ETH](https://docs.concrete.xyz/glossary/#eth)/[BTC](https://docs.concrete.xyz/glossary/#btc))
 * Volatile or low-liquidity environments
 * Pre-deposit campaigns on new chains
 
@@ -3801,7 +3802,7 @@ Slippage refers to the difference between the expected price of a trade and the 
 
 * Integration with leading aggregators (e.g. 1inch) for optimal swap routing
 * Built-in slippage protection in vault contracts
-* Clear UI warnings when expected slippage exceeds thresholds
+* Clear [UI](https://docs.concrete.xyz/glossary/#ui) warnings when expected slippage exceeds thresholds
 
 ## Strategy-Specific Risks
 
@@ -3819,7 +3820,149 @@ Access to Concrete products is not available in every jurisdiction. Before depos
 
 ---
 
-# Document 46: Support
+# Document 46: Glossary
+Source: src/glossary.md
+Doc ID: glossary
+Public URL: https://docs.concrete.xyz/glossary/
+In active sidebar: yes
+Description: Definitions for the acronyms, token tickers, and technical terms used across the Concrete documentation.
+# Glossary
+
+This page indexes the acronyms, token tickers, and technical short-forms that show up across the Concrete documentation, for readers (depositors, integrators, and operators) navigating between articles. Each entry has a stable anchor (for example, `#abi`, `#erc-4626`, `#ct-defiusdt`) so other pages can deep-link to a specific term.
+
+## A
+
+<a id="abi"></a>**ABI** – Application Binary Interface. The structured format that defines how clients encode calls to a smart contract and decode its return values.
+
+<a id="amm"></a>**AMM** – Automated Market Maker. A smart contract that prices and settles swaps from on-chain liquidity pools rather than from an order book.
+
+<a id="api"></a>**API** – Application Programming Interface. A defined set of endpoints or functions one program exposes for another to call.
+
+<a id="apr"></a>**APR** – Annual Percentage Rate. An annualized return calculated on a simple (non-compounding) basis.
+
+<a id="apy"></a>**APY** – Annual Percentage Yield. An annualized return that assumes compounding.
+
+<a id="aum"></a>**AUM** – Assets Under Management. The total value of assets a vault or strategy holds and deploys.
+
+## B
+
+<a id="bera"></a>**BERA** – The native token of the Berachain network.
+
+<a id="bgt"></a>**BGT** – Berachain Governance Token. The governance token issued by Berachain.
+
+<a id="btc"></a>**BTC** – Bitcoin. The native asset of the Bitcoin network.
+
+## C
+
+<a id="ct-asset"></a>**ctAsset / ctAssets** – Concrete vault share tokens. ERC-20 tokens minted to depositors that represent their portion of a vault's underlying assets and accrued yield. The full term for any vault share issued by Concrete; per-vault tickers follow the pattern `ct<Underlying>`. See [Concrete Vault Shares](https://docs.concrete.xyz/Using-Concrete-Vaults/concrete-vault-shares/).
+
+<a id="ct-beralbtc"></a>**ctBeraLBTC** – Vault share for the Berachain LBTC vault.
+
+<a id="ct-defiusdt"></a>**ctDefiUSDT** – Vault share for the Concrete DeFi USDT vault.
+
+<a id="ct-eth"></a>**ctETH** – Vault share for an ETH-denominated vault.
+
+<a id="ct-lbtc"></a>**ctLBTC** – Vault share for an LBTC-denominated vault.
+
+<a id="ct-stablefrxusd"></a>**ctStablefrxUSD** – Vault share for the Stable Network frxUSD pre-deposit vault.
+
+<a id="ct-stableusdt"></a>**ctStableUSDT** – Vault share for the Stable Network USDT pre-deposit vault.
+
+<a id="ct-wbtc"></a>**ctWBTC** – Vault share for a WBTC-denominated vault.
+
+## D
+
+<a id="defi"></a>**DeFi** – Decentralized Finance. The class of financial services delivered by smart contracts on public blockchains rather than by intermediated institutions.
+
+## E
+
+<a id="eip"></a>**EIP** – Ethereum Improvement Proposal. A design document proposing a change or addition to the Ethereum protocol or its standards.
+
+<a id="ena"></a>**ENA** – The governance token of the Ethena protocol.
+
+<a id="eoa"></a>**EOA** – Externally Owned Account. A wallet controlled by a private key, in contrast with a smart-contract wallet.
+
+<a id="erc-20"></a>**ERC-20** – The Ethereum standard for fungible tokens, defined in [EIP-20](https://eips.ethereum.org/EIPS/eip-20).
+
+<a id="erc-4626"></a>**ERC-4626** – The Ethereum standard for tokenized yield-bearing vaults, defined in [EIP-4626](https://eips.ethereum.org/EIPS/eip-4626). The base standard Concrete vaults implement. See [Yield Vaults and ERC-4626 Standard](https://docs.concrete.xyz/Overview/yield-vaults-and-erc-4626-standard/).
+
+<a id="eth"></a>**ETH** – Ether. The native asset of the Ethereum network.
+
+## F
+
+<a id="fifo"></a>**FIFO** – First In, First Out. The order in which queued withdrawal requests are processed: the earliest submitted request settles first.
+
+<a id="frxusd"></a>**frxUSD** – A USD-pegged stablecoin issued by Frax Finance.
+
+## I
+
+<a id="il"></a>**IL** – Impermanent Loss. The unrealized loss an LP can experience when the prices of tokens in a liquidity pool diverge.
+
+## J
+
+<a id="js"></a>**JS** – JavaScript.
+
+## L
+
+<a id="lbtc"></a>**LBTC** – Lombard BTC. A liquid Bitcoin-backed token issued by Lombard.
+
+<a id="lp"></a>**LP** – Liquidity Provider, or by extension a liquidity-provider position in an AMM pool.
+
+<a id="ltv"></a>**LTV** – Loan-to-Value. The ratio of a loan's outstanding amount to the market value of the collateral backing it.
+
+## M
+
+<a id="mpc"></a>**MPC** – Multi-Party Computation. A cryptographic technique that lets multiple parties jointly authorize signatures without any one party holding the full private key.
+
+## N
+
+<a id="nav"></a>**NAV** – Net Asset Value. The value of a vault's holdings net of liabilities, used to derive share price.
+
+## O
+
+<a id="ofac"></a>**OFAC** – Office of Foreign Assets Control. The U.S. Treasury agency that administers economic sanctions and maintains restricted-jurisdiction lists.
+
+## R
+
+<a id="rpc"></a>**RPC** – Remote Procedure Call. The request/response interface a client uses to read from or send transactions to a blockchain node.
+
+## S
+
+<a id="sdk"></a>**SDK** – Software Development Kit. The Concrete SDK exposes typed methods for reading vault state and submitting deposits, withdrawals, and approvals. See [SDK](https://docs.concrete.xyz/Developers/SDK/overview/).
+
+## T
+
+<a id="tac"></a>**TAC** – TAC Network. The blockchain that hosted the TAC Stone, TAC LevelUSD, and TAC Renzo pre-deposit vaults. See [TAC](https://docs.concrete.xyz/Completed-Campaigns/tac/).
+
+<a id="ts"></a>**TS** – TypeScript.
+
+<a id="tvl"></a>**TVL** – Total Value Locked. The total value of assets a protocol, vault, or strategy holds.
+
+## U
+
+<a id="ui"></a>**UI** – User Interface.
+
+<a id="url"></a>**URL** – Uniform Resource Locator. A web address.
+
+<a id="usd"></a>**USD** – U.S. Dollar.
+
+<a id="usdc"></a>**USDC** – USD Coin. A U.S. dollar-pegged stablecoin issued by Circle.
+
+<a id="usdt"></a>**USDT** – Tether. A U.S. dollar-pegged stablecoin issued by Tether Operations.
+
+<a id="utc"></a>**UTC** – Coordinated Universal Time. The reference time zone used for Epoch schedules and other on-chain timing.
+
+<a id="uups"></a>**UUPS** – Universal Upgradeable Proxy Standard. The upgradeable proxy pattern Concrete vaults use, defined in [EIP-1822](https://eips.ethereum.org/EIPS/eip-1822).
+
+## W
+
+<a id="wbtc"></a>**WBTC** – Wrapped Bitcoin. An ERC-20 token backed 1:1 by BTC custodied off-chain. See [WBTC Vault](https://docs.concrete.xyz/Live-Vaults/wbtc-vault/).
+
+<a id="weth"></a>**WETH** – Wrapped Ether. An ERC-20 representation of ETH used in protocols that expect ERC-20 tokens.
+
+---
+
+# Document 47: Support
 Source: src/support.md
 Doc ID: support
 Public URL: https://docs.concrete.xyz/support/
@@ -3854,7 +3997,7 @@ We are working on expanding our support channels. Stay tuned for updates!
 
 ---
 
-# Document 47: How to Repay and Withdraw Borrowed Assets
+# Document 48: How to Repay and Withdraw Borrowed Assets
 Source: src/03-Borrow/close-loan.md
 Doc ID: Borrow/close-loan
 Public URL: https://docs.concrete.xyz/Borrow/close-loan/
@@ -3878,7 +4021,7 @@ Description: Concrete Borrow documentation for how to Repay and Withdraw, includ
 ## Step 3: Repay and Withdraw
 
 - Select the **Repay Position** option. This will automatically calculate the amount required to repay the loan, including any interest or fees.
-- Below, you'll see the assets available for withdrawal (e.g., USDC or WETH).
+- Below, you'll see the assets available for withdrawal (e.g., [USDC](https://docs.concrete.xyz/glossary/#usdc) or [WETH](https://docs.concrete.xyz/glossary/#weth)).
 - Confirm the repayment and withdrawal by clicking on the **Repay and Withdraw** button.
 
 ## Step 4: Confirm in MetaMask
@@ -3896,7 +4039,7 @@ Description: Concrete Borrow documentation for how to Repay and Withdraw, includ
 
 ---
 
-# Document 48: How to Activate Concrete Borrow (Default Lite)
+# Document 49: How to Activate Concrete Borrow (Default Lite)
 Source: src/03-Borrow/enable-concrete.md
 Doc ID: Borrow/enable-concrete
 Public URL: https://docs.concrete.xyz/Borrow/enable-concrete/
@@ -3912,7 +4055,7 @@ Concrete Borrow (Lite) is the foundational borrowing solution in the Concrete ec
 
 By default, Concrete Borrow comes with **Concrete Lite**, which forecloses loans early, reducing the risk of liquidation penalties:
 
-- **Early Foreclosure**: If the Loan-to-Value (LTV) ratio approaches the liquidation threshold, Concrete Lite triggers an early foreclosure, avoiding traditional liquidation.
+- **Early Foreclosure**: If the Loan-to-Value ([LTV](https://docs.concrete.xyz/glossary/#ltv)) ratio approaches the liquidation threshold, Concrete Lite triggers an early foreclosure, avoiding traditional liquidation.
 - **Reduced Fees**: This process incurs a **3.5% foreclosure fee**, significantly lower than typical market liquidation penalties (5%-15%).
 - **No Activation Fee**: Concrete Borrow (Lite) is active by default, with no upfront costs.
 - **Gas Fee Subsidy**: Borrowers receive partial coverage for gas fees when taking out loans through Concrete.
@@ -3922,7 +4065,7 @@ By default, Concrete Borrow comes with **Concrete Lite**, which forecloses loans
 ![](https://docs.concrete.xyz/img/borrow-4.png)
 
 1. **View Loan Overview**:
-   - The loan dashboard shows the current LTV, liquidation threshold, and the status of Concrete Lite.
+   - The loan dashboard shows the current [LTV](https://docs.concrete.xyz/glossary/#ltv), liquidation threshold, and the status of Concrete Lite.
 
 2. **Enable or Disable Protection**:
    - Users can choose to disable the default protection by toggling the **disable** button next to the **Concrete Lite** status.
@@ -3952,20 +4095,20 @@ By default, Concrete Borrow comes with **Concrete Lite**, which forecloses loans
 ### Loan Details
 
 1. **Amount Supplied & Supplied Value:**
-   - Indicates the user deposited 119.928 WETH, valued at $292,811.70.
+   - Indicates the user deposited 119.928 [WETH](https://docs.concrete.xyz/glossary/#weth), valued at $292,811.70.
 
-2. **Total Debt & Net APR:**
+2. **Total Debt & Net [APR](https://docs.concrete.xyz/glossary/#apr):**
    - Displays the current outstanding loan value ($149,993.45) and the applied interest rate (13.59% Net APR).
 
 3. **History Section:**
    - A record of all loan-related actions, including:
-     - **Initial Borrow**: User borrowed $150,000 USDC.
+     - **Initial Borrow**: User borrowed $150,000 [USDC](https://docs.concrete.xyz/glossary/#usdc).
      - **Subscribe Protection**: Protection Status.
      - **Cancel Protection**: Shows attempts to deactivate protection.
 
 ---
 
-# Document 49: How to Borrow From External Market
+# Document 50: How to Borrow From External Market
 Source: src/03-Borrow/open-loan-externally.md
 Doc ID: Borrow/open-loan-externally
 Public URL: https://docs.concrete.xyz/Borrow/open-loan-externally/
@@ -3987,8 +4130,8 @@ Concrete offers an efficient interface to initiate borrowing on external markets
 
 ## Step 3: Select Supply and Borrow Assets
 
-- Choose the asset you wish to supply (e.g., **WETH**).
-- Select the asset you want to borrow (e.g., **USDC**).
+- Choose the asset you wish to supply (e.g., **[WETH](https://docs.concrete.xyz/glossary/#weth)**).
+- Select the asset you want to borrow (e.g., **[USDC](https://docs.concrete.xyz/glossary/#usdc)**).
 - You can also specify the external market where you'd like the transaction to take place. For instance, choose **Aave** as the borrowing platform.
 
 ## Step 4: Initiate the Loan
@@ -3996,9 +4139,9 @@ Concrete offers an efficient interface to initiate borrowing on external markets
 - Click **Open Loan**.
 - In the subsequent window, enter the amount of the selected collateral (supply amount) and the amount you wish to borrow.
 - Review the provided details such as:
-  - **LTV (Loan-to-Value)** percentage
+  - **[LTV](https://docs.concrete.xyz/glossary/#ltv) (Loan-to-Value)** percentage
   - **Asset Prices** (current collateral and liquidation prices)
-  - **Net APR** (interest rate post-optimization)
+  - **Net [APR](https://docs.concrete.xyz/glossary/#apr)** (interest rate post-optimization)
 
 ## Step 5: Confirm and Finalize
 
@@ -4008,7 +4151,7 @@ Concrete offers an efficient interface to initiate borrowing on external markets
 
 ---
 
-# Document 50: How to Borrow Against Collateral
+# Document 51: How to Borrow Against Collateral
 Source: src/03-Borrow/open-loan.md
 Doc ID: Borrow/open-loan
 Public URL: https://docs.concrete.xyz/Borrow/open-loan/
@@ -4020,16 +4163,16 @@ Description: Concrete Borrow documentation for how to Borrow Against Collateral,
 
 ## 1. Access the Borrow Interface
 
-Navigate to the **Borrow** tab and select a loan pair, such as WETH/USDC.
+Navigate to the **Borrow** tab and select a loan pair, such as [WETH](https://docs.concrete.xyz/glossary/#weth)/[USDC](https://docs.concrete.xyz/glossary/#usdc).
 Example: Choose **WETH to borrow USDC** on **Arbitrum**.
 
 ## 2. Open Loan  
 
-- Click **Open Loan** to proceed. This will display loan options across supported platforms (e.g., Aave, Compound) with optimized Net APR details.  
+- Click **Open Loan** to proceed. This will display loan options across supported platforms (e.g., Aave, Compound) with optimized Net [APR](https://docs.concrete.xyz/glossary/#apr) details.  
 
 ## 3. Specify Loan Parameters
 
-- Enter the amount of collateral (e.g., 120 WETH) and the desired borrow amount (e.g., 150,000 USDC). The system will automatically calculate your Loan-to-Value (LTV), current asset prices, liquidation threshold, and Net APR.
+- Enter the amount of collateral (e.g., 120 [WETH](https://docs.concrete.xyz/glossary/#weth)) and the desired borrow amount (e.g., 150,000 [USDC](https://docs.concrete.xyz/glossary/#usdc)). The system will automatically calculate your Loan-to-Value ([LTV](https://docs.concrete.xyz/glossary/#ltv)), current asset prices, liquidation threshold, and Net [APR](https://docs.concrete.xyz/glossary/#apr).
 - Click **Continue**.
 
 ## 4. Supply Collateral
@@ -4057,19 +4200,19 @@ If a protection plan is enabled, you'll see the estimated gas savings, lower liq
 
 Your loan is now active and protected (if selected).
 You can manage your loan in the **Portfolio** tab, which displays:
-   - Loan health (LTV, collateral price, etc.)
+   - Loan health ([LTV](https://docs.concrete.xyz/glossary/#ltv), collateral price, etc.)
    - Protection plan status
    - Loan history (transaction details)
 
 ---
 
-# Document 51: Overview
+# Document 52: Overview
 Source: src/03-Borrow/overview.md
 Doc ID: Borrow/overview
 Public URL: https://docs.concrete.xyz/Borrow/overview/
 In active sidebar: no
 Description: Concrete Borrow documentation for overview, including loan lifecycle, collateral behavior, and repayment workflows.
-**Concrete Borrow** is Concrete Protocol’s decentralized lending and borrowing feature, designed to streamline access to liquidity across top DeFi money markets while offering unique protections. By integrating directly with multiple platforms such as Aave, Compound, and Silo, Concrete Borrow enables users to seamlessly find the most favorable rates, manage loans in one unified view, and benefit from unique protections like **Concrete Lite**. This article provides a technical breakdown of how Concrete Borrow works and the features that distinguish it from traditional DeFi borrowing.
+**Concrete Borrow** is Concrete Protocol’s decentralized lending and borrowing feature, designed to streamline access to liquidity across top [DeFi](https://docs.concrete.xyz/glossary/#defi) money markets while offering unique protections. By integrating directly with multiple platforms such as Aave, Compound, and Silo, Concrete Borrow enables users to seamlessly find the most favorable rates, manage loans in one unified view, and benefit from unique protections like **Concrete Lite**. This article provides a technical breakdown of how Concrete Borrow works and the features that distinguish it from traditional DeFi borrowing.
 
 | **Feature**                | **Concrete Borrow**                                                      |
 |----------------------------|--------------------------------------------------------------------------|
@@ -4098,17 +4241,17 @@ Concrete subsidizes a significant portion of the gas costs associated with borro
 
 ### Enhanced Protection Against Liquidation
 
-With **Concrete Lite** enabled by default, borrowers benefit from a foreclosure mechanism that intervenes before their position is fully liquidated. Unlike traditional DeFi platforms, which impose 5-15% liquidation penalties, Concrete Lite forecloses the loan early with a reduced 2% fee, helping users retain more of their assets.
+With **Concrete Lite** enabled by default, borrowers benefit from a foreclosure mechanism that intervenes before their position is fully liquidated. Unlike traditional [DeFi](https://docs.concrete.xyz/glossary/#defi) platforms, which impose 5-15% liquidation penalties, Concrete Lite forecloses the loan early with a reduced 2% fee, helping users retain more of their assets.
 
 ## How Concrete Borrow Works
 
 ### 1. Deposit Collateral
 
-To begin borrowing, users first deposit assets (e.g., ETH) into a **Concrete Vault**. In return, they receive a tokenized proof of deposit, known as **Concrete ETH (cETH)**, which represents their collateral on the platform. This token can be used to secure loans within the Concrete ecosystem.
+To begin borrowing, users first deposit assets (e.g., [ETH](https://docs.concrete.xyz/glossary/#eth)) into a **Concrete Vault**. In return, they receive a tokenized proof of deposit, known as **Concrete ETH (cETH)**, which represents their collateral on the platform. This token can be used to secure loans within the Concrete ecosystem.
 
 ### 2. Borrow Against Collateral
 
-Using their cETH as collateral, users can borrow stablecoins or other assets. Concrete Borrow automatically finds the best rates from integrated money markets, ensuring that users receive the most competitive loan terms available. The protocol’s integration includes Aave, Compound, Silo, and Radiant, with plans to expand to additional DeFi platforms.
+Using their cETH as collateral, users can borrow stablecoins or other assets. Concrete Borrow automatically finds the best rates from integrated money markets, ensuring that users receive the most competitive loan terms available. The protocol’s integration includes Aave, Compound, Silo, and Radiant, with plans to expand to additional [DeFi](https://docs.concrete.xyz/glossary/#defi) platforms.
 
 ### 3. Rate Aggregation and Dynamic Optimization
 
@@ -4116,7 +4259,7 @@ Concrete Borrow’s backend is engineered to monitor rates, collateral limits (L
 
 ### 4. Liquidation Protection through Concrete Lite
 
-Concrete Lite, enabled by default, protects users from standard liquidation events. When a position’s LTV ratio approaches the threshold for liquidation, Concrete’s foreclosure mechanism initiates a flash loan to cover the debt. This ensures the user’s position is closed with a minimal 2% fee rather than incurring the typical 5-15% penalty.
+Concrete Lite, enabled by default, protects users from standard liquidation events. When a position’s [LTV](https://docs.concrete.xyz/glossary/#ltv) ratio approaches the threshold for liquidation, Concrete’s foreclosure mechanism initiates a flash loan to cover the debt. This ensures the user’s position is closed with a minimal 2% fee rather than incurring the typical 5-15% penalty.
 
    - **Opt-Out Flexibility**: Users can choose to opt out of Concrete Lite if they prefer to manage liquidation risk manually.
    - **Automatic Intervention**: The foreclosure process activates automatically without user intervention, providing peace of mind and asset preservation.
@@ -4127,7 +4270,7 @@ To close a position, users must repay the borrowed amount. Once the loan is full
 
 ## Technical Infrastructure and Optimization
 
-Concrete Borrow leverages a robust technical infrastructure to deliver seamless access to borrowing across DeFi platforms. Here’s a breakdown of how Concrete optimizes loan management:
+Concrete Borrow leverages a robust technical infrastructure to deliver seamless access to borrowing across [DeFi](https://docs.concrete.xyz/glossary/#defi) platforms. Here’s a breakdown of how Concrete optimizes loan management:
 
 1. **Smart Contract Architecture for Rate Aggregation**  
    Concrete’s blueprint includes a smart contract system designed to manage user accounts across multiple money markets. Each borrower’s profile is stored as a unique **blueprint** that tracks positions and integrates with Aave, Compound, and other markets in real time.
@@ -4172,13 +4315,13 @@ Here’s a step-by-step outline of the complete Concrete Borrow process:
 
 ---
 
-# Document 52: Quick Start (Plug-and-Play Integration)
+# Document 53: Quick Start (Plug-and-Play Integration)
 Source: src/03-Developers/SDK/quick-start.md
 Doc ID: Developers/SDK/quick-start
 Public URL: https://docs.concrete.xyz/Developers/SDK/quick-start/
 In active sidebar: no
 Description: Concrete Earn V2 SDK documentation for quick Start, with implementation guidance for production-grade integrations.
-Concrete's SDK provides ready-to-use React and Wagmi hooks for integrating deposits, withdrawals, and balance views in a few lines of code.
+Concrete's [SDK](https://docs.concrete.xyz/glossary/#sdk) provides ready-to-use React and Wagmi hooks for integrating deposits, withdrawals, and balance views in a few lines of code.
 
 These hooks combine ethers, wagmi, and the Concrete SDK internals under the hood. You can use them to go from setup to a live app in minutes.
 
@@ -4201,10 +4344,10 @@ export const vault = {
 ```
 
 :::tip
-Developers already familiar with Wagmi can use their existing configuration. This snippet is only a quick reference. For full setup details, see [Setup Configuration](https://docs.concrete.xyz/Developers/SDK/setup-configuration/) in the main SDK documentation.
+Developers already familiar with Wagmi can use their existing configuration. This snippet is only a quick reference. For full setup details, see [Setup Configuration](https://docs.concrete.xyz/Developers/SDK/setup-configuration/) in the main [SDK](https://docs.concrete.xyz/glossary/#sdk) documentation.
 :::
 
-## SDK Playground
+## [SDK](https://docs.concrete.xyz/glossary/#sdk) Playground
 
 Concrete provides a live SDK Playground inside Concrete Enterprise: a web interface that demonstrates the SDK and Wagmi hooks in real time.
 
@@ -4223,7 +4366,7 @@ It is the fastest way to explore the SDK without setting up a full app. You can 
 | **Withdrawals** | Redeem shares for underlying assets | `useVaultWithdraw()` |
 | **Balances** | Show current user balances | `useVaultUserBalance()` |
 
-## Simple USDC Deposit
+## Simple [USDC](https://docs.concrete.xyz/glossary/#usdc) Deposit
 
 ```tsx
 import { useVaultDeposit } from "@concrete-xyz/sdk/wagmi";
@@ -4272,7 +4415,7 @@ export default function VaultWithdrawPage() {
 }
 ```
 
-## Deposit ETH → WETH Vault
+## Deposit [ETH](https://docs.concrete.xyz/glossary/#eth) → [WETH](https://docs.concrete.xyz/glossary/#weth) Vault
 
 ```tsx
 import { useState } from "react";
@@ -4332,20 +4475,20 @@ const deposit = useVaultDeposit(vaultConfig, options);
 | --- | --- | --- | --- |
 | `amount` | `string \| number \| bigint` | – | Amount to deposit. Pass a human value when using `amountToBigInt: true`, or a `BigInt` in base units otherwise. |
 | `amountToBigInt` | `boolean` | `false` | When `true`, converts `amount` to a `BigInt` using the vault's underlying decimals. |
-| `useEther` | `boolean` | `false` | Wrap native ETH to WETH before depositing. |
+| `useEther` | `boolean` | `false` | Wrap native [ETH](https://docs.concrete.xyz/glossary/#eth) to [WETH](https://docs.concrete.xyz/glossary/#weth) before depositing. |
 | `onSuccess` | `function` | – | Callback when the transaction confirms. |
 | `onError` | `function` | – | Callback on transaction failure. |
 | `onSettled` | `function` | – | Runs after success or error. |
 
 ---
 
-# Document 53: getApyDetails()
+# Document 54: getApyDetails()
 Source: src/03-Developers/SDK/read-methods/getAPYDetails.md
 Doc ID: Developers/SDK/read-methods/getAPYDetails
 Public URL: https://docs.concrete.xyz/Developers/SDK/read-methods/getAPYDetails/
 In active sidebar: no
 Description: Read-method reference for getApyDetails() in the Concrete Earn V2 SDK, including expected inputs, outputs, and usage context.
-Fetches APY history and headline metrics for a vault. The method is exposed on the vault instance but is backed by the Concrete API, not an on-chain call.
+Fetches [APY](https://docs.concrete.xyz/glossary/#apy) history and headline metrics for a vault. The method is exposed on the vault instance but is backed by the Concrete [API](https://docs.concrete.xyz/glossary/#api), not an on-chain call.
 
 :::tip
 Works the same in vanilla, React, and Wagmi integrations because all return the same vault object.
@@ -4474,8 +4617,8 @@ export function ApyPanel() {
 
 ## Notes and error handling
 
-- **Backend-backed**: unlike `symbol()` or `totalAssets()`, this hits the Concrete API. Handle HTTP and network failures and timeouts.
-- **Staleness**: APY is not block-by-block. Cache reasonably (`staleTime` 30 to 120 seconds).
+- **Backend-backed**: unlike `symbol()` or `totalAssets()`, this hits the Concrete [API](https://docs.concrete.xyz/glossary/#api). Handle HTTP and network failures and timeouts.
+- **Staleness**: [APY](https://docs.concrete.xyz/glossary/#apy) is not block-by-block. Cache reasonably (`staleTime` 30 to 120 seconds).
 - **String values**: headline fields are numeric strings. Convert with `Number(...)` before arithmetic.
 - **Rate limits**: if you batch widgets, share a single query via React Query to avoid redundant calls.
 
@@ -4492,13 +4635,13 @@ try {
 
 ---
 
-# Document 54: How to Activate Concrete Protect
+# Document 55: How to Activate Concrete Protect
 Source: src/04-Protect/activate-concrete-protect.md
 Doc ID: Protect/activate-concrete-protect
 Public URL: https://docs.concrete.xyz/Protect/activate-concrete-protect/
 In active sidebar: no
 Description: Concrete Protect documentation for how to Activate Concrete Protect, covering activation, mechanics, and risk-management behavior.
-Concrete Protect offers a higher level of security beyond the default Concrete Borrow (Lite) protection. It injects credit into your loan to improve the Loan-to-Value (LTV) ratio, reducing the risk of liquidation. Fees for upgrading are calculated based on the selected plan and protection duration.
+Concrete Protect offers a higher level of security beyond the default Concrete Borrow (Lite) protection. It injects credit into your loan to improve the Loan-to-Value ([LTV](https://docs.concrete.xyz/glossary/#ltv)) ratio, reducing the risk of liquidation. Fees for upgrading are calculated based on the selected plan and protection duration.
 
 Here’s how to activate it for individual positions (applied separately for each loan):
 
@@ -4535,18 +4678,18 @@ Users can manage all protected positions from the Portfolio:
 
 ## 6. Protection Activated
 
-- After confirmation, your loan will display its protection status and updated LTV in the Portfolio.
+- After confirmation, your loan will display its protection status and updated [LTV](https://docs.concrete.xyz/glossary/#ltv) in the Portfolio.
 - You’ll also see the applied credit line and its remaining balance under the loan details.
 
 ---
 
-# Document 55: Overview
+# Document 56: Overview
 Source: src/04-Protect/overview.md
 Doc ID: Protect/overview
 Public URL: https://docs.concrete.xyz/Protect/overview/
 In active sidebar: no
 Description: Concrete Protect documentation for overview, covering activation, mechanics, and risk-management behavior.
-**Concrete Protect** is Concrete Protocol's advanced liquidation prevention service, designed for users who require robust protection to avoid liquidation events entirely. Unlike Concrete Lite, which reduces liquidation penalties, Concrete Protect actively prevents liquidations by injecting capital into positions as Loan-to-Value (LTV) ratios approach risk thresholds.
+**Concrete Protect** is Concrete Protocol's advanced liquidation prevention service, designed for users who require robust protection to avoid liquidation events entirely. Unlike Concrete Lite, which reduces liquidation penalties, Concrete Protect actively prevents liquidations by injecting capital into positions as Loan-to-Value ([LTV](https://docs.concrete.xyz/glossary/#ltv)) ratios approach risk thresholds.
 
 ## Key Components
 
@@ -4554,7 +4697,7 @@ Concrete Protect integrates proactive monitoring and automated credit injection 
 
 ### Credit Injection
 
-At the heart of Concrete Protect is the **credit injection mechanism**, which prevents liquidation by recalibrating the LTV ratio of a loan when it approaches a critical level. Instead of waiting for the collateral to liquidate, Concrete Protect injects a credit line directly into the loan, reducing the LTV and pulling it back to safe levels.
+At the heart of Concrete Protect is the **credit injection mechanism**, which prevents liquidation by recalibrating the [LTV](https://docs.concrete.xyz/glossary/#ltv) ratio of a loan when it approaches a critical level. Instead of waiting for the collateral to liquidate, Concrete Protect injects a credit line directly into the loan, reducing the LTV and pulling it back to safe levels.
 
 ### Tranche-Based Structure
 
@@ -4576,7 +4719,7 @@ Once activated, Concrete Protect autonomously monitors LTV ratios and manages cr
 
 Concrete Protect follows a systematic workflow to ensure that user assets are secured without requiring continuous management from the user. Here’s a step-by-step outline of the technical operations within Concrete Protect:
 
-### 1. LTV Monitoring
+### 1. [LTV](https://docs.concrete.xyz/glossary/#ltv) Monitoring
 
 Concrete Protocol’s infrastructure continuously tracks the LTV ratio of each position protected by Concrete Protect. This is achieved through real-time asset pricing data, ensuring that any drop in collateral value or increase in debt is immediately detected.
 
@@ -4600,8 +4743,8 @@ If the market continues to decline after all tranches have been exhausted, Concr
 
 | **Fee Type**         | **Amount**                                           | **Denomination** | **Description**                                                                                                                                                |
 |----------------------|------------------------------------------------------|------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Opening Fee          | 0.5% - 0.65% of the promised amount                  | Collateral       | A one-time fee based on the user’s proximity to liquidation (LTV). Higher fees apply to users closer to liquidation, reflecting increased risk. The entire fee goes to the Concrete Treasury. |
-| Claim Fee            | BTC: 1.65%, ETH: 2.95% per disbursed credit tranche  | Collateral       | Charged for each credit line disbursement (up to 3 times). 80% of this fee goes to the Earn Vault, rewarding liquidity providers, while 20% goes to the Concrete Treasury. |
+| Opening Fee          | 0.5% - 0.65% of the promised amount                  | Collateral       | A one-time fee based on the user’s proximity to liquidation ([LTV](https://docs.concrete.xyz/glossary/#ltv)). Higher fees apply to users closer to liquidation, reflecting increased risk. The entire fee goes to the Concrete Treasury. |
+| Claim Fee            | [BTC](https://docs.concrete.xyz/glossary/#btc): 1.65%, [ETH](https://docs.concrete.xyz/glossary/#eth): 2.95% per disbursed credit tranche  | Collateral       | Charged for each credit line disbursement (up to 3 times). 80% of this fee goes to the Earn Vault, rewarding liquidity providers, while 20% goes to the Concrete Treasury. |
 | Early Cancellation Fee | 0%                                                  | N/A              | No fee for early cancellation, allowing users to cancel protection without penalty before the policy term ends.                                           |
 | Foreclosure Fee      | 3.5% of the foreclosed amount                        | Collateral       | Similar to Concrete Lite, this fee replaces high liquidation penalties with a predictable 3.5% charge. The fee distribution mirrors Concrete Lite: 0.3% to Earn Vault, 3.2% to Concrete Treasury. |
 
@@ -4609,7 +4752,7 @@ If the market continues to decline after all tranches have been exhausted, Concr
 
 Concrete Protect is engineered for users who require proactive asset security and aim to avoid liquidation events under any circumstances. It is especially suited for:
 
-- **High-Risk Positions**: Users with volatile assets that could experience rapid LTV increases benefit from Concrete Protect’s capital injection.
+- **High-Risk Positions**: Users with volatile assets that could experience rapid [LTV](https://docs.concrete.xyz/glossary/#ltv) increases benefit from Concrete Protect’s capital injection.
 - **Strategic Investors**: Those aiming to maximize the longevity of their positions without actively monitoring market shifts.
 - **Institutional and High-Net-Worth Users**: Investors managing larger portfolios that need granular control over liquidation thresholds and cost predictability.
 
@@ -4617,7 +4760,7 @@ Concrete Protect is engineered for users who require proactive asset security an
 
 | **Feature**            | **Concrete Lite**                         | **Concrete Protect**                                              |
 |------------------------|-------------------------------------------|-------------------------------------------------------------------|
-| **Primary Purpose**    | Mitigate liquidation penalties            | Actively prevent liquidation through LTV management               |
+| **Primary Purpose**    | Mitigate liquidation penalties            | Actively prevent liquidation through [LTV](https://docs.concrete.xyz/glossary/#ltv) management               |
 | **Activation**         | Free (default with borrowing)                  | Optional, user-enabled protection policy                          |
 | **LTV Management**     | Closes position pre-liquidation           | Injects credit to maintain safe LTV levels                        |
 | **User Cost**          | 3.5% foreclosure fee if liquidated        | Opening Fee + Claim Fees per credit injection                     |
