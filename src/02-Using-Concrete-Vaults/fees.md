@@ -5,9 +5,9 @@ sidebar_label: "Fees"
 sidebar_position: 4
 ---
 
-Concrete offers a transparent fee structure, ensuring competitive rates across its ecosystem.
+Concrete offers a transparent fee structure, ensuring competitive rates across its ecosystem. Not every vault applies all the fees. Each vault's fee configuration depends on its strategy and commercial terms.
 
-**Not every vault applies all the fees. Each vault's fee configuration depends on its strategy and commercial terms.** Fees are paid by minting vault shares to a fee recipient rather than transferring the underlying asset, so the cost is reflected directly in the share price.
+Fees are paid by minting vault shares to a fee recipient rather than transferring the underlying asset, so the cost is reflected directly in the share price.
 
 ## Fee summary
 
