@@ -67,10 +67,10 @@ export function UseDetails() {
 
 | Symptom | Likely cause | Fix |
 | --- | --- | --- |
-| `NETWORK_ERROR`, `failed to fetch` | Bad or unstable RPC URL, rate limiting | Switch to a reliable RPC. Add retries and backoff. |
+| `NETWORK_ERROR`, `failed to fetch` | Bad or unstable [RPC](/glossary/#rpc) [URL](/glossary/#url), rate limiting | Switch to a reliable RPC. Add retries and backoff. |
 | `CALL_EXCEPTION` or `execution reverted` | Wrong network for the vault address, wrong address, or deprecated contract | Ensure the `chainId` passed to `getVault(version, address, chainId, ...)` matches the contract's chain. Verify the address is the vault, not the underlying. |
 | `undefined` or `Cannot read properties of undefined` | Hook not ready (Wagmi client not connected) | Gate reads with `enabled: !!vault` (React Query) or `if (!vault) return`. |
-| `BigInt` range or format issues | Mixing JS `number` with token base units | Always use `BigInt`. Derive units from `await vault.getUnderlyingDecimals()`. |
+| `BigInt` range or format issues | Mixing [JS](/glossary/#js) `number` with token base units | Always use `BigInt`. Derive units from `await vault.getUnderlyingDecimals()`. |
 | Wrong display amounts | Using wrong decimals for formatting | Use `getUnderlyingDecimals()` for the underlying and `decimals()` for shares. |
 | CORS or browser blocking | Direct RPC calls from the browser blocked | Use a proxy RPC provider or call from the server. |
 | Inconsistent results caching | React Query defaults | Provide a `queryKey`, and set `staleTime`, `gcTime`, and `retry` policies explicitly. |
@@ -147,10 +147,10 @@ Common pitfalls:
 - **Input type**: must be `BigInt`, not `number` or `string`.
 - **Order of calls**: call after `getVaultDetails()` so decimals are loaded.
 - **Correct usage**:
-    - `applyDecimals()` formats vault shares (ctAssets).
-    - `toUnderlyingDecimals()` formats the underlying ERC20.
+    - `applyDecimals()` formats vault shares ([ctAssets](/glossary/#ct-asset)).
+    - `toUnderlyingDecimals()` formats the underlying [ERC20](/glossary/#erc-20).
 - **Precision**: use for display only. Keep core math in `BigInt`.
-- **Network differences**: do not assume decimals. USDC is 6 on Ethereum, and may differ elsewhere.
+- **Network differences**: do not assume decimals. [USDC](/glossary/#usdc) is 6 on Ethereum, and may differ elsewhere.
 
 ```tsx
 const details = await vault.getVaultDetails();
@@ -226,7 +226,7 @@ if (cur < need) {
 ### Insufficient balance or gas
 
 **Symptom**: `insufficient funds for intrinsic transaction cost` or `transfer amount exceeds balance`.
-**Fix**: Check native gas token (ETH) balance and underlying or share balances before sending.
+**Fix**: Check native gas token ([ETH](/glossary/#eth)) balance and underlying or share balances before sending.
 
 ```tsx
 const erc20 = await vault.getUnderlyingErc20();
@@ -247,7 +247,7 @@ await vault.deposit(amount, { nonce, maxFeePerGas: prev * 12n / 10n }); // +20%
 ### Paused or deprecated vaults
 
 **Symptom**: `CALL_EXCEPTION` or a custom revert string (for example "paused") on `deposit` or `redeem`.
-**Fix**: Surface a clear UI message. Gate write actions based on a health flag where available.
+**Fix**: Surface a clear [UI](/glossary/#ui) message. Gate write actions based on a health flag where available.
 
 ```tsx
 try { await vault.deposit(amount); }
@@ -261,7 +261,7 @@ catch (e: any) {
 
 ### Preview differs from final (state changed between calls)
 
-**Symptom**: Actual mint or redeem differs from `previewConversion` because TVL or price moved.
+**Symptom**: Actual mint or redeem differs from `previewConversion` because [TVL](/glossary/#tvl) or price moved.
 **Fix**: Treat preview as indicative. Consider a tolerance check and re-preview on the confirm step.
 
 ```tsx
@@ -269,13 +269,13 @@ const pre = await vault.previewConversion(amount);
 // Optional: assert a minimum expected output for UX. On-chain output is still authoritative.
 ```
 
-## Non-standard ERC20 tokens
+## Non-standard [ERC20](/glossary/#erc-20) tokens
 
 Some tokens:
 
 - Do not return `bool` from `approve` or `transfer`.
 - Require resetting allowance to zero before increasing it.
-- Have chain-specific decimals (for example USDC is 6 on Ethereum).
+- Have chain-specific decimals (for example [USDC](/glossary/#usdc) is 6 on Ethereum).
 
 **Defensive pattern**:
 
@@ -324,14 +324,14 @@ await vault.deposit(amount, {
 ## Reorgs and finality
 
 A receipt can succeed and then be reorged in rare cases.
-**Fix**: Wait for extra confirmations where it matters (admin ops, high TVL).
+**Fix**: Wait for extra confirmations where it matters (admin ops, high [TVL](/glossary/#tvl)).
 
 ```tsx
 const rc = await (await vault.deposit(amount)).wait(2);
 // Wait for 2 confirmations
 ```
 
-## Retry and backoff for transient RPC errors
+## Retry and backoff for transient [RPC](/glossary/#rpc) errors
 
 Only retry idempotent reads or broadcast errors clearly marked transient.
 

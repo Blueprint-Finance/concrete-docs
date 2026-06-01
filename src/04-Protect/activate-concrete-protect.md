@@ -5,7 +5,7 @@ sidebar_label: "How to Activate Concrete Protect"
 sidebar_position: 1
 ---
 
-Concrete Protect offers a higher level of security beyond the default Concrete Borrow (Lite) protection. It injects credit into your loan to improve the Loan-to-Value (LTV) ratio, reducing the risk of liquidation. Fees for upgrading are calculated based on the selected plan and protection duration.
+Concrete Protect offers a higher level of security beyond the default Concrete Borrow (Lite) protection. It injects credit into your loan to improve the Loan-to-Value ([LTV](/glossary/#ltv)) ratio, reducing the risk of liquidation. Fees for upgrading are calculated based on the selected plan and protection duration.
 
 Here’s how to activate it for individual positions (applied separately for each loan):
 
@@ -42,5 +42,5 @@ Users can manage all protected positions from the Portfolio:
 
 ## 6. Protection Activated
 
-- After confirmation, your loan will display its protection status and updated LTV in the Portfolio.
+- After confirmation, your loan will display its protection status and updated [LTV](/glossary/#ltv) in the Portfolio.
 - You’ll also see the applied credit line and its remaining balance under the loan details.

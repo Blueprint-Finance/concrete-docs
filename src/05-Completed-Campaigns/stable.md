@@ -6,7 +6,7 @@ sidebar_label: "Stable"
 
 ## Stable Vaults
 
-Concrete’s **Stable Vaults** let you deposit **USDT** or **frxUSD** early to have your funds automatically deployed on the Stable Network from day one.
+Concrete’s **Stable Vaults** let you deposit **[USDT](/glossary/#usdt)** or **[frxUSD](/glossary/#frxusd)** early to have your funds automatically deployed on the Stable Network from day one.
 
 ### The Stable Network
 
@@ -53,11 +53,11 @@ Any funds left in the Stable vault after migration will continue to earn yield d
 4. Enter the amount of stablecoins that you want to deposit
 5. Approve the vault by providing  wallet permission to spend your stablecoin
 6. Confirm the deposit by signing the deposit transaction in your wallet
-7. After confirmation, you’ll receive **ctStableUSDT** or **ctStablefrxUSD** representing your deposit.
+7. After confirmation, you’ll receive **[ctStableUSDT](/glossary/#ct-stableusdt)** or **[ctStablefrxUSD](/glossary/#ct-stablefrxusd)** representing your deposit.
 
 ### After Bridging Complete
 
-- Your balance and vault TVL will become visible
+- Your balance and vault [TVL](/glossary/#tvl) will become visible
 - You can see your deposited position under **My Deposits**
 
 ### Withdrawals
@@ -81,12 +81,12 @@ This help article walks you through the full process — including how to handle
 
 ### Summary
 
-- All users must claim their vault shares — this moves your ctStableUSDT or ctStablefrxUSD to the Stable Network using the [Earn app](https://app.concrete.xyz/) or [stable.concrete.xyz](http://stable.concrete.xyz).
+- All users must claim their vault shares — this moves your [ctStableUSDT](/glossary/#ct-stableusdt) or [ctStablefrxUSD](/glossary/#ct-stablefrxusd) to the Stable Network using the [Earn app](https://app.concrete.xyz/) or [stable.concrete.xyz](http://stable.concrete.xyz).
 - Your rewards will not be delivered in this flow. Rewards will be claimable separately [via Merkl](https://app.merkl.xyz/users/).
 - Withdrawals open on December 13th. Users can enter the withdrawal queue starting on this date. Withdrawals will be processed during a 7-day withdrawal queue period.
 
 **Important - Possible Funds Lost:**
-You must control the same Ethereum address on the Stable Network before claiming. Some multisig users have encountered issues because their Safe or contract wallet does not exist as the same address on Stable. If you do *not* control the same address on Stable, transfer your **ctStableUSDT** or **ctStablefrxUSD** to an EOA where you *do* control the same address on Stable before you claim.
+You must control the same Ethereum address on the Stable Network before claiming. Some multisig users have encountered issues because their Safe or contract wallet does not exist as the same address on Stable. If you do *not* control the same address on Stable, transfer your **ctStableUSDT** or **ctStablefrxUSD** to an [EOA](/glossary/#eoa) where you *do* control the same address on Stable before you claim.
 
 ### Multisigs & Contract Wallets
 
@@ -94,7 +94,7 @@ Concrete does not restrict which wallet types can claim. However, users must ens
 
 If you are unsure whether your multisig or contract wallet is supported on Stable, you can:
 
-- Transfer your **ctStableUSDT** or **ctStablefrxUSD** vault shares to any EOA you control on Ethereum (regular ERC-20 transfer)
+- Transfer your **ctStableUSDT** or **ctStablefrxUSD** vault shares to any EOA you control on Ethereum (regular [ERC-20](/glossary/#erc-20) transfer)
 - Then claim using that EOA (which uses the same address on Stable)
 - This ensures your vault shares are delivered correctly.
 

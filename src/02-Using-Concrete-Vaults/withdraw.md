@@ -36,7 +36,7 @@ You can track each request in the vault page with status labels **Queued**, **Pr
 
 ### Withdrawal Caps Per Epoch
 
-Some vaults set a withdrawal cap that limits the total volume of redemptions processed in a single Epoch, expressed as a percentage of vault TVL. Whether a cap is enabled, and at what threshold, is decided per vault based on the strategy's liquidity profile and unwind capacity. Not all vaults use caps. Caps work alongside cadence to keep Epoch sizes aligned with the strategy's unwind capacity.
+Some vaults set a withdrawal cap that limits the total volume of redemptions processed in a single Epoch, expressed as a percentage of vault [TVL](/glossary/#tvl). Whether a cap is enabled, and at what threshold, is decided per vault based on the strategy's liquidity profile and unwind capacity. Not all vaults use caps. Caps work alongside cadence to keep Epoch sizes aligned with the strategy's unwind capacity.
 
 To check the exact redemption process, including whether a cap is active and at what threshold, visit the specific vault's page.
 
@@ -49,7 +49,7 @@ Say a vault processes withdrawals every Tuesday with a cap of 20% of TVL per Epo
 
 If Alice submits a withdrawal request on Friday, May 29, her request joins the queue for the next Epoch on Tuesday, June 3. If total requests that week are under the 20% cap, Alice receives her funds by Friday, June 6.
 
-If requests in a given Epoch exceed the cap, the queue processes them in the order they were submitted (FIFO) across subsequent Epochs. Alice continues earning yield on her position while she waits, and her funds are returned as her place in the queue is reached.
+If requests in a given Epoch exceed the cap, the queue processes them in the order they were submitted ([FIFO](/glossary/#fifo)) across subsequent Epochs. Alice continues earning yield on her position while she waits, and her funds are returned as her place in the queue is reached.
 :::
 
 ### Things to Know About Queued Withdrawal Vaults
@@ -78,4 +78,4 @@ When a pre-deposit vault enters its claim phase, the vault page in the Concrete 
 
 - **Do my shares continue earning yield while in the queue?** Shares are held by the vault and are not burned until the Epoch is processed. Share price is locked at processing time, so any yield (or loss) the vault records between request and processing is reflected in the price applied to the request.
 - **Can I cancel a withdrawal request?** Yes, for the current open Epoch only, you can cancel on the vault page. Once the cutoff passes, the request cannot be cancelled.
-- **What happens if my request cannot be filled in its Epoch?** When the Epoch reaches its withdrawal cap, the remainder of your withdrawal request is moved to the next Epoch. Your queue position is preserved (FIFO).
+- **What happens if my request cannot be filled in its Epoch?** When the Epoch reaches its withdrawal cap, the remainder of your withdrawal request is moved to the next Epoch. Your queue position is preserved ([FIFO](/glossary/#fifo)).

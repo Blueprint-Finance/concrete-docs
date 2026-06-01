@@ -4,7 +4,7 @@ description: "Write-method reference for redeem(amount) in the Concrete Earn V2 
 sidebar_label: "redeem(amount)"
 ---
 
-Burn ctAssets (shares) and receive the underlying.
+Burn [ctAssets](/glossary/#ct-asset) (shares) and receive the underlying.
 
 ## Signature
 

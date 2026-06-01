@@ -4,7 +4,7 @@ description: "Read-method reference for getVaultDetails() in the Concrete Earn V
 sidebar_label: "getVaultDetails()"
 ---
 
-Returns metadata about the vault and its underlying ERC20.
+Returns metadata about the vault and its underlying [ERC20](/glossary/#erc-20).
 
 ## Signature
 
@@ -46,7 +46,7 @@ type VaultDetails = {
 };
 ```
 
-To get an ERC20 instance for the underlying token, call `await vault.getUnderlyingErc20()`. The `underlying` object on `VaultDetails` only exposes metadata.
+To get an [ERC20](/glossary/#erc-20) instance for the underlying token, call `await vault.getUnderlyingErc20()`. The `underlying` object on `VaultDetails` only exposes metadata.
 
 ## Example
 

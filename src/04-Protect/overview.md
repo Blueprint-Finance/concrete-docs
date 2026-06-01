@@ -5,7 +5,7 @@ sidebar_label: "Overview"
 sidebar_position: 0
 ---
 
-**Concrete Protect** is Concrete Protocol's advanced liquidation prevention service, designed for users who require robust protection to avoid liquidation events entirely. Unlike Concrete Lite, which reduces liquidation penalties, Concrete Protect actively prevents liquidations by injecting capital into positions as Loan-to-Value (LTV) ratios approach risk thresholds.
+**Concrete Protect** is Concrete Protocol's advanced liquidation prevention service, designed for users who require robust protection to avoid liquidation events entirely. Unlike Concrete Lite, which reduces liquidation penalties, Concrete Protect actively prevents liquidations by injecting capital into positions as Loan-to-Value ([LTV](/glossary/#ltv)) ratios approach risk thresholds.
 
 ## Key Components
 
@@ -13,7 +13,7 @@ Concrete Protect integrates proactive monitoring and automated credit injection 
 
 ### Credit Injection
 
-At the heart of Concrete Protect is the **credit injection mechanism**, which prevents liquidation by recalibrating the LTV ratio of a loan when it approaches a critical level. Instead of waiting for the collateral to liquidate, Concrete Protect injects a credit line directly into the loan, reducing the LTV and pulling it back to safe levels.
+At the heart of Concrete Protect is the **credit injection mechanism**, which prevents liquidation by recalibrating the [LTV](/glossary/#ltv) ratio of a loan when it approaches a critical level. Instead of waiting for the collateral to liquidate, Concrete Protect injects a credit line directly into the loan, reducing the LTV and pulling it back to safe levels.
 
 ### Tranche-Based Structure
 
@@ -35,7 +35,7 @@ Once activated, Concrete Protect autonomously monitors LTV ratios and manages cr
 
 Concrete Protect follows a systematic workflow to ensure that user assets are secured without requiring continuous management from the user. Here’s a step-by-step outline of the technical operations within Concrete Protect:
 
-### 1. LTV Monitoring
+### 1. [LTV](/glossary/#ltv) Monitoring
 
 Concrete Protocol’s infrastructure continuously tracks the LTV ratio of each position protected by Concrete Protect. This is achieved through real-time asset pricing data, ensuring that any drop in collateral value or increase in debt is immediately detected.
 
@@ -59,8 +59,8 @@ If the market continues to decline after all tranches have been exhausted, Concr
 
 | **Fee Type**         | **Amount**                                           | **Denomination** | **Description**                                                                                                                                                |
 |----------------------|------------------------------------------------------|------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Opening Fee          | 0.5% - 0.65% of the promised amount                  | Collateral       | A one-time fee based on the user’s proximity to liquidation (LTV). Higher fees apply to users closer to liquidation, reflecting increased risk. The entire fee goes to the Concrete Treasury. |
-| Claim Fee            | BTC: 1.65%, ETH: 2.95% per disbursed credit tranche  | Collateral       | Charged for each credit line disbursement (up to 3 times). 80% of this fee goes to the Earn Vault, rewarding liquidity providers, while 20% goes to the Concrete Treasury. |
+| Opening Fee          | 0.5% - 0.65% of the promised amount                  | Collateral       | A one-time fee based on the user’s proximity to liquidation ([LTV](/glossary/#ltv)). Higher fees apply to users closer to liquidation, reflecting increased risk. The entire fee goes to the Concrete Treasury. |
+| Claim Fee            | [BTC](/glossary/#btc): 1.65%, [ETH](/glossary/#eth): 2.95% per disbursed credit tranche  | Collateral       | Charged for each credit line disbursement (up to 3 times). 80% of this fee goes to the Earn Vault, rewarding liquidity providers, while 20% goes to the Concrete Treasury. |
 | Early Cancellation Fee | 0%                                                  | N/A              | No fee for early cancellation, allowing users to cancel protection without penalty before the policy term ends.                                           |
 | Foreclosure Fee      | 3.5% of the foreclosed amount                        | Collateral       | Similar to Concrete Lite, this fee replaces high liquidation penalties with a predictable 3.5% charge. The fee distribution mirrors Concrete Lite: 0.3% to Earn Vault, 3.2% to Concrete Treasury. |
 
@@ -68,7 +68,7 @@ If the market continues to decline after all tranches have been exhausted, Concr
 
 Concrete Protect is engineered for users who require proactive asset security and aim to avoid liquidation events under any circumstances. It is especially suited for:
 
-- **High-Risk Positions**: Users with volatile assets that could experience rapid LTV increases benefit from Concrete Protect’s capital injection.
+- **High-Risk Positions**: Users with volatile assets that could experience rapid [LTV](/glossary/#ltv) increases benefit from Concrete Protect’s capital injection.
 - **Strategic Investors**: Those aiming to maximize the longevity of their positions without actively monitoring market shifts.
 - **Institutional and High-Net-Worth Users**: Investors managing larger portfolios that need granular control over liquidation thresholds and cost predictability.
 
@@ -76,7 +76,7 @@ Concrete Protect is engineered for users who require proactive asset security an
 
 | **Feature**            | **Concrete Lite**                         | **Concrete Protect**                                              |
 |------------------------|-------------------------------------------|-------------------------------------------------------------------|
-| **Primary Purpose**    | Mitigate liquidation penalties            | Actively prevent liquidation through LTV management               |
+| **Primary Purpose**    | Mitigate liquidation penalties            | Actively prevent liquidation through [LTV](/glossary/#ltv) management               |
 | **Activation**         | Free (default with borrowing)                  | Optional, user-enabled protection policy                          |
 | **LTV Management**     | Closes position pre-liquidation           | Injects credit to maintain safe LTV levels                        |
 | **User Cost**          | 3.5% foreclosure fee if liquidated        | Opening Fee + Claim Fees per credit injection                     |

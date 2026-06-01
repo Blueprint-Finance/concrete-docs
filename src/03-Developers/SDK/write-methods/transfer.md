@@ -4,7 +4,7 @@ description: "Write-method reference for transfer(to, amount) in the Concrete Ea
 sidebar_label: "transfer(to, amount)"
 ---
 
-Transfer ctAssets (vault shares) directly to another address.
+Transfer [ctAssets](/glossary/#ct-asset) (vault shares) directly to another address.
 
 ## Signature
 

@@ -21,7 +21,7 @@ Emitted by `ConcreteFactory`. Names are the on-chain identifiers as declared in 
 
 ## Vault-level events
 
-Emitted by the standard vault implementation (`ConcreteStandardVaultImpl`). `Deposit` and `Withdraw` are inherited from ERC-4626.
+Emitted by the standard vault implementation (`ConcreteStandardVaultImpl`). `Deposit` and `Withdraw` are inherited from [ERC-4626](/glossary/#erc-4626).
 
 | Event | Entity updated | Description |
 | --- | --- | --- |

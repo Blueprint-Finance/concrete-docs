@@ -11,16 +11,16 @@ sidebar_position: 2
 
 ## 1. Access the Borrow Interface
 
-Navigate to the **Borrow** tab and select a loan pair, such as WETH/USDC.
+Navigate to the **Borrow** tab and select a loan pair, such as [WETH](/glossary/#weth)/[USDC](/glossary/#usdc).
 Example: Choose **WETH to borrow USDC** on **Arbitrum**.
 
 ## 2. Open Loan  
 
-- Click **Open Loan** to proceed. This will display loan options across supported platforms (e.g., Aave, Compound) with optimized Net APR details.  
+- Click **Open Loan** to proceed. This will display loan options across supported platforms (e.g., Aave, Compound) with optimized Net [APR](/glossary/#apr) details.  
 
 ## 3. Specify Loan Parameters
 
-- Enter the amount of collateral (e.g., 120 WETH) and the desired borrow amount (e.g., 150,000 USDC). The system will automatically calculate your Loan-to-Value (LTV), current asset prices, liquidation threshold, and Net APR.
+- Enter the amount of collateral (e.g., 120 [WETH](/glossary/#weth)) and the desired borrow amount (e.g., 150,000 [USDC](/glossary/#usdc)). The system will automatically calculate your Loan-to-Value ([LTV](/glossary/#ltv)), current asset prices, liquidation threshold, and Net [APR](/glossary/#apr).
 - Click **Continue**.
 
 ## 4. Supply Collateral
@@ -48,6 +48,6 @@ If a protection plan is enabled, you'll see the estimated gas savings, lower liq
 
 Your loan is now active and protected (if selected).
 You can manage your loan in the **Portfolio** tab, which displays:
-   - Loan health (LTV, collateral price, etc.)
+   - Loan health ([LTV](/glossary/#ltv), collateral price, etc.)
    - Protection plan status
    - Loan history (transaction details)

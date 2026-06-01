@@ -4,7 +4,7 @@ description: "Read-method reference for toUnderlyingDecimals(amount) in the Conc
 sidebar_label: "toUnderlyingDecimals(amount)"
 ---
 
-Converts a raw `BigInt` amount into a human-readable decimal-adjusted value using the underlying asset's decimals. Use it to display underlying balances (for example USDC, WETH) and to interpret preview results from `previewConversion()`.
+Converts a raw `BigInt` amount into a human-readable decimal-adjusted value using the underlying asset's decimals. Use it to display underlying balances (for example [USDC](/glossary/#usdc), [WETH](/glossary/#weth)) and to interpret preview results from `previewConversion()`.
 
 ## Parameters
 

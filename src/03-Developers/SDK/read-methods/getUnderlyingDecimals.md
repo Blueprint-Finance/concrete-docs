@@ -4,7 +4,7 @@ description: "Read-method reference for getUnderlyingDecimals() in the Concrete 
 sidebar_label: "getUnderlyingDecimals()"
 ---
 
-Returns the number of decimals used by the vault's underlying ERC20 token. Useful when formatting amounts or constructing `BigInt` inputs.
+Returns the number of decimals used by the vault's underlying [ERC20](/glossary/#erc-20) token. Useful when formatting amounts or constructing `BigInt` inputs.
 
 ## Parameters
 
@@ -12,7 +12,7 @@ Returns the number of decimals used by the vault's underlying ERC20 token. Usefu
 
 ## Returns
 
-- `Promise<number>`: decimals used by the underlying ERC20 (for example `6` for USDC, `18` for WETH).
+- `Promise<number>`: decimals used by the underlying [ERC20](/glossary/#erc-20) (for example `6` for [USDC](/glossary/#usdc), `18` for [WETH](/glossary/#weth)).
 
 ## Example
 

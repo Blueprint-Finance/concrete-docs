@@ -15,7 +15,7 @@ Three things sit around the vault:
 - **Strategies** – each bound to a single vault, executing the actual yield logic.
 - **Hooks** – optional modules that run before and after each user operation.
 
-This separation is the central design choice. The vault's contract surface stays close to ERC-4626; product-specific variants (epoch withdrawals, cross-chain claims) layer on top of the standard deposit / mint / withdraw / redeem interface rather than replacing it.; variation between products lives in the contracts the vault holds references to: what venues to use, what restrictions to enforce, and how withdrawals settle. A curator launching a new vault is composing modules, not forking a contract.
+This separation is the central design choice. The vault's contract surface stays close to [ERC-4626](/glossary/#erc-4626); product-specific variants (epoch withdrawals, cross-chain claims) layer on top of the standard deposit / mint / withdraw / redeem interface rather than replacing it.; variation between products lives in the contracts the vault holds references to: what venues to use, what restrictions to enforce, and how withdrawals settle. A curator launching a new vault is composing modules, not forking a contract.
 
 ## Factory
 
@@ -32,7 +32,7 @@ A separate **Periphery Factory** deploys strategies and position helpers. Unlike
 ## Vault implementations
 
 All vault behavior starts from a single abstract base. The Standard implementation is the baseline; other implementations override specific functions to change one aspect of behavior:
-- **Standard** – the baseline ERC-4626 vault with strategy allocation.
+- **Standard** – the baseline [ERC-4626](/glossary/#erc-4626) vault with strategy allocation.
 - **Async** – overrides withdraw semantics with an epoch-based queue. See [How Withdrawals Work](/Using-Concrete-Vaults/withdraw/) for the user-facing view.
 - **Predeposit** – adds a LayerZero-based cross-chain claim flow for assets pre-staked on a source chain before vault deployment on the target. The claim path bypasses the hook lifecycle, so curators using a whitelist hook on a Predeposit vault need a separate gating mechanism for cross-chain claims.
 - **Bridged Standard / Bridged Async** – add a single `unbackedMint` function for one-shot cross-chain migrations. The function requires `totalSupply() == 0` and `maxDepositLimit == 0`, so it can only be used to seed a vault at deployment-init time. These implementations are migration scaffolding rather than ongoing product variants.
@@ -41,7 +41,7 @@ Looping strategies and fee splitting are not vault implementations. Looping is a
 
 ## The vault: custody, shares, and accounting
 
-The vault is the share token. Depositing mints ERC-20 shares; redeeming burns them. The vault keeps a cached snapshot of total assets and refreshes it through the `withYieldAccrual` modifier before any economic operation. The combination of a controlled-update cache and accrual-before-conversion defends against donation and inflation attacks, because user-facing conversions settle against the snapshot taken at the start of the call rather than against the live `balanceOf` of the vault.
+The vault is the share token. Depositing mints [ERC-20](/glossary/#erc-20) shares; redeeming burns them. The vault keeps a cached snapshot of total assets and refreshes it through the `withYieldAccrual` modifier before any economic operation. The combination of a controlled-update cache and accrual-before-conversion defends against donation and inflation attacks, because user-facing conversions settle against the snapshot taken at the start of the call rather than against the live `balanceOf` of the vault.
 
 Note that `totalAssets()` is not the cached snapshot. It calls `_previewAccrueYieldAndFees()`, which re-reads each active strategy's `totalAllocatedValue()` live. The cached snapshot is exposed separately as `cachedTotalAssets()` and is the value conversion math reads inside `withYieldAccrual`-guarded operations.
 
@@ -100,7 +100,7 @@ The splitter lives in the periphery, separate from the vault, so a single vault 
 
 ### Example: deploying and turning on a vault
 
-A curator wants to launch a USDC vault that allocates between an idle reserve and one looping strategy.
+A curator wants to launch a [USDC](/glossary/#usdc) vault that allocates between an idle reserve and one looping strategy.
 
 1. Call `factory.create(version, ownerAddr, abi.encode(allocateModule, USDC, initialVaultManager, "Concrete USDC", "ctUSDC"), salt)`. The factory deploys a vault proxy. `ROLE_ADMIN` and `VAULT_MANAGER` are granted to `initialVaultManager`; the `ownerAddr` argument becomes the proxy's `Ownable` owner, the address authorized to call `factory.upgrade(...)` later.
 2. From the `ROLE_ADMIN` account, grant `STRATEGY_MANAGER`, `ALLOCATOR`, `PAUSER`, and (for an async vault) `WITHDRAWAL_MANAGER` and `PRIORITY_WITHDRAWAL_EXECUTOR`. The vault cannot service users yet because no strategy is attached and no role can yet add one.

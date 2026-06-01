@@ -4,7 +4,7 @@ description: "Concrete Earn V2 SDK documentation for quick Start, with implement
 sidebar_label: "Quick Start"
 ---
 
-Concrete's SDK provides ready-to-use React and Wagmi hooks for integrating deposits, withdrawals, and balance views in a few lines of code.
+Concrete's [SDK](/glossary/#sdk) provides ready-to-use React and Wagmi hooks for integrating deposits, withdrawals, and balance views in a few lines of code.
 
 These hooks combine ethers, wagmi, and the Concrete SDK internals under the hood. You can use them to go from setup to a live app in minutes.
 
@@ -27,10 +27,10 @@ export const vault = {
 ```
 
 :::tip
-Developers already familiar with Wagmi can use their existing configuration. This snippet is only a quick reference. For full setup details, see [Setup Configuration](https://docs.concrete.xyz/Developers/SDK/setup-configuration/) in the main SDK documentation.
+Developers already familiar with Wagmi can use their existing configuration. This snippet is only a quick reference. For full setup details, see [Setup Configuration](https://docs.concrete.xyz/Developers/SDK/setup-configuration/) in the main [SDK](/glossary/#sdk) documentation.
 :::
 
-## SDK Playground
+## [SDK](/glossary/#sdk) Playground
 
 Concrete provides a live SDK Playground inside Concrete Enterprise: a web interface that demonstrates the SDK and Wagmi hooks in real time.
 
@@ -49,7 +49,7 @@ It is the fastest way to explore the SDK without setting up a full app. You can 
 | **Withdrawals** | Redeem shares for underlying assets | `useVaultWithdraw()` |
 | **Balances** | Show current user balances | `useVaultUserBalance()` |
 
-## Simple USDC Deposit
+## Simple [USDC](/glossary/#usdc) Deposit
 
 ```tsx
 import { useVaultDeposit } from "@concrete-xyz/sdk/wagmi";
@@ -98,7 +98,7 @@ export default function VaultWithdrawPage() {
 }
 ```
 
-## Deposit ETH → WETH Vault
+## Deposit [ETH](/glossary/#eth) → [WETH](/glossary/#weth) Vault
 
 ```tsx
 import { useState } from "react";
@@ -158,7 +158,7 @@ const deposit = useVaultDeposit(vaultConfig, options);
 | --- | --- | --- | --- |
 | `amount` | `string \| number \| bigint` | – | Amount to deposit. Pass a human value when using `amountToBigInt: true`, or a `BigInt` in base units otherwise. |
 | `amountToBigInt` | `boolean` | `false` | When `true`, converts `amount` to a `BigInt` using the vault's underlying decimals. |
-| `useEther` | `boolean` | `false` | Wrap native ETH to WETH before depositing. |
+| `useEther` | `boolean` | `false` | Wrap native [ETH](/glossary/#eth) to [WETH](/glossary/#weth) before depositing. |
 | `onSuccess` | `function` | – | Callback when the transaction confirms. |
 | `onError` | `function` | – | Callback on transaction failure. |
 | `onSettled` | `function` | – | Runs after success or error. |

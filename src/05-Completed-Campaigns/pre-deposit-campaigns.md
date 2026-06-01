@@ -12,7 +12,7 @@ Deposits stay locked for the duration of the pre-deposit period, so withdrawals 
 
 ## Claiming Your Position at Launch
 
-When the pre-deposit period ends, the vault launches as its full version, sometimes on a different network, and your deposit becomes claimable there. You claim your [shares](/Using-Concrete-Vaults/concrete-vault-shares/) (ctAssets) on the launched vault through the [Concrete app](https://app.concrete.xyz). Your claimed position reflects your deposit plus the yield accrued during the pre-deposit period. The vault page provides the claim steps and the date claiming opens.
+When the pre-deposit period ends, the vault launches as its full version, sometimes on a different network, and your deposit becomes claimable there. You claim your [shares](/Using-Concrete-Vaults/concrete-vault-shares/) ([ctAssets](/glossary/#ct-asset)) on the launched vault through the [Concrete app](https://app.concrete.xyz). Your claimed position reflects your deposit plus the yield accrued during the pre-deposit period. The vault page provides the claim steps and the date claiming opens.
 
 :::tip
 Check the vault page for two dates: when the pre-deposit period ends and when claiming opens. Until then, your deposit stays locked and your final yield is not yet set.

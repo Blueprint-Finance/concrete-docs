@@ -4,11 +4,11 @@ description: "Concrete DeFi USDT vault documentation for how Withdrawals Are Pro
 sidebar_label: "How Withdrawals Are Processed"
 ---
 
-The Concrete DeFi USDT vault deploys deposits into yield-generating strategies that require time to unwind. To protect APY for all depositors while still offering reasonable liquidity, withdrawals are processed through a scheduled queue.
+The Concrete [DeFi](/glossary/#defi) [USDT](/glossary/#usdt) vault deploys deposits into yield-generating strategies that require time to unwind. To protect [APY](/glossary/#apy) for all depositors while still offering reasonable liquidity, withdrawals are processed through a scheduled queue.
 
 ## Standard Timing
 
-Withdrawals typically take between 3.5 and 7 days, depending on when you submit your request and on available liquidity (see below). They're processed twice weekly on a fixed schedule (all times UTC):
+Withdrawals typically take between 3.5 and 7 days, depending on when you submit your request and on available liquidity (see below). They're processed twice weekly on a fixed schedule (all times [UTC](/glossary/#utc)):
 
 | Request submitted between | Claimable from |
 | :---- | :---- |
@@ -17,7 +17,7 @@ Withdrawals typically take between 3.5 and 7 days, depending on when you submit 
 
 ## Liquidity Buffer and Extended Queues
 
-Up to 10% of the vault's TVL is available for withdrawals each cycle. If requests exceed this threshold, the queue extends beyond 7 days and withdrawals are processed in the order they were requested (FIFO). During periods of high demand, your wait may be longer than the standard schedule.
+Up to 10% of the vault's [TVL](/glossary/#tvl) is available for withdrawals each cycle. If requests exceed this threshold, the queue extends beyond 7 days and withdrawals are processed in the order they were requested ([FIFO](/glossary/#fifo)). During periods of high demand, your wait may be longer than the standard schedule.
 
 ## How to Check Your Next Withdrawal Date
 

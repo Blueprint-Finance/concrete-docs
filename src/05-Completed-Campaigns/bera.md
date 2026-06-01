@@ -63,7 +63,7 @@ If you haven’t withdrawn by **July 15**, Concrete will automatically migrate y
 You can **claim your new vault assets** directly in the app:
 
 1. Go to the **Portfolio** tab
-2. Find your ctAssets (they now show a $0 balance because your underlying asset has been migrated to a new vault)
+2. Find your [ctAssets](/glossary/#ct-asset) (they now show a $0 balance because your underlying asset has been migrated to a new vault)
 3. Click on the asset (you’ll see a success message confirming the migration)
 4. If you had deposits in multiple vaults, a dropdown selector will let you choose which asset to claim
 5. Use the **"Claim"** button to mint your new ctAssets
@@ -79,9 +79,9 @@ You can **claim your new vault assets** directly in the app:
 
 | **Event** | **Date / Timing** |
 | --- | --- |
-| Final withdrawal batch | **July 16th, 2025** (bridge requests submitted between July 9th at 12PM UTC and July 15th at 7AM UTC will be automatically processed — no user action required) |
+| Final withdrawal batch | **July 16th, 2025** (bridge requests submitted between July 9th at 12PM [UTC](/glossary/#utc) and July 15th at 7AM UTC will be automatically processed — no user action required) |
 | Vaults marked as closed migrated | **After July 16th, 2025** |
-| Claim new vault shares UI available | **After July 16th, 2025** |
+| Claim new vault shares [UI](/glossary/#ui) available | **After July 16th, 2025** |
 
 
 ### Need Help?
@@ -124,12 +124,12 @@ Boyco acts as a front-end layer for Concrete vaults. If your original deposit wa
 
 ## How to Claim and Transfer
 
-Bera vaults offer an option to **claim your rewards** and transfer your underlying tokens to a new Bera vault, so you can continue to earn an attractive yield plus Bera Governance Token emissions (BGT). All new vaults will have withdrawals open from May 16 onwards.
+Bera vaults offer an option to **claim your rewards** and transfer your underlying tokens to a new Bera vault, so you can continue to earn an attractive yield plus Bera Governance Token emissions ([BGT](/glossary/#bgt)). All new vaults will have withdrawals open from May 16 onwards.
 
 - To take advantage of this Claim and Transfer, connect your wallet and you will see a banner which informs you of a destination vault based on your deposited tokens.
 - Rewards claiming will happen instantly
 - Transferring the underlying enters into a 72 hour queue
-- Choose **“Claim and Transfer”** in the UI to begin this process
+- Choose **“Claim and Transfer”** in the [UI](/glossary/#ui) to begin this process
 
 For long-term stakers, transferring is a powerful way to boost returns while minimizing effort.
 
@@ -169,7 +169,7 @@ If you deposited into a **Bera Vault**, your rewards are now ready to be **claim
 
 There are two ways to Claim your Rewards. You can :
 
-1. [Claim your Rewards and Transfer](#how-to-claim-and-transfer) your underlying asset to a new vault to keep earning yield and Bera Governance Tokens (BGT)
+1. [Claim your Rewards and Transfer](#how-to-claim-and-transfer) your underlying asset to a new vault to keep earning yield and Bera Governance Tokens ([BGT](/glossary/#bgt))
 2. Claim your Rewards on the vault page
 
 ### Step-by-Step: Claim Rewards
@@ -195,11 +195,11 @@ After that, **unclaimed rewards may be reallocated** to other protocol incentive
 
 ### What Rewards are available to claim?
 
-**Bitcoin Bera vaults - LBTC, WBTC depositors**
+**Bitcoin Bera vaults - [LBTC](/glossary/#lbtc), [WBTC](/glossary/#wbtc) depositors**
 
-| **Rewarding entity** | **Tokens or Points** | **URL**  | **Details** |
+| **Rewarding entity** | **Tokens or Points** | **[URL](/glossary/#url)**  | **Details** |
 | --- | --- | --- | --- |
-| Berachain | BERA tokens | [https://app.concrete.xyz](https://app.concrete.xyz/) | Claim on Concrete Core app |
+| Berachain | [BERA](/glossary/#bera) tokens | [https://app.concrete.xyz](https://app.concrete.xyz/) | Claim on Concrete Core app |
 | Lombard | Lux Points | - | Points have been earned through Concrete. Distribution will happen at a later date. |
 | Babylon | BABY tokens | - | Lombard to distribute $BABY |
 | Concrete | Concrete Points | [concrete.xyz](http://concrete.xyz/) | Points have been earned through Concrete. |
@@ -210,7 +210,7 @@ After that, **unclaimed rewards may be reallocated** to other protocol incentive
 
 | **Rewarding entity** | **Tokens or Points** | **URL** | **Details** |
 | --- | --- | --- | --- |
-| Ethena USDe | ENA tokens | https://app.liquifi.finance/ | Claim ENA on Liquifi |
+| Ethena USDe | [ENA](/glossary/#ena) tokens | https://app.liquifi.finance/ | Claim ENA on Liquifi |
 | Ethena sUSDe | ENA tokens | https://app.liquifi.finance/ | Claim ENA on Liquifi |
 | Concrete | Concrete Points | [concrete.xyz](http://concrete.xyz/) | Points have been earned through Concrete. |
 | Berachain | BERA tokens | [https://app.concrete.xyz](https://app.concrete.xyz/) | Claim on Concrete Core app |
@@ -218,7 +218,7 @@ After that, **unclaimed rewards may be reallocated** to other protocol incentive
 | Dolomite | veDOLO tokens | https://app.dolomite.io/boyco | Dolomite to distribute May 7 |
 | Beraborrow | POLLEN tokens | [https://app.concrete.xyz](https://app.concrete.xyz/) | Claim on Concrete Core app |
 
-**Dinero Bera vaults - ETH depositors**
+**Dinero Bera vaults - [ETH](/glossary/#eth) depositors**
 
 | **Entity** | **Tokens or Points** | **Where to claim** | **Details** |
 | --- | --- | --- | --- |
@@ -235,7 +235,7 @@ Pendle depositors - expect rewards by May 18 latest via the [Pendle dashboard](h
 
 If you're ready to exit your position or redeem your rewards, Bera vaults support **secure and scheduled withdrawals**.
 
-When withdrawing your ctAsset:
+When withdrawing your [ctAsset](/glossary/#ct-asset):
 
 - Always confirm you control your destination Berachain address, where assets will be sent, before bridging.
 - If you do not control the destination Berachain address, contact [Support](/support/) to avoid losing access to your assets.
@@ -279,7 +279,7 @@ In some scenarios, such as vault migrations or strategic updates, users may need
 
 ## Unclaimed Rewards
 
-If you participated in the Bera vault and are eligible for rewards, you can claim them via the Concrete Core UI within 3 months of the unlock date.
+If you participated in the Bera vault and are eligible for rewards, you can claim them via the Concrete Core [UI](/glossary/#ui) within 3 months of the unlock date.
 
 ### Claim Window
 
