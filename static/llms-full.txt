@@ -1,6 +1,6 @@
 # Concrete Docs - LLM Full Context
 
-Generated: 2026-06-01T16:22:56.222Z
+Generated: 2026-06-01T16:38:18.208Z
 Source repository: concrete-docs
 Canonical docs URL: https://docs.concrete.xyz/
 
@@ -2270,7 +2270,7 @@ Tracked events: `Deposit`, `Withdraw`, `YieldAccrued`, `ManagementFeeAccrued`, `
 
 ## WithdrawalQueue
 
-Tracks pending requests per user per epoch. Created on `QueuedWithdrawal`, updated on `RequestClaimed` (sets `isClaimed = true`) and `RequestMovedToNextEpoch`, and removed from the store on `RequestCancelled`. Mutable because handlers update `isClaimed`, `shares`, `sharesRaw`, `movedFromEpoch`, and the `last*` cursor fields after creation.
+Tracks pending requests per user per epoch. Created on `QueuedWithdrawal`, updated on `RequestClaimed` (sets `isClaimed = true`) and `RequestMovedToNextEpoch`, and removed from the store on `RequestCancelled`. `PartialEpochRequestProcessed` and `PriorityWithdrawalClaimed` also write here: each drains the user's open rows in the targeted epoch (oldest first), writing a separate claimed-snapshot row when a row is partially consumed. Mutable because handlers update `isClaimed`, `shares`, `sharesRaw`, `movedFromEpoch`, and the `last*` cursor fields after creation.
 
 ```graphql
 type WithdrawalQueue @entity(immutable: false) {
@@ -2291,7 +2291,47 @@ type WithdrawalQueue @entity(immutable: false) {
 }
 ```
 
-Tracked events: `EpochProcessed`, `QueuedWithdrawal`, `RequestCancelled`, `RequestClaimed`, `RequestMovedToNextEpoch`.
+Tracked events: `EpochProcessed`, `QueuedWithdrawal`, `RequestCancelled`, `RequestClaimed`, `RequestMovedToNextEpoch`, `PartialEpochRequestProcessed`, `PriorityWithdrawalClaimed`.
+
+## PartialEpochRequestProcessed
+
+Immutable per-claim record of an individual queued request fulfilled out of a closed-but-unprocessed epoch. Emitted by `processPartialEpochRequest` on `ConcreteAsyncVaultImpl`, gated by the `WITHDRAWAL_MANAGER` role, and constrained on-chain to `epochID == latestEpochID - 1`. The user's shares for that epoch are burned and the corresponding `assets` are transferred at the current exchange rate.
+
+```graphql
+type PartialEpochRequestProcessed @entity(immutable: true) {
+  id: Bytes!
+  vault: Vault!
+  user: Bytes!
+  epochID: BigInt!
+  shares: BigDecimal!
+  assets: BigDecimal!
+  blockNumber: BigInt!
+  blockTimestamp: BigInt!
+  transactionHash: Bytes!
+}
+```
+
+## PriorityWithdrawalClaimed
+
+Immutable per-claim record of a priority (fast-track) withdrawal on an async vault. An off-chain executor holding the `PRIORITY_WITHDRAWAL_EXECUTOR` role on `ConcreteAsyncVaultImpl` calls `claimPriorityWithdrawal` to fulfil part of a user's queued shares in the active epoch ahead of the normal epoch-processing flow. The user receives `netAssets = grossAssets - unwindCost` immediately; `unwindCost` is bounded by the vault's `unwindCostCapBP` (basis points) and is debited from the strategy's reported allocation via `IAsyncAccounting.adjustTotalAssets`, so the next yield accrual reconciles the strategy's tracked value.
+
+```graphql
+type PriorityWithdrawalClaimed @entity(immutable: true) {
+  id: Bytes!
+  vault: Vault!
+  user: Bytes!
+  shares: BigDecimal!
+  grossAssets: BigDecimal!
+  unwindCost: BigDecimal!
+  netAssets: BigDecimal!
+  epochID: BigInt!
+  blockNumber: BigInt!
+  blockTimestamp: BigInt!
+  transactionHash: Bytes!
+}
+```
+
+`shares` is the amount of queued shares burned for this claim. `grossAssets` is the assets that those shares would have been worth at the current exchange rate; `netAssets` is what actually reaches the user after `unwindCost`. `epochID` is the active epoch the claim was drawn from.
 
 ## Registered vaults
 
@@ -2514,6 +2554,12 @@ Emitted by `ConcreteAsyncVaultImpl`. The handlers maintain epoch state on the Va
 | `RequestCancelled` | WithdrawalQueue | Pending request removed from the queue. |
 | `RequestClaimed` | WithdrawalQueue | Existing queue entry marked claimed (`isClaimed = true`). |
 | `RequestMovedToNextEpoch` | WithdrawalQueue | Request shifted from one epoch to the next. |
+| `PartialEpochRequestProcessed` | Vault, WithdrawalQueue, Epoch, PartialEpochRequestProcessed | An individual user's request is fulfilled from a closed-but-unprocessed epoch (the contract requires `epochID == latestEpochID - 1`). Burns the user's shares and transfers the corresponding assets, drains their open queue rows in that epoch (oldest first, splits if needed) and writes a claimed snapshot row, decreases `Epoch.shares`, `Vault.processingEpochRequestedShares`, and `cachedTotalAssets`, and increases `totalHistoricalWithdrawals` by `assets`. |
+| `PriorityWithdrawalClaimed` | Vault, WithdrawalQueue, Epoch, PriorityWithdrawalClaimed | Priority (fast-track) exit fulfilled by an executor against the active epoch. Pays `grossAssets - unwindCost` to the user, drains their open queue rows in that epoch (oldest first, splits if needed) and writes a claimed snapshot row, decreases `Epoch.shares`, `Vault.currentEpochRequestedShares`, and `cachedTotalAssets`, and increases `totalHistoricalWithdrawals` by `netAssets`. |
+
+`PartialEpochRequestProcessed` is gated on-chain by the `WITHDRAWAL_MANAGER` role and lets a single user's queued shares be fulfilled out of the closed epoch ahead of the full `EpochProcessed` cycle.
+
+Priority withdrawals are gated on-chain by the `PRIORITY_WITHDRAWAL_EXECUTOR` role on `ConcreteAsyncVaultImpl`. The `unwindCost` charged on each claim is bounded by the vault's `unwindCostCapBP` (basis points) and is applied against the strategy's reported allocation through `IAsyncAccounting.adjustTotalAssets`, so the next yield accrual reconciles the strategy's tracked value without double counting.
 
 ## Strategy events
 
