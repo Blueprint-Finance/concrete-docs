@@ -242,6 +242,57 @@ Use Docusaurus admonition syntax, sparingly. Limit to one per major section.
 - Link to the Concrete app (`app.concrete.xyz`) when referencing a user action.
 - Never use "click here". Use descriptive text: "visit the Earn page".
 
+### 5.6 Glossary linking
+
+Every page that uses an acronym, token ticker, or technical short-form
+defined in [`/glossary/`](src/glossary.md) MUST link the first occurrence per
+H2 section to its glossary anchor. The link target is `/glossary/#<anchor>`;
+canonical anchors are listed in `src/glossary.md`.
+
+**Rules:**
+
+- Link the first occurrence of each defined term in every H2 section.
+  Subsequent occurrences in the same section stay plain — repeat-linking the
+  same term adds visual noise.
+- Each H2 section resets the "first occurrence" counter. The first mention
+  in `## Withdrawals` and the first mention in `## Fees` are both linked.
+- Skip linking inside:
+  - Fenced code blocks (` ``` ` ... ` ``` `)
+  - Inline code (`` ` ` ``)
+  - HTML / JSX tags
+  - Text already inside a Markdown link
+- Skip the glossary page itself (`src/glossary.md`) — the entries already
+  define the terms.
+
+**Tooling:**
+
+- `scripts/link-glossary-terms.mjs` walks `src/` and applies the rule
+  mechanically. Run `yarn glossary:links` after adding or editing prose and
+  commit the result. The pass is idempotent, so it is safe to re-run.
+- `yarn glossary:check` reports drift without writing and exits non-zero if any
+  first-occurrence link is missing or stale. CI runs this (plus the unit tests,
+  `yarn test`) on every PR that touches `src/`, the glossary, or the script.
+- The term-to-anchor map lives at the top of that script. When you add a new
+  term to `src/glossary.md`, also add the term-to-anchor pair to the script
+  in length-descending order so e.g. `ctStableUSDT` resolves before `USDT`.
+
+**Example:**
+
+```md
+## How yield accrues
+
+A vault's [APY](/glossary/#apy) is set at strategy level. Each [APY](#)
+quote on the vault page is a 7-day rolling average.
+
+## Fees
+
+A vault's [APY](/glossary/#apy) is reported net of fees. The fee schedule
+lives on the vault's own page.
+```
+
+Both H2s link `APY` on first mention; the second mention in the first H2
+stays plain (and so would the second mention in the second H2).
+
 ## 6. Content Patterns by Article Type
 
 ### 6.1 Conceptual / overview
@@ -307,7 +358,7 @@ When transforming a raw contract, spec, or whitepaper section:
 - **Walls of text.** No paragraph longer than five sentences. Break with sub-headings, tables, or code blocks.
 - **Redundant sections.** Do not repeat the same information across Overview, How It Works, and a vault-specific page. Each page adds new information or serves a different audience. Cross-link instead of duplicating.
 - **Promissory and future content.** Do not document unbuilt, partial, or abandoned features, and do not promise future work. Describe shipped features as fact. See Section 1.4.
-- **Unexplained jargon.** On first use of a DeFi-specific term (ERC-4626, NAV, epoch, impermanent loss), provide a brief inline definition.
+- **Unexplained jargon.** On first use of a DeFi-specific term (ERC-4626, NAV, Epoch, impermanent loss), provide a brief inline definition.
 - **Em dashes.** See Section 4.5.
 
 ## 9. Metadata and SEO
@@ -408,26 +459,27 @@ items feed the translation map in Part 3.
 - **Withdrawal Queue** – the asynchronous redemption process that batches
   requests for predictable, fair processing. Title Case as the feature/process
   name (it leads in headers and UX); "the queue" lowercase when descriptive.
-  This is the user-facing name for the system; "epoch" is its underlying
+  This is the user-facing name for the system; "Epoch" is its underlying
   mechanism. _Source: `src/05-Vaults/how-withdrawals-work.md`._
 - **async vault / asynchronous mode** – a vault that settles withdrawals through
   the queue rather than instantly. Avoid "queued vault". _Source:
   `src/06-Earn-V2/overview.md`, `src/06-Earn-V2/Smart-Contracts/architecture.md`._
 - **instant withdrawal / standard mode** – atomic, same-transaction redemption,
   available for vaults configured in standard mode. _Source: `src/06-Earn-V2/overview.md`._
-- **epoch** – a vault's withdrawal accounting period; requests are processed per
-  epoch on the vault's configured cadence. Lowercase. This is the correct
-  precise term and a body-level mechanism word. Avoid "batch", "round", or
-  "cycle" as synonyms for epoch. _Source: `src/05-Vaults/how-withdrawals-work.md`, `src/06-Earn-V2/Smart-Contracts/architecture.md`._
-- **cutoff** – the deadline within an epoch after which a request rolls into the
-  next epoch. Lowercase. The corpus uses "cutoff" directly; there is no
-  friendlier alias, so "cutoff" is canonical. _Source: `src/05-Vaults/how-withdrawals-work.md`._
-- **withdrawal cap** – the per-epoch limit on total redemptions, expressed as a
-  percentage of vault TVL. _Source: `src/05-Vaults/how-withdrawals-work.md`._
+- **Epoch** – a vault's withdrawal accounting period; requests are processed per
+  Epoch on the vault's configured cadence. Title Case as a canonical defined
+  term: it is the mechanism that drives the Withdrawal Queue, and Title Case
+  makes it scannable when the queue's behaviour is being described. Avoid
+  "batch", "round", or "cycle" as synonyms for Epoch. _Source: `src/02-Using-Concrete-Vaults/withdraw.md`, `src/03-Developers/architecture-core-concepts.md`._
+- **cutoff** – the deadline within an Epoch after which a request rolls into the
+  next Epoch. Lowercase. The corpus uses "cutoff" directly; there is no
+  friendlier alias, so "cutoff" is canonical. _Source: `src/02-Using-Concrete-Vaults/withdraw.md`._
+- **withdrawal cap** – the per-Epoch limit on total redemptions, expressed as a
+  percentage of vault TVL. _Source: `src/02-Using-Concrete-Vaults/withdraw.md`._
 - **roll forward / request rollover** – when requests exceed the cap, the
-  remainder rolls forward to subsequent epochs, processed FIFO. This is the
+  remainder rolls forward to subsequent Epochs, processed FIFO. This is the
   canonical phrasing for what some sources call "overflow". _Source:
-  `src/05-Vaults/how-withdrawals-work.md`, `src/06-Earn-V2/Smart-Contracts/architecture.md`._
+  `src/02-Using-Concrete-Vaults/withdraw.md`, `src/03-Developers/architecture-core-concepts.md`._
 - **place in the queue** – a request's position in FIFO settlement order. The
   corpus phrases this as "your place in the queue"; "queue position" is an
   acceptable noun form. _Source: `src/05-Vaults/how-withdrawals-work.md`._
@@ -436,7 +488,7 @@ items feed the translation map in Part 3.
 - **status labels: Queued, Processing, Available** – the withdrawal states shown
   in the Portfolio tab. _Source: `src/05-Vaults/how-withdrawals-work.md`._
 - **FIFO (First In, First Out)** – the order in which queued requests are
-  processed across epochs. _Source: `src/05-Vaults/how-withdrawals-work.md`._
+  processed across Epochs. _Source: `src/02-Using-Concrete-Vaults/withdraw.md`._
 - **redemption** – a withdrawal, used as a synonym in formal prose. _Source:
   `src/05-Vaults/how-withdrawals-work.md`._
 
@@ -486,9 +538,10 @@ lowercase "curator".
 
 When source material reaches for a more technical or invented word, replace it
 with the canonical term. The rule follows from the glossary: **the user-facing
-name leads in headers and feature labels; precise mechanism terms (epoch,
-cutoff) stay in the body where they carry meaning.** Where a technical term has
-no friendly equivalent, that term is itself canonical and is kept.
+name leads in headers and feature labels; canonical mechanism terms (Epoch is
+Title Case, cutoff stays lowercase) carry meaning wherever they appear.** Where
+a technical term has no friendly equivalent, that term is itself canonical and
+is kept.
 
 Every "Use instead" that *replaces* a term resolves to a Part 2 glossary
 entry. Rows marked "Keep" retain a term that is already acceptable and may not
@@ -505,7 +558,7 @@ need a separate glossary entry.
 | protocol adapter, yield module | **strategy** | Replace |
 | allocator (lowercase), fund mover | **Allocator** | Replace and capitalize |
 | admin, manager (unqualified) | **Vault Manager** | Replace |
-| batch, round, cycle (for the period) | **epoch** | Replace |
+| batch, round, cycle (for the period) | **Epoch** | Replace and capitalize |
 | queued vault | **async vault** | Replace |
 | ERC4626 | **ERC-4626** | Hyphenate |
 | onchain, on chain | **on-chain** | Hyphenate |
@@ -516,9 +569,9 @@ need a separate glossary entry.
 
 | If the source says | Use instead | Rule |
 |---|---|---|
-| "Epoch Lifecycle" (as a feature or section title) | **Withdrawal Queue** (or "How Withdrawals Work" for a how-to title) | Replace the feature name; keep "epoch" in the body |
-| "epoch" (in body prose, describing one period) | **epoch** | Keep. It is the correct mechanism term |
-| epoch lifecycle (as a body phrase) | the epoch's lifecycle: start, cutoff, processing | Rephrase; do not capitalize as a product name |
+| "Epoch Lifecycle" (as a feature or section title) | **Withdrawal Queue** (or "How Withdrawals Work" for a how-to title) | Replace the feature name; keep "Epoch" in the body |
+| "epoch" (lowercase in body prose) | **Epoch** | Capitalize. It is a canonical defined term |
+| epoch lifecycle (as a body phrase) | the Epoch's lifecycle: start, cutoff, processing | Rephrase; capitalize "Epoch" as a defined term |
 
 ### Front End vocabulary collisions
 

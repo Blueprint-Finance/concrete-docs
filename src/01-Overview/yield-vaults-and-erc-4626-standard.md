@@ -5,14 +5,14 @@ sidebar_label: "Yield Vaults and ERC-4626 Standard"
 sidebar_position: 1
 ---
 
-A Concrete vault is a smart contract that accepts your deposits and issues you shares in return. Concrete vaults are built on the [ERC-4626 Tokenized Vault Standard](https://ethereum.org/en/developers/docs/standards/tokens/erc-4626/). When you deposit, you receive vault shares (an ERC-20 token, e.g. ctDefiUSDT) that represent your portion of the vault.
+A Concrete vault is a smart contract that accepts your deposits and issues you shares in return. Concrete vaults are built on the [ERC-4626 Tokenized Vault Standard](https://ethereum.org/en/developers/docs/standards/tokens/erc-4626/). When you deposit, you receive vault shares (an [ERC-20](/glossary/#erc-20) token, e.g. [ctDefiUSDT](/glossary/#ct-defiusdt)) that represent your portion of the vault.
 
 ## How You Earn Yield
 
 Your share balance does not change over time. Instead, each share becomes worth more (or less) of the underlying asset as the vault's value changes.
 
 In practice:
-- You deposit 1,000 USDT → you receive a fixed number of vault shares.
+- You deposit 1,000 [USDT](/glossary/#usdt) → you receive a fixed number of vault shares.
 - Over time, the vault's strategy generates yield.
 - The exchange rate between your shares and USDT increases.
 - When you withdraw, you redeem your shares for more USDT than you put in.
@@ -21,7 +21,7 @@ Where the yield comes from depends on the specific vault's strategy, which is ma
 
 ### Vault Implementations
 
-Concrete offers three ERC-4626 vault implementations, each suited to a different operational pattern. All three share a common base: full ERC-4626 compliance, multi-strategy support, fee management, hooks, and role-based access control.
+Concrete offers three [ERC-4626](/glossary/#erc-4626) vault implementations, each suited to a different operational pattern. All three share a common base: full ERC-4626 compliance, multi-strategy support, fee management, hooks, and role-based access control.
 
 - **Atomic Vault** – The base implementation; deposits and withdrawals execute in a single transaction. It suits vaults where strategy liquidity is always available on-chain and can be unwound atomically.
 - **Queued Withdrawal Vault** – Adds an epoch-based withdrawal queue to the Atomic vault, where requests are collected during an epoch, processed at a scheduled point that locks a share price and reserves assets, then claimed by users. Toggled on or off by the Vault Manager, it is the most common production configuration and suits strategies with off-chain custody.

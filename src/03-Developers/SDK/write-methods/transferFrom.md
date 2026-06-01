@@ -4,7 +4,7 @@ description: "Write-method reference for transferFrom(from, to, amount) in the C
 sidebar_label: "transferFrom(from, to, amount)"
 ---
 
-Move ctAssets from one address to another using an existing shares allowance granted via `vault.approve`.
+Move [ctAssets](/glossary/#ct-asset) from one address to another using an existing shares allowance granted via `vault.approve`.
 
 ## Signature
 

@@ -5,7 +5,7 @@ sidebar_label: "Overview"
 sidebar_position: 0
 ---
 
-**Concrete Borrow** is Concrete Protocol’s decentralized lending and borrowing feature, designed to streamline access to liquidity across top DeFi money markets while offering unique protections. By integrating directly with multiple platforms such as Aave, Compound, and Silo, Concrete Borrow enables users to seamlessly find the most favorable rates, manage loans in one unified view, and benefit from unique protections like **Concrete Lite**. This article provides a technical breakdown of how Concrete Borrow works and the features that distinguish it from traditional DeFi borrowing.
+**Concrete Borrow** is Concrete Protocol’s decentralized lending and borrowing feature, designed to streamline access to liquidity across top [DeFi](/glossary/#defi) money markets while offering unique protections. By integrating directly with multiple platforms such as Aave, Compound, and Silo, Concrete Borrow enables users to seamlessly find the most favorable rates, manage loans in one unified view, and benefit from unique protections like **Concrete Lite**. This article provides a technical breakdown of how Concrete Borrow works and the features that distinguish it from traditional DeFi borrowing.
 
 | **Feature**                | **Concrete Borrow**                                                      |
 |----------------------------|--------------------------------------------------------------------------|
@@ -34,17 +34,17 @@ Concrete subsidizes a significant portion of the gas costs associated with borro
 
 ### Enhanced Protection Against Liquidation
 
-With **Concrete Lite** enabled by default, borrowers benefit from a foreclosure mechanism that intervenes before their position is fully liquidated. Unlike traditional DeFi platforms, which impose 5-15% liquidation penalties, Concrete Lite forecloses the loan early with a reduced 2% fee, helping users retain more of their assets.
+With **Concrete Lite** enabled by default, borrowers benefit from a foreclosure mechanism that intervenes before their position is fully liquidated. Unlike traditional [DeFi](/glossary/#defi) platforms, which impose 5-15% liquidation penalties, Concrete Lite forecloses the loan early with a reduced 2% fee, helping users retain more of their assets.
 
 ## How Concrete Borrow Works
 
 ### 1. Deposit Collateral
 
-To begin borrowing, users first deposit assets (e.g., ETH) into a **Concrete Vault**. In return, they receive a tokenized proof of deposit, known as **Concrete ETH (cETH)**, which represents their collateral on the platform. This token can be used to secure loans within the Concrete ecosystem.
+To begin borrowing, users first deposit assets (e.g., [ETH](/glossary/#eth)) into a **Concrete Vault**. In return, they receive a tokenized proof of deposit, known as **Concrete ETH (cETH)**, which represents their collateral on the platform. This token can be used to secure loans within the Concrete ecosystem.
 
 ### 2. Borrow Against Collateral
 
-Using their cETH as collateral, users can borrow stablecoins or other assets. Concrete Borrow automatically finds the best rates from integrated money markets, ensuring that users receive the most competitive loan terms available. The protocol’s integration includes Aave, Compound, Silo, and Radiant, with plans to expand to additional DeFi platforms.
+Using their cETH as collateral, users can borrow stablecoins or other assets. Concrete Borrow automatically finds the best rates from integrated money markets, ensuring that users receive the most competitive loan terms available. The protocol’s integration includes Aave, Compound, Silo, and Radiant, with plans to expand to additional [DeFi](/glossary/#defi) platforms.
 
 ### 3. Rate Aggregation and Dynamic Optimization
 
@@ -52,7 +52,7 @@ Concrete Borrow’s backend is engineered to monitor rates, collateral limits (L
 
 ### 4. Liquidation Protection through Concrete Lite
 
-Concrete Lite, enabled by default, protects users from standard liquidation events. When a position’s LTV ratio approaches the threshold for liquidation, Concrete’s foreclosure mechanism initiates a flash loan to cover the debt. This ensures the user’s position is closed with a minimal 2% fee rather than incurring the typical 5-15% penalty.
+Concrete Lite, enabled by default, protects users from standard liquidation events. When a position’s [LTV](/glossary/#ltv) ratio approaches the threshold for liquidation, Concrete’s foreclosure mechanism initiates a flash loan to cover the debt. This ensures the user’s position is closed with a minimal 2% fee rather than incurring the typical 5-15% penalty.
 
    - **Opt-Out Flexibility**: Users can choose to opt out of Concrete Lite if they prefer to manage liquidation risk manually.
    - **Automatic Intervention**: The foreclosure process activates automatically without user intervention, providing peace of mind and asset preservation.
@@ -63,7 +63,7 @@ To close a position, users must repay the borrowed amount. Once the loan is full
 
 ## Technical Infrastructure and Optimization
 
-Concrete Borrow leverages a robust technical infrastructure to deliver seamless access to borrowing across DeFi platforms. Here’s a breakdown of how Concrete optimizes loan management:
+Concrete Borrow leverages a robust technical infrastructure to deliver seamless access to borrowing across [DeFi](/glossary/#defi) platforms. Here’s a breakdown of how Concrete optimizes loan management:
 
 1. **Smart Contract Architecture for Rate Aggregation**  
    Concrete’s blueprint includes a smart contract system designed to manage user accounts across multiple money markets. Each borrower’s profile is stored as a unique **blueprint** that tracks positions and integrates with Aave, Compound, and other markets in real time.

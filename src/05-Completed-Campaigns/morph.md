@@ -6,13 +6,13 @@ sidebar_label: "Morph"
 
 Concrete’s Morph Vaults provided yield opportunities across the Morph Layer 2 network through ecosystem partnerships with protocols like Quokka, Bulbaswap, and Ethena.
 
-These vaults accepted deposits on Ethereum and deployed assets into Morph-native strategies focused on ETH, stablecoins, and blue-chip assets. Most vaults in this category are now closed and in the process of deprecation.
+These vaults accepted deposits on Ethereum and deployed assets into Morph-native strategies focused on [ETH](/glossary/#eth), stablecoins, and blue-chip assets. Most vaults in this category are now closed and in the process of deprecation.
 
 ## Included Vaults
 
 ### Morph Majors
 
-**Assets:** ETH, BTC, USD
+**Assets:** [ETH](/glossary/#eth), [BTC](/glossary/#btc), [USD](/glossary/#usd)
 **Rewards:** Morph, Quokka, Bulbaswap, Concrete
 **Status:** Closed to deposits
 

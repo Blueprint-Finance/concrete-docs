@@ -119,6 +119,7 @@ const sidebars = {
         'Audits/risks-and-safety',
       ],
     },
+    'glossary',
     'support',
   ],
 };

@@ -4,7 +4,7 @@ description: "Risk and safety overview for Concrete vault users, including smart
 sidebar_label: "Risks and Safety"
 ---
 
-Concrete vaults use smart contracts, connect to third-party protocols, and operate in on-chain markets. As with all DeFi products, this comes with risk.
+Concrete vaults use smart contracts, connect to third-party protocols, and operate in on-chain markets. As with all [DeFi](/glossary/#defi) products, this comes with risk.
 
 This page explains the main risk categories and what Concrete does to protect your funds. Concrete organizes its vault's security into three layers. Each layer has its own controls, audits, and responsibilities.
 
@@ -20,7 +20,7 @@ The on-chain smart contracts and custody setup that hold your funds.
 
 **On-chain accounting limits.** The vault automatically pauses if it detects unusual changes in asset values. Accounting updates are rate-limited to prevent manipulation.
 
-**Controlled upgrades.** Vault contracts use the UUPS proxy pattern. Upgrades are only possible through authorized paths approved by the protocol. Any unauthorized upgrade attempt is automatically rejected.
+**Controlled upgrades.** Vault contracts use the [UUPS](/glossary/#uups) proxy pattern. Upgrades are only possible through authorized paths approved by the protocol. Any unauthorized upgrade attempt is automatically rejected.
 
 **Multi-signature custody.** All vault wallets require multiple approvals to move funds. Signing authority is divided across independent authorised groups.
 
@@ -56,15 +56,15 @@ This layer operates above the vault and strategy layers. It provides independent
 
 ## Market Risks
 
-Even with the protections above, DeFi markets carry inherent risks. Vaults that interact with lending protocols, AMMs (automated market makers), or liquidity pools may be affected by price volatility, impermanent loss, and slippage. Here are the main ones to be aware of.
+Even with the protections above, [DeFi](/glossary/#defi) markets carry inherent risks. Vaults that interact with lending protocols, AMMs (automated market makers), or liquidity pools may be affected by price volatility, impermanent loss, and slippage. Here are the main ones to be aware of.
 
-## Impermanent Loss (IL)
+## Impermanent Loss ([IL](/glossary/#il))
 
-Impermanent loss occurs when the price of tokens in a liquidity pool diverges, potentially making LP positions less valuable than simply holding the tokens. This affects vaults that allocate to AMMs, LP pools, or engage in multi-asset yield farming.
+Impermanent loss occurs when the price of tokens in a liquidity pool diverges, potentially making [LP](/glossary/#lp) positions less valuable than simply holding the tokens. This affects vaults that allocate to AMMs, LP pools, or engage in multi-asset yield farming.
 
 **When IL is more likely:**
 
-* Non-stablecoin pairs (e.g. ETH/BTC)
+* Non-stablecoin pairs (e.g. [ETH](/glossary/#eth)/[BTC](/glossary/#btc))
 * Volatile or low-liquidity environments
 * Pre-deposit campaigns on new chains
 
@@ -87,7 +87,7 @@ Slippage refers to the difference between the expected price of a trade and the 
 
 * Integration with leading aggregators (e.g. 1inch) for optimal swap routing
 * Built-in slippage protection in vault contracts
-* Clear UI warnings when expected slippage exceeds thresholds
+* Clear [UI](/glossary/#ui) warnings when expected slippage exceeds thresholds
 
 ## Strategy-Specific Risks
 

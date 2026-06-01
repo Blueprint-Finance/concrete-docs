@@ -4,7 +4,7 @@ description: "Read-method reference for getApyDetails() in the Concrete Earn V2 
 sidebar_label: "getApyDetails()"
 ---
 
-Fetches APY history and headline metrics for a vault. The method is exposed on the vault instance but is backed by the Concrete API, not an on-chain call.
+Fetches [APY](/glossary/#apy) history and headline metrics for a vault. The method is exposed on the vault instance but is backed by the Concrete [API](/glossary/#api), not an on-chain call.
 
 :::tip
 Works the same in vanilla, React, and Wagmi integrations because all return the same vault object.
@@ -133,8 +133,8 @@ export function ApyPanel() {
 
 ## Notes and error handling
 
-- **Backend-backed**: unlike `symbol()` or `totalAssets()`, this hits the Concrete API. Handle HTTP and network failures and timeouts.
-- **Staleness**: APY is not block-by-block. Cache reasonably (`staleTime` 30 to 120 seconds).
+- **Backend-backed**: unlike `symbol()` or `totalAssets()`, this hits the Concrete [API](/glossary/#api). Handle HTTP and network failures and timeouts.
+- **Staleness**: [APY](/glossary/#apy) is not block-by-block. Cache reasonably (`staleTime` 30 to 120 seconds).
 - **String values**: headline fields are numeric strings. Convert with `Number(...)` before arithmetic.
 - **Rate limits**: if you batch widgets, share a single query via React Query to avoid redundant calls.
 

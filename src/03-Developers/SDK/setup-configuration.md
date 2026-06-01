@@ -4,11 +4,11 @@ description: "Concrete Earn V2 SDK documentation for setup Configuration, with i
 sidebar_label: "Setup Configuration"
 ---
 
-This guide shows how to install the SDK, handle optional dependencies, set up providers, and initialize a vault instance using vanilla JS/TS, React, or Wagmi.
+This guide shows how to install the [SDK](/glossary/#sdk), handle optional dependencies, set up providers, and initialize a vault instance using vanilla [JS](/glossary/#js)/[TS](/glossary/#ts), React, or Wagmi.
 
 ## Prerequisites
 
-Before you can interact with the SDK, you need:
+Before you can interact with the [SDK](/glossary/#sdk), you need:
 
 - **A vault address**. Each SDK call targets a specific vault contract (for example `0x15cE9bE...`). Without it, you cannot query metadata, preview conversions, or deposit.
 - **A supported network**. The vault must exist on one of the supported chains: Ethereum, Arbitrum, Berachain, Katana, Corn, Morph.
@@ -16,7 +16,7 @@ Before you can interact with the SDK, you need:
 
 ## Installation
 
-Install the core SDK:
+Install the core [SDK](/glossary/#sdk):
 
 ```bash
 npm install @concrete-xyz/sdk
@@ -50,11 +50,11 @@ Depending on your environment:
 
 - **Vanilla (ethers.js)**: pass a `JsonRpcProvider`, and optionally a `signer` for write methods.
 - **React hook**: pass both `provider` and `signer`.
-- **Wagmi hook**: no provider config required. The SDK auto-detects from your Wagmi app.
+- **Wagmi hook**: no provider config required. The [SDK](/glossary/#sdk) auto-detects from your Wagmi app.
 
 ## Initializing a vault
 
-### Vanilla (JS/TS)
+### Vanilla ([JS](/glossary/#js)/[TS](/glossary/#ts))
 
 ```tsx
 import { getVault } from "@concrete-xyz/sdk";
@@ -103,7 +103,7 @@ function VaultInfo({ provider, signer }) {
 
 ### Wagmi hook
 
-If your app already uses Wagmi, the SDK wires in automatically. For queries, prefer `useVaultQuery`, which handles `loading` and `error` states.
+If your app already uses Wagmi, the [SDK](/glossary/#sdk) wires in automatically. For queries, prefer `useVaultQuery`, which handles `loading` and `error` states.
 
 ```tsx
 import { useVaultQuery } from "@concrete-xyz/sdk/wagmi";

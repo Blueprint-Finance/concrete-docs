@@ -4,7 +4,7 @@ description: "Read-method reference for symbol() in the Concrete Earn V2 SDK, in
 sidebar_label: "symbol()"
 ---
 
-Returns the vault share symbol (ctAsset symbol).
+Returns the vault share symbol ([ctAsset](/glossary/#ct-asset) symbol).
 
 ## Signature
 

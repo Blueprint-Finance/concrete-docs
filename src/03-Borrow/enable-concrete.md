@@ -15,7 +15,7 @@ Concrete Borrow (Lite) is the foundational borrowing solution in the Concrete ec
 
 By default, Concrete Borrow comes with **Concrete Lite**, which forecloses loans early, reducing the risk of liquidation penalties:
 
-- **Early Foreclosure**: If the Loan-to-Value (LTV) ratio approaches the liquidation threshold, Concrete Lite triggers an early foreclosure, avoiding traditional liquidation.
+- **Early Foreclosure**: If the Loan-to-Value ([LTV](/glossary/#ltv)) ratio approaches the liquidation threshold, Concrete Lite triggers an early foreclosure, avoiding traditional liquidation.
 - **Reduced Fees**: This process incurs a **3.5% foreclosure fee**, significantly lower than typical market liquidation penalties (5%-15%).
 - **No Activation Fee**: Concrete Borrow (Lite) is active by default, with no upfront costs.
 - **Gas Fee Subsidy**: Borrowers receive partial coverage for gas fees when taking out loans through Concrete.
@@ -25,7 +25,7 @@ By default, Concrete Borrow comes with **Concrete Lite**, which forecloses loans
 ![](/img/borrow-4.png)
 
 1. **View Loan Overview**:
-   - The loan dashboard shows the current LTV, liquidation threshold, and the status of Concrete Lite.
+   - The loan dashboard shows the current [LTV](/glossary/#ltv), liquidation threshold, and the status of Concrete Lite.
 
 2. **Enable or Disable Protection**:
    - Users can choose to disable the default protection by toggling the **disable** button next to the **Concrete Lite** status.
@@ -55,13 +55,13 @@ By default, Concrete Borrow comes with **Concrete Lite**, which forecloses loans
 ### Loan Details
 
 1. **Amount Supplied & Supplied Value:**
-   - Indicates the user deposited 119.928 WETH, valued at $292,811.70.
+   - Indicates the user deposited 119.928 [WETH](/glossary/#weth), valued at $292,811.70.
 
-2. **Total Debt & Net APR:**
+2. **Total Debt & Net [APR](/glossary/#apr):**
    - Displays the current outstanding loan value ($149,993.45) and the applied interest rate (13.59% Net APR).
 
 3. **History Section:**
    - A record of all loan-related actions, including:
-     - **Initial Borrow**: User borrowed $150,000 USDC.
+     - **Initial Borrow**: User borrowed $150,000 [USDC](/glossary/#usdc).
      - **Subscribe Protection**: Protection Status.
      - **Cancel Protection**: Shows attempts to deactivate protection.

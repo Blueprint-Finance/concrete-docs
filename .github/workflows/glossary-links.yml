@@ -1,0 +1,36 @@
+name: Glossary links
+
+# Keeps inline glossary links in sync with the deterministic linker. Runs the
+# linker's unit tests, then runs it in --check mode: if any article is missing
+# the first-occurrence-per-H2-section link (or the linker output drifted), the
+# job fails and tells the author to run `yarn glossary:links` and commit.
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - 'src/**/*.md'
+      - 'src/**/*.mdx'
+      - 'src/glossary.md'
+      - 'scripts/link-glossary-terms.mjs'
+      - 'scripts/link-glossary-terms.test.mjs'
+      - '.github/workflows/glossary-links.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  glossary-links:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Run linker unit tests
+        run: node --test scripts/
+
+      - name: Check glossary links are up to date
+        run: node scripts/link-glossary-terms.mjs --check

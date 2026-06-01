@@ -7,7 +7,7 @@ sidebar_label: "Restricted Jurisdictions"
 At Concrete Protocol, we prioritize compliance with international laws and regulations. As part of this commitment, access to our services is restricted in certain jurisdictions, including:
 
 - **United States**: Restricted due to regulatory compliance requirements.
-- **OFAC-Sanctioned Countries**: These are countries and regions sanctioned by the Office of Foreign Assets Control (OFAC), including:
+- **OFAC-Sanctioned Countries**: These are countries and regions sanctioned by the Office of Foreign Assets Control ([OFAC](/glossary/#ofac)), including:
   - **North Korea**
   - **Iran**
   - **Cuba**
