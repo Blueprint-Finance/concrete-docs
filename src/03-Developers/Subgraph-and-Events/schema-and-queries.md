@@ -76,7 +76,7 @@ Tracked events: `Deposit`, `Withdraw`, `YieldAccrued`, `ManagementFeeAccrued`, `
 
 ## WithdrawalQueue
 
-Tracks pending requests per user per epoch. Created on `QueuedWithdrawal`, updated on `RequestClaimed` (sets `isClaimed = true`) and `RequestMovedToNextEpoch`, and removed from the store on `RequestCancelled`. Mutable because handlers update `isClaimed`, `shares`, `sharesRaw`, `movedFromEpoch`, and the `last*` cursor fields after creation.
+Tracks pending requests per user per epoch. Created on `QueuedWithdrawal`, updated on `RequestClaimed` (sets `isClaimed = true`) and `RequestMovedToNextEpoch`, and removed from the store on `RequestCancelled`. `PriorityWithdrawalClaimed` also writes here: it drains the user's open rows in the active epoch (oldest first), writing a separate claimed-snapshot row when a row is partially consumed. Mutable because handlers update `isClaimed`, `shares`, `sharesRaw`, `movedFromEpoch`, and the `last*` cursor fields after creation.
 
 ```graphql
 type WithdrawalQueue @entity(immutable: false) {
@@ -97,7 +97,29 @@ type WithdrawalQueue @entity(immutable: false) {
 }
 ```
 
-Tracked events: `EpochProcessed`, `QueuedWithdrawal`, `RequestCancelled`, `RequestClaimed`, `RequestMovedToNextEpoch`.
+Tracked events: `EpochProcessed`, `QueuedWithdrawal`, `RequestCancelled`, `RequestClaimed`, `RequestMovedToNextEpoch`, `PriorityWithdrawalClaimed`.
+
+## PriorityWithdrawalClaimed
+
+Immutable per-claim record of a priority (fast-track) withdrawal on an async vault. An off-chain executor holding the `PRIORITY_WITHDRAWAL_EXECUTOR` role on `ConcreteAsyncVaultImpl` calls `claimPriorityWithdrawal` to fulfil part of a user's queued shares in the active epoch ahead of the normal epoch-processing flow. The user receives `netAssets = grossAssets - unwindCost` immediately; `unwindCost` is bounded by the vault's `unwindCostCapBP` (basis points) and is debited from the strategy's reported allocation via `IAsyncAccounting.adjustTotalAssets`, so the next yield accrual reconciles the strategy's tracked value.
+
+```graphql
+type PriorityWithdrawalClaimed @entity(immutable: true) {
+  id: Bytes!
+  vault: Vault!
+  user: Bytes!
+  shares: BigDecimal!
+  grossAssets: BigDecimal!
+  unwindCost: BigDecimal!
+  netAssets: BigDecimal!
+  epochID: BigInt!
+  blockNumber: BigInt!
+  blockTimestamp: BigInt!
+  transactionHash: Bytes!
+}
+```
+
+`shares` is the amount of queued shares burned for this claim. `grossAssets` is the assets that those shares would have been worth at the current exchange rate; `netAssets` is what actually reaches the user after `unwindCost`. `epochID` is the active epoch the claim was drawn from.
 
 ## Registered vaults
 

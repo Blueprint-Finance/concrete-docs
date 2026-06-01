@@ -42,6 +42,9 @@ Emitted by `ConcreteAsyncVaultImpl`. The handlers maintain epoch state on the Va
 | `RequestCancelled` | WithdrawalQueue | Pending request removed from the queue. |
 | `RequestClaimed` | WithdrawalQueue | Existing queue entry marked claimed (`isClaimed = true`). |
 | `RequestMovedToNextEpoch` | WithdrawalQueue | Request shifted from one epoch to the next. |
+| `PriorityWithdrawalClaimed` | Vault, WithdrawalQueue, Epoch, PriorityWithdrawalClaimed | Priority (fast-track) exit fulfilled by an executor against the active epoch. Pays `grossAssets - unwindCost` to the user, drains their open queue rows in that epoch (oldest first, splits if needed) and writes a claimed snapshot row, decreases `Epoch.shares`, `Vault.currentEpochRequestedShares`, and `cachedTotalAssets`, and increases `totalHistoricalWithdrawals` by `netAssets`. |
+
+Priority withdrawals are gated on-chain by the `PRIORITY_WITHDRAWAL_EXECUTOR` role on `ConcreteAsyncVaultImpl`. The `unwindCost` charged on each claim is bounded by the vault's `unwindCostCapBP` (basis points) and is applied against the strategy's reported allocation through `IAsyncAccounting.adjustTotalAssets`, so the next yield accrual reconciles the strategy's tracked value without double counting.
 
 ## Strategy events
 
