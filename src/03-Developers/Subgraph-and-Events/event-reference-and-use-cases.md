@@ -42,7 +42,10 @@ Emitted by `ConcreteAsyncVaultImpl`. The handlers maintain epoch state on the Va
 | `RequestCancelled` | WithdrawalQueue | Pending request removed from the queue. |
 | `RequestClaimed` | WithdrawalQueue | Existing queue entry marked claimed (`isClaimed = true`). |
 | `RequestMovedToNextEpoch` | WithdrawalQueue | Request shifted from one epoch to the next. |
+| `PartialEpochRequestProcessed` | Vault, WithdrawalQueue, Epoch, PartialEpochRequestProcessed | An individual user's request is fulfilled from a closed-but-unprocessed epoch (the contract requires `epochID == latestEpochID - 1`). Burns the user's shares and transfers the corresponding assets, drains their open queue rows in that epoch (oldest first, splits if needed) and writes a claimed snapshot row, decreases `Epoch.shares`, `Vault.processingEpochRequestedShares`, and `cachedTotalAssets`, and increases `totalHistoricalWithdrawals` by `assets`. |
 | `PriorityWithdrawalClaimed` | Vault, WithdrawalQueue, Epoch, PriorityWithdrawalClaimed | Priority (fast-track) exit fulfilled by an executor against the active epoch. Pays `grossAssets - unwindCost` to the user, drains their open queue rows in that epoch (oldest first, splits if needed) and writes a claimed snapshot row, decreases `Epoch.shares`, `Vault.currentEpochRequestedShares`, and `cachedTotalAssets`, and increases `totalHistoricalWithdrawals` by `netAssets`. |
+
+`PartialEpochRequestProcessed` is gated on-chain by the `WITHDRAWAL_MANAGER` role and lets a single user's queued shares be fulfilled out of the closed epoch ahead of the full `EpochProcessed` cycle.
 
 Priority withdrawals are gated on-chain by the `PRIORITY_WITHDRAWAL_EXECUTOR` role on `ConcreteAsyncVaultImpl`. The `unwindCost` charged on each claim is bounded by the vault's `unwindCostCapBP` (basis points) and is applied against the strategy's reported allocation through `IAsyncAccounting.adjustTotalAssets`, so the next yield accrual reconciles the strategy's tracked value without double counting.
 

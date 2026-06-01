@@ -76,7 +76,7 @@ Tracked events: `Deposit`, `Withdraw`, `YieldAccrued`, `ManagementFeeAccrued`, `
 
 ## WithdrawalQueue
 
-Tracks pending requests per user per epoch. Created on `QueuedWithdrawal`, updated on `RequestClaimed` (sets `isClaimed = true`) and `RequestMovedToNextEpoch`, and removed from the store on `RequestCancelled`. `PriorityWithdrawalClaimed` also writes here: it drains the user's open rows in the active epoch (oldest first), writing a separate claimed-snapshot row when a row is partially consumed. Mutable because handlers update `isClaimed`, `shares`, `sharesRaw`, `movedFromEpoch`, and the `last*` cursor fields after creation.
+Tracks pending requests per user per epoch. Created on `QueuedWithdrawal`, updated on `RequestClaimed` (sets `isClaimed = true`) and `RequestMovedToNextEpoch`, and removed from the store on `RequestCancelled`. `PartialEpochRequestProcessed` and `PriorityWithdrawalClaimed` also write here: each drains the user's open rows in the targeted epoch (oldest first), writing a separate claimed-snapshot row when a row is partially consumed. Mutable because handlers update `isClaimed`, `shares`, `sharesRaw`, `movedFromEpoch`, and the `last*` cursor fields after creation.
 
 ```graphql
 type WithdrawalQueue @entity(immutable: false) {
@@ -97,7 +97,25 @@ type WithdrawalQueue @entity(immutable: false) {
 }
 ```
 
-Tracked events: `EpochProcessed`, `QueuedWithdrawal`, `RequestCancelled`, `RequestClaimed`, `RequestMovedToNextEpoch`, `PriorityWithdrawalClaimed`.
+Tracked events: `EpochProcessed`, `QueuedWithdrawal`, `RequestCancelled`, `RequestClaimed`, `RequestMovedToNextEpoch`, `PartialEpochRequestProcessed`, `PriorityWithdrawalClaimed`.
+
+## PartialEpochRequestProcessed
+
+Immutable per-claim record of an individual queued request fulfilled out of a closed-but-unprocessed epoch. Emitted by `processPartialEpochRequest` on `ConcreteAsyncVaultImpl`, gated by the `WITHDRAWAL_MANAGER` role, and constrained on-chain to `epochID == latestEpochID - 1`. The user's shares for that epoch are burned and the corresponding `assets` are transferred at the current exchange rate.
+
+```graphql
+type PartialEpochRequestProcessed @entity(immutable: true) {
+  id: Bytes!
+  vault: Vault!
+  user: Bytes!
+  epochID: BigInt!
+  shares: BigDecimal!
+  assets: BigDecimal!
+  blockNumber: BigInt!
+  blockTimestamp: BigInt!
+  transactionHash: Bytes!
+}
+```
 
 ## PriorityWithdrawalClaimed
 
