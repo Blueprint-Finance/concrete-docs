@@ -22,8 +22,6 @@ const sidebars = {
         'Using-Concrete-Vaults/bridging-and-depositing-with-enso',
         'Using-Concrete-Vaults/fees',
         'Using-Concrete-Vaults/concrete-points',
-        'Using-Concrete-Vaults/restricted-jurisdictions',
-        'Using-Concrete-Vaults/risks-and-safety',
       ],
     },
 
@@ -112,7 +110,15 @@ const sidebars = {
       ],
     },
 
-    'audits',
+    {
+      type: 'category',
+      label: 'Audits',
+      items: [
+        'Audits/overview',
+        'Audits/restricted-jurisdictions',
+        'Audits/risks-and-safety',
+      ],
+    },
     'support',
   ],
 };

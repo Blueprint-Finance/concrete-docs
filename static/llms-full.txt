@@ -1,6 +1,6 @@
 # Concrete Docs - LLM Full Context
 
-Generated: 2026-05-29T16:28:00.721Z
+Generated: 2026-06-01T16:22:56.222Z
 Source repository: concrete-docs
 Canonical docs URL: https://docs.concrete.xyz/
 
@@ -16,43 +16,43 @@ This file consolidates every Markdown documentation page in `src/**/*.md` for re
 6. Bridging and Depositing with Enso [sidebar] - src/02-Using-Concrete-Vaults/bridging-and-depositing-with-enso.md
 7. Fees [sidebar] - src/02-Using-Concrete-Vaults/fees.md
 8. Concrete Points Program [sidebar] - src/02-Using-Concrete-Vaults/concrete-points.md
-9. Restricted Jurisdictions [sidebar] - src/02-Using-Concrete-Vaults/restricted-jurisdictions.md
-10. Risks and Safety [sidebar] - src/02-Using-Concrete-Vaults/risks-and-safety.md
-11. Architecture: Core Concepts [sidebar] - src/03-Developers/architecture-core-concepts.md
-12. Overview [sidebar] - src/03-Developers/SDK/overview.md
-13. Setup Configuration [sidebar] - src/03-Developers/SDK/setup-configuration.md
-14. balanceOf(address) [sidebar] - src/03-Developers/SDK/read-methods/balanceOf.md
-15. getAddress() [sidebar] - src/03-Developers/SDK/read-methods/getAddress.md
-16. getUnderlyingDecimals() [sidebar] - src/03-Developers/SDK/read-methods/getUnderlyingDecimals.md
-17. getVaultDetails() [sidebar] - src/03-Developers/SDK/read-methods/getVaultDetails.md
-18. getAllWithdrawQueueRequests(owner) [sidebar] - src/03-Developers/SDK/read-methods/getAllWithdrawQueueRequests.md
-19. previewConversion(amount) [sidebar] - src/03-Developers/SDK/read-methods/previewConversion.md
-20. totalAssets() [sidebar] - src/03-Developers/SDK/read-methods/totalAssets.md
-21. symbol() [sidebar] - src/03-Developers/SDK/read-methods/symbol.md
-22. decimals() [sidebar] - src/03-Developers/SDK/read-methods/decimals.md
-23. applyDecimals(amount) [sidebar] - src/03-Developers/SDK/read-methods/applyDecimals.md
-24. toUnderlyingDecimals(amount) [sidebar] - src/03-Developers/SDK/read-methods/toUnderlyingDecimals.md
-25. approve(spender, amount) [sidebar] - src/03-Developers/SDK/write-methods/approve.md
-26. deposit(amount) [sidebar] - src/03-Developers/SDK/write-methods/deposit.md
-27. redeem(amount) [sidebar] - src/03-Developers/SDK/write-methods/redeem.md
-28. transfer(to, amount) [sidebar] - src/03-Developers/SDK/write-methods/transfer.md
-29. transferFrom(from, to, amount) [sidebar] - src/03-Developers/SDK/write-methods/transferFrom.md
-30. Decimals & Conversion Helpers [sidebar] - src/03-Developers/SDK/decimals-and-conversion-helpers.md
-31. Examples [sidebar] - src/03-Developers/SDK/examples.md
-32. Troubleshooting & Error Handling [sidebar] - src/03-Developers/SDK/troubleshooting-and-error-handling.md
-33. Schema & Queries [sidebar] - src/03-Developers/Subgraph-and-Events/schema-and-queries.md
-34. Event Reference [sidebar] - src/03-Developers/Subgraph-and-Events/event-reference-and-use-cases.md
-35. How Withdrawals Are Processed For Concrete DeFi USDT [sidebar] - src/04-Live-Vaults/DeFi-USDT/how-withdrawals-are-processed.md
-36. Important Disclosures [sidebar] - src/04-Live-Vaults/DeFi-USDT/important-disclosures.md
-37. WBTC Vault [sidebar] - src/04-Live-Vaults/wbtc-vault.md
-38. Overview [sidebar] - src/05-Completed-Campaigns/overview.md
-39. Bera [sidebar] - src/05-Completed-Campaigns/bera.md
-40. Stable [sidebar] - src/05-Completed-Campaigns/stable.md
-41. Corn [sidebar] - src/05-Completed-Campaigns/corn.md
-42. Morph [sidebar] - src/05-Completed-Campaigns/morph.md
-43. TAC [sidebar] - src/05-Completed-Campaigns/tac.md
-44. Pre-Deposit Campaigns [sidebar] - src/05-Completed-Campaigns/pre-deposit-campaigns.md
-45. Audits [sidebar] - src/audits.md
+9. Architecture: Core Concepts [sidebar] - src/03-Developers/architecture-core-concepts.md
+10. Overview [sidebar] - src/03-Developers/SDK/overview.md
+11. Setup Configuration [sidebar] - src/03-Developers/SDK/setup-configuration.md
+12. balanceOf(address) [sidebar] - src/03-Developers/SDK/read-methods/balanceOf.md
+13. getAddress() [sidebar] - src/03-Developers/SDK/read-methods/getAddress.md
+14. getUnderlyingDecimals() [sidebar] - src/03-Developers/SDK/read-methods/getUnderlyingDecimals.md
+15. getVaultDetails() [sidebar] - src/03-Developers/SDK/read-methods/getVaultDetails.md
+16. getAllWithdrawQueueRequests(owner) [sidebar] - src/03-Developers/SDK/read-methods/getAllWithdrawQueueRequests.md
+17. previewConversion(amount) [sidebar] - src/03-Developers/SDK/read-methods/previewConversion.md
+18. totalAssets() [sidebar] - src/03-Developers/SDK/read-methods/totalAssets.md
+19. symbol() [sidebar] - src/03-Developers/SDK/read-methods/symbol.md
+20. decimals() [sidebar] - src/03-Developers/SDK/read-methods/decimals.md
+21. applyDecimals(amount) [sidebar] - src/03-Developers/SDK/read-methods/applyDecimals.md
+22. toUnderlyingDecimals(amount) [sidebar] - src/03-Developers/SDK/read-methods/toUnderlyingDecimals.md
+23. approve(spender, amount) [sidebar] - src/03-Developers/SDK/write-methods/approve.md
+24. deposit(amount) [sidebar] - src/03-Developers/SDK/write-methods/deposit.md
+25. redeem(amount) [sidebar] - src/03-Developers/SDK/write-methods/redeem.md
+26. transfer(to, amount) [sidebar] - src/03-Developers/SDK/write-methods/transfer.md
+27. transferFrom(from, to, amount) [sidebar] - src/03-Developers/SDK/write-methods/transferFrom.md
+28. Decimals & Conversion Helpers [sidebar] - src/03-Developers/SDK/decimals-and-conversion-helpers.md
+29. Examples [sidebar] - src/03-Developers/SDK/examples.md
+30. Troubleshooting & Error Handling [sidebar] - src/03-Developers/SDK/troubleshooting-and-error-handling.md
+31. Schema & Queries [sidebar] - src/03-Developers/Subgraph-and-Events/schema-and-queries.md
+32. Event Reference [sidebar] - src/03-Developers/Subgraph-and-Events/event-reference-and-use-cases.md
+33. How Withdrawals Are Processed For Concrete DeFi USDT [sidebar] - src/04-Live-Vaults/DeFi-USDT/how-withdrawals-are-processed.md
+34. Important Disclosures [sidebar] - src/04-Live-Vaults/DeFi-USDT/important-disclosures.md
+35. WBTC Vault [sidebar] - src/04-Live-Vaults/wbtc-vault.md
+36. Overview [sidebar] - src/05-Completed-Campaigns/overview.md
+37. Bera [sidebar] - src/05-Completed-Campaigns/bera.md
+38. Stable [sidebar] - src/05-Completed-Campaigns/stable.md
+39. Corn [sidebar] - src/05-Completed-Campaigns/corn.md
+40. Morph [sidebar] - src/05-Completed-Campaigns/morph.md
+41. TAC [sidebar] - src/05-Completed-Campaigns/tac.md
+42. Pre-Deposit Campaigns [sidebar] - src/05-Completed-Campaigns/pre-deposit-campaigns.md
+43. Audits [sidebar] - src/06-Audits/overview.md
+44. Restricted Jurisdictions [sidebar] - src/06-Audits/restricted-jurisdictions.md
+45. Risks and Safety [sidebar] - src/06-Audits/risks-and-safety.md
 46. Support [sidebar] - src/support.md
 47. How to Repay and Withdraw Borrowed Assets [unlisted] - src/03-Borrow/close-loan.md
 48. How to Activate Concrete Borrow (Default Lite) [unlisted] - src/03-Borrow/enable-concrete.md
@@ -89,12 +89,12 @@ Concrete's security model has several layers:
 * **Accounting updates are bounded on-chain** – a change threshold, cooldown, and validity window constrain how off-chain values move the vault.
 * **Monitoring is independent** – Hypernative provides real-time risk detection.
 * **Pause authority is pre-delegated** – ZeroShadow can pause vaults per mandate.
-* **Code is audited before it ships** – audited by [Halborn, Cantina, Code4rena, and Zellic](../audits.md).
+* **Code is audited before it ships** – The protocol has undergone security audits by Halborn, Cantina, Zellic, and Code4rena. Each audit covers a specific version of the codebase; refer to the [published reports](https://docs.concrete.xyz/Audits/overview/) for exact scope and coverage.
 * **Upgrades are pull-based** – vault owners pull from the factory; Concrete cannot push changes to deployed vaults.
 
 **Risk.** Yields are not guaranteed and may fluctuate. Strategy losses reduce share price. You may lose some or all of your deposited assets. Past performance is not indicative of future results.
 
-For full risk disclosures see [Risks and Safety](https://docs.concrete.xyz/Using-Concrete-Vaults/risks-and-safety/).
+For full risk disclosures see [Risks and Safety](https://docs.concrete.xyz/Audits/risks-and-safety/).
 
 ---
 
@@ -488,130 +488,7 @@ If you have questions about the campaign or how to participate, please refer to 
 
 ---
 
-# Document 9: Restricted Jurisdictions
-Source: src/02-Using-Concrete-Vaults/restricted-jurisdictions.md
-Doc ID: Using-Concrete-Vaults/restricted-jurisdictions
-Public URL: https://docs.concrete.xyz/Using-Concrete-Vaults/restricted-jurisdictions/
-In active sidebar: yes
-Description: Jurisdiction and access restrictions for Concrete services, including regions where product use is limited or unavailable.
-At Concrete Protocol, we prioritize compliance with international laws and regulations. As part of this commitment, access to our services is restricted in certain jurisdictions, including:
-
-- **United States**: Restricted due to regulatory compliance requirements.
-- **OFAC-Sanctioned Countries**: These are countries and regions sanctioned by the Office of Foreign Assets Control (OFAC), including:
-  - **North Korea**
-  - **Iran**
-  - **Cuba**
-  - **Russia**
-  - **Crimea region of Ukraine**
-  - **South Sudan**
-
-These restrictions are in place to comply with sanctions that limit access to financial services and technologies. Concrete Protocol prohibits users from these jurisdictions from engaging with our platform to maintain adherence to global regulatory standards.
-
-:::note
-This list is subject to updates based on changes in international regulatory and sanction frameworks. Please check this page regularly for the latest information.
-:::
-
----
-
-# Document 10: Risks and Safety
-Source: src/02-Using-Concrete-Vaults/risks-and-safety.md
-Doc ID: Using-Concrete-Vaults/risks-and-safety
-Public URL: https://docs.concrete.xyz/Using-Concrete-Vaults/risks-and-safety/
-In active sidebar: yes
-Description: Risk and safety overview for Concrete vault users, including smart contract, strategy, market, and operational risk considerations.
-Concrete vaults use smart contracts, connect to third-party protocols, and operate in on-chain markets. As with all DeFi products, this comes with risk.
-
-This page explains the main risk categories and what Concrete does to protect your funds. Concrete organizes its vault's security into three layers. Each layer has its own controls, audits, and responsibilities.
-
-
-## Vault Infrastructure Layer
-
-The on-chain smart contracts and custody setup that hold your funds.
-
-### Smart Contract Protections
-
-**Audited before launch.** All smart contract code is audited by established security firms (Halborn, Cantina, Code4rena or Zellic) before it goes live. Concrete also runs an ongoing bug bounty program with Cantina. See all reports on the Audits page.
-**Separated roles.** Vault operations are split across distinct roles. No single key has full control or can drain a vault.
-**On-chain accounting limits.** The vault automatically pauses if it detects unusual changes in asset values. Accounting updates are rate-limited to prevent manipulation.
-**Controlled upgrades.** Vault contracts use the UUPS proxy pattern. Upgrades are only possible through authorized paths approved by the protocol. Any unauthorized upgrade attempt is automatically rejected.
-**Multi-signature custody.** All vault wallets require multiple approvals to move funds. Signing authority is divided across independent authorised groups.
-
-### Withdrawal Timing
-
-Most production vaults use Queued Withdrawal. This means withdrawals enter a queue and are processed on a set schedule. This delay creates a monitoring window where irregularities can be detected before funds leave the vault.
-
-## Strategy Layer
-
-This layer controls how your funds are deployed and how transactions are checked before they run.
-
-### Strategy-Specific Protections
-
-**Vetted before use.** Every strategy passes a risk, accounting, and compliance review before receiving any funds.
-**Whitelisted interactions only.** Vaults can only transact with pre-approved addresses. All others are blocked.
-**Transaction validation.** Every automated transaction must clear multiple independent checks including a full simulation,  before it executes.
-**Granular controls.** Each strategy can be paused independently, and a policy engine governs what actions are allowed. Changes require multi-party approval.
-
-## Oversight and Verification Layer
-
-This layer operates above the vault and strategy layers. It provides independent monitoring, incident response, and accounting checks.
-
-**24/7 monitoring.** Hypernative watches all vault addresses around the clock and alerts the Concrete team about unusual activity.
-**Automatic safeguards.** If something unexpected is detected, protective measures activate immediately - no manual intervention needed.
-**Ongoing asset verification.** Vault values are cross-checked by multiple independent sources at regular intervals to ensure accuracy.
-
-## Market Risks
-
-Even with the protections above, DeFi markets carry inherent risks. Vaults that interact with lending protocols, AMMs (automated market makers), or liquidity pools may be affected by price volatility, impermanent loss, and slippage. Here are the main ones to be aware of.
-
-
-## Impermanent Loss (IL)
-
-Impermanent loss occurs when the price of tokens in a liquidity pool diverges, potentially making LP positions less valuable than simply holding the tokens. This affects vaults that allocate to AMMs, LP pools, or engage in multi-asset yield farming.
-
-**When IL is more likely:**
-
-- Non-stablecoin pairs (e.g. ETH/BTC)
-- Volatile or low-liquidity environments
-- Pre-deposit campaigns on new chains
-
-**How we mitigate:**
-
-- Diversified vault strategies to reduce single-pool exposure
-- Dynamic reallocation to minimize risk during volatile periods
-
-## Slippage Risk
-
-Slippage refers to the difference between the expected price of a trade and the price at which it is actually executed. This can occur during vault deposit swaps, reward conversions, or vault rebalancing—especially when trading large amounts or in low-liquidity markets.
-
-**When slippage is more likely:**
-
-- Swapping between volatile or thinly traded tokens
-- High market activity or low liquidity conditions
-- Executing large trades relative to pool size
-
-**How we mitigate:**
-
-- Integration with leading aggregators (e.g. 1inch) for optimal swap routing
-- Built-in slippage protection in vault contracts
-- Clear UI warnings when expected slippage exceeds thresholds
-
-## Strategy-Specific Risks
-
-Each vault may expose users to different underlying protocols. These come with their own assumptions and potential vulnerabilities.
-
-**How we mitigate:**
-
-- Vetting and monitoring of all integrated protocols
-- Capped exposures for experimental or new strategies
-- Transparent reward and allocation disclosures
-
-## Jurisdiction Restrictions
-
-Access to Concrete products is not available in every jurisdiction. Before depositing, review the [Restricted Jurisdictions](https://docs.concrete.xyz/Using-Concrete-Vaults/restricted-jurisdictions/) page to confirm eligibility.
-
----
-
-# Document 11: Architecture: Core Concepts
+# Document 9: Architecture: Core Concepts
 Source: src/03-Developers/architecture-core-concepts.md
 Doc ID: Developers/architecture-core-concepts
 Public URL: https://docs.concrete.xyz/Developers/architecture-core-concepts/
@@ -731,7 +608,7 @@ Concrete's smart-contract source is held in a private repository. Partners and i
 
 ---
 
-# Document 12: Overview
+# Document 10: Overview
 Source: src/03-Developers/SDK/overview.md
 Doc ID: Developers/SDK/overview
 Public URL: https://docs.concrete.xyz/Developers/SDK/overview/
@@ -833,7 +710,7 @@ await redeemTx.wait();
 
 ---
 
-# Document 13: Setup Configuration
+# Document 11: Setup Configuration
 Source: src/03-Developers/SDK/setup-configuration.md
 Doc ID: Developers/SDK/setup-configuration
 Public URL: https://docs.concrete.xyz/Developers/SDK/setup-configuration/
@@ -970,7 +847,7 @@ function VaultInfo() {
 
 ---
 
-# Document 14: balanceOf(address)
+# Document 12: balanceOf(address)
 Source: src/03-Developers/SDK/read-methods/balanceOf.md
 Doc ID: Developers/SDK/read-methods/balanceOf
 Public URL: https://docs.concrete.xyz/Developers/SDK/read-methods/balanceOf/
@@ -1020,7 +897,7 @@ console.log("Underlying (from human):", await vault.toUnderlyingBigInt("1.0"));
 
 ---
 
-# Document 15: getAddress()
+# Document 13: getAddress()
 Source: src/03-Developers/SDK/read-methods/getAddress.md
 Doc ID: Developers/SDK/read-methods/getAddress
 Public URL: https://docs.concrete.xyz/Developers/SDK/read-methods/getAddress/
@@ -1051,7 +928,7 @@ console.log("Vault contract address:", vaultAddr);
 
 ---
 
-# Document 16: getUnderlyingDecimals()
+# Document 14: getUnderlyingDecimals()
 Source: src/03-Developers/SDK/read-methods/getUnderlyingDecimals.md
 Doc ID: Developers/SDK/read-methods/getUnderlyingDecimals
 Public URL: https://docs.concrete.xyz/Developers/SDK/read-methods/getUnderlyingDecimals/
@@ -1085,7 +962,7 @@ console.log("One unit in base:", oneUnit.toString());
 
 ---
 
-# Document 17: getVaultDetails()
+# Document 15: getVaultDetails()
 Source: src/03-Developers/SDK/read-methods/getVaultDetails.md
 Doc ID: Developers/SDK/read-methods/getVaultDetails
 Public URL: https://docs.concrete.xyz/Developers/SDK/read-methods/getVaultDetails/
@@ -1176,7 +1053,7 @@ console.log(details.underlying.symbol);      // "LBTC"
 
 ---
 
-# Document 18: getAllWithdrawQueueRequests(owner)
+# Document 16: getAllWithdrawQueueRequests(owner)
 Source: src/03-Developers/SDK/read-methods/getAllWithdrawQueueRequests.md
 Doc ID: Developers/SDK/read-methods/getAllWithdrawQueueRequests
 Public URL: https://docs.concrete.xyz/Developers/SDK/read-methods/getAllWithdrawQueueRequests/
@@ -1290,7 +1167,7 @@ main().catch((err) => {
 
 ---
 
-# Document 19: previewConversion(amount)
+# Document 17: previewConversion(amount)
 Source: src/03-Developers/SDK/read-methods/previewConversion.md
 Doc ID: Developers/SDK/read-methods/previewConversion
 Public URL: https://docs.concrete.xyz/Developers/SDK/read-methods/previewConversion/
@@ -1377,7 +1254,7 @@ console.log(
 
 ---
 
-# Document 20: totalAssets()
+# Document 18: totalAssets()
 Source: src/03-Developers/SDK/read-methods/totalAssets.md
 Doc ID: Developers/SDK/read-methods/totalAssets
 Public URL: https://docs.concrete.xyz/Developers/SDK/read-methods/totalAssets/
@@ -1428,7 +1305,7 @@ console.log(
 
 ---
 
-# Document 21: symbol()
+# Document 19: symbol()
 Source: src/03-Developers/SDK/read-methods/symbol.md
 Doc ID: Developers/SDK/read-methods/symbol
 Public URL: https://docs.concrete.xyz/Developers/SDK/read-methods/symbol/
@@ -1464,7 +1341,7 @@ console.log(await vault.symbol()); // "ctLBTC"
 
 ---
 
-# Document 22: decimals()
+# Document 20: decimals()
 Source: src/03-Developers/SDK/read-methods/decimals.md
 Doc ID: Developers/SDK/read-methods/decimals
 Public URL: https://docs.concrete.xyz/Developers/SDK/read-methods/decimals/
@@ -1500,7 +1377,7 @@ console.log(await vault.decimals()); // 18
 
 ---
 
-# Document 23: applyDecimals(amount)
+# Document 21: applyDecimals(amount)
 Source: src/03-Developers/SDK/read-methods/applyDecimals.md
 Doc ID: Developers/SDK/read-methods/applyDecimals
 Public URL: https://docs.concrete.xyz/Developers/SDK/read-methods/applyDecimals/
@@ -1532,7 +1409,7 @@ console.log("Formatted vault shares:", display);
 
 ---
 
-# Document 24: toUnderlyingDecimals(amount)
+# Document 22: toUnderlyingDecimals(amount)
 Source: src/03-Developers/SDK/read-methods/toUnderlyingDecimals.md
 Doc ID: Developers/SDK/read-methods/toUnderlyingDecimals
 Public URL: https://docs.concrete.xyz/Developers/SDK/read-methods/toUnderlyingDecimals/
@@ -1564,7 +1441,7 @@ console.log("Formatted underlying:", display);
 
 ---
 
-# Document 25: approve(spender, amount)
+# Document 23: approve(spender, amount)
 Source: src/03-Developers/SDK/write-methods/approve.md
 Doc ID: Developers/SDK/write-methods/approve
 Public URL: https://docs.concrete.xyz/Developers/SDK/write-methods/approve/
@@ -1620,7 +1497,7 @@ await (await vault.approve(spender, shareAllowance)).wait();
 
 ---
 
-# Document 26: deposit(amount)
+# Document 24: deposit(amount)
 Source: src/03-Developers/SDK/write-methods/deposit.md
 Doc ID: Developers/SDK/write-methods/deposit
 Public URL: https://docs.concrete.xyz/Developers/SDK/write-methods/deposit/
@@ -1670,7 +1547,7 @@ console.log("Deposit confirmed in block", receipt.blockNumber);
 
 ---
 
-# Document 27: redeem(amount)
+# Document 25: redeem(amount)
 Source: src/03-Developers/SDK/write-methods/redeem.md
 Doc ID: Developers/SDK/write-methods/redeem
 Public URL: https://docs.concrete.xyz/Developers/SDK/write-methods/redeem/
@@ -1707,7 +1584,7 @@ if (myShares > 0n) {
 
 ---
 
-# Document 28: transfer(to, amount)
+# Document 26: transfer(to, amount)
 Source: src/03-Developers/SDK/write-methods/transfer.md
 Doc ID: Developers/SDK/write-methods/transfer
 Public URL: https://docs.concrete.xyz/Developers/SDK/write-methods/transfer/
@@ -1740,7 +1617,7 @@ await (await vault.transfer(to, shareAmount)).wait();
 
 ---
 
-# Document 29: transferFrom(from, to, amount)
+# Document 27: transferFrom(from, to, amount)
 Source: src/03-Developers/SDK/write-methods/transferFrom.md
 Doc ID: Developers/SDK/write-methods/transferFrom
 Public URL: https://docs.concrete.xyz/Developers/SDK/write-methods/transferFrom/
@@ -1777,7 +1654,7 @@ await (await vault.transferFrom(owner, to, shareAmount)).wait();
 
 ---
 
-# Document 30: Decimals & Conversion Helpers
+# Document 28: Decimals & Conversion Helpers
 Source: src/03-Developers/SDK/decimals-and-conversion-helpers.md
 Doc ID: Developers/SDK/decimals-and-conversion-helpers
 Public URL: https://docs.concrete.xyz/Developers/SDK/decimals-and-conversion-helpers/
@@ -1796,7 +1673,7 @@ The following helpers cache vault decimals internally and handle conversions con
 
 ---
 
-# Document 31: Examples
+# Document 29: Examples
 Source: src/03-Developers/SDK/examples.md
 Doc ID: Developers/SDK/examples
 Public URL: https://docs.concrete.xyz/Developers/SDK/examples/
@@ -1963,7 +1840,7 @@ await (await vaultWithSigner.redeem(shares)).wait();
 
 ---
 
-# Document 32: Troubleshooting & Error Handling
+# Document 30: Troubleshooting & Error Handling
 Source: src/03-Developers/SDK/troubleshooting-and-error-handling.md
 Doc ID: Developers/SDK/troubleshooting-and-error-handling
 Public URL: https://docs.concrete.xyz/Developers/SDK/troubleshooting-and-error-handling/
@@ -2315,7 +2192,7 @@ async function retry<T>(fn: () => Promise<T>, times = 2) {
 
 ---
 
-# Document 33: Schema & Queries
+# Document 31: Schema & Queries
 Source: src/03-Developers/Subgraph-and-Events/schema-and-queries.md
 Doc ID: Developers/Subgraph-and-Events/schema-and-queries
 Public URL: https://docs.concrete.xyz/Developers/Subgraph-and-Events/schema-and-queries/
@@ -2593,7 +2470,7 @@ The `Factory` entity has no reverse-derived `vaults` field, so query the top-lev
 
 ---
 
-# Document 34: Event Reference
+# Document 32: Event Reference
 Source: src/03-Developers/Subgraph-and-Events/event-reference-and-use-cases.md
 Doc ID: Developers/Subgraph-and-Events/event-reference-and-use-cases
 Public URL: https://docs.concrete.xyz/Developers/Subgraph-and-Events/event-reference-and-use-cases/
@@ -2663,7 +2540,7 @@ The following are not on-chain events. They are subgraph-internal `@entity(times
 
 ---
 
-# Document 35: How Withdrawals Are Processed For Concrete DeFi USDT
+# Document 33: How Withdrawals Are Processed For Concrete DeFi USDT
 Source: src/04-Live-Vaults/DeFi-USDT/how-withdrawals-are-processed.md
 Doc ID: Live-Vaults/DeFi-USDT/how-withdrawals-are-processed
 Public URL: https://docs.concrete.xyz/Live-Vaults/DeFi-USDT/how-withdrawals-are-processed/
@@ -2712,7 +2589,7 @@ All withdrawals are subject to the specific terms of this vault. See [Important 
 
 ---
 
-# Document 36: Important Disclosures
+# Document 34: Important Disclosures
 Source: src/04-Live-Vaults/DeFi-USDT/important-disclosures.md
 Doc ID: Live-Vaults/DeFi-USDT/important-disclosures
 Public URL: https://docs.concrete.xyz/Live-Vaults/DeFi-USDT/important-disclosures/
@@ -2766,7 +2643,7 @@ THESE DISCLOSURES ARE PROVIDED FOR INFORMATIONAL PURPOSES ONLY AND DO NOT CONSTI
 
 ---
 
-# Document 37: WBTC Vault
+# Document 35: WBTC Vault
 Source: src/04-Live-Vaults/wbtc-vault.md
 Doc ID: Live-Vaults/wbtc-vault
 Public URL: https://docs.concrete.xyz/Live-Vaults/wbtc-vault/
@@ -2876,7 +2753,7 @@ https://docs.concrete.xyz/support/
 
 ---
 
-# Document 38: Overview
+# Document 36: Overview
 Source: src/05-Completed-Campaigns/overview.md
 Doc ID: Completed-Campaigns/overview
 Public URL: https://docs.concrete.xyz/Completed-Campaigns/overview/
@@ -2911,7 +2788,7 @@ For more on support, see [Support](https://docs.concrete.xyz/support/). For more
 
 ---
 
-# Document 39: Bera
+# Document 37: Bera
 Source: src/05-Completed-Campaigns/bera.md
 Doc ID: Completed-Campaigns/bera
 Public URL: https://docs.concrete.xyz/Completed-Campaigns/bera/
@@ -3212,7 +3089,7 @@ Claiming is quick and only requires a signature from your connected wallet.
 
 ---
 
-# Document 40: Stable
+# Document 38: Stable
 Source: src/05-Completed-Campaigns/stable.md
 Doc ID: Completed-Campaigns/stable
 Public URL: https://docs.concrete.xyz/Completed-Campaigns/stable/
@@ -3387,7 +3264,7 @@ Please refer to the main documentation's [support section](https://docs.concrete
 
 ---
 
-# Document 41: Corn
+# Document 39: Corn
 Source: src/05-Completed-Campaigns/corn.md
 Doc ID: Completed-Campaigns/corn
 Public URL: https://docs.concrete.xyz/Completed-Campaigns/corn/
@@ -3421,7 +3298,7 @@ Withdrawals are processed on Ethereum mainnet. For Corn Stables, batched withdra
 
 ---
 
-# Document 42: Morph
+# Document 40: Morph
 Source: src/05-Completed-Campaigns/morph.md
 Doc ID: Completed-Campaigns/morph
 Public URL: https://docs.concrete.xyz/Completed-Campaigns/morph/
@@ -3461,7 +3338,7 @@ Vaults that are deprecated can be exited using the in-app withdraw tab (if still
 
 ---
 
-# Document 43: TAC
+# Document 41: TAC
 Source: src/05-Completed-Campaigns/tac.md
 Doc ID: Completed-Campaigns/tac
 Public URL: https://docs.concrete.xyz/Completed-Campaigns/tac/
@@ -3532,7 +3409,7 @@ Our team will walk you through whatever steps you need.
 
 ---
 
-# Document 44: Pre-Deposit Campaigns
+# Document 42: Pre-Deposit Campaigns
 Source: src/05-Completed-Campaigns/pre-deposit-campaigns.md
 Doc ID: Completed-Campaigns/pre-deposit-campaigns
 Public URL: https://docs.concrete.xyz/Completed-Campaigns/pre-deposit-campaigns/
@@ -3554,10 +3431,10 @@ Check the vault page for two dates: when the pre-deposit period ends and when cl
 
 ---
 
-# Document 45: Audits
-Source: src/audits.md
-Doc ID: audits
-Public URL: https://docs.concrete.xyz/audits/
+# Document 43: Audits
+Source: src/06-Audits/overview.md
+Doc ID: Audits/overview
+Public URL: https://docs.concrete.xyz/Audits/overview/
 In active sidebar: yes
 Description: Security audit coverage for Concrete smart contracts, including audit partners, scope, and links to published findings.
 Security is at the heart of everything we do at Concrete Protocol.
@@ -3761,6 +3638,138 @@ Concrete Protocol follows a multi-phased audit approach to deliver the highest l
 Concrete Protocol’s audit process is part of our larger commitment to maintaining a robust, secure, and transparent platform. We continuously work to identify and mitigate risks, safeguarding user funds and building trust across the DeFi ecosystem.
 
 Stay tuned for upcoming enhancements and future audits as we expand our security initiatives.
+
+---
+
+# Document 44: Restricted Jurisdictions
+Source: src/06-Audits/restricted-jurisdictions.md
+Doc ID: Audits/restricted-jurisdictions
+Public URL: https://docs.concrete.xyz/Audits/restricted-jurisdictions/
+In active sidebar: yes
+Description: Jurisdiction and access restrictions for Concrete services, including regions where product use is limited or unavailable.
+At Concrete Protocol, we prioritize compliance with international laws and regulations. As part of this commitment, access to our services is restricted in certain jurisdictions, including:
+
+- **United States**: Restricted due to regulatory compliance requirements.
+- **OFAC-Sanctioned Countries**: These are countries and regions sanctioned by the Office of Foreign Assets Control (OFAC), including:
+  - **North Korea**
+  - **Iran**
+  - **Cuba**
+  - **Russia**
+  - **Crimea region of Ukraine**
+  - **South Sudan**
+
+These restrictions are in place to comply with sanctions that limit access to financial services and technologies. Concrete Protocol prohibits users from these jurisdictions from engaging with our platform to maintain adherence to global regulatory standards.
+
+:::note
+This list is subject to updates based on changes in international regulatory and sanction frameworks. Please check this page regularly for the latest information.
+:::
+
+---
+
+# Document 45: Risks and Safety
+Source: src/06-Audits/risks-and-safety.md
+Doc ID: Audits/risks-and-safety
+Public URL: https://docs.concrete.xyz/Audits/risks-and-safety/
+In active sidebar: yes
+Description: Risk and safety overview for Concrete vault users, including smart contract, strategy, market, and operational risk considerations.
+Concrete vaults use smart contracts, connect to third-party protocols, and operate in on-chain markets. As with all DeFi products, this comes with risk.
+
+This page explains the main risk categories and what Concrete does to protect your funds. Concrete organizes its vault's security into three layers. Each layer has its own controls, audits, and responsibilities.
+
+## Vault Infrastructure Layer
+
+The on-chain smart contracts and custody setup that hold your funds.
+
+### Smart Contract Protections
+
+**Audited before launch.** All smart contract code is audited by established security firms (Halborn, Cantina, Code4rena or Zellic) before it goes live. Concrete also runs an ongoing bug bounty program with Cantina. See all reports on the [Audits](https://docs.concrete.xyz/Audits/overview/) page.
+
+**Separated roles.** Vault operations are split across distinct roles. No single key has full control or can drain a vault.
+
+**On-chain accounting limits.** The vault automatically pauses if it detects unusual changes in asset values. Accounting updates are rate-limited to prevent manipulation.
+
+**Controlled upgrades.** Vault contracts use the UUPS proxy pattern. Upgrades are only possible through authorized paths approved by the protocol. Any unauthorized upgrade attempt is automatically rejected.
+
+**Multi-signature custody.** All vault wallets require multiple approvals to move funds. Signing authority is divided across independent authorised groups.
+
+### Withdrawal Timing
+
+Most production vaults use Queued Withdrawal. This means withdrawals enter a queue and are processed on a set schedule. This delay creates a monitoring window where irregularities can be detected before funds leave the vault.
+
+## Strategy Layer
+
+This layer controls how your funds are deployed and how transactions are checked before they run.
+
+### Strategy-Specific Protections
+
+**Vetted before use.** Every strategy passes a risk, accounting, and compliance review before receiving any funds.
+
+**Whitelisted interactions only.** Vaults can only transact with pre-approved addresses. All others are blocked.
+
+**Transaction validation.** Every automated transaction must clear multiple independent checks including a full simulation, before it executes.
+
+**Granular controls.** Each strategy can be paused independently, and a policy engine governs what actions are allowed. Changes require multi-party approval.
+
+---
+
+## Oversight and Verification Layer
+
+This layer operates above the vault and strategy layers. It provides independent monitoring, incident response, and accounting checks.
+
+**24/7 monitoring.** Hypernative watches all vault addresses around the clock and alerts the Concrete team about unusual activity.
+
+**Automatic safeguards.** If something unexpected is detected, protective measures activate immediately, no manual intervention needed.
+
+**Ongoing asset verification.** Vault values are cross-checked by multiple independent sources at regular intervals to ensure accuracy.
+
+## Market Risks
+
+Even with the protections above, DeFi markets carry inherent risks. Vaults that interact with lending protocols, AMMs (automated market makers), or liquidity pools may be affected by price volatility, impermanent loss, and slippage. Here are the main ones to be aware of.
+
+## Impermanent Loss (IL)
+
+Impermanent loss occurs when the price of tokens in a liquidity pool diverges, potentially making LP positions less valuable than simply holding the tokens. This affects vaults that allocate to AMMs, LP pools, or engage in multi-asset yield farming.
+
+**When IL is more likely:**
+
+* Non-stablecoin pairs (e.g. ETH/BTC)
+* Volatile or low-liquidity environments
+* Pre-deposit campaigns on new chains
+
+**How we mitigate:**
+
+* Diversified vault strategies to reduce single-pool exposure
+* Dynamic reallocation to minimize risk during volatile periods
+
+## Slippage Risk
+
+Slippage refers to the difference between the expected price of a trade and the price at which it is actually executed. This can occur during vault deposit swaps, reward conversions, or vault rebalancing, especially when trading large amounts or in low-liquidity markets.
+
+**When slippage is more likely:**
+
+* Swapping between volatile or thinly traded tokens
+* High market activity or low liquidity conditions
+* Executing large trades relative to pool size
+
+**How we mitigate:**
+
+* Integration with leading aggregators (e.g. 1inch) for optimal swap routing
+* Built-in slippage protection in vault contracts
+* Clear UI warnings when expected slippage exceeds thresholds
+
+## Strategy-Specific Risks
+
+Each vault may expose users to different underlying protocols. These come with their own assumptions and potential vulnerabilities.
+
+**How we mitigate:**
+
+* Vetting and monitoring of all integrated protocols
+* Capped exposures for experimental or new strategies
+* Transparent reward and allocation disclosures
+
+## Jurisdiction Restrictions
+
+Access to Concrete products is not available in every jurisdiction. Before depositing, review the [Restricted Jurisdictions](https://docs.concrete.xyz/Audits/restricted-jurisdictions/) page to confirm eligibility.
 
 ---
 

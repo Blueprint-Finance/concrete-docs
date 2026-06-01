@@ -29,3 +29,11 @@ Key rules to apply on every page:
 
 Ignore any `.mintlify/voice-and-tone.md`; it is a deprecated, mis-targeted draft
 that `STYLE-AND-TERMINOLOGY.md` supersedes.
+
+## Source-grounded developer articles
+
+The Architecture, Subgraph & Events, and SDK articles are rewritten against
+upstream code, not product copy, so they drift when that code changes.
+**[SOURCES.md](./SOURCES.md)** records which upstream repository and path backs
+each one. Before editing or updating any of those articles, consult it and
+re-verify the technical claims against the listed source.
