@@ -1,6 +1,6 @@
 # Concrete Docs - LLM Full Context
 
-Generated: 2026-06-01T16:51:54.095Z
+Generated: 2026-06-02T14:06:46.109Z
 Source repository: concrete-docs
 Canonical docs URL: https://docs.concrete.xyz/
 
@@ -50,9 +50,9 @@ This file consolidates every Markdown documentation page in `src/**/*.md` for re
 40. Morph [sidebar] - src/05-Completed-Campaigns/morph.md
 41. TAC [sidebar] - src/05-Completed-Campaigns/tac.md
 42. Pre-Deposit Campaigns [sidebar] - src/05-Completed-Campaigns/pre-deposit-campaigns.md
-43. Audits [sidebar] - src/06-Audits/overview.md
-44. Restricted Jurisdictions [sidebar] - src/06-Audits/restricted-jurisdictions.md
-45. Risks and Safety [sidebar] - src/06-Audits/risks-and-safety.md
+43. Audits [sidebar] - src/06-Audits.md
+44. Risks and Safety [sidebar] - src/07-risks-and-safety.md
+45. Restricted Jurisdictions [sidebar] - src/08-restricted-jurisdictions.md
 46. Glossary [sidebar] - src/glossary.md
 47. Support [sidebar] - src/support.md
 48. How to Repay and Withdraw Borrowed Assets [unlisted] - src/03-Borrow/close-loan.md
@@ -90,12 +90,12 @@ Concrete's security model has several layers:
 * **Accounting updates are bounded on-chain** – a change threshold, cooldown, and validity window constrain how off-chain values move the vault.
 * **Monitoring is independent** – Hypernative provides real-time risk detection.
 * **Pause authority is pre-delegated** – ZeroShadow can pause vaults per mandate.
-* **Code is audited before it ships** – The protocol has undergone security audits by Halborn, Cantina, Zellic, and Code4rena. Each audit covers a specific version of the codebase; refer to the [published reports](https://docs.concrete.xyz/Audits/overview/) for exact scope and coverage.
+* **Code is audited before it ships** – The protocol has undergone security audits by Halborn, Cantina, Zellic, and Code4rena. Each audit covers a specific version of the codebase; refer to the [published reports](https://docs.concrete.xyz/Audits/) for exact scope and coverage.
 * **Upgrades are pull-based** – vault owners pull from the factory; Concrete cannot push changes to deployed vaults.
 
 **Risk.** Yields are not guaranteed and may fluctuate. Strategy losses reduce share price. You may lose some or all of your deposited assets. Past performance is not indicative of future results.
 
-For full risk disclosures see [Risks and Safety](https://docs.concrete.xyz/Audits/risks-and-safety/).
+For full risk disclosures see [Risks and Safety](https://docs.concrete.xyz/risks-and-safety/).
 
 ---
 
@@ -3479,9 +3479,9 @@ Check the vault page for two dates: when the pre-deposit period ends and when cl
 ---
 
 # Document 43: Audits
-Source: src/06-Audits/overview.md
-Doc ID: Audits/overview
-Public URL: https://docs.concrete.xyz/Audits/overview/
+Source: src/06-Audits.md
+Doc ID: Audits
+Public URL: https://docs.concrete.xyz/Audits/
 In active sidebar: yes
 Description: Security audit coverage for Concrete smart contracts, including audit partners, scope, and links to published findings.
 Security is at the heart of everything we do at Concrete Protocol.
@@ -3688,35 +3688,10 @@ Stay tuned for upcoming enhancements and future audits as we expand our security
 
 ---
 
-# Document 44: Restricted Jurisdictions
-Source: src/06-Audits/restricted-jurisdictions.md
-Doc ID: Audits/restricted-jurisdictions
-Public URL: https://docs.concrete.xyz/Audits/restricted-jurisdictions/
-In active sidebar: yes
-Description: Jurisdiction and access restrictions for Concrete services, including regions where product use is limited or unavailable.
-At Concrete Protocol, we prioritize compliance with international laws and regulations. As part of this commitment, access to our services is restricted in certain jurisdictions, including:
-
-- **United States**: Restricted due to regulatory compliance requirements.
-- **OFAC-Sanctioned Countries**: These are countries and regions sanctioned by the Office of Foreign Assets Control ([OFAC](https://docs.concrete.xyz/glossary/#ofac)), including:
-  - **North Korea**
-  - **Iran**
-  - **Cuba**
-  - **Russia**
-  - **Crimea region of Ukraine**
-  - **South Sudan**
-
-These restrictions are in place to comply with sanctions that limit access to financial services and technologies. Concrete Protocol prohibits users from these jurisdictions from engaging with our platform to maintain adherence to global regulatory standards.
-
-:::note
-This list is subject to updates based on changes in international regulatory and sanction frameworks. Please check this page regularly for the latest information.
-:::
-
----
-
-# Document 45: Risks and Safety
-Source: src/06-Audits/risks-and-safety.md
-Doc ID: Audits/risks-and-safety
-Public URL: https://docs.concrete.xyz/Audits/risks-and-safety/
+# Document 44: Risks and Safety
+Source: src/07-risks-and-safety.md
+Doc ID: risks-and-safety
+Public URL: https://docs.concrete.xyz/risks-and-safety/
 In active sidebar: yes
 Description: Risk and safety overview for Concrete vault users, including smart contract, strategy, market, and operational risk considerations.
 Concrete vaults use smart contracts, connect to third-party protocols, and operate in on-chain markets. As with all [DeFi](https://docs.concrete.xyz/glossary/#defi) products, this comes with risk.
@@ -3729,7 +3704,7 @@ The on-chain smart contracts and custody setup that hold your funds.
 
 ### Smart Contract Protections
 
-**Audited before launch.** All smart contract code is audited by established security firms (Halborn, Cantina, Code4rena or Zellic) before it goes live. Concrete also runs an ongoing bug bounty program with Cantina. See all reports on the [Audits](https://docs.concrete.xyz/Audits/overview/) page.
+**Audited before launch.** All smart contract code is audited by established security firms (Halborn, Cantina, Code4rena or Zellic) before it goes live. Concrete also runs an ongoing bug bounty program with Cantina. See all reports on the [Audits](https://docs.concrete.xyz/Audits/) page.
 
 **Separated roles.** Vault operations are split across distinct roles. No single key has full control or can drain a vault.
 
@@ -3816,7 +3791,32 @@ Each vault may expose users to different underlying protocols. These come with t
 
 ## Jurisdiction Restrictions
 
-Access to Concrete products is not available in every jurisdiction. Before depositing, review the [Restricted Jurisdictions](https://docs.concrete.xyz/Audits/restricted-jurisdictions/) page to confirm eligibility.
+Access to Concrete products is not available in every jurisdiction. Before depositing, review the [Restricted Jurisdictions](https://docs.concrete.xyz/restricted-jurisdictions/) page to confirm eligibility.
+
+---
+
+# Document 45: Restricted Jurisdictions
+Source: src/08-restricted-jurisdictions.md
+Doc ID: restricted-jurisdictions
+Public URL: https://docs.concrete.xyz/restricted-jurisdictions/
+In active sidebar: yes
+Description: Jurisdiction and access restrictions for Concrete services, including regions where product use is limited or unavailable.
+At Concrete Protocol, we prioritize compliance with international laws and regulations. As part of this commitment, access to our services is restricted in certain jurisdictions, including:
+
+- **United States**: Restricted due to regulatory compliance requirements.
+- **OFAC-Sanctioned Countries**: These are countries and regions sanctioned by the Office of Foreign Assets Control ([OFAC](https://docs.concrete.xyz/glossary/#ofac)), including:
+  - **North Korea**
+  - **Iran**
+  - **Cuba**
+  - **Russia**
+  - **Crimea region of Ukraine**
+  - **South Sudan**
+
+These restrictions are in place to comply with sanctions that limit access to financial services and technologies. Concrete Protocol prohibits users from these jurisdictions from engaging with our platform to maintain adherence to global regulatory standards.
+
+:::note
+This list is subject to updates based on changes in international regulatory and sanction frameworks. Please check this page regularly for the latest information.
+:::
 
 ---
 
