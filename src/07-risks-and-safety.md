@@ -14,7 +14,7 @@ The on-chain smart contracts and custody setup that hold your funds.
 
 ### Smart Contract Protections
 
-**Audited before launch.** All smart contract code is audited by established security firms (Halborn, Cantina, Code4rena or Zellic) before it goes live. Concrete also runs an ongoing bug bounty program with Cantina. See all reports on the [Audits](/Audits/overview/) page.
+**Audited before launch.** All smart contract code is audited by established security firms (Halborn, Cantina, Code4rena or Zellic) before it goes live. Concrete also runs an ongoing bug bounty program with Cantina. See all reports on the [Audits](/Audits/) page.
 
 **Separated roles.** Vault operations are split across distinct roles. No single key has full control or can drain a vault.
 
@@ -101,4 +101,4 @@ Each vault may expose users to different underlying protocols. These come with t
 
 ## Jurisdiction Restrictions
 
-Access to Concrete products is not available in every jurisdiction. Before depositing, review the [Restricted Jurisdictions](/Audits/restricted-jurisdictions/) page to confirm eligibility.
+Access to Concrete products is not available in every jurisdiction. Before depositing, review the [Restricted Jurisdictions](/restricted-jurisdictions/) page to confirm eligibility.
