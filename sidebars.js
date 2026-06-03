@@ -110,15 +110,9 @@ const sidebars = {
       ],
     },
 
-    {
-      type: 'category',
-      label: 'Audits',
-      items: [
-        'Audits/overview',
-        'Audits/restricted-jurisdictions',
-        'Audits/risks-and-safety',
-      ],
-    },
+    'Audits',
+    'risks-and-safety',
+    'restricted-jurisdictions',
     'glossary',
     'support',
   ],

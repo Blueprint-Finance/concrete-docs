@@ -1,7 +1,7 @@
 ---
 title: "Audits"
 description: "Security audit coverage for Concrete smart contracts, including audit partners, scope, and links to published findings."
-sidebar_label: "Overview"
+sidebar_label: "Audits"
 ---
 
 Security is at the heart of everything we do at Concrete Protocol.
