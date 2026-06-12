@@ -1,6 +1,6 @@
 # Concrete Docs - LLM Full Context
 
-Generated: 2026-06-12T09:39:39.318Z
+Generated: 2026-06-12T10:01:29.312Z
 Source repository: concrete-docs
 Canonical docs URL: https://docs.concrete.xyz/
 
@@ -369,7 +369,7 @@ Figures in the panel reflect the vault's off-chain portfolio as captured on the 
 
 The panel reads `GET /v1/vault:transparency/stats` with the vault address and chain ID. The response includes:
 
-- `totalPortfolioAssetsOffchainUsd` – total USD value of the off-chain portfolio.
+- `totalPortfolioAssetsOffchainUsd` – total [USD](https://docs.concrete.xyz/glossary/#usd) value of the off-chain portfolio.
 - `byAsset` – per-asset rows with `symbol`, `amount`, `amountUsd`, and optional `logoUrl`.
 - `byProtocol` – per-protocol rows with `name`, `amountUsd`, and optional `logoUrl`.
 - `byPlatform` – per-network rows with `platformId` and `amountUsd`.
@@ -1110,7 +1110,7 @@ Doc ID: Developers/SDK/read-methods/getVaultTransparencyStats
 Public URL: https://docs.concrete.xyz/Developers/SDK/read-methods/getVaultTransparencyStats/
 In active sidebar: yes
 Description: HTTP API reference for vault off-chain portfolio transparency stats: assets, protocols, and networks breakdown by vault address and chain ID.
-Returns a delayed off-chain portfolio breakdown for a vault: total USD, per-asset, per-protocol, and per-network slices. The Concrete app uses this endpoint for the [Vault Transparency](https://docs.concrete.xyz/Using-Concrete-Vaults/vault-transparency/) panel on Earn vault pages.
+Returns a delayed off-chain portfolio breakdown for a vault: total [USD](https://docs.concrete.xyz/glossary/#usd), per-asset, per-protocol, and per-network slices. The Concrete app uses this endpoint for the [Vault Transparency](https://docs.concrete.xyz/Using-Concrete-Vaults/vault-transparency/) panel on Earn vault pages.
 
 This is a Concrete [API](https://docs.concrete.xyz/glossary/#api) route, not an on-chain `eth_call`. It is not exposed on the `@concrete-xyz/sdk` vault instance at this time. Integrators call the HTTP endpoint directly.
 
@@ -1178,13 +1178,13 @@ console.log(stats.byProtocol);
 console.log(stats.byPlatform);
 ```
 
-Replace the base URL with the Concrete API host your environment uses.
+Replace the base [URL](https://docs.concrete.xyz/glossary/#url) with the Concrete [API](https://docs.concrete.xyz/glossary/#api) host your environment uses.
 
 ## Notes
 
 - **Staleness**: panel copy in the app states a 24-hour delay. Cache responses accordingly; the app uses a 60-minute client cache.
 - **Empty breakdown**: when all of `byAsset`, `byProtocol`, and `byPlatform` are empty, the app hides the Vault Transparency panel.
-- **Errors**: handle non-2xx responses and network failures; the UI omits the panel when data is unavailable.
+- **Errors**: handle non-2xx responses and network failures; the [UI](https://docs.concrete.xyz/glossary/#ui) omits the panel when data is unavailable.
 
 **Minimal guard**
 
