@@ -4,7 +4,7 @@ description: "HTTP API reference for vault off-chain portfolio transparency stat
 sidebar_label: "getVaultTransparencyStats (API)"
 ---
 
-Returns a delayed off-chain portfolio breakdown for a vault: total USD, per-asset, per-protocol, and per-network slices. The Concrete app uses this endpoint for the [Vault Transparency](/Using-Concrete-Vaults/vault-transparency/) panel on Earn vault pages.
+Returns a delayed off-chain portfolio breakdown for a vault: total [USD](/glossary/#usd), per-asset, per-protocol, and per-network slices. The Concrete app uses this endpoint for the [Vault Transparency](/Using-Concrete-Vaults/vault-transparency/) panel on Earn vault pages.
 
 This is a Concrete [API](/glossary/#api) route, not an on-chain `eth_call`. It is not exposed on the `@concrete-xyz/sdk` vault instance at this time. Integrators call the HTTP endpoint directly.
 
@@ -72,13 +72,13 @@ console.log(stats.byProtocol);
 console.log(stats.byPlatform);
 ```
 
-Replace the base URL with the Concrete API host your environment uses.
+Replace the base [URL](/glossary/#url) with the Concrete [API](/glossary/#api) host your environment uses.
 
 ## Notes
 
 - **Staleness**: panel copy in the app states a 24-hour delay. Cache responses accordingly; the app uses a 60-minute client cache.
 - **Empty breakdown**: when all of `byAsset`, `byProtocol`, and `byPlatform` are empty, the app hides the Vault Transparency panel.
-- **Errors**: handle non-2xx responses and network failures; the UI omits the panel when data is unavailable.
+- **Errors**: handle non-2xx responses and network failures; the [UI](/glossary/#ui) omits the panel when data is unavailable.
 
 **Minimal guard**
 

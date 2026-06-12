@@ -34,7 +34,7 @@ Figures in the panel reflect the vault's off-chain portfolio as captured on the 
 
 The panel reads `GET /v1/vault:transparency/stats` with the vault address and chain ID. The response includes:
 
-- `totalPortfolioAssetsOffchainUsd` – total USD value of the off-chain portfolio.
+- `totalPortfolioAssetsOffchainUsd` – total [USD](/glossary/#usd) value of the off-chain portfolio.
 - `byAsset` – per-asset rows with `symbol`, `amount`, `amountUsd`, and optional `logoUrl`.
 - `byProtocol` – per-protocol rows with `name`, `amountUsd`, and optional `logoUrl`.
 - `byPlatform` – per-network rows with `platformId` and `amountUsd`.
