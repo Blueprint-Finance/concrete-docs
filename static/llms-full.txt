@@ -1,6 +1,6 @@
 # Concrete Docs - LLM Full Context
 
-Generated: 2026-06-02T14:06:46.109Z
+Generated: 2026-06-12T09:39:39.318Z
 Source repository: concrete-docs
 Canonical docs URL: https://docs.concrete.xyz/
 
@@ -13,57 +13,59 @@ This file consolidates every Markdown documentation page in `src/**/*.md` for re
 3. Concrete Vault Shares [sidebar] - src/02-Using-Concrete-Vaults/concrete-vault-shares.md
 4. Deposit [sidebar] - src/02-Using-Concrete-Vaults/deposit.md
 5. Withdraw [sidebar] - src/02-Using-Concrete-Vaults/withdraw.md
-6. Bridging and Depositing with Enso [sidebar] - src/02-Using-Concrete-Vaults/bridging-and-depositing-with-enso.md
-7. Fees [sidebar] - src/02-Using-Concrete-Vaults/fees.md
-8. Concrete Points Program [sidebar] - src/02-Using-Concrete-Vaults/concrete-points.md
-9. Architecture: Core Concepts [sidebar] - src/03-Developers/architecture-core-concepts.md
-10. Overview [sidebar] - src/03-Developers/SDK/overview.md
-11. Setup Configuration [sidebar] - src/03-Developers/SDK/setup-configuration.md
-12. balanceOf(address) [sidebar] - src/03-Developers/SDK/read-methods/balanceOf.md
-13. getAddress() [sidebar] - src/03-Developers/SDK/read-methods/getAddress.md
-14. getUnderlyingDecimals() [sidebar] - src/03-Developers/SDK/read-methods/getUnderlyingDecimals.md
-15. getVaultDetails() [sidebar] - src/03-Developers/SDK/read-methods/getVaultDetails.md
-16. getAllWithdrawQueueRequests(owner) [sidebar] - src/03-Developers/SDK/read-methods/getAllWithdrawQueueRequests.md
-17. previewConversion(amount) [sidebar] - src/03-Developers/SDK/read-methods/previewConversion.md
-18. totalAssets() [sidebar] - src/03-Developers/SDK/read-methods/totalAssets.md
-19. symbol() [sidebar] - src/03-Developers/SDK/read-methods/symbol.md
-20. decimals() [sidebar] - src/03-Developers/SDK/read-methods/decimals.md
-21. applyDecimals(amount) [sidebar] - src/03-Developers/SDK/read-methods/applyDecimals.md
-22. toUnderlyingDecimals(amount) [sidebar] - src/03-Developers/SDK/read-methods/toUnderlyingDecimals.md
-23. approve(spender, amount) [sidebar] - src/03-Developers/SDK/write-methods/approve.md
-24. deposit(amount) [sidebar] - src/03-Developers/SDK/write-methods/deposit.md
-25. redeem(amount) [sidebar] - src/03-Developers/SDK/write-methods/redeem.md
-26. transfer(to, amount) [sidebar] - src/03-Developers/SDK/write-methods/transfer.md
-27. transferFrom(from, to, amount) [sidebar] - src/03-Developers/SDK/write-methods/transferFrom.md
-28. Decimals & Conversion Helpers [sidebar] - src/03-Developers/SDK/decimals-and-conversion-helpers.md
-29. Examples [sidebar] - src/03-Developers/SDK/examples.md
-30. Troubleshooting & Error Handling [sidebar] - src/03-Developers/SDK/troubleshooting-and-error-handling.md
-31. Schema & Queries [sidebar] - src/03-Developers/Subgraph-and-Events/schema-and-queries.md
-32. Event Reference [sidebar] - src/03-Developers/Subgraph-and-Events/event-reference-and-use-cases.md
-33. How Withdrawals Are Processed For Concrete DeFi USDT [sidebar] - src/04-Live-Vaults/DeFi-USDT/how-withdrawals-are-processed.md
-34. Important Disclosures [sidebar] - src/04-Live-Vaults/DeFi-USDT/important-disclosures.md
-35. WBTC Vault [sidebar] - src/04-Live-Vaults/wbtc-vault.md
-36. Overview [sidebar] - src/05-Completed-Campaigns/overview.md
-37. Bera [sidebar] - src/05-Completed-Campaigns/bera.md
-38. Stable [sidebar] - src/05-Completed-Campaigns/stable.md
-39. Corn [sidebar] - src/05-Completed-Campaigns/corn.md
-40. Morph [sidebar] - src/05-Completed-Campaigns/morph.md
-41. TAC [sidebar] - src/05-Completed-Campaigns/tac.md
-42. Pre-Deposit Campaigns [sidebar] - src/05-Completed-Campaigns/pre-deposit-campaigns.md
-43. Audits [sidebar] - src/06-Audits.md
-44. Risks and Safety [sidebar] - src/07-risks-and-safety.md
-45. Restricted Jurisdictions [sidebar] - src/08-restricted-jurisdictions.md
-46. Glossary [sidebar] - src/glossary.md
-47. Support [sidebar] - src/support.md
-48. How to Repay and Withdraw Borrowed Assets [unlisted] - src/03-Borrow/close-loan.md
-49. How to Activate Concrete Borrow (Default Lite) [unlisted] - src/03-Borrow/enable-concrete.md
-50. How to Borrow From External Market [unlisted] - src/03-Borrow/open-loan-externally.md
-51. How to Borrow Against Collateral [unlisted] - src/03-Borrow/open-loan.md
-52. Overview [unlisted] - src/03-Borrow/overview.md
-53. Quick Start (Plug-and-Play Integration) [unlisted] - src/03-Developers/SDK/quick-start.md
-54. getApyDetails() [unlisted] - src/03-Developers/SDK/read-methods/getAPYDetails.md
-55. How to Activate Concrete Protect [unlisted] - src/04-Protect/activate-concrete-protect.md
-56. Overview [unlisted] - src/04-Protect/overview.md
+6. Vault Transparency [sidebar] - src/02-Using-Concrete-Vaults/vault-transparency.md
+7. Bridging and Depositing with Enso [sidebar] - src/02-Using-Concrete-Vaults/bridging-and-depositing-with-enso.md
+8. Fees [sidebar] - src/02-Using-Concrete-Vaults/fees.md
+9. Concrete Points Program [sidebar] - src/02-Using-Concrete-Vaults/concrete-points.md
+10. Architecture: Core Concepts [sidebar] - src/03-Developers/architecture-core-concepts.md
+11. Overview [sidebar] - src/03-Developers/SDK/overview.md
+12. Setup Configuration [sidebar] - src/03-Developers/SDK/setup-configuration.md
+13. balanceOf(address) [sidebar] - src/03-Developers/SDK/read-methods/balanceOf.md
+14. getAddress() [sidebar] - src/03-Developers/SDK/read-methods/getAddress.md
+15. getUnderlyingDecimals() [sidebar] - src/03-Developers/SDK/read-methods/getUnderlyingDecimals.md
+16. getVaultDetails() [sidebar] - src/03-Developers/SDK/read-methods/getVaultDetails.md
+17. getVaultTransparencyStats (API) [sidebar] - src/03-Developers/SDK/read-methods/getVaultTransparencyStats.md
+18. getAllWithdrawQueueRequests(owner) [sidebar] - src/03-Developers/SDK/read-methods/getAllWithdrawQueueRequests.md
+19. previewConversion(amount) [sidebar] - src/03-Developers/SDK/read-methods/previewConversion.md
+20. totalAssets() [sidebar] - src/03-Developers/SDK/read-methods/totalAssets.md
+21. symbol() [sidebar] - src/03-Developers/SDK/read-methods/symbol.md
+22. decimals() [sidebar] - src/03-Developers/SDK/read-methods/decimals.md
+23. applyDecimals(amount) [sidebar] - src/03-Developers/SDK/read-methods/applyDecimals.md
+24. toUnderlyingDecimals(amount) [sidebar] - src/03-Developers/SDK/read-methods/toUnderlyingDecimals.md
+25. approve(spender, amount) [sidebar] - src/03-Developers/SDK/write-methods/approve.md
+26. deposit(amount) [sidebar] - src/03-Developers/SDK/write-methods/deposit.md
+27. redeem(amount) [sidebar] - src/03-Developers/SDK/write-methods/redeem.md
+28. transfer(to, amount) [sidebar] - src/03-Developers/SDK/write-methods/transfer.md
+29. transferFrom(from, to, amount) [sidebar] - src/03-Developers/SDK/write-methods/transferFrom.md
+30. Decimals & Conversion Helpers [sidebar] - src/03-Developers/SDK/decimals-and-conversion-helpers.md
+31. Examples [sidebar] - src/03-Developers/SDK/examples.md
+32. Troubleshooting & Error Handling [sidebar] - src/03-Developers/SDK/troubleshooting-and-error-handling.md
+33. Schema & Queries [sidebar] - src/03-Developers/Subgraph-and-Events/schema-and-queries.md
+34. Event Reference [sidebar] - src/03-Developers/Subgraph-and-Events/event-reference-and-use-cases.md
+35. How Withdrawals Are Processed For Concrete DeFi USDT [sidebar] - src/04-Live-Vaults/DeFi-USDT/how-withdrawals-are-processed.md
+36. Important Disclosures [sidebar] - src/04-Live-Vaults/DeFi-USDT/important-disclosures.md
+37. WBTC Vault [sidebar] - src/04-Live-Vaults/wbtc-vault.md
+38. Overview [sidebar] - src/05-Completed-Campaigns/overview.md
+39. Bera [sidebar] - src/05-Completed-Campaigns/bera.md
+40. Stable [sidebar] - src/05-Completed-Campaigns/stable.md
+41. Corn [sidebar] - src/05-Completed-Campaigns/corn.md
+42. Morph [sidebar] - src/05-Completed-Campaigns/morph.md
+43. TAC [sidebar] - src/05-Completed-Campaigns/tac.md
+44. Pre-Deposit Campaigns [sidebar] - src/05-Completed-Campaigns/pre-deposit-campaigns.md
+45. Audits [sidebar] - src/06-Audits.md
+46. Risks and Safety [sidebar] - src/07-risks-and-safety.md
+47. Restricted Jurisdictions [sidebar] - src/08-restricted-jurisdictions.md
+48. Glossary [sidebar] - src/glossary.md
+49. Support [sidebar] - src/support.md
+50. How to Repay and Withdraw Borrowed Assets [unlisted] - src/03-Borrow/close-loan.md
+51. How to Activate Concrete Borrow (Default Lite) [unlisted] - src/03-Borrow/enable-concrete.md
+52. How to Borrow From External Market [unlisted] - src/03-Borrow/open-loan-externally.md
+53. How to Borrow Against Collateral [unlisted] - src/03-Borrow/open-loan.md
+54. Overview [unlisted] - src/03-Borrow/overview.md
+55. Quick Start (Plug-and-Play Integration) [unlisted] - src/03-Developers/SDK/quick-start.md
+56. getApyDetails() [unlisted] - src/03-Developers/SDK/read-methods/getAPYDetails.md
+57. How to Activate Concrete Protect [unlisted] - src/04-Protect/activate-concrete-protect.md
+58. Overview [unlisted] - src/04-Protect/overview.md
 
 # Document 1: Concrete: Earn Yield on Supported On-Chain Assets
 Source: src/01-Overview/welcome.md
@@ -331,7 +333,55 @@ When a pre-deposit vault enters its claim phase, the vault page in the Concrete 
 
 ---
 
-# Document 6: Bridging and Depositing with Enso
+# Document 6: Vault Transparency
+Source: src/02-Using-Concrete-Vaults/vault-transparency.md
+Doc ID: Using-Concrete-Vaults/vault-transparency
+Public URL: https://docs.concrete.xyz/Using-Concrete-Vaults/vault-transparency/
+In active sidebar: yes
+Description: How the Vault Transparency panel on the Earn vault page shows off-chain portfolio breakdowns by asset, protocol, and network, including the 24-hour data delay.
+# Vault Transparency
+
+On each Earn vault page, the **Vault transparency** panel shows how that vault's off-chain portfolio is distributed across assets, protocols, and networks. Use it to see where capital is deployed without leaving the vault detail view.
+
+The panel sits in the left column of the vault page, below the withdrawal cycle section. It appears only when breakdown data is available for that vault. If no breakdown is reported, the section is hidden.
+
+## What you see
+
+The panel label is **Vault transparency**. A tooltip next to the label states that data is delayed by 24 hours.
+
+Three tabs switch the chart. **Assets** is selected by default:
+
+- **Assets** – share of the off-chain portfolio by token symbol.
+- **Protocols** – share deployed in each protocol.
+- **Networks** – share held on each network.
+
+Each tab renders a segmented bar chart. Each segment is one row in the breakdown; segment width reflects that row's share of the total shown for the tab.
+
+:::info
+This page describes the panel and how the data is produced. Live amounts and per-vault composition appear only on the vault page in the [Concrete app](https://app.concrete.xyz/earn).
+:::
+
+## Data delay
+
+Figures in the panel reflect the vault's off-chain portfolio as captured on the timestamp returned by the backing [API](https://docs.concrete.xyz/glossary/#api), roughly one day before you view the page. They are not a live, block-by-block snapshot of on-chain balances.
+
+## How the app loads the breakdown
+
+The panel reads `GET /v1/vault:transparency/stats` with the vault address and chain ID. The response includes:
+
+- `totalPortfolioAssetsOffchainUsd` – total USD value of the off-chain portfolio.
+- `byAsset` – per-asset rows with `symbol`, `amount`, `amountUsd`, and optional `logoUrl`.
+- `byProtocol` – per-protocol rows with `name`, `amountUsd`, and optional `logoUrl`.
+- `byPlatform` – per-network rows with `platformId` and `amountUsd`.
+- `timestamp` – when the breakdown was captured.
+
+The **Assets**, **Protocols**, and **Networks** tabs map to `byAsset`, `byProtocol`, and `byPlatform` respectively.
+
+For the full request and response reference, see [Vault transparency stats (API)](https://docs.concrete.xyz/Developers/SDK/read-methods/getVaultTransparencyStats/).
+
+---
+
+# Document 7: Bridging and Depositing with Enso
 Source: src/02-Using-Concrete-Vaults/bridging-and-depositing-with-enso.md
 Doc ID: Using-Concrete-Vaults/bridging-and-depositing-with-enso
 Public URL: https://docs.concrete.xyz/Using-Concrete-Vaults/bridging-and-depositing-with-enso/
@@ -394,7 +444,7 @@ If you run into any issues depositing into a vault:
 
 ---
 
-# Document 7: Fees
+# Document 8: Fees
 Source: src/02-Using-Concrete-Vaults/fees.md
 Doc ID: Using-Concrete-Vaults/fees
 Public URL: https://docs.concrete.xyz/Using-Concrete-Vaults/fees/
@@ -429,7 +479,7 @@ Fees are calculated as part of the vault's yield accrual process, in this order:
 
 ---
 
-# Document 8: Concrete Points Program
+# Document 9: Concrete Points Program
 Source: src/02-Using-Concrete-Vaults/concrete-points.md
 Doc ID: Using-Concrete-Vaults/concrete-points
 Public URL: https://docs.concrete.xyz/Using-Concrete-Vaults/concrete-points/
@@ -489,7 +539,7 @@ If you have questions about the campaign or how to participate, please refer to 
 
 ---
 
-# Document 9: Architecture: Core Concepts
+# Document 10: Architecture: Core Concepts
 Source: src/03-Developers/architecture-core-concepts.md
 Doc ID: Developers/architecture-core-concepts
 Public URL: https://docs.concrete.xyz/Developers/architecture-core-concepts/
@@ -609,7 +659,7 @@ Concrete's smart-contract source is held in a private repository. Partners and i
 
 ---
 
-# Document 10: Overview
+# Document 11: Overview
 Source: src/03-Developers/SDK/overview.md
 Doc ID: Developers/SDK/overview
 Public URL: https://docs.concrete.xyz/Developers/SDK/overview/
@@ -711,7 +761,7 @@ await redeemTx.wait();
 
 ---
 
-# Document 11: Setup Configuration
+# Document 12: Setup Configuration
 Source: src/03-Developers/SDK/setup-configuration.md
 Doc ID: Developers/SDK/setup-configuration
 Public URL: https://docs.concrete.xyz/Developers/SDK/setup-configuration/
@@ -848,7 +898,7 @@ function VaultInfo() {
 
 ---
 
-# Document 12: balanceOf(address)
+# Document 13: balanceOf(address)
 Source: src/03-Developers/SDK/read-methods/balanceOf.md
 Doc ID: Developers/SDK/read-methods/balanceOf
 Public URL: https://docs.concrete.xyz/Developers/SDK/read-methods/balanceOf/
@@ -898,7 +948,7 @@ console.log("Underlying (from human):", await vault.toUnderlyingBigInt("1.0"));
 
 ---
 
-# Document 13: getAddress()
+# Document 14: getAddress()
 Source: src/03-Developers/SDK/read-methods/getAddress.md
 Doc ID: Developers/SDK/read-methods/getAddress
 Public URL: https://docs.concrete.xyz/Developers/SDK/read-methods/getAddress/
@@ -929,7 +979,7 @@ console.log("Vault contract address:", vaultAddr);
 
 ---
 
-# Document 14: getUnderlyingDecimals()
+# Document 15: getUnderlyingDecimals()
 Source: src/03-Developers/SDK/read-methods/getUnderlyingDecimals.md
 Doc ID: Developers/SDK/read-methods/getUnderlyingDecimals
 Public URL: https://docs.concrete.xyz/Developers/SDK/read-methods/getUnderlyingDecimals/
@@ -963,7 +1013,7 @@ console.log("One unit in base:", oneUnit.toString());
 
 ---
 
-# Document 15: getVaultDetails()
+# Document 16: getVaultDetails()
 Source: src/03-Developers/SDK/read-methods/getVaultDetails.md
 Doc ID: Developers/SDK/read-methods/getVaultDetails
 Public URL: https://docs.concrete.xyz/Developers/SDK/read-methods/getVaultDetails/
@@ -1054,7 +1104,108 @@ console.log(details.underlying.symbol);      // "LBTC"
 
 ---
 
-# Document 16: getAllWithdrawQueueRequests(owner)
+# Document 17: getVaultTransparencyStats (API)
+Source: src/03-Developers/SDK/read-methods/getVaultTransparencyStats.md
+Doc ID: Developers/SDK/read-methods/getVaultTransparencyStats
+Public URL: https://docs.concrete.xyz/Developers/SDK/read-methods/getVaultTransparencyStats/
+In active sidebar: yes
+Description: HTTP API reference for vault off-chain portfolio transparency stats: assets, protocols, and networks breakdown by vault address and chain ID.
+Returns a delayed off-chain portfolio breakdown for a vault: total USD, per-asset, per-protocol, and per-network slices. The Concrete app uses this endpoint for the [Vault Transparency](https://docs.concrete.xyz/Using-Concrete-Vaults/vault-transparency/) panel on Earn vault pages.
+
+This is a Concrete [API](https://docs.concrete.xyz/glossary/#api) route, not an on-chain `eth_call`. It is not exposed on the `@concrete-xyz/sdk` vault instance at this time. Integrators call the HTTP endpoint directly.
+
+:::tip
+Treat `amountUsd` and `totalPortfolioAssetsOffchainUsd` as display numbers in USD. Asset `amount` values use the asset's native decimals as reported by the API.
+:::
+
+## HTTP request
+
+```http
+GET /v1/vault:transparency/stats?address={vaultAddress}&chain_id={chainId}
+```
+
+### Query parameters
+
+| Parameter | Type | Description |
+|-----------|------|-------------|
+| `address` | string | Vault contract address. The app lowercases the address before sending. |
+| `chain_id` | number | EVM chain ID for the vault (for example `1` for Ethereum mainnet). |
+
+## Response
+
+```tsx
+type VaultTransparencyStats = {
+  totalPortfolioAssetsOffchainUsd: number;
+  timestamp: string;
+  byAsset: {
+    symbol: string;
+    amount: number;
+    amountUsd: number;
+    logoUrl: string | null;
+  }[];
+  byProtocol: {
+    name: string;
+    amountUsd: number;
+    logoUrl: string | null;
+  }[];
+  byPlatform: {
+    platformId: string;
+    amountUsd: number;
+  }[];
+};
+```
+
+`byPlatform` rows do not include `logoUrl`. `timestamp` is an ISO-style string indicating when the breakdown was captured.
+
+## Example
+
+```tsx
+const vaultAddress = "0xe2d8267d285a7ae1edf48498ff044241d04e9608";
+const chainId = 1;
+
+const url = new URL("https://api.concrete.xyz/v1/vault:transparency/stats");
+url.searchParams.set("address", vaultAddress.toLowerCase());
+url.searchParams.set("chain_id", String(chainId));
+
+const res = await fetch(url);
+if (!res.ok) throw new Error(`transparency stats failed: ${res.status}`);
+
+const stats: VaultTransparencyStats = await res.json();
+
+console.log(stats.totalPortfolioAssetsOffchainUsd);
+console.log(stats.byAsset);
+console.log(stats.byProtocol);
+console.log(stats.byPlatform);
+```
+
+Replace the base URL with the Concrete API host your environment uses.
+
+## Notes
+
+- **Staleness**: panel copy in the app states a 24-hour delay. Cache responses accordingly; the app uses a 60-minute client cache.
+- **Empty breakdown**: when all of `byAsset`, `byProtocol`, and `byPlatform` are empty, the app hides the Vault Transparency panel.
+- **Errors**: handle non-2xx responses and network failures; the UI omits the panel when data is unavailable.
+
+**Minimal guard**
+
+```tsx
+try {
+  const stats = await fetchTransparencyStats(address, chainId);
+  const hasBreakdown =
+    stats.byAsset.length > 0 ||
+    stats.byProtocol.length > 0 ||
+    stats.byPlatform.length > 0;
+  if (!hasBreakdown) {
+    // no panel
+  }
+} catch {
+  // fallback UI
+}
+```
+
+---
+
+# Document 18: getAllWithdrawQueueRequests(owner)
 Source: src/03-Developers/SDK/read-methods/getAllWithdrawQueueRequests.md
 Doc ID: Developers/SDK/read-methods/getAllWithdrawQueueRequests
 Public URL: https://docs.concrete.xyz/Developers/SDK/read-methods/getAllWithdrawQueueRequests/
@@ -1168,7 +1319,7 @@ main().catch((err) => {
 
 ---
 
-# Document 17: previewConversion(amount)
+# Document 19: previewConversion(amount)
 Source: src/03-Developers/SDK/read-methods/previewConversion.md
 Doc ID: Developers/SDK/read-methods/previewConversion
 Public URL: https://docs.concrete.xyz/Developers/SDK/read-methods/previewConversion/
@@ -1255,7 +1406,7 @@ console.log(
 
 ---
 
-# Document 18: totalAssets()
+# Document 20: totalAssets()
 Source: src/03-Developers/SDK/read-methods/totalAssets.md
 Doc ID: Developers/SDK/read-methods/totalAssets
 Public URL: https://docs.concrete.xyz/Developers/SDK/read-methods/totalAssets/
@@ -1306,7 +1457,7 @@ console.log(
 
 ---
 
-# Document 19: symbol()
+# Document 21: symbol()
 Source: src/03-Developers/SDK/read-methods/symbol.md
 Doc ID: Developers/SDK/read-methods/symbol
 Public URL: https://docs.concrete.xyz/Developers/SDK/read-methods/symbol/
@@ -1342,7 +1493,7 @@ console.log(await vault.symbol()); // "ctLBTC"
 
 ---
 
-# Document 20: decimals()
+# Document 22: decimals()
 Source: src/03-Developers/SDK/read-methods/decimals.md
 Doc ID: Developers/SDK/read-methods/decimals
 Public URL: https://docs.concrete.xyz/Developers/SDK/read-methods/decimals/
@@ -1378,7 +1529,7 @@ console.log(await vault.decimals()); // 18
 
 ---
 
-# Document 21: applyDecimals(amount)
+# Document 23: applyDecimals(amount)
 Source: src/03-Developers/SDK/read-methods/applyDecimals.md
 Doc ID: Developers/SDK/read-methods/applyDecimals
 Public URL: https://docs.concrete.xyz/Developers/SDK/read-methods/applyDecimals/
@@ -1410,7 +1561,7 @@ console.log("Formatted vault shares:", display);
 
 ---
 
-# Document 22: toUnderlyingDecimals(amount)
+# Document 24: toUnderlyingDecimals(amount)
 Source: src/03-Developers/SDK/read-methods/toUnderlyingDecimals.md
 Doc ID: Developers/SDK/read-methods/toUnderlyingDecimals
 Public URL: https://docs.concrete.xyz/Developers/SDK/read-methods/toUnderlyingDecimals/
@@ -1442,7 +1593,7 @@ console.log("Formatted underlying:", display);
 
 ---
 
-# Document 23: approve(spender, amount)
+# Document 25: approve(spender, amount)
 Source: src/03-Developers/SDK/write-methods/approve.md
 Doc ID: Developers/SDK/write-methods/approve
 Public URL: https://docs.concrete.xyz/Developers/SDK/write-methods/approve/
@@ -1498,7 +1649,7 @@ await (await vault.approve(spender, shareAllowance)).wait();
 
 ---
 
-# Document 24: deposit(amount)
+# Document 26: deposit(amount)
 Source: src/03-Developers/SDK/write-methods/deposit.md
 Doc ID: Developers/SDK/write-methods/deposit
 Public URL: https://docs.concrete.xyz/Developers/SDK/write-methods/deposit/
@@ -1548,7 +1699,7 @@ console.log("Deposit confirmed in block", receipt.blockNumber);
 
 ---
 
-# Document 25: redeem(amount)
+# Document 27: redeem(amount)
 Source: src/03-Developers/SDK/write-methods/redeem.md
 Doc ID: Developers/SDK/write-methods/redeem
 Public URL: https://docs.concrete.xyz/Developers/SDK/write-methods/redeem/
@@ -1585,7 +1736,7 @@ if (myShares > 0n) {
 
 ---
 
-# Document 26: transfer(to, amount)
+# Document 28: transfer(to, amount)
 Source: src/03-Developers/SDK/write-methods/transfer.md
 Doc ID: Developers/SDK/write-methods/transfer
 Public URL: https://docs.concrete.xyz/Developers/SDK/write-methods/transfer/
@@ -1618,7 +1769,7 @@ await (await vault.transfer(to, shareAmount)).wait();
 
 ---
 
-# Document 27: transferFrom(from, to, amount)
+# Document 29: transferFrom(from, to, amount)
 Source: src/03-Developers/SDK/write-methods/transferFrom.md
 Doc ID: Developers/SDK/write-methods/transferFrom
 Public URL: https://docs.concrete.xyz/Developers/SDK/write-methods/transferFrom/
@@ -1655,7 +1806,7 @@ await (await vault.transferFrom(owner, to, shareAmount)).wait();
 
 ---
 
-# Document 28: Decimals & Conversion Helpers
+# Document 30: Decimals & Conversion Helpers
 Source: src/03-Developers/SDK/decimals-and-conversion-helpers.md
 Doc ID: Developers/SDK/decimals-and-conversion-helpers
 Public URL: https://docs.concrete.xyz/Developers/SDK/decimals-and-conversion-helpers/
@@ -1674,7 +1825,7 @@ The following helpers cache vault decimals internally and handle conversions con
 
 ---
 
-# Document 29: Examples
+# Document 31: Examples
 Source: src/03-Developers/SDK/examples.md
 Doc ID: Developers/SDK/examples
 Public URL: https://docs.concrete.xyz/Developers/SDK/examples/
@@ -1841,7 +1992,7 @@ await (await vaultWithSigner.redeem(shares)).wait();
 
 ---
 
-# Document 30: Troubleshooting & Error Handling
+# Document 32: Troubleshooting & Error Handling
 Source: src/03-Developers/SDK/troubleshooting-and-error-handling.md
 Doc ID: Developers/SDK/troubleshooting-and-error-handling
 Public URL: https://docs.concrete.xyz/Developers/SDK/troubleshooting-and-error-handling/
@@ -2193,7 +2344,7 @@ async function retry<T>(fn: () => Promise<T>, times = 2) {
 
 ---
 
-# Document 31: Schema & Queries
+# Document 33: Schema & Queries
 Source: src/03-Developers/Subgraph-and-Events/schema-and-queries.md
 Doc ID: Developers/Subgraph-and-Events/schema-and-queries
 Public URL: https://docs.concrete.xyz/Developers/Subgraph-and-Events/schema-and-queries/
@@ -2511,7 +2662,7 @@ The `Factory` entity has no reverse-derived `vaults` field, so query the top-lev
 
 ---
 
-# Document 32: Event Reference
+# Document 34: Event Reference
 Source: src/03-Developers/Subgraph-and-Events/event-reference-and-use-cases.md
 Doc ID: Developers/Subgraph-and-Events/event-reference-and-use-cases
 Public URL: https://docs.concrete.xyz/Developers/Subgraph-and-Events/event-reference-and-use-cases/
@@ -2587,7 +2738,7 @@ The following are not on-chain events. They are subgraph-internal `@entity(times
 
 ---
 
-# Document 33: How Withdrawals Are Processed For Concrete DeFi USDT
+# Document 35: How Withdrawals Are Processed For Concrete DeFi USDT
 Source: src/04-Live-Vaults/DeFi-USDT/how-withdrawals-are-processed.md
 Doc ID: Live-Vaults/DeFi-USDT/how-withdrawals-are-processed
 Public URL: https://docs.concrete.xyz/Live-Vaults/DeFi-USDT/how-withdrawals-are-processed/
@@ -2636,7 +2787,7 @@ All withdrawals are subject to the specific terms of this vault. See [Important 
 
 ---
 
-# Document 34: Important Disclosures
+# Document 36: Important Disclosures
 Source: src/04-Live-Vaults/DeFi-USDT/important-disclosures.md
 Doc ID: Live-Vaults/DeFi-USDT/important-disclosures
 Public URL: https://docs.concrete.xyz/Live-Vaults/DeFi-USDT/important-disclosures/
@@ -2690,7 +2841,7 @@ THESE DISCLOSURES ARE PROVIDED FOR INFORMATIONAL PURPOSES ONLY AND DO NOT CONSTI
 
 ---
 
-# Document 35: WBTC Vault
+# Document 37: WBTC Vault
 Source: src/04-Live-Vaults/wbtc-vault.md
 Doc ID: Live-Vaults/wbtc-vault
 Public URL: https://docs.concrete.xyz/Live-Vaults/wbtc-vault/
@@ -2800,7 +2951,7 @@ https://docs.concrete.xyz/support/
 
 ---
 
-# Document 36: Overview
+# Document 38: Overview
 Source: src/05-Completed-Campaigns/overview.md
 Doc ID: Completed-Campaigns/overview
 Public URL: https://docs.concrete.xyz/Completed-Campaigns/overview/
@@ -2835,7 +2986,7 @@ For more on support, see [Support](https://docs.concrete.xyz/support/). For more
 
 ---
 
-# Document 37: Bera
+# Document 39: Bera
 Source: src/05-Completed-Campaigns/bera.md
 Doc ID: Completed-Campaigns/bera
 Public URL: https://docs.concrete.xyz/Completed-Campaigns/bera/
@@ -3136,7 +3287,7 @@ Claiming is quick and only requires a signature from your connected wallet.
 
 ---
 
-# Document 38: Stable
+# Document 40: Stable
 Source: src/05-Completed-Campaigns/stable.md
 Doc ID: Completed-Campaigns/stable
 Public URL: https://docs.concrete.xyz/Completed-Campaigns/stable/
@@ -3311,7 +3462,7 @@ Please refer to the main documentation's [support section](https://docs.concrete
 
 ---
 
-# Document 39: Corn
+# Document 41: Corn
 Source: src/05-Completed-Campaigns/corn.md
 Doc ID: Completed-Campaigns/corn
 Public URL: https://docs.concrete.xyz/Completed-Campaigns/corn/
@@ -3345,7 +3496,7 @@ Withdrawals are processed on Ethereum mainnet. For Corn Stables, batched withdra
 
 ---
 
-# Document 40: Morph
+# Document 42: Morph
 Source: src/05-Completed-Campaigns/morph.md
 Doc ID: Completed-Campaigns/morph
 Public URL: https://docs.concrete.xyz/Completed-Campaigns/morph/
@@ -3385,7 +3536,7 @@ Vaults that are deprecated can be exited using the in-app withdraw tab (if still
 
 ---
 
-# Document 41: TAC
+# Document 43: TAC
 Source: src/05-Completed-Campaigns/tac.md
 Doc ID: Completed-Campaigns/tac
 Public URL: https://docs.concrete.xyz/Completed-Campaigns/tac/
@@ -3456,7 +3607,7 @@ Our team will walk you through whatever steps you need.
 
 ---
 
-# Document 42: Pre-Deposit Campaigns
+# Document 44: Pre-Deposit Campaigns
 Source: src/05-Completed-Campaigns/pre-deposit-campaigns.md
 Doc ID: Completed-Campaigns/pre-deposit-campaigns
 Public URL: https://docs.concrete.xyz/Completed-Campaigns/pre-deposit-campaigns/
@@ -3478,7 +3629,7 @@ Check the vault page for two dates: when the pre-deposit period ends and when cl
 
 ---
 
-# Document 43: Audits
+# Document 45: Audits
 Source: src/06-Audits.md
 Doc ID: Audits
 Public URL: https://docs.concrete.xyz/Audits/
@@ -3688,7 +3839,7 @@ Stay tuned for upcoming enhancements and future audits as we expand our security
 
 ---
 
-# Document 44: Risks and Safety
+# Document 46: Risks and Safety
 Source: src/07-risks-and-safety.md
 Doc ID: risks-and-safety
 Public URL: https://docs.concrete.xyz/risks-and-safety/
@@ -3795,7 +3946,7 @@ Access to Concrete products is not available in every jurisdiction. Before depos
 
 ---
 
-# Document 45: Restricted Jurisdictions
+# Document 47: Restricted Jurisdictions
 Source: src/08-restricted-jurisdictions.md
 Doc ID: restricted-jurisdictions
 Public URL: https://docs.concrete.xyz/restricted-jurisdictions/
@@ -3820,7 +3971,7 @@ This list is subject to updates based on changes in international regulatory and
 
 ---
 
-# Document 46: Glossary
+# Document 48: Glossary
 Source: src/glossary.md
 Doc ID: glossary
 Public URL: https://docs.concrete.xyz/glossary/
@@ -3962,7 +4113,7 @@ This page indexes the acronyms, token tickers, and technical short-forms that sh
 
 ---
 
-# Document 47: Support
+# Document 49: Support
 Source: src/support.md
 Doc ID: support
 Public URL: https://docs.concrete.xyz/support/
@@ -3997,7 +4148,7 @@ We are working on expanding our support channels. Stay tuned for updates!
 
 ---
 
-# Document 48: How to Repay and Withdraw Borrowed Assets
+# Document 50: How to Repay and Withdraw Borrowed Assets
 Source: src/03-Borrow/close-loan.md
 Doc ID: Borrow/close-loan
 Public URL: https://docs.concrete.xyz/Borrow/close-loan/
@@ -4039,7 +4190,7 @@ Description: Concrete Borrow documentation for how to Repay and Withdraw, includ
 
 ---
 
-# Document 49: How to Activate Concrete Borrow (Default Lite)
+# Document 51: How to Activate Concrete Borrow (Default Lite)
 Source: src/03-Borrow/enable-concrete.md
 Doc ID: Borrow/enable-concrete
 Public URL: https://docs.concrete.xyz/Borrow/enable-concrete/
@@ -4108,7 +4259,7 @@ By default, Concrete Borrow comes with **Concrete Lite**, which forecloses loans
 
 ---
 
-# Document 50: How to Borrow From External Market
+# Document 52: How to Borrow From External Market
 Source: src/03-Borrow/open-loan-externally.md
 Doc ID: Borrow/open-loan-externally
 Public URL: https://docs.concrete.xyz/Borrow/open-loan-externally/
@@ -4151,7 +4302,7 @@ Concrete offers an efficient interface to initiate borrowing on external markets
 
 ---
 
-# Document 51: How to Borrow Against Collateral
+# Document 53: How to Borrow Against Collateral
 Source: src/03-Borrow/open-loan.md
 Doc ID: Borrow/open-loan
 Public URL: https://docs.concrete.xyz/Borrow/open-loan/
@@ -4206,7 +4357,7 @@ You can manage your loan in the **Portfolio** tab, which displays:
 
 ---
 
-# Document 52: Overview
+# Document 54: Overview
 Source: src/03-Borrow/overview.md
 Doc ID: Borrow/overview
 Public URL: https://docs.concrete.xyz/Borrow/overview/
@@ -4315,7 +4466,7 @@ Here’s a step-by-step outline of the complete Concrete Borrow process:
 
 ---
 
-# Document 53: Quick Start (Plug-and-Play Integration)
+# Document 55: Quick Start (Plug-and-Play Integration)
 Source: src/03-Developers/SDK/quick-start.md
 Doc ID: Developers/SDK/quick-start
 Public URL: https://docs.concrete.xyz/Developers/SDK/quick-start/
@@ -4482,7 +4633,7 @@ const deposit = useVaultDeposit(vaultConfig, options);
 
 ---
 
-# Document 54: getApyDetails()
+# Document 56: getApyDetails()
 Source: src/03-Developers/SDK/read-methods/getAPYDetails.md
 Doc ID: Developers/SDK/read-methods/getAPYDetails
 Public URL: https://docs.concrete.xyz/Developers/SDK/read-methods/getAPYDetails/
@@ -4635,7 +4786,7 @@ try {
 
 ---
 
-# Document 55: How to Activate Concrete Protect
+# Document 57: How to Activate Concrete Protect
 Source: src/04-Protect/activate-concrete-protect.md
 Doc ID: Protect/activate-concrete-protect
 Public URL: https://docs.concrete.xyz/Protect/activate-concrete-protect/
@@ -4683,7 +4834,7 @@ Users can manage all protected positions from the Portfolio:
 
 ---
 
-# Document 56: Overview
+# Document 58: Overview
 Source: src/04-Protect/overview.md
 Doc ID: Protect/overview
 Public URL: https://docs.concrete.xyz/Protect/overview/
