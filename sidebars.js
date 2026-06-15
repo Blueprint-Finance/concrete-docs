@@ -19,6 +19,7 @@ const sidebars = {
         'Using-Concrete-Vaults/concrete-vault-shares',
         'Using-Concrete-Vaults/deposit',
         'Using-Concrete-Vaults/withdraw',
+        'Using-Concrete-Vaults/withdrawal-cooldown',
         'Using-Concrete-Vaults/vault-transparency',
         'Using-Concrete-Vaults/bridging-and-depositing-with-enso',
         'Using-Concrete-Vaults/fees',
