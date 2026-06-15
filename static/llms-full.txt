@@ -1,6 +1,6 @@
 # Concrete Docs - LLM Full Context
 
-Generated: 2026-06-12T10:01:29.312Z
+Generated: 2026-06-15T11:55:18.520Z
 Source repository: concrete-docs
 Canonical docs URL: https://docs.concrete.xyz/
 
@@ -372,7 +372,7 @@ The panel reads `GET /v1/vault:transparency/stats` with the vault address and ch
 - `totalPortfolioAssetsOffchainUsd` – total [USD](https://docs.concrete.xyz/glossary/#usd) value of the off-chain portfolio.
 - `byAsset` – per-asset rows with `symbol`, `amount`, `amountUsd`, and optional `logoUrl`.
 - `byProtocol` – per-protocol rows with `name`, `amountUsd`, and optional `logoUrl`.
-- `byPlatform` – per-network rows with `platformId` and `amountUsd`.
+- `byPlatform` – per-network rows with `platformId`, `amountUsd`, and optional `logoUrl`.
 - `timestamp` – when the breakdown was captured.
 
 The **Assets**, **Protocols**, and **Networks** tabs map to `byAsset`, `byProtocol`, and `byPlatform` respectively.
@@ -1151,11 +1151,12 @@ type VaultTransparencyStats = {
   byPlatform: {
     platformId: string;
     amountUsd: number;
+    logoUrl: string | null;
   }[];
 };
 ```
 
-`byPlatform` rows do not include `logoUrl`. `timestamp` is an ISO-style string indicating when the breakdown was captured.
+`byPlatform` rows include `logoUrl`, which is `null` when no logo is available. `timestamp` is an ISO-style string indicating when the breakdown was captured.
 
 ## Example
 
