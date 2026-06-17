@@ -22,7 +22,7 @@ const sidebars = {
         'Using-Concrete-Vaults/vault-transparency',
         'Using-Concrete-Vaults/bridging-and-depositing-with-enso',
         'Using-Concrete-Vaults/fees',
-        'Using-Concrete-Vaults/concrete-points',
+        'Using-Concrete-Vaults/concrete-points', 'Using-Concrete-Vaults/zz-public-adapter-smoke-1781715687041',
       ],
     },
 
