@@ -8,7 +8,7 @@ sidebar_label: "Vault Transparency"
 
 On each Earn vault page, the **Vault transparency** panel shows how that vault's off-chain portfolio is distributed across assets, protocols, and networks. Use it to see where capital is deployed without leaving the vault detail view.
 
-The panel sits in the left column of the vault page, below the withdrawal cycle section. It appears only when breakdown data is available for that vault. If no breakdown is reported, the section is hidden.
+The panel sits in the left column of the vault page, below the withdrawal cycle section. It appears only when transparency is enabled for that vault and breakdown data is available. If transparency is disabled for the vault, or if no breakdown is reported, the section is hidden.
 
 ## What you see
 

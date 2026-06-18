@@ -78,8 +78,8 @@ Replace the base [URL](/glossary/#url) with the Concrete [API](/glossary/#api) h
 ## Notes
 
 - **Staleness**: panel copy in the app states a 24-hour delay. Cache responses accordingly; the app uses a 60-minute client cache.
-- **Empty breakdown**: when all of `byAsset`, `byProtocol`, and `byPlatform` are empty, the app hides the Vault Transparency panel.
-- **Errors**: handle non-2xx responses and network failures; the [UI](/glossary/#ui) omits the panel when data is unavailable.
+- **Empty breakdown**: when all of `byAsset`, `byProtocol`, and `byPlatform` are empty, the app hides the Vault Transparency panel. The app also hides the panel when transparency is not enabled for the vault in the content layer, even if the breakdown is non-empty.
+- **Errors**: handle non-2xx responses and network failures; the [UI](/glossary/#ui) omits the panel when data is unavailable. The app also omits the panel when transparency is not enabled for the vault, before it evaluates breakdown data.
 
 **Minimal guard**
 
