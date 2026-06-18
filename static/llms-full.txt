@@ -1,6 +1,6 @@
 # Concrete Docs - LLM Full Context
 
-Generated: 2026-06-12T10:01:29.312Z
+Generated: 2026-06-17T19:43:42.459Z
 Source repository: concrete-docs
 Canonical docs URL: https://docs.concrete.xyz/
 
@@ -343,7 +343,7 @@ Description: How the Vault Transparency panel on the Earn vault page shows off-c
 
 On each Earn vault page, the **Vault transparency** panel shows how that vault's off-chain portfolio is distributed across assets, protocols, and networks. Use it to see where capital is deployed without leaving the vault detail view.
 
-The panel sits in the left column of the vault page, below the withdrawal cycle section. It appears only when breakdown data is available for that vault. If no breakdown is reported, the section is hidden.
+The panel sits in the left column of the vault page, below the withdrawal cycle section. It appears only when transparency is enabled for that vault and breakdown data is available. If transparency is disabled for the vault, or if no breakdown is reported, the section is hidden.
 
 ## What you see
 
@@ -1183,8 +1183,8 @@ Replace the base [URL](https://docs.concrete.xyz/glossary/#url) with the Concret
 ## Notes
 
 - **Staleness**: panel copy in the app states a 24-hour delay. Cache responses accordingly; the app uses a 60-minute client cache.
-- **Empty breakdown**: when all of `byAsset`, `byProtocol`, and `byPlatform` are empty, the app hides the Vault Transparency panel.
-- **Errors**: handle non-2xx responses and network failures; the [UI](https://docs.concrete.xyz/glossary/#ui) omits the panel when data is unavailable.
+- **Empty breakdown**: when all of `byAsset`, `byProtocol`, and `byPlatform` are empty, the app hides the Vault Transparency panel. The app also hides the panel when transparency is not enabled for the vault in the content layer, even if the breakdown is non-empty.
+- **Errors**: handle non-2xx responses and network failures; the [UI](https://docs.concrete.xyz/glossary/#ui) omits the panel when data is unavailable. The app also omits the panel when transparency is not enabled for the vault, before it evaluates breakdown data.
 
 **Minimal guard**
 
