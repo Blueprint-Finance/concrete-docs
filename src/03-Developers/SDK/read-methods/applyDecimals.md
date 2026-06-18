@@ -27,3 +27,13 @@ console.log("Formatted vault shares:", display);
 ```json
 1.0
 ```
+
+---
+
+<!-- Added by Roadmap Docs Autopilot from approved review (run 27774904469). Non-destructive append; a docs maintainer integrates this section during PR review. -->
+
+**Why:** The pack's signature is `applyDecimals(amount: anyNumber, precision?: number): Promise<number>`, but the Parameters section lists only `amount: bigint` and omits the new optional `precision` parameter added in this PR.
+
+**Suggested fix:**
+
+Add a second parameter bullet: `- \`precision?: number\`: optional number of decimal places to round the result to. When omitted, the full decimal-adjusted value is returned.` Also broaden the amount type to `number | string | bigint`.
