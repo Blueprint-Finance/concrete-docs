@@ -8,7 +8,8 @@ Converts a raw `BigInt` amount into a human-readable decimal-adjusted value usin
 
 ## Parameters
 
-- `amount: bigint`: raw token amount in base units.
+- `amount: anyNumber` (`number | string | bigint`): the token amount in base units to format.
+- `precision?: number` (optional): number of decimal places to round the result to. When omitted, the raw decimal-adjusted value is returned.
 
 ## Returns
 
