@@ -1,0 +1,37 @@
+name: Style guide citations
+
+# Keeps STYLE-AND-TERMINOLOGY.md's `_Source:_` citations pointing at live
+# corpus files. Runs the checker's unit tests, then the check itself: if any
+# cited `src/...` path no longer exists (a page was renamed or deleted without
+# updating the guide), the job fails and lists each dead citation. Triggers on
+# changes to the guide, to anything under src/ (a rename or delete there is
+# what makes a citation rot), and to the checker itself.
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - 'STYLE-AND-TERMINOLOGY.md'
+      - 'src/**'
+      - 'scripts/check-style-guide-citations.mjs'
+      - 'scripts/check-style-guide-citations.test.mjs'
+      - '.github/workflows/style-guide-citations.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  style-guide-citations:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Run checker unit tests
+        run: node --test scripts/
+
+      - name: Check cited paths exist
+        run: node scripts/check-style-guide-citations.mjs
