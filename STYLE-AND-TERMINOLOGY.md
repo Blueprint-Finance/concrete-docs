@@ -399,18 +399,18 @@ items feed the translation map in Part 3.
 
 - **Concrete** – the protocol and platform. Capitalized. _Source: `src/01-Overview/welcome.md`._
 - **Concrete Protocol** – the formal protocol name, used where the legal or
-  platform entity is meant. _Source: `src/restrictions.md`._
+  platform entity is meant. _Source: `src/08-restricted-jurisdictions.md`._
 - **Concrete Earn** – the automated yield-vault product. Capitalized. Leads in
-  headers. _Source: `src/02-Earn/deposit-into-vaults.md`._
+  headers. _Source: `src/02-Using-Concrete-Vaults/deposit.md`._
 - **Earn V1 / Earn V2** – product generations. Capital "V". "Earn V2" is the
   current automated system; "Earn V1" is the legacy generation. Avoid lowercase
-  "Earn v2". _Source: `src/06-Earn-V2/overview.md`._
+  "Earn v2". _Source: `src/03-Developers/architecture-core-concepts.md`._
 - **Concrete Enterprise** – the partner offering for deploying custom vaults.
-  _Source: `src/06-Earn-V2/SDK/quick-start.md`._
+  _Source: `src/03-Developers/SDK/quick-start.md`._
 - **Concrete Points** – the incentive points distributed to users. Capitalized.
-  _Source: `src/rewards.md`, `src/05-Vaults/02-Corn/overview.md`._
+  _Source: `src/02-Using-Concrete-Vaults/concrete-points.md`, `src/05-Completed-Campaigns/corn.md`._
 - **Portfolio** – the in-app tab where a user tracks positions and withdrawal
-  status. Capitalized when naming the tab. _Source: `src/05-Vaults/how-withdrawals-work.md`._
+  status. Capitalized when naming the tab. _Source: `src/02-Using-Concrete-Vaults/withdraw.md`._
 
 ### Vault mechanics
 
@@ -422,37 +422,37 @@ items feed the translation map in Part 3.
   `src/01-Overview/welcome.md`._
 - **ctAssets** – Concrete's vault shares, formatted as "ct" plus the asset
   symbol (ctUSDC, ctETH). Use the "ct" prefix. Avoid "cTokens" except when
-  specifically discussing Earn V1 naming. _Source: `src/02-Earn/ct-assets.md`._
+  specifically discussing Earn V1 naming. _Source: `src/02-Using-Concrete-Vaults/concrete-vault-shares.md`._
 - **base asset / underlying asset** – the token a vault accepts on deposit and
   pays out on withdrawal (USDC, ETH, WBTC). Avoid "deposit token" or "input
-  token". _Source: `src/01-Overview/welcome.md`, `src/05-Vaults/yield-vaults.md`._
+  token". _Source: `src/01-Overview/welcome.md`, `src/01-Overview/yield-vaults-and-erc-4626-standard.md`._
 - **ERC-4626** – the tokenized-vault standard. Always hyphenated. Avoid
-  "ERC4626". _Source: `src/01-Overview/welcome.md`. Note: `src/06-Earn-V2/Smart-Contracts/architecture.md` currently uses the unhyphenated form; the hyphenated form is canonical._
+  "ERC4626". _Source: `src/01-Overview/welcome.md`. Note: `src/03-Developers/architecture-core-concepts.md` currently uses the unhyphenated form; the hyphenated form is canonical._
 - **ERC-20** – the token standard. Always hyphenated.
 - **exchange rate / share price** – the conversion ratio between shares and the
-  underlying asset; moves with yield. _Source: `src/02-Earn/ct-assets.md`._
+  underlying asset; moves with yield. _Source: `src/02-Using-Concrete-Vaults/concrete-vault-shares.md`._
 - **NAV (Net Asset Value)** – the total value of a vault, updated daily in
-  Earn V2. Expand on first use per page. _Source: `src/05-Vaults/07-DeFi-USDT/important-disclosures.md`._
+  Earn V2. Expand on first use per page. _Source: `src/04-Live-Vaults/DeFi-USDT/important-disclosures.md`._
 - **strategy / yield strategies** – the smart contracts that deploy capital to
   earn yield (lending on Aave, liquidity on Pendle, and similar). Avoid
-  "protocol adapter" or "yield module". _Source: `src/05-Vaults/how-withdrawals-work.md`, `src/02-Earn/how-earn-vaults-maximize-risk-adjusted-yields.md`._
+  "protocol adapter" or "yield module". _Source: `src/02-Using-Concrete-Vaults/withdraw.md`, `src/03-Developers/architecture-core-concepts.md`._
 - **allocation / rebalance** – moving capital between strategies. _Source:
-  `src/02-Earn/how-earn-vaults-maximize-risk-adjusted-yields.md`._
+  `src/03-Developers/architecture-core-concepts.md`._
 - **money market** – a lending protocol (Aave, Compound, Morpho) where vault
-  strategies deploy capital. _Source: `src/05-Vaults/07-DeFi-USDT/important-disclosures.md`._
+  strategies deploy capital. _Source: `src/04-Live-Vaults/DeFi-USDT/important-disclosures.md`._
 - **Quantitative Framework** – Concrete's forecasting and allocation engine for
   risk-adjusted decisions; its signals inform target strategy weights. Capitalized.
-  _Source: `src/01-Overview/welcome.md`, `src/02-Earn/how-earn-vaults-maximize-risk-adjusted-yields.md`._
+  _Source: `src/01-Overview/welcome.md`, `src/03-Developers/architecture-core-concepts.md`._
 - **Subgraph** – the on-chain indexing service for analytics and events.
   Capitalized as the component; lowercase acceptable in generic prose. _Source:
-  `src/06-Earn-V2/Subgraph-and-Events/event-reference-and-use-cases.md`, `src/fees.md`._
+  `src/03-Developers/Subgraph-and-Events/event-reference-and-use-cases.md`, `src/02-Using-Concrete-Vaults/fees.md`._
 - **Hook** – custom logic triggered at specific vault operations; managed by the
-  Hook Manager. _Source: `src/06-Earn-V2/overview.md`._
+  Hook Manager. _Source: `src/03-Developers/architecture-core-concepts.md`._
 - **Fee Splitter** – the contract that routes fees between recipients with a
-  configurable share. _Source: `src/06-Earn-V2/overview.md`._
+  configurable share. _Source: `src/03-Developers/architecture-core-concepts.md`._
 - **pre-deposit vault** – a vault that accepts deposits on one chain before
   launching on another; withdrawals are disabled until users claim their shares
-  on the destination chain. _Source: `src/05-Vaults/01-Bera/pre-deposit-vaults-deprecation-guide.md`._
+  on the destination chain. _Source: `src/05-Completed-Campaigns/bera.md`._
 
 ### Withdrawals
 
@@ -460,12 +460,12 @@ items feed the translation map in Part 3.
   requests for predictable, fair processing. Title Case as the feature/process
   name (it leads in headers and UX); "the queue" lowercase when descriptive.
   This is the user-facing name for the system; "Epoch" is its underlying
-  mechanism. _Source: `src/05-Vaults/how-withdrawals-work.md`._
+  mechanism. _Source: `src/02-Using-Concrete-Vaults/withdraw.md`._
 - **async vault / asynchronous mode** – a vault that settles withdrawals through
   the queue rather than instantly. Avoid "queued vault". _Source:
-  `src/06-Earn-V2/overview.md`, `src/06-Earn-V2/Smart-Contracts/architecture.md`._
+  `src/03-Developers/architecture-core-concepts.md`._
 - **instant withdrawal / standard mode** – atomic, same-transaction redemption,
-  available for vaults configured in standard mode. _Source: `src/06-Earn-V2/overview.md`._
+  available for vaults configured in standard mode. _Source: `src/03-Developers/architecture-core-concepts.md`._
 - **Epoch** – a vault's withdrawal accounting period; requests are processed per
   Epoch on the vault's configured cadence. Title Case as a canonical defined
   term: it is the mechanism that drives the Withdrawal Queue, and Title Case
@@ -482,27 +482,27 @@ items feed the translation map in Part 3.
   `src/02-Using-Concrete-Vaults/withdraw.md`, `src/03-Developers/architecture-core-concepts.md`._
 - **place in the queue** – a request's position in FIFO settlement order. The
   corpus phrases this as "your place in the queue"; "queue position" is an
-  acceptable noun form. _Source: `src/05-Vaults/how-withdrawals-work.md`._
+  acceptable noun form. _Source: `src/02-Using-Concrete-Vaults/withdraw.md`._
 - **estimated withdrawal time** – the user-facing estimate of when funds become
-  claimable, shown in the app. _Source: `src/05-Vaults/how-withdrawals-work.md`._
+  claimable, shown in the app. _Source: `src/02-Using-Concrete-Vaults/withdraw.md`._
 - **status labels: Queued, Processing, Available** – the withdrawal states shown
-  in the Portfolio tab. _Source: `src/05-Vaults/how-withdrawals-work.md`._
+  in the Portfolio tab. _Source: `src/02-Using-Concrete-Vaults/withdraw.md`._
 - **FIFO (First In, First Out)** – the order in which queued requests are
   processed across Epochs. _Source: `src/02-Using-Concrete-Vaults/withdraw.md`._
 - **redemption** – a withdrawal, used as a synonym in formal prose. _Source:
-  `src/05-Vaults/how-withdrawals-work.md`._
+  `src/02-Using-Concrete-Vaults/withdraw.md`._
 
 ### Yield
 
 - **yield** – the returns generated by a vault's strategies. _Source: corpus-wide._
 - **risk-adjusted yield / risk-adjusted return** – yield optimized for the
-  risk and return profile rather than headline APY. _Source: `src/01-Overview/welcome.md`, `src/02-Earn/how-earn-vaults-maximize-risk-adjusted-yields.md`._
+  risk and return profile rather than headline APY. _Source: `src/01-Overview/welcome.md`, `src/03-Developers/architecture-core-concepts.md`._
 - **yield accrual / accrued yield** – the accumulation of returns over time.
-  _Source: `src/05-Vaults/yield-vaults.md`, `src/02-Earn/balance-accrual.md`._
+  _Source: `src/01-Overview/yield-vaults-and-erc-4626-standard.md`, `src/05-Completed-Campaigns/pre-deposit-campaigns.md`._
 - **APY** – annual percentage yield; "notional APY" where the vault reports a
-  notional figure in the base asset. _Source: `src/fees.md`, `src/05-Vaults/yield-vaults.md`._
+  notional figure in the base asset. _Source: `src/02-Using-Concrete-Vaults/fees.md`, `src/01-Overview/yield-vaults-and-erc-4626-standard.md`._
 - **TVL (Total Value Locked)** – the aggregate value held across vaults.
-  _Source: `src/05-Vaults/how-withdrawals-work.md`._
+  _Source: `src/02-Using-Concrete-Vaults/withdraw.md`._
 - **DeFi** – capitalized exactly. Avoid "Defi" or "defi". _Source: corpus-wide._
 - **on-chain** – hyphenated. Avoid "onchain" or "on chain". _Source: corpus-wide._
 
@@ -511,21 +511,21 @@ items feed the translation map in Part 3.
 On-chain roles are capitalized. The generic person who runs a vault is a
 lowercase "curator".
 
-- **Vault Owner** – controls upgrades for a vault. _Source: `src/06-Earn-V2/Smart-Contracts/architecture.md`._
+- **Vault Owner** – controls upgrades for a vault. _Source: `src/03-Developers/architecture-core-concepts.md`._
 - **Vault Manager** – updates parameters, limits, and fees. Avoid "admin" or unqualified "manager". _Source: `src/01-Overview/welcome.md`._
 - **Strategy Manager** – adds or removes strategies. _Source: `src/01-Overview/welcome.md`._
 - **Hook Manager** – manages hooks. _Source: `src/01-Overview/welcome.md`._
 - **Allocator** – moves capital between strategies and processes withdrawals. Capitalized. Avoid lowercase "allocator" or "fund mover". _Source: `src/01-Overview/welcome.md`._
 - **Withdrawal Manager** – handles epoch processing and claims on async vaults. _Source: `src/01-Overview/welcome.md`._
-- **Pauser** – allows the incident response team to pause the vault independently of operational roles. _Source: `src/06-Earn-V2/overview.md`._
-- **curator** – the entity managing a vault's strategy and configuration. Lowercase; descriptive, not a formal on-chain role name. _Source: `src/05-Vaults/how-withdrawals-work.md`._
+- **Pauser** – allows the incident response team to pause the vault independently of operational roles. _Source: `src/03-Developers/architecture-core-concepts.md`._
+- **curator** – the entity managing a vault's strategy and configuration. Lowercase; descriptive, not a formal on-chain role name. _Source: `src/02-Using-Concrete-Vaults/withdraw.md`._
 
 ### Fees and rewards
 
-- **management fee** – an annualized charge on vault AUM, paid by minting shares. Capped at 10%; standard configuration around 1.5%. Lowercase. _Source: `src/fees.md`._
-- **performance fee** – a charge on net positive yield, paid by minting shares. Capped at 100% of net positive yield. Lowercase. _Source: `src/fees.md`._
-- **no deposit, withdrawal, or maintenance fees** – Concrete Earn charges none of these. _Source: `src/fees.md`._
-- **BGT (Berachain Governance Token)** – earned in some Berachain vaults. _Source: `src/05-Vaults/01-Bera/`._
+- **management fee** – an annualized charge on vault AUM, paid by minting shares. Capped at 10%; standard configuration around 1.5%. Lowercase. _Source: `src/02-Using-Concrete-Vaults/fees.md`._
+- **performance fee** – a charge on net positive yield, paid by minting shares. Capped at 100% of net positive yield. Lowercase. _Source: `src/02-Using-Concrete-Vaults/fees.md`._
+- **no deposit, withdrawal, or maintenance fees** – Concrete Earn charges none of these. _Source: `src/02-Using-Concrete-Vaults/fees.md`._
+- **BGT (Berachain Governance Token)** – earned in some Berachain vaults. _Source: `src/05-Completed-Campaigns/bera.md`._
 
 ### Assets and chains
 
