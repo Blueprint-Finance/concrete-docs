@@ -1,6 +1,6 @@
 # Concrete Docs - LLM Full Context
 
-Generated: 2026-06-17T19:43:42.459Z
+Generated: 2026-07-13T11:53:42.600Z
 Source repository: concrete-docs
 Canonical docs URL: https://docs.concrete.xyz/
 
@@ -3661,6 +3661,12 @@ Concrete Protocol follows a multi-phased audit approach to deliver the highest l
    All audit results are made publicly accessible, reinforcing our commitment to transparency and accountability.
 
 
+## Earn 1.4 & AssetCx 1.2
+
+   - Date: May 19, 2026
+   - Auditor: Halborn
+   - [View the full report](https://docs.concrete.xyz/files/Earn_1.4__AssetCx_1.2___SSC.pdf)
+
 ## Earn v2 - Hurdle Rate
 
    - Date: April 22, 2026
@@ -4949,6 +4955,7 @@ Binary and media assets are indexed by source path and public URL. Their full bi
 - static/files/Code4rena-Review-Part-1-SSC.pdf (5186528 bytes): https://docs.concrete.xyz/files/Code4rena-Review-Part-1-SSC.pdf
 - static/files/Code4rena-Review-Part-2-SSC.pdf (5151742 bytes): https://docs.concrete.xyz/files/Code4rena-Review-Part-2-SSC.pdf
 - static/files/Curve-Pendle-Strategy-Report.pdf (6939777 bytes): https://docs.concrete.xyz/files/Curve-Pendle-Strategy-Report.pdf
+- static/files/Earn_1.4__AssetCx_1.2___SSC.pdf (5734210 bytes): https://docs.concrete.xyz/files/Earn_1.4__AssetCx_1.2___SSC.pdf
 - static/files/Earn_v2__Hurdle_Rate___SSC.pdf (10590187 bytes): https://docs.concrete.xyz/files/Earn_v2__Hurdle_Rate___SSC.pdf
 - static/files/Earn_V2_Improvements___SSC.pdf (10153337 bytes): https://docs.concrete.xyz/files/Earn_V2_Improvements___SSC.pdf
 - static/files/Earn-V1-Halborn.pdf (12312616 bytes): https://docs.concrete.xyz/files/Earn-V1-Halborn.pdf
