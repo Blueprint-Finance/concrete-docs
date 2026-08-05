@@ -1,6 +1,6 @@
 # Concrete Docs - LLM Full Context
 
-Generated: 2026-07-13T12:45:13.879Z
+Generated: 2026-08-05T22:11:41.471Z
 Source repository: concrete-docs
 Canonical docs URL: https://docs.concrete.xyz/
 
@@ -44,28 +44,29 @@ This file consolidates every Markdown documentation page in `src/**/*.md` for re
 34. Event Reference [sidebar] - src/03-Developers/Subgraph-and-Events/event-reference-and-use-cases.md
 35. How Withdrawals Are Processed For Concrete DeFi USDT [sidebar] - src/04-Live-Vaults/DeFi-USDT/how-withdrawals-are-processed.md
 36. Important Disclosures [sidebar] - src/04-Live-Vaults/DeFi-USDT/important-disclosures.md
-37. WBTC Vault [sidebar] - src/04-Live-Vaults/wbtc-vault.md
-38. Overview [sidebar] - src/05-Completed-Campaigns/overview.md
-39. Bera [sidebar] - src/05-Completed-Campaigns/bera.md
-40. Stable [sidebar] - src/05-Completed-Campaigns/stable.md
-41. Corn [sidebar] - src/05-Completed-Campaigns/corn.md
-42. Morph [sidebar] - src/05-Completed-Campaigns/morph.md
-43. TAC [sidebar] - src/05-Completed-Campaigns/tac.md
-44. Pre-Deposit Campaigns [sidebar] - src/05-Completed-Campaigns/pre-deposit-campaigns.md
-45. Audits [sidebar] - src/06-Audits.md
-46. Risks and Safety [sidebar] - src/07-risks-and-safety.md
-47. Restricted Jurisdictions [sidebar] - src/08-restricted-jurisdictions.md
-48. Glossary [sidebar] - src/glossary.md
-49. Support [sidebar] - src/support.md
-50. How to Repay and Withdraw Borrowed Assets [unlisted] - src/03-Borrow/close-loan.md
-51. How to Activate Concrete Borrow (Default Lite) [unlisted] - src/03-Borrow/enable-concrete.md
-52. How to Borrow From External Market [unlisted] - src/03-Borrow/open-loan-externally.md
-53. How to Borrow Against Collateral [unlisted] - src/03-Borrow/open-loan.md
-54. Overview [unlisted] - src/03-Borrow/overview.md
-55. Quick Start (Plug-and-Play Integration) [unlisted] - src/03-Developers/SDK/quick-start.md
-56. getApyDetails() [unlisted] - src/03-Developers/SDK/read-methods/getAPYDetails.md
-57. How to Activate Concrete Protect [unlisted] - src/04-Protect/activate-concrete-protect.md
-58. Overview [unlisted] - src/04-Protect/overview.md
+37. Important Disclosures [sidebar] - src/04-Live-Vaults/WLFIcx-Prime/important-disclosures.md
+38. WBTC Vault [sidebar] - src/04-Live-Vaults/wbtc-vault.md
+39. Overview [sidebar] - src/05-Completed-Campaigns/overview.md
+40. Bera [sidebar] - src/05-Completed-Campaigns/bera.md
+41. Stable [sidebar] - src/05-Completed-Campaigns/stable.md
+42. Corn [sidebar] - src/05-Completed-Campaigns/corn.md
+43. Morph [sidebar] - src/05-Completed-Campaigns/morph.md
+44. TAC [sidebar] - src/05-Completed-Campaigns/tac.md
+45. Pre-Deposit Campaigns [sidebar] - src/05-Completed-Campaigns/pre-deposit-campaigns.md
+46. Audits [sidebar] - src/06-Audits.md
+47. Risks and Safety [sidebar] - src/07-risks-and-safety.md
+48. Restricted Jurisdictions [sidebar] - src/08-restricted-jurisdictions.md
+49. Glossary [sidebar] - src/glossary.md
+50. Support [sidebar] - src/support.md
+51. How to Repay and Withdraw Borrowed Assets [unlisted] - src/03-Borrow/close-loan.md
+52. How to Activate Concrete Borrow (Default Lite) [unlisted] - src/03-Borrow/enable-concrete.md
+53. How to Borrow From External Market [unlisted] - src/03-Borrow/open-loan-externally.md
+54. How to Borrow Against Collateral [unlisted] - src/03-Borrow/open-loan.md
+55. Overview [unlisted] - src/03-Borrow/overview.md
+56. Quick Start (Plug-and-Play Integration) [unlisted] - src/03-Developers/SDK/quick-start.md
+57. getApyDetails() [unlisted] - src/03-Developers/SDK/read-methods/getAPYDetails.md
+58. How to Activate Concrete Protect [unlisted] - src/04-Protect/activate-concrete-protect.md
+59. Overview [unlisted] - src/04-Protect/overview.md
 
 # Document 1: Concrete: Earn Yield on Supported On-Chain Assets
 Source: src/01-Overview/welcome.md
@@ -2841,7 +2842,73 @@ THESE DISCLOSURES ARE PROVIDED FOR INFORMATIONAL PURPOSES ONLY AND DO NOT CONSTI
 
 ---
 
-# Document 37: WBTC Vault
+# Document 37: Important Disclosures
+Source: src/04-Live-Vaults/WLFIcx-Prime/important-disclosures.md
+Doc ID: Live-Vaults/WLFIcx-Prime/important-disclosures
+Public URL: https://docs.concrete.xyz/Live-Vaults/WLFIcx-Prime/important-disclosures/
+In active sidebar: yes
+Description: Concrete WLFIcx Prime vault documentation for important disclosures, including custodial asset risks, collateral and liquidation considerations, and user safeguards.
+Please read these important disclosures carefully before participating in the Concrete WLFIcx Prime vault.
+
+## Lack of Regulatory Protections
+
+THE PROVISIONS OF THE SECURITIES INVESTOR PROTECTION ACT OF 1970 ("SIPA"), THE FEDERAL DEPOSIT INSURANCE CORPORATION ("FDIC"), OR SIMILAR REGULATORY PROTECTIONS MAY NOT PROTECT YOUR FUNDS WHILE DELEGATED TO CONCRETE. In the event of Concrete's insolvency or default, the assets held in the vault's strategies may constitute the primary or sole source of recovery for your funds.
+
+## Restricted Access
+
+The Concrete WLFIcx Prime vault is a permissioned vault. Deposits are restricted to approved addresses through an on-chain allowlist, and the vault is not open to the general public. If your address is not approved, deposit transactions revert.
+
+## Loss of Control
+
+When you deposit WLFIcx into the vault, you transfer operational control over those assets to Concrete while retaining beneficial ownership through vault shares. Concrete has sole discretion to select strategies, determine allocations, and manage all positions. The vault charges no management fee and no performance fee.
+
+## Custodial Asset Risk
+
+The vault's base asset is WLFIcx (World Liberty Financial Custodial Asset), a token that represents WLFI held in third-party custody. The value and redeemability of WLFIcx depend on the custodian holding the backing collateral and on the merchant honoring mint and redeem requests. If the custodian freezes, delays, or loses the backing collateral, or the merchant fails to honor redemptions, WLFIcx may trade below its intended value or become unredeemable. Concrete does not control the issuance, backing, or redemption of WLFIcx.
+
+## Collateral Volatility and Liquidation Risks
+
+The value of WLFIcx tracks WLFI, a volatile asset. Vault strategies may borrow stablecoins against WLFI-linked collateral to generate yield. If the collateral value falls relative to borrowed amounts, lenders may liquidate positions, potentially resulting in loss of collateral. The system relies on accurate price feeds; oracle failures or divergences could trigger unwarranted liquidations. Losses affecting one portion of the vault could impact all depositors proportionally.
+
+## Yield Rates Not Guaranteed
+
+Concrete cannot and does not guarantee that any target yield rates can be achieved or maintained. Returns depend on strategy performance, borrowing costs, and market conditions, and Concrete reserves the right to adjust, refresh, or discontinue offered rates at any time. You may withdraw your funds if dissatisfied with offered rates, subject to applicable procedures.
+
+## Valuation and [NAV](https://docs.concrete.xyz/glossary/#nav) Reporting
+
+The vault's NAV (Net Asset Value) is updated through periodic accounting rather than continuous on-chain pricing. Reported share values may lag the actual value of the underlying positions. As a safeguard, the vault may automatically pause operations when a reported valuation change exceeds a configured threshold; during a pause, deposits and withdrawals are temporarily unavailable until the valuation is verified.
+
+## Smart Contract Risks
+
+Smart contracts may contain vulnerabilities or exploits that could result in loss of funds. The vault relies on contract-level access controls, pause mechanisms, and periodic accounting to mitigate these risks but cannot eliminate them. Recovery of funds lost to a smart contract exploit may be delayed, partial, or impossible.
+
+## Liquidity and Withdrawal Risks
+
+Withdrawals are processed through the vault's Withdrawal Queue rather than settled instantly. Unwinding strategy positions, repaying borrowed amounts, and transferring custodied assets take time. If withdrawal requests exceed available liquidity, requests roll forward to subsequent Epochs and settlement may take materially longer than the estimated withdrawal time. Withdrawals may be further delayed in extreme circumstances including custodian or merchant failures, smart contract issues, or a pause of vault operations.
+
+## Tax Implications
+
+Yield earned on deposited funds may be characterized differently from other income types for tax purposes, potentially treated as ordinary income, interest income, or lending income depending on your jurisdiction. Concrete may be required to report your yield income to tax authorities. Withholding taxes may apply depending on your tax status and jurisdiction. Concrete is not required to compensate you for any adverse tax treatment. You should consult a qualified tax advisor before participating.
+
+## Conflicts of Interest
+
+Concrete's selection of strategies and counterparties may be influenced by relationships with protocols, partners, or strategic considerations rather than solely obtaining the best available terms for depositors. Concrete may transact with affiliates or related parties and may use operational proceeds for corporate purposes that may compete with depositor interests.
+
+## Regulatory and Liability Limitations
+
+The program is subject to limited regulatory oversight and evolving regulations that could require program termination, impose new restrictions, affect tax treatment, or impact enforceability of rights. No regulatory authority has reviewed or endorsed the program. To the maximum extent permitted by law, Concrete's liability is limited to the value of assets held in the vault's strategies, subject to priority claims in any insolvency. Concrete is not liable for custodian or merchant failures, market fluctuations, inability to achieve target returns, third-party failures, regulatory changes, or force majeure events. Concrete's total liability to any depositor is capped at the deposit amount plus accrued yield, less applicable fees and losses.
+
+## Acknowledgments and Governing Provisions
+
+By depositing funds into the Concrete WLFIcx Prime vault, you acknowledge that you have read and understand these disclosures and the risks described herein, including lack of regulatory protections, custodial asset and collateral risks, valuation and liquidity considerations, no guaranteed yields, smart contract risks, tax implications, conflicts of interest, and termination rights. Any disputes shall be resolved through binding arbitration per applicable agreements. In the event of any conflict between this disclosure and executed agreements, the executed agreements shall govern.
+
+:::warning
+THESE DISCLOSURES ARE PROVIDED FOR INFORMATIONAL PURPOSES ONLY AND DO NOT CONSTITUTE INVESTMENT, LEGAL, TAX, OR FINANCIAL ADVICE. CONSULT QUALIFIED ADVISORS BEFORE PARTICIPATING AND FOR ADVICE AS TO LEGAL, TAX AND ECONOMIC IMPLICATIONS. CONCRETE MAKES “FORWARD-LOOKING STATEMENTS,” WHICH DESCRIBE FUTURE EXPECTATIONS, PLANS, RESULTS OR STRATEGIES AND CAN OFTEN BE IDENTIFIED BY THE USE OF TERMINOLOGY SUCH AS “MAY,” “WILL,” “EXPECT,” “PLAN,” OR SIMILAR TERMINOLOGY. THESE STATEMENTS ARE BASED UPON CONCRETE’S CURRENT EXPECTATIONS, ASSUMPTIONS AND ESTIMATES, AND ARE NOT GUARANTEES. ACTUAL RESULTS MAY DIFFER MATERIALLY FROM THOSE CONTEMPLATED IN THESE STATEMENTS DUE TO A VARIETY OF RISKS AND UNCERTAINTIES. THIS DOCUMENT DOES NOT CONSTITUTE AN OFFER OR INVITATION OR SOLICITATION OF ANY OFFER TO SELL, PURCHASE, DELEGATE OR LOAN ANY SECURITIES AND IS NOT INTENDED, AND DOES NOT, CREATE A BINDING OR ENFORCEABLE AGREEMENT ON THE PART OF THE COMPANY
+:::
+
+---
+
+# Document 38: WBTC Vault
 Source: src/04-Live-Vaults/wbtc-vault.md
 Doc ID: Live-Vaults/wbtc-vault
 Public URL: https://docs.concrete.xyz/Live-Vaults/wbtc-vault/
@@ -2951,7 +3018,7 @@ https://docs.concrete.xyz/support/
 
 ---
 
-# Document 38: Overview
+# Document 39: Overview
 Source: src/05-Completed-Campaigns/overview.md
 Doc ID: Completed-Campaigns/overview
 Public URL: https://docs.concrete.xyz/Completed-Campaigns/overview/
@@ -2986,7 +3053,7 @@ For more on support, see [Support](https://docs.concrete.xyz/support/). For more
 
 ---
 
-# Document 39: Bera
+# Document 40: Bera
 Source: src/05-Completed-Campaigns/bera.md
 Doc ID: Completed-Campaigns/bera
 Public URL: https://docs.concrete.xyz/Completed-Campaigns/bera/
@@ -3287,7 +3354,7 @@ Claiming is quick and only requires a signature from your connected wallet.
 
 ---
 
-# Document 40: Stable
+# Document 41: Stable
 Source: src/05-Completed-Campaigns/stable.md
 Doc ID: Completed-Campaigns/stable
 Public URL: https://docs.concrete.xyz/Completed-Campaigns/stable/
@@ -3462,7 +3529,7 @@ Please refer to the main documentation's [support section](https://docs.concrete
 
 ---
 
-# Document 41: Corn
+# Document 42: Corn
 Source: src/05-Completed-Campaigns/corn.md
 Doc ID: Completed-Campaigns/corn
 Public URL: https://docs.concrete.xyz/Completed-Campaigns/corn/
@@ -3496,7 +3563,7 @@ Withdrawals are processed on Ethereum mainnet. For Corn Stables, batched withdra
 
 ---
 
-# Document 42: Morph
+# Document 43: Morph
 Source: src/05-Completed-Campaigns/morph.md
 Doc ID: Completed-Campaigns/morph
 Public URL: https://docs.concrete.xyz/Completed-Campaigns/morph/
@@ -3536,7 +3603,7 @@ Vaults that are deprecated can be exited using the in-app withdraw tab (if still
 
 ---
 
-# Document 43: TAC
+# Document 44: TAC
 Source: src/05-Completed-Campaigns/tac.md
 Doc ID: Completed-Campaigns/tac
 Public URL: https://docs.concrete.xyz/Completed-Campaigns/tac/
@@ -3607,7 +3674,7 @@ Our team will walk you through whatever steps you need.
 
 ---
 
-# Document 44: Pre-Deposit Campaigns
+# Document 45: Pre-Deposit Campaigns
 Source: src/05-Completed-Campaigns/pre-deposit-campaigns.md
 Doc ID: Completed-Campaigns/pre-deposit-campaigns
 Public URL: https://docs.concrete.xyz/Completed-Campaigns/pre-deposit-campaigns/
@@ -3629,7 +3696,7 @@ Check the vault page for two dates: when the pre-deposit period ends and when cl
 
 ---
 
-# Document 45: Audits
+# Document 46: Audits
 Source: src/06-Audits.md
 Doc ID: Audits
 Public URL: https://docs.concrete.xyz/Audits/
@@ -3845,7 +3912,7 @@ Stay tuned for upcoming enhancements and future audits as we expand our security
 
 ---
 
-# Document 46: Risks and Safety
+# Document 47: Risks and Safety
 Source: src/07-risks-and-safety.md
 Doc ID: risks-and-safety
 Public URL: https://docs.concrete.xyz/risks-and-safety/
@@ -3952,7 +4019,7 @@ Access to Concrete products is not available in every jurisdiction. Before depos
 
 ---
 
-# Document 47: Restricted Jurisdictions
+# Document 48: Restricted Jurisdictions
 Source: src/08-restricted-jurisdictions.md
 Doc ID: restricted-jurisdictions
 Public URL: https://docs.concrete.xyz/restricted-jurisdictions/
@@ -3977,7 +4044,7 @@ This list is subject to updates based on changes in international regulatory and
 
 ---
 
-# Document 48: Glossary
+# Document 49: Glossary
 Source: src/glossary.md
 Doc ID: glossary
 Public URL: https://docs.concrete.xyz/glossary/
@@ -4119,7 +4186,7 @@ This page indexes the acronyms, token tickers, and technical short-forms that sh
 
 ---
 
-# Document 49: Support
+# Document 50: Support
 Source: src/support.md
 Doc ID: support
 Public URL: https://docs.concrete.xyz/support/
@@ -4154,7 +4221,7 @@ We are working on expanding our support channels. Stay tuned for updates!
 
 ---
 
-# Document 50: How to Repay and Withdraw Borrowed Assets
+# Document 51: How to Repay and Withdraw Borrowed Assets
 Source: src/03-Borrow/close-loan.md
 Doc ID: Borrow/close-loan
 Public URL: https://docs.concrete.xyz/Borrow/close-loan/
@@ -4196,7 +4263,7 @@ Description: Concrete Borrow documentation for how to Repay and Withdraw, includ
 
 ---
 
-# Document 51: How to Activate Concrete Borrow (Default Lite)
+# Document 52: How to Activate Concrete Borrow (Default Lite)
 Source: src/03-Borrow/enable-concrete.md
 Doc ID: Borrow/enable-concrete
 Public URL: https://docs.concrete.xyz/Borrow/enable-concrete/
@@ -4265,7 +4332,7 @@ By default, Concrete Borrow comes with **Concrete Lite**, which forecloses loans
 
 ---
 
-# Document 52: How to Borrow From External Market
+# Document 53: How to Borrow From External Market
 Source: src/03-Borrow/open-loan-externally.md
 Doc ID: Borrow/open-loan-externally
 Public URL: https://docs.concrete.xyz/Borrow/open-loan-externally/
@@ -4308,7 +4375,7 @@ Concrete offers an efficient interface to initiate borrowing on external markets
 
 ---
 
-# Document 53: How to Borrow Against Collateral
+# Document 54: How to Borrow Against Collateral
 Source: src/03-Borrow/open-loan.md
 Doc ID: Borrow/open-loan
 Public URL: https://docs.concrete.xyz/Borrow/open-loan/
@@ -4363,7 +4430,7 @@ You can manage your loan in the **Portfolio** tab, which displays:
 
 ---
 
-# Document 54: Overview
+# Document 55: Overview
 Source: src/03-Borrow/overview.md
 Doc ID: Borrow/overview
 Public URL: https://docs.concrete.xyz/Borrow/overview/
@@ -4472,7 +4539,7 @@ Here’s a step-by-step outline of the complete Concrete Borrow process:
 
 ---
 
-# Document 55: Quick Start (Plug-and-Play Integration)
+# Document 56: Quick Start (Plug-and-Play Integration)
 Source: src/03-Developers/SDK/quick-start.md
 Doc ID: Developers/SDK/quick-start
 Public URL: https://docs.concrete.xyz/Developers/SDK/quick-start/
@@ -4639,7 +4706,7 @@ const deposit = useVaultDeposit(vaultConfig, options);
 
 ---
 
-# Document 56: getApyDetails()
+# Document 57: getApyDetails()
 Source: src/03-Developers/SDK/read-methods/getAPYDetails.md
 Doc ID: Developers/SDK/read-methods/getAPYDetails
 Public URL: https://docs.concrete.xyz/Developers/SDK/read-methods/getAPYDetails/
@@ -4792,7 +4859,7 @@ try {
 
 ---
 
-# Document 57: How to Activate Concrete Protect
+# Document 58: How to Activate Concrete Protect
 Source: src/04-Protect/activate-concrete-protect.md
 Doc ID: Protect/activate-concrete-protect
 Public URL: https://docs.concrete.xyz/Protect/activate-concrete-protect/
@@ -4840,7 +4907,7 @@ Users can manage all protected positions from the Portfolio:
 
 ---
 
-# Document 58: Overview
+# Document 59: Overview
 Source: src/04-Protect/overview.md
 Doc ID: Protect/overview
 Public URL: https://docs.concrete.xyz/Protect/overview/

@@ -94,6 +94,13 @@ const sidebars = {
             'Live-Vaults/DeFi-USDT/important-disclosures',
           ],
         },
+        {
+          type: 'category',
+          label: 'Concrete WLFIcx Prime',
+          items: [
+            'Live-Vaults/WLFIcx-Prime/important-disclosures',
+          ],
+        },
         'Live-Vaults/wbtc-vault',
       ],
     },
