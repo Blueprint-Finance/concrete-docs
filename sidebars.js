@@ -94,6 +94,13 @@ const sidebars = {
             'Live-Vaults/DeFi-USDT/important-disclosures',
           ],
         },
+        {
+          type: 'category',
+          label: 'Concrete RWA USD1',
+          items: [
+            'Live-Vaults/RWA-USD1/important-disclosures',
+          ],
+        },
         'Live-Vaults/wbtc-vault',
       ],
     },
