@@ -104,13 +104,15 @@ This page indexes the acronyms, token tickers, and technical short-forms that sh
 
 <a id="rpc"></a>**RPC** – Remote Procedure Call. The request/response interface a client uses to read from or send transactions to a blockchain node.
 
+<a id="rwa"></a>**RWA** – Real-World Asset. A tokenized on-chain representation of an off-chain asset, such as a treasury bill or another traditional financial instrument.
+
 ## S
 
 <a id="sdk"></a>**SDK** – Software Development Kit. The Concrete SDK exposes typed methods for reading vault state and submitting deposits, withdrawals, and approvals. See [SDK](/Developers/SDK/overview/).
 
 ## T
 
-<a id="tac"></a>**TAC** – TAC Network. The blockchain that hosted the TAC Stone, TAC LevelUSD, and TAC Renzo pre-deposit vaults. See [TAC](/Completed-Campaigns/tac/).
+<a id="tac"></a>**TAC** – TAC Network. The blockchain that hosted the TAC Stone, TAC LevelUSD, and TAC Renzo pre-deposit vaults. See [Completed Campaigns](/Completed-Campaigns/overview/).
 
 <a id="ts"></a>**TS** – TypeScript.
 
@@ -124,6 +126,8 @@ This page indexes the acronyms, token tickers, and technical short-forms that sh
 
 <a id="usd"></a>**USD** – U.S. Dollar.
 
+<a id="usd1"></a>**USD1** – A U.S. dollar-pegged stablecoin issued by World Liberty Financial.
+
 <a id="usdc"></a>**USDC** – USD Coin. A U.S. dollar-pegged stablecoin issued by Circle.
 
 <a id="usdt"></a>**USDT** – Tether. A U.S. dollar-pegged stablecoin issued by Tether Operations.
@@ -134,6 +138,10 @@ This page indexes the acronyms, token tickers, and technical short-forms that sh
 
 ## W
 
-<a id="wbtc"></a>**WBTC** – Wrapped Bitcoin. An ERC-20 token backed 1:1 by BTC custodied off-chain. See [WBTC Vault](/Live-Vaults/wbtc-vault/).
+<a id="wbtc"></a>**WBTC** – Wrapped Bitcoin. An ERC-20 token backed 1:1 by BTC custodied off-chain. See [Live Vaults](/Live-Vaults/).
 
 <a id="weth"></a>**WETH** – Wrapped Ether. An ERC-20 representation of ETH used in protocols that expect ERC-20 tokens.
+
+<a id="wlfi"></a>**WLFI** – The governance token of World Liberty Financial.
+
+<a id="wlficx"></a>**WLFIcx** – The AssetCX representation of WLFI: WLFI held with a Qualified Custodian, represented on-chain for use in Concrete vaults. See [AssetCX](/Institutional-Vaults/assetcx/).

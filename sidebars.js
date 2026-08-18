@@ -82,32 +82,24 @@ const sidebars = {
       ],
     },
 
+    'Live-Vaults/index',
+
     {
       type: 'category',
-      label: 'Live Vaults',
+      label: 'Institutional Vaults',
       items: [
-        {
-          type: 'category',
-          label: 'Concrete DeFi USDT',
-          items: [
-            'Live-Vaults/DeFi-USDT/how-withdrawals-are-processed',
-          ],
-        },
-        'Live-Vaults/wbtc-vault',
+        'Institutional-Vaults/overview',
+        'Institutional-Vaults/assetcx',
       ],
     },
+
+    'pre-deposit-campaigns',
 
     {
       type: 'category',
       label: 'Completed Campaigns',
       items: [
         'Completed-Campaigns/overview',
-        'Completed-Campaigns/bera',
-        'Completed-Campaigns/stable',
-        'Completed-Campaigns/corn',
-        'Completed-Campaigns/morph',
-        'Completed-Campaigns/tac',
-        'Completed-Campaigns/pre-deposit-campaigns',
       ],
     },
 
