@@ -1,7 +1,7 @@
 ---
-title: "Pre-Deposit Campaigns"
-description: "Concrete documentation for pre-deposit campaigns, covering the open deposit period, the lock-up, and how to claim your position once the vault launches."
-sidebar_label: "Pre-Deposit Campaigns"
+title: "Pre-Deposit Vaults"
+description: "Concrete documentation for Pre-Deposit Vaults, covering the open deposit period, the lock-up, and how to claim your position once the vault launches."
+sidebar_label: "Pre-Deposit Vaults"
 ---
 
 **Pre-Deposit Vaults** are time-limited opportunities that allow users to deposit into a vault or strategy before it becomes fully active. Campaign details may include the supported asset, deposit window, expected launch timing, eligibility requirements, and any applicable risks or restrictions. This page explains why withdrawals are paused during the pre-deposit period and how you claim your position once the vault launches.
