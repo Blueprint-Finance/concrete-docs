@@ -272,7 +272,7 @@ const config = {
 
           { from: '/Vaults/WBTC/wbtc-vault-migration-to-earn-v2', to: '/Live-Vaults/wbtc-vault' },
           { from: '/Vaults/DeFi-USDT/how-withdrawals-are-processed', to: '/Live-Vaults/DeFi-USDT/how-withdrawals-are-processed' },
-          { from: '/Vaults/DeFi-USDT/important-disclosures', to: '/Live-Vaults/DeFi-USDT/important-disclosures' },
+          { from: '/Vaults/DeFi-USDT/important-disclosures', to: '/important-disclosures' },
 
           { from: '/fees', to: '/Using-Concrete-Vaults/fees' },
           { from: '/rewards', to: '/Using-Concrete-Vaults/concrete-points' },
@@ -283,6 +283,9 @@ const config = {
           { from: '/Audits/overview', to: '/Audits' },
           { from: '/Audits/restricted-jurisdictions', to: '/restricted-jurisdictions' },
           { from: '/Audits/risks-and-safety', to: '/risks-and-safety' },
+
+          // CONC-4293 Important Disclosures promoted to a standalone article
+          { from: '/Live-Vaults/DeFi-USDT/important-disclosures', to: '/important-disclosures' },
         ],
       },
     ],
