@@ -245,7 +245,7 @@ const config = {
 
           { from: '/Earn/deposit-into-vaults', to: '/Using-Concrete-Vaults/deposit' },
           { from: '/Earn/ct-assets', to: '/Using-Concrete-Vaults/concrete-vault-shares' },
-          { from: '/Earn/pre-deposit-vaults', to: '/pre-deposit-campaigns' },
+          { from: '/Earn/pre-deposit-vaults', to: '/pre-deposit-vaults' },
           { from: '/Earn/how-earn-vaults-maximize-risk-adjusted-yields', to: '/Overview/yield-vaults-and-erc-4626-standard' },
 
           { from: '/Vaults/yield-vaults', to: '/Overview/yield-vaults-and-erc-4626-standard' },
@@ -295,7 +295,7 @@ const config = {
           { from: '/Completed-Campaigns/corn', to: '/Completed-Campaigns/overview' },
           { from: '/Completed-Campaigns/morph', to: '/Completed-Campaigns/overview' },
           { from: '/Completed-Campaigns/tac', to: '/Completed-Campaigns/overview' },
-          { from: '/Completed-Campaigns/pre-deposit-campaigns', to: '/pre-deposit-campaigns' },
+          { from: '/Completed-Campaigns/pre-deposit-campaigns', to: '/pre-deposit-vaults' },
         ],
       },
     ],

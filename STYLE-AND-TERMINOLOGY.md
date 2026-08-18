@@ -424,7 +424,7 @@ items feed the translation map in Part 3.
 - **Pre-Deposit Vaults** – time-limited opportunities to deposit into a vault or
   strategy before it becomes fully active. Title Case as the section name;
   lowercase "pre-deposit vault" for the mechanism (see Vault mechanics).
-  _Source: `src/06-pre-deposit-campaigns.md`._
+  _Source: `src/06-pre-deposit-vaults.md`._
 
 ### Vault mechanics
 
@@ -464,9 +464,8 @@ items feed the translation map in Part 3.
   Hook Manager. _Source: `src/03-Developers/architecture-core-concepts.md`._
 - **Fee Splitter** – the contract that routes fees between recipients with a
   configurable share. _Source: `src/03-Developers/architecture-core-concepts.md`._
-- **pre-deposit vault** – a vault that accepts deposits on one chain before
-  launching on another; withdrawals are disabled until users claim their shares
-  on the destination chain. _Source: `src/06-pre-deposit-campaigns.md`._
+- **pre-deposit vault** – a vault or strategy that accepts deposits for a
+  limited window before it becomes fully active. _Source: `src/06-pre-deposit-vaults.md`._
 
 ### Withdrawals
 
@@ -512,7 +511,7 @@ items feed the translation map in Part 3.
 - **risk-adjusted yield / risk-adjusted return** – yield optimized for the
   risk and return profile rather than headline APY. _Source: `src/01-Overview/welcome.md`, `src/03-Developers/architecture-core-concepts.md`._
 - **yield accrual / accrued yield** – the accumulation of returns over time.
-  _Source: `src/01-Overview/yield-vaults-and-erc-4626-standard.md`, `src/06-pre-deposit-campaigns.md`._
+  _Source: `src/01-Overview/yield-vaults-and-erc-4626-standard.md`._
 - **APY** – annual percentage yield; "notional APY" where the vault reports a
   notional figure in the base asset. _Source: `src/02-Using-Concrete-Vaults/fees.md`, `src/01-Overview/yield-vaults-and-erc-4626-standard.md`._
 - **TVL (Total Value Locked)** – the aggregate value held across vaults.

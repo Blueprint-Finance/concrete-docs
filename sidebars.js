@@ -93,7 +93,7 @@ const sidebars = {
       ],
     },
 
-    'pre-deposit-campaigns',
+    'pre-deposit-vaults',
 
     {
       type: 'category',
