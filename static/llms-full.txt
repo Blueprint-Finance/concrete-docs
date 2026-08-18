@@ -1,6 +1,6 @@
 # Concrete Docs - LLM Full Context
 
-Generated: 2026-08-18T13:59:24.772Z
+Generated: 2026-08-18T14:01:16.257Z
 Source repository: concrete-docs
 Canonical docs URL: https://docs.concrete.xyz/
 
@@ -45,7 +45,7 @@ This file consolidates every Markdown documentation page in `src/**/*.md` for re
 35. Live Vaults [sidebar] - src/04-Live-Vaults/index.md
 36. Overview [sidebar] - src/05-Institutional-Vaults/overview.md
 37. AssetCX [sidebar] - src/05-Institutional-Vaults/assetcx.md
-38. Pre-Deposit Campaigns [sidebar] - src/06-pre-deposit-campaigns.md
+38. Pre-Deposit Vaults [sidebar] - src/06-pre-deposit-campaigns.md
 39. Overview [sidebar] - src/05-Completed-Campaigns/overview.md
 40. Audits [sidebar] - src/06-Audits.md
 41. Risks and Safety [sidebar] - src/07-risks-and-safety.md
@@ -2770,12 +2770,12 @@ On the Concrete Earn app, AssetCX vaults are displayed with the naming conventio
 
 ---
 
-# Document 38: Pre-Deposit Campaigns
+# Document 38: Pre-Deposit Vaults
 Source: src/06-pre-deposit-campaigns.md
 Doc ID: pre-deposit-campaigns
 Public URL: https://docs.concrete.xyz/pre-deposit-campaigns/
 In active sidebar: yes
-Description: Concrete documentation for pre-deposit campaigns, covering the open deposit period, the lock-up, and how to claim your position once the vault launches.
+Description: Concrete documentation for Pre-Deposit Vaults, covering the open deposit period, the lock-up, and how to claim your position once the vault launches.
 **Pre-Deposit Vaults** are time-limited opportunities that allow users to deposit into a vault or strategy before it becomes fully active. Campaign details may include the supported asset, deposit window, expected launch timing, eligibility requirements, and any applicable risks or restrictions. This page explains why withdrawals are paused during the pre-deposit period and how you claim your position once the vault launches.
 
 ## Why Withdrawals Are Paused
