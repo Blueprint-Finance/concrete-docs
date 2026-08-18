@@ -91,7 +91,6 @@ const sidebars = {
           label: 'Concrete DeFi USDT',
           items: [
             'Live-Vaults/DeFi-USDT/how-withdrawals-are-processed',
-            'Live-Vaults/DeFi-USDT/important-disclosures',
           ],
         },
         'Live-Vaults/wbtc-vault',
@@ -115,6 +114,7 @@ const sidebars = {
     'Audits',
     'risks-and-safety',
     'restricted-jurisdictions',
+    'important-disclosures',
     'glossary',
     'support',
   ],

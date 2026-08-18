@@ -432,14 +432,14 @@ items feed the translation map in Part 3.
 - **exchange rate / share price** – the conversion ratio between shares and the
   underlying asset; moves with yield. _Source: `src/02-Using-Concrete-Vaults/concrete-vault-shares.md`._
 - **NAV (Net Asset Value)** – the total value of a vault, updated daily in
-  Earn V2. Expand on first use per page. _Source: `src/04-Live-Vaults/DeFi-USDT/important-disclosures.md`._
+  Earn V2. Expand on first use per page. _Source: `src/04-Live-Vaults/wbtc-vault.md`._
 - **strategy / yield strategies** – the smart contracts that deploy capital to
   earn yield (lending on Aave, liquidity on Pendle, and similar). Avoid
   "protocol adapter" or "yield module". _Source: `src/02-Using-Concrete-Vaults/withdraw.md`, `src/03-Developers/architecture-core-concepts.md`._
 - **allocation / rebalance** – moving capital between strategies. _Source:
   `src/03-Developers/architecture-core-concepts.md`._
 - **money market** – a lending protocol (Aave, Compound, Morpho) where vault
-  strategies deploy capital. _Source: `src/04-Live-Vaults/DeFi-USDT/important-disclosures.md`._
+  strategies deploy capital. _Source: `src/02-Using-Concrete-Vaults/concrete-vault-shares.md`, `src/03-Borrow/overview.md`._
 - **Quantitative Framework** – Concrete's forecasting and allocation engine for
   risk-adjusted decisions; its signals inform target strategy weights. Capitalized.
   _Source: `src/01-Overview/welcome.md`, `src/03-Developers/architecture-core-concepts.md`._
