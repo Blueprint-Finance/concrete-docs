@@ -100,11 +100,11 @@ const config = {
     ({
       image: 'img/og-image.png',
       metadata: [
-        { name: 'twitter:card', content: 'summary_large_image' },
         { name: 'twitter:site', content: '@ConcreteXYZ' },
         { property: 'og:type', content: 'website' },
         { property: 'og:site_name', content: 'Concrete Docs' },
         { property: 'og:title', content: 'Concrete Docs' },
+        { name: 'description', content: 'Official Concrete documentation for on-chain yield infrastructure, Earn V2, SDK integrations, vault operations, and risk disclosures.' },
         { property: 'og:description', content: 'Official Concrete documentation for on-chain yield infrastructure, Earn V2, SDK integrations, vault operations, and risk disclosures.' },
       ],
       navbar: {
