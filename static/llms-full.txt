@@ -1,6 +1,6 @@
 # Concrete Docs - LLM Full Context
 
-Generated: 2026-08-18T11:15:34.808Z
+Generated: 2026-08-18T13:31:53.325Z
 Source repository: concrete-docs
 Canonical docs URL: https://docs.concrete.xyz/
 
@@ -5000,6 +5000,7 @@ Binary and media assets are indexed by source path and public URL. Their full bi
 - static/img/earn-3.png (1507105 bytes): https://docs.concrete.xyz/img/earn-3.png
 - static/img/earn-4.png (728419 bytes): https://docs.concrete.xyz/img/earn-4.png
 - static/img/logo.png (1485 bytes): https://docs.concrete.xyz/img/logo.png
+- static/img/og-image.png (28693 bytes): https://docs.concrete.xyz/img/og-image.png
 - static/img/portfolio-1.png (363429 bytes): https://docs.concrete.xyz/img/portfolio-1.png
 - static/img/portfolio.png (290967 bytes): https://docs.concrete.xyz/img/portfolio.png
 - static/img/qf.png (180482 bytes): https://docs.concrete.xyz/img/qf.png
