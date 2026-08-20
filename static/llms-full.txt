@@ -1,7 +1,7 @@
 # Concrete Docs - LLM Full Context
 
-Generated: 2026-08-20T12:18:01.326Z
-Source repository: concrete-docs
+Generated: 2026-08-20T13:24:23.073Z
+Source repository: docs
 Canonical docs URL: https://docs.concrete.xyz/
 
 This file consolidates every Markdown documentation page in `src/**/*.md` for retrieval and LLM ingestion. Active sidebar pages appear first in sidebar order; Markdown pages not present in the active sidebar follow afterward. Static binary/media assets are listed at the end by path and public URL.
@@ -46,7 +46,7 @@ This file consolidates every Markdown documentation page in `src/**/*.md` for re
 36. Overview [sidebar] - src/05-Institutional-Vaults/overview.md
 37. AssetCX [sidebar] - src/05-Institutional-Vaults/assetcx.md
 38. Pre-Deposit Vaults [sidebar] - src/06-pre-deposit-vaults.md
-39. Overview [sidebar] - src/05-Completed-Campaigns/overview.md
+39. Completed Campaigns [sidebar] - src/05-completed-campaigns.md
 40. Important Disclaimers [sidebar] - src/09-important-disclosures.md
 41. Audits [sidebar] - src/06-Audits.md
 42. Risks and Safety [sidebar] - src/07-risks-and-safety.md
@@ -2784,10 +2784,10 @@ Description: Concrete documentation for Pre-Deposit Vaults, covering time-limite
 
 ---
 
-# Document 39: Overview
-Source: src/05-Completed-Campaigns/overview.md
-Doc ID: Completed-Campaigns/overview
-Public URL: https://docs.concrete.xyz/Completed-Campaigns/overview/
+# Document 39: Completed Campaigns
+Source: src/05-completed-campaigns.md
+Doc ID: completed-campaigns
+Public URL: https://docs.concrete.xyz/completed-campaigns/
 In active sidebar: yes
 Description: Overview of Concrete's completed vault campaigns, covering wind-down behavior, withdrawal paths, and how rewards remain claimable.
 Some Concrete vaults run as time-bounded campaigns. When such a campaign reaches its end date, the vault transitions to withdraw-only mode through a controlled wind-down process. Once the campaign closes, the vault moves to the Completed Campaigns section of the [Concrete app](https://app.concrete.xyz/). If you still hold [ctAssets](https://docs.concrete.xyz/glossary/#ct-asset) from that vault, they remain accessible in the Portfolio tab.
@@ -3339,7 +3339,7 @@ This page indexes the acronyms, token tickers, and technical short-forms that sh
 
 ## T
 
-<a id="tac"></a>**TAC** – TAC Network. The blockchain that hosted the TAC Stone, TAC LevelUSD, and TAC Renzo pre-deposit vaults. See [Completed Campaigns](https://docs.concrete.xyz/Completed-Campaigns/overview/).
+<a id="tac"></a>**TAC** – TAC Network. The blockchain that hosted the TAC Stone, TAC LevelUSD, and TAC Renzo pre-deposit vaults. See [Completed Campaigns](https://docs.concrete.xyz/completed-campaigns/).
 
 <a id="ts"></a>**TS** – TypeScript.
 
