@@ -103,10 +103,10 @@ const sidebars = {
       ],
     },
 
+    'important-disclosures',
     'Audits',
     'risks-and-safety',
     'restricted-jurisdictions',
-    'important-disclosures',
     'glossary',
     'support',
   ],

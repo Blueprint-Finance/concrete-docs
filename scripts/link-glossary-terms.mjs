@@ -45,8 +45,6 @@ export const TERMS = [
   ['USD1', 'usd1'],
   ['WBTC', 'wbtc'],
   ['WETH', 'weth'],
-  ['WLFIcx', 'wlficx'],
-  ['WLFI', 'wlfi'],
   ['LBTC', 'lbtc'],
   ['BERA', 'bera'],
   ['BGT', 'bgt'],

@@ -141,7 +141,3 @@ This page indexes the acronyms, token tickers, and technical short-forms that sh
 <a id="wbtc"></a>**WBTC** – Wrapped Bitcoin. An ERC-20 token backed 1:1 by BTC custodied off-chain. See [Live Vaults](/Live-Vaults/).
 
 <a id="weth"></a>**WETH** – Wrapped Ether. An ERC-20 representation of ETH used in protocols that expect ERC-20 tokens.
-
-<a id="wlfi"></a>**WLFI** – The governance token of World Liberty Financial.
-
-<a id="wlficx"></a>**WLFIcx** – The AssetCX representation of WLFI: WLFI held with a Qualified Custodian, represented on-chain for use in Concrete vaults. See [AssetCX](/Institutional-Vaults/assetcx/).

@@ -1,6 +1,6 @@
 # Concrete Docs - LLM Full Context
 
-Generated: 2026-08-18T14:04:38.745Z
+Generated: 2026-08-20T12:18:01.326Z
 Source repository: concrete-docs
 Canonical docs URL: https://docs.concrete.xyz/
 
@@ -47,10 +47,10 @@ This file consolidates every Markdown documentation page in `src/**/*.md` for re
 37. AssetCX [sidebar] - src/05-Institutional-Vaults/assetcx.md
 38. Pre-Deposit Vaults [sidebar] - src/06-pre-deposit-vaults.md
 39. Overview [sidebar] - src/05-Completed-Campaigns/overview.md
-40. Audits [sidebar] - src/06-Audits.md
-41. Risks and Safety [sidebar] - src/07-risks-and-safety.md
-42. Restricted Jurisdictions [sidebar] - src/08-restricted-jurisdictions.md
-43. Important Disclaimers [sidebar] - src/09-important-disclosures.md
+40. Important Disclaimers [sidebar] - src/09-important-disclosures.md
+41. Audits [sidebar] - src/06-Audits.md
+42. Risks and Safety [sidebar] - src/07-risks-and-safety.md
+43. Restricted Jurisdictions [sidebar] - src/08-restricted-jurisdictions.md
 44. Glossary [sidebar] - src/glossary.md
 45. Support [sidebar] - src/support.md
 46. How to Repay and Withdraw Borrowed Assets [unlisted] - src/03-Borrow/close-loan.md
@@ -2740,9 +2740,9 @@ Doc ID: Live-Vaults/index
 Public URL: https://docs.concrete.xyz/Live-Vaults/index/
 In active sidebar: yes
 Description: Concrete documentation for Live Vaults, covering what they are, the on-chain strategies they provide access to, and how to compare available vaults.
-**Concrete Live Vaults** are active vaults available through the Concrete platform. All Live Vaults are currently active and provide access to on-chain strategies that are designed around a specific strategy, asset type, or market opportunity.
+The vaults listed in the Live Vaults section are active vaults available through the Concrete platform. These vaults provide access to on-chain strategies, asset type, or market opportunity.
 
-Users can review available Live Vaults, compare relevant vault information, and decide whether a vault is appropriate for their own circumstances.
+Users can review available Live Vaults, compare relevant vault attributes of [APY](https://docs.concrete.xyz/glossary/#apy), [TVL](https://docs.concrete.xyz/glossary/#tvl), withdrawal queue (if any) and exposure.
 
 ---
 
@@ -2752,9 +2752,9 @@ Doc ID: Institutional-Vaults/overview
 Public URL: https://docs.concrete.xyz/Institutional-Vaults/overview/
 In active sidebar: yes
 Description: Concrete documentation for Institutional Vaults, covering who they are designed for, how permissioned access works, and examples of restricted vaults.
-**Concrete Institutional Vaults** are vaults displayed on the Concrete platform that are designed for specific institutional, professional, or otherwise permissioned participants, and may include strategies or asset types that require additional access controls, eligibility checks, or approval before a user can participate.
+**Concrete Institutional Vaults** are vaults displayed on the Concrete platform that are designed for specific institutional, professional, or otherwise permissioned participants, and may include strategies or asset types that require additional access controls, eligibility checks, or approval before a user can participate. These permissions depend on the vault.
 
-On the front end, Institutional Vaults appear as **"Permission Required"** to indicate that access is restricted. Users who do not have the required permissions will not be able to deposit into these vaults. Examples of Institutional Vaults may include permissioned RWA-focused vaults, such as **[RWA](https://docs.concrete.xyz/glossary/#rwa) [USD1](https://docs.concrete.xyz/glossary/#usd1)**, where access is limited to approved participants.
+In the Earn application, Institutional Vaults appear as **"Permission Required"** to indicate that access is restricted. Users who do not have the required permissions will not be able to deposit into these vaults. Examples of Institutional Vaults may include permissioned RWA-focused vaults, such as **[RWA](https://docs.concrete.xyz/glossary/#rwa) [USD1](https://docs.concrete.xyz/glossary/#usd1)**, where access is limited to approved participants. If you wish to participate in such an offering, please contact [support@blueprintfinance.com](mailto:support@blueprintfinance.com).
 
 ---
 
@@ -2763,10 +2763,14 @@ Source: src/05-Institutional-Vaults/assetcx.md
 Doc ID: Institutional-Vaults/assetcx
 Public URL: https://docs.concrete.xyz/Institutional-Vaults/assetcx/
 In active sidebar: yes
-Description: Concrete documentation for AssetCX, covering qualified custody, on-chain representation of custodied assets, and how to request access.
-AssetCX enables eligible assets held with a Qualified Custodian to be represented on-chain and used in Concrete vaults. For example, with [WLFIcx](https://docs.concrete.xyz/glossary/#wlficx), [WLFI](https://docs.concrete.xyz/glossary/#wlfi) held at BitGo can be linked to a vault position while remaining in qualified custody. The assets never leave your trusted Qualified Custodian. Assets that were previously idle can now be used as collateral to earn a return.
+Description: Concrete documentation for AssetCX, covering how custodied assets are minted 1:1 for use in Concrete vaults, how vault shares and yield work, and how to request access.
+AssetCX allows assets in a custodian to be productive in [DeFi](https://docs.concrete.xyz/glossary/#defi) via Concrete vaults, whilst remaining in the client's custodial wallet.
 
-On the Concrete Earn app, AssetCX vaults are displayed with the naming convention `[asset]cx`, display "Permission Required" and will display the Qualified Custodian involved. If you wish to participate in this offering, please contact [support@blueprintfinance.com](mailto:support@blueprintfinance.com).
+Clients transfer assets to a designated wallet inside the client's custody account. Concrete mints AssetCX 1:1 against that custody balance and deposits it into your vault, and you receive vault shares at the vault's current exchange rate, the same as any [ERC-4626](https://docs.concrete.xyz/glossary/#erc-4626) vault. Those shares are your receipt for the deposit and any yield. Their value can rise or fall with strategy performance, but the strategies never touch your asset: AssetCX serves as collateral to borrow tokens, and only those borrowed tokens are deployed. Your AssetCX stays fully 1:1 backed throughout.
+
+Assets that were previously idle can now be used as collateral to earn a return.
+
+On the Concrete Earn app, AssetCX vaults are displayed with the naming convention `[asset]cx`, display "Permission Required". If you wish to participate in this offering, please contact [support@blueprintfinance.com](mailto:support@blueprintfinance.com).
 
 ---
 
@@ -2775,8 +2779,8 @@ Source: src/06-pre-deposit-vaults.md
 Doc ID: pre-deposit-vaults
 Public URL: https://docs.concrete.xyz/pre-deposit-vaults/
 In active sidebar: yes
-Description: Concrete documentation for Pre-Deposit Vaults, covering time-limited deposit opportunities, vault details, and eligibility requirements.
-**Pre-Deposit Vaults** are time-limited opportunities that allow users to deposit into a vault or strategy before it becomes fully active. Vault details may include the supported asset, deposit window, expected launch timing, eligibility requirements, and any applicable risks or restrictions.
+Description: Concrete documentation for Pre-Deposit Vaults, covering time-limited deposits that provide initial funding for new chains or tokenized strategies, and how deposits are returned.
+**Pre-Deposit Vaults** are time-limited opportunities that allow users to deposit into a vault in order to provide initial funding for a new chain or tokenized strategy. Pre-deposit vaults will either return a newly issued token or allow users to redeem their deposited capital but on a new chain. If you wish to set up a pre-deposit vault, please contact [support@blueprintfinance.com](mailto:support@blueprintfinance.com).
 
 ---
 
@@ -2815,7 +2819,65 @@ For more on support, see [Support](https://docs.concrete.xyz/support/). For more
 
 ---
 
-# Document 40: Audits
+# Document 40: Important Disclaimers
+Source: src/09-important-disclosures.md
+Doc ID: important-disclosures
+Public URL: https://docs.concrete.xyz/important-disclosures/
+In active sidebar: yes
+Description: Important disclaimers for Concrete vault products, covering regulatory protections, operational control, yield, smart contract, market, tax, and liability risks.
+Please read these Important Disclaimers carefully before depositing into, or delegating assets to, any Concrete vault product. References to “Concrete” mean the Concrete contracting entity identified in the governing agreements for the applicable product.
+
+## No Regulatory Protections
+
+THE PROVISIONS OF THE SECURITIES INVESTOR PROTECTION ACT OF 1970 (“SIPA”) AND THE FEDERAL DEPOSIT INSURANCE CORPORATION (“FDIC”) DO NOT APPLY TO ASSETS DELEGATED TO CONCRETE, AND NO GOVERNMENT DEPOSIT INSURANCE OR INVESTOR-PROTECTION SCHEME IN ANY JURISDICTION PROTECTS THOSE ASSETS. In the event of Concrete’s insolvency or default, recovery may be limited to the assets and collateral attributable to the relevant vault or strategy, which may constitute the primary or sole source of recovery.
+
+## Delegation of Operational Control
+
+When you delegate assets to Concrete, you transfer operational control over those assets to Concrete while retaining beneficial ownership as represented by your vault shares or equivalent entitlements under the governing agreements. Concrete has sole discretion to select protocols and venues, determine collateralization ratios, choose yield strategies, and manage all positions.
+
+## Yield Rates Not Guaranteed
+
+Concrete cannot and does not guarantee that any target yield rates can be achieved or maintained. Displayed performance may reflect execution cost rebates and strategy partner capital allocations, where applicable. Yields fluctuate based on market conditions, and Concrete reserves the right to adjust, refresh, or discontinue offered rates at any time based on changes in borrowing costs, strategy performance, risk assessments, or market liquidity. Concrete cannot guarantee that you will receive the most favorable rates available in the marketplace. Yield rates are subject to periodic review and adjustment based on prevailing conditions and Concrete’s cost of capital. You may withdraw your assets if dissatisfied with offered rates, subject to applicable procedures.
+
+## Smart Contract and [DeFi](https://docs.concrete.xyz/glossary/#defi) Protocol Risks
+
+Smart contracts may contain vulnerabilities or exploits that could result in loss of assets. DeFi protocols and venues where Concrete deploys assets are subject to smart contract exploits, protocol insolvency, oracle failures, governance attacks, and liquidity crises. If those protocols experience hacks or failures, assets deployed by Concrete could be lost, stolen, or inaccessible. Recovery of stolen assets may be delayed, partial, or impossible. Strategies rely on accurate price feeds; oracle failures could trigger unwarranted liquidations. Concrete implements continuous position monitoring, daily position reconciliation, and conservative collateralization ratios to mitigate these risks but cannot eliminate them.
+
+## Market and Liquidation Risks
+
+Where a vault strategy involves borrowing, a decline in collateral value relative to borrowed amounts may result in liquidation of Concrete’s positions and loss of collateral. If an underlying or reference asset experiences a significant price decline (including, for stablecoin-denominated products, a depeg event) this could trigger liquidation, with lenders under the relevant protocols having priority claims to the associated collateral. In liquidation scenarios, claims priority typically follows: (1) protocol lenders and liquidators as secured parties; (2) amounts owed to Concrete under the governing agreements, such as accrued fees; and (3) users through their vault shares. Losses affecting one portion of a pooled vault could impact all participants proportionally.
+
+## Tax Implications
+
+Yield earned on delegated assets may be characterized differently from other income types for tax purposes, potentially treated as ordinary income, interest income, or lending income depending on your jurisdiction. Concrete may be required to report your yield income to tax authorities. Withholding taxes may apply depending on your tax status and jurisdiction. Concrete is not required to compensate you for any adverse tax treatment. You should consult a qualified tax advisor before participating.
+
+## Withdrawal and Termination Rights
+
+You may request to withdraw delegated assets at any time, subject to operational mechanics, liquidity availability, unwinding of positions, custody transfer timing where applicable, and network conditions. Withdrawals may be delayed in extreme circumstances including smart contract failures or [DeFi](https://docs.concrete.xyz/glossary/#defi) protocol issues. Concrete reserves the right to terminate a product or your participation due to regulatory changes, risk management decisions, insolvency, breach of terms, or strategic decisions. Concrete may terminate and liquidate positions if you become insolvent, bankrupt, subject to receivership, unable to meet obligations, subject to regulatory actions, or breach representations.
+
+## Conflicts of Interest
+
+Concrete’s economic interest in maximizing spreads between yields earned and yields paid to users may conflict with your interest in receiving higher yields. Concrete’s counterparty selection may be influenced by relationships with protocols, token incentives available to Concrete, integration considerations, or strategic relationships rather than solely obtaining best rates for users. Concrete may transact with affiliates or related parties and may use operational proceeds for corporate purposes including trading or investments that may compete with user interests.
+
+## Availability and Eligibility
+
+Concrete products are not available in all jurisdictions, including jurisdictions on Concrete’s restricted list. Access is subject to eligibility requirements, applicable law, and acceptance of the governing agreements. It is your responsibility to ensure that your use of any Concrete product is lawful in your jurisdiction.
+
+## Regulatory and Liability Limitations
+
+Concrete products are subject to limited regulatory oversight and evolving regulations that could require product termination, impose new restrictions, affect tax treatment, or impact enforceability of rights. No regulatory authority has reviewed or endorsed any Concrete product. Concrete is not liable for [DeFi](https://docs.concrete.xyz/glossary/#defi) protocol failures, market fluctuations, inability to achieve target returns, third-party failures, regulatory changes, or force majeure events. Concrete’s liability is limited as set out in the governing agreements for the applicable product, which control in all cases.
+
+## Acknowledgments and Governing Provisions
+
+By depositing into or delegating assets to any Concrete product, you acknowledge that you have read and understand these disclaimers and the risks described herein, including lack of regulatory protections, liquidation risks, no guaranteed yields, smart contract and [DeFi](https://docs.concrete.xyz/glossary/#defi) risks, tax implications, Concrete’s profit model and conflicts of interest, and termination rights. Any disputes shall be resolved through binding arbitration per applicable agreements. In the event of any conflict between these disclaimers and executed or accepted agreements, those agreements shall govern.
+
+:::warning
+THESE DISCLAIMERS ARE PROVIDED FOR INFORMATIONAL PURPOSES ONLY AND DO NOT CONSTITUTE INVESTMENT, LEGAL, TAX, OR FINANCIAL ADVICE. CONSULT QUALIFIED ADVISORS BEFORE PARTICIPATING AND FOR ADVICE AS TO LEGAL, TAX AND ECONOMIC IMPLICATIONS. CONCRETE MAKES “FORWARD-LOOKING STATEMENTS,” WHICH DESCRIBE FUTURE EXPECTATIONS, PLANS, RESULTS OR STRATEGIES AND CAN OFTEN BE IDENTIFIED BY THE USE OF TERMINOLOGY SUCH AS “MAY,” “WILL,” “EXPECT,” “PLAN,” OR SIMILAR TERMINOLOGY. THESE STATEMENTS ARE BASED UPON CONCRETE’S CURRENT EXPECTATIONS, ASSUMPTIONS AND ESTIMATES, AND ARE NOT GUARANTEES. ACTUAL RESULTS MAY DIFFER MATERIALLY FROM THOSE CONTEMPLATED IN THESE STATEMENTS DUE TO A VARIETY OF RISKS AND UNCERTAINTIES. THIS DOCUMENT DOES NOT CONSTITUTE AN OFFER OR INVITATION OR SOLICITATION OF ANY OFFER TO SELL, PURCHASE, DELEGATE OR LOAN ANY SECURITIES AND IS NOT INTENDED, AND DOES NOT, CREATE A BINDING OR ENFORCEABLE AGREEMENT ON THE PART OF CONCRETE.
+:::
+
+---
+
+# Document 41: Audits
 Source: src/06-Audits.md
 Doc ID: Audits
 Public URL: https://docs.concrete.xyz/Audits/
@@ -3031,7 +3093,7 @@ Stay tuned for upcoming enhancements and future audits as we expand our security
 
 ---
 
-# Document 41: Risks and Safety
+# Document 42: Risks and Safety
 Source: src/07-risks-and-safety.md
 Doc ID: risks-and-safety
 Public URL: https://docs.concrete.xyz/risks-and-safety/
@@ -3138,7 +3200,7 @@ Access to Concrete products is not available in every jurisdiction. Before depos
 
 ---
 
-# Document 42: Restricted Jurisdictions
+# Document 43: Restricted Jurisdictions
 Source: src/08-restricted-jurisdictions.md
 Doc ID: restricted-jurisdictions
 Public URL: https://docs.concrete.xyz/restricted-jurisdictions/
@@ -3159,64 +3221,6 @@ These restrictions are in place to comply with sanctions that limit access to fi
 
 :::note
 This list is subject to updates based on changes in international regulatory and sanction frameworks. Please check this page regularly for the latest information.
-:::
-
----
-
-# Document 43: Important Disclaimers
-Source: src/09-important-disclosures.md
-Doc ID: important-disclosures
-Public URL: https://docs.concrete.xyz/important-disclosures/
-In active sidebar: yes
-Description: Important disclaimers for Concrete vault products, covering regulatory protections, operational control, yield, smart contract, market, tax, and liability risks.
-Please read these Important Disclaimers carefully before depositing into, or delegating assets to, any Concrete vault product. References to “Concrete” mean the Concrete contracting entity identified in the governing agreements for the applicable product.
-
-## No Regulatory Protections
-
-THE PROVISIONS OF THE SECURITIES INVESTOR PROTECTION ACT OF 1970 (“SIPA”) AND THE FEDERAL DEPOSIT INSURANCE CORPORATION (“FDIC”) DO NOT APPLY TO ASSETS DELEGATED TO CONCRETE, AND NO GOVERNMENT DEPOSIT INSURANCE OR INVESTOR-PROTECTION SCHEME IN ANY JURISDICTION PROTECTS THOSE ASSETS. In the event of Concrete’s insolvency or default, recovery may be limited to the assets and collateral attributable to the relevant vault or strategy, which may constitute the primary or sole source of recovery.
-
-## Delegation of Operational Control
-
-When you delegate assets to Concrete, you transfer operational control over those assets to Concrete while retaining beneficial ownership as represented by your vault shares or equivalent entitlements under the governing agreements. Concrete has sole discretion to select protocols and venues, determine collateralization ratios, choose yield strategies, and manage all positions.
-
-## Yield Rates Not Guaranteed
-
-Concrete cannot and does not guarantee that any target yield rates can be achieved or maintained. Displayed performance may reflect execution cost rebates and strategy partner capital allocations, where applicable. Yields fluctuate based on market conditions, and Concrete reserves the right to adjust, refresh, or discontinue offered rates at any time based on changes in borrowing costs, strategy performance, risk assessments, or market liquidity. Concrete cannot guarantee that you will receive the most favorable rates available in the marketplace. Yield rates are subject to periodic review and adjustment based on prevailing conditions and Concrete’s cost of capital. You may withdraw your assets if dissatisfied with offered rates, subject to applicable procedures.
-
-## Smart Contract and [DeFi](https://docs.concrete.xyz/glossary/#defi) Protocol Risks
-
-Smart contracts may contain vulnerabilities or exploits that could result in loss of assets. DeFi protocols and venues where Concrete deploys assets are subject to smart contract exploits, protocol insolvency, oracle failures, governance attacks, and liquidity crises. If those protocols experience hacks or failures, assets deployed by Concrete could be lost, stolen, or inaccessible. Recovery of stolen assets may be delayed, partial, or impossible. Strategies rely on accurate price feeds; oracle failures could trigger unwarranted liquidations. Concrete implements continuous position monitoring, daily position reconciliation, and conservative collateralization ratios to mitigate these risks but cannot eliminate them.
-
-## Market and Liquidation Risks
-
-Where a vault strategy involves borrowing, a decline in collateral value relative to borrowed amounts may result in liquidation of Concrete’s positions and loss of collateral. If an underlying or reference asset experiences a significant price decline (including, for stablecoin-denominated products, a depeg event) this could trigger liquidation, with lenders under the relevant protocols having priority claims to the associated collateral. In liquidation scenarios, claims priority typically follows: (1) protocol lenders and liquidators as secured parties; (2) amounts owed to Concrete under the governing agreements, such as accrued fees; and (3) users through their vault shares. Losses affecting one portion of a pooled vault could impact all participants proportionally.
-
-## Tax Implications
-
-Yield earned on delegated assets may be characterized differently from other income types for tax purposes, potentially treated as ordinary income, interest income, or lending income depending on your jurisdiction. Concrete may be required to report your yield income to tax authorities. Withholding taxes may apply depending on your tax status and jurisdiction. Concrete is not required to compensate you for any adverse tax treatment. You should consult a qualified tax advisor before participating.
-
-## Withdrawal and Termination Rights
-
-You may request to withdraw delegated assets at any time, subject to operational mechanics, liquidity availability, unwinding of positions, custody transfer timing where applicable, and network conditions. Withdrawals may be delayed in extreme circumstances including smart contract failures or [DeFi](https://docs.concrete.xyz/glossary/#defi) protocol issues. Concrete reserves the right to terminate a product or your participation due to regulatory changes, risk management decisions, insolvency, breach of terms, or strategic decisions. Concrete may terminate and liquidate positions if you become insolvent, bankrupt, subject to receivership, unable to meet obligations, subject to regulatory actions, or breach representations.
-
-## Conflicts of Interest
-
-Concrete’s economic interest in maximizing spreads between yields earned and yields paid to users may conflict with your interest in receiving higher yields. Concrete’s counterparty selection may be influenced by relationships with protocols, token incentives available to Concrete, integration considerations, or strategic relationships rather than solely obtaining best rates for users. Concrete may transact with affiliates or related parties and may use operational proceeds for corporate purposes including trading or investments that may compete with user interests.
-
-## Availability and Eligibility
-
-Concrete products are not available in all jurisdictions, including jurisdictions on Concrete’s restricted list. Access is subject to eligibility requirements, applicable law, and acceptance of the governing agreements. It is your responsibility to ensure that your use of any Concrete product is lawful in your jurisdiction.
-
-## Regulatory and Liability Limitations
-
-Concrete products are subject to limited regulatory oversight and evolving regulations that could require product termination, impose new restrictions, affect tax treatment, or impact enforceability of rights. No regulatory authority has reviewed or endorsed any Concrete product. Concrete is not liable for [DeFi](https://docs.concrete.xyz/glossary/#defi) protocol failures, market fluctuations, inability to achieve target returns, third-party failures, regulatory changes, or force majeure events. Concrete’s liability is limited as set out in the governing agreements for the applicable product, which control in all cases.
-
-## Acknowledgments and Governing Provisions
-
-By depositing into or delegating assets to any Concrete product, you acknowledge that you have read and understand these disclaimers and the risks described herein, including lack of regulatory protections, liquidation risks, no guaranteed yields, smart contract and [DeFi](https://docs.concrete.xyz/glossary/#defi) risks, tax implications, Concrete’s profit model and conflicts of interest, and termination rights. Any disputes shall be resolved through binding arbitration per applicable agreements. In the event of any conflict between these disclaimers and executed or accepted agreements, those agreements shall govern.
-
-:::warning
-THESE DISCLAIMERS ARE PROVIDED FOR INFORMATIONAL PURPOSES ONLY AND DO NOT CONSTITUTE INVESTMENT, LEGAL, TAX, OR FINANCIAL ADVICE. CONSULT QUALIFIED ADVISORS BEFORE PARTICIPATING AND FOR ADVICE AS TO LEGAL, TAX AND ECONOMIC IMPLICATIONS. CONCRETE MAKES “FORWARD-LOOKING STATEMENTS,” WHICH DESCRIBE FUTURE EXPECTATIONS, PLANS, RESULTS OR STRATEGIES AND CAN OFTEN BE IDENTIFIED BY THE USE OF TERMINOLOGY SUCH AS “MAY,” “WILL,” “EXPECT,” “PLAN,” OR SIMILAR TERMINOLOGY. THESE STATEMENTS ARE BASED UPON CONCRETE’S CURRENT EXPECTATIONS, ASSUMPTIONS AND ESTIMATES, AND ARE NOT GUARANTEES. ACTUAL RESULTS MAY DIFFER MATERIALLY FROM THOSE CONTEMPLATED IN THESE STATEMENTS DUE TO A VARIETY OF RISKS AND UNCERTAINTIES. THIS DOCUMENT DOES NOT CONSTITUTE AN OFFER OR INVITATION OR SOLICITATION OF ANY OFFER TO SELL, PURCHASE, DELEGATE OR LOAN ANY SECURITIES AND IS NOT INTENDED, AND DOES NOT, CREATE A BINDING OR ENFORCEABLE AGREEMENT ON THE PART OF CONCRETE.
 :::
 
 ---
@@ -3364,10 +3368,6 @@ This page indexes the acronyms, token tickers, and technical short-forms that sh
 <a id="wbtc"></a>**WBTC** – Wrapped Bitcoin. An ERC-20 token backed 1:1 by BTC custodied off-chain. See [Live Vaults](https://docs.concrete.xyz/Live-Vaults/).
 
 <a id="weth"></a>**WETH** – Wrapped Ether. An ERC-20 representation of ETH used in protocols that expect ERC-20 tokens.
-
-<a id="wlfi"></a>**WLFI** – The governance token of World Liberty Financial.
-
-<a id="wlficx"></a>**WLFIcx** – The AssetCX representation of WLFI: WLFI held with a Qualified Custodian, represented on-chain for use in Concrete vaults. See [AssetCX](https://docs.concrete.xyz/Institutional-Vaults/assetcx/).
 
 ---
 
