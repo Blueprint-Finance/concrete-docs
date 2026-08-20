@@ -112,7 +112,7 @@ This page indexes the acronyms, token tickers, and technical short-forms that sh
 
 ## T
 
-<a id="tac"></a>**TAC** – TAC Network. The blockchain that hosted the TAC Stone, TAC LevelUSD, and TAC Renzo pre-deposit vaults. See [Completed Campaigns](/Completed-Campaigns/overview/).
+<a id="tac"></a>**TAC** – TAC Network. The blockchain that hosted the TAC Stone, TAC LevelUSD, and TAC Renzo pre-deposit vaults. See [Completed Campaigns](/completed-campaigns/).
 
 <a id="ts"></a>**TS** – TypeScript.
 

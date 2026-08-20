@@ -95,13 +95,7 @@ const sidebars = {
 
     'pre-deposit-vaults',
 
-    {
-      type: 'category',
-      label: 'Completed Campaigns',
-      items: [
-        'Completed-Campaigns/overview',
-      ],
-    },
+    'completed-campaigns',
 
     'important-disclosures',
     'Audits',
