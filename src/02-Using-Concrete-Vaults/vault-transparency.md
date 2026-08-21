@@ -37,7 +37,7 @@ The panel reads `GET /v1/vault:transparency/stats` with the vault address and ch
 - `totalPortfolioAssetsOffchainUsd` – total [USD](/glossary/#usd) value of the off-chain portfolio.
 - `byAsset` – per-asset rows with `symbol`, `amount`, `amountUsd`, and optional `logoUrl`.
 - `byProtocol` – per-protocol rows with `name`, `amountUsd`, and optional `logoUrl`.
-- `byPlatform` – per-network rows with `platformId` and `amountUsd`.
+- `byPlatform` – per-network rows with `platformId`, `amountUsd`, and optional `logoUrl`.
 - `timestamp` – when the breakdown was captured.
 
 The **Assets**, **Protocols**, and **Networks** tabs map to `byAsset`, `byProtocol`, and `byPlatform` respectively.
