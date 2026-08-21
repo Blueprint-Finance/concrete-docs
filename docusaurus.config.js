@@ -98,20 +98,14 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
-      // Replace with your project's social card
-      image: 'img/concrete-mark.png',
+      image: 'img/og-image.png',
       metadata: [
-        { name: 'twitter:card', content: 'summary_large_image' },
-        { name: 'twitter:title', content: 'Concrete Docs' },
-        { name: 'twitter:description', content: 'Official Concrete documentation for on-chain yield infrastructure, Earn V2, SDK integrations, vault operations, and risk disclosures.' },
-        { name: 'twitter:image', content: 'https://docs.concrete.xyz/img/concrete-mark.png' },
         { name: 'twitter:site', content: '@ConcreteXYZ' },
-        { property: 'og:title', content: 'Concrete Docs' },
-        { property: 'og:description', content: 'Official Concrete documentation for on-chain yield infrastructure, Earn V2, SDK integrations, vault operations, and risk disclosures.' },
         { property: 'og:type', content: 'website' },
-        { property: 'og:url', content: 'https://docs.concrete.xyz/' },
         { property: 'og:site_name', content: 'Concrete Docs' },
-        { property: 'og:image', content: 'https://docs.concrete.xyz/img/concrete-mark.png' },
+        { property: 'og:title', content: 'Concrete Docs' },
+        { name: 'description', content: 'Official Concrete documentation for on-chain yield infrastructure, Earn V2, SDK integrations, vault operations, and risk disclosures.' },
+        { property: 'og:description', content: 'Official Concrete documentation for on-chain yield infrastructure, Earn V2, SDK integrations, vault operations, and risk disclosures.' },
       ],
       navbar: {
         logo: {
@@ -272,7 +266,7 @@ const config = {
 
           { from: '/Vaults/WBTC/wbtc-vault-migration-to-earn-v2', to: '/Live-Vaults/wbtc-vault' },
           { from: '/Vaults/DeFi-USDT/how-withdrawals-are-processed', to: '/Live-Vaults/DeFi-USDT/how-withdrawals-are-processed' },
-          { from: '/Vaults/DeFi-USDT/important-disclosures', to: '/Live-Vaults/DeFi-USDT/important-disclosures' },
+          { from: '/Vaults/DeFi-USDT/important-disclosures', to: '/important-disclosures' },
 
           { from: '/fees', to: '/Using-Concrete-Vaults/fees' },
           { from: '/rewards', to: '/Using-Concrete-Vaults/concrete-points' },
@@ -283,6 +277,9 @@ const config = {
           { from: '/Audits/overview', to: '/Audits' },
           { from: '/Audits/restricted-jurisdictions', to: '/restricted-jurisdictions' },
           { from: '/Audits/risks-and-safety', to: '/risks-and-safety' },
+
+          // CONC-4293 Important Disclosures promoted to a standalone article
+          { from: '/Live-Vaults/DeFi-USDT/important-disclosures', to: '/important-disclosures' },
         ],
       },
     ],

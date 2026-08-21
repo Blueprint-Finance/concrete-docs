@@ -42,5 +42,5 @@ Yes. Your position continues to earn yield until your withdrawal is processed.
 Yes, but only before processing has begun. Once your request enters processing at the scheduled cutoff, it can no longer be cancelled.
 
 :::note
-All withdrawals are subject to the specific terms of this vault. See [Important Disclosures](./important-disclosures.md).
+All withdrawals are subject to the specific terms of this vault. See [Important Disclaimers](/important-disclosures).
 :::
