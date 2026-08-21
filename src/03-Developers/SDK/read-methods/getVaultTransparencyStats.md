@@ -45,11 +45,12 @@ type VaultTransparencyStats = {
   byPlatform: {
     platformId: string;
     amountUsd: number;
+    logoUrl: string | null;
   }[];
 };
 ```
 
-`byPlatform` rows do not include `logoUrl`. `timestamp` is an ISO-style string indicating when the breakdown was captured.
+`byPlatform` rows include `logoUrl`, which is `null` when no logo is available. `timestamp` is an ISO-style string indicating when the breakdown was captured.
 
 ## Example
 
