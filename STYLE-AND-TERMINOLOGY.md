@@ -408,23 +408,9 @@ items feed the translation map in Part 3.
 - **Concrete Enterprise** – the partner offering for deploying custom vaults.
   _Source: `src/03-Developers/SDK/quick-start.md`._
 - **Concrete Points** – the incentive points distributed to users. Capitalized.
-  _Source: `src/02-Using-Concrete-Vaults/concrete-points.md`._
+  _Source: `src/02-Using-Concrete-Vaults/concrete-points.md`, `src/05-Completed-Campaigns/corn.md`._
 - **Portfolio** – the in-app tab where a user tracks positions and withdrawal
   status. Capitalized when naming the tab. _Source: `src/02-Using-Concrete-Vaults/withdraw.md`._
-- **Live Vaults** – the active vaults available through the Concrete platform.
-  Title Case as the section name. _Source: `src/04-Live-Vaults/index.md`._
-- **Institutional Vaults** – vaults designed for institutional, professional, or
-  otherwise permissioned participants; shown as "Permission Required" in the
-  app. Title Case as the section name. _Source: `src/05-Institutional-Vaults/overview.md`._
-- **AssetCX** – the offering that represents assets held with a Qualified
-  Custodian on-chain for use in Concrete vaults; vault tickers follow the
-  `[asset]cx` pattern. _Source: `src/05-Institutional-Vaults/assetcx.md`._
-- **Qualified Custodian** – the regulated custodian holding assets represented
-  through AssetCX. Capitalized. _Source: `src/05-Institutional-Vaults/assetcx.md`._
-- **Pre-Deposit Vaults** – time-limited opportunities to deposit into a vault or
-  strategy before it becomes fully active. Title Case as the section name;
-  lowercase "pre-deposit vault" for the mechanism (see Vault mechanics).
-  _Source: `src/06-pre-deposit-vaults.md`._
 
 ### Vault mechanics
 
@@ -446,7 +432,7 @@ items feed the translation map in Part 3.
 - **exchange rate / share price** – the conversion ratio between shares and the
   underlying asset; moves with yield. _Source: `src/02-Using-Concrete-Vaults/concrete-vault-shares.md`._
 - **NAV (Net Asset Value)** – the total value of a vault, updated daily in
-  Earn V2. Expand on first use per page. _Source: `src/glossary.md`._
+  Earn V2. Expand on first use per page. _Source: `src/04-Live-Vaults/wbtc-vault.md`._
 - **strategy / yield strategies** – the smart contracts that deploy capital to
   earn yield (lending on Aave, liquidity on Pendle, and similar). Avoid
   "protocol adapter" or "yield module". _Source: `src/02-Using-Concrete-Vaults/withdraw.md`, `src/03-Developers/architecture-core-concepts.md`._
@@ -464,8 +450,9 @@ items feed the translation map in Part 3.
   Hook Manager. _Source: `src/03-Developers/architecture-core-concepts.md`._
 - **Fee Splitter** – the contract that routes fees between recipients with a
   configurable share. _Source: `src/03-Developers/architecture-core-concepts.md`._
-- **pre-deposit vault** – a vault or strategy that accepts deposits for a
-  limited window before it becomes fully active. _Source: `src/06-pre-deposit-vaults.md`._
+- **pre-deposit vault** – a vault that accepts deposits on one chain before
+  launching on another; withdrawals are disabled until users claim their shares
+  on the destination chain. _Source: `src/05-Completed-Campaigns/bera.md`._
 
 ### Withdrawals
 
@@ -511,7 +498,7 @@ items feed the translation map in Part 3.
 - **risk-adjusted yield / risk-adjusted return** – yield optimized for the
   risk and return profile rather than headline APY. _Source: `src/01-Overview/welcome.md`, `src/03-Developers/architecture-core-concepts.md`._
 - **yield accrual / accrued yield** – the accumulation of returns over time.
-  _Source: `src/01-Overview/yield-vaults-and-erc-4626-standard.md`._
+  _Source: `src/01-Overview/yield-vaults-and-erc-4626-standard.md`, `src/05-Completed-Campaigns/pre-deposit-campaigns.md`._
 - **APY** – annual percentage yield; "notional APY" where the vault reports a
   notional figure in the base asset. _Source: `src/02-Using-Concrete-Vaults/fees.md`, `src/01-Overview/yield-vaults-and-erc-4626-standard.md`._
 - **TVL (Total Value Locked)** – the aggregate value held across vaults.
@@ -538,11 +525,11 @@ lowercase "curator".
 - **management fee** – an annualized charge on vault AUM, paid by minting shares. Capped at 10%; standard configuration around 1.5%. Lowercase. _Source: `src/02-Using-Concrete-Vaults/fees.md`._
 - **performance fee** – a charge on net positive yield, paid by minting shares. Capped at 100% of net positive yield. Lowercase. _Source: `src/02-Using-Concrete-Vaults/fees.md`._
 - **no deposit, withdrawal, or maintenance fees** – Concrete Earn charges none of these. _Source: `src/02-Using-Concrete-Vaults/fees.md`._
-- **BGT (Berachain Governance Token)** – earned in some Berachain vaults. _Source: `src/glossary.md`._
+- **BGT (Berachain Governance Token)** – earned in some Berachain vaults. _Source: `src/05-Completed-Campaigns/bera.md`._
 
 ### Assets and chains
 
-- Asset tickers are uppercase: USDC, USDT, USD1, ETH, BTC, WBTC, WLFI, frxUSD, WBERA. AssetCX representations append a lowercase "cx" to the ticker (WLFIcx).
+- Asset tickers are uppercase: USDC, USDT, ETH, BTC, WBTC, frxUSD, WBERA.
 - Chain and vault names are capitalized: Berachain (Bera), Corn, Morph, Tac, Stable, WBTC, Concrete DeFi USDT.
 
 ---

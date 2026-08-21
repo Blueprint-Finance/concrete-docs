@@ -239,7 +239,7 @@ const config = {
 
           { from: '/Earn/deposit-into-vaults', to: '/Using-Concrete-Vaults/deposit' },
           { from: '/Earn/ct-assets', to: '/Using-Concrete-Vaults/concrete-vault-shares' },
-          { from: '/Earn/pre-deposit-vaults', to: '/pre-deposit-vaults' },
+          { from: '/Earn/pre-deposit-vaults', to: '/Completed-Campaigns/pre-deposit-campaigns' },
           { from: '/Earn/how-earn-vaults-maximize-risk-adjusted-yields', to: '/Overview/yield-vaults-and-erc-4626-standard' },
 
           { from: '/Vaults/yield-vaults', to: '/Overview/yield-vaults-and-erc-4626-standard' },
@@ -248,24 +248,24 @@ const config = {
           { from: '/Vaults/how-withdrawals-work', to: '/Using-Concrete-Vaults/withdraw' },
           { from: '/Vaults/bridging-with-enso', to: '/Using-Concrete-Vaults/bridging-and-depositing-with-enso' },
 
-          { from: '/Vaults/Bera/wbera', to: '/Completed-Campaigns/overview' },
+          { from: '/Vaults/Bera/wbera', to: '/Completed-Campaigns/bera' },
           { from: '/Vaults/Bera/request-address-change', to: '/support' },
-          { from: '/Vaults/Bera/pre-deposit-vaults-deprecation-guide', to: '/Completed-Campaigns/overview' },
-          { from: '/Vaults/Bera/boyco-depositors-claim', to: '/Completed-Campaigns/overview' },
-          { from: '/Vaults/Bera/claim-and-transfer', to: '/Completed-Campaigns/overview' },
-          { from: '/Vaults/Bera/claim-rewards', to: '/Completed-Campaigns/overview' },
-          { from: '/Vaults/Bera/how-to-withdraw', to: '/Completed-Campaigns/overview' },
-          { from: '/Vaults/Bera/unclaimed-rewards', to: '/Completed-Campaigns/overview' },
+          { from: '/Vaults/Bera/pre-deposit-vaults-deprecation-guide', to: '/Completed-Campaigns/bera' },
+          { from: '/Vaults/Bera/boyco-depositors-claim', to: '/Completed-Campaigns/bera' },
+          { from: '/Vaults/Bera/claim-and-transfer', to: '/Completed-Campaigns/bera' },
+          { from: '/Vaults/Bera/claim-rewards', to: '/Completed-Campaigns/bera' },
+          { from: '/Vaults/Bera/how-to-withdraw', to: '/Completed-Campaigns/bera' },
+          { from: '/Vaults/Bera/unclaimed-rewards', to: '/Completed-Campaigns/bera' },
 
-          { from: '/Vaults/Stable/stable-vaults', to: '/Completed-Campaigns/overview' },
-          { from: '/Vaults/Stable/claim', to: '/Completed-Campaigns/overview' },
+          { from: '/Vaults/Stable/stable-vaults', to: '/Completed-Campaigns/stable' },
+          { from: '/Vaults/Stable/claim', to: '/Completed-Campaigns/stable' },
 
-          { from: '/Vaults/Corn/overview', to: '/Completed-Campaigns/overview' },
-          { from: '/Vaults/Morph/overview', to: '/Completed-Campaigns/overview' },
-          { from: '/Vaults/Tac/vault-deprecation-guide', to: '/Completed-Campaigns/overview' },
+          { from: '/Vaults/Corn/overview', to: '/Completed-Campaigns/corn' },
+          { from: '/Vaults/Morph/overview', to: '/Completed-Campaigns/morph' },
+          { from: '/Vaults/Tac/vault-deprecation-guide', to: '/Completed-Campaigns/tac' },
 
-          { from: '/Vaults/WBTC/wbtc-vault-migration-to-earn-v2', to: '/Live-Vaults/' },
-          { from: '/Vaults/DeFi-USDT/how-withdrawals-are-processed', to: '/Live-Vaults/' },
+          { from: '/Vaults/WBTC/wbtc-vault-migration-to-earn-v2', to: '/Live-Vaults/wbtc-vault' },
+          { from: '/Vaults/DeFi-USDT/how-withdrawals-are-processed', to: '/Live-Vaults/DeFi-USDT/how-withdrawals-are-processed' },
           { from: '/Vaults/DeFi-USDT/important-disclosures', to: '/important-disclosures' },
 
           { from: '/fees', to: '/Using-Concrete-Vaults/fees' },
@@ -280,16 +280,6 @@ const config = {
 
           // CONC-4293 Important Disclosures promoted to a standalone article
           { from: '/Live-Vaults/DeFi-USDT/important-disclosures', to: '/important-disclosures' },
-
-          // CONC-4294 pre-TGE navigation restructure
-          { from: '/Live-Vaults/wbtc-vault', to: '/Live-Vaults/' },
-          { from: '/Live-Vaults/DeFi-USDT/how-withdrawals-are-processed', to: '/Live-Vaults/' },
-          { from: '/Completed-Campaigns/bera', to: '/Completed-Campaigns/overview' },
-          { from: '/Completed-Campaigns/stable', to: '/Completed-Campaigns/overview' },
-          { from: '/Completed-Campaigns/corn', to: '/Completed-Campaigns/overview' },
-          { from: '/Completed-Campaigns/morph', to: '/Completed-Campaigns/overview' },
-          { from: '/Completed-Campaigns/tac', to: '/Completed-Campaigns/overview' },
-          { from: '/Completed-Campaigns/pre-deposit-campaigns', to: '/pre-deposit-vaults' },
         ],
       },
     ],
