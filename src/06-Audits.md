@@ -30,6 +30,12 @@ Concrete Protocol follows a multi-phased audit approach to deliver the highest l
    All audit results are made publicly accessible, reinforcing our commitment to transparency and accountability.
 
 
+## Earn v2 1.5 & AssetCx 1.3
+
+   - Date: July 13, 2026
+   - Auditor: Halborn
+   - [View the full report](/files/Earn_V2_1.5__AssetCx_1.3.pdf)
+
 ## Earn v2 1.4 & AssetCx 1.2
 
    - Date: May 19, 2026
