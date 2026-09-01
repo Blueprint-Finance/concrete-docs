@@ -1,6 +1,6 @@
 # Concrete Docs - LLM Full Context
 
-Generated: 2026-08-21T17:15:13.454Z
+Generated: 2026-09-01T19:08:41.633Z
 Source repository: concrete-docs
 Canonical docs URL: https://docs.concrete.xyz/
 
@@ -3914,6 +3914,7 @@ Description: Jurisdiction and access restrictions for Concrete services, includi
 At Concrete Protocol, we prioritize compliance with international laws and regulations. As part of this commitment, access to our services is restricted in certain jurisdictions, including:
 
 - **United States**: Restricted due to regulatory compliance requirements.
+- **Canada**: Restricted due to regulatory compliance requirements.
 - **OFAC-Sanctioned Countries**: These are countries and regions sanctioned by the Office of Foreign Assets Control ([OFAC](https://docs.concrete.xyz/glossary/#ofac)), including:
   - **North Korea**
   - **Iran**
