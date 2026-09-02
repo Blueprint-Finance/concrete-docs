@@ -416,11 +416,12 @@ items feed the translation map in Part 3.
 - **Institutional Vaults** – vaults designed for institutional, professional, or
   otherwise permissioned participants; shown as "Permission Required" in the
   app. Title Case as the section name. _Source: `src/05-Institutional-Vaults/overview.md`._
-- **AssetCX** – the offering that represents assets held with a Qualified
-  Custodian on-chain for use in Concrete vaults; vault tickers follow the
+- **AssetCX** – the offering that represents assets held in qualified custody
+  on-chain, 1:1, for use in Concrete vaults; vault tickers follow the
   `[asset]cx` pattern. _Source: `src/05-Institutional-Vaults/assetcx.md`._
-- **Qualified Custodian** – the regulated custodian holding assets represented
-  through AssetCX. Capitalized. _Source: `src/05-Institutional-Vaults/assetcx.md`._
+- **qualified custody (QC)** – custody of assets by a regulated custodian; the
+  underlying never leaves the QC environment. Lowercase; expand "QC" on first
+  use per page. _Source: `src/05-Institutional-Vaults/assetcx.md`, `src/glossary.md`._
 - **Pre-Deposit Vaults** – time-limited opportunities to deposit into a vault or
   strategy before it becomes fully active. Title Case as the section name;
   lowercase "pre-deposit vault" for the mechanism (see Vault mechanics).

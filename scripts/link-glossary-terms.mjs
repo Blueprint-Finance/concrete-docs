@@ -62,6 +62,7 @@ export const TERMS = [
   ['NAV', 'nav'],
   ['RPC', 'rpc'],
   ['RWA', 'rwa'],
+  ['QC', 'qc'],
   ['SDK', 'sdk'],
   ['TAC', 'tac'],
   ['TVL', 'tvl'],

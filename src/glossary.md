@@ -100,6 +100,10 @@ This page indexes the acronyms, token tickers, and technical short-forms that sh
 
 <a id="ofac"></a>**OFAC** – Office of Foreign Assets Control. The U.S. Treasury agency that administers economic sanctions and maintains restricted-jurisdiction lists.
 
+## Q
+
+<a id="qc"></a>**QC** – Qualified Custody. Assets held by a regulated custodian on a client's behalf. AssetCX represents such assets on-chain 1:1 without the underlying leaving custody. See [AssetCX](/Institutional-Vaults/assetcx/).
+
 ## R
 
 <a id="rpc"></a>**RPC** – Remote Procedure Call. The request/response interface a client uses to read from or send transactions to a blockchain node.
