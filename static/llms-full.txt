@@ -1,7 +1,7 @@
 # Concrete Docs - LLM Full Context
 
-Generated: 2026-09-01T19:08:41.633Z
-Source repository: concrete-docs
+Generated: 2026-09-02T13:59:20.772Z
+Source repository: docs
 Canonical docs URL: https://docs.concrete.xyz/
 
 This file consolidates every Markdown documentation page in `src/**/*.md` for retrieval and LLM ingestion. Active sidebar pages appear first in sidebar order; Markdown pages not present in the active sidebar follow afterward. Static binary/media assets are listed at the end by path and public URL.
@@ -2755,7 +2755,7 @@ In active sidebar: yes
 Description: Concrete documentation for Institutional Vaults, covering who they are designed for, how permissioned access works, and examples of restricted vaults.
 **Concrete Institutional Vaults** are vaults displayed on the Concrete platform that are designed for specific institutional, professional, or otherwise permissioned participants, and may include strategies or asset types that require additional access controls, eligibility checks, or approval before a user can participate. These permissions depend on the vault.
 
-In the Earn application, Institutional Vaults appear as **"Permission Required"** to indicate that access is restricted. Users who do not have the required permissions will not be able to deposit into these vaults. Examples of Institutional Vaults may include permissioned RWA-focused vaults, such as **[RWA](https://docs.concrete.xyz/glossary/#rwa) [USD1](https://docs.concrete.xyz/glossary/#usd1)**, where access is limited to approved participants. If you wish to participate in such an offering, please contact [support@blueprintfinance.com](mailto:support@blueprintfinance.com).
+In the Earn application, Institutional Vaults appear as **"Permission Required"** to indicate that access is restricted. Users who do not have the required permissions will not be able to deposit into these vaults. Examples of Institutional Vaults may include permissioned RWA-focused vaults, such as **[RWA](https://docs.concrete.xyz/glossary/#rwa) [USD1](https://docs.concrete.xyz/glossary/#usd1)**, where access is limited to approved participants. If you wish to participate in such an offering, please contact [support@blueprintfinance.com](mailto:support@blueprintfinance.com) for more information on our eligibility criteria.
 
 ---
 
@@ -2764,10 +2764,12 @@ Source: src/05-Institutional-Vaults/assetcx.md
 Doc ID: Institutional-Vaults/assetcx
 Public URL: https://docs.concrete.xyz/Institutional-Vaults/assetcx/
 In active sidebar: yes
-Description: Concrete documentation for AssetCX, covering how custodied assets are minted 1:1 for use in Concrete vaults, how vault shares and yield work, and how to request access.
-AssetCX allows assets in a custodian to be productive in [DeFi](https://docs.concrete.xyz/glossary/#defi) via Concrete vaults, whilst remaining in the client's custodial wallet.
+Description: Concrete documentation for AssetCX, covering how assets in qualified custody are minted 1:1 for use in Concrete vaults, how vault shares, yield, and losses work, and how to request access.
+AssetCX allows assets in qualified custody to be leveraged for certain [DeFi](https://docs.concrete.xyz/glossary/#defi) yield opportunities via Concrete vaults, whilst the underlying assets remain in clients' custodial wallets.
 
-Clients transfer assets to a designated wallet inside the client's custody account. Concrete mints AssetCX 1:1 against that custody balance and deposits it into your vault, and you receive vault shares at the vault's current exchange rate, the same as any [ERC-4626](https://docs.concrete.xyz/glossary/#erc-4626) vault. Those shares are your receipt for the deposit and any yield. Their value can rise or fall with strategy performance, but the strategies never touch your asset: AssetCX serves as collateral to borrow tokens, and only those borrowed tokens are deployed. Your AssetCX stays fully 1:1 backed throughout.
+Clients transfer assets to a designated wallet that is still within the custodian account. Concrete mints AssetCX 1:1 against that custody balance and deposits it into your vault, and you receive vault shares at the vault's current exchange rate, the same as any [ERC-4626](https://docs.concrete.xyz/glossary/#erc-4626) vault. Those shares are your receipt for the deposit and any yield. Yield raises the vault's total assets and exchange rate while the share supply stays constant. Losses are also reflected in the exchange rate. When a strategy loses value, an operator reduces the vault's reported total assets. The exchange rate falls for all holders proportionally.
+
+The core value proposition: qualified custody ([QC](https://docs.concrete.xyz/glossary/#qc)) assets that for compliance reasons cannot leave custody are represented on-chain at a 1:1 ratio to the custodied balance, so they earn yield while the underlying never leaves the QC environment. Your AssetCX stays fully 1:1 backed throughout.
 
 Assets that were previously idle can now be used as collateral to earn a return.
 
@@ -3334,6 +3336,10 @@ This page indexes the acronyms, token tickers, and technical short-forms that sh
 ## O
 
 <a id="ofac"></a>**OFAC** – Office of Foreign Assets Control. The U.S. Treasury agency that administers economic sanctions and maintains restricted-jurisdiction lists.
+
+## Q
+
+<a id="qc"></a>**QC** – Qualified Custody. Assets held by a regulated custodian on a client's behalf. AssetCX represents such assets on-chain 1:1 without the underlying leaving custody. See [AssetCX](https://docs.concrete.xyz/Institutional-Vaults/assetcx/).
 
 ## R
 
