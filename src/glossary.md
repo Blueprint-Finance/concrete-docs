@@ -100,9 +100,15 @@ This page indexes the acronyms, token tickers, and technical short-forms that sh
 
 <a id="ofac"></a>**OFAC** – Office of Foreign Assets Control. The U.S. Treasury agency that administers economic sanctions and maintains restricted-jurisdiction lists.
 
+## Q
+
+<a id="qc"></a>**QC** – Qualified Custody. Assets held by a regulated custodian on a client's behalf. AssetCX represents such assets on-chain 1:1 without the underlying leaving custody. See [AssetCX](/Institutional-Vaults/assetcx/).
+
 ## R
 
 <a id="rpc"></a>**RPC** – Remote Procedure Call. The request/response interface a client uses to read from or send transactions to a blockchain node.
+
+<a id="rwa"></a>**RWA** – Real-World Asset. A tokenized on-chain representation of an off-chain asset, such as a treasury bill or another traditional financial instrument.
 
 ## S
 
@@ -110,7 +116,7 @@ This page indexes the acronyms, token tickers, and technical short-forms that sh
 
 ## T
 
-<a id="tac"></a>**TAC** – TAC Network. The blockchain that hosted the TAC Stone, TAC LevelUSD, and TAC Renzo pre-deposit vaults. See [TAC](/Completed-Campaigns/tac/).
+<a id="tac"></a>**TAC** – TAC Network. The blockchain that hosted the TAC Stone, TAC LevelUSD, and TAC Renzo pre-deposit vaults. See [Completed Campaigns](/completed-campaigns/).
 
 <a id="ts"></a>**TS** – TypeScript.
 
@@ -124,6 +130,8 @@ This page indexes the acronyms, token tickers, and technical short-forms that sh
 
 <a id="usd"></a>**USD** – U.S. Dollar.
 
+<a id="usd1"></a>**USD1** – A U.S. dollar-pegged stablecoin issued by World Liberty Financial.
+
 <a id="usdc"></a>**USDC** – USD Coin. A U.S. dollar-pegged stablecoin issued by Circle.
 
 <a id="usdt"></a>**USDT** – Tether. A U.S. dollar-pegged stablecoin issued by Tether Operations.
@@ -134,6 +142,6 @@ This page indexes the acronyms, token tickers, and technical short-forms that sh
 
 ## W
 
-<a id="wbtc"></a>**WBTC** – Wrapped Bitcoin. An ERC-20 token backed 1:1 by BTC custodied off-chain. See [WBTC Vault](/Live-Vaults/wbtc-vault/).
+<a id="wbtc"></a>**WBTC** – Wrapped Bitcoin. An ERC-20 token backed 1:1 by BTC custodied off-chain. See [Live Vaults](/Live-Vaults/).
 
 <a id="weth"></a>**WETH** – Wrapped Ether. An ERC-20 representation of ETH used in protocols that expect ERC-20 tokens.

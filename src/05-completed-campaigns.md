@@ -1,7 +1,7 @@
 ---
-title: "Overview"
+title: "Completed Campaigns"
 description: "Overview of Concrete's completed vault campaigns, covering wind-down behavior, withdrawal paths, and how rewards remain claimable."
-sidebar_label: "Overview"
+sidebar_label: "Completed Campaigns"
 ---
 
 Some Concrete vaults run as time-bounded campaigns. When such a campaign reaches its end date, the vault transitions to withdraw-only mode through a controlled wind-down process. Once the campaign closes, the vault moves to the Completed Campaigns section of the [Concrete app](https://app.concrete.xyz/). If you still hold [ctAssets](/glossary/#ct-asset) from that vault, they remain accessible in the Portfolio tab.

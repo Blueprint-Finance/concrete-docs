@@ -201,12 +201,12 @@ const config = {
       '@docusaurus/plugin-client-redirects',
       {
         redirects: [
-          { from: '/Vaults/morphL2-vault-deprecation-guide', to: '/Completed-Campaigns/overview' },
-          { from: '/Vaults/Bera/vault-deprecation-guide', to: '/Completed-Campaigns/overview' },
-          { from: '/Vaults/Bera/berabaddies-earn-deprecation-guide', to: '/Completed-Campaigns/overview' },
-          { from: '/Vaults/Corn/vault-deprecation-guide', to: '/Completed-Campaigns/overview' },
-          { from: '/Vaults/Morph/vault-deprecation-guide', to: '/Completed-Campaigns/overview' },
-          { from: '/Vaults/deprecation-guide', to: '/Completed-Campaigns/overview' },
+          { from: '/Vaults/morphL2-vault-deprecation-guide', to: '/completed-campaigns' },
+          { from: '/Vaults/Bera/vault-deprecation-guide', to: '/completed-campaigns' },
+          { from: '/Vaults/Bera/berabaddies-earn-deprecation-guide', to: '/completed-campaigns' },
+          { from: '/Vaults/Corn/vault-deprecation-guide', to: '/completed-campaigns' },
+          { from: '/Vaults/Morph/vault-deprecation-guide', to: '/completed-campaigns' },
+          { from: '/Vaults/deprecation-guide', to: '/completed-campaigns' },
 
           // CONC-3738 IA restructure
           { from: '/Earn-V2/overview', to: '/Overview/yield-vaults-and-erc-4626-standard' },
@@ -239,33 +239,33 @@ const config = {
 
           { from: '/Earn/deposit-into-vaults', to: '/Using-Concrete-Vaults/deposit' },
           { from: '/Earn/ct-assets', to: '/Using-Concrete-Vaults/concrete-vault-shares' },
-          { from: '/Earn/pre-deposit-vaults', to: '/Completed-Campaigns/pre-deposit-campaigns' },
+          { from: '/Earn/pre-deposit-vaults', to: '/pre-deposit-vaults' },
           { from: '/Earn/how-earn-vaults-maximize-risk-adjusted-yields', to: '/Overview/yield-vaults-and-erc-4626-standard' },
 
           { from: '/Vaults/yield-vaults', to: '/Overview/yield-vaults-and-erc-4626-standard' },
           { from: '/Vaults/yield-strategies', to: '/Overview/yield-vaults-and-erc-4626-standard' },
-          { from: '/Vaults/completed-campaigns', to: '/Completed-Campaigns/overview' },
+          { from: '/Vaults/completed-campaigns', to: '/completed-campaigns' },
           { from: '/Vaults/how-withdrawals-work', to: '/Using-Concrete-Vaults/withdraw' },
           { from: '/Vaults/bridging-with-enso', to: '/Using-Concrete-Vaults/bridging-and-depositing-with-enso' },
 
-          { from: '/Vaults/Bera/wbera', to: '/Completed-Campaigns/bera' },
+          { from: '/Vaults/Bera/wbera', to: '/completed-campaigns' },
           { from: '/Vaults/Bera/request-address-change', to: '/support' },
-          { from: '/Vaults/Bera/pre-deposit-vaults-deprecation-guide', to: '/Completed-Campaigns/bera' },
-          { from: '/Vaults/Bera/boyco-depositors-claim', to: '/Completed-Campaigns/bera' },
-          { from: '/Vaults/Bera/claim-and-transfer', to: '/Completed-Campaigns/bera' },
-          { from: '/Vaults/Bera/claim-rewards', to: '/Completed-Campaigns/bera' },
-          { from: '/Vaults/Bera/how-to-withdraw', to: '/Completed-Campaigns/bera' },
-          { from: '/Vaults/Bera/unclaimed-rewards', to: '/Completed-Campaigns/bera' },
+          { from: '/Vaults/Bera/pre-deposit-vaults-deprecation-guide', to: '/completed-campaigns' },
+          { from: '/Vaults/Bera/boyco-depositors-claim', to: '/completed-campaigns' },
+          { from: '/Vaults/Bera/claim-and-transfer', to: '/completed-campaigns' },
+          { from: '/Vaults/Bera/claim-rewards', to: '/completed-campaigns' },
+          { from: '/Vaults/Bera/how-to-withdraw', to: '/completed-campaigns' },
+          { from: '/Vaults/Bera/unclaimed-rewards', to: '/completed-campaigns' },
 
-          { from: '/Vaults/Stable/stable-vaults', to: '/Completed-Campaigns/stable' },
-          { from: '/Vaults/Stable/claim', to: '/Completed-Campaigns/stable' },
+          { from: '/Vaults/Stable/stable-vaults', to: '/completed-campaigns' },
+          { from: '/Vaults/Stable/claim', to: '/completed-campaigns' },
 
-          { from: '/Vaults/Corn/overview', to: '/Completed-Campaigns/corn' },
-          { from: '/Vaults/Morph/overview', to: '/Completed-Campaigns/morph' },
-          { from: '/Vaults/Tac/vault-deprecation-guide', to: '/Completed-Campaigns/tac' },
+          { from: '/Vaults/Corn/overview', to: '/completed-campaigns' },
+          { from: '/Vaults/Morph/overview', to: '/completed-campaigns' },
+          { from: '/Vaults/Tac/vault-deprecation-guide', to: '/completed-campaigns' },
 
-          { from: '/Vaults/WBTC/wbtc-vault-migration-to-earn-v2', to: '/Live-Vaults/wbtc-vault' },
-          { from: '/Vaults/DeFi-USDT/how-withdrawals-are-processed', to: '/Live-Vaults/DeFi-USDT/how-withdrawals-are-processed' },
+          { from: '/Vaults/WBTC/wbtc-vault-migration-to-earn-v2', to: '/Live-Vaults/' },
+          { from: '/Vaults/DeFi-USDT/how-withdrawals-are-processed', to: '/Live-Vaults/' },
           { from: '/Vaults/DeFi-USDT/important-disclosures', to: '/important-disclosures' },
 
           { from: '/fees', to: '/Using-Concrete-Vaults/fees' },
@@ -280,6 +280,17 @@ const config = {
 
           // CONC-4293 Important Disclosures promoted to a standalone article
           { from: '/Live-Vaults/DeFi-USDT/important-disclosures', to: '/important-disclosures' },
+
+          // CONC-4294 pre-TGE navigation restructure
+          { from: '/Live-Vaults/wbtc-vault', to: '/Live-Vaults/' },
+          { from: '/Live-Vaults/DeFi-USDT/how-withdrawals-are-processed', to: '/Live-Vaults/' },
+          { from: '/Completed-Campaigns/overview', to: '/completed-campaigns' },
+          { from: '/Completed-Campaigns/bera', to: '/completed-campaigns' },
+          { from: '/Completed-Campaigns/stable', to: '/completed-campaigns' },
+          { from: '/Completed-Campaigns/corn', to: '/completed-campaigns' },
+          { from: '/Completed-Campaigns/morph', to: '/completed-campaigns' },
+          { from: '/Completed-Campaigns/tac', to: '/completed-campaigns' },
+          { from: '/Completed-Campaigns/pre-deposit-campaigns', to: '/pre-deposit-vaults' },
         ],
       },
     ],
