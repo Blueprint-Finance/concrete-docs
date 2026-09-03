@@ -8,6 +8,8 @@ on:
       - 'src/**/*.mdx'
       - 'sidebars.js'
       - 'scripts/generate-llms-full.mjs'
+      - '.github/workflows/generate-llms-full.yml'
+      - '.github/actions/sync-and-regenerate/**'
   issue_comment:
     types: [created]
 
@@ -29,7 +31,7 @@ jobs:
           ref: ${{ github.event.pull_request.head.ref }}
           fetch-depth: 0
 
-      - uses: Blueprint-Finance/concrete-docs/.github/actions/sync-and-regenerate@main
+      - uses: ./.github/actions/sync-and-regenerate
 
   regenerate-on-command:
     # Comment '/sync-llms' on an open PR by a collaborator forces a resync + regen.
@@ -68,4 +70,4 @@ jobs:
           fetch-depth: 0
 
       - if: steps.pr.outputs.skip != 'true'
-        uses: Blueprint-Finance/concrete-docs/.github/actions/sync-and-regenerate@main
+        uses: ./.github/actions/sync-and-regenerate
