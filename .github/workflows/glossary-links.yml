@@ -23,14 +23,15 @@ jobs:
   glossary-links:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
 
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v5
         with:
-          node-version: 20
+          node-version-file: ".tool-versions"
+          package-manager-cache: false
 
       - name: Run linker unit tests
-        run: node --test scripts/
+        run: node --test "scripts/**/*.test.mjs"
 
       - name: Check glossary links are up to date
         run: node scripts/link-glossary-terms.mjs --check
