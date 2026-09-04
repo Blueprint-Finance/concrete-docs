@@ -24,14 +24,15 @@ jobs:
   style-guide-citations:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
 
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v5
         with:
-          node-version: 20
+          node-version-file: ".tool-versions"
+          package-manager-cache: false
 
       - name: Run checker unit tests
-        run: node --test scripts/
+        run: node --test "scripts/**/*.test.mjs"
 
       - name: Check cited paths exist
         run: node scripts/check-style-guide-citations.mjs

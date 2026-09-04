@@ -8,6 +8,8 @@ on:
       - 'src/**/*.mdx'
       - 'sidebars.js'
       - 'scripts/generate-llms-full.mjs'
+      - '.github/workflows/generate-llms-full.yml'
+      - '.github/actions/sync-and-regenerate/**'
   issue_comment:
     types: [created]
 
@@ -24,12 +26,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout PR branch
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         with:
           ref: ${{ github.event.pull_request.head.ref }}
           fetch-depth: 0
 
-      - uses: Blueprint-Finance/concrete-docs/.github/actions/sync-and-regenerate@main
+      - uses: ./.github/actions/sync-and-regenerate
 
   regenerate-on-command:
     # Comment '/sync-llms' on an open PR by a collaborator forces a resync + regen.
@@ -62,10 +64,10 @@ jobs:
 
       - name: Checkout PR branch
         if: steps.pr.outputs.skip != 'true'
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         with:
           ref: ${{ steps.pr.outputs.ref }}
           fetch-depth: 0
 
       - if: steps.pr.outputs.skip != 'true'
-        uses: Blueprint-Finance/concrete-docs/.github/actions/sync-and-regenerate@main
+        uses: ./.github/actions/sync-and-regenerate
