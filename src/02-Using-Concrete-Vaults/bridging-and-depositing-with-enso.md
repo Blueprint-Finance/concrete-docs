@@ -36,7 +36,7 @@ For [ERC-20](/glossary/#erc-20) tokens such as [USDC](/glossary/#usdc), the app 
 
 Three things affect how much you receive. The app shows the estimates before you confirm.
 
-- **Slippage** – Cross-chain routes apply a fixed slippage tolerance of 3%, which you cannot change. The route does not execute if the price moves beyond that gap between quote and execution.
+- **Slippage** – Cross-chain routes apply a fixed slippage tolerance of 0.3%, which you cannot change. The route does not execute if the price moves beyond that gap between quote and execution.
 - **Price impact** – Large trades, or trades routed through low-liquidity pools, move the market price. Higher-liquidity assets such as [USDC](/glossary/#usdc) and [WETH](/glossary/#weth) usually have lower price impact; thinly traded or volatile assets have more.
 - **Gas** – Standard network gas applies on the source chain (destination execution is paid via the bridge fee, not as a separate user gas payment). The app shows an estimated gas cost in [ETH](/glossary/#eth) and [USD](/glossary/#usd).
 - **Bridge fees** – The underlying bridge protocol selected by Enso may charge a fee. Any such fee is already reflected in the final amount you receive.
