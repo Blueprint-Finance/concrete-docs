@@ -15,7 +15,6 @@ const isProd = vercelEnv === "production";
 const config = {
   title: 'Concrete Docs',
   tagline: 'Institutional-grade on-chain yield infrastructure documentation',
-  favicon: 'favicon.ico',
   headTags: [
     {
       tagName: 'link',
@@ -24,6 +23,10 @@ const config = {
     {
       tagName: 'link',
       attributes: { rel: 'icon', type: 'image/png', sizes: '96x96', href: '/favicon-96x96.png' },
+    },
+    {
+      tagName: 'link',
+      attributes: { rel: 'icon', type: 'image/x-icon', sizes: '48x48', href: '/favicon.ico' },
     },
     {
       tagName: 'link',
