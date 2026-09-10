@@ -15,7 +15,24 @@ const isProd = vercelEnv === "production";
 const config = {
   title: 'Concrete Docs',
   tagline: 'Institutional-grade on-chain yield infrastructure documentation',
-  favicon: 'img/logo.png',
+  headTags: [
+    {
+      tagName: 'link',
+      attributes: { rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' },
+    },
+    {
+      tagName: 'link',
+      attributes: { rel: 'icon', type: 'image/png', sizes: '96x96', href: '/favicon-96x96.png' },
+    },
+    {
+      tagName: 'link',
+      attributes: { rel: 'icon', type: 'image/x-icon', sizes: '48x48', href: '/favicon.ico' },
+    },
+    {
+      tagName: 'link',
+      attributes: { rel: 'apple-touch-icon', sizes: '180x180', href: '/apple-touch-icon.png' },
+    },
+  ],
   customFields: {
     metacrmApiKey: process.env.METACRM_API_KEY,
   },
