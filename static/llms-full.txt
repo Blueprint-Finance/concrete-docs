@@ -1,6 +1,6 @@
 # Concrete Docs - LLM Full Context
 
-Generated: 2026-09-10T14:18:53.185Z
+Generated: 2026-09-10T17:31:59.366Z
 Source repository: concrete-docs
 Canonical docs URL: https://docs.concrete.xyz/
 
@@ -502,7 +502,7 @@ The social campaign is powered by [**Fuul**](https://fuul.xyz).
 
 Concrete Points are earned through eligible on-chain activity across the Concrete protocol.
 
-Users earn Concrete Points by depositing into eligible Concrete Vaults and participating in the protocol.
+Users earn Concrete Points by depositing into eligible Concrete Vaults and participating in the protocol. This on-chain program runs alongside the social campaign.
 
 ### Bags
 
@@ -533,16 +533,6 @@ Examples may include, but are not limited to:
 * **Writing a Blog Article About Concrete:** Use the rubric provided in Discord to participate in the Article of the Week campaign.
 
 Some quests may have prerequisites. If a task is shown as **Locked**, complete the required action first to unlock it.
-
-## Earning Concrete Points On-Chain
-
-Social participation is only one part of the Concrete Points Program.
-
-Users can also earn **Concrete Points directly through eligible on-chain participation in the Concrete protocol**, including depositing assets into Concrete Vaults.
-
-This on-chain Points program has been active alongside the social campaign and is separate from Bags earned through social quests.
-
-At a later point in the campaign, Bags earned through social participation will be converted into Concrete Points, bringing both forms of participation into the Concrete Points Program.
 
 ## Need Help?
 
