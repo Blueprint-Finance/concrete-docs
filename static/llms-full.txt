@@ -1,6 +1,6 @@
 # Concrete Docs - LLM Full Context
 
-Generated: 2026-09-09T14:15:08.343Z
+Generated: 2026-09-10T14:18:53.185Z
 Source repository: concrete-docs
 Canonical docs URL: https://docs.concrete.xyz/
 
@@ -480,58 +480,73 @@ Source: src/02-Using-Concrete-Vaults/concrete-points.md
 Doc ID: Using-Concrete-Vaults/concrete-points
 Public URL: https://docs.concrete.xyz/Using-Concrete-Vaults/concrete-points/
 In active sidebar: yes
-Description: Overview of the Concrete Points Program, including eligibility, distribution mechanics, and participation expectations.
-## Concrete Points Program: Phase 1 (Social Campaign)
+Description: Campaign documentation for the Concrete Points Program, covering on-chain participation, Bags, and social quests.
+# Concrete Points Program
 
-Welcome to the **Concrete Points Program, Phase 1!**
+Welcome to the **Concrete Points Program!**
 
-This initial phase is designed to reward community engagement and future rewards phases.
+The Concrete Points Program rewards users for participating across the Concrete ecosystem, both on-chain and through community engagement.
 
-Phase 1 is a **social campaign** where users complete quests to earn **"bags."**
+There are two ways to participate:
 
-[This campaign is powered by **Absinthe**.](https://boost.absinthe.network/z2zi-tzc2/home)
+* **Concrete Points:** Earned through on-chain participation in the Concrete protocol, including depositing assets into eligible Concrete Vaults.
+* **Bags:** Earned by completing eligible social and community quests.
 
-### Bags and Points
+At a later point in the campaign, **Bags will be converted into Concrete Points**.
 
-- **Earning Bags:** Users earn bags by participating in various qualified quests.
-- **Conversion to Points:** At a later date, these bags will be converted into **Concrete Points**.
-- **Conversion Ratio:** The exact conversion ratio (from bags to points) will be released later.
+The social campaign is powered by [**Fuul**](https://fuul.xyz).
 
-### The Leaderboard
+## Bags and Points
 
-The platform includes a **Leaderboard tab** to track user performance. You must Connect your wallet to view your XP and Connect your wallet to view your rank.
+### Concrete Points
 
-### Step-by-Step Participation
+Concrete Points are earned through eligible on-chain activity across the Concrete protocol.
 
-To begin earning, you must first connect your accounts on the Absinthe platform.
+Users earn Concrete Points by depositing into eligible Concrete Vaults and participating in the protocol.
 
-#### 1. Connection and Identity Management
+### Bags
 
-- **Connection:** Look for the **Connect** button at the top right of the homepage.
-- **Manage Connections:** Use the Linked Accounts tab to Manage Your Connections. You can connect various wallets and social accounts to enhance your experience. Sign in to view and manage your connected identities.
+Bags represent rewards earned through Concrete's social campaign.
 
-#### 2. Complete Social Actions
+Users earn Bags by completing eligible quests and community actions through the campaign powered by Fuul.
 
-The rewards are earned purely through social actions and are **not** related to using the Earn App at this time.
+Bags and Concrete Points are tracked separately during the campaign. At a later point, **Bags will be converted into Concrete Points**.
 
-Examples of qualifying Social Actions can include but are not limited to:
+## Social Campaign
 
-- **Following Concrete on X:** Stay updated on the latest developments from Concrete Protocol and Blueprint team (https://x.com/ConcreteXYZ).
-- **Joining the Concrete Discord:** Dive into discussions, share feedback, and connect with community and developers (https://discord.gg/concretexyz).
-- **Write a Blog article about Concrete:** Use the Rubric provided in Discord to write your article of the week.
+To begin earning Bags, connect your wallet and any required social accounts through the Concrete Points campaign powered by Fuul.
 
-If a task is shown as **Locked**, you must perform the required related action first.
+### 1. Connect Your Wallet and Accounts
 
-### Looking Ahead (Phase 2)
+Connect the wallet you want associated with your campaign activity and link any social accounts required to complete eligible quests.
 
-The launch of **Phase 1** leaves the door open for future phases of the Concrete Points Program.
+Make sure your accounts remain connected so eligible activity can be properly tracked.
 
-- An Earn App leaderboard related to using the platform will be released at a later date, and will not be part of this initial social campaign.
-- Details on the final point conversion ratio and distribution dates for Concrete Points will be announced as the program progresses.
+### 2. Complete Social Actions
+
+Bags are earned through eligible **social and community actions**.
+
+Examples may include, but are not limited to:
+
+* **Following Concrete on X:** Stay updated on the latest developments from Concrete ([Concrete on X](https://x.com/ConcreteXYZ)).
+* **Joining the Concrete Discord:** Join discussions, share feedback, and connect with the Concrete community ([Concrete Discord](https://discord.gg/concretexyz)).
+* **Writing a Blog Article About Concrete:** Use the rubric provided in Discord to participate in the Article of the Week campaign.
+
+Some quests may have prerequisites. If a task is shown as **Locked**, complete the required action first to unlock it.
+
+## Earning Concrete Points On-Chain
+
+Social participation is only one part of the Concrete Points Program.
+
+Users can also earn **Concrete Points directly through eligible on-chain participation in the Concrete protocol**, including depositing assets into Concrete Vaults.
+
+This on-chain Points program has been active alongside the social campaign and is separate from Bags earned through social quests.
+
+At a later point in the campaign, Bags earned through social participation will be converted into Concrete Points, bringing both forms of participation into the Concrete Points Program.
 
 ## Need Help?
 
-If you have questions about the campaign or how to participate, please refer to the [main documentation's support section](https://docs.concrete.xyz/support/).
+If you have questions about the campaign or how to participate, please refer to the [main documentation's support section](../support.md).
 
 ---
 
