@@ -1,6 +1,6 @@
 ---
 title: "Withdraw"
-description: "Withdrawal documentation for Concrete vaults, covering vault types, the Withdrawal Queue, Epoch cadence, and withdrawal caps."
+description: "Withdrawal documentation for Concrete vaults, covering vault types, the Withdrawal Queue, Epoch cadence, withdrawal caps, and withdrawal cooldowns."
 sidebar_label: "Withdraw"
 ---
 
@@ -51,6 +51,12 @@ If Alice submits a withdrawal request on Friday, May 29, her request joins the q
 
 If requests in a given Epoch exceed the cap, the queue processes them in the order they were submitted ([FIFO](/glossary/#fifo)) across subsequent Epochs. Alice continues earning yield on her position while she waits, and her funds are returned as her place in the queue is reached.
 :::
+
+### Withdrawal Cooldowns
+
+Certain vaults apply a withdrawal cooldown, which is displayed at the point of deposit. Where a cooldown applies, the shares issued on each deposit only become withdrawable, redeemable, or transferable once the cooldown period for that deposit has elapsed. Each deposit carries its own cooldown, so deposits made at different times become available at different times, and at any given moment only the portion of your holding that has completed its cooldown may be withdrawn or transferred.
+
+The cooldown period is set per vault and disclosed for that vault, and Concrete may change the period applying to future deposits. Where a vault permits exit before the cooldown has elapsed, that option is offered at Concrete's discretion, may require a minimum holding period to have passed, and may incur an early unlock fee, paid in vault shares. A withdrawal cooldown applies in addition to, and not in place of, the withdrawal mechanics described above, such as a Withdrawal Queue, or Withdrawal Caps.
 
 ### Things to Know About Queued Withdrawal Vaults
 
