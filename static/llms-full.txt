@@ -1,6 +1,6 @@
 # Concrete Docs - LLM Full Context
 
-Generated: 2026-09-10T17:31:59.366Z
+Generated: 2026-09-11T13:25:56.718Z
 Source repository: concrete-docs
 Canonical docs URL: https://docs.concrete.xyz/
 
@@ -2917,6 +2917,12 @@ Concrete Protocol follows a multi-phased audit approach to deliver the highest l
    All audit results are made publicly accessible, reinforcing our commitment to transparency and accountability.
 
 
+## AssetCX OFT & OFT Adapter
+
+   - Date: August 25, 2026
+   - Auditor: Halborn
+   - [View the full report](https://docs.concrete.xyz/files/AssetCX-OFT-and-OFT-Adapter.pdf)
+
 ## Earn v2 1.5 & AssetCx 1.3
 
    - Date: July 13, 2026
@@ -4206,7 +4212,7 @@ Binary and media assets are indexed by source path and public URL. Their full bi
 
 ## .ico files
 
-- static/img/favicon.ico (3626 bytes): https://docs.concrete.xyz/img/favicon.ico
+- static/favicon.ico (3364 bytes): https://docs.concrete.xyz/favicon.ico
 
 ## .mp4 files
 
@@ -4221,6 +4227,7 @@ Binary and media assets are indexed by source path and public URL. Their full bi
 ## .pdf files
 
 - static/files/AssetCT.pdf (5774810 bytes): https://docs.concrete.xyz/files/AssetCT.pdf
+- static/files/AssetCX-OFT-and-OFT-Adapter.pdf (5490832 bytes): https://docs.concrete.xyz/files/AssetCX-OFT-and-OFT-Adapter.pdf
 - static/files/Async-Implementation.pdf (9946822 bytes): https://docs.concrete.xyz/files/Async-Implementation.pdf
 - static/files/cantinacode-concrete-finance.pdf (501056 bytes): https://docs.concrete.xyz/files/cantinacode-concrete-finance.pdf
 - static/files/Code4rena-Review-Part-1-SSC.pdf (5186528 bytes): https://docs.concrete.xyz/files/Code4rena-Review-Part-1-SSC.pdf
@@ -4254,6 +4261,8 @@ Binary and media assets are indexed by source path and public URL. Their full bi
 
 ## .png files
 
+- static/apple-touch-icon.png (1527 bytes): https://docs.concrete.xyz/apple-touch-icon.png
+- static/favicon-96x96.png (2423 bytes): https://docs.concrete.xyz/favicon-96x96.png
 - static/img/borrow-1.png (501966 bytes): https://docs.concrete.xyz/img/borrow-1.png
 - static/img/borrow-2.png (352268 bytes): https://docs.concrete.xyz/img/borrow-2.png
 - static/img/borrow-3.png (343722 bytes): https://docs.concrete.xyz/img/borrow-3.png
@@ -4280,6 +4289,7 @@ Binary and media assets are indexed by source path and public URL. Their full bi
 
 ## .svg files
 
+- static/favicon.svg (1180 bytes): https://docs.concrete.xyz/favicon.svg
 - static/img/logo.svg (6438 bytes): https://docs.concrete.xyz/img/logo.svg
 - static/img/undraw_docusaurus_mountain.svg (31486 bytes): https://docs.concrete.xyz/img/undraw_docusaurus_mountain.svg
 - static/img/undraw_docusaurus_react.svg (36002 bytes): https://docs.concrete.xyz/img/undraw_docusaurus_react.svg
