@@ -1,6 +1,6 @@
 # Concrete Docs - LLM Full Context
 
-Generated: 2026-09-11T13:23:31.928Z
+Generated: 2026-09-11T13:25:56.718Z
 Source repository: concrete-docs
 Canonical docs URL: https://docs.concrete.xyz/
 
@@ -2919,7 +2919,7 @@ Concrete Protocol follows a multi-phased audit approach to deliver the highest l
 
 ## AssetCX OFT & OFT Adapter
 
-   - Date: August 24, 2026
+   - Date: August 25, 2026
    - Auditor: Halborn
    - [View the full report](https://docs.concrete.xyz/files/AssetCX-OFT-and-OFT-Adapter.pdf)
 
