@@ -54,6 +54,7 @@ const config = {
 
   onBrokenLinks: 'throw',
   markdown: { hooks: { onBrokenMarkdownLinks: 'warn' } },
+  future: { v4: true, faster: true },
   // The glossary uses inline HTML anchors (`<a id>`) so each term can be
   // deep-linked without forcing one heading per term. Docusaurus's
   // broken-anchor checker only sees heading-generated anchors, so we tell
