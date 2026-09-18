@@ -8,6 +8,8 @@ Returns the deposit cap and the minimum deposit of a V2 vault. The deposit cap l
 
 ## Signature
 
+Both reads resolve `bigint` values in underlying base units.
+
 ```tsx
 getDepositLimits(): Promise<[bigint, bigint]>
 maxDeposit(receiver: Address): Promise<bigint>

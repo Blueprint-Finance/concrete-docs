@@ -8,6 +8,8 @@ Resolves the hook that enforces a V2 vault's withdrawal cooldown. A withdrawal c
 
 ## Signature
 
+The method takes no arguments and resolves the hook instance.
+
 ```tsx
 getDepositLockWithFeeHook(): Promise<DepositLockWithFeeHook | undefined>
 ```
@@ -33,6 +35,8 @@ The **DepositLockWithFeeHook** instance, or `undefined` when the vault has no su
 All numeric results are `bigint`.
 
 ## Example
+
+The example reads the cooldown period and an account's locked shares.
 
 ```tsx
 const lock = await vault.getDepositLockWithFeeHook();

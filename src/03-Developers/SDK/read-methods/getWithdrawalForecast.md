@@ -10,6 +10,8 @@ The method is backed by the Concrete [API](/glossary/#api), not an on-chain call
 
 ## Signature
 
+The method takes a single options object.
+
 ```tsx
 getWithdrawalForecast(options: GetWithdrawalForecastOptions): Promise<WithdrawalForecast>
 ```
