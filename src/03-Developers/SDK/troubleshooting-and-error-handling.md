@@ -6,25 +6,29 @@ sidebar_label: "Troubleshooting & Error Handling"
 
 ## Quick patterns
 
-### 1) Vanilla (ethers)
+### 1) Vanilla (viem)
+
+On-chain reads throw viem errors. Use `BaseError.walk()` to find the cause inside the error chain.
 
 ```tsx
 import { getVault } from "@concrete-xyz/sdk";
-import { ethers } from "ethers";
+import { BaseError, ContractFunctionRevertedError, HttpRequestError, createPublicClient, http } from "viem";
+import { mainnet } from "viem/chains";
 
-const provider = new ethers.JsonRpcProvider(process.env.RPC_URL!);
-const vault = getVault("v2", "0xYourVault", chainId, provider);
+const publicClient = createPublicClient({ chain: mainnet, transport: http(process.env.RPC_URL!) });
+const vault = getVault("v2", "0xYourVault", 1, publicClient);
 
 async function safeGetDetails() {
   try {
     const details = await vault.getVaultDetails();
     return details;
-  } catch (err: any) {
-    if (err.code === "NETWORK_ERROR") {
+  } catch (err) {
+    if (!(err instanceof BaseError)) throw err;
+    if (err.walk((e) => e instanceof HttpRequestError)) {
       // RPC down or bad URL
       throw new Error("RPC unavailable: check RPC_URL and network.");
     }
-    if (err.code === "CALL_EXCEPTION") {
+    if (err.walk((e) => e instanceof ContractFunctionRevertedError)) {
       // Wrong chain, wrong address, or ABI mismatch
       throw new Error("Call failed: verify vault address and network match.");
     }
@@ -67,8 +71,9 @@ export function UseDetails() {
 
 | Symptom | Likely cause | Fix |
 | --- | --- | --- |
-| `NETWORK_ERROR`, `failed to fetch` | Bad or unstable [RPC](/glossary/#rpc) [URL](/glossary/#url), rate limiting | Switch to a reliable RPC. Add retries and backoff. |
-| `CALL_EXCEPTION` or `execution reverted` | Wrong network for the vault address, wrong address, or deprecated contract | Ensure the `chainId` passed to `getVault(version, address, chainId, ...)` matches the contract's chain. Verify the address is the vault, not the underlying. |
+| `HttpRequestError`, `failed to fetch` | Bad or unstable [RPC](/glossary/#rpc) [URL](/glossary/#url), rate limiting | Switch to a reliable RPC. Add retries and backoff. |
+| `ContractFunctionExecutionError` or `execution reverted` | Wrong network for the vault address, wrong address, or deprecated contract | Ensure the `chainId` passed to `getVault(version, address, chainId, ...)` matches the contract's chain. Verify the address is the vault, not the underlying. |
+| `Signer not available` | A write was called on a vault created without a wallet client, or the wallet client has no `account` | Pass a `WalletClient` with an `account` to `getVault`, or call `vault.updateClients(publicClient, walletClient)`. |
 | `undefined` or `Cannot read properties of undefined` | Hook not ready (Wagmi client not connected) | Gate reads with `enabled: !!vault` (React Query) or `if (!vault) return`. |
 | `BigInt` range or format issues | Mixing [JS](/glossary/#js) `number` with token base units | Always use `BigInt`. Derive units from `await vault.getUnderlyingDecimals()`. |
 | Wrong display amounts | Using wrong decimals for formatting | Use `getUnderlyingDecimals()` for the underlying and `decimals()` for shares. |
@@ -114,14 +119,14 @@ catch { uDec = 18; /* fallback default if needed */ }
 Validate the address. Resolve ENS externally if needed.
 
 ```tsx
-import { isAddress } from "viem"; // or ethers
+import { isAddress } from "viem";
 if (!isAddress(user)) throw new Error("Invalid address");
 const bal = await vault.balanceOf(user);
 ```
 
 ### `previewConversion(amount)`
 
-Always build `amount` with correct decimals, and catch `CALL_EXCEPTION` for paused or frozen states.
+Always build `amount` with correct decimals, and catch contract reverts for paused or frozen states.
 
 ```tsx
 const uDec = await vault.getUnderlyingDecimals();
@@ -130,8 +135,8 @@ try {
   const preview = await vault.previewConversion(amount);
   // Use preview.vaultTokensReceiving / preview.underlyingReceiving,
   // or the *Raw bigint siblings when you need raw values.
-} catch (e: any) {
-  if (e.code === "CALL_EXCEPTION") {
+} catch (e) {
+  if (e instanceof BaseError && e.walk((cause) => cause instanceof ContractFunctionRevertedError)) {
     throw new Error("Preview unavailable (vault paused, wrong chain, or wrong address).");
   }
   throw e;
@@ -188,7 +193,7 @@ const result = useVaultQuery({
   queryFn: (v) => v.getVaultDetails(),
   retry: (count, error: any) => {
     // Retry only transient RPC issues
-    return count < 2 && /NETWORK_ERROR|timeout|429/.test(String(error?.message));
+    return count < 2 && /HTTP request failed|timeout|429/.test(String(error?.message));
   },
   staleTime: 30_000,    // fresh for 30s
   gcTime: 5 * 60_000,   // cache 5m (React Query v5 uses gcTime)
@@ -237,22 +242,22 @@ if (bal < amount) throw new Error("Not enough underlying to deposit.");
 ### Nonce or replacement errors
 
 **Symptom**: `nonce too low`, `replacement fee too low`.
-**Fix**: Read the current nonce and resubmit with a higher max fee.
+**Fix**: Wait for the pending transaction before you send the next one. [SDK](/glossary/#sdk) write methods do not take nonce or gas overrides. The wallet client sets both, so speed up or cancel a stuck transaction from the wallet.
 
 ```tsx
-const nonce = await signer.getNonce();
-await vault.deposit(amount, { nonce, maxFeePerGas: prev * 12n / 10n }); // +20%
+await (await erc20.approve(vault.getAddress(), amount)).wait();
+await (await vault.deposit(amount)).wait();
 ```
 
 ### Paused or deprecated vaults
 
-**Symptom**: `CALL_EXCEPTION` or a custom revert string (for example "paused") on `deposit` or `redeem`.
+**Symptom**: a contract revert on `deposit` or `redeem`. The SDK simulates each write first, decodes the custom error, and attaches it to the thrown error as `error.error`, with `{ name, args }`.
 **Fix**: Surface a clear [UI](/glossary/#ui) message. Gate write actions based on a health flag where available.
 
 ```tsx
 try { await vault.deposit(amount); }
 catch (e: any) {
-  if (/paused|deprecated/i.test(String(e.message))) {
+  if (/paused|deprecated/i.test(`${e.error?.name} ${e.message}`)) {
     throw new Error("This vault is paused or deprecated. Withdrawals only.");
   }
   throw e;
@@ -296,29 +301,18 @@ await (await erc20.approve(vault.getAddress(), amount)).wait();
 await (await vault.deposit(amount)).wait();
 ```
 
-## Signer and wallet lifecycle
+## Wallet client lifecycle
 
-**Symptoms**: `vault is undefined`, `signer missing`, user switched accounts or networks mid-flow.
-**Fix**: Re-acquire the signer before writes and assert the chain ID matches.
+**Symptoms**: `vault is undefined`, `Signer not available`, user switched accounts or networks mid-flow.
+**Fix**: Pass the current wallet client before writes and assert the chain ID matches.
 
 ```tsx
 // Wagmi
 if (!vault) throw new Error("Wallet not connected. Connect before writing.");
 // Vanilla
-const networkOk = (await provider.getNetwork()).chainId === expectedChainId;
+const networkOk = (await walletClient.getChainId()) === expectedChainId;
 if (!networkOk) throw new Error("Wrong network selected in wallet.");
-```
-
-## EIP-1559 fee strategy (busy networks)
-
-Avoid underpriced transactions on L2 or L1 spikes.
-
-```tsx
-const fee = await provider.getFeeData();
-await vault.deposit(amount, {
-  maxFeePerGas: fee.maxFeePerGas! * 12n / 10n,
-  maxPriorityFeePerGas: fee.maxPriorityFeePerGas! * 12n / 10n,
-});
+vault.updateClients(publicClient, walletClient);
 ```
 
 ## Reorgs and finality
@@ -339,7 +333,7 @@ Only retry idempotent reads or broadcast errors clearly marked transient.
 async function retry<T>(fn: () => Promise<T>, times = 2) {
   try { return await fn(); }
   catch (e: any) {
-    if (times && /timeout|429|NETWORK_ERROR/.test(String(e?.message))) {
+    if (times && /timeout|429|HTTP request failed/.test(String(e?.message))) {
       await new Promise(r => setTimeout(r, 800));
       return retry(fn, times - 1);
     }

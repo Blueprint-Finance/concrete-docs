@@ -18,13 +18,13 @@ await vault.deposit(amount: bigint): Promise<Tx>
 
 ## Returns
 
-- `Tx`: transaction object. Call `await tx.wait()` to confirm.
+- `Tx`: `{ hash, wait }`. Call `await tx.wait(confirmations?)` to confirm. It resolves a viem `TransactionReceipt` and throws when the transaction reverts.
 
 ## Example
 
 ```tsx
-// Prerequisite: the vault was created with a signer:
-// const vault = getVault(version, vaultAddress, chainId, provider, signer)
+// Prerequisite: the vault was created with a wallet client:
+// const vault = getVault(version, vaultAddress, chainId, publicClient, walletClient)
 
 const vaultAddr = vault.getAddress();
 

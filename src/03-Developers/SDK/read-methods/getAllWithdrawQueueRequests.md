@@ -9,7 +9,7 @@ Fetches all withdrawal-queue requests for a given `owner` address. Returns an ar
 * `cancel()`: cancels the request (when `cancelable: true`)
 * `claim()`: claims the withdrawal (when `claimable: true`)
 
-The returned `cancel()` and `claim()` functions are write actions and require a signer.
+The returned `cancel()` and `claim()` functions are write actions and require a wallet client with an `account`.
 
 ## Signature
 
@@ -21,8 +21,8 @@ getAllWithdrawQueueRequests(owner: Address): Promise<
     epochState: "inactive" | "active" | "processing" | "processed";
     claimable: boolean;
     cancelable: boolean;
-    cancel: () => Promise<ContractTransactionResponse>;
-    claim: () => Promise<ContractTransactionResponse>;
+    cancel: () => Promise<TxResult>;
+    claim: () => Promise<TxResult>;
     amount: bigint;
     version: 2;
     vaultAddress: string;
@@ -45,7 +45,7 @@ An array of withdrawal-queue requests:
 * `version`: always `2` for these requests.
 * `vaultAddress`, `chainId`: identify the vault and network.
 * `timestamp`: request timestamp when available.
-* `cancel()`, `claim()`: callable functions that send transactions.
+* `cancel()`, `claim()`: callable functions that send transactions. Each resolves `{ hash, wait }`, where `wait(confirmations?)` resolves a viem `TransactionReceipt` and throws when the transaction reverts.
 
 ## Parameters
 
@@ -55,15 +55,19 @@ An array of withdrawal-queue requests:
 
 ```ts
 import { getVault } from "@concrete-xyz/sdk";
-import { ethers } from "ethers";
+import { createPublicClient, createWalletClient, http } from "viem";
+import { privateKeyToAccount } from "viem/accounts";
+import { mainnet } from "viem/chains";
 
 async function main() {
-  const provider = new ethers.JsonRpcProvider(process.env.RPC_URL!);
-  const signer = new ethers.Wallet(process.env.PRIVATE_KEY!, provider);
+  const account = privateKeyToAccount(process.env.PRIVATE_KEY as `0x${string}`);
+  const transport = http(process.env.RPC_URL!);
+  const publicClient = createPublicClient({ chain: mainnet, transport });
+  const walletClient = createWalletClient({ account, chain: mainnet, transport });
 
-  const vault = getVault("v2", "0xYourVault", 1, provider, signer);
+  const vault = getVault("v2", "0xYourVault", 1, publicClient, walletClient);
 
-  const owner = await signer.getAddress();
+  const owner = account.address;
   const requests = await vault.getAllWithdrawQueueRequests(owner);
 
   // Render list
@@ -87,7 +91,7 @@ async function main() {
     console.log("Claiming request in epoch", firstClaimable.epoch);
     const tx = await firstClaimable.claim();
     const receipt = await tx.wait();
-    console.log("Claim confirmed:", receipt?.hash ?? receipt?.transactionHash);
+    console.log("Claim confirmed:", receipt.transactionHash);
     return;
   }
 
@@ -97,7 +101,7 @@ async function main() {
     console.log("Canceling request in epoch", firstCancelable.epoch);
     const tx = await firstCancelable.cancel();
     const receipt = await tx.wait();
-    console.log("Cancel confirmed:", receipt?.hash ?? receipt?.transactionHash);
+    console.log("Cancel confirmed:", receipt.transactionHash);
     return;
   }
 

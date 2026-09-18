@@ -12,7 +12,7 @@ From an integration perspective, a user's deposit always results in ERC20 shares
 
 ## Usage
 
-Whether you are using vanilla [JS](/glossary/#js)/[TS](/glossary/#ts), React hooks, or Wagmi integration, you interact with the same underlying vault abstraction.
+Whether you are using vanilla [JS](/glossary/#js)/[TS](/glossary/#ts), React hooks, or Wagmi integration, you interact with the same underlying vault abstraction. The SDK is built on [viem](https://viem.sh). If you are upgrading from 1.x, see [Migrating from 1.x](./migrating-from-1x.md).
 
 The Concrete [SDK](/glossary/#sdk) provides:
 
@@ -31,6 +31,10 @@ The Concrete [SDK](/glossary/#sdk) provides:
 | Deposit | `vault.deposit(amount)` | Underlying consumed, shares minted |
 | Check share balance | `vault.balanceOf(address)` | User's [ctAsset](/glossary/#ct-asset) balance |
 | Redeem shares | `vault.redeem(amount)` | Shares burned, underlying returned |
+| Read live APY | `vault.getApyDetails()` | Live and historical [APY](/glossary/#apy), [TVL](/glossary/#tvl), and history series |
+| Read the deposit cap | `vault.getDepositLimits()` | Deposit cap and minimum deposit (V2) |
+| Read the withdrawal cooldown | `vault.getDepositLockWithFeeHook()` | Cooldown period and locked shares (V2) |
+| Forecast a withdrawal | `vault.getWithdrawalForecast({ account })` | Estimated availability of Withdrawal Queue requests (V2) |
 
 ## Vault = [ERC20](/glossary/#erc-20) + underlying ERC20
 

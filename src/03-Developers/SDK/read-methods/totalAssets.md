@@ -23,6 +23,8 @@ totalAssets(): Promise<bigint>
 ## Example
 
 ```tsx
+import { formatUnits } from "viem";
+
 const details = await vault.getVaultDetails();
 const total = await vault.totalAssets();
 
@@ -33,10 +35,10 @@ console.log(
   details.underlying.symbol
 );
 
-// Option 2: ethers.js formatting
+// Option 2: viem formatting
 console.log(
   "Total assets:",
-  ethers.formatUnits(total, details.underlying.decimals),
+  formatUnits(total, details.underlying.decimals),
   details.underlying.symbol
 );
 ```
