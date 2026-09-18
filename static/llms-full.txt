@@ -1,6 +1,6 @@
 # Concrete Docs - LLM Full Context
 
-Generated: 2026-09-18T22:48:40.288Z
+Generated: 2026-09-18T22:56:59.869Z
 Source repository: concrete-docs
 Canonical docs URL: https://docs.concrete.xyz/
 
@@ -1656,6 +1656,8 @@ The method is backed by the Concrete [API](https://docs.concrete.xyz/glossary/#a
 
 ## Signature
 
+The method takes a single options object.
+
 ```tsx
 getWithdrawalForecast(options: GetWithdrawalForecastOptions): Promise<WithdrawalForecast>
 ```
@@ -1743,6 +1745,8 @@ Returns the deposit cap and the minimum deposit of a V2 vault. The deposit cap l
 
 ## Signature
 
+Both reads resolve `bigint` values in underlying base units.
+
 ```tsx
 getDepositLimits(): Promise<[bigint, bigint]>
 maxDeposit(receiver: Address): Promise<bigint>
@@ -1794,6 +1798,8 @@ Resolves the hook that enforces a V2 vault's withdrawal cooldown. A withdrawal c
 
 ## Signature
 
+The method takes no arguments and resolves the hook instance.
+
 ```tsx
 getDepositLockWithFeeHook(): Promise<DepositLockWithFeeHook | undefined>
 ```
@@ -1819,6 +1825,8 @@ The **DepositLockWithFeeHook** instance, or `undefined` when the vault has no su
 All numeric results are `bigint`.
 
 ## Example
+
+The example reads the cooldown period and an account's locked shares.
 
 ```tsx
 const lock = await vault.getDepositLockWithFeeHook();
