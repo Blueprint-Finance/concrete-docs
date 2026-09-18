@@ -1,0 +1,25 @@
+name: Submit IndexNow
+
+on:
+  deployment_status:
+
+permissions:
+  contents: read
+
+jobs:
+  submit:
+    if: github.event.deployment_status.state == 'success' && github.event.deployment.environment == 'Production'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v5
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v5
+        with:
+          node-version-file: ".tool-versions"
+          package-manager-cache: false
+
+      - name: Submit IndexNow
+        continue-on-error: true
+        run: node scripts/submit-indexnow.mjs
