@@ -1,0 +1,55 @@
+---
+title: "getDepositLockWithFeeHook()"
+description: "Read-method reference for getDepositLockWithFeeHook() in the Concrete Earn V2 SDK, including expected inputs, outputs, and usage context."
+sidebar_label: "getDepositLockWithFeeHook()"
+---
+
+Resolves the hook that enforces a V2 vault's withdrawal cooldown. A withdrawal cooldown locks the shares issued on each deposit for a configured period. Use the hook to read that period, an account's locked shares, and the early unlock fee. For the user-facing behavior, see [Withdrawal Cooldowns](/Using-Concrete-Vaults/withdraw/#withdrawal-cooldowns).
+
+## Signature
+
+The method takes no arguments and resolves the hook instance.
+
+```tsx
+getDepositLockWithFeeHook(): Promise<DepositLockWithFeeHook | undefined>
+```
+
+## Parameters
+
+- None
+
+## Returns
+
+The **DepositLockWithFeeHook** instance, or `undefined` when the vault has no such hook. An unresolved hook means the [SDK](/glossary/#sdk) cannot provide cooldown information for that vault.
+
+| **Read** | **Method** | **Result** |
+| --- | --- | --- |
+| Cooldown period | `depositLockDuration()` | Duration in seconds |
+| Locked shares | `effectiveTotalLocked(account)` | Shares still locked |
+| Unlocked shares | `getUnlockedShares(account)` | Shares available without early unlocking |
+| Stored lock count | `storedLockCount(account)` | Number of stored records, including expired locks |
+| Individual lock | `getStoredLock(account, index)` | `{ shares, unlockTimestamp, duration }`, with times in seconds |
+| Early unlock switch | `earlyUnlockEnabled()` | `true` when the hook's early unlock switch is on |
+| Early unlock fee | `previewEarlyUnlock(account, shares)` | Fee in vault-share base units |
+
+All numeric results are `bigint`.
+
+## Example
+
+The example reads the cooldown period and an account's locked shares.
+
+```tsx
+const lock = await vault.getDepositLockWithFeeHook();
+const cooldownSeconds = lock ? await lock.depositLockDuration() : undefined;
+
+if (lock) {
+  const locked = await lock.effectiveTotalLocked(account);
+  console.log("Locked shares:", await vault.applyDecimals(locked));
+}
+```
+
+## Notes
+
+- A configured cooldown period only takes effect when the vault's deposit and mint hook flags are set. A period of zero disables locks on new deposits, but existing locks can remain active.
+- `getEnabledDetails()` resolves `{ enabled, earlyUnlockEnabled, fees, feeRecipient, duration }`. `enabled` is `true` when a cooldown period is configured, meaning `depositLockDuration()` is greater than zero. `earlyUnlockEnabled` is `true` when an early unlock can succeed: the hook's early unlock switch is on and, if the fee is above zero, a fee recipient is set. A zero fee means a free early exit. The bare `earlyUnlockEnabled()` read returns only the switch, and `previewEarlyUnlock` reverts when early unlocking is unavailable.
+- For async vaults, the Withdrawal Queue processes requests per Epoch. The cooldown alone does not determine when a withdrawal pays out.

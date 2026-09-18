@@ -4,18 +4,20 @@ description: "Concrete Earn V2 SDK documentation for examples, with implementati
 sidebar_label: "Examples"
 ---
 
+The write examples on this page use `vaultWithWallet` and `account`, which [example 5](#5-deposit-flow) creates. The read examples use the `vault` from [example 3](#3-fetch-vault-details).
+
 ## 1. Check and top up allowance
 
 Before depositing, confirm the user has approved enough underlying for the vault. If not, approve the difference.
 
 ```tsx
-const vaultAddr = vaultWithSigner.getAddress();
-const erc20 = await vaultWithSigner.getUnderlyingErc20();
-const depositAmount = await vaultWithSigner.toUnderlyingBigInt("5.0"); // 5 underlying tokens
+const vaultAddr = vaultWithWallet.getAddress();
+const erc20 = await vaultWithWallet.getUnderlyingErc20();
+const depositAmount = await vaultWithWallet.toUnderlyingBigInt("5.0"); // 5 underlying tokens
 
 // Check existing allowance
 const currentAllowance = await erc20.allowance(
-  await signer.getAddress(),
+  account.address,
   vaultAddr
 );
 
@@ -26,7 +28,7 @@ if (currentAllowance < depositAmount) {
 }
 
 // Safe to deposit
-await (await vaultWithSigner.deposit(depositAmount)).wait();
+await (await vaultWithWallet.deposit(depositAmount)).wait();
 ```
 
 ## 2. Read total assets
@@ -48,10 +50,12 @@ console.log(
 
 ```tsx
 import { getVault } from "@concrete-xyz/sdk";
-import { ethers } from "ethers";
+import { createPublicClient, http } from "viem";
+import { mainnet } from "viem/chains";
 
-const provider = new ethers.JsonRpcProvider("https://ethereum-rpc.publicnode.com");
-const vault = getVault("v2", "0xYourVault", chainId, provider);
+const transport = http("https://ethereum-rpc.publicnode.com");
+const publicClient = createPublicClient({ chain: mainnet, transport });
+const vault = getVault("v2", "0xYourVault", 1, publicClient);
 
 const details = await vault.getVaultDetails();
 console.log("Vault shares:", details.vaultAsset.symbol);
@@ -74,42 +78,44 @@ console.log(
 ## 5. Deposit flow
 
 ```tsx
-import { ethers } from "ethers";
+import { createWalletClient } from "viem";
+import { privateKeyToAccount } from "viem/accounts";
 
 // 1. Approve vault to spend the underlying
 // 2. Deposit underlying into the vault
 // 3. Receive vault shares
 
-const signer = new ethers.Wallet(process.env.PRIVATE_KEY!, provider);
-const vaultWithSigner = getVault("v2", "0xYourVault", chainId, provider, signer);
+const account = privateKeyToAccount(process.env.PRIVATE_KEY as `0x${string}`);
+const walletClient = createWalletClient({ account, chain: mainnet, transport });
+const vaultWithWallet = getVault("v2", "0xYourVault", 1, publicClient, walletClient);
 
-const depositAmount = await vaultWithSigner.toUnderlyingBigInt("1.0");
+const depositAmount = await vaultWithWallet.toUnderlyingBigInt("1.0");
 
 // (1) Approve underlying to the vault
-const erc20 = await vaultWithSigner.getUnderlyingErc20();
-await (await erc20.approve(vaultWithSigner.getAddress(), depositAmount)).wait();
+const erc20 = await vaultWithWallet.getUnderlyingErc20();
+await (await erc20.approve(vaultWithWallet.getAddress(), depositAmount)).wait();
 
 // (2) Deposit
-const receipt = await (await vaultWithSigner.deposit(depositAmount)).wait();
+const receipt = await (await vaultWithWallet.deposit(depositAmount)).wait();
 console.log("Deposit confirmed:", receipt.transactionHash);
 ```
 
 ## 6. Redeem flow
 
 ```tsx
-const owner = await signer.getAddress();
-const shareBalance = await vaultWithSigner.balanceOf(owner);
+const owner = account.address;
+const shareBalance = await vaultWithWallet.balanceOf(owner);
 
 if (shareBalance > 0n) {
-  const preview = await vaultWithSigner.previewConversion(shareBalance);
-  const details = await vaultWithSigner.getVaultDetails();
+  const preview = await vaultWithWallet.previewConversion(shareBalance);
+  const details = await vaultWithWallet.getVaultDetails();
 
   console.log(
-    `${await vaultWithSigner.applyDecimals(shareBalance)} ${details.vaultAsset.symbol} ≈ ` +
-    `${await vaultWithSigner.toUnderlyingDecimals(preview.underlyingReceivingRaw)} ${details.underlying.symbol}`
+    `${await vaultWithWallet.applyDecimals(shareBalance)} ${details.vaultAsset.symbol} ≈ ` +
+    `${await vaultWithWallet.toUnderlyingDecimals(preview.underlyingReceivingRaw)} ${details.underlying.symbol}`
   );
 
-  const receipt = await (await vaultWithSigner.redeem(shareBalance)).wait();
+  const receipt = await (await vaultWithWallet.redeem(shareBalance)).wait();
   console.log("Redeemed:", receipt.transactionHash);
 }
 ```
@@ -120,8 +126,8 @@ Shares (ctAssets) behave like [ERC20](/glossary/#erc-20) tokens and can be trans
 
 ```tsx
 const recipient = "0xRecipient...";
-const tenShares = await vaultWithSigner.toBigInt("10.0");
-await (await vaultWithSigner.transfer(recipient, tenShares)).wait();
+const tenShares = await vaultWithWallet.toBigInt("10.0");
+await (await vaultWithWallet.transfer(recipient, tenShares)).wait();
 ```
 
 ## 8. Move shares with allowance
@@ -130,15 +136,15 @@ Grant another address permission to spend your shares.
 
 ```tsx
 const spender = "0xSpender...";
-const owner = await signer.getAddress();
+const owner = account.address;
 const recipient = "0xRecipient...";
-const allowance = await vaultWithSigner.toBigInt("5.0");
+const allowance = await vaultWithWallet.toBigInt("5.0");
 
 // Owner approves spender
-await (await vaultWithSigner.approve(spender, allowance)).wait();
+await (await vaultWithWallet.approve(spender, allowance)).wait();
 
-// Spender calls transferFrom (as the connected signer)
-await (await vaultWithSigner.transferFrom(owner, recipient, allowance)).wait();
+// Spender calls transferFrom (as the connected account)
+await (await vaultWithWallet.transferFrom(owner, recipient, allowance)).wait();
 ```
 
 ## 9. End-to-end example
@@ -146,19 +152,19 @@ await (await vaultWithSigner.transferFrom(owner, recipient, allowance)).wait();
 ```tsx
 // 1 underlying deposit, then redeem
 
-const oneUnderlying = await vaultWithSigner.toUnderlyingBigInt("1.0");
+const oneUnderlying = await vaultWithWallet.toUnderlyingBigInt("1.0");
 
 // Preview deposit
-const pvDeposit = await vaultWithSigner.previewConversion(oneUnderlying);
-console.log("Expected shares:", await vaultWithSigner.applyDecimals(pvDeposit.vaultTokensReceivingRaw));
+const pvDeposit = await vaultWithWallet.previewConversion(oneUnderlying);
+console.log("Expected shares:", await vaultWithWallet.applyDecimals(pvDeposit.vaultTokensReceivingRaw));
 
 // Approve and deposit
-const erc20 = await vaultWithSigner.getUnderlyingErc20();
-await (await erc20.approve(vaultWithSigner.getAddress(), oneUnderlying)).wait();
-await (await vaultWithSigner.deposit(oneUnderlying)).wait();
+const erc20 = await vaultWithWallet.getUnderlyingErc20();
+await (await erc20.approve(vaultWithWallet.getAddress(), oneUnderlying)).wait();
+await (await vaultWithWallet.deposit(oneUnderlying)).wait();
 
 // Redeem
-const owner = await signer.getAddress();
-const shares = await vaultWithSigner.balanceOf(owner);
-await (await vaultWithSigner.redeem(shares)).wait();
+const owner = account.address;
+const shares = await vaultWithWallet.balanceOf(owner);
+await (await vaultWithWallet.redeem(shares)).wait();
 ```

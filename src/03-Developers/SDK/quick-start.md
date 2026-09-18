@@ -6,7 +6,7 @@ sidebar_label: "Quick Start"
 
 Concrete's [SDK](/glossary/#sdk) provides ready-to-use React and Wagmi hooks for integrating deposits, withdrawals, and balance views in a few lines of code.
 
-These hooks combine ethers, wagmi, and the Concrete SDK internals under the hood. You can use them to go from setup to a live app in minutes.
+These hooks combine viem, wagmi, and the Concrete SDK internals under the hood. You can use them to go from setup to a live app in minutes.
 
 ## Quick Wagmi setup
 
@@ -141,7 +141,7 @@ export default DepositETH;
 
 ### What happens under the hood
 
-1. Detects provider and signer automatically via Wagmi.
+1. Resolves the public and wallet clients from your Wagmi config.
 2. Converts human-readable values to `BigInt` based on vault decimals.
 3. Auto-wraps ETH to WETH when `useEther` is `true`.
 4. Handles approvals automatically.

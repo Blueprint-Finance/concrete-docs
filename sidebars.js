@@ -37,6 +37,7 @@ const sidebars = {
           items: [
             'Developers/SDK/overview',
             'Developers/SDK/setup-configuration',
+            'Developers/SDK/migrating-from-1x',
             {
               type: 'category',
               label: 'Read Methods',
@@ -46,7 +47,11 @@ const sidebars = {
                 'Developers/SDK/read-methods/getUnderlyingDecimals',
                 'Developers/SDK/read-methods/getVaultDetails',
                 'Developers/SDK/read-methods/getVaultTransparencyStats',
+                'Developers/SDK/read-methods/getAPYDetails',
                 'Developers/SDK/read-methods/getAllWithdrawQueueRequests',
+                'Developers/SDK/read-methods/getWithdrawalForecast',
+                'Developers/SDK/read-methods/getDepositLimits',
+                'Developers/SDK/read-methods/getDepositLockWithFeeHook',
                 'Developers/SDK/read-methods/previewConversion',
                 'Developers/SDK/read-methods/totalAssets',
                 'Developers/SDK/read-methods/symbol',

@@ -4,7 +4,7 @@ description: "Read-method reference for getApyDetails() in the Concrete Earn V2 
 sidebar_label: "getApyDetails()"
 ---
 
-Fetches [APY](/glossary/#apy) history and headline metrics for a vault. The method is exposed on the vault instance but is backed by the Concrete [API](/glossary/#api), not an on-chain call.
+Fetches live and historical [APY](/glossary/#apy), history series, and headline metrics for a vault. The method is exposed on the vault instance but is backed by the Concrete [API](/glossary/#api), not an on-chain call.
 
 :::tip
 Works the same in vanilla, React, and Wagmi integrations because all return the same vault object.
@@ -30,31 +30,47 @@ type ApyDetails = {
   tvlHistory30Days: ApyPoint[];
   totalAssetsHistory30Days: ApyPoint[];
   apy: string | undefined;            // latest APY point amount, as a numeric string
+  expectedApy?: string;               // live APY
+  expectedApy7Days?: string;          // live APY over 7 days
+  expectedApy30Days?: string;         // live APY over 30 days
+  timestamp: string;                  // time of the API snapshot
   tvl: string | undefined;            // latest TVL point amount, as a numeric string
   totalAssets: string | undefined;    // latest total-assets point amount, as a numeric string
   nextPayout: Date | null;            // next payout timestamp, when reported
 };
 ```
 
-The headline `apy`, `tvl`, and `totalAssets` fields are numeric strings taken from the latest history point. Convert them with `Number(...)` before doing arithmetic. The underlying token price is exposed separately via `vault.getUnderlyingPrice()`.
+The headline `apy`, `tvl`, and `totalAssets` fields are numeric strings taken from the latest history point. Convert them with `Number(...)` before doing arithmetic.
+
+Use `expectedApy` for the live rate and `apy` for the historical rate. Both are decimal strings: `"0.085"` represents 8.5%. When `expectedApy` is missing, display the live rate as unavailable. A returned `"0"` is a valid rate. The [SDK](/glossary/#sdk) passes through the [API](/glossary/#api)'s fee treatment, so confirm that treatment before you label a rate as net of fees.
+
+The same live fields are available for every vault in `getConcreteApi().apy.getAllVaultsApy()`, indexed by chain ID and lowercase vault address. The underlying token price is exposed separately via `vault.getUnderlyingPrice()`, which resolves `{ price: number }`.
 
 ## Examples
 
-### Vanilla (ethers)
+### Vanilla (viem)
 
 ```tsx
 import { getVault } from "@concrete-xyz/sdk";
-import { ethers } from "ethers";
+import { createPublicClient, http } from "viem";
+import { mainnet } from "viem/chains";
 
-const provider = new ethers.JsonRpcProvider("https://ethereum-rpc.publicnode.com");
-const vault = getVault("v2", "0xE2d8267D285a7ae1eDf48498fF044241d04e9608", chainId, provider);
+const publicClient = createPublicClient({
+  chain: mainnet,
+  transport: http("https://ethereum-rpc.publicnode.com"),
+});
+const vault = getVault("v2", "0xE2d8267D285a7ae1eDf48498fF044241d04e9608", 1, publicClient);
 
 const apy = await vault.getApyDetails();
 console.log("APY Details:", apy);
 
+if (apy.expectedApy != null) {
+  console.log(`Live APY: ${(Number(apy.expectedApy) * 100).toFixed(2)}%`);
+}
+
 if (apy.apy != null) {
-  const price = await vault.getUnderlyingPrice();
-  console.log(`APY: ${(Number(apy.apy) * 100).toFixed(2)}%`);
+  const { price } = await vault.getUnderlyingPrice();
+  console.log(`Historical APY: ${(Number(apy.apy) * 100).toFixed(2)}%`);
   console.log(`Underlying ~ $${price.toFixed(2)} USD`);
 }
 ```
@@ -65,8 +81,8 @@ if (apy.apy != null) {
 import { useEffect, useState } from "react";
 import { useVault } from "@concrete-xyz/sdk/react";
 
-export function ApyWidget({ version, address, chainId, provider, signer }) {
-  const vault = useVault(version, address, chainId, provider, signer);
+export function ApyWidget({ version, address, chainId, publicClient, walletClient }) {
+  const vault = useVault(version, address, chainId, publicClient, walletClient);
   const [apy, setApy] = useState<any>(null);
   const [price, setPrice] = useState<number | null>(null);
 
@@ -76,7 +92,7 @@ export function ApyWidget({ version, address, chainId, provider, signer }) {
       const [data, p] = await Promise.all([vault.getApyDetails(), vault.getUnderlyingPrice()]);
       if (active) {
         setApy(data);
-        setPrice(p);
+        setPrice(p.price);
       }
     })();
     return () => { active = false; };
@@ -112,7 +128,7 @@ export function ApyPanel() {
     enabled: !!vault,
     queryFn: async (v) => {
       const [apy, price] = await Promise.all([v.getApyDetails(), v.getUnderlyingPrice()]);
-      return { apy, price };
+      return { apy, price: price.price };
     },
     staleTime: 60_000,
     retry: 2,
