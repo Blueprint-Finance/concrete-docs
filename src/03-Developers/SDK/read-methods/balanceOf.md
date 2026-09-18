@@ -23,10 +23,12 @@ balanceOf(holder: string): Promise<bigint>
 ## Example
 
 ```tsx
+import { formatUnits } from "viem";
+
 const shares = await vault.balanceOf("0xUserAddress");
 
-// Option 1: ethers.formatUnits
-console.log("Shares:", ethers.formatUnits(shares, await vault.decimals()));
+// Option 1: viem formatUnits
+console.log("Shares:", formatUnits(shares, await vault.decimals()));
 
 // Option 2: SDK helpers (caches decimals internally)
 console.log("Shares (human):", await vault.applyDecimals(shares));

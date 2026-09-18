@@ -1,6 +1,6 @@
 # Concrete Docs - LLM Full Context
 
-Generated: 2026-09-11T15:04:50.564Z
+Generated: 2026-09-18T23:09:10.786Z
 Source repository: concrete-docs
 Canonical docs URL: https://docs.concrete.xyz/
 
@@ -20,48 +20,52 @@ This file consolidates every Markdown documentation page in `src/**/*.md` for re
 10. Architecture: Core Concepts [sidebar] - src/03-Developers/architecture-core-concepts.md
 11. Overview [sidebar] - src/03-Developers/SDK/overview.md
 12. Setup Configuration [sidebar] - src/03-Developers/SDK/setup-configuration.md
-13. balanceOf(address) [sidebar] - src/03-Developers/SDK/read-methods/balanceOf.md
-14. getAddress() [sidebar] - src/03-Developers/SDK/read-methods/getAddress.md
-15. getUnderlyingDecimals() [sidebar] - src/03-Developers/SDK/read-methods/getUnderlyingDecimals.md
-16. getVaultDetails() [sidebar] - src/03-Developers/SDK/read-methods/getVaultDetails.md
-17. getVaultTransparencyStats (API) [sidebar] - src/03-Developers/SDK/read-methods/getVaultTransparencyStats.md
-18. getAllWithdrawQueueRequests(owner) [sidebar] - src/03-Developers/SDK/read-methods/getAllWithdrawQueueRequests.md
-19. previewConversion(amount) [sidebar] - src/03-Developers/SDK/read-methods/previewConversion.md
-20. totalAssets() [sidebar] - src/03-Developers/SDK/read-methods/totalAssets.md
-21. symbol() [sidebar] - src/03-Developers/SDK/read-methods/symbol.md
-22. decimals() [sidebar] - src/03-Developers/SDK/read-methods/decimals.md
-23. applyDecimals(amount) [sidebar] - src/03-Developers/SDK/read-methods/applyDecimals.md
-24. toUnderlyingDecimals(amount) [sidebar] - src/03-Developers/SDK/read-methods/toUnderlyingDecimals.md
-25. approve(spender, amount) [sidebar] - src/03-Developers/SDK/write-methods/approve.md
-26. deposit(amount) [sidebar] - src/03-Developers/SDK/write-methods/deposit.md
-27. redeem(amount) [sidebar] - src/03-Developers/SDK/write-methods/redeem.md
-28. transfer(to, amount) [sidebar] - src/03-Developers/SDK/write-methods/transfer.md
-29. transferFrom(from, to, amount) [sidebar] - src/03-Developers/SDK/write-methods/transferFrom.md
-30. Decimals & Conversion Helpers [sidebar] - src/03-Developers/SDK/decimals-and-conversion-helpers.md
-31. Examples [sidebar] - src/03-Developers/SDK/examples.md
-32. Troubleshooting & Error Handling [sidebar] - src/03-Developers/SDK/troubleshooting-and-error-handling.md
-33. Schema & Queries [sidebar] - src/03-Developers/Subgraph-and-Events/schema-and-queries.md
-34. Event Reference [sidebar] - src/03-Developers/Subgraph-and-Events/event-reference-and-use-cases.md
-35. Live Vaults [sidebar] - src/04-Live-Vaults/index.md
-36. Overview [sidebar] - src/05-Institutional-Vaults/overview.md
-37. AssetCX [sidebar] - src/05-Institutional-Vaults/assetcx.md
-38. Pre-Deposit Vaults [sidebar] - src/06-pre-deposit-vaults.md
-39. Completed Campaigns [sidebar] - src/05-completed-campaigns.md
-40. Important Disclaimers [sidebar] - src/09-important-disclosures.md
-41. Audits [sidebar] - src/06-Audits.md
-42. Risks and Safety [sidebar] - src/07-risks-and-safety.md
-43. Restricted Jurisdictions [sidebar] - src/08-restricted-jurisdictions.md
-44. Glossary [sidebar] - src/glossary.md
-45. Support [sidebar] - src/support.md
-46. How to Repay and Withdraw Borrowed Assets [unlisted] - src/03-Borrow/close-loan.md
-47. How to Activate Concrete Borrow (Default Lite) [unlisted] - src/03-Borrow/enable-concrete.md
-48. How to Borrow From External Market [unlisted] - src/03-Borrow/open-loan-externally.md
-49. How to Borrow Against Collateral [unlisted] - src/03-Borrow/open-loan.md
-50. Overview [unlisted] - src/03-Borrow/overview.md
-51. Quick Start (Plug-and-Play Integration) [unlisted] - src/03-Developers/SDK/quick-start.md
-52. getApyDetails() [unlisted] - src/03-Developers/SDK/read-methods/getAPYDetails.md
-53. How to Activate Concrete Protect [unlisted] - src/04-Protect/activate-concrete-protect.md
-54. Overview [unlisted] - src/04-Protect/overview.md
+13. Migrating from 1.x [sidebar] - src/03-Developers/SDK/migrating-from-1x.md
+14. balanceOf(address) [sidebar] - src/03-Developers/SDK/read-methods/balanceOf.md
+15. getAddress() [sidebar] - src/03-Developers/SDK/read-methods/getAddress.md
+16. getUnderlyingDecimals() [sidebar] - src/03-Developers/SDK/read-methods/getUnderlyingDecimals.md
+17. getVaultDetails() [sidebar] - src/03-Developers/SDK/read-methods/getVaultDetails.md
+18. getVaultTransparencyStats (API) [sidebar] - src/03-Developers/SDK/read-methods/getVaultTransparencyStats.md
+19. getApyDetails() [sidebar] - src/03-Developers/SDK/read-methods/getAPYDetails.md
+20. getAllWithdrawQueueRequests(owner) [sidebar] - src/03-Developers/SDK/read-methods/getAllWithdrawQueueRequests.md
+21. getWithdrawalForecast(options) [sidebar] - src/03-Developers/SDK/read-methods/getWithdrawalForecast.md
+22. getDepositLimits() [sidebar] - src/03-Developers/SDK/read-methods/getDepositLimits.md
+23. getDepositLockWithFeeHook() [sidebar] - src/03-Developers/SDK/read-methods/getDepositLockWithFeeHook.md
+24. previewConversion(amount) [sidebar] - src/03-Developers/SDK/read-methods/previewConversion.md
+25. totalAssets() [sidebar] - src/03-Developers/SDK/read-methods/totalAssets.md
+26. symbol() [sidebar] - src/03-Developers/SDK/read-methods/symbol.md
+27. decimals() [sidebar] - src/03-Developers/SDK/read-methods/decimals.md
+28. applyDecimals(amount) [sidebar] - src/03-Developers/SDK/read-methods/applyDecimals.md
+29. toUnderlyingDecimals(amount) [sidebar] - src/03-Developers/SDK/read-methods/toUnderlyingDecimals.md
+30. approve(spender, amount) [sidebar] - src/03-Developers/SDK/write-methods/approve.md
+31. deposit(amount) [sidebar] - src/03-Developers/SDK/write-methods/deposit.md
+32. redeem(amount) [sidebar] - src/03-Developers/SDK/write-methods/redeem.md
+33. transfer(to, amount) [sidebar] - src/03-Developers/SDK/write-methods/transfer.md
+34. transferFrom(from, to, amount) [sidebar] - src/03-Developers/SDK/write-methods/transferFrom.md
+35. Decimals & Conversion Helpers [sidebar] - src/03-Developers/SDK/decimals-and-conversion-helpers.md
+36. Examples [sidebar] - src/03-Developers/SDK/examples.md
+37. Troubleshooting & Error Handling [sidebar] - src/03-Developers/SDK/troubleshooting-and-error-handling.md
+38. Schema & Queries [sidebar] - src/03-Developers/Subgraph-and-Events/schema-and-queries.md
+39. Event Reference [sidebar] - src/03-Developers/Subgraph-and-Events/event-reference-and-use-cases.md
+40. Live Vaults [sidebar] - src/04-Live-Vaults/index.md
+41. Overview [sidebar] - src/05-Institutional-Vaults/overview.md
+42. AssetCX [sidebar] - src/05-Institutional-Vaults/assetcx.md
+43. Pre-Deposit Vaults [sidebar] - src/06-pre-deposit-vaults.md
+44. Completed Campaigns [sidebar] - src/05-completed-campaigns.md
+45. Important Disclaimers [sidebar] - src/09-important-disclosures.md
+46. Audits [sidebar] - src/06-Audits.md
+47. Risks and Safety [sidebar] - src/07-risks-and-safety.md
+48. Restricted Jurisdictions [sidebar] - src/08-restricted-jurisdictions.md
+49. Glossary [sidebar] - src/glossary.md
+50. Support [sidebar] - src/support.md
+51. How to Repay and Withdraw Borrowed Assets [unlisted] - src/03-Borrow/close-loan.md
+52. How to Activate Concrete Borrow (Default Lite) [unlisted] - src/03-Borrow/enable-concrete.md
+53. How to Borrow From External Market [unlisted] - src/03-Borrow/open-loan-externally.md
+54. How to Borrow Against Collateral [unlisted] - src/03-Borrow/open-loan.md
+55. Overview [unlisted] - src/03-Borrow/overview.md
+56. Quick Start (Plug-and-Play Integration) [unlisted] - src/03-Developers/SDK/quick-start.md
+57. How to Activate Concrete Protect [unlisted] - src/04-Protect/activate-concrete-protect.md
+58. Overview [unlisted] - src/04-Protect/overview.md
 
 # Document 1: Concrete: Earn Yield on Supported On-Chain Assets
 Source: src/01-Overview/welcome.md
@@ -680,7 +684,7 @@ From an integration perspective, a user's deposit always results in ERC20 shares
 
 ## Usage
 
-Whether you are using vanilla [JS](https://docs.concrete.xyz/glossary/#js)/[TS](https://docs.concrete.xyz/glossary/#ts), React hooks, or Wagmi integration, you interact with the same underlying vault abstraction.
+Whether you are using vanilla [JS](https://docs.concrete.xyz/glossary/#js)/[TS](https://docs.concrete.xyz/glossary/#ts), React hooks, or Wagmi integration, you interact with the same underlying vault abstraction. The SDK is built on [viem](https://viem.sh). If you are upgrading from 1.x, see [Migrating from 1.x](./migrating-from-1x.md).
 
 The Concrete [SDK](https://docs.concrete.xyz/glossary/#sdk) provides:
 
@@ -699,6 +703,10 @@ The Concrete [SDK](https://docs.concrete.xyz/glossary/#sdk) provides:
 | Deposit | `vault.deposit(amount)` | Underlying consumed, shares minted |
 | Check share balance | `vault.balanceOf(address)` | User's [ctAsset](https://docs.concrete.xyz/glossary/#ct-asset) balance |
 | Redeem shares | `vault.redeem(amount)` | Shares burned, underlying returned |
+| Read live APY | `vault.getApyDetails()` | Live and historical [APY](https://docs.concrete.xyz/glossary/#apy), [TVL](https://docs.concrete.xyz/glossary/#tvl), and history series |
+| Read the deposit cap | `vault.getDepositLimits()` | Deposit cap and minimum deposit (V2) |
+| Read the withdrawal cooldown | `vault.getDepositLockWithFeeHook()` | Cooldown period and locked shares (V2) |
+| Forecast a withdrawal | `vault.getWithdrawalForecast({ account })` | Estimated availability of Withdrawal Queue requests (V2) |
 
 ## Vault = [ERC20](https://docs.concrete.xyz/glossary/#erc-20) + underlying ERC20
 
@@ -774,89 +782,103 @@ Doc ID: Developers/SDK/setup-configuration
 Public URL: https://docs.concrete.xyz/Developers/SDK/setup-configuration/
 In active sidebar: yes
 Description: Concrete Earn V2 SDK documentation for setup Configuration, with implementation guidance for production-grade integrations.
-This guide shows how to install the [SDK](https://docs.concrete.xyz/glossary/#sdk), handle optional dependencies, set up providers, and initialize a vault instance using vanilla [JS](https://docs.concrete.xyz/glossary/#js)/[TS](https://docs.concrete.xyz/glossary/#ts), React, or Wagmi.
+This guide shows how to install the [SDK](https://docs.concrete.xyz/glossary/#sdk), add its peer dependencies, create viem clients, and initialize a vault instance using vanilla [JS](https://docs.concrete.xyz/glossary/#js)/[TS](https://docs.concrete.xyz/glossary/#ts), React, or Wagmi.
+
+:::info
+This page describes SDK 2.x. To upgrade an existing 1.x integration, see [Migrating from 1.x](./migrating-from-1x.md).
+:::
 
 ## Prerequisites
 
 Before you can interact with the [SDK](https://docs.concrete.xyz/glossary/#sdk), you need:
 
+- **Node 20.10 or later**. The SDK does not support earlier Node versions.
 - **A vault address**. Each SDK call targets a specific vault contract (for example `0x15cE9bE...`). Without it, you cannot query metadata, preview conversions, or deposit.
 - **A supported network**. The vault must exist on one of the supported chains: Ethereum, Arbitrum, Berachain, Katana, Corn, Morph.
-- **A signer (optional)**. Required for transactions (deposits, approvals, redemptions). Read-only queries only need a provider.
+- **A wallet client (optional)**. Required for transactions (deposits, approvals, redemptions). Read-only queries only need a public client.
 
 ## Installation
 
-Install the core [SDK](https://docs.concrete.xyz/glossary/#sdk):
+Install the core [SDK](https://docs.concrete.xyz/glossary/#sdk) together with [viem](https://viem.sh):
 
 ```bash
-npm install @concrete-xyz/sdk
+npm install @concrete-xyz/sdk viem@^2
 ```
 
-Optional subpaths:
+viem `^2` is a peer dependency. The SDK takes viem `PublicClient` and `WalletClient` instances and does not bundle viem.
 
-- **React integration**
+The React and Wagmi integrations ship in the same package under subpaths. The Wagmi subpath needs two more peer dependencies:
 
+```bash
+npm install @concrete-xyz/sdk viem@^2 wagmi@^2 @tanstack/react-query@^5
 ```
-npm install @concrete-xyz/sdk
+
+```tsx
 import { useVault } from "@concrete-xyz/sdk/react";
-```
-
-- **Wagmi integration**
-
-```
-npm install @concrete-xyz/sdk
 import { useVault, useVaultQuery } from "@concrete-xyz/sdk/wagmi";
 ```
 
+`react` (`^18` or `^19`), `wagmi`, and `@tanstack/react-query` are optional peer dependencies, needed only for the subpath that uses them. wagmi `^3` is not supported. Keep a single copy of each at the top level of your app: two copies of React break hooks, and two copies of wagmi split the `WagmiProvider` context.
 
-Peer dependencies like ethers.js or wagmi are optional:
-
-- For **vanilla** integration, you need `ethers`.
-- For **Wagmi**, the SDK auto-wires into your Wagmi setup.
-
-## Provider setup
+## Client setup
 
 Depending on your environment:
 
-- **Vanilla (ethers.js)**: pass a `JsonRpcProvider`, and optionally a `signer` for write methods.
-- **React hook**: pass both `provider` and `signer`.
-- **Wagmi hook**: no provider config required. The [SDK](https://docs.concrete.xyz/glossary/#sdk) auto-detects from your Wagmi app.
+- **Vanilla (viem)**: pass a `PublicClient`, and optionally a `WalletClient` with an `account` for write methods.
+- **React hook**: pass the same `publicClient` and `walletClient`.
+- **Wagmi hook**: no client config required. The [SDK](https://docs.concrete.xyz/glossary/#sdk) resolves both clients from your Wagmi config.
 
 ## Initializing a vault
 
 ### Vanilla ([JS](https://docs.concrete.xyz/glossary/#js)/[TS](https://docs.concrete.xyz/glossary/#ts))
 
+`getVault` takes the vault version, address, chain ID, and a viem public client.
+
 ```tsx
 import { getVault } from "@concrete-xyz/sdk";
-import { ethers } from "ethers";
+import { createPublicClient, http } from "viem";
+import { mainnet } from "viem/chains";
 
-const provider = new ethers.JsonRpcProvider("https://ethereum-rpc.publicnode.com");
+const publicClient = createPublicClient({
+  chain: mainnet,
+  transport: http("https://ethereum-rpc.publicnode.com"),
+});
 
 // Read-only vault instance
-const vault = getVault("v1", "0xVaultAddress", chainId, provider);
+const vault = getVault("v1", "0xVaultAddress", 1, publicClient);
 
 // Example: get metadata
 const details = await vault.getVaultDetails();
 console.log("Vault symbol:", details.vaultAsset.symbol);
 ```
 
-To send transactions (approve, deposit, redeem), pass a signer:
+To send transactions (approve, deposit, redeem), pass a wallet client that has an `account`:
 
 ```tsx
-const signer = new ethers.Wallet(PRIVATE_KEY, provider);
-const vaultWithSigner = getVault("v1", "0xVaultAddress", chainId, provider, signer);
+import { createWalletClient, http } from "viem";
+import { privateKeyToAccount } from "viem/accounts";
+import { mainnet } from "viem/chains";
+
+const walletClient = createWalletClient({
+  account: privateKeyToAccount(PRIVATE_KEY),
+  chain: mainnet,
+  transport: http("https://ethereum-rpc.publicnode.com"),
+});
+const vaultWithWallet = getVault("v1", "0xVaultAddress", 1, publicClient, walletClient);
 ```
+
+Without a public client, on-chain reads and writes are unavailable. [API](https://docs.concrete.xyz/glossary/#api)-backed methods such as `getApyDetails()` and `getWithdrawalForecast()` still work. Pass `true` as the sixth argument to suppress the warning that `getVault` logs when no public client is passed.
 
 ### React hook
 
-The React hook wraps `getVault` in a `useMemo`. The `chainId` must be a number. For reads and writes, pass both `provider` and `signer`.
+The React hook takes the same arguments as `getVault` and memoizes the instance. The `chainId` must be a number. For reads and writes, pass both `publicClient` and `walletClient`.
 
 ```tsx
 import { useEffect, useState } from "react";
 import { useVault } from "@concrete-xyz/sdk/react";
 
-function VaultInfo({ provider, signer }) {
-  const vault = useVault("v1", "0xVaultAddress", 80094, provider, signer);
+function VaultInfo({ publicClient, walletClient }) {
+  const vault = useVault("v1", "0xVaultAddress", 80094, publicClient, walletClient);
   const [symbol, setSymbol] = useState<string>();
 
   useEffect(() => {
@@ -897,15 +919,135 @@ function VaultInfo() {
 }
 ```
 
+## Error reporting
+
+The [SDK](https://docs.concrete.xyz/glossary/#sdk) reports nothing by default. Register a sink with `setErrorReporter` to receive instrumented errors, for example to forward them to your own error tracker.
+
+```tsx
+import { setErrorReporter } from "@concrete-xyz/sdk";
+
+setErrorReporter((error, report) => console.error(error, report));
+```
+
+## Contract ABIs
+
+The [SDK](https://docs.concrete.xyz/glossary/#sdk) ships contract [ABIs](https://docs.concrete.xyz/glossary/#abi) under two wildcard subpaths.
+
+| **Subpath** | **Form** | **Use it for** |
+| --- | --- | --- |
+| `@concrete-xyz/sdk/abi/<contract>` | Typed viem ABI | TypeScript. Literal types survive, so viem infers function names, arguments, and return types. |
+| `@concrete-xyz/sdk/raw-abi/<contract>.json` | Standard JSON ABI array | Non-TypeScript consumers, other libraries, codegen, and contract verification. |
+
+Prefer the typed subpath in TypeScript. A JSON import widens the literal types to `string`, and viem then loses all inference.
+
+```tsx
+import abi from "@concrete-xyz/sdk/abi/vault";
+import rawAbi from "@concrete-xyz/sdk/raw-abi/vault.json" with { type: "json" };
+
+const total = await publicClient.readContract({ address, abi, functionName: "totalAssets" });
+```
+
+The typed subpath covers `asset-pricer`, `hook-abstract`, `hook-container`, `hook-deposit-lock-with-fee`, `hook-multi-asset-deposit-cap`, `hook-whitelist-user-deposit`, `hurdle-rate-oracle`, `hurdle-rate-oracle-offchain`, `multicall`, `vault`, `vault-v2-async`, `weth`, and `withdraw-queue`. The raw subpath covers those and four more: `oapp`, `strategy`, `vault-distributor`, and `vault-registry`.
+
+In TypeScript, the `with { type: "json" }` attribute needs `"module"` set to `"nodenext"`, `"esnext"`, or `"preserve"`. The typed subpath needs neither.
+
 ## Summary
 
-- **Reads** (for example `getVaultDetails`, `totalAssets`): only need a provider.
-- **Writes** (for example `approve`, `deposit`, `redeem`): require a signer.
+- **Reads** (for example `getVaultDetails`, `totalAssets`): only need a public client.
+- **Writes** (for example `approve`, `deposit`, `redeem`): require a wallet client with an `account`.
 - **Wagmi hook**: may briefly return `undefined` while connectors load. `useVaultQuery` handles this safely.
 
 ---
 
-# Document 13: balanceOf(address)
+# Document 13: Migrating from 1.x
+Source: src/03-Developers/SDK/migrating-from-1x.md
+Doc ID: Developers/SDK/migrating-from-1x
+Public URL: https://docs.concrete.xyz/Developers/SDK/migrating-from-1x/
+In active sidebar: yes
+Description: Concrete Earn V2 SDK documentation for migrating from 1.x to 2.x, covering viem clients, transaction receipts, and changed method arguments.
+Version 2.0.0 of the [SDK](https://docs.concrete.xyz/glossary/#sdk) is built on [viem](https://viem.sh) instead of ethers. This guide lists each breaking change and the code that replaces it. Version 2.1.0 adds [`getWithdrawalForecast()`](./read-methods/getWithdrawalForecast.md) and has no further breaking changes.
+
+| **Area** | **1.x** | **2.x** |
+| --- | --- | --- |
+| Peer dependency | ethers | viem `^2` |
+| Runtime | No stated minimum | Node 20.10 or later |
+| `getVault` and React `useVault` clients | `provider`, `signer` | `publicClient`, `walletClient` |
+| Client update | `vault.updateProviders(provider, signer)` | `vault.updateClients(publicClient, walletClient)` |
+| Oracle price | `getPrice(quote, symbol, chainId)` | `getPrice(tokenAddress, chainId)` |
+| [ABI](https://docs.concrete.xyz/glossary/#abi) imports | `@concrete-xyz/sdk/dist/src/core/contracts/abi/vault.json` | `@concrete-xyz/sdk/abi/vault` |
+| Receipt from `wait()` | ethers receipt | viem `TransactionReceipt` |
+
+## Install viem
+
+viem `^2` is a peer dependency. Install it next to the [SDK](https://docs.concrete.xyz/glossary/#sdk):
+
+```bash
+npm install @concrete-xyz/sdk@^2 viem@^2
+```
+
+The Wagmi subpath supports wagmi `^2`. wagmi `^3` is not supported.
+
+## Replace the provider and signer
+
+`getVault` and the React `useVault` hook take viem clients in place of the 1.x provider and signer: a `PublicClient` for reads and a `WalletClient` with an `account` for writes. The `version`, `address`, `chainId`, and `silent` arguments are unchanged.
+
+```tsx
+// 1.x
+const vault = getVault("v1", address, 1, provider, signer);
+
+// 2.x
+const publicClient = createPublicClient({ chain: mainnet, transport: http(rpcUrl) });
+const walletClient = createWalletClient({ account, chain: mainnet, transport: http(rpcUrl) });
+const vault = getVault("v1", address, 1, publicClient, walletClient);
+```
+
+The Wagmi hooks need no code change. `useVault` resolves both clients from your Wagmi config, and `fallbackRpcUrl` creates a viem public client over `http(fallbackRpcUrl)`.
+
+If you update clients on an existing vault instance, replace `vault.updateProviders(provider, signer)` with `vault.updateClients(publicClient, walletClient)`.
+
+## Update transaction receipts
+
+Write methods still resolve `{ hash, wait }`, and `wait(confirmations?)` still throws when the transaction reverts. The value that `wait()` resolves is now a viem `TransactionReceipt`. The Wagmi mutation hooks expose the same receipt as `data`. `wait()` has no receipt timeout.
+
+| **1.x** | **2.x** |
+| --- | --- |
+| `receipt.hash` | `receipt.transactionHash` |
+| `receipt.blockNumber` (`number`) | `receipt.blockNumber` (`bigint`) |
+| `receipt.status` (`1` or `0`) | `receipt.status` (`"success"` or `"reverted"`) |
+
+## Update oracle price calls
+
+`getConcreteApi().oracle.getPrice(quote, symbol, chainId)` becomes `getConcreteApi().oracle.getPrice(tokenAddress, chainId)`. Pass the underlying token's address instead of its symbol. `vault.getUnderlyingPrice()` takes no quote argument and resolves the underlying address itself.
+
+## Update direct ABI imports
+
+The internal build paths that 1.x exposed no longer resolve. Import [ABIs](https://docs.concrete.xyz/glossary/#abi) from the two public subpaths instead.
+
+```tsx
+// 1.x
+import abi from "@concrete-xyz/sdk/dist/src/core/contracts/abi/vault.json";
+
+// 2.x
+import abi from "@concrete-xyz/sdk/abi/vault";
+import rawAbi from "@concrete-xyz/sdk/raw-abi/vault.json" with { type: "json" };
+```
+
+The default export of `abi/*` is a typed viem ABI array, so remove any JSON import assertion or attribute from that import. The ABI contents are unchanged. See [Contract ABIs](./setup-configuration.md#contract-abis) for the contracts each subpath covers.
+
+## Replace the bundled error reporting
+
+The [SDK](https://docs.concrete.xyz/glossary/#sdk) no longer depends on an error-tracking package and reports nothing by default. To receive instrumented errors, register a sink with `setErrorReporter`, as shown in [Error reporting](./setup-configuration.md#error-reporting).
+
+## New reads in 2.x
+
+- **Live [APY](https://docs.concrete.xyz/glossary/#apy)** – `getApyDetails()` returns `expectedApy` for the live rate next to the historical `apy`. See [`getApyDetails()`](./read-methods/getAPYDetails.md).
+- **Withdrawal cooldown** – `getDepositLockWithFeeHook()` reads the cooldown duration and an account's locked shares. See [`getDepositLockWithFeeHook()`](./read-methods/getDepositLockWithFeeHook.md).
+- **Deposit cap** – `getDepositLimits()` and `maxDeposit()` read the cap and remaining capacity. See [`getDepositLimits()`](./read-methods/getDepositLimits.md).
+- **Withdrawal forecast** – `getWithdrawalForecast()`, added in 2.1.0, estimates when a Withdrawal Queue request becomes available. See [`getWithdrawalForecast()`](./read-methods/getWithdrawalForecast.md).
+
+---
+
+# Document 14: balanceOf(address)
 Source: src/03-Developers/SDK/read-methods/balanceOf.md
 Doc ID: Developers/SDK/read-methods/balanceOf
 Public URL: https://docs.concrete.xyz/Developers/SDK/read-methods/balanceOf/
@@ -930,10 +1072,12 @@ balanceOf(holder: string): Promise<bigint>
 ## Example
 
 ```tsx
+import { formatUnits } from "viem";
+
 const shares = await vault.balanceOf("0xUserAddress");
 
-// Option 1: ethers.formatUnits
-console.log("Shares:", ethers.formatUnits(shares, await vault.decimals()));
+// Option 1: viem formatUnits
+console.log("Shares:", formatUnits(shares, await vault.decimals()));
 
 // Option 2: SDK helpers (caches decimals internally)
 console.log("Shares (human):", await vault.applyDecimals(shares));
@@ -955,7 +1099,7 @@ console.log("Underlying (from human):", await vault.toUnderlyingBigInt("1.0"));
 
 ---
 
-# Document 14: getAddress()
+# Document 15: getAddress()
 Source: src/03-Developers/SDK/read-methods/getAddress.md
 Doc ID: Developers/SDK/read-methods/getAddress
 Public URL: https://docs.concrete.xyz/Developers/SDK/read-methods/getAddress/
@@ -986,7 +1130,7 @@ console.log("Vault contract address:", vaultAddr);
 
 ---
 
-# Document 15: getUnderlyingDecimals()
+# Document 16: getUnderlyingDecimals()
 Source: src/03-Developers/SDK/read-methods/getUnderlyingDecimals.md
 Doc ID: Developers/SDK/read-methods/getUnderlyingDecimals
 Public URL: https://docs.concrete.xyz/Developers/SDK/read-methods/getUnderlyingDecimals/
@@ -1020,7 +1164,7 @@ console.log("One unit in base:", oneUnit.toString());
 
 ---
 
-# Document 16: getVaultDetails()
+# Document 17: getVaultDetails()
 Source: src/03-Developers/SDK/read-methods/getVaultDetails.md
 Doc ID: Developers/SDK/read-methods/getVaultDetails
 Public URL: https://docs.concrete.xyz/Developers/SDK/read-methods/getVaultDetails/
@@ -1111,7 +1255,7 @@ console.log(details.underlying.symbol);      // "LBTC"
 
 ---
 
-# Document 17: getVaultTransparencyStats (API)
+# Document 18: getVaultTransparencyStats (API)
 Source: src/03-Developers/SDK/read-methods/getVaultTransparencyStats.md
 Doc ID: Developers/SDK/read-methods/getVaultTransparencyStats
 Public URL: https://docs.concrete.xyz/Developers/SDK/read-methods/getVaultTransparencyStats/
@@ -1213,7 +1357,176 @@ try {
 
 ---
 
-# Document 18: getAllWithdrawQueueRequests(owner)
+# Document 19: getApyDetails()
+Source: src/03-Developers/SDK/read-methods/getAPYDetails.md
+Doc ID: Developers/SDK/read-methods/getAPYDetails
+Public URL: https://docs.concrete.xyz/Developers/SDK/read-methods/getAPYDetails/
+In active sidebar: yes
+Description: Read-method reference for getApyDetails() in the Concrete Earn V2 SDK, including expected inputs, outputs, and usage context.
+Fetches live and historical [APY](https://docs.concrete.xyz/glossary/#apy), history series, and headline metrics for a vault. The method is exposed on the vault instance but is backed by the Concrete [API](https://docs.concrete.xyz/glossary/#api), not an on-chain call.
+
+:::tip
+Works the same in vanilla, React, and Wagmi integrations because all return the same vault object.
+:::
+
+## Signature
+
+```tsx
+const apy = await vault.getApyDetails(): Promise<ApyDetails>
+```
+
+## Parameters
+
+- None
+
+## Returns
+
+```tsx
+type ApyPoint = { timestamp: string | number; amount: string };
+
+type ApyDetails = {
+  apyHistory30Days: ApyPoint[];
+  tvlHistory30Days: ApyPoint[];
+  totalAssetsHistory30Days: ApyPoint[];
+  apy: string | undefined;            // latest APY point amount, as a numeric string
+  expectedApy?: string;               // live APY
+  expectedApy7Days?: string;          // live APY over 7 days
+  expectedApy30Days?: string;         // live APY over 30 days
+  timestamp: string;                  // time of the API snapshot
+  tvl: string | undefined;            // latest TVL point amount, as a numeric string
+  totalAssets: string | undefined;    // latest total-assets point amount, as a numeric string
+  nextPayout: Date | null;            // next payout timestamp, when reported
+};
+```
+
+The headline `apy`, `tvl`, and `totalAssets` fields are numeric strings taken from the latest history point. Convert them with `Number(...)` before doing arithmetic.
+
+Use `expectedApy` for the live rate and `apy` for the historical rate. Both are decimal strings: `"0.085"` represents 8.5%. When `expectedApy` is missing, display the live rate as unavailable. A returned `"0"` is a valid rate. The [SDK](https://docs.concrete.xyz/glossary/#sdk) passes through the [API](https://docs.concrete.xyz/glossary/#api)'s fee treatment, so confirm that treatment before you label a rate as net of fees.
+
+The same live fields are available for every vault in `getConcreteApi().apy.getAllVaultsApy()`, indexed by chain ID and lowercase vault address. The underlying token price is exposed separately via `vault.getUnderlyingPrice()`, which resolves `{ price: number }`.
+
+## Examples
+
+### Vanilla (viem)
+
+```tsx
+import { getVault } from "@concrete-xyz/sdk";
+import { createPublicClient, http } from "viem";
+import { mainnet } from "viem/chains";
+
+const publicClient = createPublicClient({
+  chain: mainnet,
+  transport: http("https://ethereum-rpc.publicnode.com"),
+});
+const vault = getVault("v2", "0xE2d8267D285a7ae1eDf48498fF044241d04e9608", 1, publicClient);
+
+const apy = await vault.getApyDetails();
+console.log("APY Details:", apy);
+
+if (apy.expectedApy != null) {
+  console.log(`Live APY: ${(Number(apy.expectedApy) * 100).toFixed(2)}%`);
+}
+
+if (apy.apy != null) {
+  const { price } = await vault.getUnderlyingPrice();
+  console.log(`Historical APY: ${(Number(apy.apy) * 100).toFixed(2)}%`);
+  console.log(`Underlying ~ $${price.toFixed(2)} USD`);
+}
+```
+
+### React (custom hook)
+
+```tsx
+import { useEffect, useState } from "react";
+import { useVault } from "@concrete-xyz/sdk/react";
+
+export function ApyWidget({ version, address, chainId, publicClient, walletClient }) {
+  const vault = useVault(version, address, chainId, publicClient, walletClient);
+  const [apy, setApy] = useState<any>(null);
+  const [price, setPrice] = useState<number | null>(null);
+
+  useEffect(() => {
+    let active = true;
+    (async () => {
+      const [data, p] = await Promise.all([vault.getApyDetails(), vault.getUnderlyingPrice()]);
+      if (active) {
+        setApy(data);
+        setPrice(p.price);
+      }
+    })();
+    return () => { active = false; };
+  }, [vault]);
+
+  if (!apy) return <div>Loading APY...</div>;
+  return (
+    <div>
+      <div>APY: {(Number(apy.apy) * 100).toFixed(2)}%</div>
+      {price != null && <div>Underlying: ${price.toFixed(2)}</div>}
+    </div>
+  );
+}
+```
+
+### Wagmi with `useVaultQuery`
+
+```tsx
+import { useVault, useVaultQuery } from "@concrete-xyz/sdk/wagmi";
+
+const vaultConfig = {
+  version: "v2",
+  address: "0xE2d8267D285a7ae1eDf48498fF044241d04e9608",
+  chainId: 1,
+} as const;
+
+export function ApyPanel() {
+  const vault = useVault(vaultConfig);
+
+  const q = useVaultQuery({
+    vault: vaultConfig,
+    queryKey: ["apy"],
+    enabled: !!vault,
+    queryFn: async (v) => {
+      const [apy, price] = await Promise.all([v.getApyDetails(), v.getUnderlyingPrice()]);
+      return { apy, price: price.price };
+    },
+    staleTime: 60_000,
+    retry: 2,
+  });
+
+  if (q.isLoading) return <div>Loading APY...</div>;
+  if (q.isError) return <div>Failed to load APY</div>;
+
+  const { apy, price } = q.data!;
+  return (
+    <div>
+      <div>APY: {(Number(apy.apy) * 100).toFixed(2)}%</div>
+      {price != null && <div>Underlying: ${price.toFixed(2)}</div>}
+    </div>
+  );
+}
+```
+
+## Notes and error handling
+
+- **Backend-backed**: unlike `symbol()` or `totalAssets()`, this hits the Concrete [API](https://docs.concrete.xyz/glossary/#api). Handle HTTP and network failures and timeouts.
+- **Staleness**: [APY](https://docs.concrete.xyz/glossary/#apy) is not block-by-block. Cache reasonably (`staleTime` 30 to 120 seconds).
+- **String values**: headline fields are numeric strings. Convert with `Number(...)` before arithmetic.
+- **Rate limits**: if you batch widgets, share a single query via React Query to avoid redundant calls.
+
+**Minimal guard**
+
+```tsx
+try {
+  const apy = await vault.getApyDetails();
+  if (apy?.apy == null) throw new Error("APY unavailable");
+} catch (e) {
+  // fallback UI
+}
+```
+
+---
+
+# Document 20: getAllWithdrawQueueRequests(owner)
 Source: src/03-Developers/SDK/read-methods/getAllWithdrawQueueRequests.md
 Doc ID: Developers/SDK/read-methods/getAllWithdrawQueueRequests
 Public URL: https://docs.concrete.xyz/Developers/SDK/read-methods/getAllWithdrawQueueRequests/
@@ -1224,7 +1537,7 @@ Fetches all withdrawal-queue requests for a given `owner` address. Returns an ar
 * `cancel()`: cancels the request (when `cancelable: true`)
 * `claim()`: claims the withdrawal (when `claimable: true`)
 
-The returned `cancel()` and `claim()` functions are write actions and require a signer.
+The returned `cancel()` and `claim()` functions are write actions and require a wallet client with an `account`.
 
 ## Signature
 
@@ -1236,8 +1549,8 @@ getAllWithdrawQueueRequests(owner: Address): Promise<
     epochState: "inactive" | "active" | "processing" | "processed";
     claimable: boolean;
     cancelable: boolean;
-    cancel: () => Promise<ContractTransactionResponse>;
-    claim: () => Promise<ContractTransactionResponse>;
+    cancel: () => Promise<TxResult>;
+    claim: () => Promise<TxResult>;
     amount: bigint;
     version: 2;
     vaultAddress: string;
@@ -1260,7 +1573,7 @@ An array of withdrawal-queue requests:
 * `version`: always `2` for these requests.
 * `vaultAddress`, `chainId`: identify the vault and network.
 * `timestamp`: request timestamp when available.
-* `cancel()`, `claim()`: callable functions that send transactions.
+* `cancel()`, `claim()`: callable functions that send transactions. Each resolves `{ hash, wait }`, where `wait(confirmations?)` resolves a viem `TransactionReceipt` and throws when the transaction reverts.
 
 ## Parameters
 
@@ -1270,15 +1583,19 @@ An array of withdrawal-queue requests:
 
 ```ts
 import { getVault } from "@concrete-xyz/sdk";
-import { ethers } from "ethers";
+import { createPublicClient, createWalletClient, http } from "viem";
+import { privateKeyToAccount } from "viem/accounts";
+import { mainnet } from "viem/chains";
 
 async function main() {
-  const provider = new ethers.JsonRpcProvider(process.env.RPC_URL!);
-  const signer = new ethers.Wallet(process.env.PRIVATE_KEY!, provider);
+  const account = privateKeyToAccount(process.env.PRIVATE_KEY as `0x${string}`);
+  const transport = http(process.env.RPC_URL!);
+  const publicClient = createPublicClient({ chain: mainnet, transport });
+  const walletClient = createWalletClient({ account, chain: mainnet, transport });
 
-  const vault = getVault("v2", "0xYourVault", 1, provider, signer);
+  const vault = getVault("v2", "0xYourVault", 1, publicClient, walletClient);
 
-  const owner = await signer.getAddress();
+  const owner = account.address;
   const requests = await vault.getAllWithdrawQueueRequests(owner);
 
   // Render list
@@ -1302,7 +1619,7 @@ async function main() {
     console.log("Claiming request in epoch", firstClaimable.epoch);
     const tx = await firstClaimable.claim();
     const receipt = await tx.wait();
-    console.log("Claim confirmed:", receipt?.hash ?? receipt?.transactionHash);
+    console.log("Claim confirmed:", receipt.transactionHash);
     return;
   }
 
@@ -1312,7 +1629,7 @@ async function main() {
     console.log("Canceling request in epoch", firstCancelable.epoch);
     const tx = await firstCancelable.cancel();
     const receipt = await tx.wait();
-    console.log("Cancel confirmed:", receipt?.hash ?? receipt?.transactionHash);
+    console.log("Cancel confirmed:", receipt.transactionHash);
     return;
   }
 
@@ -1327,7 +1644,209 @@ main().catch((err) => {
 
 ---
 
-# Document 19: previewConversion(amount)
+# Document 21: getWithdrawalForecast(options)
+Source: src/03-Developers/SDK/read-methods/getWithdrawalForecast.md
+Doc ID: Developers/SDK/read-methods/getWithdrawalForecast
+Public URL: https://docs.concrete.xyz/Developers/SDK/read-methods/getWithdrawalForecast/
+In active sidebar: yes
+Description: Read-method reference for getWithdrawalForecast(options) in the Concrete Earn V2 SDK, including expected inputs, outputs, and usage context.
+Estimates when Withdrawal Queue requests on a V2 async vault become available. The forecast covers the Epoch schedule, the load on the queue, the receiver's outstanding requests, and the assets that are claimable now. It can also preview a request before you submit it. Available from [SDK](https://docs.concrete.xyz/glossary/#sdk) 2.1.0.
+
+The method is backed by the Concrete [API](https://docs.concrete.xyz/glossary/#api), not an on-chain call, so it needs no [RPC](https://docs.concrete.xyz/glossary/#rpc) client or wallet.
+
+## Signature
+
+The method takes a single options object.
+
+```tsx
+getWithdrawalForecast(options: GetWithdrawalForecastOptions): Promise<WithdrawalForecast>
+```
+
+## Parameters
+
+- `account` (Address, required): the withdrawal receiver.
+- `additionalShares` (bigint, optional): a positive amount of shares, in share base units, to preview as a new request.
+
+A preview adds `additionalShares` to the receiver's existing requests. It assumes the caller, the share owner, and the receiver are all `account`. An ineligible preview does not remove existing requests or claims.
+
+## Returns
+
+| **Field** | **Use** |
+| --- | --- |
+| `status`, `reasons`, `snapshot` | Check availability and source freshness before you display estimates. |
+| `schedule` | Distinguish scheduled close and process times from the observed Epoch state. |
+| `pressure` | Read the withdrawal cap and idle-liquidity budgets, the queued shares, and the capacity for a new request. |
+| `existing` | Read outstanding requests and their forecast portions. Processed claims are separate. |
+| `claimable` | Read the assets and Epochs that are available to claim now. |
+| `preview` | Check eligibility and the forecast for existing requests plus the proposed request. `null` when `additionalShares` is omitted. |
+| `assumptions` | Read the conditions the estimate depends on. |
+
+`existing` and `preview.forecast` share one shape:
+
+```tsx
+type AccountWithdrawalForecast = {
+  status: "ready" | "partial" | "unavailable" | "unsupported";
+  reasons: string[];
+  requestedSharesRaw: bigint | null;
+  positions: { epochId: bigint; sharesRaw: bigint }[];
+  portions: {
+    sharesRaw: bigint;
+    epochId: bigint;
+    estimatedAvailableAt: string | null;
+    outcome: "direct_payment" | "claim";
+  }[];
+  firstAvailableAt: string | null;
+  fullAvailableAt: string | null;
+  unallocatedSharesRaw: bigint | null;
+};
+```
+
+Amounts are `bigint` in share or underlying base units. Format them with the returned `shareDecimals` and `assetDecimals`. Epoch IDs and block numbers are also `bigint`. Timestamps are [UTC](https://docs.concrete.xyz/glossary/#utc) ISO 8601 strings, and `snapshot.maxAgeSeconds` is in seconds. `policy.thresholdPercent` keeps the exact decimal percentage as a string.
+
+## Example
+
+The first call reads the receiver's current forecast. The second previews a new request of 1,000,000 share base units.
+
+```tsx
+import { getVault, type WithdrawalForecast } from "@concrete-xyz/sdk";
+
+const vault = getVault("v2", vaultAddress, chainId, undefined, undefined, true);
+
+const current: WithdrawalForecast = await vault.getWithdrawalForecast({ account });
+console.log("Fully available at:", current.existing.fullAvailableAt);
+
+const preview = await vault.getWithdrawalForecast({ account, additionalShares: 1_000_000n });
+if (preview.preview?.eligibility === "eligible") {
+  console.log("New request available at:", preview.preview.forecast?.fullAvailableAt);
+}
+```
+
+:::info[Example]
+Alice holds ctUSDC shares on an async vault and previews a withdrawal of all her shares. If the forecast splits her request across two Epochs, `portions` has two entries, each with its own `epochId` and `estimatedAvailableAt`. `firstAvailableAt` then holds the earlier date and `fullAvailableAt` the later one.
+:::
+
+## Notes and error handling
+
+- **Estimates, not guarantees**: dates are conditional on the returned `assumptions`. A scheduled date alone does not enable a claim.
+- **Portion outcomes**: a `direct_payment` portion pays assets directly. A `claim` portion requires a later claim after the Epoch is processed.
+- **Partial results**: preserve `partial`, `unavailable`, and `unsupported` results and their `reasons`. A `null` amount is unknown, not zero. `fullAvailableAt` is `null` when the forecast cannot allocate the full amount, and `unallocatedSharesRaw` holds the remainder.
+- **Input validation**: the call throws for an invalid vault or receiver address, and for an `additionalShares` value that is not a positive `bigint`.
+- **Timeout**: the request aborts after 30 seconds. Network, [API](https://docs.concrete.xyz/glossary/#api), and timeout errors reject the call.
+
+---
+
+# Document 22: getDepositLimits()
+Source: src/03-Developers/SDK/read-methods/getDepositLimits.md
+Doc ID: Developers/SDK/read-methods/getDepositLimits
+Public URL: https://docs.concrete.xyz/Developers/SDK/read-methods/getDepositLimits/
+In active sidebar: yes
+Description: Read-method reference for getDepositLimits() in the Concrete Earn V2 SDK, including expected inputs, outputs, and usage context.
+Returns the deposit cap and the minimum deposit of a V2 vault. The deposit cap limits the total assets the vault accepts across all depositors. Read it together with `maxDeposit(receiver)` to show how much capacity remains.
+
+## Signature
+
+Both reads resolve `bigint` values in underlying base units.
+
+```tsx
+getDepositLimits(): Promise<[bigint, bigint]>
+maxDeposit(receiver: Address): Promise<bigint>
+```
+
+## Parameters
+
+- `receiver` (Address, required for `maxDeposit`): the address that receives the shares.
+
+## Returns
+
+- `getDepositLimits()`: a `[cap, minimumDeposit]` tuple in underlying base units. A cap equal to viem's `maxUint256` means no cap is set. A zero cap disables deposits.
+- `maxDeposit(receiver)`: the remaining capacity in underlying base units. It returns zero when deposits are paused, the cap is reached, or the remaining capacity is below the minimum deposit.
+
+Both values are denominated in the underlying token, not in [USD](https://docs.concrete.xyz/glossary/#usd).
+
+## Example
+
+```tsx
+import { formatUnits, maxUint256 } from "viem";
+
+const [capRaw, minimumDepositRaw] = await vault.getDepositLimits();
+const remainingCapacityRaw = await vault.maxDeposit(receiverAddress);
+const decimals = await vault.getUnderlyingDecimals();
+
+console.log({
+  cap: capRaw === maxUint256 ? "unlimited" : formatUnits(capRaw, decimals),
+  minimumDeposit: formatUnits(minimumDepositRaw, decimals),
+  remainingCapacity: formatUnits(remainingCapacityRaw, decimals),
+});
+```
+
+Keep the raw `bigint` values for calculations and use the underlying decimals for display only.
+
+## Notes
+
+- `getWithdrawLimits()` returns the maximum and minimum withdrawal amounts per transaction, in the same tuple form.
+- For deposits routed through additional hooks, including multi-asset deposits, check those hooks' restrictions separately.
+
+---
+
+# Document 23: getDepositLockWithFeeHook()
+Source: src/03-Developers/SDK/read-methods/getDepositLockWithFeeHook.md
+Doc ID: Developers/SDK/read-methods/getDepositLockWithFeeHook
+Public URL: https://docs.concrete.xyz/Developers/SDK/read-methods/getDepositLockWithFeeHook/
+In active sidebar: yes
+Description: Read-method reference for getDepositLockWithFeeHook() in the Concrete Earn V2 SDK, including expected inputs, outputs, and usage context.
+Resolves the hook that enforces a V2 vault's withdrawal cooldown. A withdrawal cooldown locks the shares issued on each deposit for a configured period. Use the hook to read that period, an account's locked shares, and the early unlock fee. For the user-facing behavior, see [Withdrawal Cooldowns](https://docs.concrete.xyz/Using-Concrete-Vaults/withdraw/#withdrawal-cooldowns).
+
+## Signature
+
+The method takes no arguments and resolves the hook instance.
+
+```tsx
+getDepositLockWithFeeHook(): Promise<DepositLockWithFeeHook | undefined>
+```
+
+## Parameters
+
+- None
+
+## Returns
+
+The **DepositLockWithFeeHook** instance, or `undefined` when the vault has no such hook. An unresolved hook means the [SDK](https://docs.concrete.xyz/glossary/#sdk) cannot provide cooldown information for that vault.
+
+| **Read** | **Method** | **Result** |
+| --- | --- | --- |
+| Cooldown period | `depositLockDuration()` | Duration in seconds |
+| Locked shares | `effectiveTotalLocked(account)` | Shares still locked |
+| Unlocked shares | `getUnlockedShares(account)` | Shares available without early unlocking |
+| Stored lock count | `storedLockCount(account)` | Number of stored records, including expired locks |
+| Individual lock | `getStoredLock(account, index)` | `{ shares, unlockTimestamp, duration }`, with times in seconds |
+| Early unlock switch | `earlyUnlockEnabled()` | `true` when the hook's early unlock switch is on |
+| Early unlock fee | `previewEarlyUnlock(account, shares)` | Fee in vault-share base units |
+
+All numeric results are `bigint`.
+
+## Example
+
+The example reads the cooldown period and an account's locked shares.
+
+```tsx
+const lock = await vault.getDepositLockWithFeeHook();
+const cooldownSeconds = lock ? await lock.depositLockDuration() : undefined;
+
+if (lock) {
+  const locked = await lock.effectiveTotalLocked(account);
+  console.log("Locked shares:", await vault.applyDecimals(locked));
+}
+```
+
+## Notes
+
+- A configured cooldown period only takes effect when the vault's deposit and mint hook flags are set. A period of zero disables locks on new deposits, but existing locks can remain active.
+- `getEnabledDetails()` resolves `{ enabled, earlyUnlockEnabled, fees, feeRecipient, duration }`. `enabled` is `true` when a cooldown period is configured, meaning `depositLockDuration()` is greater than zero. `earlyUnlockEnabled` is `true` when an early unlock can succeed: the hook's early unlock switch is on and, if the fee is above zero, a fee recipient is set. A zero fee means a free early exit. The bare `earlyUnlockEnabled()` read returns only the switch, and `previewEarlyUnlock` reverts when early unlocking is unavailable.
+- For async vaults, the Withdrawal Queue processes requests per Epoch. The cooldown alone does not determine when a withdrawal pays out.
+
+---
+
+# Document 24: previewConversion(amount)
 Source: src/03-Developers/SDK/read-methods/previewConversion.md
 Doc ID: Developers/SDK/read-methods/previewConversion
 Public URL: https://docs.concrete.xyz/Developers/SDK/read-methods/previewConversion/
@@ -1414,7 +1933,7 @@ console.log(
 
 ---
 
-# Document 20: totalAssets()
+# Document 25: totalAssets()
 Source: src/03-Developers/SDK/read-methods/totalAssets.md
 Doc ID: Developers/SDK/read-methods/totalAssets
 Public URL: https://docs.concrete.xyz/Developers/SDK/read-methods/totalAssets/
@@ -1439,6 +1958,8 @@ totalAssets(): Promise<bigint>
 ## Example
 
 ```tsx
+import { formatUnits } from "viem";
+
 const details = await vault.getVaultDetails();
 const total = await vault.totalAssets();
 
@@ -1449,10 +1970,10 @@ console.log(
   details.underlying.symbol
 );
 
-// Option 2: ethers.js formatting
+// Option 2: viem formatting
 console.log(
   "Total assets:",
-  ethers.formatUnits(total, details.underlying.decimals),
+  formatUnits(total, details.underlying.decimals),
   details.underlying.symbol
 );
 ```
@@ -1465,7 +1986,7 @@ console.log(
 
 ---
 
-# Document 21: symbol()
+# Document 26: symbol()
 Source: src/03-Developers/SDK/read-methods/symbol.md
 Doc ID: Developers/SDK/read-methods/symbol
 Public URL: https://docs.concrete.xyz/Developers/SDK/read-methods/symbol/
@@ -1501,7 +2022,7 @@ console.log(await vault.symbol()); // "ctLBTC"
 
 ---
 
-# Document 22: decimals()
+# Document 27: decimals()
 Source: src/03-Developers/SDK/read-methods/decimals.md
 Doc ID: Developers/SDK/read-methods/decimals
 Public URL: https://docs.concrete.xyz/Developers/SDK/read-methods/decimals/
@@ -1537,7 +2058,7 @@ console.log(await vault.decimals()); // 18
 
 ---
 
-# Document 23: applyDecimals(amount)
+# Document 28: applyDecimals(amount)
 Source: src/03-Developers/SDK/read-methods/applyDecimals.md
 Doc ID: Developers/SDK/read-methods/applyDecimals
 Public URL: https://docs.concrete.xyz/Developers/SDK/read-methods/applyDecimals/
@@ -1569,7 +2090,7 @@ console.log("Formatted vault shares:", display);
 
 ---
 
-# Document 24: toUnderlyingDecimals(amount)
+# Document 29: toUnderlyingDecimals(amount)
 Source: src/03-Developers/SDK/read-methods/toUnderlyingDecimals.md
 Doc ID: Developers/SDK/read-methods/toUnderlyingDecimals
 Public URL: https://docs.concrete.xyz/Developers/SDK/read-methods/toUnderlyingDecimals/
@@ -1601,7 +2122,7 @@ console.log("Formatted underlying:", display);
 
 ---
 
-# Document 25: approve(spender, amount)
+# Document 30: approve(spender, amount)
 Source: src/03-Developers/SDK/write-methods/approve.md
 Doc ID: Developers/SDK/write-methods/approve
 Public URL: https://docs.concrete.xyz/Developers/SDK/write-methods/approve/
@@ -1657,7 +2178,7 @@ await (await vault.approve(spender, shareAllowance)).wait();
 
 ---
 
-# Document 26: deposit(amount)
+# Document 31: deposit(amount)
 Source: src/03-Developers/SDK/write-methods/deposit.md
 Doc ID: Developers/SDK/write-methods/deposit
 Public URL: https://docs.concrete.xyz/Developers/SDK/write-methods/deposit/
@@ -1677,13 +2198,13 @@ await vault.deposit(amount: bigint): Promise<Tx>
 
 ## Returns
 
-- `Tx`: transaction object. Call `await tx.wait()` to confirm.
+- `Tx`: `{ hash, wait }`. Call `await tx.wait(confirmations?)` to confirm. It resolves a viem `TransactionReceipt` and throws when the transaction reverts.
 
 ## Example
 
 ```tsx
-// Prerequisite: the vault was created with a signer:
-// const vault = getVault(version, vaultAddress, chainId, provider, signer)
+// Prerequisite: the vault was created with a wallet client:
+// const vault = getVault(version, vaultAddress, chainId, publicClient, walletClient)
 
 const vaultAddr = vault.getAddress();
 
@@ -1707,7 +2228,7 @@ console.log("Deposit confirmed in block", receipt.blockNumber);
 
 ---
 
-# Document 27: redeem(amount)
+# Document 32: redeem(amount)
 Source: src/03-Developers/SDK/write-methods/redeem.md
 Doc ID: Developers/SDK/write-methods/redeem
 Public URL: https://docs.concrete.xyz/Developers/SDK/write-methods/redeem/
@@ -1744,7 +2265,7 @@ if (myShares > 0n) {
 
 ---
 
-# Document 28: transfer(to, amount)
+# Document 33: transfer(to, amount)
 Source: src/03-Developers/SDK/write-methods/transfer.md
 Doc ID: Developers/SDK/write-methods/transfer
 Public URL: https://docs.concrete.xyz/Developers/SDK/write-methods/transfer/
@@ -1777,7 +2298,7 @@ await (await vault.transfer(to, shareAmount)).wait();
 
 ---
 
-# Document 29: transferFrom(from, to, amount)
+# Document 34: transferFrom(from, to, amount)
 Source: src/03-Developers/SDK/write-methods/transferFrom.md
 Doc ID: Developers/SDK/write-methods/transferFrom
 Public URL: https://docs.concrete.xyz/Developers/SDK/write-methods/transferFrom/
@@ -1814,7 +2335,7 @@ await (await vault.transferFrom(owner, to, shareAmount)).wait();
 
 ---
 
-# Document 30: Decimals & Conversion Helpers
+# Document 35: Decimals & Conversion Helpers
 Source: src/03-Developers/SDK/decimals-and-conversion-helpers.md
 Doc ID: Developers/SDK/decimals-and-conversion-helpers
 Public URL: https://docs.concrete.xyz/Developers/SDK/decimals-and-conversion-helpers/
@@ -1833,24 +2354,26 @@ The following helpers cache vault decimals internally and handle conversions con
 
 ---
 
-# Document 31: Examples
+# Document 36: Examples
 Source: src/03-Developers/SDK/examples.md
 Doc ID: Developers/SDK/examples
 Public URL: https://docs.concrete.xyz/Developers/SDK/examples/
 In active sidebar: yes
 Description: Concrete Earn V2 SDK documentation for examples, with implementation guidance for production-grade integrations.
+The write examples on this page use `vaultWithWallet` and `account`, which [example 5](#5-deposit-flow) creates. The read examples use the `vault` from [example 3](#3-fetch-vault-details).
+
 ## 1. Check and top up allowance
 
 Before depositing, confirm the user has approved enough underlying for the vault. If not, approve the difference.
 
 ```tsx
-const vaultAddr = vaultWithSigner.getAddress();
-const erc20 = await vaultWithSigner.getUnderlyingErc20();
-const depositAmount = await vaultWithSigner.toUnderlyingBigInt("5.0"); // 5 underlying tokens
+const vaultAddr = vaultWithWallet.getAddress();
+const erc20 = await vaultWithWallet.getUnderlyingErc20();
+const depositAmount = await vaultWithWallet.toUnderlyingBigInt("5.0"); // 5 underlying tokens
 
 // Check existing allowance
 const currentAllowance = await erc20.allowance(
-  await signer.getAddress(),
+  account.address,
   vaultAddr
 );
 
@@ -1861,7 +2384,7 @@ if (currentAllowance < depositAmount) {
 }
 
 // Safe to deposit
-await (await vaultWithSigner.deposit(depositAmount)).wait();
+await (await vaultWithWallet.deposit(depositAmount)).wait();
 ```
 
 ## 2. Read total assets
@@ -1883,10 +2406,12 @@ console.log(
 
 ```tsx
 import { getVault } from "@concrete-xyz/sdk";
-import { ethers } from "ethers";
+import { createPublicClient, http } from "viem";
+import { mainnet } from "viem/chains";
 
-const provider = new ethers.JsonRpcProvider("https://ethereum-rpc.publicnode.com");
-const vault = getVault("v2", "0xYourVault", chainId, provider);
+const transport = http("https://ethereum-rpc.publicnode.com");
+const publicClient = createPublicClient({ chain: mainnet, transport });
+const vault = getVault("v2", "0xYourVault", 1, publicClient);
 
 const details = await vault.getVaultDetails();
 console.log("Vault shares:", details.vaultAsset.symbol);
@@ -1909,42 +2434,44 @@ console.log(
 ## 5. Deposit flow
 
 ```tsx
-import { ethers } from "ethers";
+import { createWalletClient } from "viem";
+import { privateKeyToAccount } from "viem/accounts";
 
 // 1. Approve vault to spend the underlying
 // 2. Deposit underlying into the vault
 // 3. Receive vault shares
 
-const signer = new ethers.Wallet(process.env.PRIVATE_KEY!, provider);
-const vaultWithSigner = getVault("v2", "0xYourVault", chainId, provider, signer);
+const account = privateKeyToAccount(process.env.PRIVATE_KEY as `0x${string}`);
+const walletClient = createWalletClient({ account, chain: mainnet, transport });
+const vaultWithWallet = getVault("v2", "0xYourVault", 1, publicClient, walletClient);
 
-const depositAmount = await vaultWithSigner.toUnderlyingBigInt("1.0");
+const depositAmount = await vaultWithWallet.toUnderlyingBigInt("1.0");
 
 // (1) Approve underlying to the vault
-const erc20 = await vaultWithSigner.getUnderlyingErc20();
-await (await erc20.approve(vaultWithSigner.getAddress(), depositAmount)).wait();
+const erc20 = await vaultWithWallet.getUnderlyingErc20();
+await (await erc20.approve(vaultWithWallet.getAddress(), depositAmount)).wait();
 
 // (2) Deposit
-const receipt = await (await vaultWithSigner.deposit(depositAmount)).wait();
+const receipt = await (await vaultWithWallet.deposit(depositAmount)).wait();
 console.log("Deposit confirmed:", receipt.transactionHash);
 ```
 
 ## 6. Redeem flow
 
 ```tsx
-const owner = await signer.getAddress();
-const shareBalance = await vaultWithSigner.balanceOf(owner);
+const owner = account.address;
+const shareBalance = await vaultWithWallet.balanceOf(owner);
 
 if (shareBalance > 0n) {
-  const preview = await vaultWithSigner.previewConversion(shareBalance);
-  const details = await vaultWithSigner.getVaultDetails();
+  const preview = await vaultWithWallet.previewConversion(shareBalance);
+  const details = await vaultWithWallet.getVaultDetails();
 
   console.log(
-    `${await vaultWithSigner.applyDecimals(shareBalance)} ${details.vaultAsset.symbol} ≈ ` +
-    `${await vaultWithSigner.toUnderlyingDecimals(preview.underlyingReceivingRaw)} ${details.underlying.symbol}`
+    `${await vaultWithWallet.applyDecimals(shareBalance)} ${details.vaultAsset.symbol} ≈ ` +
+    `${await vaultWithWallet.toUnderlyingDecimals(preview.underlyingReceivingRaw)} ${details.underlying.symbol}`
   );
 
-  const receipt = await (await vaultWithSigner.redeem(shareBalance)).wait();
+  const receipt = await (await vaultWithWallet.redeem(shareBalance)).wait();
   console.log("Redeemed:", receipt.transactionHash);
 }
 ```
@@ -1955,8 +2482,8 @@ Shares (ctAssets) behave like [ERC20](https://docs.concrete.xyz/glossary/#erc-20
 
 ```tsx
 const recipient = "0xRecipient...";
-const tenShares = await vaultWithSigner.toBigInt("10.0");
-await (await vaultWithSigner.transfer(recipient, tenShares)).wait();
+const tenShares = await vaultWithWallet.toBigInt("10.0");
+await (await vaultWithWallet.transfer(recipient, tenShares)).wait();
 ```
 
 ## 8. Move shares with allowance
@@ -1965,15 +2492,15 @@ Grant another address permission to spend your shares.
 
 ```tsx
 const spender = "0xSpender...";
-const owner = await signer.getAddress();
+const owner = account.address;
 const recipient = "0xRecipient...";
-const allowance = await vaultWithSigner.toBigInt("5.0");
+const allowance = await vaultWithWallet.toBigInt("5.0");
 
 // Owner approves spender
-await (await vaultWithSigner.approve(spender, allowance)).wait();
+await (await vaultWithWallet.approve(spender, allowance)).wait();
 
-// Spender calls transferFrom (as the connected signer)
-await (await vaultWithSigner.transferFrom(owner, recipient, allowance)).wait();
+// Spender calls transferFrom (as the connected account)
+await (await vaultWithWallet.transferFrom(owner, recipient, allowance)).wait();
 ```
 
 ## 9. End-to-end example
@@ -1981,26 +2508,26 @@ await (await vaultWithSigner.transferFrom(owner, recipient, allowance)).wait();
 ```tsx
 // 1 underlying deposit, then redeem
 
-const oneUnderlying = await vaultWithSigner.toUnderlyingBigInt("1.0");
+const oneUnderlying = await vaultWithWallet.toUnderlyingBigInt("1.0");
 
 // Preview deposit
-const pvDeposit = await vaultWithSigner.previewConversion(oneUnderlying);
-console.log("Expected shares:", await vaultWithSigner.applyDecimals(pvDeposit.vaultTokensReceivingRaw));
+const pvDeposit = await vaultWithWallet.previewConversion(oneUnderlying);
+console.log("Expected shares:", await vaultWithWallet.applyDecimals(pvDeposit.vaultTokensReceivingRaw));
 
 // Approve and deposit
-const erc20 = await vaultWithSigner.getUnderlyingErc20();
-await (await erc20.approve(vaultWithSigner.getAddress(), oneUnderlying)).wait();
-await (await vaultWithSigner.deposit(oneUnderlying)).wait();
+const erc20 = await vaultWithWallet.getUnderlyingErc20();
+await (await erc20.approve(vaultWithWallet.getAddress(), oneUnderlying)).wait();
+await (await vaultWithWallet.deposit(oneUnderlying)).wait();
 
 // Redeem
-const owner = await signer.getAddress();
-const shares = await vaultWithSigner.balanceOf(owner);
-await (await vaultWithSigner.redeem(shares)).wait();
+const owner = account.address;
+const shares = await vaultWithWallet.balanceOf(owner);
+await (await vaultWithWallet.redeem(shares)).wait();
 ```
 
 ---
 
-# Document 32: Troubleshooting & Error Handling
+# Document 37: Troubleshooting & Error Handling
 Source: src/03-Developers/SDK/troubleshooting-and-error-handling.md
 Doc ID: Developers/SDK/troubleshooting-and-error-handling
 Public URL: https://docs.concrete.xyz/Developers/SDK/troubleshooting-and-error-handling/
@@ -2008,25 +2535,29 @@ In active sidebar: yes
 Description: Concrete Earn V2 SDK documentation for troubleshooting & Error Handling, with implementation guidance for production-grade integrations.
 ## Quick patterns
 
-### 1) Vanilla (ethers)
+### 1) Vanilla (viem)
+
+On-chain reads throw viem errors. Use `BaseError.walk()` to find the cause inside the error chain.
 
 ```tsx
 import { getVault } from "@concrete-xyz/sdk";
-import { ethers } from "ethers";
+import { BaseError, ContractFunctionRevertedError, HttpRequestError, createPublicClient, http } from "viem";
+import { mainnet } from "viem/chains";
 
-const provider = new ethers.JsonRpcProvider(process.env.RPC_URL!);
-const vault = getVault("v2", "0xYourVault", chainId, provider);
+const publicClient = createPublicClient({ chain: mainnet, transport: http(process.env.RPC_URL!) });
+const vault = getVault("v2", "0xYourVault", 1, publicClient);
 
 async function safeGetDetails() {
   try {
     const details = await vault.getVaultDetails();
     return details;
-  } catch (err: any) {
-    if (err.code === "NETWORK_ERROR") {
+  } catch (err) {
+    if (!(err instanceof BaseError)) throw err;
+    if (err.walk((e) => e instanceof HttpRequestError)) {
       // RPC down or bad URL
       throw new Error("RPC unavailable: check RPC_URL and network.");
     }
-    if (err.code === "CALL_EXCEPTION") {
+    if (err.walk((e) => e instanceof ContractFunctionRevertedError)) {
       // Wrong chain, wrong address, or ABI mismatch
       throw new Error("Call failed: verify vault address and network match.");
     }
@@ -2069,8 +2600,9 @@ export function UseDetails() {
 
 | Symptom | Likely cause | Fix |
 | --- | --- | --- |
-| `NETWORK_ERROR`, `failed to fetch` | Bad or unstable [RPC](https://docs.concrete.xyz/glossary/#rpc) [URL](https://docs.concrete.xyz/glossary/#url), rate limiting | Switch to a reliable RPC. Add retries and backoff. |
-| `CALL_EXCEPTION` or `execution reverted` | Wrong network for the vault address, wrong address, or deprecated contract | Ensure the `chainId` passed to `getVault(version, address, chainId, ...)` matches the contract's chain. Verify the address is the vault, not the underlying. |
+| `HttpRequestError`, `failed to fetch` | Bad or unstable [RPC](https://docs.concrete.xyz/glossary/#rpc) [URL](https://docs.concrete.xyz/glossary/#url), rate limiting | Switch to a reliable RPC. Add retries and backoff. |
+| `ContractFunctionExecutionError` or `execution reverted` | Wrong network for the vault address, wrong address, or deprecated contract | Ensure the `chainId` passed to `getVault(version, address, chainId, ...)` matches the contract's chain. Verify the address is the vault, not the underlying. |
+| `Signer not available` | A write was called on a vault created without a wallet client, or the wallet client has no `account` | Pass a `WalletClient` with an `account` to `getVault`, or call `vault.updateClients(publicClient, walletClient)`. |
 | `undefined` or `Cannot read properties of undefined` | Hook not ready (Wagmi client not connected) | Gate reads with `enabled: !!vault` (React Query) or `if (!vault) return`. |
 | `BigInt` range or format issues | Mixing [JS](https://docs.concrete.xyz/glossary/#js) `number` with token base units | Always use `BigInt`. Derive units from `await vault.getUnderlyingDecimals()`. |
 | Wrong display amounts | Using wrong decimals for formatting | Use `getUnderlyingDecimals()` for the underlying and `decimals()` for shares. |
@@ -2116,14 +2648,14 @@ catch { uDec = 18; /* fallback default if needed */ }
 Validate the address. Resolve ENS externally if needed.
 
 ```tsx
-import { isAddress } from "viem"; // or ethers
+import { isAddress } from "viem";
 if (!isAddress(user)) throw new Error("Invalid address");
 const bal = await vault.balanceOf(user);
 ```
 
 ### `previewConversion(amount)`
 
-Always build `amount` with correct decimals, and catch `CALL_EXCEPTION` for paused or frozen states.
+Always build `amount` with correct decimals, and catch contract reverts for paused or frozen states.
 
 ```tsx
 const uDec = await vault.getUnderlyingDecimals();
@@ -2132,8 +2664,8 @@ try {
   const preview = await vault.previewConversion(amount);
   // Use preview.vaultTokensReceiving / preview.underlyingReceiving,
   // or the *Raw bigint siblings when you need raw values.
-} catch (e: any) {
-  if (e.code === "CALL_EXCEPTION") {
+} catch (e) {
+  if (e instanceof BaseError && e.walk((cause) => cause instanceof ContractFunctionRevertedError)) {
     throw new Error("Preview unavailable (vault paused, wrong chain, or wrong address).");
   }
   throw e;
@@ -2190,7 +2722,7 @@ const result = useVaultQuery({
   queryFn: (v) => v.getVaultDetails(),
   retry: (count, error: any) => {
     // Retry only transient RPC issues
-    return count < 2 && /NETWORK_ERROR|timeout|429/.test(String(error?.message));
+    return count < 2 && /HTTP request failed|timeout|429/.test(String(error?.message));
   },
   staleTime: 30_000,    // fresh for 30s
   gcTime: 5 * 60_000,   // cache 5m (React Query v5 uses gcTime)
@@ -2239,22 +2771,22 @@ if (bal < amount) throw new Error("Not enough underlying to deposit.");
 ### Nonce or replacement errors
 
 **Symptom**: `nonce too low`, `replacement fee too low`.
-**Fix**: Read the current nonce and resubmit with a higher max fee.
+**Fix**: Wait for the pending transaction before you send the next one. [SDK](https://docs.concrete.xyz/glossary/#sdk) write methods do not take nonce or gas overrides. The wallet client sets both, so speed up or cancel a stuck transaction from the wallet.
 
 ```tsx
-const nonce = await signer.getNonce();
-await vault.deposit(amount, { nonce, maxFeePerGas: prev * 12n / 10n }); // +20%
+await (await erc20.approve(vault.getAddress(), amount)).wait();
+await (await vault.deposit(amount)).wait();
 ```
 
 ### Paused or deprecated vaults
 
-**Symptom**: `CALL_EXCEPTION` or a custom revert string (for example "paused") on `deposit` or `redeem`.
+**Symptom**: a contract revert on `deposit` or `redeem`. The SDK simulates each write first, decodes the custom error, and attaches it to the thrown error as `error.error`, with `{ name, args }`.
 **Fix**: Surface a clear [UI](https://docs.concrete.xyz/glossary/#ui) message. Gate write actions based on a health flag where available.
 
 ```tsx
 try { await vault.deposit(amount); }
 catch (e: any) {
-  if (/paused|deprecated/i.test(String(e.message))) {
+  if (/paused|deprecated/i.test(`${e.error?.name} ${e.message}`)) {
     throw new Error("This vault is paused or deprecated. Withdrawals only.");
   }
   throw e;
@@ -2298,29 +2830,18 @@ await (await erc20.approve(vault.getAddress(), amount)).wait();
 await (await vault.deposit(amount)).wait();
 ```
 
-## Signer and wallet lifecycle
+## Wallet client lifecycle
 
-**Symptoms**: `vault is undefined`, `signer missing`, user switched accounts or networks mid-flow.
-**Fix**: Re-acquire the signer before writes and assert the chain ID matches.
+**Symptoms**: `vault is undefined`, `Signer not available`, user switched accounts or networks mid-flow.
+**Fix**: Pass the current wallet client before writes and assert the chain ID matches.
 
 ```tsx
 // Wagmi
 if (!vault) throw new Error("Wallet not connected. Connect before writing.");
 // Vanilla
-const networkOk = (await provider.getNetwork()).chainId === expectedChainId;
+const networkOk = (await walletClient.getChainId()) === expectedChainId;
 if (!networkOk) throw new Error("Wrong network selected in wallet.");
-```
-
-## EIP-1559 fee strategy (busy networks)
-
-Avoid underpriced transactions on L2 or L1 spikes.
-
-```tsx
-const fee = await provider.getFeeData();
-await vault.deposit(amount, {
-  maxFeePerGas: fee.maxFeePerGas! * 12n / 10n,
-  maxPriorityFeePerGas: fee.maxPriorityFeePerGas! * 12n / 10n,
-});
+vault.updateClients(publicClient, walletClient);
 ```
 
 ## Reorgs and finality
@@ -2341,7 +2862,7 @@ Only retry idempotent reads or broadcast errors clearly marked transient.
 async function retry<T>(fn: () => Promise<T>, times = 2) {
   try { return await fn(); }
   catch (e: any) {
-    if (times && /timeout|429|NETWORK_ERROR/.test(String(e?.message))) {
+    if (times && /timeout|429|HTTP request failed/.test(String(e?.message))) {
       await new Promise(r => setTimeout(r, 800));
       return retry(fn, times - 1);
     }
@@ -2352,7 +2873,7 @@ async function retry<T>(fn: () => Promise<T>, times = 2) {
 
 ---
 
-# Document 33: Schema & Queries
+# Document 38: Schema & Queries
 Source: src/03-Developers/Subgraph-and-Events/schema-and-queries.md
 Doc ID: Developers/Subgraph-and-Events/schema-and-queries
 Public URL: https://docs.concrete.xyz/Developers/Subgraph-and-Events/schema-and-queries/
@@ -2670,7 +3191,7 @@ The `Factory` entity has no reverse-derived `vaults` field, so query the top-lev
 
 ---
 
-# Document 34: Event Reference
+# Document 39: Event Reference
 Source: src/03-Developers/Subgraph-and-Events/event-reference-and-use-cases.md
 Doc ID: Developers/Subgraph-and-Events/event-reference-and-use-cases
 Public URL: https://docs.concrete.xyz/Developers/Subgraph-and-Events/event-reference-and-use-cases/
@@ -2746,7 +3267,7 @@ The following are not on-chain events. They are subgraph-internal `@entity(times
 
 ---
 
-# Document 35: Live Vaults
+# Document 40: Live Vaults
 Source: src/04-Live-Vaults/index.md
 Doc ID: Live-Vaults/index
 Public URL: https://docs.concrete.xyz/Live-Vaults/index/
@@ -2758,7 +3279,7 @@ Users can review available Live Vaults, compare relevant vault attributes of [AP
 
 ---
 
-# Document 36: Overview
+# Document 41: Overview
 Source: src/05-Institutional-Vaults/overview.md
 Doc ID: Institutional-Vaults/overview
 Public URL: https://docs.concrete.xyz/Institutional-Vaults/overview/
@@ -2770,7 +3291,7 @@ In the Earn application, Institutional Vaults appear as **"Permission Required"*
 
 ---
 
-# Document 37: AssetCX
+# Document 42: AssetCX
 Source: src/05-Institutional-Vaults/assetcx.md
 Doc ID: Institutional-Vaults/assetcx
 Public URL: https://docs.concrete.xyz/Institutional-Vaults/assetcx/
@@ -2788,7 +3309,7 @@ On the Concrete Earn app, AssetCX vaults are displayed with the naming conventio
 
 ---
 
-# Document 38: Pre-Deposit Vaults
+# Document 43: Pre-Deposit Vaults
 Source: src/06-pre-deposit-vaults.md
 Doc ID: pre-deposit-vaults
 Public URL: https://docs.concrete.xyz/pre-deposit-vaults/
@@ -2798,7 +3319,7 @@ Description: Concrete documentation for Pre-Deposit Vaults, covering time-limite
 
 ---
 
-# Document 39: Completed Campaigns
+# Document 44: Completed Campaigns
 Source: src/05-completed-campaigns.md
 Doc ID: completed-campaigns
 Public URL: https://docs.concrete.xyz/completed-campaigns/
@@ -2833,7 +3354,7 @@ For more on support, see [Support](https://docs.concrete.xyz/support/). For more
 
 ---
 
-# Document 40: Important Disclaimers
+# Document 45: Important Disclaimers
 Source: src/09-important-disclosures.md
 Doc ID: important-disclosures
 Public URL: https://docs.concrete.xyz/important-disclosures/
@@ -2891,7 +3412,7 @@ THESE DISCLAIMERS ARE PROVIDED FOR INFORMATIONAL PURPOSES ONLY AND DO NOT CONSTI
 
 ---
 
-# Document 41: Audits
+# Document 46: Audits
 Source: src/06-Audits.md
 Doc ID: Audits
 Public URL: https://docs.concrete.xyz/Audits/
@@ -3119,7 +3640,7 @@ Stay tuned for upcoming enhancements and future audits as we expand our security
 
 ---
 
-# Document 42: Risks and Safety
+# Document 47: Risks and Safety
 Source: src/07-risks-and-safety.md
 Doc ID: risks-and-safety
 Public URL: https://docs.concrete.xyz/risks-and-safety/
@@ -3226,7 +3747,7 @@ Access to Concrete products is not available in every jurisdiction. Before depos
 
 ---
 
-# Document 43: Restricted Jurisdictions
+# Document 48: Restricted Jurisdictions
 Source: src/08-restricted-jurisdictions.md
 Doc ID: restricted-jurisdictions
 Public URL: https://docs.concrete.xyz/restricted-jurisdictions/
@@ -3252,7 +3773,7 @@ This list is subject to updates based on changes in international regulatory and
 
 ---
 
-# Document 44: Glossary
+# Document 49: Glossary
 Source: src/glossary.md
 Doc ID: glossary
 Public URL: https://docs.concrete.xyz/glossary/
@@ -3402,7 +3923,7 @@ This page indexes the acronyms, token tickers, and technical short-forms that sh
 
 ---
 
-# Document 45: Support
+# Document 50: Support
 Source: src/support.md
 Doc ID: support
 Public URL: https://docs.concrete.xyz/support/
@@ -3437,7 +3958,7 @@ We are working on expanding our support channels. Stay tuned for updates!
 
 ---
 
-# Document 46: How to Repay and Withdraw Borrowed Assets
+# Document 51: How to Repay and Withdraw Borrowed Assets
 Source: src/03-Borrow/close-loan.md
 Doc ID: Borrow/close-loan
 Public URL: https://docs.concrete.xyz/Borrow/close-loan/
@@ -3479,7 +4000,7 @@ Description: Concrete Borrow documentation for how to Repay and Withdraw, includ
 
 ---
 
-# Document 47: How to Activate Concrete Borrow (Default Lite)
+# Document 52: How to Activate Concrete Borrow (Default Lite)
 Source: src/03-Borrow/enable-concrete.md
 Doc ID: Borrow/enable-concrete
 Public URL: https://docs.concrete.xyz/Borrow/enable-concrete/
@@ -3548,7 +4069,7 @@ By default, Concrete Borrow comes with **Concrete Lite**, which forecloses loans
 
 ---
 
-# Document 48: How to Borrow From External Market
+# Document 53: How to Borrow From External Market
 Source: src/03-Borrow/open-loan-externally.md
 Doc ID: Borrow/open-loan-externally
 Public URL: https://docs.concrete.xyz/Borrow/open-loan-externally/
@@ -3591,7 +4112,7 @@ Concrete offers an efficient interface to initiate borrowing on external markets
 
 ---
 
-# Document 49: How to Borrow Against Collateral
+# Document 54: How to Borrow Against Collateral
 Source: src/03-Borrow/open-loan.md
 Doc ID: Borrow/open-loan
 Public URL: https://docs.concrete.xyz/Borrow/open-loan/
@@ -3646,7 +4167,7 @@ You can manage your loan in the **Portfolio** tab, which displays:
 
 ---
 
-# Document 50: Overview
+# Document 55: Overview
 Source: src/03-Borrow/overview.md
 Doc ID: Borrow/overview
 Public URL: https://docs.concrete.xyz/Borrow/overview/
@@ -3755,7 +4276,7 @@ Here’s a step-by-step outline of the complete Concrete Borrow process:
 
 ---
 
-# Document 51: Quick Start (Plug-and-Play Integration)
+# Document 56: Quick Start (Plug-and-Play Integration)
 Source: src/03-Developers/SDK/quick-start.md
 Doc ID: Developers/SDK/quick-start
 Public URL: https://docs.concrete.xyz/Developers/SDK/quick-start/
@@ -3763,7 +4284,7 @@ In active sidebar: no
 Description: Concrete Earn V2 SDK documentation for quick Start, with implementation guidance for production-grade integrations.
 Concrete's [SDK](https://docs.concrete.xyz/glossary/#sdk) provides ready-to-use React and Wagmi hooks for integrating deposits, withdrawals, and balance views in a few lines of code.
 
-These hooks combine ethers, wagmi, and the Concrete SDK internals under the hood. You can use them to go from setup to a live app in minutes.
+These hooks combine viem, wagmi, and the Concrete SDK internals under the hood. You can use them to go from setup to a live app in minutes.
 
 ## Quick Wagmi setup
 
@@ -3898,7 +4419,7 @@ export default DepositETH;
 
 ### What happens under the hood
 
-1. Detects provider and signer automatically via Wagmi.
+1. Resolves the public and wallet clients from your Wagmi config.
 2. Converts human-readable values to `BigInt` based on vault decimals.
 3. Auto-wraps ETH to WETH when `useEther` is `true`.
 4. Handles approvals automatically.
@@ -3922,160 +4443,7 @@ const deposit = useVaultDeposit(vaultConfig, options);
 
 ---
 
-# Document 52: getApyDetails()
-Source: src/03-Developers/SDK/read-methods/getAPYDetails.md
-Doc ID: Developers/SDK/read-methods/getAPYDetails
-Public URL: https://docs.concrete.xyz/Developers/SDK/read-methods/getAPYDetails/
-In active sidebar: no
-Description: Read-method reference for getApyDetails() in the Concrete Earn V2 SDK, including expected inputs, outputs, and usage context.
-Fetches [APY](https://docs.concrete.xyz/glossary/#apy) history and headline metrics for a vault. The method is exposed on the vault instance but is backed by the Concrete [API](https://docs.concrete.xyz/glossary/#api), not an on-chain call.
-
-:::tip
-Works the same in vanilla, React, and Wagmi integrations because all return the same vault object.
-:::
-
-## Signature
-
-```tsx
-const apy = await vault.getApyDetails(): Promise<ApyDetails>
-```
-
-## Parameters
-
-- None
-
-## Returns
-
-```tsx
-type ApyPoint = { timestamp: string | number; amount: string };
-
-type ApyDetails = {
-  apyHistory30Days: ApyPoint[];
-  tvlHistory30Days: ApyPoint[];
-  totalAssetsHistory30Days: ApyPoint[];
-  apy: string | undefined;            // latest APY point amount, as a numeric string
-  tvl: string | undefined;            // latest TVL point amount, as a numeric string
-  totalAssets: string | undefined;    // latest total-assets point amount, as a numeric string
-  nextPayout: Date | null;            // next payout timestamp, when reported
-};
-```
-
-The headline `apy`, `tvl`, and `totalAssets` fields are numeric strings taken from the latest history point. Convert them with `Number(...)` before doing arithmetic. The underlying token price is exposed separately via `vault.getUnderlyingPrice()`.
-
-## Examples
-
-### Vanilla (ethers)
-
-```tsx
-import { getVault } from "@concrete-xyz/sdk";
-import { ethers } from "ethers";
-
-const provider = new ethers.JsonRpcProvider("https://ethereum-rpc.publicnode.com");
-const vault = getVault("v2", "0xE2d8267D285a7ae1eDf48498fF044241d04e9608", chainId, provider);
-
-const apy = await vault.getApyDetails();
-console.log("APY Details:", apy);
-
-if (apy.apy != null) {
-  const price = await vault.getUnderlyingPrice();
-  console.log(`APY: ${(Number(apy.apy) * 100).toFixed(2)}%`);
-  console.log(`Underlying ~ $${price.toFixed(2)} USD`);
-}
-```
-
-### React (custom hook)
-
-```tsx
-import { useEffect, useState } from "react";
-import { useVault } from "@concrete-xyz/sdk/react";
-
-export function ApyWidget({ version, address, chainId, provider, signer }) {
-  const vault = useVault(version, address, chainId, provider, signer);
-  const [apy, setApy] = useState<any>(null);
-  const [price, setPrice] = useState<number | null>(null);
-
-  useEffect(() => {
-    let active = true;
-    (async () => {
-      const [data, p] = await Promise.all([vault.getApyDetails(), vault.getUnderlyingPrice()]);
-      if (active) {
-        setApy(data);
-        setPrice(p);
-      }
-    })();
-    return () => { active = false; };
-  }, [vault]);
-
-  if (!apy) return <div>Loading APY...</div>;
-  return (
-    <div>
-      <div>APY: {(Number(apy.apy) * 100).toFixed(2)}%</div>
-      {price != null && <div>Underlying: ${price.toFixed(2)}</div>}
-    </div>
-  );
-}
-```
-
-### Wagmi with `useVaultQuery`
-
-```tsx
-import { useVault, useVaultQuery } from "@concrete-xyz/sdk/wagmi";
-
-const vaultConfig = {
-  version: "v2",
-  address: "0xE2d8267D285a7ae1eDf48498fF044241d04e9608",
-  chainId: 1,
-} as const;
-
-export function ApyPanel() {
-  const vault = useVault(vaultConfig);
-
-  const q = useVaultQuery({
-    vault: vaultConfig,
-    queryKey: ["apy"],
-    enabled: !!vault,
-    queryFn: async (v) => {
-      const [apy, price] = await Promise.all([v.getApyDetails(), v.getUnderlyingPrice()]);
-      return { apy, price };
-    },
-    staleTime: 60_000,
-    retry: 2,
-  });
-
-  if (q.isLoading) return <div>Loading APY...</div>;
-  if (q.isError) return <div>Failed to load APY</div>;
-
-  const { apy, price } = q.data!;
-  return (
-    <div>
-      <div>APY: {(Number(apy.apy) * 100).toFixed(2)}%</div>
-      {price != null && <div>Underlying: ${price.toFixed(2)}</div>}
-    </div>
-  );
-}
-```
-
-## Notes and error handling
-
-- **Backend-backed**: unlike `symbol()` or `totalAssets()`, this hits the Concrete [API](https://docs.concrete.xyz/glossary/#api). Handle HTTP and network failures and timeouts.
-- **Staleness**: [APY](https://docs.concrete.xyz/glossary/#apy) is not block-by-block. Cache reasonably (`staleTime` 30 to 120 seconds).
-- **String values**: headline fields are numeric strings. Convert with `Number(...)` before arithmetic.
-- **Rate limits**: if you batch widgets, share a single query via React Query to avoid redundant calls.
-
-**Minimal guard**
-
-```tsx
-try {
-  const apy = await vault.getApyDetails();
-  if (apy?.apy == null) throw new Error("APY unavailable");
-} catch (e) {
-  // fallback UI
-}
-```
-
----
-
-# Document 53: How to Activate Concrete Protect
+# Document 57: How to Activate Concrete Protect
 Source: src/04-Protect/activate-concrete-protect.md
 Doc ID: Protect/activate-concrete-protect
 Public URL: https://docs.concrete.xyz/Protect/activate-concrete-protect/
@@ -4123,7 +4491,7 @@ Users can manage all protected positions from the Portfolio:
 
 ---
 
-# Document 54: Overview
+# Document 58: Overview
 Source: src/04-Protect/overview.md
 Doc ID: Protect/overview
 Public URL: https://docs.concrete.xyz/Protect/overview/
