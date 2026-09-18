@@ -29,7 +29,7 @@ The **DepositLockWithFeeHook** instance, or `undefined` when the vault has no su
 | Unlocked shares | `getUnlockedShares(account)` | Shares available without early unlocking |
 | Stored lock count | `storedLockCount(account)` | Number of stored records, including expired locks |
 | Individual lock | `getStoredLock(account, index)` | `{ shares, unlockTimestamp, duration }`, with times in seconds |
-| Early unlock allowed | `earlyUnlockEnabled()` | `true` when early unlocking is allowed |
+| Early unlock switch | `earlyUnlockEnabled()` | `true` when the hook's early unlock switch is on |
 | Early unlock fee | `previewEarlyUnlock(account, shares)` | Fee in vault-share base units |
 
 All numeric results are `bigint`.
@@ -51,5 +51,5 @@ if (lock) {
 ## Notes
 
 - A configured cooldown period only takes effect when the vault's deposit and mint hook flags are set. A period of zero disables locks on new deposits, but existing locks can remain active.
-- `getEnabledDetails()` resolves `{ enabled, earlyUnlockEnabled, fees, feeRecipient, duration }`. `enabled` is `true` when a cooldown period is configured, meaning `depositLockDuration()` is greater than zero. `earlyUnlockEnabled` is `true` when early unlocking is allowed and its fee can be paid.
+- `getEnabledDetails()` resolves `{ enabled, earlyUnlockEnabled, fees, feeRecipient, duration }`. `enabled` is `true` when a cooldown period is configured, meaning `depositLockDuration()` is greater than zero. `earlyUnlockEnabled` is `true` when an early unlock can succeed: the hook's early unlock switch is on and, if the fee is above zero, a fee recipient is set. A zero fee means a free early exit. The bare `earlyUnlockEnabled()` read returns only the switch, and `previewEarlyUnlock` reverts when early unlocking is unavailable.
 - For async vaults, the Withdrawal Queue processes requests per Epoch. The cooldown alone does not determine when a withdrawal pays out.
