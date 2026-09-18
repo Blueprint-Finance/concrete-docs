@@ -50,6 +50,6 @@ if (lock) {
 
 ## Notes
 
-- A nonzero duration requires the vault's deposit and mint hook flags to enforce locking. A zero duration disables locks on new deposits, but existing locks can remain active.
-- `getEnabledDetails()` resolves `{ enabled, earlyUnlockEnabled, fees, feeRecipient, duration }`. `enabled` is `true` when the duration is nonzero. `earlyUnlockEnabled` is `true` when early unlocking is allowed and its fee can be paid.
+- A configured cooldown period only takes effect when the vault's deposit and mint hook flags are set. A period of zero disables locks on new deposits, but existing locks can remain active.
+- `getEnabledDetails()` resolves `{ enabled, earlyUnlockEnabled, fees, feeRecipient, duration }`. `enabled` is `true` when a cooldown period is configured, meaning `depositLockDuration()` is greater than zero. `earlyUnlockEnabled` is `true` when early unlocking is allowed and its fee can be paid.
 - For async vaults, the Withdrawal Queue processes requests per Epoch. The cooldown alone does not determine when a withdrawal pays out.
