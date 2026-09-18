@@ -27,3 +27,9 @@
   --ifm-color-primary-lightest: #4fddbf;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }
+
+/* Inline `<a id>` anchors (glossary terms) need the same sticky-navbar
+   offset Docusaurus gives heading anchors. */
+.markdown a[id]:not([href]) {
+  scroll-margin-top: calc(var(--ifm-navbar-height) + 0.5rem);
+}
