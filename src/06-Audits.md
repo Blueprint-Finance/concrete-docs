@@ -102,7 +102,7 @@ Concrete Protocol follows a multi-phased audit approach to deliver the highest l
 - Auditor: Halborn
 - [View the full report](/files/Async-Implementation.pdf)
 
-## Earn V2 Core - Standard Implementation {/* #earn-v2-standard-implementation */}  
+## Earn V2 Core - Standard Implementation {/* #earn-v2-standard-implementation */}
 
 - Date: October 10, 2025
 - Auditor: Halborn

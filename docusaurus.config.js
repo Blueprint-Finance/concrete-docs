@@ -55,6 +55,8 @@ const config = {
   onBrokenLinks: 'throw',
   markdown: { hooks: { onBrokenMarkdownLinks: 'warn' } },
   future: { v4: true, faster: true },
+  // Keep the un-namespaced localStorage keys so readers keep their saved theme.
+  storage: { namespace: false },
   // The glossary uses inline HTML anchors (`<a id>`) so each term can be
   // deep-linked without forcing one heading per term. Docusaurus's
   // broken-anchor checker only sees heading-generated anchors, so we tell
