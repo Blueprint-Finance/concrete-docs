@@ -1,6 +1,6 @@
 # Concrete Docs - LLM Full Context
 
-Generated: 2026-09-18T23:39:15.177Z
+Generated: 2026-09-19T00:12:27.319Z
 Source repository: concrete-docs
 Canonical docs URL: https://docs.concrete.xyz/
 
@@ -3516,7 +3516,7 @@ Concrete Protocol follows a multi-phased audit approach to deliver the highest l
 - Auditor: Halborn
 - [View the full report](https://docs.concrete.xyz/files/Async-Implementation.pdf)
 
-## Earn V2 Core - Standard Implementation {/* #earn-v2-standard-implementation */}  
+## Earn V2 Core - Standard Implementation {/* #earn-v2-standard-implementation */}
 
 - Date: October 10, 2025
 - Auditor: Halborn
@@ -4671,6 +4671,7 @@ Binary and media assets are indexed by source path and public URL. Their full bi
 
 ## .txt files
 
+- static/750029c12f39eefaafff73f117c0e946.txt (32 bytes): https://docs.concrete.xyz/750029c12f39eefaafff73f117c0e946.txt
 - static/robots.txt (109 bytes): https://docs.concrete.xyz/robots.txt
 
 ## .unknown files
