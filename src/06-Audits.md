@@ -84,25 +84,25 @@ Concrete Protocol follows a multi-phased audit approach to deliver the highest l
    - Auditor: Halborn
    - [View the full report](/files/AssetCT.pdf)
 
-## Earn V2 - Whitelisting Hook {#whitelisting-hook}
+## Earn V2 - Whitelisting Hook {/* #whitelisting-hook */}
 
 - Date: December 18, 2025
 - Auditor: Halborn
 - [View the full report](/files/Earn-v2-Whitelisting-Hook.pdf)
 
-## Earn V2 - Predeposit Vault {#earn-v2-predeposit-vault}
+## Earn V2 - Predeposit Vault {/* #earn-v2-predeposit-vault */}
 
 - Date: October 23, 2025
 - Auditor: Halborn
 - [View the full report](/files/Predeposit-Vault.pdf)
 
-## Earn V2 Core - Async Implementation {#earn-v2-core-async}
+## Earn V2 Core - Async Implementation {/* #earn-v2-core-async */}
 
 - Date: October 10, 2025
 - Auditor: Halborn
 - [View the full report](/files/Async-Implementation.pdf)
 
-## Earn V2 Core - Standard Implementation {#earn-v2-standard-implementation}  
+## Earn V2 Core - Standard Implementation {/* #earn-v2-standard-implementation */}
 
 - Date: October 10, 2025
 - Auditor: Halborn
@@ -114,13 +114,13 @@ Concrete Protocol follows a multi-phased audit approach to deliver the highest l
 - Auditor: Halborn
 - [View the full report](/files/Upgradable-Multisig-and-Queue-Changes.pdf)
 
-## Earn V1 - Halborn {#earn-v1-halborn}
+## Earn V1 - Halborn {/* #earn-v1-halborn */}
 
 - Date: July, 19, 2025
 - Auditor: Halborn  
 - [View the full report](/files/Earn-V1-Halborn.pdf)
 
-## Earn V1 - Zellic {#earn-v1-zellic}
+## Earn V1 - Zellic {/* #earn-v1-zellic */}
 
 - Date: June, 06, 2025
 - Auditor: Zellic  
@@ -133,7 +133,7 @@ Concrete Protocol follows a multi-phased audit approach to deliver the highest l
 - [View the full report](/files/Withdrawal-Queue-Delay-SSC.pdf)
 
 
-## Morpho Strategy - Auto Compounding {#morpho-strategy-auto-compounding}
+## Morpho Strategy - Auto Compounding {/* #morpho-strategy-auto-compounding */}
 
 - Date: March 28, 2025
 - Auditor: Halborn
