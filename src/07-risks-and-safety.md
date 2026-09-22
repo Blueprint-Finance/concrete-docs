@@ -48,7 +48,7 @@ This layer controls how your funds are deployed and how transactions are checked
 
 This layer operates above the vault and strategy layers. It provides independent monitoring, incident response, and accounting checks.
 
-**24/7 monitoring.** Hypernative watches all vault addresses around the clock and alerts the Concrete team about unusual activity.
+**24/7 monitoring.** Blockaid watches all vault addresses around the clock and alerts the Concrete team about unusual activity.
 
 **Automatic safeguards.** If something unexpected is detected, protective measures activate immediately, no manual intervention needed.
 

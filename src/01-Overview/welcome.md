@@ -22,7 +22,7 @@ Concrete's security model has several layers:
 * **Operational roles are automated** – the Allocator and Withdrawal Manager execute high-frequency, low-impact actions through automated services built and run by Concrete.
 * **Assets live in custody, not the vault** – deposits forward to a MultisigStrategy backed by a Gnosis Safe or Fordefi [MPC](/glossary/#mpc) wallet.
 * **Accounting updates are bounded on-chain** – a change threshold, cooldown, and validity window constrain how off-chain values move the vault.
-* **Monitoring is independent** – Hypernative provides real-time risk detection.
+* **Monitoring is independent** – Blockaid provides real-time risk detection.
 * **Pause authority is pre-delegated** – ZeroShadow can pause vaults per mandate.
 * **Code is audited before it ships** – The protocol has undergone security audits by Halborn, Cantina, Zellic, and Code4rena. Each audit covers a specific version of the codebase; refer to the [published reports](/Audits/) for exact scope and coverage.
 * **Upgrades are pull-based** – vault owners pull from the factory; Concrete cannot push changes to deployed vaults.
