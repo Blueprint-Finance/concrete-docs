@@ -1,6 +1,6 @@
 # Concrete Docs - LLM Full Context
 
-Generated: 2026-09-22T15:34:14.066Z
+Generated: 2026-09-29T12:38:29.438Z
 Source repository: concrete-docs
 Canonical docs URL: https://docs.concrete.xyz/
 
@@ -3753,23 +3753,23 @@ Doc ID: restricted-jurisdictions
 Public URL: https://docs.concrete.xyz/restricted-jurisdictions/
 In active sidebar: yes
 Description: Jurisdiction and access restrictions for Concrete services, including regions where product use is limited or unavailable.
-At Concrete Protocol, we prioritize compliance with international laws and regulations. As part of this commitment, access to our services is restricted in certain jurisdictions, including:
+This list applies to all Concrete services, including the Concrete app and Vaults, and to claims of [CT](https://docs.concrete.xyz/glossary/#ct) through the [Concrete Foundation site](https://concretefoundation.xyz/).
 
-- **United States**: Restricted due to regulatory compliance requirements.
-- **Canada**: Restricted due to regulatory compliance requirements.
-- **OFAC-Sanctioned Countries**: These are countries and regions sanctioned by the Office of Foreign Assets Control ([OFAC](https://docs.concrete.xyz/glossary/#ofac)), including:
-  - **North Korea**
-  - **Iran**
-  - **Cuba**
-  - **Russia**
-  - **Crimea region of Ukraine**
-  - **South Sudan**
+You may not connect a wallet, use the Concrete app or Vaults, or claim or stake CT if you are located in, or are a habitual resident of:
 
-These restrictions are in place to comply with sanctions that limit access to financial services and technologies. Concrete Protocol prohibits users from these jurisdictions from engaging with our platform to maintain adherence to global regulatory standards.
+- the United States, including its territories
+- Canada
+- Cuba
+- Iran
+- North Korea
+- Syria
+- Russia
+- Belarus
+- the Crimea, Donetsk and Luhansk regions of Ukraine
+- South Sudan
+- any other country or region subject to comprehensive sanctions administered by the United States ([OFAC](https://docs.concrete.xyz/glossary/#ofac)), the United Nations Security Council, the European Union or the United Kingdom
 
-:::note
-This list is subject to updates based on changes in international regulatory and sanction frameworks. Please check this page regularly for the latest information.
-:::
+You may still view publicly available information on our websites. We may update this list at any time.
 
 ---
 
@@ -3806,6 +3806,8 @@ This page indexes the acronyms, token tickers, and technical short-forms that sh
 <a id="btc"></a>**BTC** – Bitcoin. The native asset of the Bitcoin network.
 
 ## C
+
+<a id="ct"></a>**CT** – The native governance and configuration token of the Concrete ecosystem, an ERC-20 token on Ethereum.
 
 <a id="ct-asset"></a>**ctAsset / ctAssets** – Concrete vault share tokens. ERC-20 tokens minted to depositors that represent their portion of a vault's underlying assets and accrued yield. The full term for any vault share issued by Concrete; per-vault tickers follow the pattern `ct<Underlying>`. See [Concrete Vault Shares](https://docs.concrete.xyz/Using-Concrete-Vaults/concrete-vault-shares/).
 

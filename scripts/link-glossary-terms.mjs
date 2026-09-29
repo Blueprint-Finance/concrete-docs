@@ -71,6 +71,7 @@ export const TERMS = [
   ['ETH', 'eth'],
   ['USD', 'usd'],
   ['URL', 'url'],
+  ['CT', 'ct'],
   ['IL', 'il'],
   ['JS', 'js'],
   ['LP', 'lp'],

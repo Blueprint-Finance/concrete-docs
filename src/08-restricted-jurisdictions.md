@@ -4,20 +4,20 @@ description: "Jurisdiction and access restrictions for Concrete services, includ
 sidebar_label: "Restricted Jurisdictions"
 ---
 
-At Concrete Protocol, we prioritize compliance with international laws and regulations. As part of this commitment, access to our services is restricted in certain jurisdictions, including:
+This list applies to all Concrete services, including the Concrete app and Vaults, and to claims of [CT](/glossary/#ct) through the [Concrete Foundation site](https://concretefoundation.xyz/).
 
-- **United States**: Restricted due to regulatory compliance requirements.
-- **Canada**: Restricted due to regulatory compliance requirements.
-- **OFAC-Sanctioned Countries**: These are countries and regions sanctioned by the Office of Foreign Assets Control ([OFAC](/glossary/#ofac)), including:
-  - **North Korea**
-  - **Iran**
-  - **Cuba**
-  - **Russia**
-  - **Crimea region of Ukraine**
-  - **South Sudan**
+You may not connect a wallet, use the Concrete app or Vaults, or claim or stake CT if you are located in, or are a habitual resident of:
 
-These restrictions are in place to comply with sanctions that limit access to financial services and technologies. Concrete Protocol prohibits users from these jurisdictions from engaging with our platform to maintain adherence to global regulatory standards.
+- the United States, including its territories
+- Canada
+- Cuba
+- Iran
+- North Korea
+- Syria
+- Russia
+- Belarus
+- the Crimea, Donetsk and Luhansk regions of Ukraine
+- South Sudan
+- any other country or region subject to comprehensive sanctions administered by the United States ([OFAC](/glossary/#ofac)), the United Nations Security Council, the European Union or the United Kingdom
 
-:::note
-This list is subject to updates based on changes in international regulatory and sanction frameworks. Please check this page regularly for the latest information.
-:::
+You may still view publicly available information on our websites. We may update this list at any time.

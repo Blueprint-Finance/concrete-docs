@@ -399,7 +399,7 @@ items feed the translation map in Part 3.
 
 - **Concrete** – the protocol and platform. Capitalized. _Source: `src/01-Overview/welcome.md`._
 - **Concrete Protocol** – the formal protocol name, used where the legal or
-  platform entity is meant. _Source: `src/08-restricted-jurisdictions.md`._
+  platform entity is meant. _Source: `src/06-Audits.md`._
 - **Concrete Earn** – the automated yield-vault product. Capitalized. Leads in
   headers. _Source: `src/02-Using-Concrete-Vaults/deposit.md`._
 - **Earn V1 / Earn V2** – product generations. Capital "V". "Earn V2" is the
