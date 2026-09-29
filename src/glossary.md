@@ -32,6 +32,8 @@ This page indexes the acronyms, token tickers, and technical short-forms that sh
 
 ## C
 
+<a id="ct"></a>**CT** – The native governance and configuration token of the Concrete ecosystem, an ERC-20 token on Ethereum.
+
 <a id="ct-asset"></a>**ctAsset / ctAssets** – Concrete vault share tokens. ERC-20 tokens minted to depositors that represent their portion of a vault's underlying assets and accrued yield. The full term for any vault share issued by Concrete; per-vault tickers follow the pattern `ct<Underlying>`. See [Concrete Vault Shares](/Using-Concrete-Vaults/concrete-vault-shares/).
 
 <a id="ct-beralbtc"></a>**ctBeraLBTC** – Vault share for the Berachain LBTC vault.
