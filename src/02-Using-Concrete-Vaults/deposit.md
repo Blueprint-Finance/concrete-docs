@@ -15,11 +15,11 @@ Each vault accepts a specific asset, for example **[WBTC](/glossary/#wbtc) Vault
 
 ## Depositing into a multi-asset vault
 
-Some Concrete vaults accept deposits in more than one asset. The vault's Deposit tab lists the supported assets.
+Some Concrete vaults accept deposits in more than one token. You can find the supported deposit tokens in the vault's Deposit tab.
 
-When you deposit a supported asset directly into a multi-asset vault, no swap or bridge is required, so the app does not ask you to set a slippage tolerance. This differs from depositing through [Enso](/Using-Concrete-Vaults/bridging-and-depositing-with-enso/), which may swap or bridge your assets.
+When you deposit a supported token directly into a multi-asset vault, no swap or bridge is required, so you won't be asked to set a slippage tolerance. This differs from depositing through [Enso](/Using-Concrete-Vaults/bridging-and-depositing-with-enso/), which may involve swapping or bridging your tokens.
 
-Withdrawals pay out in a single designated asset, which may differ from the asset you deposit. Check the vault's withdrawal asset before you deposit.
+Withdrawals are available in a single designated token, which may differ from the token you deposit. Check the vault's withdrawal token before depositing.
 
 ## Before you start
 
