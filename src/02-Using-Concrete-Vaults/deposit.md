@@ -13,6 +13,14 @@ After you deposit, the vault puts your assets to work in the yield strategy. No 
 
 Each vault accepts a specific asset, for example **[WBTC](/glossary/#wbtc) Vault** accepts WBTC, and the **Concrete [DeFi](/glossary/#defi) [USDT](/glossary/#usdt)** vault accepts USDT. Some vaults have Enso integration, meaning you can bridge, and/or swap and deposit into the vault using all of the listed tokens. See [Bridging and Depositing with Enso](/Using-Concrete-Vaults/bridging-and-depositing-with-enso/) for more.
 
+## Depositing into a multi-asset vault
+
+Some Concrete vaults accept deposits in more than one token. You can find the supported deposit tokens in the vault's Deposit tab.
+
+When you deposit a supported token directly into a multi-asset vault, no swap or bridge is required, so you won't be asked to set a slippage tolerance. This differs from depositing through [Enso](/Using-Concrete-Vaults/bridging-and-depositing-with-enso/), which may involve swapping or bridging your tokens.
+
+Withdrawals are available in a single designated token, which may differ from the token you deposit. Check the vault's withdrawal token before depositing.
+
 ## Before you start
 
 - You need a Web3 wallet (e.g. MetaMask) connected to Concrete.

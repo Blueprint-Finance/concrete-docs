@@ -1,6 +1,6 @@
 # Concrete Docs - LLM Full Context
 
-Generated: 2026-09-29T12:38:29.438Z
+Generated: 2026-10-12T14:51:46.720Z
 Source repository: concrete-docs
 Canonical docs URL: https://docs.concrete.xyz/
 
@@ -226,6 +226,14 @@ After you deposit, the vault puts your assets to work in the yield strategy. No 
 ## Supported assets
 
 Each vault accepts a specific asset, for example **[WBTC](https://docs.concrete.xyz/glossary/#wbtc) Vault** accepts WBTC, and the **Concrete [DeFi](https://docs.concrete.xyz/glossary/#defi) [USDT](https://docs.concrete.xyz/glossary/#usdt)** vault accepts USDT. Some vaults have Enso integration, meaning you can bridge, and/or swap and deposit into the vault using all of the listed tokens. See [Bridging and Depositing with Enso](https://docs.concrete.xyz/Using-Concrete-Vaults/bridging-and-depositing-with-enso/) for more.
+
+## Depositing into a multi-asset vault
+
+Some Concrete vaults accept deposits in more than one token. You can find the supported deposit tokens in the vault's Deposit tab.
+
+When you deposit a supported token directly into a multi-asset vault, no swap or bridge is required, so you won't be asked to set a slippage tolerance. This differs from depositing through [Enso](https://docs.concrete.xyz/Using-Concrete-Vaults/bridging-and-depositing-with-enso/), which may involve swapping or bridging your tokens.
+
+Withdrawals are available in a single designated token, which may differ from the token you deposit. Check the vault's withdrawal token before depositing.
 
 ## Before you start
 
