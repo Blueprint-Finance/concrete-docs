@@ -30,6 +30,12 @@ Concrete Protocol follows a multi-phased audit approach to deliver the highest l
    All audit results are made publicly accessible, reinforcing our commitment to transparency and accountability.
 
 
+## Earn v2 1.7 - Multi-Asset Deposit Vault
+
+   - Date: September 5, 2026
+   - Auditor: Halborn
+   - [View the full report](/files/Earn-v2-1.7-Multi-Asset-Deposit-Vault.pdf)
+
 ## AssetCX OFT & OFT Adapter
 
    - Date: August 25, 2026
