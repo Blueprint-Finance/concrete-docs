@@ -1,6 +1,6 @@
 # Concrete Docs - LLM Full Context
 
-Generated: 2026-10-12T14:51:46.720Z
+Generated: 2026-10-20T12:58:25.348Z
 Source repository: concrete-docs
 Canonical docs URL: https://docs.concrete.xyz/
 
@@ -3452,6 +3452,12 @@ Concrete Protocol follows a multi-phased audit approach to deliver the highest l
    All audit results are made publicly accessible, reinforcing our commitment to transparency and accountability.
 
 
+## Earn v2 1.7 MultiDepositAsyncVault
+
+   - Date: September 4, 2026
+   - Auditor: Halborn
+   - [View the full report](https://docs.concrete.xyz/files/Earn-v2-1.7-MultiDepositAsyncVault.pdf)
+
 ## AssetCX OFT & OFT Adapter
 
    - Date: August 25, 2026
@@ -4622,6 +4628,7 @@ Binary and media assets are indexed by source path and public URL. Their full bi
 - static/files/Earn_V2_1.5__AssetCx_1.3.pdf (7390278 bytes): https://docs.concrete.xyz/files/Earn_V2_1.5__AssetCx_1.3.pdf
 - static/files/Earn_V2_Improvements___SSC.pdf (10153337 bytes): https://docs.concrete.xyz/files/Earn_V2_Improvements___SSC.pdf
 - static/files/Earn-V1-Halborn.pdf (12312616 bytes): https://docs.concrete.xyz/files/Earn-V1-Halborn.pdf
+- static/files/Earn-v2-1.7-MultiDepositAsyncVault.pdf (5704966 bytes): https://docs.concrete.xyz/files/Earn-v2-1.7-MultiDepositAsyncVault.pdf
 - static/files/Earn-v2-Whitelisting-Hook.pdf (10473810 bytes): https://docs.concrete.xyz/files/Earn-v2-Whitelisting-Hook.pdf
 - static/files/harvestRewards-Function-Improvements-SSC.pdf (9923270 bytes): https://docs.concrete.xyz/files/harvestRewards-Function-Improvements-SSC.pdf
 - static/files/HUB-v1.pdf (10375508 bytes): https://docs.concrete.xyz/files/HUB-v1.pdf
