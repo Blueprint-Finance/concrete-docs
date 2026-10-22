@@ -10,6 +10,7 @@ on:
       - 'scripts/generate-llms-full.mjs'
       - '.github/workflows/generate-llms-full.yml'
       - '.github/actions/sync-and-regenerate/**'
+      - '.tool-versions'
   issue_comment:
     types: [created]
 
