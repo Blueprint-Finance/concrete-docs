@@ -16,6 +16,7 @@ on:
       - 'scripts/check-style-guide-citations.mjs'
       - 'scripts/check-style-guide-citations.test.mjs'
       - '.github/workflows/style-guide-citations.yml'
+      - '.tool-versions'
 
 permissions:
   contents: read
