@@ -42,6 +42,12 @@ Concrete Protocol follows a multi-phased audit approach to deliver the highest l
    - Auditor: Halborn
    - [View the full report](/files/AssetCX-OFT-and-OFT-Adapter.pdf)
 
+## Earn v2 1.6 & AssetCx 1.4
+
+   - Date: August 19, 2026
+   - Auditor: Halborn
+   - [View the full report](/files/Earn-v2-1.6-and-AssetCx-1.4.pdf)
+
 ## Earn v2 1.5 & AssetCx 1.3
 
    - Date: July 13, 2026
